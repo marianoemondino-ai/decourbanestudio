@@ -245,6 +245,7 @@ body.dark tr:hover td { background: #211f1d; }
 .sw-toast.show{transform:translateX(-50%) translateY(0)}
 .sw-toast a{color:var(--gold);font-weight:700;white-space:nowrap;text-decoration:none}
 .sw-toast a:hover{text-decoration:underline}
+@media(max-width:480px){.sw-toast{bottom:12px;width:calc(100% - 24px);font-size:12px;padding:10px 14px;}}
 
 /* ── PRINT ──────────────────────────────────────────── */
 @media print {

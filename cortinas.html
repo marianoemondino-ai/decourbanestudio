@@ -69,11 +69,11 @@ nav{max-width:1440px;margin:0 auto;padding:0 36px;height:96px;display:grid;grid-
 .nav-dropdown{position:relative}
 .nav-dropdown>.nav-dd-trigger{cursor:pointer;display:flex;align-items:center;gap:4px}
 .nav-dd-arrow{width:10px;height:10px;transition:transform .25s ease}
-.nav-dropdown:hover .nav-dd-arrow{transform:rotate(180deg)}
-.nav-dd-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:4px;box-shadow:0 8px 32px rgba(0,0,0,.1);min-width:220px;padding:8px 0;opacity:0;visibility:hidden;transition:opacity .2s ease,transform .2s ease,visibility .2s;transform:translateX(-50%) translateY(-6px);z-index:999}
-.nav-dropdown:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.nav-dropdown:hover .nav-dd-arrow,.nav-dropdown.open .nav-dd-arrow{transform:rotate(180deg)}
+.nav-dd-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);background:#fff;border:1px solid var(--border);border-radius:4px;box-shadow:0 8px 32px rgba(0,0,0,.1);min-width:220px;padding:8px 0;opacity:0;visibility:hidden;transition:opacity .2s ease,transform .2s ease,visibility .2s;z-index:999}
+.nav-dropdown:hover .nav-dd-menu,.nav-dropdown.open .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
 .nav-dd-menu a{display:flex;align-items:center;gap:10px;padding:10px 18px;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text-mid);transition:background .2s,color .2s;border-bottom:none}
-.nav-dd-menu a:hover{background:var(--gold-light);color:var(--text)}
+.nav-dd-menu a:hover,.nav-dd-menu a:focus{background:var(--gold-light);color:var(--text);outline:none}
 .nav-dd-menu a svg{flex-shrink:0;color:var(--gold)}
 .nav-right{display:flex;align-items:center;gap:8px;justify-content:flex-end}
 .btn-wa{display:flex;align-items:center;gap:7px;background:#25D366;color:#fff;padding:9px 18px;border-radius:40px;font-size:11.5px;font-weight:600;transition:all var(--ease)}
@@ -239,6 +239,34 @@ h2.sec em{font-style:italic;color:var(--gold)}
 /* Measurement guide responsive */
 .medicion-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 @media(max-width:768px){.medicion-grid{grid-template-columns:1fr}}
+
+/* Comparador responsive */
+@media(max-width:700px){
+  #comparador table th,#comparador table td{padding:10px 10px;font-size:12px}
+  #comparador table th:first-child,#comparador table td:first-child{font-size:11.5px}
+}
+
+/* Rangos de precio responsive */
+@media(max-width:768px){
+  .rangos-grid{grid-template-columns:1fr 1fr!important}
+}
+@media(max-width:500px){
+  .rangos-grid{grid-template-columns:1fr!important}
+}
+
+/* PowerView grid responsive */
+@media(max-width:768px){
+  .powerview-grid{grid-template-columns:1fr!important}
+}
+
+/* Cómo trabajamos (index) responsive */
+@media(max-width:768px){
+  .como-steps{grid-template-columns:1fr 1fr!important}
+  .como-steps::before{display:none!important}
+}
+@media(max-width:500px){
+  .como-steps{grid-template-columns:1fr!important}
+}
 </style>
 </head>
 <body>
@@ -648,7 +676,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
       <h2 class="sec">¿Cuánto cuesta una cortina<br><em>Hunter Douglas?</em></h2>
       <p style="font-size:15px;color:var(--text-mid);max-width:540px;margin:12px auto 0;line-height:1.7">El precio varía según el modelo, el tamaño y la tela. Estos rangos son orientativos para una ventana estándar (150×200 cm). El presupuesto exacto es siempre gratis.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+    <div class="rangos-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
       <div class="rv" style="background:#fff;border:1.5px solid var(--border);border-radius:4px;padding:28px 24px;text-align:center">
         <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);font-weight:600;margin-bottom:12px">Roller Quantum®</div>
         <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--text);line-height:1;margin-bottom:6px">$$</div>
@@ -757,7 +785,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
       <h2 class="sec">PowerView®: <em>tus cortinas,<br>en piloto automático</em></h2>
       <p style="font-size:15px;color:var(--text-mid);max-width:540px;margin:14px auto 0;line-height:1.7">El sistema de motorización más avanzado del mundo para cortinas. Control desde tu celular, por voz o de forma totalmente automática según la hora del día.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+    <div class="powerview-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
       <div class="rv" style="background:var(--bg-dark);padding:36px 28px;border-radius:4px;text-align:center">
         <div style="width:56px;height:56px;border-radius:50%;background:rgba(196,164,107,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26" style="color:var(--gold)"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
@@ -962,4 +990,28 @@ document.querySelectorAll('.rv,.rvl,.rvr').forEach(el=>ro.observe(el));
 document.querySelectorAll('.ft-year').forEach(el=>el.textContent=new Date().getFullYear());
 
 // HAMBURGER MENU
-(function(){const btn=document.getElementById('ham');const nav=document.querySelector('.nav-links');if(!btn||!nav)return;const overlay=document.createElement('div');overlay.style.cssText='position:fixed;inset:0;background:rgba(22,20,18,.97);z-index:800;display:none;flex-direction:column;padding:90px 36px 40px;gap:0;overflow-y:auto';nav.querySelectorAll('a').forEach(l=>{const a=document.createElement('a');a.href=l.href;a.textContent=l.textContent;a.style.cssText='font-family:"Playfair Display",serif;font-size:26px;font-weight:500;color:#fff;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);display:block';a.addEventListener('click',()=>{overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')});overlay.appendChild(a);});const wa=document.createElement('a');wa.href='https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20cotizar%20cortinas%20Hunter%20Douglas';wa.target='_blank';wa.textContent='+54 358 5075773 — Cotizar cortinas';wa.style.cssText='color:#25D366;font-size:16px;padding:20px 0;display:block;margin-top:16px;font-weight:600';overlay.appendChild(wa);document.body.appendChild(overlay);btn.addEventListener('click',()=>{const open=overlay.style.display==='flex';overlay.style.display=open?'none':'fl
+(function(){const btn=document.getElementById('ham');const nav=document.querySelector('.nav-links');if(!btn||!nav)return;const overlay=document.createElement('div');overlay.style.cssText='position:fixed;inset:0;background:rgba(22,20,18,.97);z-index:800;display:none;flex-direction:column;padding:90px 36px 40px;gap:0;overflow-y:auto';nav.querySelectorAll('a').forEach(l=>{const a=document.createElement('a');a.href=l.href;a.textContent=l.textContent;a.style.cssText='font-family:"Playfair Display",serif;font-size:26px;font-weight:500;color:#fff;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);display:block';a.addEventListener('click',()=>{overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')});overlay.appendChild(a);});const wa=document.createElement('a');wa.href='https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20cotizar%20cortinas%20Hunter%20Douglas';wa.target='_blank';wa.textContent='+54 358 5075773 — Cotizar cortinas';wa.style.cssText='color:#25D366;font-size:16px;padding:20px 0;display:block;margin-top:16px;font-weight:600';overlay.appendChild(wa);document.body.appendChild(overlay);btn.addEventListener('click',()=>{const open=overlay.style.display==='flex';overlay.style.display=open?'none':'flex';document.body.style.overflow=open?'':'hidden';btn.classList.toggle('is-open',!open)});overlay.addEventListener('click',e=>{if(e.target===overlay){overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')}});})();
+
+// NAV DROPDOWN KEYBOARD
+(function(){
+  const dd=document.querySelector('.nav-dropdown');
+  if(!dd)return;
+  const trigger=dd.querySelector('.nav-dd-trigger');
+  const menu=dd.querySelector('.nav-dd-menu');
+  if(!trigger||!menu)return;
+  trigger.setAttribute('tabindex','0');
+  trigger.setAttribute('role','button');
+  trigger.setAttribute('aria-haspopup','true');
+  trigger.setAttribute('aria-expanded','false');
+  function openDD(){dd.classList.add('open');trigger.setAttribute('aria-expanded','true');const first=menu.querySelector('a');if(first)first.focus();}
+  function closeDD(){dd.classList.remove('open');trigger.setAttribute('aria-expanded','false');}
+  trigger.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();dd.classList.contains('open')?closeDD():openDD();}if(e.key==='Escape')closeDD();});
+  menu.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDD();trigger.focus();}});
+  document.addEventListener('click',e=>{if(!dd.contains(e.target))closeDD();});
+})();
+
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>{});
+if(localStorage.getItem('dark')==='1') document.body.classList.add('dark');
+</script>
+</body>
+</html>

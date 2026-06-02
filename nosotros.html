@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8"/>
@@ -166,9 +166,9 @@ h2.sec em{font-style:italic;color:var(--gold)}
 /* FOOTER MINI */
 .footer-mini{background:var(--bg-dark);padding:40px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:12.5px;color:rgba(255,255,255,.28)}
 .footer-mini img{height:36px;filter:brightness(0) invert(1);opacity:.6}
-.footer-mini-links{display:flex;gap:20px;flex-wrap:wrap}
-.footer-mini-links a{color:rgba(255,255,255,.38);transition:color var(--ease)}
-.footer-mini-links a:hover{color:var(--gold)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,.38);transition:color var(--ease)}
+.footer-links a:hover{color:var(--gold)}
 
 /* WA FLOAT */
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:800;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all var(--ease)}
@@ -475,7 +475,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
 <div class="footer-mini">
   <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
   <span>© 2026 Decourban Estudio · Juan de Garay 1550, Río Cuarto</span>
-  <div class="footer-mini-links">
+  <div class="footer-links">
     <a href="index.html">Inicio</a>
     <a href="cortinas.html">Hunter Douglas Cortinas</a>
     <a href="coleccion.html">Catálogo</a>
@@ -534,4 +534,12 @@ function animCount(el){
   document.body.appendChild(overlay);
   function open(){overlay.style.display='flex';document.body.style.overflow='hidden';btn.classList.add('is-open')}
   function close(){overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')}
- 
+  btn.addEventListener('click',()=>{open()});
+  overlay.addEventListener('click',e=>{if(e.target===overlay)close()});
+})();
+
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>{});
+if(localStorage.getItem('dark')==='1') document.body.classList.add('dark');
+</script>
+</body>
+</html>
