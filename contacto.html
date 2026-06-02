@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contacto — Decourban Estudio · Cortinas y Decoración en Río Cuarto, Córdoba</title>
+<meta name="description" content="Contactanos para asesoramiento gratuito de diseño de interiores. Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. WhatsApp, formulario o visitá nuestro showroom."/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="manifest" href="manifest.json"/>
+<meta name="theme-color" content="#161412"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://decourbanestudio.com.ar/contacto.html"/>
+<link rel="dns-prefetch" href="https://dcdn-us.mitiendanube.com"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --gold:#c4a46b;--gold-dark:#a8854a;--gold-text:#8a6c38;--gold-light:#f5ead8;
+  --bg:#faf8f5;--bg-mid:#f2ede6;--bg-dark:#161412;
+  --text:#1c1a18;--text-mid:#5c5550;--text-light:#756d66;
+  --border:#e6dfd6;--white:#fff;--r:3px;
+  --ease:0.38s cubic-bezier(.25,.46,.45,.94);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+input,select,textarea{font-family:inherit}
+
+/* NAV */
+.nav-wrap{background:rgba(250,248,245,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:900}
+nav{max-width:1440px;margin:0 auto;padding:0 36px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+nav{display:grid!important;grid-template-columns:1fr auto 1fr!important;height:96px!important}
+.nav-logo-c{display:flex;align-items:center;text-decoration:none;transition:opacity .3s;justify-self:center}
+.nav-logo-c:hover{opacity:.82}
+.logo-img{height:78px;object-fit:contain;display:block}
+.logo-tag{display:none}
+.nav-links{display:flex;align-items:center;gap:22px}
+.nav-links a{font-size:12px;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;color:var(--text-mid);transition:color var(--ease);white-space:nowrap;padding-bottom:3px;border-bottom:1.5px solid transparent}
+.nav-links a:hover,.nav-links a.active{color:var(--text);border-color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+.btn-wa{display:flex;align-items:center;gap:7px;background:#25D366;color:#fff;padding:9px 18px;border-radius:40px;font-size:11.5px;font-weight:600;transition:all var(--ease)}
+.btn-wa:hover{background:#1bb558}
+.btn-wa svg{width:15px;height:15px}
+.ham{display:none;flex-direction:column;gap:5px;padding:8px}
+.ham span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px}
+
+/* HERO MINI */
+.hero-mini{background:var(--bg-dark);padding:64px 36px 48px;position:relative;overflow:hidden}
+.hero-mini::before{content:'CONTACTO';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:130px;font-weight:700;color:rgba(255,255,255,.025);letter-spacing:4px;pointer-events:none;white-space:nowrap}
+.hero-mini-in{max-width:1440px;margin:0 auto;position:relative;z-index:1}
+.breadcrumb{display:flex;gap:8px;align-items:center;font-size:12.5px;color:rgba(255,255,255,.4);margin-bottom:12px}
+.breadcrumb a{color:rgba(255,255,255,.5);transition:color var(--ease)}
+.breadcrumb a:hover{color:var(--gold)}
+.breadcrumb span{color:rgba(255,255,255,.2)}
+.hero-mini h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,64px);font-weight:500;color:#fff;line-height:1.08;margin-bottom:12px}
+.hero-mini h1 em{font-style:italic;color:var(--gold)}
+.hero-mini p{font-size:16px;color:rgba(255,255,255,.55);max-width:520px;line-height:1.7;font-weight:300}
+
+/* CONTACT METHODS */
+.methods{padding:72px 36px;background:var(--bg-mid)}
+.methods-inner{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.method-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:40px 32px;text-align:center;transition:all var(--ease)}
+.method-card:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.07)}
+.method-icon{width:64px;height:64px;border-radius:50%;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:background var(--ease)}
+.method-card:hover .method-icon{background:var(--gold)}
+.method-icon svg{width:26px;height:26px;color:var(--gold);transition:color var(--ease)}
+.method-card:hover .method-icon svg{color:var(--bg-dark)}
+.method-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:500;margin-bottom:10px}
+.method-desc{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:20px}
+.method-value{font-size:15px;font-weight:600;color:var(--text)}
+.method-badge{display:inline-block;background:var(--gold-light);color:var(--gold-dark);font-size:11px;letter-spacing:1px;padding:4px 12px;border-radius:40px;font-weight:600;margin-top:8px}
+.method-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--gold);color:var(--bg-dark);padding:12px 24px;border-radius:40px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;transition:all var(--ease)}
+.method-link:hover{background:var(--gold-dark);transform:translateY(-1px)}
+
+/* CONTACT FORM + MAP */
+.contact-main{padding:80px 36px;background:var(--bg)}
+.contact-inner{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.form-section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,40px);font-weight:500;margin-bottom:8px;line-height:1.15}
+.form-section h2 em{font-style:italic;color:var(--gold)}
+.form-section .subtitle{font-size:15px;color:var(--text-mid);margin-bottom:32px;line-height:1.7}
+.cform{display:flex;flex-direction:column;gap:16px}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg-row2{display:grid;grid-template-columns:1fr;gap:16px}
+.fl{display:flex;flex-direction:column;gap:6px}
+.fl label{font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--text-mid)}
+.fl input,.fl select,.fl textarea{padding:13px 16px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;color:var(--text);outline:none;transition:border-color var(--ease);background:var(--white)}
+.fl input:focus,.fl select:focus,.fl textarea:focus{border-color:var(--gold)}
+.fl textarea{min-height:120px;resize:vertical}
+.fl select option{padding:8px}
+.form-radio-group{display:flex;flex-wrap:wrap;gap:10px}
+.radio-item{display:flex;align-items:center;gap:8px;cursor:pointer;font-size:14px;color:var(--text-mid)}
+.radio-item input[type=radio]{accent-color:var(--gold);width:16px;height:16px}
+.radio-item:hover{color:var(--text)}
+.submit-btn{background:var(--gold);color:var(--bg-dark);padding:16px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:var(--r);border:none;cursor:pointer;transition:all var(--ease);display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px}
+.submit-btn:hover{background:var(--gold-dark);transform:translateY(-1px)}
+.submit-btn svg{width:16px;height:16px}
+.form-note{font-size:12px;color:var(--text-light);text-align:center;margin-top:4px}
+
+/* MAP SIDE */
+.map-side{}
+.map-side h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,40px);font-weight:500;margin-bottom:8px;line-height:1.15}
+.map-side h2 em{font-style:italic;color:var(--gold)}
+.map-side .subtitle{font-size:15px;color:var(--text-mid);margin-bottom:28px;line-height:1.7}
+.map-frame{border-radius:var(--r);overflow:hidden;border:1px solid var(--border);margin-bottom:24px}
+.map-frame iframe{width:100%;height:320px;border:0;display:block;filter:grayscale(.15)}
+.info-grid{display:flex;flex-direction:column;gap:14px}
+.info-row{display:flex;gap:14px;align-items:flex-start}
+.info-row-icon{width:38px;height:38px;border-radius:50%;background:var(--gold-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-row-icon svg{width:16px;height:16px;color:var(--gold)}
+.info-row-title{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text-mid);margin-bottom:3px}
+.info-row-val{font-size:14px;color:var(--text);line-height:1.5}
+.info-row-val a{color:var(--gold);font-weight:500;transition:color var(--ease)}
+.info-row-val a:hover{color:var(--gold-dark)}
+
+/* HOURS */
+.hours{background:var(--bg-mid);padding:56px 36px}
+.hours-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hours-text{}
+.hours-text p{font-size:15px;color:var(--text-mid);line-height:1.8;margin-bottom:20px}
+.hours-table{border-collapse:collapse;width:100%;font-size:14px}
+.hours-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text)}
+.hours-table tr:last-child td{border-bottom:none}
+.hours-table td:first-child{color:var(--text-mid);font-weight:500}
+.hours-table td:last-child{font-weight:600;color:var(--text);text-align:right}
+.hours-table .closed{color:var(--text-light)!important}
+.hours-cta{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:36px;text-align:center}
+.hours-cta h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:500;margin-bottom:10px}
+.hours-cta p{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:24px}
+.btn-p{display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:var(--bg-dark);padding:14px 28px;border-radius:var(--r);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:all var(--ease)}
+.btn-p:hover{background:var(--gold-dark);transform:translateY(-2px)}
+
+/* FAQ MINI */
+.faq-mini{padding:64px 36px;background:var(--bg)}
+.faq-mini-inner{max-width:860px;margin:0 auto}
+.faq-mini h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,36px);font-weight:500;margin-bottom:36px;text-align:center;line-height:1.2}
+.faq-mini h2 em{font-style:italic;color:var(--gold)}
+.fq-item{border-bottom:1px solid var(--border);padding:20px 0;cursor:pointer}
+.fq-q{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:15px;font-weight:500;color:var(--text)}
+.fq-q svg{width:18px;height:18px;color:var(--gold);flex-shrink:0;transition:transform var(--ease)}
+.fq-item.open .fq-q svg{transform:rotate(45deg)}
+.fq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.fq-item.open .fq-a{max-height:200px}
+.fq-a p{padding:14px 0 4px;font-size:14px;color:var(--text-mid);line-height:1.8}
+
+/* FOOTER MINI */
+.footer-mini{background:var(--bg-dark);padding:40px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:12.5px;color:rgba(255,255,255,.28)}
+.footer-mini img{height:36px;filter:brightness(0) invert(1);opacity:.6}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,.38);transition:color var(--ease)}
+.footer-links a:hover{color:var(--gold)}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:800;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all var(--ease)}
+.wa-float:hover{background:#1bb558;transform:scale(1.1)}
+.wa-float::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,.18);animation:wp 2.5s ease-out infinite}
+@keyframes wp{0%{transform:scale(1);opacity:1}100%{transform:scale(1.7);opacity:0}}
+
+/* SUCCESS STATE */
+.success-msg{background:var(--gold-light);border:1.5px solid var(--gold);border-radius:var(--r);padding:20px 24px;margin-top:16px;display:none;text-align:center}
+.success-msg.show{display:block}
+.success-msg h4{font-family:'Playfair Display',serif;font-size:18px;color:var(--text);margin-bottom:6px}
+.success-msg p{font-size:13.5px;color:var(--text-mid)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.rv.in{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:1000px){.contact-inner{grid-template-columns:1fr;gap:48px}.hours-inner{grid-template-columns:1fr}}
+@media(max-width:768px){nav{padding:0 20px}.nav-links{display:none}.ham{display:flex}.methods-inner{grid-template-columns:1fr}.hero-mini{padding:48px 20px 36px}.methods,.contact-main,.faq-mini,.hours{padding-left:20px;padding-right:20px}.fg-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="cortinas.html">Cortinas HD</a>
+      <a href="coleccion.html">Catálogo</a>
+    </div>
+    <a href="index.html" class="nav-logo-c" aria-label="Decourban Estudio">
+      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+      <span class="logo-tag">Decoración · Río Cuarto, Córdoba</span>
+    </a>
+    <div class="nav-right">
+      <div class="nav-links" style="margin-right:10px">
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html" class="active">Contacto</a>
+      </div>
+      <a href="https://wa.me/543585075773" class="btn-wa" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        WhatsApp
+      </a>
+      <button class="ham" id="ham" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</div>
+
+<!-- HERO MINI -->
+<div class="hero-mini">
+  <div class="hero-mini-in">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a><span>›</span><span style="color:rgba(255,255,255,.6)">Contacto</span>
+    </div>
+    <h1>Hablá directamente<br>con <em>Marcela</em></h1>
+    <p>Asesoramiento personalizado y gratuito. Marcela Kalbermatten, decoradora con 22 años en Río Cuarto, te responde en menos de 2 horas.</p>
+  </div>
+</div>
+
+<!-- CONTACT METHODS -->
+<section class="methods">
+  <div class="methods-inner">
+
+    <div class="method-card rv">
+      <div class="method-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+      </div>
+      <h3 class="method-title">WhatsApp</h3>
+      <p class="method-desc">La forma más rápida de contactarnos. Respondemos en menos de 2 horas en horario de atención.</p>
+      <div class="method-value">+54 358 5075773</div>
+      <div class="method-badge">Respuesta inmediata</div>
+      <a href="https://wa.me/543585075773?text=Hola, quiero asesoramiento de diseño" class="method-link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        Escribir ahora
+      </a>
+    </div>
+
+    <div class="method-card rv">
+      <div class="method-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </div>
+      <h3 class="method-title">Instagram</h3>
+      <p class="method-desc">Seguinos para ver proyectos realizados, inspiración y novedades. También podés escribirnos por DM.</p>
+      <div class="method-value">@decourbanestudio</div>
+      <div class="method-badge">Proyectos reales</div>
+      <a href="https://www.instagram.com/decourbanestudio" class="method-link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg>
+        Ver Instagram
+      </a>
+    </div>
+
+    <div class="method-card rv">
+      <div class="method-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <h3 class="method-title">Showroom</h3>
+      <p class="method-desc">Visitá nuestro showroom en Río Cuarto para ver, tocar y vivir cada producto. Coordiná tu visita con Marcela.</p>
+      <div class="method-value">Río Cuarto, Córdoba</div>
+      <div class="method-badge">Lun–Vie 9–18 · Sáb 9–13</div>
+      <a href="https://wa.me/543585075773?text=Hola, quiero coordinar una visita al showroom" class="method-link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Coordinar visita
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FORM + MAP -->
+<section class="contact-main">
+  <div class="contact-inner">
+
+    <!-- FORM -->
+    <div class="form-section rv">
+      <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>Formulario de contacto</p>
+      <h2>Contanos tu <em>proyecto</em></h2>
+      <p class="subtitle">Completá el formulario y te contactamos en menos de 24 horas con una propuesta personalizada, sin costo y sin compromiso.</p>
+
+      <form class="cform" id="contactForm" onsubmit="submitContact(event)">
+        <div class="fg-row">
+          <div class="fl">
+            <label>Nombre *</label>
+            <input type="text" placeholder="Tu nombre completo" required autocomplete="name"/>
+          </div>
+          <div class="fl">
+            <label>WhatsApp *</label>
+            <input type="tel" placeholder="+54 358 5075773" required autocomplete="tel"/>
+          </div>
+        </div>
+        <div class="fl">
+          <label>Email</label>
+          <input type="email" placeholder="tu@email.com"/>
+        </div>
+        <div class="fl">
+          <label>¿Qué estás buscando? *</label>
+          <select required>
+            <option value="" disabled selected>Seleccioná una opción</option>
+            <option>Cortinas Hunter Douglas</option>
+            <option>Muebles (sillones, mesas, consolas)</option>
+            <option>Alfombras y textiles</option>
+            <option>Iluminación y lámparas</option>
+            <option>Toldos y pérgolas HD</option>
+            <option>Proyecto de decoración completo</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="fl">
+          <label>¿Cómo preferís que te contactemos?</label>
+          <div class="form-radio-group">
+            <label class="radio-item"><input type="radio" name="contact_pref" value="whatsapp" checked/> WhatsApp</label>
+            <label class="radio-item"><input type="radio" name="contact_pref" value="email"/> Email</label>
+            <label class="radio-item"><input type="radio" name="contact_pref" value="visita"/> Visita al showroom</label>
+          </div>
+        </div>
+        <div class="fl">
+          <label>Mensaje</label>
+          <textarea placeholder="Contanos sobre tu espacio, qué necesitás y cualquier detalle que nos ayude a asesorarte mejor…"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Enviar consulta
+        </button>
+        <p class="form-note">Respondemos en menos de 24 horas · Sin spam · Nunca compartimos tus datos</p>
+        <div class="success-msg" id="successMsg">
+          <h4>¡Consulta enviada!</h4>
+          <p>Gracias, te contactamos a la brevedad. También podés escribirnos ahora por WhatsApp.</p>
+        </div>
+      </form>
+    </div>
+
+    <!-- MAP -->
+    <div class="map-side rv">
+      <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>Dónde estamos</p>
+      <h2>Nuestro <em>showroom</em></h2>
+      <p class="subtitle">Vení a ver, tocar y vivir cada producto antes de decidir. Muestras reales de telas, materiales y acabados.</p>
+
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=Juan+de+Garay+1550+Rio+Cuarto+Cordoba+Argentina&output=embed"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Decourban Estudio — Showroom en Río Cuarto, Córdoba"></iframe>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-row">
+          <div class="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="info-row-title">Dirección</div>
+            <div class="info-row-val"><strong>Juan de Garay 1550</strong><br>Río Cuarto, Córdoba, Argentina<br><a href="https://maps.google.com/?q=Juan+de+Garay+1550+Rio+Cuarto+Cordoba" target="_blank">Ver en Google Maps →</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.04a16 16 0 006.06 6.05l1.32-1.32a2 2 0 012.11-.44c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div>
+            <div class="info-row-title">Teléfono / WhatsApp</div>
+            <div class="info-row-val"><a href="https://wa.me/543585075773" target="_blank">+54 358 5075773</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div>
+            <div class="info-row-title">Horario de atención</div>
+            <div class="info-row-val">Lun a Vie: 9:00 – 18:00<br>Sábados: 9:00 – 13:00</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div>
+            <div class="info-row-title">Email</div>
+            <div class="info-row-val"><a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          <div>
+            <div class="info-row-title">Instagram</div>
+            <div class="info-row-val"><a href="https://www.instagram.com/decourbanestudio" target="_blank">@decourbanestudio</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="hours">
+  <div class="hours-inner">
+    <div class="hours-text rv">
+      <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>Showroom</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,36px);font-weight:500;margin-bottom:16px;line-height:1.15">Horarios de <em style="font-style:italic;color:var(--gold)">atención</em></h2>
+      <p>Nuestro showroom está abierto para que puedas ver, tocar y elegir con calma. Te recomendamos coordinar una visita para que un asesor esté disponible exclusivamente para vos.</p>
+      <table class="hours-table" style="margin-top:24px">
+        <tr><td>Lunes</td><td>9:00 – 18:00</td></tr>
+        <tr><td>Martes</td><td>9:00 – 18:00</td></tr>
+        <tr><td>Miércoles</td><td>9:00 – 18:00</td></tr>
+        <tr><td>Jueves</td><td>9:00 – 18:00</td></tr>
+        <tr><td>Viernes</td><td>9:00 – 18:00</td></tr>
+        <tr><td>Sábados</td><td>9:00 – 13:00</td></tr>
+        <tr><td>Domingos</td><td class="closed">Cerrado</td></tr>
+      </table>
+    </div>
+    <div class="hours-cta rv">
+      <h3>¿Preferís que vayamos a vos?</h3>
+      <p>Nuestro equipo técnico puede ir a tu domicilio para tomar medidas, asesorarte en persona y mostrarte muestras de materiales. Completamente gratuito.</p>
+      <a href="https://wa.me/543585075773?text=Hola, quiero coordinar una visita a domicilio para asesoramiento" class="btn-p" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Solicitar visita a domicilio
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ MINI -->
+<section class="faq-mini" id="faq-mini">
+  <div class="faq-mini-inner">
+    <h2>Preguntas <em>frecuentes</em></h2>
+    <div class="fq-item rv">
+      <div class="fq-q" onclick="toggleFq(this)">
+        ¿Cuánto tarda en responderse una consulta?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+      <div class="fq-a"><p>Por WhatsApp respondemos en menos de 2 horas en horario de atención (Lun–Vie 9–18 / Sáb 9–13). Por formulario, en menos de 24 horas hábiles. Fuera de horario, respondemos al día siguiente a primera hora.</p></div>
+    </div>
+    <div class="fq-item rv">
+      <div class="fq-q" onclick="toggleFq(this)">
+        ¿La consulta de diseño tiene costo?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+      <div class="fq-a"><p>No, la consulta inicial es completamente gratuita y sin compromiso. Incluye asesoramiento telefónico/WhatsApp, visita al showroom y primera visita a domicilio para relevamiento.</p></div>
+    </div>
+    <div class="fq-item rv">
+      <div class="fq-q" onclick="toggleFq(this)">
+        ¿Envían a toda Argentina?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+      <div class="fq-a"><p>Sí, enviamos a todo el territorio nacional. El envío es gratuito en compras superiores a $200.000. Para productos como cortinas Hunter Douglas que requieren instalación, cubrimos Río Cuarto, la región y zonas aledañas con nuestro equipo técnico propio.</p></div>
+    </div>
+    <div class="fq-item rv">
+      <div class="fq-q" onclick="toggleFq(this)">
+        ¿Puedo pagar en cuotas?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+      <div class="fq-a"><p>Sí. Aceptamos todas las tarjetas de crédito con hasta 12 cuotas sin interés, débito, transferencia bancaria y Mercado Pago. Para proyectos de mayor envergadura, podemos evaluar planes de pago personalizados.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer-mini">
+  <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+  <span>© 2026 Decourban Estudio · Río Cuarto, Córdoba</span>
+  <div class="footer-links">
+    <a href="index.html">Inicio</a>
+    <a href="coleccion.html">Catálogo</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="https://wa.me/543585075773" target="_blank">WhatsApp</a>
+  </div>
+</div>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/543585075773?text=Hola, quiero hacer una consulta de diseño" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+</a>
+
+<script>
+// FAQ
+function toggleFq(el){
+  const item=el.parentElement;
+  const wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.fq-item').forEach(i=>i.classList.remove('open'));
+  if(!wasOpen)item.classList.add('open');
+}
+
+// FORM
+function submitContact(e){
+  e.preventDefault();
+  const btn=e.target.querySelector('.submit-btn');
+  const name=e.target.querySelector('input[type=text]').value;
+  const phone=e.target.querySelector('input[type=tel]').value;
+  const service=e.target.querySelector('select').value;
+  const msg=e.target.querySelector('textarea').value;
+  const waText=`Hola, soy ${name}. Consulta a través del formulario web.\nServicio: ${service||'General'}\n${msg?'Mensaje: '+msg:''}\nContacto: ${phone}`;
+  btn.textContent='¡Enviando...';
+  btn.disabled=true;
+  setTimeout(()=>{
+    document.getElementById('successMsg').classList.add('show');
+    btn.style.display='none';
+    window.open('https://wa.me/543585075773?text='+encodeURIComponent(waText),'_blank');
+  },600);
+}
+
+// REVEAL
+const ro=new IntersectionObserver(ents=>{
+  ents.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);ro.unobserve(e.target)}});
+},{threshold:.08,rootMargin:'0px 0px -36px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+// HAMBURGER MENU
+(function(){const btn=document.getElementById('ham');const nav=document.querySelector('.nav-links');if(!btn||!nav)return;const overlay=document.createElement('div');overlay.style.cssText='position:fixed;inset:0;background:rgba(22,20,18,.97);z-index:800;display:none;flex-direction:column;padding:90px 36px 40px;gap:0;overflow-y:auto';nav.querySelectorAll('a').forEach(l=>{const a=document.createElement('a');a.href=l.href;a.textContent=l.textContent;a.style.cssText='font-family:"Playfair Display",serif;font-size:26px;font-weight:500;color:#fff;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);display:block';a.addEventListener('click',()=>{overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')});overlay.appendChild(a);});const wa=document.createElement('a');wa.href='https://wa.me/543585075773';wa.target='_blank';wa.textContent='+54 358 5075773';wa.style.cssText='color:#25D366;font-size:16px;padding:20px 0;display:block;margin-top:16px;font-weight:600';overlay.appendChild(wa);document.body.appendChild(overlay);btn.addEventListener('click',()=>{const open=overlay.style.display==='flex';overlay.style.display=open?'none':'flex';document.body.style.overflow=open?'':'hidden';btn.classList.toggle('is-open',!open)});overlay.addEventListener('click',e=>{if(e.target===overlay){overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')}});})();
+
+// SERVICE WORKER
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>{});
+if(localStorage.getItem('dark')==='1') document.body.classList.add('dark');
+</script>
+</body>
+</html>

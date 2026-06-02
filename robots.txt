@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# No indexar páginas de proceso/error
+Disallow: /gracias.html
+Disallow: /404.html
+Disallow: /privacidad.html
+
+# Sitemap
+Sitemap: https://decourbanestudio.com.ar/sitemap.xml
