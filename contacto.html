@@ -97,9 +97,12 @@ nav{display:grid!important;grid-template-columns:1fr auto 1fr!important;height:9
 .radio-item{display:flex;align-items:center;gap:8px;cursor:pointer;font-size:14px;color:var(--text-mid)}
 .radio-item input[type=radio]{accent-color:var(--gold);width:16px;height:16px}
 .radio-item:hover{color:var(--text)}
-.submit-btn{background:var(--gold);color:var(--bg-dark);padding:16px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:var(--r);border:none;cursor:pointer;transition:all var(--ease);display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px}
-.submit-btn:hover{background:var(--gold-dark);transform:translateY(-1px)}
+.submit-btn{background:var(--gold);color:var(--bg-dark);padding:16px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:var(--r);border:none;cursor:pointer;transition:all var(--ease);display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px;width:100%}
+.submit-btn:hover:not(:disabled){background:var(--gold-dark);transform:translateY(-1px)}
+.submit-btn:disabled{opacity:.65;cursor:not-allowed;transform:none}
 .submit-btn svg{width:16px;height:16px}
+.field-err{display:none;font-size:11.5px;color:#d94f4f;margin-top:4px;font-weight:500}
+@keyframes spin{to{transform:rotate(360deg)}}
 .form-note{font-size:12px;color:var(--text-light);text-align:center;margin-top:4px}
 
 /* MAP SIDE */
@@ -183,11 +186,11 @@ nav{display:grid!important;grid-template-columns:1fr auto 1fr!important;height:9
   <nav>
     <div class="nav-links">
       <a href="index.html">Inicio</a>
-      <a href="cortinas.html">Cortinas HD</a>
+      <a href="cortinas.html">Hunter Douglas Cortinas</a>
       <a href="coleccion.html">Catálogo</a>
     </div>
     <a href="index.html" class="nav-logo-c" aria-label="Decourban Estudio">
-      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" fetchpriority="high" loading="eager"/>
       <span class="logo-tag">Decoración · Río Cuarto, Córdoba</span>
     </a>
     <div class="nav-right">
@@ -274,30 +277,32 @@ nav{display:grid!important;grid-template-columns:1fr auto 1fr!important;height:9
       <h2>Contanos tu <em>proyecto</em></h2>
       <p class="subtitle">Completá el formulario y te contactamos en menos de 24 horas con una propuesta personalizada, sin costo y sin compromiso.</p>
 
-      <form class="cform" id="contactForm" onsubmit="submitContact(event)">
+      <form class="cform" id="contactForm" onsubmit="submitContact(event)" novalidate>
         <div class="fg-row">
           <div class="fl">
-            <label>Nombre *</label>
-            <input type="text" placeholder="Tu nombre completo" required autocomplete="name"/>
+            <label for="cf-name">Nombre *</label>
+            <input id="cf-name" type="text" placeholder="Tu nombre completo" required autocomplete="name"/>
+            <span class="field-err" id="err-name"></span>
           </div>
           <div class="fl">
-            <label>WhatsApp *</label>
-            <input type="tel" placeholder="+54 358 5075773" required autocomplete="tel"/>
+            <label for="cf-phone">WhatsApp *</label>
+            <input id="cf-phone" type="tel" placeholder="358 507 5773" required autocomplete="tel" pattern="[\d\s\+\-\(\)]{8,20}"/>
+            <span class="field-err" id="err-phone"></span>
           </div>
         </div>
         <div class="fl">
-          <label>Email</label>
-          <input type="email" placeholder="tu@email.com"/>
+          <label for="cf-email">Email</label>
+          <input id="cf-email" type="email" placeholder="tu@email.com" autocomplete="email"/>
         </div>
         <div class="fl">
-          <label>¿Qué estás buscando? *</label>
-          <select required>
+          <label for="cf-service">¿Qué estás buscando? *</label>
+          <select id="cf-service" required>
             <option value="" disabled selected>Seleccioná una opción</option>
             <option>Cortinas Hunter Douglas</option>
             <option>Muebles (sillones, mesas, consolas)</option>
             <option>Alfombras y textiles</option>
             <option>Iluminación y lámparas</option>
-            <option>Toldos y pérgolas HD</option>
+            <option>Toldos y pérgolas Hunter Douglas</option>
             <option>Proyecto de decoración completo</option>
             <option>Otro</option>
           </select>
@@ -311,8 +316,9 @@ nav{display:grid!important;grid-template-columns:1fr auto 1fr!important;height:9
           </div>
         </div>
         <div class="fl">
-          <label>Mensaje</label>
-          <textarea placeholder="Contanos sobre tu espacio, qué necesitás y cualquier detalle que nos ayude a asesorarte mejor…"></textarea>
+          <label for="cf-msg">Mensaje</label>
+          <textarea id="cf-msg" placeholder="Contanos sobre tu espacio, qué necesitás y cualquier detalle que nos ayude a asesorarte mejor…" maxlength="1000"></textarea>
+          <span style="font-size:11px;color:var(--text-light);text-align:right;display:block;margin-top:4px" id="cf-msg-count">0 / 1000</span>
         </div>
         <button type="submit" class="submit-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -471,22 +477,60 @@ function toggleFq(el){
 }
 
 // FORM
+function showErr(id,msg){const el=document.getElementById(id);if(el){el.textContent=msg;el.style.display=msg?'block':'none'}}
+function clearErr(id){showErr(id,'')}
+
 function submitContact(e){
   e.preventDefault();
+  const name=(document.getElementById('cf-name')?.value||'').trim();
+  const phone=(document.getElementById('cf-phone')?.value||'').replace(/\s/g,'').trim();
+  const service=document.getElementById('cf-service')?.value||'';
+  const msg=(document.getElementById('cf-msg')?.value||'').trim();
+  const pref=document.querySelector('input[name=contact_pref]:checked')?.value||'whatsapp';
+
+  let valid=true;
+  clearErr('err-name');clearErr('err-phone');
+
+  if(!name){showErr('err-name','Por favor ingresá tu nombre.');valid=false;}
+  if(!phone||phone.replace(/\D/g,'').length<8){showErr('err-phone','Ingresá un número de teléfono válido (mín. 8 dígitos).');valid=false;}
+  if(!service){
+    const sel=document.getElementById('cf-service');
+    if(sel){sel.style.borderColor='#e05'; setTimeout(()=>sel.style.borderColor='',2000);}
+    valid=false;
+  }
+  if(!valid)return;
+
   const btn=e.target.querySelector('.submit-btn');
-  const name=e.target.querySelector('input[type=text]').value;
-  const phone=e.target.querySelector('input[type=tel]').value;
-  const service=e.target.querySelector('select').value;
-  const msg=e.target.querySelector('textarea').value;
-  const waText=`Hola, soy ${name}. Consulta a través del formulario web.\nServicio: ${service||'General'}\n${msg?'Mensaje: '+msg:''}\nContacto: ${phone}`;
-  btn.textContent='¡Enviando...';
+  btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" opacity=".25"/><path d="M21 12a9 9 0 01-9 9"/></svg> Enviando…';
   btn.disabled=true;
+
+  const prefMap={whatsapp:'WhatsApp',email:'Email',visita:'Visita al showroom'};
+  const lines=[
+    `Hola, soy *${name}*.`,
+    `*Consulta desde el formulario web*`,
+    ``,
+    `Servicio: ${service}`,
+    pref!=='whatsapp'?`Preferencia de contacto: ${prefMap[pref]||pref}`:'',
+    msg?`Mensaje: ${msg}`:'',
+    ``,
+    `Teléfono: ${phone}`,
+  ].filter(l=>l!==undefined&&l!==null);
+
+  const waText=lines.join('\n').replace(/\n{3,}/g,'\n\n').trim();
+
   setTimeout(()=>{
     document.getElementById('successMsg').classList.add('show');
     btn.style.display='none';
     window.open('https://wa.me/543585075773?text='+encodeURIComponent(waText),'_blank');
-  },600);
+  },500);
 }
+
+// Character counter for textarea
+document.getElementById('cf-msg')?.addEventListener('input',function(){
+  const count=this.value.length;
+  const el=document.getElementById('cf-msg-count');
+  if(el)el.textContent=count+' / 1000';
+});
 
 // REVEAL
 const ro=new IntersectionObserver(ents=>{

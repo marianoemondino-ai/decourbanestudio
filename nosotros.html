@@ -209,11 +209,11 @@ h2.sec em{font-style:italic;color:var(--gold)}
   <nav>
     <div class="nav-links">
       <a href="index.html">Inicio</a>
-      <a href="cortinas.html">Cortinas HD</a>
+      <a href="cortinas.html">Hunter Douglas Cortinas</a>
       <a href="coleccion.html">Catálogo</a>
     </div>
     <a href="index.html" class="nav-logo-c" aria-label="Decourban Estudio">
-      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" fetchpriority="high" loading="eager"/>
       <span class="logo-tag">Decoración · Río Cuarto, Córdoba</span>
     </a>
     <div class="nav-acts-r">
@@ -374,9 +374,9 @@ h2.sec em{font-style:italic;color:var(--gold)}
     <!-- Layout especial para destacar a Marcela -->
     <div class="marcela-layout">
       <div class="team-card rv" style="max-width:100%">
-        <div class="team-img" style="width:200px;height:200px;background:var(--bg-dark)">
-          <!-- IMPORTANTE: agregar la foto real de Marcela como "marcela.jpg" en la carpeta del proyecto -->
-          <img src="marcela.jpg" alt="Marcela Kalbermatten — Decoradora de Interiores Río Cuarto" loading="lazy" style="filter:grayscale(20%)" onerror="this.onerror=null;this.src='https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0';this.style.objectFit='contain';this.style.padding='20px';this.style.filter='none'"/>
+        <div class="team-img" style="width:200px;height:200px;background:var(--bg-dark);display:flex;align-items:center;justify-content:center;overflow:hidden">
+          <!-- Reemplazar con la foto real: <img src="marcela.jpg" ...> -->
+          <span style="font-family:'Playfair Display',serif;font-size:54px;font-weight:600;color:var(--gold);letter-spacing:2px;user-select:none">MK</span>
         </div>
         <h3 class="team-name" style="font-size:22px">Marcela Kalbermatten</h3>
         <div class="team-role">Decoradora de Interiores & Fundadora</div>
@@ -408,10 +408,27 @@ h2.sec em{font-style:italic;color:var(--gold)}
       <div class="hd-year">13+</div>
       <div class="hd-year-label">años de alianza oficial</div>
       <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,36px);font-weight:500;color:#fff;line-height:1.2;margin-bottom:18px">El respaldo de la marca líder <em style="font-style:italic;color:var(--gold)">mundial</em></h2>
-      <p style="font-size:14px;color:rgba(255,255,255,.52);line-height:1.8;margin-bottom:16px">Hunter Douglas es la empresa líder mundial en productos para ventanas. Con más de 75 años de historia y presencia en más de 100 países, su tecnología es el estándar de excelencia en la industria.</p>
-      <p style="font-size:14px;color:rgba(255,255,255,.52);line-height:1.8;margin-bottom:28px">Como distribuidores oficiales, tenemos acceso a toda la línea de productos, capacitación directa de la marca y soporte técnico para garantizarte el mejor servicio.</p>
+      <p style="font-size:14px;color:rgba(255,255,255,.52);line-height:1.8;margin-bottom:24px">Hunter Douglas es la empresa líder mundial en productos para ventanas. Con más de 75 años de historia y presencia en más de 100 países, su tecnología es el estándar de excelencia en la industria.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px">
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(196,164,107,.2);border-radius:4px;padding:14px 16px">
+          <div style="font-size:11px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Línea completa</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.6">Silhouette®, Duette®, Pirouette®, Luminette®, Roller Quantum®, Twinline, Horizontales y más</div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(196,164,107,.2);border-radius:4px;padding:14px 16px">
+          <div style="font-size:11px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Capacitación directa</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.6">Marcela recibe capacitaciones y actualizaciones directas de Hunter Douglas Argentina</div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(196,164,107,.2);border-radius:4px;padding:14px 16px">
+          <div style="font-size:11px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Garantía internacional</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.6">Todos los productos con respaldo directo de Hunter Douglas Argentina</div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(196,164,107,.2);border-radius:4px;padding:14px 16px">
+          <div style="font-size:11px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">PowerView® Motorización</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.6">Instalamos y programamos el sistema de motorización inteligente de Hunter Douglas</div>
+        </div>
+      </div>
       <a href="cortinas.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--bg-dark);padding:14px 28px;border-radius:var(--r);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:all var(--ease)">
-        Ver colección Hunter Douglas
+        Ver colección Hunter Douglas Cortinas
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -460,7 +477,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
   <span>© 2026 Decourban Estudio · Juan de Garay 1550, Río Cuarto</span>
   <div class="footer-mini-links">
     <a href="index.html">Inicio</a>
-    <a href="cortinas.html">Cortinas HD</a>
+    <a href="cortinas.html">Hunter Douglas Cortinas</a>
     <a href="coleccion.html">Catálogo</a>
     <a href="contacto.html">Contacto</a>
     <a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a>

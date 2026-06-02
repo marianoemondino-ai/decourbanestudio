@@ -286,11 +286,11 @@ footer a:hover{color:var(--gold)}
   <nav>
     <div class="nav-links">
       <a href="index.html">Inicio</a>
-      <a href="cortinas.html">Cortinas HD</a>
+      <a href="cortinas.html">Hunter Douglas Cortinas</a>
       <a href="coleccion.html" class="active">Catálogo</a>
     </div>
     <a href="index.html" class="nav-logo-c" aria-label="Decourban Estudio">
-      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" fetchpriority="high" loading="eager"/>
       <span class="logo-tag">Decoración · Río Cuarto, Córdoba</span>
     </a>
     <div class="nav-right">
@@ -339,7 +339,7 @@ footer a:hover{color:var(--gold)}
   <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
     <div class="col-search">
-      <input type="text" id="colSearch" placeholder="Buscar producto…" oninput="applyFilters()"/>
+      <input type="text" id="colSearch" placeholder="Buscar producto…" oninput="debouncedFilter()"/>
       <button aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
     </div>
 
@@ -358,7 +358,7 @@ footer a:hover{color:var(--gold)}
         <!-- CORTINAS PRIMERO — especialidad de la empresa -->
         <div class="cat-item" data-cat="cortinas" onclick="selectCat(this,'cortinas')" style="border-left:3px solid var(--gold);padding-left:10px">
           <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v2H3zM5 5v16M19 5v16M5 12h4M15 12h4M9 9h6M9 15h6"/></svg>
-          <span style="color:var(--text)">Cortinas Hunter Douglas ★</span> <span class="cat-count" style="background:var(--gold);color:var(--bg-dark)">HD</span>
+          <span style="color:var(--text)">Cortinas Hunter Douglas ★</span> <span class="cat-count" style="background:var(--gold);color:var(--bg-dark)">Oficial</span>
         </div>
         <div class="cat-item" data-cat="muebles" onclick="selectCat(this,'muebles')">
           <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 9V6a2 2 0 00-2-2H6a2 2 0 00-2 2v3"/><path d="M2 11v5a2 2 0 002 2h16a2 2 0 002-2v-5a2 2 0 00-4 0H6a2 2 0 00-4 0z"/></svg>
@@ -626,7 +626,7 @@ footer a:hover{color:var(--gold)}
           <div class="pc-name">Persiana Duette®</div>
           <div class="pc-mat">+100 telas · A medida</div>
           <div class="pc-price">Desde $150.000 aprox. <span style="font-size:11px;color:var(--text-light);font-weight:400;display:block">Precio final según medida exacta</span></div>
-          <div class="list-cta"><a href="https://wa.me/543585075773?text=Quiero cotizar Persianas Duette Hunter Douglas" class="lm" target="_blank">Cotizar ahora</a><a href="cortinas.html" class="ls">Ver colección HD</a></div>
+          <div class="list-cta"><a href="https://wa.me/543585075773?text=Quiero cotizar Persianas Duette Hunter Douglas" class="lm" target="_blank">Cotizar ahora</a><a href="cortinas.html" class="ls">Ver colección Hunter Douglas</a></div>
         </div>
       </div>
 
@@ -664,7 +664,7 @@ footer a:hover{color:var(--gold)}
           <div class="pc-name">Toldo Gemini</div>
           <div class="pc-mat">Retráctil · Motorizado · Resistente al viento</div>
           <div class="pc-price">Desde $150.000 aprox. <span style="font-size:11px;color:var(--text-light);font-weight:400;display:block">Precio final según medida exacta</span></div>
-          <div class="list-cta"><a href="https://wa.me/543585075773?text=Toldo%20Gemini%20Hunter%20Douglas" class="lm" target="_blank">Cotizar ahora</a><a href="cortinas.html" class="ls">Ver cortinas HD</a></div>
+          <div class="list-cta"><a href="https://wa.me/543585075773?text=Toldo%20Gemini%20Hunter%20Douglas" class="lm" target="_blank">Cotizar ahora</a><a href="cortinas.html" class="ls">Ver cortinas Hunter Douglas</a></div>
         </div>
       </div>
 
@@ -722,7 +722,7 @@ footer a:hover{color:var(--gold)}
           <div class="pc-name">Cortina Silhouette®</div>
           <div class="pc-mat">Control de luz suave · Motorizable</div>
           <div class="pc-price">Desde $150.000 aprox. <span style="font-size:11px;color:var(--text-light);font-weight:400;display:block">Precio final según medida exacta</span></div>
-          <div class="list-cta"><a href="https://wa.me/543585075773?text=Cotizar Cortina Silhouette" class="lm" target="_blank">Cotizar</a><a href="cortinas.html" class="ls">Ver más HD</a></div>
+          <div class="list-cta"><a href="https://wa.me/543585075773?text=Cotizar Cortina Silhouette" class="lm" target="_blank">Cotizar</a><a href="cortinas.html" class="ls">Ver Hunter Douglas</a></div>
         </div>
       </div>
 
@@ -742,7 +742,7 @@ footer a:hover{color:var(--gold)}
           <div class="pc-name">Cortina Pirouette®</div>
           <div class="pc-mat">Láminas giratorias · Vista exterior preservada · Motorizable</div>
           <div class="pc-price">Desde $160.000 aprox. <span style="font-size:11px;color:var(--text-light);font-weight:400;display:block">Precio final según medida exacta</span></div>
-          <div class="list-cta"><a href="https://wa.me/543585075773?text=Cotizar%20Cortina%20Pirouette" class="lm" target="_blank">Cotizar</a><a href="cortinas.html" class="ls">Ver más HD</a></div>
+          <div class="list-cta"><a href="https://wa.me/543585075773?text=Cotizar%20Cortina%20Pirouette" class="lm" target="_blank">Cotizar</a><a href="cortinas.html" class="ls">Ver Hunter Douglas</a></div>
         </div>
       </div>
 
@@ -761,7 +761,7 @@ footer a:hover{color:var(--gold)}
           <div class="pc-name">Horizontales de Madera</div>
           <div class="pc-mat">Madera natural certificada · Alta durabilidad · Clásico atemporal</div>
           <div class="pc-price">Desde $140.000 aprox. <span style="font-size:11px;color:var(--text-light);font-weight:400;display:block">Precio final según medida exacta</span></div>
-          <div class="list-cta"><a href="https://wa.me/543585075773?text=Cotizar%20Horizontales%20de%20Madera" class="lm" target="_blank">Cotizar</a><a href="cortinas.html" class="ls">Ver más HD</a></div>
+          <div class="list-cta"><a href="https://wa.me/543585075773?text=Cotizar%20Horizontales%20de%20Madera" class="lm" target="_blank">Cotizar</a><a href="cortinas.html" class="ls">Ver Hunter Douglas</a></div>
         </div>
       </div>
 
@@ -780,7 +780,7 @@ footer a:hover{color:var(--gold)}
           <div class="pc-name">Paneles Orientales</div>
           <div class="pc-mat">Ideal para ventanas grandes y puertas corredizas · Deslizamiento suave</div>
           <div class="pc-price">Desde $130.000 aprox. <span style="font-size:11px;color:var(--text-light);font-weight:400;display:block">Precio final según medida exacta</span></div>
-          <div class="list-cta"><a href="https://wa.me/543585075773?text=Cotizar%20Paneles%20Orientales" class="lm" target="_blank">Cotizar</a><a href="cortinas.html" class="ls">Ver más HD</a></div>
+          <div class="list-cta"><a href="https://wa.me/543585075773?text=Cotizar%20Paneles%20Orientales" class="lm" target="_blank">Cotizar</a><a href="cortinas.html" class="ls">Ver Hunter Douglas</a></div>
         </div>
       </div>
 
@@ -818,7 +818,7 @@ footer a:hover{color:var(--gold)}
           <div class="pc-name">Pérgola Retráctil Outdoor</div>
           <div class="pc-mat">Sistema motorizado · Resistente al viento</div>
           <div class="pc-price">Desde $150.000 aprox. <span style="font-size:11px;color:var(--text-light);font-weight:400;display:block">Precio final según medida exacta</span></div>
-          <div class="list-cta"><a href="https://wa.me/543585075773?text=P%C3%A9rgola Retráctil" class="lm" target="_blank">Cotizar ahora</a><a href="cortinas.html" class="ls">Ver más HD</a></div>
+          <div class="list-cta"><a href="https://wa.me/543585075773?text=P%C3%A9rgola Retráctil" class="lm" target="_blank">Cotizar ahora</a><a href="cortinas.html" class="ls">Ver Hunter Douglas</a></div>
         </div>
       </div>
 
@@ -1518,6 +1518,20 @@ function sortProducts(mode){
 }
 
 // ── APPLY ALL FILTERS ─────────────────
+let _filterTimer;
+function debouncedFilter(){clearTimeout(_filterTimer);_filterTimer=setTimeout(applyFilters,220);}
+function syncURL(){
+  const p=new URLSearchParams();
+  const q=(document.getElementById('colSearch')?.value||'').trim();
+  if(activeCat&&activeCat!=='all')p.set('cat',activeCat);
+  if(q)p.set('q',q);
+  const minP=document.getElementById('priceMin')?.value;
+  const maxP=document.getElementById('priceMax')?.value;
+  if(minP)p.set('min',minP);
+  if(maxP)p.set('max',maxP);
+  const str=p.toString();
+  history.replaceState(null,'',str?'?'+str:window.location.pathname);
+}
 function applyFilters(){
   const grid=document.getElementById('pgrid');
   grid.classList.add('filtering');
@@ -1563,6 +1577,9 @@ function applyFilters(){
 
   // Active filters chips
   renderActiveFilters();
+
+  // Sync current filters to URL so links can be shared
+  syncURL();
 
   setTimeout(()=>grid.classList.remove('filtering'),350);
 }
@@ -1697,8 +1714,11 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
   }
   if(q){
     const inp=document.getElementById('colSearch');
-    if(inp){inp.value=q;inp.dispatchEvent(new Event('input'))}
+    if(inp){inp.value=q;}
   }
+  const min=p.get('min');const max=p.get('max');
+  if(min){const el=document.getElementById('priceMin');if(el)el.value=min;}
+  if(max){const el=document.getElementById('priceMax');if(el)el.value=max;}
 })();
 
 // ── INIT ──────────────────────────────

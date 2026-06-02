@@ -36,8 +36,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <meta name="apple-mobile-web-app-title" content="Decourban"/>
-<!-- Performance: preload critical resources -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"/>
 <link rel="dns-prefetch" href="https://dcdn-us.mitiendanube.com"/>
 <link rel="dns-prefetch" href="https://images.unsplash.com"/>
 <script type="application/ld+json">
@@ -1359,9 +1357,17 @@ body.dark .cmp-modal{background:#211f1d}
   </div>
 </noscript>
 
+<!-- BANNER OFERTA -->
+<div id="ofertaBanner" style="background:var(--gold);color:var(--bg-dark);padding:10px 48px 10px 20px;text-align:center;font-size:12.5px;font-weight:600;position:relative;line-height:1.4">
+  <span>Consultá sin cargo — Marcela responde en menos de 2 horas · </span>
+  <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" target="_blank" rel="noopener" style="color:var(--bg-dark);text-decoration:underline;font-weight:700">Escribir ahora →</a>
+  <button onclick="document.getElementById('ofertaBanner').style.display='none';sessionStorage.setItem('bannerClosed','1')" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;color:var(--bg-dark);opacity:.6;line-height:1" aria-label="Cerrar">×</button>
+</div>
+<script>if(sessionStorage.getItem('bannerClosed')){document.getElementById('ofertaBanner').style.display='none'}</script>
+
 <!-- LOADER -->
 <div id="loader">
-  <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban"/>
+  <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban" fetchpriority="high" loading="eager"/>
 </div>
 
 <!-- ANNOUNCEMENT BAR (rotating) -->
@@ -1429,14 +1435,14 @@ body.dark .cmp-modal{background:#211f1d}
             </div>
           </div>
         </li>
-        <li class="nav-item"><a href="cortinas.html">Cortinas HD</a></li>
+        <li class="nav-item"><a href="cortinas.html">Hunter Douglas Cortinas</a></li>
         <li class="nav-item"><a href="coleccion.html">Catálogo</a></li>
       </ul>
     </div>
 
     <!-- CENTER: Logo prominente -->
     <a href="#inicio" class="nav-logo-center" aria-label="Decourban Estudio — Inicio">
-      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio — Decoración de Interiores y Cortinas Hunter Douglas en Río Cuarto"/>
+      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio — Decoración de Interiores y Cortinas Hunter Douglas en Río Cuarto" fetchpriority="high" loading="eager"/>
     </a>
 
     <!-- RIGHT: Nosotros / Contacto + acciones -->
@@ -1497,11 +1503,14 @@ body.dark .cmp-modal{background:#211f1d}
   <div class="hero-grad"></div>
   <div class="hero-content">
     <p class="eyebrow">Decourban Estudio · Distribuidor oficial Hunter Douglas · Río Cuarto</p>
-    <h1 id="heroTitle">Las mejores cortinas<br><em>del mundo, en tu hogar</em></h1>
-    <p class="hero-sub" id="heroSub">Marcela Kalbermatten te asesora sin cargo. Medición a domicilio, fabricación a medida e instalación en Río Cuarto y toda la región. 22 años de experiencia.</p>
+    <h1 id="heroTitle">La pieza correcta<br><em>no llena tu espacio —<br>lo define</em></h1>
+    <p class="hero-sub" id="heroSub">Marcela Kalbermatten ha transformado más de 500 hogares en Río Cuarto eligiendo la cortina, el mueble y el accesorio exacto para cada ambiente. Distribuidor oficial Hunter Douglas · 22 años de experiencia.</p>
     <div class="hero-ctas">
-      <a href="cortinas.html" class="btn-p">Ver cortinas Hunter Douglas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20una%20cotizaci%C3%B3n%20gratuita" class="btn-s" target="_blank" rel="noopener">Cotización gratuita</a>
+      <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20una%20cotizaci%C3%B3n%20gratuita" class="btn-p" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+        Hablar con Marcela — responde en 2 hs
+      </a>
+      <a href="cortinas.html#comparador" class="btn-s">¿Qué cortina es para mí? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
   <div class="hero-dots" id="heroDots">
@@ -1519,7 +1528,7 @@ body.dark .cmp-modal{background:#211f1d}
     <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg><span><strong>Distribuidor Oficial</strong> Hunter Douglas</span></div>
     <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg><span>Envío gratis <strong>a todo el país</strong></span></div>
     <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10h18M3 6h18M3 14h18M3 18h18"/></svg><span>Medición e <strong>instalación incluida</strong></span></div>
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg><span>Asesoramiento <strong>sin costo</strong></span></div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Si no queda perfecto, <strong>lo rehacemos</strong></span></div>
   </div>
 </div>
 
@@ -1655,7 +1664,7 @@ body.dark .cmp-modal{background:#211f1d}
     <div class="filter-tabs rv" style="justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
       <div style="display:flex;gap:6px;flex-wrap:wrap">
         <button class="ftab on" onclick="filterProds('todos',this)">Todos</button>
-        <button class="ftab" onclick="filterProds('cortinas',this)" style="border-color:var(--gold);color:var(--gold)">★ Cortinas HD</button>
+        <button class="ftab" onclick="filterProds('cortinas',this)" style="border-color:var(--gold);color:var(--gold)">★ Hunter Douglas Cortinas</button>
         <button class="ftab" onclick="filterProds('muebles',this)">Muebles</button>
         <button class="ftab" onclick="filterProds('textil',this)">Textiles</button>
         <button class="ftab" onclick="filterProds('lampara',this)">Iluminación</button>
@@ -1688,7 +1697,8 @@ body.dark .cmp-modal{background:#211f1d}
         <div class="pc-cat">Sillones</div>
         <div class="pc-name">Sillón Monaco</div>
         <div class="pc-mat">Disponible en Negro y Blanco · 10 kg</div>
-        <div class="pc-price"><span class="price-ars">$344.350</span><span class="price-usd">≈ USD 280</span></div>
+        <div class="pc-stock" style="display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:#2a8a4a;margin-bottom:4px"><span style="width:7px;height:7px;border-radius:50%;background:#2a8a4a;display:inline-block"></span>En stock · Entrega 3-5 días</div>
+        <div class="pc-price"><span class="price-usd" style="font-size:14px;font-weight:700;color:var(--text)">≈ USD 280</span><span class="price-ars" style="font-size:12px;color:var(--text-light);display:block">$344.350 ARS</span></div>
         <button class="pc-compare" onclick="event.stopPropagation();addToCompare(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 20V10M12 20V4M6 20v-6"/></svg> Comparar</button>
       </div>
 
@@ -1705,8 +1715,9 @@ body.dark .cmp-modal{background:#211f1d}
         </div>
         <div class="pc-cat">Sillones</div>
         <div class="pc-name">Sillón Kenzo</div>
-        <div class="pc-mat">Peso: 10 kg · En stock</div>
-        <div class="pc-price"><span class="price-ars">$1.056.000</span><span class="price-usd">≈ USD 857</span></div>
+        <div class="pc-mat">Diseño exclusivo · 10 kg</div>
+        <div class="pc-stock" style="display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:#2a8a4a;margin-bottom:4px"><span style="width:7px;height:7px;border-radius:50%;background:#2a8a4a;display:inline-block"></span>En stock · Entrega 3-5 días</div>
+        <div class="pc-price"><span class="price-usd" style="font-size:14px;font-weight:700;color:var(--text)">≈ USD 857</span><span class="price-ars" style="font-size:12px;color:var(--text-light);display:block">$1.056.000 ARS</span></div>
         <button class="pc-compare" onclick="event.stopPropagation();addToCompare(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 20V10M12 20V4M6 20v-6"/></svg> Comparar</button>
       </div>
 
@@ -1723,8 +1734,9 @@ body.dark .cmp-modal{background:#211f1d}
         </div>
         <div class="pc-cat">Espejos</div>
         <div class="pc-name">Espejo Dalia</div>
-        <div class="pc-mat">Marco artesanal · Envío gratis</div>
-        <div class="pc-price"><span class="price-ars">$490.000</span><span class="price-usd">≈ USD 398</span></div>
+        <div class="pc-mat">Marco artesanal · Pieza única · Envío gratis</div>
+        <div class="pc-stock" style="display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:#c97a1a;margin-bottom:4px"><span style="width:7px;height:7px;border-radius:50%;background:#c97a1a;display:inline-block"></span>Últimas unidades</div>
+        <div class="pc-price"><span class="price-usd" style="font-size:14px;font-weight:700;color:var(--text)">≈ USD 398</span><span class="price-ars" style="font-size:12px;color:var(--text-light);display:block">$490.000 ARS</span></div>
         <button class="pc-compare" onclick="event.stopPropagation();addToCompare(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 20V10M12 20V4M6 20v-6"/></svg> Comparar</button>
       </div>
 
@@ -1739,8 +1751,9 @@ body.dark .cmp-modal{background:#211f1d}
         </div>
         <div class="pc-cat">Mesas</div>
         <div class="pc-name">Mesa de centro Estocolmo</div>
-        <div class="pc-mat">Madera de teca · Acabado natural</div>
-        <div class="pc-price"><span class="price-ars">$3.980.000</span><span class="price-usd">≈ USD 3.230</span></div>
+        <div class="pc-mat">Madera de teca · Acabado natural · 30 kg</div>
+        <div class="pc-stock" style="display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:#c97a1a;margin-bottom:4px"><span style="width:7px;height:7px;border-radius:50%;background:#c97a1a;display:inline-block"></span>Última unidad disponible</div>
+        <div class="pc-price"><span class="price-usd" style="font-size:14px;font-weight:700;color:var(--text)">≈ USD 3.230</span><span class="price-ars" style="font-size:12px;color:var(--text-light);display:block">$3.980.000 ARS</span></div>
         <button class="pc-compare" onclick="event.stopPropagation();addToCompare(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 20V10M12 20V4M6 20v-6"/></svg> Comparar</button>
       </div>
 
@@ -1825,7 +1838,7 @@ body.dark .cmp-modal{background:#211f1d}
       <!-- Badge visual de confianza -->
       <div class="hd-badge-trust">
         <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700">+13 años</div>
-        <div style="font-size:10px;color:rgba(255,255,255,.7);margin-top:2px;line-height:1.3">Distribuidor<br>Oficial HD</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.7);margin-top:2px;line-height:1.3">Distribuidor<br>Oficial</div>
       </div>
     </div>
     <div class="hunter-txt rvr">
@@ -1919,7 +1932,7 @@ body.dark .cmp-modal{background:#211f1d}
       <a href="cortinas.html" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1748679979601-dc9ec43d900d?auto=format&fit=crop&w=600&q=80" alt="Dormitorio" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Dormitorio</div><div class="rm-cta">Explorar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
       <a href="coleccion.html?cat=muebles" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Comedor" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Comedor</div><div class="rm-cta">Explorar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
       <a href="coleccion.html?cat=exterior" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80" alt="Exterior" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Exterior</div><div class="rm-cta">Explorar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
-      <a href="cortinas.html" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=600&q=80" alt="Cortinas Hunter Douglas" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Cortinas HD</div><div class="rm-cta">Explorar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
+      <a href="cortinas.html" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=600&q=80" alt="Cortinas Hunter Douglas" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Hunter Douglas Cortinas</div><div class="rm-cta">Explorar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
     </div>
   </div>
 </section>
@@ -2041,7 +2054,7 @@ body.dark .cmp-modal{background:#211f1d}
   </div>
   <div class="proj-grid" id="projGrid">
     <div class="proj-item rv" onclick="openLb(0)"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp" alt="Cortinas Silhouette Hunter Douglas" loading="lazy"/><div class="proj-ov"><div class="proj-info"><h4>Cortinas Silhouette®</h4><span>Río Cuarto · 2024</span></div></div></div>
-    <div class="proj-item rv" onclick="openLb(1)"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-480-0.webp" alt="Cortinas Duette HD" loading="lazy"/><div class="proj-ov"><div class="proj-info"><h4>Cortinas Duette® HD</h4><span>Buenos Aires · 2024</span></div></div></div>
+    <div class="proj-item rv" onclick="openLb(1)"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-480-0.webp" alt="Cortinas Duette Hunter Douglas" loading="lazy"/><div class="proj-ov"><div class="proj-info"><h4>Cortinas Duette® Hunter Douglas</h4><span>Buenos Aires · 2024</span></div></div></div>
     <div class="proj-item rv" onclick="openLb(2)"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-480-0.webp" alt="Cortinas Pirouette" loading="lazy"/><div class="proj-ov"><div class="proj-info"><h4>Cortinas Pirouette®</h4><span>Mendoza · 2023</span></div></div></div>
     <div class="proj-item rv" onclick="openLb(3)"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-480-0.webp" alt="Cortinas Horizontales Madera" loading="lazy"/><div class="proj-ov"><div class="proj-info"><h4>Horizontales de Madera</h4><span>Río Cuarto · 2024</span></div></div></div>
     <div class="proj-item rv" onclick="openLb(4)"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-480-0.webp" alt="Toldo Gemini" loading="lazy"/><div class="proj-ov"><div class="proj-info"><h4>Toldo Gemini Exterior</h4><span>Rosario · 2023</span></div></div></div>
@@ -2089,10 +2102,10 @@ body.dark .cmp-modal{background:#211f1d}
 
     <div class="testi-carousel rv" id="testiCarousel">
       <div class="testi-track" id="testiTrack">
-        <div class="tcard"><div class="stars"><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><blockquote>"Marcela nos asesoró en toda la selección de cortinas para el living y el dormitorio. El resultado con las Silhouette fue increíble — nunca pensé que las cortinas pudieran cambiar tanto un ambiente. Totalmente recomendada."</blockquote><div class="tauthor"><div class="tav" style="background:#c4a46b">V</div><div><div class="tname">Valeria M. <span style="font-size:10px;background:rgba(196,164,107,.2);color:var(--gold);padding:2px 8px;border-radius:40px;font-weight:500;letter-spacing:.5px;vertical-align:middle">✓ Verificado</span></div><div class="tinfo">Río Cuarto · Cortinas HD + Living</div></div></div></div>
+        <div class="tcard"><div class="stars"><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><blockquote>"Marcela nos asesoró en toda la selección de cortinas para el living y el dormitorio. El resultado con las Silhouette fue increíble — nunca pensé que las cortinas pudieran cambiar tanto un ambiente. Totalmente recomendada."</blockquote><div class="tauthor"><div class="tav" style="background:#c4a46b">V</div><div><div class="tname">Valeria M. <span style="font-size:10px;background:rgba(196,164,107,.2);color:var(--gold);padding:2px 8px;border-radius:40px;font-weight:500;letter-spacing:.5px;vertical-align:middle">✓ Verificado</span></div><div class="tinfo">Río Cuarto · Hunter Douglas Cortinas + Living</div></div></div></div>
         <div class="tcard"><div class="stars"><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><blockquote>"Consulté desde Buenos Aires por video llamada y Marcela me asesoró como si estuviera en el showroom. Elegí las cortinas Duette® para el dormitorio y tardaron 8 días en llegar. Instalación perfecta."</blockquote><div class="tauthor"><div class="tav" style="background:#3d2b1f">M</div><div><div class="tname">Martín G. <span style="font-size:10px;background:rgba(196,164,107,.2);color:var(--gold);padding:2px 8px;border-radius:40px;font-weight:500;letter-spacing:.5px;vertical-align:middle">✓ Verificado</span></div><div class="tinfo">Buenos Aires · Dormitorio</div></div></div></div>
         <div class="tcard"><div class="stars"><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><blockquote>"El toldo Gemini Hunter Douglas que instalamos en la terraza resistió dos veranos mendocinos sin perder color ni forma. Marcela eligió el color perfecto para nuestro espacio. Servicio impecable de principio a fin."</blockquote><div class="tauthor"><div class="tav" style="background:#7a8c5a">L</div><div><div class="tname">Lucía F. <span style="font-size:10px;background:rgba(196,164,107,.2);color:var(--gold);padding:2px 8px;border-radius:40px;font-weight:500;letter-spacing:.5px;vertical-align:middle">✓ Verificado</span></div><div class="tinfo">Mendoza · Exterior completo</div></div></div></div>
-        <div class="tcard"><div class="stars"><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><blockquote>"Llamé sin saber bien qué cortinas quería. Marcela me preguntó el ambiente, la luz, el estilo y en 20 minutos ya tenía claro qué tipo era el ideal. Las Duette® en el dormitorio son un sueño. Se lo recomiendo a todos."</blockquote><div class="tauthor"><div class="tav" style="background:#b5694a">S</div><div><div class="tname">Sofía R.</div><div class="tinfo">Rosario · Cortinas Duette® HD</div></div></div></div>
+        <div class="tcard"><div class="stars"><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><blockquote>"Llamé sin saber bien qué cortinas quería. Marcela me preguntó el ambiente, la luz, el estilo y en 20 minutos ya tenía claro qué tipo era el ideal. Las Duette® en el dormitorio son un sueño. Se lo recomiendo a todos."</blockquote><div class="tauthor"><div class="tav" style="background:#b5694a">S</div><div><div class="tname">Sofía R.</div><div class="tinfo">Rosario · Cortinas Duette® Hunter Douglas</div></div></div></div>
         <div class="tcard"><div class="stars"><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c4a46b" style="width:14px;height:14px"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><blockquote>"El sillón llegó perfectamente embalado y es exactamente como se veía en la web. La calidad de la tela supera lo que pagué. ¡Volvería a comprar sin dudar!"</blockquote><div class="tauthor"><div class="tav" style="background:#2c4a6e">D</div><div><div class="tname">Diego P.</div><div class="tinfo">Mendoza · Sillón Monaco</div></div></div></div>
       </div>
       <div class="testi-ctrl">
@@ -2101,6 +2114,7 @@ body.dark .cmp-modal{background:#211f1d}
           <button class="tc-dot on" onclick="goTesti(0)"></button>
           <button class="tc-dot" onclick="goTesti(1)"></button>
           <button class="tc-dot" onclick="goTesti(2)"></button>
+          <button class="tc-dot" onclick="goTesti(3)"></button>
         </div>
         <button class="tc-btn" onclick="testiNav(1)" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
       </div>
@@ -2368,12 +2382,51 @@ body.dark .cmp-modal{background:#211f1d}
   </div>
 </section>
 
+<!-- CÓMO TRABAJAMOS -->
+<section style="background:var(--bg-mid);padding:80px 36px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="rv" style="text-align:center;margin-bottom:52px">
+      <p class="ey ey-c">Sin complicaciones</p>
+      <h2 class="sec">De la consulta a la<br><em>instalación — cuatro pasos</em></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative">
+      <div style="position:absolute;top:28px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--gold),rgba(196,164,107,.2),var(--gold));z-index:0"></div>
+      <div class="rv" style="text-align:center;padding:0 16px;position:relative;z-index:1">
+        <div style="width:56px;height:56px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--bg-dark)">1</div>
+        <h3 style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px">Consultás gratis</h3>
+        <p style="font-size:13px;color:var(--text-mid);line-height:1.65">Escribís por WhatsApp y Marcela responde en menos de 2 horas. Sin formularios, sin burocracia.</p>
+      </div>
+      <div class="rv" style="text-align:center;padding:0 16px;position:relative;z-index:1">
+        <div style="width:56px;height:56px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--gold)">2</div>
+        <h3 style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px">Medición a domicilio</h3>
+        <p style="font-size:13px;color:var(--text-mid);line-height:1.65">Nuestro técnico va a tu casa en Río Cuarto y toma las medidas exactas. Sin costo adicional.</p>
+      </div>
+      <div class="rv" style="text-align:center;padding:0 16px;position:relative;z-index:1">
+        <div style="width:56px;height:56px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--gold)">3</div>
+        <h3 style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px">Fabricamos a medida</h3>
+        <p style="font-size:13px;color:var(--text-mid);line-height:1.65">Cada producto se fabrica específicamente para tu espacio. Plazo claro desde el inicio.</p>
+      </div>
+      <div class="rv" style="text-align:center;padding:0 16px;position:relative;z-index:1">
+        <div style="width:56px;height:56px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--gold)">4</div>
+        <h3 style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px">Instalamos y garantizamos</h3>
+        <p style="font-size:13px;color:var(--text-mid);line-height:1.65">Instalación profesional incluida. Si algo no queda perfecto, lo rehacemos sin cargo.</p>
+      </div>
+    </div>
+    <div class="rv" style="text-align:center;margin-top:44px">
+      <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20iniciar%20una%20consulta" class="btn-p" target="_blank" rel="noopener noreferrer" style="display:inline-flex">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+        Empezar ahora — es gratis
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="ft">
     <div class="ft-top">
       <div>
-        <div class="ft-logo"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/></div>
+        <div class="ft-logo"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" loading="lazy"/></div>
         <p class="ft-desc">Especialistas en cortinas y decoración de interiores desde 2004. Marcela Kalbermatten y su equipo en Río Cuarto. Distribuidores oficiales Hunter Douglas con más de 10 años de alianza.</p>
         <div class="ft-soc">
           <a href="https://www.instagram.com/decourbanestudio" class="soc-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -2946,8 +2999,6 @@ const products={
   'Sillón Monaco':{cat:'Sillones',mat:'67×70×90 cm · Peso: 10 kg · Negro o Blanco · No incluye almohadones',price:'$344.350',img:CDN_BASE+'captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp',desc:'Medidas: 67 cm × 70 cm × 90 cm. Peso: 10 kg. Disponible en Negro (en stock) y Blanco. No incluye almohadones. Envío gratis a todo el país.'},
   'Sillón Kenzo':{cat:'Sillones',mat:'Diseño premium · 10 kg',price:'$1.056.000',img:CDN_BASE+'img_9109-fbde0aa1d00029292717538840253837-480-0.webp',desc:'El Sillón Kenzo es la opción premium de nuestra colección. Diseño exclusivo, materiales de primera calidad. Una inversión que transforma completamente cualquier living o estudio.'},
   'Espejo Dalia':{cat:'Espejos',mat:'120 cm de diámetro · Material: Ratán · Peso: 4 kg',price:'$490.000',img:CDN_BASE+'captura-de-pantalla-2025-08-17-223048-079d0efd19c38b89e717554806596677-480-0.webp',desc:'Espejo circular de 120 cm de diámetro. Material: Ratán. Peso: 4 kg. Pieza artesanal, cada unidad es única. Envío gratis incluido.'},
-  'Mesa de Centro Estocolmo':{cat:'Mesas',mat:'120×180×45 cm · Madera maciza · Color Negro · Peso: 30 kg',price:'$3.980.000',img:CDN_BASE+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp',desc:'Medidas: 120×180×45 cm. Material: Madera maciza. Color: Negro. Peso: 30 kg. Pieza imponente de sala.'},
-  'Mesa de Centro Estocolmo':{cat:'Mesas',mat:'120×180×45 cm · Madera maciza · Color Negro · Peso: 30 kg',price:'$3.980.000',img:CDN_BASE+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp',desc:'Medidas: 120×180×45 cm. Material: Madera maciza. Color: Negro. Peso: 30 kg. Pieza imponente de sala.'},
   'Mesa de centro Estocolmo':{cat:'Mesas',mat:'120×180×45 cm · Madera maciza · Color Negro · Peso: 30 kg',price:'$3.980.000',img:CDN_BASE+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp',desc:'Medidas: 120×180×45 cm. Material: Madera maciza. Color: Negro. Peso: 30 kg. Envío gratis.'},
   'Consola Naturale':{cat:'Mesas',mat:'180×50×75 cm · Material: Teka · Peso: 15 kg',price:'$2.811.927',img:CDN_BASE+'captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp',desc:'Medidas: 180 cm largo × 50 cm ancho × 75 cm alto. Material: Madera Teka. Peso: 15 kg. Pieza imponente y elegante. Envío gratis.'},
   'Candelabro Shiv':{cat:'Adornos',mat:'52 cm de alto · Madera maciza blanca · Peso: 1,5 kg · Sin vela',price:'$50.634',img:CDN_BASE+'imagen-de-whatsapp-2025-01-09-a-las-13-54-57_fbab22c7-39ca1ab708b7e5e04a17364417205021-480-0.webp',desc:'Altura: 52 cm. Material: Madera maciza blanca. Peso: 1,5 kg. No incluye vela. Ideal para centros de mesa y decoración de ambientes.'},
@@ -3210,7 +3261,6 @@ const cmpInfo={
   'Espejo Dalia':{price:'$490.000',img:CDN_BASE+'captura-de-pantalla-2025-08-17-223048-079d0efd19c38b89e717554806596677-480-0.webp',material:'Marco artesanal',dimensions:'Consultar',peso:'Consultar',origen:'Argentina',garantia:'12 meses'},
   'Espejo Rectangular':{price:'$574.400',img:CDN_BASE+'4e39170a-f757-457d-b7f9-dffeb81ed482-8d2aa96f4320122a8b17374010605859-480-0.webp',material:'Diseño moderno',dimensions:'Consultar',peso:'Consultar',origen:'Argentina',garantia:'12 meses'},
   'Mesa de centro Estocolmo':{price:'$3.980.000',img:CDN_BASE+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp',material:'Teca maciza',dimensions:'Consultar',peso:'Consultar',origen:'Indonesia',garantia:'24 meses'},
-  'Mesa de Centro Estocolmo':{price:'$3.980.000',img:CDN_BASE+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp',material:'Teca maciza',dimensions:'Consultar',peso:'Consultar',origen:'Indonesia',garantia:'24 meses'},
   'Mesa de centro Ratán':{price:'$651.198',img:CDN_BASE+'captura-de-pantalla-2025-08-17-223331-b8c910fb731ccaf5ee17554808634179-480-0.webp',material:'Ratán natural',dimensions:'Consultar',peso:'Consultar',origen:'Argentina',garantia:'12 meses'},
   'Mesa Pacamara':{price:'$2.480.000',img:CDN_BASE+'img-20250926-wa0098-280dd9e73fa2e0378917589219616975-480-0.webp',material:'Madera noble',dimensions:'Consultar',peso:'Consultar',origen:'Argentina',garantia:'12 meses'},
   'Consola Naturale':{price:'$2.811.927',img:CDN_BASE+'captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp',material:'Ratán · Lacado blanco',dimensions:'Consultar',peso:'Consultar',origen:'Argentina',garantia:'12 meses'},
@@ -3285,7 +3335,6 @@ const drawerProductInfo={
   'Espejo Dalia':{cat:'Espejos',price:'$490.000',img:CDN_BASE+'captura-de-pantalla-2025-08-17-223048-079d0efd19c38b89e717554806596677-480-0.webp'},
   'Espejo Rectangular':{cat:'Espejos',price:'$574.400',img:CDN_BASE+'4e39170a-f757-457d-b7f9-dffeb81ed482-8d2aa96f4320122a8b17374010605859-480-0.webp'},
   'Mesa de centro Estocolmo':{cat:'Mesas',price:'$3.980.000',img:CDN_BASE+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp'},
-  'Mesa de Centro Estocolmo':{cat:'Mesas',price:'$3.980.000',img:CDN_BASE+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp'},
   'Mesa de centro Ratán':{cat:'Mesas',price:'$651.198',img:CDN_BASE+'captura-de-pantalla-2025-08-17-223331-b8c910fb731ccaf5ee17554808634179-480-0.webp'},
   'Mesa Pacamara':{cat:'Mesas',price:'$2.480.000',img:CDN_BASE+'img-20250926-wa0098-280dd9e73fa2e0378917589219616975-480-0.webp'},
   'Consola Naturale':{cat:'Mesas',price:'$2.811.927',img:CDN_BASE+'captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp'},
@@ -3580,7 +3629,6 @@ const rvProducts={
   'Espejo Dalia':{cat:'Espejos',price:'$490.000',img:CDN_BASE+'captura-de-pantalla-2025-08-17-223048-079d0efd19c38b89e717554806596677-480-0.webp'},
   'Espejo Rectangular':{cat:'Espejos',price:'$574.400',img:CDN_BASE+'4e39170a-f757-457d-b7f9-dffeb81ed482-8d2aa96f4320122a8b17374010605859-480-0.webp'},
   'Mesa de centro Estocolmo':{cat:'Mesas',price:'$3.980.000',img:CDN_BASE+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp'},
-  'Mesa de Centro Estocolmo':{cat:'Mesas',price:'$3.980.000',img:CDN_BASE+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp'},
   'Mesa de centro Ratán':{cat:'Mesas',price:'$651.198',img:CDN_BASE+'captura-de-pantalla-2025-08-17-223331-b8c910fb731ccaf5ee17554808634179-480-0.webp'},
   'Mesa Pacamara':{cat:'Mesas',price:'$2.480.000',img:CDN_BASE+'img-20250926-wa0098-280dd9e73fa2e0378917589219616975-480-0.webp'},
   'Consola Naturale':{cat:'Mesas',price:'$2.811.927',img:CDN_BASE+'captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp'},
@@ -3707,6 +3755,16 @@ if(yrEl)yrEl.textContent=new Date().getFullYear();
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{
     navigator.serviceWorker.register('/sw.js').catch(()=>{});
+    navigator.serviceWorker.addEventListener('message',e=>{
+      if(e.data?.type==='SW_UPDATED'){
+        const t=document.createElement('div');
+        t.className='sw-toast';
+        t.innerHTML='<span>Hay una versión nueva disponible.</span><a href="" onclick="location.reload();return false">Actualizar</a>';
+        document.body.appendChild(t);
+        setTimeout(()=>t.classList.add('show'),100);
+        setTimeout(()=>t.classList.remove('show'),8000);
+      }
+    });
   });
 }
 
@@ -4005,7 +4063,6 @@ const swatchColors={
   'Sillón Fenix un cuerpo':['#c8b89a','#6b5e52','#2c2825'],
   'Espejo Dalia':['#b5864e','#7a5c32'],
   'Mesa de centro Estocolmo':['#b5864e','#7a5c32'],
-  'Mesa de Centro Estocolmo':['#b5864e','#7a5c32'],
   'Mesa de centro Ratán':['#b5864e','#c8b89a'],
   'Mesa Pacamara':['#b5864e','#7a5c32','#d4b483'],
   'Consola Naturale':['#f5f5f0','#e8ddd0','#c9b99a'],

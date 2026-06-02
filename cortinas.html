@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8"/>
@@ -66,6 +66,15 @@ nav{max-width:1440px;margin:0 auto;padding:0 36px;height:96px;display:grid;grid-
 .nav-links{display:flex;align-items:center;gap:22px}
 .nav-links a{font-size:12px;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;color:var(--text-mid);transition:color var(--ease);white-space:nowrap;padding-bottom:3px;border-bottom:1.5px solid transparent}
 .nav-links a:hover,.nav-links a.active{color:var(--text);border-color:var(--gold)}
+.nav-dropdown{position:relative}
+.nav-dropdown>.nav-dd-trigger{cursor:pointer;display:flex;align-items:center;gap:4px}
+.nav-dd-arrow{width:10px;height:10px;transition:transform .25s ease}
+.nav-dropdown:hover .nav-dd-arrow{transform:rotate(180deg)}
+.nav-dd-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:4px;box-shadow:0 8px 32px rgba(0,0,0,.1);min-width:220px;padding:8px 0;opacity:0;visibility:hidden;transition:opacity .2s ease,transform .2s ease,visibility .2s;transform:translateX(-50%) translateY(-6px);z-index:999}
+.nav-dropdown:hover .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.nav-dd-menu a{display:flex;align-items:center;gap:10px;padding:10px 18px;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text-mid);transition:background .2s,color .2s;border-bottom:none}
+.nav-dd-menu a:hover{background:var(--gold-light);color:var(--text)}
+.nav-dd-menu a svg{flex-shrink:0;color:var(--gold)}
 .nav-right{display:flex;align-items:center;gap:8px;justify-content:flex-end}
 .btn-wa{display:flex;align-items:center;gap:7px;background:#25D366;color:#fff;padding:9px 18px;border-radius:40px;font-size:11.5px;font-weight:600;transition:all var(--ease)}
 .btn-wa:hover{background:#1bb558}
@@ -239,11 +248,24 @@ h2.sec em{font-style:italic;color:var(--gold)}
   <nav>
     <div class="nav-links">
       <a href="index.html">Inicio</a>
-      <a href="cortinas.html" class="active">Cortinas HD</a>
+      <div class="nav-dropdown">
+        <span class="nav-dd-trigger active" style="font-size:12px;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;color:var(--text);padding-bottom:3px;border-bottom:1.5px solid var(--gold)">Hunter Douglas
+          <svg class="nav-dd-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+        <div class="nav-dd-menu">
+          <a href="cortinas.html#silhouette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><circle cx="12" cy="12" r="5"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2"/></svg>Silhouette®</a>
+          <a href="cortinas.html#duette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>Duette®</a>
+          <a href="cortinas.html#pirouette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M4 6h16M4 10h16M4 14h10"/></svg>Pirouette®</a>
+          <a href="cortinas.html#roller"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 3h18v18H3z"/></svg>Roller Quantum®</a>
+          <a href="cortinas.html#luminette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 3h18v18H3z"/></svg>Luminette®</a>
+          <a href="cortinas.html#gemini"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Toldos · Exterior</a>
+          <a href="cortinas.html#comparador" style="border-top:1px solid var(--border);margin-top:4px;padding-top:12px;color:var(--gold-text);font-weight:600"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Comparar modelos</a>
+        </div>
+      </div>
       <a href="coleccion.html">Catálogo</a>
     </div>
     <a href="index.html" class="nav-logo-c" aria-label="Decourban Estudio">
-      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" fetchpriority="high" loading="eager"/>
       <span class="logo-tag">Decoración · Río Cuarto, Córdoba</span>
     </a>
     <div class="nav-right">
@@ -266,19 +288,19 @@ h2.sec em{font-style:italic;color:var(--gold)}
   <div class="hero-grad"></div>
   <div class="hero-content">
     <p class="eyebrow">Decourban Estudio · Distribuidores oficiales Hunter Douglas · Río Cuarto</p>
-    <h1>Las mejores cortinas<br>del mundo, <em>en tu hogar</em></h1>
-    <p class="hero-sub">Marcela Kalbermatten te asesora sin cargo. Medición profesional a domicilio, fabricación a medida y instalación incluida en Río Cuarto y la región.</p>
+    <h1>La cortina correcta<br>no decora tu ventana —<br><em>define tu ambiente</em></h1>
+    <p class="hero-sub">Marcela Kalbermatten ha transformado más de 500 hogares eligiendo la cortina exacta para cada espacio. Tu consulta es gratis, la medición va a tu casa y la instalación está incluida.</p>
     <div class="hero-badges">
       <div class="hb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg> Distribuidor oficial Hunter Douglas</div>
-      <div class="hb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18M3 6h18M3 14h18M3 18h18"/></svg> Medición gratuita a domicilio</div>
-      <div class="hb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> 22 años de experiencia</div>
+      <div class="hb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Si no queda perfecto, lo rehacemos sin cargo</div>
+      <div class="hb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Respuesta en menos de 2 horas</div>
     </div>
     <div class="hero-ctas">
       <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20cotizar%20cortinas%20Hunter%20Douglas%20para%20mi%20hogar" class="btn-p" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
-        Pedir cotización gratis
+        Hablar con Marcela — es gratis
       </a>
-      <a href="#tipos" class="btn-s">Ver todos los tipos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#comparador" class="btn-s">¿Qué cortina es para mí? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
@@ -292,6 +314,25 @@ h2.sec em{font-style:italic;color:var(--gold)}
     <div class="rv"><div class="ts-num">5★</div><div class="ts-lbl">Calificación promedio<br>de nuestros clientes</div></div>
   </div>
 </div>
+
+<!-- MUESTRAS GRATIS -->
+<section style="background:var(--gold-light);padding:40px 36px;border-bottom:1px solid rgba(196,164,107,.3)">
+  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:18px">
+      <div style="width:52px;height:52px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#161412" stroke-width="2" width="22" height="22"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+      </div>
+      <div>
+        <div style="font-size:16px;font-weight:700;color:var(--text);margin-bottom:3px">Pedí muestras de tela sin cargo</div>
+        <div style="font-size:13.5px;color:var(--text-mid);line-height:1.5">Antes de decidir, tocá y mirá las telas reales en tu espacio. Te las llevamos a domicilio en Río Cuarto o las retirás en Juan de Garay 1550.</div>
+      </div>
+    </div>
+    <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20pedir%20muestras%20de%20tela%20de%20cortinas%20Hunter%20Douglas" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:9px;background:var(--bg-dark);color:#fff;padding:13px 26px;border-radius:var(--r);font-size:12px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;white-space:nowrap;transition:.3s;flex-shrink:0">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+      Pedir mi muestra gratis
+    </a>
+  </div>
+</section>
 
 <!-- WHY HUNTER DOUGLAS -->
 <section class="why-hd">
@@ -335,7 +376,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
         <div class="pc-body">
           <div class="pc-cat">Hunter Douglas</div>
           <div class="pc-name">Cortinas Silhouette®</div>
-          <div class="pc-desc">Láminas en forma de "S" suspendidas entre velos translúcidos que transforman la luz con elegancia única. Filtran hasta el 99% de los rayos UV y permiten ver el exterior sin perder privacidad.</div>
+          <div class="pc-desc">La cortina que convierte la luz del sol en atmósfera. Sus velos translúcidos suavizan el ambiente durante el día y brindan privacidad total al cerrar. La más elegida por los clientes de Marcela.</div>
           <div class="pc-features">
             <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Filtra 99% rayos UV (cerrada)</div>
             <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Vista exterior preservada</div>
@@ -343,7 +384,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
             <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20las%20cortinas%20Silhouette%20Hunter%20Douglas" class="pc-cta" target="_blank" rel="noopener noreferrer" style="flex:1">Cotizar con Marcela</a>
-            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/silhouette/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver HD <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/silhouette/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver Hunter Douglas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
           </div>
         </div>
       </div>
@@ -356,7 +397,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
         <div class="pc-body">
           <div class="pc-cat">Hunter Douglas</div>
           <div class="pc-name">Cortinas Duette®</div>
-          <div class="pc-desc">La primera cortina celular del mundo. Su estructura tipo panal de abejas reduce hasta un 80% la entrada de calor en verano y un 45% la pérdida en invierno. También absorbe hasta el 45% del ruido exterior.</div>
+          <div class="pc-desc">Dormitorios más silenciosos, inviernos más cálidos, veranos más frescos — sin cambiar el climatizador. La única cortina que reduce hasta un 80% el ingreso de calor y absorbe el 45% del ruido de la calle.</div>
           <div class="pc-features">
             <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Ahorra hasta 50% en climatización</div>
             <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Absorbe 45% del ruido exterior</div>
@@ -364,7 +405,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
             <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20las%20cortinas%20Duette%20Hunter%20Douglas" class="pc-cta" target="_blank" rel="noopener noreferrer" style="flex:1">Cotizar con Marcela</a>
-            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/duette/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver HD <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/duette/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver Hunter Douglas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
           </div>
         </div>
       </div>
@@ -377,7 +418,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
         <div class="pc-body">
           <div class="pc-cat">Hunter Douglas</div>
           <div class="pc-name">Cortinas Pirouette®</div>
-          <div class="pc-desc">Diseño innovador con láminas suaves que rotan para controlar la luz de una forma completamente nueva. Al abrirse, las telas se pliegan elegantemente mostrando la vista exterior sin obstrucciones.</div>
+          <div class="pc-desc">La cortina que hace que tu living parezca diseñado por un arquitecto. Sus láminas giran para crear juegos de luz únicos durante el día — y al abrirse, desaparecen completamente para mostrar la vista.</div>
           <div class="pc-features">
             <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Control de luz único por rotación</div>
             <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Vista exterior preservada</div>
@@ -385,7 +426,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
             <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20las%20cortinas%20Pirouette%20Hunter%20Douglas" class="pc-cta" target="_blank" rel="noopener noreferrer" style="flex:1">Cotizar con Marcela</a>
-            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/pirouette/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver HD <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/pirouette/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver Hunter Douglas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
           </div>
         </div>
       </div>
@@ -405,7 +446,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
             <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20las%20Horizontales%20de%20Madera%20Hunter%20Douglas" class="pc-cta" target="_blank" rel="noopener noreferrer" style="flex:1">Cotizar con Marcela</a>
-            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver HD <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver Hunter Douglas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
           </div>
         </div>
       </div>
@@ -425,7 +466,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
             <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20los%20Paneles%20Orientales%20Hunter%20Douglas" class="pc-cta" target="_blank" rel="noopener noreferrer" style="flex:1">Cotizar con Marcela</a>
-            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/verticales/paneles-orientales/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver HD <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/verticales/paneles-orientales/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver Hunter Douglas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
           </div>
         </div>
       </div>
@@ -446,7 +487,69 @@ h2.sec em{font-style:italic;color:var(--gold)}
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
             <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesa%20el%20Toldo%20Gemini%20Hunter%20Douglas" class="pc-cta" target="_blank" rel="noopener noreferrer" style="flex:1">Cotizar con Marcela</a>
-            <a href="https://www.hunterdouglas.com.ar/productos/toldos/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver HD <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            <a href="https://www.hunterdouglas.com.ar/productos/toldos/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver Hunter Douglas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pc rv" id="luminette">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Cortinas Luminette Hunter Douglas — paños verticales translúcidos" loading="lazy"/>
+          <div class="pc-tag">Piso a techo</div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-cat">Hunter Douglas Cortinas</div>
+          <div class="pc-name">Luminette® Privacy Sheers</div>
+          <div class="pc-desc">La versión contemporánea del cortinado tradicional. Paños verticales de velo translúcido con láminas que rotan para controlar la luz y la privacidad. Ideal para ventanales de piso a techo y puertas.</div>
+          <div class="pc-features">
+            <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Ideal para ventanales piso a techo</div>
+            <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Láminas giratorias · Control total de luz</div>
+            <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Motorizable con PowerView® · Múltiples telas</div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20las%20cortinas%20Luminette%20Hunter%20Douglas" class="pc-cta" target="_blank" rel="noopener noreferrer" style="flex:1">Cotizar con Marcela</a>
+            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/verticales/luminette/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver Hunter Douglas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pc rv" id="roller">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Cortinas Roller Quantum Hunter Douglas — interior moderno" loading="lazy"/>
+          <div class="pc-tag dark">Roller Premium</div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-cat">Hunter Douglas Cortinas</div>
+          <div class="pc-name">Roller Quantum®</div>
+          <div class="pc-desc">La cortina roller más avanzada del mercado. Mecanismo exclusivo con rendimiento superior, mayor silencio y precisión en el manejo. Disponible en cientos de telas y colores, con y sin motorización.</div>
+          <div class="pc-features">
+            <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Mecanismo exclusivo · Silencioso y preciso</div>
+            <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Telas screen, blackout y decorativas</div>
+            <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Motorizable · Garantía Hunter Douglas</div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20las%20Roller%20Quantum%20Hunter%20Douglas" class="pc-cta" target="_blank" rel="noopener noreferrer" style="flex:1">Cotizar con Marcela</a>
+            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/cortinas-roller/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver Hunter Douglas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pc rv" id="twinline">
+        <div class="pc-img">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Cortinas Twinline Eclipse Hunter Douglas — doble roller día y noche" loading="lazy"/>
+        </div>
+        <div class="pc-body">
+          <div class="pc-cat">Hunter Douglas Cortinas</div>
+          <div class="pc-name">Twinline Eclipse</div>
+          <div class="pc-desc">También llamada cortina día-noche o eclipse. Dos rollers en un solo sistema: una tela filtrante para el día y una blackout para la noche. El diseño más práctico y versátil de la línea Hunter Douglas.</div>
+          <div class="pc-features">
+            <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Dos telas en un sistema · Día y noche</div>
+            <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Blackout total disponible</div>
+            <div class="pf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 12.75l6 6 9-13.5"/></svg>Ideal para dormitorios y oficinas</div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20las%20cortinas%20Twinline%20Hunter%20Douglas" class="pc-cta" target="_blank" rel="noopener noreferrer" style="flex:1">Cotizar con Marcela</a>
+            <a href="https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/twinline/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:11.5px;font-weight:600;color:var(--text-mid);transition:.3s;white-space:nowrap" title="Ver en Hunter Douglas oficial">Ver Hunter Douglas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
           </div>
         </div>
       </div>
@@ -455,8 +558,129 @@ h2.sec em{font-style:italic;color:var(--gold)}
   </div>
 </section>
 
+<!-- COMPARADOR DE CORTINAS -->
+<section id="comparador" style="background:var(--bg-mid);padding:80px 36px;overflow-x:auto">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="rv" style="text-align:center;margin-bottom:44px">
+      <p class="ey ey-c">¿Cuál es para vos?</p>
+      <h2 class="sec">Compará las cortinas<br><em>Hunter Douglas</em> de un vistazo</h2>
+      <p style="font-size:15px;color:var(--text-mid);max-width:520px;margin:12px auto 0;line-height:1.7">La mayor duda de cada cliente. Acá te la resolvemos — y si seguís con dudas, Marcela te guía en 5 minutos por WhatsApp.</p>
+    </div>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+    <table style="width:100%;border-collapse:collapse;min-width:640px;font-size:13.5px">
+      <thead>
+        <tr style="background:var(--bg-dark);color:#fff">
+          <th style="padding:14px 18px;text-align:left;font-weight:600;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;width:22%">Característica</th>
+          <th style="padding:14px 18px;text-align:center;font-weight:600;border-left:1px solid rgba(255,255,255,.1)">Silhouette®<br><span style="font-size:10px;font-weight:400;opacity:.6;font-style:italic">La más elegida</span></th>
+          <th style="padding:14px 18px;text-align:center;font-weight:600;border-left:1px solid rgba(255,255,255,.1);background:rgba(196,164,107,.15)">Duette®<br><span style="font-size:10px;font-weight:400;opacity:.7;color:var(--gold);font-style:italic">Aislación térmica</span></th>
+          <th style="padding:14px 18px;text-align:center;font-weight:600;border-left:1px solid rgba(255,255,255,.1)">Pirouette®<br><span style="font-size:10px;font-weight:400;opacity:.6;font-style:italic">Premium</span></th>
+          <th style="padding:14px 18px;text-align:center;font-weight:600;border-left:1px solid rgba(255,255,255,.1)">Roller Quantum®<br><span style="font-size:10px;font-weight:400;opacity:.6;font-style:italic">Versátil</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff;border-bottom:1px solid var(--border)">
+          <td style="padding:13px 18px;font-weight:600;color:var(--text)">Control de luz</td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐⭐⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Suave y difuso</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border);background:rgba(196,164,107,.06)">⭐⭐⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Filtrado uniforme</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐⭐⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Rotación única</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Total o nulo</span></td>
+        </tr>
+        <tr style="background:var(--bg-mid);border-bottom:1px solid var(--border)">
+          <td style="padding:13px 18px;font-weight:600;color:var(--text)">Privacidad</td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Ver afuera sin ser visto</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border);background:rgba(196,164,107,.06)">⭐⭐⭐⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Total al cerrar</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Ver exterior preservado</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐⭐⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">100% blackout opcional</span></td>
+        </tr>
+        <tr style="background:#fff;border-bottom:1px solid var(--border)">
+          <td style="padding:13px 18px;font-weight:600;color:var(--text)">Aislación térmica</td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Mínima</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border);background:rgba(196,164,107,.06)">⭐⭐⭐⭐⭐<br><span style="font-size:11px;color:var(--gold);font-weight:600">−80% calor / −45% frío</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Mínima</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Mínima</span></td>
+        </tr>
+        <tr style="background:var(--bg-mid);border-bottom:1px solid var(--border)">
+          <td style="padding:13px 18px;font-weight:600;color:var(--text)">Aislación acústica</td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Leve</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border);background:rgba(196,164,107,.06)">⭐⭐⭐⭐⭐<br><span style="font-size:11px;color:var(--gold);font-weight:600">Absorbe 45% del ruido</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Leve</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">⭐⭐<br><span style="font-size:11px;color:var(--text-mid)">Leve</span></td>
+        </tr>
+        <tr style="background:#fff;border-bottom:1px solid var(--border)">
+          <td style="padding:13px 18px;font-weight:600;color:var(--text)">Ideal para</td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)"><span style="font-size:12px;color:var(--text-mid)">Living, comedor,<br>oficinas</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border);background:rgba(196,164,107,.06)"><span style="font-size:12px;color:var(--text-mid)">Dormitorios, frío/calor,<br>ruido exterior</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)"><span style="font-size:12px;color:var(--text-mid)">Espacios de diseño,<br>ambientes con vista</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)"><span style="font-size:12px;color:var(--text-mid)">Cualquier ambiente,<br>todas las ventanas</span></td>
+        </tr>
+        <tr style="background:var(--bg-mid);border-bottom:1px solid var(--border)">
+          <td style="padding:13px 18px;font-weight:600;color:var(--text)">Motorizable</td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">✅ PowerView®</td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border);background:rgba(196,164,107,.06)">✅ PowerView®</td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">✅ PowerView®</td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)">✅ PowerView®</td>
+        </tr>
+        <tr style="background:#fff">
+          <td style="padding:13px 18px;font-weight:600;color:var(--text)">Precio orientativo</td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)"><span style="font-weight:700;color:var(--text)">$$$$</span><br><span style="font-size:11px;color:var(--text-mid)">Alta gama</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border);background:rgba(196,164,107,.06)"><span style="font-weight:700;color:var(--text)">$$$</span><br><span style="font-size:11px;color:var(--text-mid)">Media-alta</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)"><span style="font-weight:700;color:var(--text)">$$$$</span><br><span style="font-size:11px;color:var(--text-mid)">Premium</span></td>
+          <td style="padding:13px 18px;text-align:center;border-left:1px solid var(--border)"><span style="font-weight:700;color:var(--text)">$$</span><br><span style="font-size:11px;color:var(--text-mid)">Accesible</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="rv" style="text-align:center;margin-top:32px">
+      <p style="font-size:14px;color:var(--text-mid);margin-bottom:16px">¿Todavía no sabés cuál es la tuya? Marcela te lo dice en 5 minutos — sin cargo, sin compromiso.</p>
+      <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20vi%20el%20comparador%20de%20cortinas%20y%20necesito%20ayuda%20para%20elegir%20la%20ideal%20para%20mi%20espacio" class="btn-p" target="_blank" rel="noopener noreferrer" style="display:inline-flex">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+        Ayudame a elegir la mía
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RANGOS DE PRECIO -->
+<section style="background:var(--bg);padding:72px 36px">
+  <div style="max-width:1000px;margin:0 auto">
+    <div class="rv" style="text-align:center;margin-bottom:44px">
+      <p class="ey ey-c">Sin sorpresas</p>
+      <h2 class="sec">¿Cuánto cuesta una cortina<br><em>Hunter Douglas?</em></h2>
+      <p style="font-size:15px;color:var(--text-mid);max-width:540px;margin:12px auto 0;line-height:1.7">El precio varía según el modelo, el tamaño y la tela. Estos rangos son orientativos para una ventana estándar (150×200 cm). El presupuesto exacto es siempre gratis.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <div class="rv" style="background:#fff;border:1.5px solid var(--border);border-radius:4px;padding:28px 24px;text-align:center">
+        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);font-weight:600;margin-bottom:12px">Roller Quantum®</div>
+        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--text);line-height:1;margin-bottom:6px">$$</div>
+        <div style="font-size:22px;font-weight:700;color:var(--gold);margin-bottom:8px">Desde $80.000</div>
+        <div style="font-size:12.5px;color:var(--text-mid);line-height:1.65">La opción más accesible de la línea Hunter Douglas. Blackout, screen o decorativa.</div>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--text-light)">Instalación incluida · Fabricación a medida</div>
+      </div>
+      <div class="rv" style="background:var(--bg-dark);border:2px solid var(--gold);border-radius:4px;padding:28px 24px;text-align:center;position:relative">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--bg-dark);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 14px;border-radius:40px">Más elegida</div>
+        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(196,164,107,.7);font-weight:600;margin-bottom:12px">Duette® · Silhouette®</div>
+        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:#fff;line-height:1;margin-bottom:6px">$$$</div>
+        <div style="font-size:22px;font-weight:700;color:var(--gold);margin-bottom:8px">Desde $150.000</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.65">La relación precio-calidad más valorada. Aislación, elegancia y durabilidad máxima.</div>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:rgba(255,255,255,.35)">Instalación incluida · Garantía 5 años HD</div>
+      </div>
+      <div class="rv" style="background:#fff;border:1.5px solid var(--border);border-radius:4px;padding:28px 24px;text-align:center">
+        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);font-weight:600;margin-bottom:12px">Pirouette® · Luminette®</div>
+        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--text);line-height:1;margin-bottom:6px">$$$$</div>
+        <div style="font-size:22px;font-weight:700;color:var(--gold);margin-bottom:8px">Desde $200.000</div>
+        <div style="font-size:12.5px;color:var(--text-mid);line-height:1.65">La línea premium. Diseño único, mecanismos exclusivos y el mejor control de luz del mercado.</div>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--text-light)">Instalación incluida · PowerView® disponible</div>
+      </div>
+    </div>
+    <div class="rv" style="background:var(--bg-mid);border-radius:4px;padding:20px 24px;margin-top:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="color:var(--gold);flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span style="font-size:13.5px;color:var(--text-mid);flex:1">Estos son rangos orientativos para ventana estándar. El precio final depende de las medidas exactas, la tela elegida y si incluye motorización. <strong>El presupuesto personalizado es siempre sin cargo.</strong></span>
+      <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20un%20presupuesto%20para%20mis%20cortinas%20Hunter%20Douglas" target="_blank" rel="noopener noreferrer" style="white-space:nowrap;font-size:12px;font-weight:700;color:var(--gold-text);letter-spacing:1px;text-transform:uppercase;text-decoration:none">Pedir presupuesto →</a>
+    </div>
+  </div>
+</section>
+
 <!-- PROCESS -->
-<section class="process">
   <div style="max-width:1440px;margin:0 auto">
     <div class="rv" style="text-align:center">
       <p class="ey ey-c">Simple y sin vueltas</p>
@@ -514,15 +738,63 @@ h2.sec em{font-style:italic;color:var(--gold)}
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/foldingjpg-optimized-b09406c29d63067e7117462924956836-480-0.webp" alt="Pérgola Retráctil Hunter Douglas exterior" loading="lazy"/>
       <div class="gal-ov"><div><div class="gal-label">Pérgola Retráctil</div><div class="gal-sub">Exterior · Terraza y jardín</div></div></div>
     </div>
+    <div class="gal-item rv">
+      <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Cortinas Luminette Hunter Douglas — paños verticales" loading="lazy"/>
+      <div class="gal-ov"><div><div class="gal-label">Luminette®</div><div class="gal-sub">Piso a techo · Paños verticales</div></div></div>
+    </div>
+    <div class="gal-item rv">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Cortinas Roller Quantum y Twinline Hunter Douglas" loading="lazy"/>
+      <div class="gal-ov"><div><div class="gal-label">Roller Quantum® · Twinline</div><div class="gal-sub">Roller premium · Día y noche</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- POWERVIEW MOTORIZACIÓN -->
+<section style="background:var(--bg);padding:80px 36px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="rv" style="text-align:center;margin-bottom:52px">
+      <p class="ey ey-c">Tecnología Hunter Douglas Cortinas</p>
+      <h2 class="sec">PowerView®: <em>tus cortinas,<br>en piloto automático</em></h2>
+      <p style="font-size:15px;color:var(--text-mid);max-width:540px;margin:14px auto 0;line-height:1.7">El sistema de motorización más avanzado del mundo para cortinas. Control desde tu celular, por voz o de forma totalmente automática según la hora del día.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div class="rv" style="background:var(--bg-dark);padding:36px 28px;border-radius:4px;text-align:center">
+        <div style="width:56px;height:56px;border-radius:50%;background:rgba(196,164,107,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26" style="color:var(--gold)"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:#fff;margin-bottom:10px">App PowerView®</h3>
+        <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75">Controlá todas tus cortinas desde el celular. Programá escenas según la hora del día y el ambiente que querés crear.</p>
+      </div>
+      <div class="rv" style="background:var(--bg-dark);padding:36px 28px;border-radius:4px;text-align:center">
+        <div style="width:56px;height:56px;border-radius:50%;background:rgba(196,164,107,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26" style="color:var(--gold)"><path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:#fff;margin-bottom:10px">Asistente de voz</h3>
+        <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75">Compatible con Amazon Alexa, Google Home y Apple HomeKit. Abrí o cerrá tus cortinas con un simple comando de voz.</p>
+      </div>
+      <div class="rv" style="background:var(--bg-dark);padding:36px 28px;border-radius:4px;text-align:center">
+        <div style="width:56px;height:56px;border-radius:50%;background:rgba(196,164,107,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26" style="color:var(--gold)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:#fff;margin-bottom:10px">Programación automática</h3>
+        <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75">Escenas programadas por hora, por sensor de luz solar o por temperatura. Tu hogar se adapta solo a cada momento del día.</p>
+      </div>
+    </div>
+    <div class="rv" style="text-align:center;margin-top:40px">
+      <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20saber%20m%C3%A1s%20sobre%20la%20motorizaci%C3%B3n%20PowerView%20de%20Hunter%20Douglas" class="btn-p" target="_blank" rel="noopener noreferrer" style="display:inline-flex">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+        Consultá sobre motorización PowerView®
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- MARCELA CTA -->
 <section class="marcela-cta">
   <div class="mcta-inner rv">
-    <div class="mcta-img">
-      <!-- IMPORTANTE: agregar la foto real de Marcela como "marcela.jpg" en la carpeta del proyecto -->
-      <img src="marcela.jpg" alt="Marcela Kalbermatten — Decoradora de Interiores Río Cuarto" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top" onerror="this.onerror=null;this.src='https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0';this.style.objectFit='contain';this.style.padding='20px'"/>
+    <div class="mcta-img" style="display:flex;align-items:center;justify-content:center">
+      <!-- Reemplazar con la foto real: <img src="marcela.jpg" ...> -->
+      <span style="font-family:'Playfair Display',serif;font-size:64px;font-weight:600;color:var(--gold);letter-spacing:3px;user-select:none">MK</span>
     </div>
     <div class="mcta-text">
       <p class="ey" style="color:rgba(196,164,107,.7)">Asesoramiento personalizado</p>
@@ -626,6 +898,13 @@ h2.sec em{font-style:italic;color:var(--gold)}
     </div>
     <div class="fq-item rv">
       <div class="fq-q" onclick="toggleFq(this)">
+        ¿Qué es la motorización PowerView® de Hunter Douglas Cortinas?
+        <div class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+      </div>
+      <div class="fq-a"><p>PowerView® es el sistema de automatización inteligente de Hunter Douglas Cortinas. Permite controlar todas tus cortinas desde la app en el celular, con asistentes de voz (Alexa, Google, Apple HomeKit) o de forma completamente automática según horarios o sensores. <strong>Cualquier modelo de Hunter Douglas Cortinas puede motorizarse.</strong> Marcela te asesora sobre qué opción se adapta mejor a tu proyecto.</p></div>
+    </div>
+    <div class="fq-item rv">
+      <div class="fq-q" onclick="toggleFq(this)">
         ¿Envían a otras ciudades fuera de Río Cuarto?
         <div class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
       </div>
@@ -647,7 +926,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
   <span>© 2026 Decourban Estudio · Juan de Garay 1550, Río Cuarto · <a href="mailto:Ventas@decourban.com.ar" style="color:rgba(255,255,255,.45)">Ventas@decourban.com.ar</a></span>
   <div class="footer-links">
     <a href="index.html">Inicio</a>
-    <a href="cortinas.html">Cortinas HD</a>
+    <a href="cortinas.html">Hunter Douglas Cortinas</a>
     <a href="coleccion.html">Catálogo</a>
     <a href="nosotros.html">Nosotros</a>
     <a href="contacto.html">Contacto</a>

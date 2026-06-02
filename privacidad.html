@@ -10,16 +10,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
 <style>
-:root{--gold:#c4a46b;--bg:#faf8f5;--bg-dark:#161412;--text:#1c1a18;--text-mid:#5c5550;--border:#e6dfd6;}
+:root{
+  --gold:#c4a46b;--bg:#faf8f5;--bg-dark:#161412;
+  --text:#1c1a18;--text-mid:#5c5550;--border:#e6dfd6;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
 a{text-decoration:none;color:var(--gold)}
 a:hover{text-decoration:underline}
-nav{background:var(--bg-dark);padding:0 36px;height:64px;display:flex;align-items:center;justify-content:space-between}
-nav img{height:40px;object-fit:contain}
-.nav-links{display:flex;gap:24px}
+nav{background:var(--bg-dark);padding:0 36px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+nav img{height:40px;object-fit:contain;filter:brightness(0) invert(1)}
+.nav-links{display:flex;gap:24px;align-items:center}
 .nav-links a{font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.55);transition:.3s}
 .nav-links a:hover{color:#fff;text-decoration:none}
+.dark-toggle{background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.6);width:34px;height:34px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s;font-size:15px}
+.dark-toggle:hover{background:rgba(255,255,255,.1);color:#fff}
 .content{max-width:820px;margin:0 auto;padding:64px 36px 80px}
 h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:500;margin-bottom:8px;line-height:1.15}
 h1 em{font-style:italic;color:var(--gold)}
@@ -33,17 +38,32 @@ ul li{font-size:15px;line-height:1.85;margin-bottom:6px;list-style:disc}
 footer{background:var(--bg-dark);padding:28px 36px;text-align:center;font-size:12.5px;color:rgba(255,255,255,.28)}
 footer a{color:rgba(255,255,255,.38);margin:0 10px}
 footer a:hover{color:var(--gold);text-decoration:none}
-@media(max-width:600px){nav{padding:0 20px}.content{padding:40px 20px 60px}.nav-links{display:none}}
+
+/* ── DARK MODE ── */
+body.dark{--bg:#181614;--text:#ede8e0;--text-mid:#a09890;--border:#302c28;}
+body.dark .highlight{background:rgba(196,164,107,.1);}
+body.dark h2{color:#ede8e0}
+body.dark .updated{color:#a09890}
+
+@media(prefers-color-scheme:dark){
+  body:not(.light){--bg:#181614;--text:#ede8e0;--text-mid:#a09890;--border:#302c28;}
+  body:not(.light) .highlight{background:rgba(196,164,107,.1);}
+  body:not(.light) h2{color:#ede8e0}
+}
+@media(max-width:600px){nav{padding:0 16px}.content{padding:40px 20px 60px}.nav-links a{display:none}}
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/></a>
+  <a href="index.html" aria-label="Decourban Estudio — Inicio">
+    <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" fetchpriority="high" loading="eager"/>
+  </a>
   <div class="nav-links">
     <a href="index.html">Inicio</a>
     <a href="coleccion.html">Catálogo</a>
     <a href="contacto.html">Contacto</a>
+    <button class="dark-toggle" id="darkBtn" aria-label="Alternar modo oscuro">🌙</button>
   </div>
 </nav>
 
@@ -127,5 +147,22 @@ footer a:hover{color:var(--gold);text-decoration:none}
   <span>© 2026 Decourban Estudio</span>
 </footer>
 
+<script>
+(function(){
+  const stored=localStorage.getItem('dark');
+  if(stored==='1') document.body.classList.add('dark');
+  else if(stored==='0') document.body.classList.add('light');
+  const btn=document.getElementById('darkBtn');
+  if(!btn)return;
+  function update(){btn.textContent=document.body.classList.contains('dark')?'☀️':'🌙';}
+  update();
+  btn.addEventListener('click',()=>{
+    const isDark=document.body.classList.toggle('dark');
+    document.body.classList.toggle('light',!isDark);
+    localStorage.setItem('dark',isDark?'1':'0');
+    update();
+  });
+})();
+</script>
 </body>
 </html>
