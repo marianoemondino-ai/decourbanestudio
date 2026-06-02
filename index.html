@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8"/>
@@ -1362,7 +1362,7 @@ body.dark .cmp-modal{background:#211f1d}
 <!-- BANNER OFERTA -->
 <div id="ofertaBanner" style="background:var(--gold);color:var(--bg-dark);padding:10px 48px 10px 20px;text-align:center;font-size:12.5px;font-weight:600;position:relative;line-height:1.4;display:none">
   <span>Consultá sin cargo — Marcela responde en menos de 2 horas · </span>
-  <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" target="_blank" rel="noopener" style="color:var(--bg-dark);text-decoration:underline;font-weight:700">Escribir ahora →</a>
+  <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" target="_blank" rel="noopener noreferrer" style="color:var(--bg-dark);text-decoration:underline;font-weight:700">Escribir ahora →</a>
   <button onclick="document.getElementById('ofertaBanner').style.display='none';sessionStorage.setItem('bannerClosed','1')" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;color:var(--bg-dark);opacity:.6;line-height:1" aria-label="Cerrar">×</button>
 </div>
 <script>if(!sessionStorage.getItem('bannerClosed')){document.getElementById('ofertaBanner').style.display='block'}</script>
@@ -1433,7 +1433,7 @@ body.dark .cmp-modal{background:#211f1d}
               <a href="coleccion.html?cat=iluminacion">Lámparas</a>
               <a href="coleccion.html?cat=espejo">Espejos</a>
               <a href="coleccion.html?cat=lampara">Adornos</a>
-              <a href="https://decourbanestudio.com.ar/sale/" target="_blank" class="dd-sale">SALE</a>
+              <a href="https://decourbanestudio.com.ar/sale/" target="_blank" rel="noopener noreferrer" class="dd-sale">SALE</a>
             </div>
           </div>
         </li>
@@ -1487,7 +1487,7 @@ body.dark .cmp-modal{background:#211f1d}
   <a href="coleccion.html" onclick="closeMob()">Catálogo completo</a>
   <a href="nosotros.html" onclick="closeMob()">Nosotros</a>
   <a href="#contacto" onclick="closeMob()">Contacto</a>
-  <a href="https://wa.me/543585075773" target="_blank" style="color:#25D366;border-color:#25D366;">WhatsApp +54 358 5075773</a>
+  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer" style="color:#25D366;border-color:#25D366;">WhatsApp +54 358 5075773</a>
 </div>
 
 <!-- HERO -->
@@ -1508,7 +1508,7 @@ body.dark .cmp-modal{background:#211f1d}
     <h1 id="heroTitle">La pieza correcta<br><em>no llena tu espacio —<br>lo define</em></h1>
     <p class="hero-sub" id="heroSub">Marcela Kalbermatten ha transformado más de 500 hogares en Río Cuarto eligiendo la cortina, el mueble y el accesorio exacto para cada ambiente. Distribuidor oficial Hunter Douglas · 22 años de experiencia.</p>
     <div class="hero-ctas">
-      <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20una%20cotizaci%C3%B3n%20gratuita" class="btn-p" target="_blank" rel="noopener">
+      <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20una%20cotizaci%C3%B3n%20gratuita" class="btn-p" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
         Hablar con Marcela — responde en 2 hs
       </a>
@@ -1562,7 +1562,7 @@ body.dark .cmp-modal{background:#211f1d}
 </section>
 
 <!-- VIDEO SECTION -->
-<div class="vid-sec" id="video" style="cursor:pointer" onclick="openVideoModal()">
+<a class="vid-sec" id="video" href="https://www.youtube.com/@HunterDouglasArgentina" target="_blank" rel="noopener noreferrer" aria-label="Ver videos de Hunter Douglas Argentina en YouTube">
   <div class="vid-bg"></div>
   <div class="vid-grad"></div>
   <div class="vid-content">
@@ -1570,16 +1570,13 @@ body.dark .cmp-modal{background:#211f1d}
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
     </div>
     <h2 class="vid-title">La tecnología en cortinas<br><em>más avanzada del mundo</em></h2>
-    <p class="vid-sub">Descubrí cómo Hunter Douglas transforma espacios con diseño, luz y confort. Ver video oficial.</p>
+    <p class="vid-sub">Ver videos oficiales de Hunter Douglas en YouTube — colecciones, instalaciones y tutoriales.</p>
+    <span style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:10px 22px;border-radius:40px;font-size:12.5px;font-weight:600;letter-spacing:1px;backdrop-filter:blur(8px)">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M23 7s-.3-1.8-1.1-2.6c-1.1-1.1-2.2-1.1-2.8-1.2C16.2 3 12 3 12 3s-4.2 0-7.1.2c-.6.1-1.7.1-2.8 1.2C1.3 5.2 1 7 1 7S.7 9 .7 11v1.9c0 2 .3 3.9.3 3.9s.3 1.8 1.1 2.6c1.1 1.1 2.5 1 3.1 1.1C7.2 20.8 12 21 12 21s4.2 0 7.1-.2c.6-.1 1.7-.1 2.8-1.2.8-.8 1.1-2.6 1.1-2.6s.3-2 .3-3.9V11c0-2-.3-4-.3-4zM9.7 15.5V8.4l6.5 3.6-6.5 3.5z"/></svg>
+      Ver canal de YouTube →
+    </span>
   </div>
-</div>
-<!-- VIDEO MODAL -->
-<div id="vidModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:3500;align-items:center;justify-content:center;flex-direction:column;gap:20px" onclick="if(event.target===this)closeVideoModal()">
-  <button onclick="closeVideoModal()" style="position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:32px;cursor:pointer;line-height:1;opacity:.7">✕</button>
-  <div style="width:min(900px,92vw);aspect-ratio:16/9;border-radius:6px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.8)">
-    <iframe id="vidIframe" width="100%" height="100%" src="" title="Hunter Douglas — Cortinas y Tratamientos de Ventanas" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
+</a>
 
 <!-- BRAND STORY -->
 <section class="brand" id="nosotros">
@@ -1692,7 +1689,7 @@ body.dark .cmp-modal{background:#211f1d}
           <div class="pc-badge g">Nuevo</div>
           <button class="pc-heart" onclick="event.stopPropagation();toggleHeart(this)" aria-label="Guardar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
           <div class="pc-acts">
-            <a href="https://wa.me/543585075773?text=Hola, me interesa el Sillón Monaco" class="main" target="_blank" onclick="event.stopPropagation()">Consultar precio</a>
+            <a href="https://wa.me/543585075773?text=Hola, me interesa el Sillón Monaco" class="main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Consultar precio</a>
             <a href="producto.html" class="sec" onclick="event.stopPropagation()">Ver más</a>
           </div>
         </div>
@@ -1711,7 +1708,7 @@ body.dark .cmp-modal{background:#211f1d}
           <div class="pc-badge gold">Premium</div>
           <button class="pc-heart" onclick="event.stopPropagation();toggleHeart(this)" aria-label="Guardar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
           <div class="pc-acts">
-            <a href="https://wa.me/543585075773?text=Hola, me interesa el Sillón Kenzo" class="main" target="_blank">Consultar precio</a>
+            <a href="https://wa.me/543585075773?text=Hola, me interesa el Sillón Kenzo" class="main" target="_blank" rel="noopener noreferrer">Consultar precio</a>
             <button class="sec" onclick="event.stopPropagation();openModal(this.closest('.pc').querySelector('.pc-name').textContent.trim())">Ver detalles</button>
           </div>
         </div>
@@ -1730,7 +1727,7 @@ body.dark .cmp-modal{background:#211f1d}
           <div class="pc-badge">Exclusivo</div>
           <button class="pc-heart" onclick="event.stopPropagation();toggleHeart(this)" aria-label="Guardar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
           <div class="pc-acts">
-            <a href="https://wa.me/543585075773?text=Hola, me interesa el Espejo Dalia" class="main" target="_blank">Consultar precio</a>
+            <a href="https://wa.me/543585075773?text=Hola, me interesa el Espejo Dalia" class="main" target="_blank" rel="noopener noreferrer">Consultar precio</a>
             <button class="sec" onclick="event.stopPropagation();openModal(this.closest('.pc').querySelector('.pc-name').textContent.trim())">Ver detalles</button>
           </div>
         </div>
@@ -1747,7 +1744,7 @@ body.dark .cmp-modal{background:#211f1d}
         <div class="pc-img">
           <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp" alt="Mesa de centro Estocolmo" loading="lazy"/>
           <div class="pc-acts">
-            <a href="https://wa.me/543585075773?text=Hola, me interesa la Mesa de centro Estocolmo" class="main" target="_blank">Consultar precio</a>
+            <a href="https://wa.me/543585075773?text=Hola, me interesa la Mesa de centro Estocolmo" class="main" target="_blank" rel="noopener noreferrer">Consultar precio</a>
             <button class="sec" onclick="event.stopPropagation();openModal(this.closest('.pc').querySelector('.pc-name').textContent.trim())">Ver detalles</button>
           </div>
         </div>
@@ -1766,7 +1763,7 @@ body.dark .cmp-modal{background:#211f1d}
           <div class="pc-badge g">Bestseller</div>
           <button class="pc-heart" onclick="event.stopPropagation();toggleHeart(this)" aria-label="Guardar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
           <div class="pc-acts">
-            <a href="https://wa.me/543585075773?text=Hola, me interesa la Consola Naturale" class="main" target="_blank">Consultar precio</a>
+            <a href="https://wa.me/543585075773?text=Hola, me interesa la Consola Naturale" class="main" target="_blank" rel="noopener noreferrer">Consultar precio</a>
             <button class="sec" onclick="event.stopPropagation();openModal(this.closest('.pc').querySelector('.pc-name').textContent.trim())">Ver detalles</button>
           </div>
         </div>
@@ -1782,7 +1779,7 @@ body.dark .cmp-modal{background:#211f1d}
         <div class="pc-img">
           <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/imagen-de-whatsapp-2025-01-09-a-las-13-54-57_fbab22c7-39ca1ab708b7e5e04a17364417205021-480-0.webp" alt="Candelabro Shiv" loading="lazy"/>
           <div class="pc-acts">
-            <a href="https://wa.me/543585075773?text=Hola, me interesa el Candelabro Shiv" class="main" target="_blank">Consultar precio</a>
+            <a href="https://wa.me/543585075773?text=Hola, me interesa el Candelabro Shiv" class="main" target="_blank" rel="noopener noreferrer">Consultar precio</a>
             <button class="sec" onclick="event.stopPropagation();openModal(this.closest('.pc').querySelector('.pc-name').textContent.trim())">Ver detalles</button>
           </div>
         </div>
@@ -1800,7 +1797,7 @@ body.dark .cmp-modal{background:#211f1d}
           <div class="pc-badge g">Nuevo</div>
           <button class="pc-heart" onclick="event.stopPropagation();toggleHeart(this)" aria-label="Guardar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
           <div class="pc-acts">
-            <a href="https://wa.me/543585075773?text=Hola, me interesa la Lámpara Día" class="main" target="_blank">Consultar precio</a>
+            <a href="https://wa.me/543585075773?text=Hola, me interesa la Lámpara Día" class="main" target="_blank" rel="noopener noreferrer">Consultar precio</a>
             <button class="sec" onclick="event.stopPropagation();openModal(this.closest('.pc').querySelector('.pc-name').textContent.trim())">Ver detalles</button>
           </div>
         </div>
@@ -1816,7 +1813,7 @@ body.dark .cmp-modal{background:#211f1d}
         <div class="pc-img">
           <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/imagen-de-whatsapp-2025-01-09-a-las-14-04-29_3a0ed394-c35b940aa890fe7ce417364423086792-480-0.webp" alt="Rueda de Teca escultura decorativa" loading="lazy"/>
           <div class="pc-acts">
-            <a href="https://wa.me/543585075773?text=Hola, me interesa la Rueda de Teca" class="main" target="_blank">Consultar precio</a>
+            <a href="https://wa.me/543585075773?text=Hola, me interesa la Rueda de Teca" class="main" target="_blank" rel="noopener noreferrer">Consultar precio</a>
             <button class="sec" onclick="event.stopPropagation();openModal(this.closest('.pc').querySelector('.pc-name').textContent.trim())">Ver detalles</button>
           </div>
         </div>
@@ -1913,7 +1910,7 @@ body.dark .cmp-modal{background:#211f1d}
             <div class="stl-item-price">Precio según medida</div>
           </div>
         </div>
-        <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20armar%20un%20living%20completo%20con%20cortinas%20Hunter%20Douglas" class="btn-p" target="_blank" style="justify-content:center">Consultá este look</a>
+        <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20armar%20un%20living%20completo%20con%20cortinas%20Hunter%20Douglas" class="btn-p" target="_blank" rel="noopener noreferrer" style="justify-content:center">Consultá este look</a>
       </div>
     </div>
   </div>
@@ -1956,13 +1953,7 @@ body.dark .cmp-modal{background:#211f1d}
         <div class="calc-labels"><span>1 cuota</span><span>6 cuotas</span><span>12 cuotas</span></div>
         <div class="calc-cuotas-display" id="calcCuotasNum">6</div>
         <div class="calc-cuotas-label">cuotas sin interés</div>
-        <div class="calc-banks">
-          <button class="calc-bank on" onclick="selectBank(this)">Visa</button>
-          <button class="calc-bank" onclick="selectBank(this)">Mastercard</button>
-          <button class="calc-bank" onclick="selectBank(this)">Naranja</button>
-          <button class="calc-bank" onclick="selectBank(this)">OCA</button>
-          <button class="calc-bank" onclick="selectBank(this)">Cabal</button>
-        </div>
+        <div class="calc-banks" style="font-size:12px;color:var(--text-light);margin-top:6px">Visa · Mastercard · Naranja · OCA · Cabal · Transferencia</div>
       </div>
       <div class="rvr">
         <div class="calc-display">
@@ -1978,7 +1969,7 @@ body.dark .cmp-modal{background:#211f1d}
             <span style="color:#4caf50;font-weight:700">0% — Sin interés</span>
           </div>
         </div>
-        <a href="https://wa.me/543585075773?text=Hola, quiero consultar sobre financiación en cuotas" class="btn-p" target="_blank" style="display:flex;justify-content:center;margin-top:20px">
+        <a href="https://wa.me/543585075773?text=Hola, quiero consultar sobre financiación en cuotas" class="btn-p" target="_blank" rel="noopener noreferrer" style="display:flex;justify-content:center;margin-top:20px">
           Consultar financiación
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -2051,7 +2042,7 @@ body.dark .cmp-modal{background:#211f1d}
         <p class="ey">Portfolio</p>
         <h2 class="sec">Proyectos <em>realizados</em></h2>
       </div>
-      <a href="https://www.instagram.com/decourbanestudio" class="see-all" target="_blank">Ver más en Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="https://www.instagram.com/decourbanestudio" class="see-all" target="_blank" rel="noopener noreferrer">Ver más en Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
   <div class="proj-grid" id="projGrid">
@@ -2244,7 +2235,7 @@ body.dark .cmp-modal{background:#211f1d}
       <p>Vení a conocer el showroom de Marcela. Verás, tocarás y elegirás con total asesoramiento profesional — muestras reales de cortinas, telas y acabados Hunter Douglas.</p>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;font-size:14px;color:rgba(255,255,255,.65)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16" style="color:var(--gold);flex-shrink:0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+Rio+Cuarto" target="_blank" style="color:var(--gold);font-weight:600">Juan de Garay 1550, Río Cuarto</a>
+        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+Rio+Cuarto" target="_blank" rel="noopener noreferrer" style="color:var(--gold);font-weight:600">Juan de Garay 1550, Río Cuarto</a>
       </div>
       <div class="showroom-hours">
         <div class="sh-row"><span>Lunes a Viernes</span><span>9:00 – 18:00</span></div>
@@ -2267,7 +2258,7 @@ body.dark .cmp-modal{background:#211f1d}
         <p class="ey">Revista de diseño</p>
         <h2 class="sec">Inspiración &<br><em>consejos de expertos</em></h2>
       </div>
-      <a href="https://www.instagram.com/decourbanestudio" class="see-all" target="_blank">Ver más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="https://www.instagram.com/decourbanestudio" class="see-all" target="_blank" rel="noopener noreferrer">Ver más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
     <div class="blog-grid">
 
@@ -2444,7 +2435,7 @@ body.dark .cmp-modal{background:#211f1d}
           <li><a href="coleccion.html?cat=iluminacion">Iluminación</a></li>
           <li><a href="coleccion.html?cat=textil">Textiles</a></li>
           <li><a href="coleccion.html?cat=espejo">Espejos & Arte</a></li>
-          <li><a href="https://decourbanestudio.com.ar/sale/" target="_blank" style="color:#c0392b;font-weight:600">SALE</a></li>
+          <li><a href="https://decourbanestudio.com.ar/sale/" target="_blank" rel="noopener noreferrer" style="color:#c0392b;font-weight:600">SALE</a></li>
         </ul>
       </div>
       <div class="ft-col">
@@ -2460,7 +2451,7 @@ body.dark .cmp-modal{background:#211f1d}
       </div>
       <div class="ft-col">
         <h4>Contacto</h4>
-        <div class="ft-ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.04a16 16 0 006.06 6.05l1.32-1.32a2 2 0 012.11-.44c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="https://wa.me/543585075773" target="_blank">+54 358 5075773</a></div>
+        <div class="ft-ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.04a16 16 0 006.06 6.05l1.32-1.32a2 2 0 012.11-.44c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">+54 358 5075773</a></div>
         <div class="ft-ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a></div>
         <div class="ft-ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg><a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener noreferrer">@decourbanestudio</a></div>
         <div class="ft-ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><a href="https://maps.google.com/?q=Juan+de+Garay+1550+Rio+Cuarto" target="_blank" rel="noopener noreferrer">Juan de Garay 1550, Río Cuarto</a></div>
@@ -2583,7 +2574,7 @@ body.dark .cmp-modal{background:#211f1d}
       <h3 id="qrTitle">Estilo Minimalista</h3>
       <p id="qrDesc">Tu hogar habla de claridad y función. Cada pieza debe tener un propósito y una presencia. Menos es más.</p>
       <div class="quiz-result-products" id="qrProducts"></div>
-      <a id="qrWa" href="#" class="btn-p" target="_blank" style="display:inline-flex;margin:0 auto">
+      <a id="qrWa" href="#" class="btn-p" target="_blank" rel="noopener noreferrer" style="display:inline-flex;margin:0 auto">
         Ver mis recomendaciones completas
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2635,7 +2626,7 @@ body.dark .cmp-modal{background:#211f1d}
       <span class="cd-seg" id="cdS">00</span><span class="cd-sep">s</span>
     </div>
   </div>
-  <a href="https://wa.me/543585075773?text=Hola, vi la oferta de Hunter Douglas en la web y quiero más info" class="promo-bar-cta" target="_blank">Ver oferta</a>
+  <a href="https://wa.me/543585075773?text=Hola, vi la oferta de Hunter Douglas en la web y quiero más info" class="promo-bar-cta" target="_blank" rel="noopener noreferrer">Ver oferta</a>
   <button class="promo-dismiss" onclick="dismissPromo()" aria-label="Cerrar">✕</button>
 </div>
 
@@ -2691,15 +2682,15 @@ body.dark .cmp-modal{background:#211f1d}
 <div class="exit-ov" id="exitOv">
   <div class="exit-box">
     <div class="exit-img"></div>
-    <button class="exit-close" onclick="closeExit()">✕</button>
+    <button class="exit-close" onclick="closeExit()" aria-label="Cerrar">✕</button>
     <div class="exit-body">
-      <h3>Antes de irte…<br><em>un regalo para vos</em></h3>
-      <p>Suscribite y recibí <strong>10% de descuento</strong> en tu primera compra, más inspiración exclusiva cada semana.</p>
-      <form class="exit-form" onsubmit="exitFormSubmit(event)">
-        <input type="email" placeholder="Tu correo electrónico" required autocomplete="email"/>
-        <button type="submit">Quiero el 10%</button>
-      </form>
-      <button class="exit-skip" onclick="closeExit()">No gracias, prefiero pagar el precio completo</button>
+      <h3>Antes de irte…<br><em>¿tenés dudas?</em></h3>
+      <p>Marcela responde personalmente en menos de 2 horas. Consultá sin cargo y sin compromiso.</p>
+      <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20estaba%20viendo%20la%20web%20y%20tengo%20una%20consulta" target="_blank" rel="noopener noreferrer" class="exit-wa-btn" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;padding:14px 24px;border-radius:40px;font-size:14px;font-weight:700;text-decoration:none;margin-top:8px;transition:.3s">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+        Consultar por WhatsApp
+      </a>
+      <button class="exit-skip" onclick="closeExit()">Continuar navegando</button>
     </div>
   </div>
 </div>
@@ -2844,7 +2835,7 @@ body.dark .cmp-modal{background:#211f1d}
       <div class="sg-note">
         <strong>Tip profesional:</strong> Para ventanas de más de 180 cm, siempre recomendamos la opción motorizada PowerView® de Hunter Douglas. El costo inicial se amortiza en comodidad y durabilidad a largo plazo.
       </div>
-      <a href="https://wa.me/543585075773?text=Hola, vi la guía de medidas y quiero cotizar cortinas Hunter Douglas para mi ventana" class="btn-p" target="_blank" style="display:inline-flex;margin-top:24px" onclick="document.getElementById('sgOv').classList.remove('open')">
+      <a href="https://wa.me/543585075773?text=Hola, vi la guía de medidas y quiero cotizar cortinas Hunter Douglas para mi ventana" class="btn-p" target="_blank" rel="noopener noreferrer" style="display:inline-flex;margin-top:24px" onclick="document.getElementById('sgOv').classList.remove('open')">
         Cotizar a medida <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -2929,7 +2920,7 @@ body.dark .cmp-modal{background:#211f1d}
 
 <!-- MOBILE BOTTOM BAR -->
 <div class="mob-bar">
-  <a href="https://wa.me/543585075773" class="mwa" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg> Consultar</a>
+  <a href="https://wa.me/543585075773" class="mwa" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg> Consultar</a>
   <a href="#categorias" class="mshop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg> Ver productos</a>
 </div>
 
@@ -3195,14 +3186,6 @@ function closeExit(){
   document.body.style.overflow='';
   sessionStorage.setItem('exitShown','1');
 }
-function exitFormSubmit(e){
-  e.preventDefault();
-  const email=e.target.querySelector('input[type=email]')?.value||'';
-  const msg=encodeURIComponent(`Hola Marcela! Me suscribí desde la web con el email: ${email}. Quiero recibir el descuento del 10%.`);
-  closeExit();
-  if(email) window.open(`https://wa.me/543585075773?text=${msg}`,'_blank');
-  showToast('¡Gracias! Marcela te contactará con tu descuento exclusivo.');
-}
 if(!exitShown){
   document.addEventListener('mouseleave',function handler(e){
     if(e.clientY<10){
@@ -3227,18 +3210,6 @@ function scrollWalls(dir){
   sc.scrollBy({left:dir*320,behavior:'smooth'});
 }
 
-// VIDEO SECTION
-function openVideoModal(){
-  const m=document.getElementById('vidModal');
-  m.style.display='flex';
-  document.getElementById('vidIframe').src='https://www.youtube.com/embed/hd3yZBr2T3c?autoplay=1&rel=0&modestbranding=1';
-  document.body.style.overflow='hidden';
-}
-function closeVideoModal(){
-  document.getElementById('vidModal').style.display='none';
-  document.getElementById('vidIframe').src='';
-  document.body.style.overflow='';
-}
 
 // ── USD TOGGLE ─────────────────────────
 let usdMode=false;
@@ -3430,6 +3401,7 @@ function updateCalc(){
   document.getElementById('calcTotal').textContent=fmt(price);
 }
 function selectBank(btn){
+  // Bank selection is visual only — kept for compatibility
   document.querySelectorAll('.calc-bank').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
 }
