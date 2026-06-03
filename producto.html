@@ -697,7 +697,7 @@ function shareProduct(){
   if(navigator.share){
     navigator.share({title:'Sillón Monaco — Decourban Estudio',text:'Mirá este sillón que encontré en Decourban',url:window.location.href});
   }else{
-    navigator.clipboard.writeText(window.location.href).then(()=>alert('Link copiado al portapapeles'));
+    navigator.clipboard.writeText(window.location.href).then(()=>{const t=document.createElement('div');t.style.cssText='position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#161412;color:#fff;padding:12px 20px;border-radius:6px;font-size:13px;font-weight:600;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,.3)';t.textContent='✓ Link copiado';document.body.appendChild(t);setTimeout(()=>{t.style.opacity='0';t.style.transition='opacity .4s';setTimeout(()=>t.remove(),400)},2200);});
   }
 }
 function printPage(){window.print()}

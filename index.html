@@ -472,6 +472,11 @@ footer{background:var(--bg-dark);padding:80px 36px 36px;color:rgba(255,255,255,.
   .budget-grid{grid-template-columns:1fr}
   .showroom-grid{grid-template-columns:1fr}
 }
+@media(max-width:375px){
+  .hero-sub{font-size:clamp(13px,4vw,16px)}
+  .hero h1{font-size:clamp(28px,8vw,36px)}
+  .hero-content{padding:0 18px 72px}
+}
 
 /* ── QUICK VIEW MODAL ─────────────────── */
 .modal-bg{position:fixed;inset:0;background:rgba(18,15,12,.72);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:all .4s ease;backdrop-filter:blur(6px)}
@@ -1284,7 +1289,7 @@ body.dark .cmp-modal{background:#211f1d}
 .calc-form-side{}
 .calc-display{background:var(--bg-dark);border-radius:8px;padding:36px;text-align:center}
 .calc-display-label{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-.calc-display-amount{font-family:'Playfair Display',serif;font-size:52px;font-weight:600;color:#fff;line-height:1;margin-bottom:4px}
+.calc-display-amount{font-family:'Playfair Display',serif;font-size:52px;font-weight:600;color:#fff;line-height:1;margin-bottom:4px;transition:transform .18s ease,opacity .18s ease}
 .calc-display-sub{font-size:13px;color:rgba(255,255,255,.45);margin-bottom:24px}
 .calc-display-total{display:flex;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:13px}
 .calc-display-total span:first-child{color:rgba(255,255,255,.5)}
@@ -1880,9 +1885,9 @@ body.dark .cmp-modal{background:#211f1d}
       </div>
     </div>
     <div class="hunter-txt rvr">
-      <p class="ey">Partner exclusivo Argentina</p>
-      <h2 class="h-title">La mejor tecnología<br>en cortinas<br><em>del mundo</em></h2>
-      <p class="h-desc"><em>"Gracias a nuestros 13 años de trabajo en conjunto y a nuestro desempeño, hoy somos parte de la red de distribuidores oficiales Hunter Douglas."</em> Acceso a la colección completa: Duette®, Silhouette®, Pirouette®, sistemas motorizados y toldos — con asesoramiento personalizado de nuestro equipo, sin cargo.</p>
+      <p class="ey">Distribuidores oficiales desde 2013</p>
+      <h2 class="h-title">La cortina que cambia<br>cómo vivís<br><em>tu espacio</em></h2>
+      <p class="h-desc">No son simples cortinas — son tecnología de ventanas. Hunter Douglas lleva 75 años diseñando productos que regulan la luz, aíslan del ruido y dan vida a cualquier ambiente. Y nosotros somos su distribuidor oficial en Río Cuarto. Eso significa acceso a toda la colección: Duette®, Silhouette®, Pirouette®, Roller Quantum® y sistemas motorizados — con medición, fabricación a medida e instalación incluidas.</p>
       <div class="h-feats">
         <div class="hf"><div class="hf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2"/></svg></div><div><div class="hf-t">Control de luz</div><div class="hf-d">Regula la luminosidad con precisión</div></div></div>
         <div class="hf"><div class="hf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div><div><div class="hf-t">Control inteligente</div><div class="hf-d">App móvil y domótica integrada</div></div></div>
@@ -3227,15 +3232,17 @@ function updateCalc(){
   const price=parseFloat(document.getElementById('calcPrice')?.value)||0;
   const cuotas=parseInt(document.getElementById('calcRange')?.value)||6;
   document.getElementById('calcCuotasNum').textContent=cuotas;
+  const amountEl=document.getElementById('calcAmount');
+  const fmt=n=>'$'+Math.round(n).toLocaleString('es-AR');
+  const animate=(el,val)=>{el.style.opacity='0';el.style.transform='scale(.92)';setTimeout(()=>{el.textContent=val;el.style.opacity='1';el.style.transform='scale(1)'},120)};
   if(!price){
-    document.getElementById('calcAmount').textContent='$0';
+    animate(amountEl,'$0');
     document.getElementById('calcSub').textContent='Ingresá el precio del producto';
     document.getElementById('calcTotal').textContent='$0';
     return;
   }
   const monthly=price/cuotas;
-  const fmt=n=>'$'+Math.round(n).toLocaleString('es-AR');
-  document.getElementById('calcAmount').textContent=fmt(monthly);
+  animate(amountEl,fmt(monthly));
   document.getElementById('calcSub').textContent='por mes · '+cuotas+' cuotas sin interés';
   document.getElementById('calcTotal').textContent=fmt(price);
 }

@@ -5,7 +5,7 @@
   <!-- PÁGINA PRINCIPAL -->
   <url>
     <loc>https://decourbanestudio.com.ar/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,15 +17,19 @@
   <!-- CORTINAS HUNTER DOUGLAS — prioridad máxima (producto principal) -->
   <url>
     <loc>https://decourbanestudio.com.ar/cortinas.html</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp</image:loc>
+      <image:title>Cortinas Silhouette Hunter Douglas — Decourban Estudio Río Cuarto</image:title>
+    </image:image>
   </url>
 
   <!-- CATÁLOGO COMPLETO -->
   <url>
     <loc>https://decourbanestudio.com.ar/coleccion.html</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -33,7 +37,7 @@
   <!-- CONTACTO -->
   <url>
     <loc>https://decourbanestudio.com.ar/contacto.html</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -41,19 +45,25 @@
   <!-- SILLÓN MONACO — página de producto -->
   <url>
     <loc>https://decourbanestudio.com.ar/producto.html</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- NOSOTROS — Marcela Kalbermatten -->
+  <!-- QUIÉNES SOMOS -->
   <url>
     <loc>https://decourbanestudio.com.ar/nosotros.html</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- NO incluir: gracias.html, 404.html (noindex), styles.css (no es página) -->
+  <!-- POLÍTICA DE PRIVACIDAD -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/privacidad.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 
 </urlset>
