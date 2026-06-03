@@ -1697,6 +1697,14 @@ function quickView(card){
   document.getElementById('mPrice').textContent=price;
   document.getElementById('mCuota').textContent=priceNum>0?`o 12 cuotas de $${Math.round(priceNum/12).toLocaleString('es-AR')} sin interés`:'';
   document.getElementById('mWa').href='https://wa.me/543585075773?text='+encodeURIComponent('Hola, me interesa: '+name);
+  const detailEl=document.getElementById('mDetail');
+  if(detailEl){
+    if(name==='Sillón Monaco'){
+      detailEl.href='producto.html';detailEl.style.display='';
+    } else {
+      detailEl.style.display='none';
+    }
+  }
   document.getElementById('modalBg').classList.add('open');
   document.body.style.overflow='hidden';
 }

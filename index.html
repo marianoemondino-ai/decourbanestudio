@@ -147,12 +147,12 @@ nav{max-width:1440px;margin:0 auto;padding:0 36px;height:96px;display:grid;grid-
 .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1768609239321-1cfe14893e80?auto=format&fit=crop&w=1920&q=85') center 30%/cover no-repeat;transform:scale(1.05);transition:transform 7s ease}
 .hero-bg.zoom{transform:scale(1)}
 .hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,11,9,.97) 0%,rgba(14,11,9,.72) 38%,rgba(14,11,9,.28) 65%,rgba(14,11,9,.04) 100%)}
-.hero-content{position:relative;z-index:2;max-width:1440px;margin:0 auto;width:100%;padding:0 52px 88px}
+.hero-content{position:relative;z-index:2;max-width:1440px;margin:0 auto;width:100%;padding:0 52px 100px}
 .eyebrow{font-size:10.5px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:18px}
 .eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(40px,5.2vw,78px);font-weight:500;color:#fff;line-height:1.06;max-width:720px;margin-bottom:28px;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4.8vw,72px);font-weight:500;color:#fff;line-height:1.08;max-width:680px;margin-bottom:24px;text-shadow:0 2px 24px rgba(0,0,0,.45)}
 .hero h1 em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:16.5px;color:rgba(255,255,255,.88);max-width:480px;line-height:1.78;margin-bottom:44px;font-weight:400;text-shadow:0 1px 12px rgba(0,0,0,.4)}
+.hero-sub{font-size:16px;color:rgba(255,255,255,.85);max-width:500px;line-height:1.72;margin-bottom:40px;font-weight:400;text-shadow:0 1px 12px rgba(0,0,0,.4)}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
 .btn-p{background:var(--gold);color:var(--bg-dark);padding:15px 34px;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;border-radius:var(--r);display:inline-flex;align-items:center;gap:9px;transition:all var(--ease)}
 .btn-p:hover{background:#fff;transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.28)}
@@ -449,9 +449,10 @@ footer{background:var(--bg-dark);padding:80px 36px 36px;color:rgba(255,255,255,.
   section{padding:60px 20px}
   .cats-grid{grid-template-columns:repeat(2,1fr);gap:10px}
   .prods-grid{grid-template-columns:1fr}
-  .hero-content{padding:0 24px 64px}
+  .hero-content{padding:0 24px 80px}
   .scroll-hint{display:none}
   .hero-ctas{flex-direction:column;align-items:flex-start;gap:12px}
+  .hero-dots{bottom:24px!important;left:24px!important}
   .rooms-grid{grid-template-columns:1fr}
   .rm:first-child{grid-column:auto}
   .svcs-grid{grid-template-columns:1fr}
@@ -1432,8 +1433,8 @@ body.dark .cmp-modal{background:#211f1d}
               <h5>Arte & Iluminación</h5>
               <a href="coleccion.html?cat=iluminacion">Lámparas</a>
               <a href="coleccion.html?cat=espejo">Espejos</a>
-              <a href="coleccion.html?cat=lampara">Adornos</a>
-              <a href="https://decourbanestudio.com.ar/sale/" target="_blank" rel="noopener noreferrer" class="dd-sale">SALE</a>
+              <a href="coleccion.html?cat=textil">Alfombras & Textil</a>
+              <a href="coleccion.html">Ver todo el catálogo</a>
             </div>
           </div>
         </li>
@@ -1478,15 +1479,16 @@ body.dark .cmp-modal{background:#211f1d}
 
 <!-- MOBILE NAV -->
 <div class="mob-nav" id="mobnav">
-  <a href="#categorias" onclick="closeMob()">Colecciones</a>
-  <a href="cortinas.html" class="sub" onclick="closeMob()">Cortinas Hunter Douglas</a>
-  <a href="#categorias" class="sub" onclick="closeMob()">Muebles</a>
-  <a href="#categorias" class="sub" onclick="closeMob()">Lámparas</a>
-  <a href="#categorias" class="sub" onclick="closeMob()">Alfombras</a>
-  <a href="cortinas.html" onclick="closeMob()">Cortinas Hunter Douglas</a>
+  <a href="cortinas.html" onclick="closeMob()">Hunter Douglas Cortinas</a>
+  <a href="cortinas.html#silhouette" class="sub" onclick="closeMob()">Silhouette® · Duette® · Pirouette®</a>
+  <a href="cortinas.html#comparador" class="sub" onclick="closeMob()">Comparar modelos</a>
   <a href="coleccion.html" onclick="closeMob()">Catálogo completo</a>
+  <a href="coleccion.html?cat=muebles" class="sub" onclick="closeMob()">Muebles & Sillones</a>
+  <a href="coleccion.html?cat=iluminacion" class="sub" onclick="closeMob()">Lámparas</a>
+  <a href="coleccion.html?cat=textil" class="sub" onclick="closeMob()">Alfombras & Textil</a>
+  <a href="coleccion.html?cat=exterior" class="sub" onclick="closeMob()">Exterior</a>
   <a href="nosotros.html" onclick="closeMob()">Nosotros</a>
-  <a href="#contacto" onclick="closeMob()">Contacto</a>
+  <a href="contacto.html" onclick="closeMob()">Contacto</a>
   <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer" style="color:#25D366;border-color:#25D366;">WhatsApp +54 358 5075773</a>
 </div>
 
@@ -1505,8 +1507,8 @@ body.dark .cmp-modal{background:#211f1d}
   <div class="hero-grad"></div>
   <div class="hero-content">
     <p class="eyebrow">Decourban Estudio · Distribuidor oficial Hunter Douglas · Río Cuarto</p>
-    <h1 id="heroTitle">La pieza correcta<br><em>no llena tu espacio —<br>lo define</em></h1>
-    <p class="hero-sub" id="heroSub">Marcela Kalbermatten ha transformado más de 500 hogares en Río Cuarto eligiendo la cortina, el mueble y el accesorio exacto para cada ambiente. Distribuidor oficial Hunter Douglas · 22 años de experiencia.</p>
+    <h1 id="heroTitle">Cortinas, muebles y decoración<br><em>que transforman tu hogar</em></h1>
+    <p class="hero-sub" id="heroSub">Marcela Kalbermatten te asesora personalmente — sin cargo, sin compromiso. Distribuidor oficial Hunter Douglas · 22 años en Río Cuarto.</p>
     <div class="hero-ctas">
       <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20una%20cotizaci%C3%B3n%20gratuita" class="btn-p" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
@@ -1927,11 +1929,16 @@ body.dark .cmp-modal{background:#211f1d}
       <a href="coleccion.html" class="see-all">Ver todos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
     <div class="rooms-grid">
-      <a href="coleccion.html?cat=muebles" class="rm rv"><div class="rm-img" style="height:100%;min-height:520px"><img src="https://images.unsplash.com/photo-1615471618985-97108e2ba478?auto=format&fit=crop&w=900&q=80" alt="Living — Muebles y decoración" loading="lazy" style="height:100%"/></div><div class="rm-ov"><div><div class="rm-name">Living</div><div class="rm-cta">Explorar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
-      <a href="cortinas.html" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1748679979601-dc9ec43d900d?auto=format&fit=crop&w=600&q=80" alt="Dormitorio" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Dormitorio</div><div class="rm-cta">Explorar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
-      <a href="coleccion.html?cat=muebles" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Comedor" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Comedor</div><div class="rm-cta">Explorar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
-      <a href="coleccion.html?cat=exterior" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80" alt="Exterior" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Exterior</div><div class="rm-cta">Explorar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
-      <a href="cortinas.html" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=600&q=80" alt="Cortinas Hunter Douglas" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Hunter Douglas Cortinas</div><div class="rm-cta">Explorar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
+      <!-- Living: sillones, mesas, espejos, lámparas → catálogo de muebles -->
+      <a href="coleccion.html?cat=muebles" class="rm rv"><div class="rm-img" style="height:100%;min-height:520px"><img src="https://images.unsplash.com/photo-1615471618985-97108e2ba478?auto=format&fit=crop&w=900&q=80" alt="Living — Sillones, mesas y decoración Decourban Río Cuarto" loading="lazy" style="height:100%"/></div><div class="rm-ov"><div><div class="rm-name">Living</div><div class="rm-sub" style="font-size:11.5px;color:rgba(255,255,255,.7);margin-top:4px">Sillones · Mesas · Espejos · Lámparas</div><div class="rm-cta" style="margin-top:8px">Ver productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
+      <!-- Dormitorio: cortinas Duette (aislación térmica/acústica = ideal dormitorio) -->
+      <a href="cortinas.html#duette" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=600&q=80" alt="Dormitorio — Cortinas Duette Hunter Douglas para aislación" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Dormitorio</div><div class="rm-sub" style="font-size:11.5px;color:rgba(255,255,255,.7);margin-top:4px">Cortinas Duette® · Aislación térmica</div><div class="rm-cta" style="margin-top:8px">Ver cortinas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
+      <!-- Comedor: mesas + consolas → catálogo filtrado por mesas -->
+      <a href="coleccion.html?cat=muebles&q=mesa" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Comedor — Mesas de diseño Decourban" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Comedor</div><div class="rm-sub" style="font-size:11.5px;color:rgba(255,255,255,.7);margin-top:4px">Mesas · Consolas · Sillas</div><div class="rm-cta" style="margin-top:8px">Ver mesas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
+      <!-- Exterior: toldos, pérgolas, productos para terraza -->
+      <a href="coleccion.html?cat=exterior" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80" alt="Exterior — Toldos y pérgolas Hunter Douglas" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Exterior</div><div class="rm-sub" style="font-size:11.5px;color:rgba(255,255,255,.7);margin-top:4px">Toldos · Pérgolas · Terraza</div><div class="rm-cta" style="margin-top:8px">Ver productos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
+      <!-- Hunter Douglas Cortinas: toda la colección -->
+      <a href="cortinas.html" class="rm rv"><div class="rm-img" style="aspect-ratio:4/3"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp" alt="Cortinas Hunter Douglas Silhouette Pirouette Duette — Decourban Río Cuarto" loading="lazy"/></div><div class="rm-ov"><div><div class="rm-name">Hunter Douglas Cortinas</div><div class="rm-sub" style="font-size:11.5px;color:rgba(255,255,255,.7);margin-top:4px">Silhouette® · Duette® · Pirouette® · Roller</div><div class="rm-cta" style="margin-top:8px">Ver colección <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></div></a>
     </div>
   </div>
 </section>
@@ -2435,7 +2442,7 @@ body.dark .cmp-modal{background:#211f1d}
           <li><a href="coleccion.html?cat=iluminacion">Iluminación</a></li>
           <li><a href="coleccion.html?cat=textil">Textiles</a></li>
           <li><a href="coleccion.html?cat=espejo">Espejos & Arte</a></li>
-          <li><a href="https://decourbanestudio.com.ar/sale/" target="_blank" rel="noopener noreferrer" style="color:#c0392b;font-weight:600">SALE</a></li>
+          <li><a href="coleccion.html" style="color:#c0392b;font-weight:600">Ver todo el catálogo</a></li>
         </ul>
       </div>
       <div class="ft-col">
@@ -3649,10 +3656,10 @@ renderRv();
 const heroSlides=document.querySelectorAll('.hero-slide');
 const heroDots=document.querySelectorAll('.hdot');
 const heroTexts=[
-  {t:'Las mejores cortinas<br><em>del mundo, en tu hogar</em>',s:'Marcela Kalbermatten te asesora sin cargo. Medición a domicilio, fabricación a medida e instalación en Río Cuarto y toda la región. 22 años de experiencia.'},
-  {t:'Muebles, cortinas y<br><em>decoración exclusiva</em>',s:'Sillones, mesas, espejos, alfombras, lámparas y más — todo en un showroom en Juan de Garay 1550, Río Cuarto.'},
-  {t:'Sillones, mesas y<br><em>accesorios de diseño</em>',s:'Monaco, Kenzo, Estocolmo, Kilim, Serra — piezas únicas para tu living, dormitorio y comedor.'},
-  {t:'Exterior con estilo:<br><em>toldos y pérgolas HD</em>',s:'Toldo Gemini y Pérgola Retráctil Hunter Douglas — para disfrutar tu terraza los 365 días del año.'},
+  {t:'Cortinas, muebles y decoración<br><em>que transforman tu hogar</em>',s:'Marcela Kalbermatten te asesora personalmente — sin cargo, sin compromiso. Distribuidor oficial Hunter Douglas · 22 años en Río Cuarto.'},
+  {t:'Muebles y decoración<br><em>exclusiva para tu espacio</em>',s:'Sillones, mesas, espejos, alfombras y lámparas — todo en el showroom de Juan de Garay 1550, Río Cuarto.'},
+  {t:'Cortinas Hunter Douglas<br><em>fabricadas a medida</em>',s:'Silhouette®, Duette®, Pirouette® y más. Medición a domicilio sin cargo, instalación incluida.'},
+  {t:'Exterior con estilo:<br><em>toldos y pérgolas Hunter Douglas</em>',s:'Toldo Gemini y Pérgola Retráctil — para disfrutar tu terraza los 365 días del año.'},
 ];
 let curSlide=0,slideTimer;
 function goSlide(i){
