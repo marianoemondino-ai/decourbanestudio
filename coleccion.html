@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Catálogo — Cortinas, Muebles y Decoración en Río Cuarto | Decourban Estudio</title>
-<meta name="description" content="60 productos reales de Decourban Estudio: cortinas Hunter Douglas, muebles, alfombras, lámparas y más. Juan de Garay 1550, Río Cuarto. Marcela Kalbermatten, 22 años de experiencia. Envío a todo el país."/>
+<meta name="description" content="60 productos reales de Decourban Estudio: cortinas Hunter Douglas, muebles, alfombras, lámparas y más. Río Cuarto, Córdoba. Marcela Kalbermatten, 22 años de experiencia. Envío a todo el país."/>
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://decourbanestudio.com.ar/coleccion.html"/>
@@ -108,17 +108,12 @@ nav{max-width:1440px;margin:0 auto;padding:0 36px;height:96px;display:grid;grid-
 .price-inputs input:focus{border-color:var(--gold)}
 .price-slider{-webkit-appearance:none;appearance:none;width:100%;height:3px;background:linear-gradient(to right,var(--gold) 0%,var(--gold) 70%,var(--border) 70%);border-radius:2px;outline:none}
 .price-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--gold);cursor:pointer;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.2)}
-.mat-tags{display:flex;flex-wrap:wrap;gap:6px}
-.mat-tag{padding:6px 12px;border:1.5px solid var(--border);border-radius:40px;font-size:12px;color:var(--text-mid);cursor:pointer;transition:all var(--ease)}
-.mat-tag.on,.mat-tag:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-light)}
-.color-grid{display:flex;flex-wrap:wrap;gap:6px}
-.color-dot{width:28px;height:28px;border-radius:50%;cursor:pointer;border:2.5px solid transparent;transition:all var(--ease)}
-.color-dot.on{border-color:var(--gold)}
-.color-dot:hover{transform:scale(1.15)}
-.rating-opts{display:flex;flex-direction:column;gap:6px}
-.rating-row{display:flex;align-items:center;gap:8px;cursor:pointer;padding:4px 6px;border-radius:var(--r);transition:background var(--ease)}
-.rating-row:hover{background:var(--bg-mid)}
-.rating-row.on{background:var(--gold-light)}
+.amb-tags{display:flex;flex-wrap:wrap;gap:6px}
+.amb-tag{display:flex;align-items:center;gap:5px;padding:7px 12px;border:1.5px solid var(--border);border-radius:40px;font-size:12px;color:var(--text-mid);cursor:pointer;background:none;font-family:inherit;transition:all var(--ease)}
+.amb-tag:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-light)}
+.budget-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.bchip{padding:5px 12px;border:1.5px solid var(--border);border-radius:40px;font-size:12px;color:var(--text-mid);cursor:pointer;background:none;font-family:inherit;transition:all var(--ease)}
+.bchip.on,.bchip:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-light)}
 .r-stars{display:flex;gap:2px}
 .r-stars svg{width:13px;height:13px;fill:var(--gold);color:var(--gold)}
 .r-label{font-size:12.5px;color:var(--text-mid)}
@@ -323,7 +318,7 @@ footer a:hover{color:var(--gold)}
         <a href="index.html">Inicio</a><span>›</span><span style="color:rgba(255,255,255,.6)">Colección</span>
       </div>
       <h1>Cortinas, muebles y<br><em>decoración real</em></h1>
-      <p class="col-hero-sub">60 productos reales de Decourban Estudio — Juan de Garay 1550, Río Cuarto. Todo en stock, con precio real y envío a todo el país.</p>
+      <p class="col-hero-sub">60 productos reales de Decourban Estudio — Río Cuarto, Córdoba. Todo en stock, con precio real y envío a todo el país.</p>
     </div>
     <div class="col-hero-stats">
       <div class="col-stat"><div class="n" id="statTotal">60</div><div class="l">productos en catálogo</div></div>
@@ -396,45 +391,45 @@ footer a:hover{color:var(--gold)}
       </div>
     </div>
 
-    <!-- MATERIALS -->
+    <!-- AMBIENTE RÁPIDO -->
     <div class="sb-section">
-      <div class="sb-title-row">
-        <div class="sb-title">Material</div>
-        <button class="sb-clear" onclick="clearMat()">Limpiar</button>
-      </div>
-      <div class="mat-tags">
-        <div class="mat-tag" onclick="toggleMat(this,'madera')">Madera</div>
-        <div class="mat-tag" onclick="toggleMat(this,'tela')">Tela</div>
-        <div class="mat-tag" onclick="toggleMat(this,'ratan')">Ratán</div>
-        <div class="mat-tag" onclick="toggleMat(this,'lana')">Lana</div>
-        <div class="mat-tag" onclick="toggleMat(this,'metal')">Metal</div>
-        <div class="mat-tag" onclick="toggleMat(this,'vidrio')">Vidrio</div>
+      <div class="sb-title">Por ambiente</div>
+      <div class="amb-tags">
+        <button class="amb-tag" onclick="selectCat(document.querySelector('[data-cat=muebles]'),'muebles')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M20 9V6a2 2 0 00-2-2H6a2 2 0 00-2 2v3"/><path d="M2 11v5a2 2 0 002 2h16a2 2 0 002-2v-5a2 2 0 00-4 0H6a2 2 0 00-4 0z"/></svg>
+          Living
+        </button>
+        <button class="amb-tag" onclick="selectCat(document.querySelector('[data-cat=cortinas]'),'cortinas');document.getElementById('colSearch').value='duette';debouncedFilter()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 3h18v2H3zM5 5v16M19 5v16"/></svg>
+          Dormitorio
+        </button>
+        <button class="amb-tag" onclick="selectCat(document.querySelector('[data-cat=muebles]'),'muebles');document.getElementById('colSearch').value='mesa';debouncedFilter()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><rect x="2" y="14" width="20" height="3" rx="1"/><path d="M5 17v2M19 17v2M6 14V8h12v6"/></svg>
+          Comedor
+        </button>
+        <button class="amb-tag" onclick="selectCat(document.querySelector('[data-cat=exterior]'),'exterior')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          Exterior
+        </button>
       </div>
     </div>
 
-    <!-- COLORS -->
+    <!-- PRESUPUESTO RÁPIDO -->
     <div class="sb-section">
-      <div class="sb-title">Color predominante</div>
-      <div class="color-grid">
-        <div class="color-dot" style="background:#f5f3f0" title="Blanco/Crema" onclick="toggleColor(this,'crema')"></div>
-        <div class="color-dot" style="background:#c8b89a" title="Natural/Beige" onclick="toggleColor(this,'beige')"></div>
-        <div class="color-dot" style="background:#8b7355" title="Tostado" onclick="toggleColor(this,'tostado')"></div>
-        <div class="color-dot" style="background:#2c2825" title="Grafito/Negro" onclick="toggleColor(this,'grafito')"></div>
-        <div class="color-dot" style="background:#4a6c5e" title="Verde" onclick="toggleColor(this,'verde')"></div>
-        <div class="color-dot" style="background:#c4a46b" title="Dorado" onclick="toggleColor(this,'dorado')"></div>
-        <div class="color-dot" style="background:#8b6914" title="Marrón" onclick="toggleColor(this,'marron')"></div>
-        <div class="color-dot" style="background:#d4b483" title="Teca" onclick="toggleColor(this,'teca')"></div>
+      <div class="sb-title">Presupuesto</div>
+      <div class="budget-chips">
+        <button class="bchip" onclick="setBudget(0,500000)">Hasta $500k</button>
+        <button class="bchip" onclick="setBudget(0,1500000)">Hasta $1.5M</button>
+        <button class="bchip" onclick="setBudget(1500000,0)">+ $1.5M</button>
+      </div>
+      <input type="range" class="price-slider" id="budgetSlider" min="0" max="4000000" value="4000000" step="100000" oninput="sliderFilter(this)"/>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-light);margin-top:4px">
+        <span>$0</span>
+        <span id="sliderLabel" style="font-weight:600;color:var(--gold)">Sin límite</span>
+        <span>$4M</span>
       </div>
     </div>
 
-    <!-- RATING -->
-    <div class="sb-section">
-      <div class="sb-title">Valoración</div>
-      <div class="rating-opts">
-        <div class="rating-row" onclick="toggleRating(this,5)"><div class="r-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><span class="r-label">5 estrellas</span></div>
-        <div class="rating-row" onclick="toggleRating(this,4)"><div class="r-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><span class="r-label">4+ estrellas</span></div>
-      </div>
-    </div>
   </aside>
 
   <!-- PRODUCT AREA -->
@@ -464,7 +459,16 @@ footer a:hover{color:var(--gold)}
             <div class="cat-item" data-cat="exterior" onclick="selectCat(this,'exterior');closeMobFilter()">Exterior (4)</div>
           </div>
         </div>
-        <button onclick="clearAll();closeMobFilter()" style="width:100%;padding:14px;background:var(--gold);color:var(--bg-dark);font-weight:700;border-radius:var(--r);border:none;cursor:pointer;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-top:16px">Aplicar filtros</button>
+        <div class="sb-section" style="margin-top:8px">
+          <div class="sb-title">Por ambiente</div>
+          <div class="amb-tags">
+            <button class="amb-tag" onclick="selectCat(document.querySelector('[data-cat=muebles]'),'muebles');closeMobFilter()">Living</button>
+            <button class="amb-tag" onclick="selectCat(document.querySelector('[data-cat=cortinas]'),'cortinas');closeMobFilter()">Dormitorio</button>
+            <button class="amb-tag" onclick="selectCat(document.querySelector('[data-cat=muebles]'),'muebles');document.getElementById('colSearch').value='mesa';debouncedFilter();closeMobFilter()">Comedor</button>
+            <button class="amb-tag" onclick="selectCat(document.querySelector('[data-cat=exterior]'),'exterior');closeMobFilter()">Exterior</button>
+          </div>
+        </div>
+        <button onclick="clearAll();closeMobFilter()" style="width:100%;padding:14px;background:var(--gold);color:var(--bg-dark);font-weight:700;border-radius:var(--r);border:none;cursor:pointer;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-top:16px">Ver todos los productos</button>
       </div>
     </div>
 
@@ -733,7 +737,7 @@ footer a:hover{color:var(--gold)}
           <div class="pc-badge hd">Hunter Douglas</div>
           <button class="pc-heart" onclick="event.stopPropagation();this.classList.toggle('loved')" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
           <div class="pc-acts">
-            <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20las%20cortinas%20Pirouette%20Hunter%20Douglas" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Cotizar</a>
+            <a href="https://wa.me/543585075773?text=Hola%2C%20me%20interesan%20las%20cortinas%20Pirouette%20Hunter%20Douglas" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Cotizar</a>
             <a href="cortinas.html" class="a-sec" onclick="event.stopPropagation()">Ver colección</a>
           </div>
         </div>
@@ -752,7 +756,7 @@ footer a:hover{color:var(--gold)}
           <div class="pc-badge hd">Hunter Douglas</div>
           <button class="pc-heart" onclick="event.stopPropagation();this.classList.toggle('loved')" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
           <div class="pc-acts">
-            <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20las%20Horizontales%20de%20Madera%20Hunter%20Douglas" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Cotizar</a>
+            <a href="https://wa.me/543585075773?text=Hola%2C%20me%20interesan%20las%20Horizontales%20de%20Madera%20Hunter%20Douglas" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Cotizar</a>
             <a href="cortinas.html" class="a-sec" onclick="event.stopPropagation()">Ver colección</a>
           </div>
         </div>
@@ -771,7 +775,7 @@ footer a:hover{color:var(--gold)}
           <div class="pc-badge hd">Hunter Douglas</div>
           <button class="pc-heart" onclick="event.stopPropagation();this.classList.toggle('loved')" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
           <div class="pc-acts">
-            <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20los%20Paneles%20Orientales%20Hunter%20Douglas" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Cotizar</a>
+            <a href="https://wa.me/543585075773?text=Hola%2C%20me%20interesan%20los%20Paneles%20Orientales%20Hunter%20Douglas" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Cotizar</a>
             <a href="cortinas.html" class="a-sec" onclick="event.stopPropagation()">Ver colección</a>
           </div>
         </div>
@@ -1507,6 +1511,28 @@ function toggleRating(el,r){
 // ── PRICE ─────────────────────────────
 function updatePriceFromSlider(s){
   document.getElementById('priceMax').value=s.value;
+  applyFilters();
+}
+function setBudget(min,max){
+  document.querySelectorAll('.bchip').forEach(b=>b.classList.remove('on'));
+  event?.target?.classList.add('on');
+  const minEl=document.getElementById('priceMin');
+  const maxEl=document.getElementById('priceMax');
+  const slider=document.getElementById('budgetSlider');
+  if(minEl)minEl.value=min||'';
+  if(maxEl)maxEl.value=max||'';
+  if(slider)slider.value=max||4000000;
+  const label=document.getElementById('sliderLabel');
+  if(label)label.textContent=max?'$'+max.toLocaleString('es-AR'):'Sin límite';
+  applyFilters();
+}
+function sliderFilter(s){
+  const max=parseInt(s.value);
+  const maxEl=document.getElementById('priceMax');
+  if(maxEl)maxEl.value=max>=4000000?'':max;
+  const label=document.getElementById('sliderLabel');
+  if(label)label.textContent=max>=4000000?'Sin límite':'$'+max.toLocaleString('es-AR');
+  document.querySelectorAll('.bchip').forEach(b=>b.classList.remove('on'));
   applyFilters();
 }
 
