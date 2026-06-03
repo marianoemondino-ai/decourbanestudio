@@ -60,7 +60,30 @@
   "priceRange":"$$$$",
   "currenciesAccepted":"ARS",
   "paymentAccepted":"Cash, Credit Card, Mercado Pago",
-  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"47"}
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"47"},
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Catálogo Decourban Estudio",
+    "itemListElement":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cortinas Hunter Douglas","description":"Cortinas Silhouette, Duette, Pirouette, Roller a medida con instalación incluida"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Medición a domicilio gratuita","description":"Medición profesional sin cargo en Río Cuarto y zona"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Muebles y decoración de interiores","description":"Sillones, mesas, espejos, alfombras y accesorios de diseño exclusivo"}}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Hacen envíos a todo el país?","acceptedAnswer":{"@type":"Answer","text":"Sí, enviamos a todo el territorio nacional. El envío es gratuito en compras superiores a $200.000. Los tiempos de entrega varían entre 3 y 10 días hábiles según la provincia."}},
+    {"@type":"Question","name":"¿Las cortinas Hunter Douglas se fabrican a medida?","acceptedAnswer":{"@type":"Answer","text":"Absolutamente. Todos los productos Hunter Douglas se fabrican a medida exacta para cada ventana. Nuestro equipo realiza la medición en tu domicilio sin costo adicional."}},
+    {"@type":"Question","name":"¿Cuánto cuesta la medición a domicilio?","acceptedAnswer":{"@type":"Answer","text":"La medición a domicilio es completamente gratuita en Río Cuarto y zona. Un técnico especializado va a tu casa, toma las medidas exactas y te asesoramos sin cargo."}},
+    {"@type":"Question","name":"¿Qué medios de pago aceptan?","acceptedAnswer":{"@type":"Answer","text":"Aceptamos todas las tarjetas de crédito (hasta 12 cuotas sin interés), tarjetas de débito, transferencia bancaria y Mercado Pago."}},
+    {"@type":"Question","name":"¿Qué garantía tienen las cortinas Hunter Douglas?","acceptedAnswer":{"@type":"Answer","text":"Hunter Douglas ofrece garantía internacional en todos sus productos. Como distribuidores oficiales desde 2013, estamos respaldados directamente por la marca."}},
+    {"@type":"Question","name":"¿Puedo ver los productos antes de comprar?","acceptedAnswer":{"@type":"Answer","text":"Sí. Tenemos showroom en Río Cuarto donde podés ver y tocar todos los productos. También podemos llevarte muestras de telas a domicilio para Hunter Douglas."}}
+  ]
 }
 </script>
 <link rel="stylesheet" href="styles.css"/>
@@ -1694,6 +1717,39 @@ body.dark .cmp-modal{background:#211f1d}
   </div>
 </section>
 
+<!-- VIDEO SECTION — reemplazar src="" con la URL del video Higgsfield cuando esté listo -->
+<section class="vid-sec" id="video" style="position:relative;height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--bg-dark)">
+  <!-- PLACEHOLDER: reemplazar este div con <video> o <iframe> cuando tengas el video de Higgsfield -->
+  <div id="vidPlaceholder" style="position:absolute;inset:0;background:linear-gradient(135deg,#1a1612 0%,#2a2018 50%,#1a1612 100%);display:flex;align-items:center;justify-content:center">
+    <div style="text-align:center;padding:48px">
+      <div style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,52px);font-weight:500;color:#fff;line-height:1.15;margin-bottom:20px">
+        Tu hogar ideal,<br><em style="color:var(--gold)">a un paso</em>
+      </div>
+      <p style="font-size:15.5px;color:rgba(255,255,255,.6);max-width:480px;margin:0 auto 32px;line-height:1.75">
+        Cortinas Hunter Douglas, muebles exclusivos y decoración de diseño — todo en un solo showroom en Río Cuarto.
+      </p>
+      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20conocer%20el%20showroom%20de%20Decourban" class="btn-p" target="_blank" rel="noopener noreferrer" style="display:inline-flex">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+        Coordinar visita al showroom
+      </a>
+    </div>
+  </div>
+  <!-- Partículas decorativas de fondo -->
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(196,164,107,.06) 0%,transparent 60%),radial-gradient(ellipse at 80% 50%,rgba(196,164,107,.04) 0%,transparent 60%);pointer-events:none"></div>
+</section>
+<!-- INSTRUCCIONES PARA ACTIVAR VIDEO:
+  1. Generá el video en app.higgsfield.ai con el prompt:
+     "A family of three walking through the front door of a modern elegantly decorated home.
+      Warm golden-hour light filters through Hunter Douglas Silhouette curtains.
+      Designer sofa, wooden coffee table, decorative rug. Cinematic, 10 seconds."
+  2. Subí el video a tu hosting o YouTube
+  3. Reemplazá el div#vidPlaceholder con:
+     <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7">
+       <source src="TU_VIDEO.mp4" type="video/mp4">
+     </video>
+     O con un iframe de YouTube si lo subís ahí.
+-->
+
 <!-- PRODUCTS -->
 <section class="prods" id="productos">
   <div class="wrap">
@@ -2119,6 +2175,14 @@ body.dark .cmp-modal{background:#211f1d}
       <div class="faq-item">
         <div class="faq-q"><span>¿Ofrecen garantía en los productos?</span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div></div>
         <div class="faq-a"><p>Los productos Hunter Douglas cuentan con garantía internacional de la marca. El resto de nuestros productos tienen garantía de 12 meses contra defectos de fabricación. La instalación está garantizada por 6 meses. Ante cualquier problema, te respondemos de inmediato por WhatsApp.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Cuánto cuesta una cortina Hunter Douglas?</span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div></div>
+        <div class="faq-a"><p>El precio depende del modelo, las medidas de tu ventana y la tela elegida. Como referencia orientativa: una Roller Quantum® parte desde $80.000, una Duette® o Silhouette® desde $150.000, y una Pirouette® desde $200.000, todo para ventana estándar con instalación incluida. <strong>El presupuesto exacto es siempre sin cargo</strong> — escribinos por WhatsApp con las medidas aproximadas y te respondemos al instante.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>¿Atienden fuera de Río Cuarto?</span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div></div>
+        <div class="faq-a"><p>Sí. Enviamos nuestros productos a todo el país. Para ciudades cercanas (Villa María, San Luis, La Carlota, General Deheza y región) podemos enviar nuestro equipo técnico para la instalación. Para el resto del país, el cliente instala con nuestras instrucciones detalladas o con un instalador local — y nosotros los guiamos en todo el proceso por WhatsApp y videollamada sin cargo.</p></div>
       </div>
     </div>
   </div>
