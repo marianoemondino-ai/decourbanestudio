@@ -4,7 +4,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Catálogo — Cortinas, Muebles y Decoración en Río Cuarto | Decourban Estudio</title>
-<meta name="description" content="Catálogo de Decourban Estudio: cortinas Hunter Douglas, sillones, mesas, alfombras, lámparas y más. Más de 60 productos. Envío gratis a todo el país. Asesoramiento gratuito en Río Cuarto, Córdoba."/>
+<meta name="description" content="Catálogo Decourban Estudio: cortinas Hunter Douglas, toldos, camastros, sillones de exterior, almohadones outdoor, mesas, sillas, alfombras, lámparas y decoración. Más de 66 productos. Envío a todo el país."/>
+<meta name="keywords" content="sillones exterior Río Cuarto, camastros diseño, almohadones outdoor, mesas exterior Córdoba, sillas terraza, muebles exterior Río Cuarto, toldos Hunter Douglas, decoración exterior, adornos terraza, Decourban catálogo"/>
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://decourbanestudio.com.ar/coleccion.html"/>
@@ -12,7 +13,7 @@
 <meta property="og:locale" content="es_AR"/>
 <meta property="og:title" content="Catálogo completo — Decourban Estudio"/>
 <meta property="og:description" content="60 productos de diseño exclusivo en Decourban Estudio, Río Cuarto. Cortinas Hunter Douglas, muebles, alfombras y más. Asesoramiento gratuito con Marcela Kalbermatten."/>
-<meta property="og:image" content="https://images.unsplash.com/photo-1615471618985-97108e2ba478?auto=format&fit=crop&w=1200&h=630&q=85"/>
+<meta property="og:image" content="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
@@ -22,6 +23,33 @@
 <link rel="dns-prefetch" href="https://dcdn-us.mitiendanube.com"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://decourbanestudio.com.ar/coleccion.html"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://decourbanestudio.com.ar/"},
+    {"@type":"ListItem","position":2,"name":"Catálogo","item":"https://decourbanestudio.com.ar/coleccion.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"Catálogo Decourban Estudio",
+  "description":"Catálogo completo de muebles, cortinas Hunter Douglas, alfombras, lámparas y decoración. Envío a todo el país.",
+  "url":"https://decourbanestudio.com.ar/coleccion.html",
+  "isPartOf":{"@type":"WebSite","name":"Decourban Estudio","url":"https://decourbanestudio.com.ar/"},
+  "about":[
+    {"@type":"Thing","name":"Cortinas Hunter Douglas"},
+    {"@type":"Thing","name":"Muebles de diseño"},
+    {"@type":"Thing","name":"Alfombras y textiles"},
+    {"@type":"Thing","name":"Iluminación"},
+    {"@type":"Thing","name":"Decoración de interiores"}
+  ]
+}
+</script>
 <link rel="stylesheet" href="styles.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -249,6 +277,38 @@ nav{max-width:1440px;margin:0 auto;padding:0 36px;height:96px;display:grid;grid-
 .wa-float:hover{background:#1bb558;transform:scale(1.1)}
 .wa-float::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,.18);animation:wp 2.5s ease-out infinite}
 @keyframes wp{0%{transform:scale(1);opacity:1}100%{transform:scale(1.7);opacity:0}}
+/* CHAT WIDGET */
+.chat-widget{position:fixed;bottom:28px;right:28px;z-index:800}
+.chat-bubble{position:absolute;bottom:70px;right:0;background:#fff;border-radius:16px 16px 4px 16px;padding:16px 18px;width:295px;box-shadow:0 8px 36px rgba(0,0,0,.16);opacity:0;visibility:hidden;transform:translateY(12px) scale(.96);transition:all .4s cubic-bezier(.34,1.2,.64,1);border:1px solid var(--border)}
+.chat-widget.open .chat-bubble{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.chat-close-row{display:flex;justify-content:flex-end;margin-bottom:6px}
+.chat-close-btn{background:none;border:none;color:var(--text-light);cursor:pointer;font-size:18px;line-height:1;padding:2px 4px;transition:color .3s}
+.chat-close-btn:hover{color:var(--text)}
+.chat-bubble-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.chat-bubble-av{width:40px;height:40px;border-radius:50%;flex-shrink:0;border:2px solid #25D366;display:flex;align-items:center;justify-content:center;background:var(--gold)}
+.chat-bubble-name{font-size:13px;font-weight:700;color:var(--text)}
+.chat-bubble-sub{font-size:10.5px;color:var(--text-light);margin-top:1px}
+.chat-bubble-status{font-size:11px;color:#25D366;display:flex;align-items:center;gap:4px;margin-top:2px}
+.chat-bubble-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#25D366;display:inline-block}
+.chat-msg{background:#f0f0f0;border-radius:12px 12px 12px 4px;padding:10px 14px;font-size:13px;color:var(--text);line-height:1.6;margin-bottom:12px}
+.chat-typing{display:flex;gap:4px;align-items:center;padding:10px 14px;background:#f0f0f0;border-radius:12px;width:fit-content}
+.chat-typing span{width:7px;height:7px;border-radius:50%;background:#aaa;animation:chatTyp .9s ease-in-out infinite}
+.chat-typing span:nth-child(2){animation-delay:.2s}
+.chat-typing span:nth-child(3){animation-delay:.4s}
+@keyframes chatTyp{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.chat-quick-replies{display:flex;flex-direction:column;gap:7px}
+.chat-qr{display:block;padding:9px 14px;background:var(--gold-light);border:1.5px solid rgba(196,164,107,.3);border-radius:20px;font-size:12.5px;color:var(--gold-dark);font-weight:500;text-align:left;transition:all .2s ease;text-decoration:none;line-height:1.3}
+.chat-qr:hover{background:var(--gold);color:var(--bg-dark);border-color:var(--gold);transform:translateX(3px)}
+.chat-fab{width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;box-shadow:0 4px 20px rgba(37,211,102,.4);position:relative;transition:all .38s ease}
+.chat-fab:hover{background:#1bb558;transform:scale(1.08)}
+.chat-fab svg{width:28px;height:28px;color:#fff}
+.chat-fab-badge{position:absolute;top:-3px;right:-3px;background:#e74c3c;color:#fff;width:18px;height:18px;border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.chat-fab::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,.18);animation:wp 2.8s ease-out infinite}
+body.dark .chat-bubble{background:#211f1d;border-color:#302c28}
+body.dark .chat-bubble-name{color:#ede8e0}
+body.dark .chat-msg{background:#2a2826;color:#ede8e0}
+body.dark .chat-qr{background:rgba(196,164,107,.1);color:var(--gold);border-color:rgba(196,164,107,.25)}
+body.dark .chat-qr:hover{background:var(--gold);color:var(--bg-dark)}
 
 /* FOOTER */
 footer{background:var(--bg-dark);padding:40px 36px;text-align:center;font-size:12.5px;color:rgba(255,255,255,.28)}
@@ -348,7 +408,7 @@ footer a:hover{color:var(--gold)}
         <div class="cat-item on" data-cat="all" onclick="selectCat(this,'all')">
           <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
           Todos los productos
-          <span class="cat-count">60</span>
+          <span class="cat-count">66</span>
         </div>
         <!-- CORTINAS PRIMERO — especialidad de la empresa -->
         <div class="cat-item" data-cat="cortinas" onclick="selectCat(this,'cortinas')" style="border-left:3px solid var(--gold);padding-left:10px">
@@ -373,7 +433,7 @@ footer a:hover{color:var(--gold)}
         </div>
         <div class="cat-item" data-cat="exterior" onclick="selectCat(this,'exterior')">
           <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-          Exterior <span class="cat-count">4</span>
+          Exterior <span class="cat-count">10</span>
         </div>
       </div>
     </div>
@@ -450,13 +510,13 @@ footer a:hover{color:var(--gold)}
         <div class="sb-section">
           <div class="sb-title">Categoría</div>
           <div class="cat-list">
-            <div class="cat-item on" data-cat="all" onclick="selectCat(this,'all');closeMobFilter()">Todos los productos (60)</div>
+            <div class="cat-item on" data-cat="all" onclick="selectCat(this,'all');closeMobFilter()">Todos los productos (66)</div>
             <div class="cat-item" data-cat="cortinas" onclick="selectCat(this,'cortinas');closeMobFilter()">★ Cortinas Hunter Douglas (5)</div>
             <div class="cat-item" data-cat="muebles" onclick="selectCat(this,'muebles');closeMobFilter()">Muebles (11)</div>
             <div class="cat-item" data-cat="textil" onclick="selectCat(this,'textil');closeMobFilter()">Alfombras & Textiles (22)</div>
             <div class="cat-item" data-cat="iluminacion" onclick="selectCat(this,'iluminacion');closeMobFilter()">Iluminación & Adornos (16)</div>
             <div class="cat-item" data-cat="espejo" onclick="selectCat(this,'espejo');closeMobFilter()">Espejos (2)</div>
-            <div class="cat-item" data-cat="exterior" onclick="selectCat(this,'exterior');closeMobFilter()">Exterior (4)</div>
+            <div class="cat-item" data-cat="exterior" onclick="selectCat(this,'exterior');closeMobFilter()">Exterior (10)</div>
           </div>
         </div>
         <div class="sb-section" style="margin-top:8px">
@@ -1408,6 +1468,128 @@ footer a:hover{color:var(--gold)}
         <div class="pc-info"><div class="pc-cat">Exterior</div><div class="pc-name">Maceta de PVC</div><div class="pc-mat">PVC · 3 tamaños: P(38×40), M(43×45), G(56×55) cm</div><div class="pc-price">Desde $67.507</div><div class="list-cta"><button class="lm" onclick="quickView(this.closest('.pc'))">Vista rápida</button><a href="https://wa.me/543585075773?text=Maceta%20de%20PVC" class="ls" target="_blank" rel="noopener noreferrer">Consultar</a></div></div>
       </div>
 
+      <!-- ═══ CAMASTRO EXTERIOR ════════════════════════════════════════════ -->
+      <div class="pc" data-cat="exterior" data-price="890000" data-name="Camastro Exterior Milano" data-new="true">
+        <div class="pc-img">
+          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Camastro de exterior Milano con almohadones — Decourban Exteriores" loading="lazy" style="object-position:center 30%"/>
+          <div class="pc-badge new">Nuevo</div>
+          <button class="pc-heart" onclick="event.stopPropagation();this.classList.toggle('loved')" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+          <div class="pc-acts">
+            <a href="https://wa.me/543585075773?text=Camastro%20Exterior%20Milano" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Consultar</a>
+            <button class="a-sec" onclick="event.stopPropagation();quickView(this.closest('.pc'))">Vista rápida</button>
+          </div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-cat">Exterior</div>
+          <div class="pc-name">Camastro Exterior Milano</div>
+          <div class="pc-mat">Aluminio + madera teca · Tela náutica anti-UV · Regulable</div>
+          <div class="pc-price">Desde $890.000</div>
+          <div class="pc-swatches"><div class="sw on" style="background:#d4c8b8"></div><div class="sw" style="background:#4a3f35"></div><div class="sw" style="background:#e8e0d6"></div></div>
+          <div class="list-cta"><button class="lm" onclick="quickView(this.closest('.pc'))">Vista rápida</button><a href="https://wa.me/543585075773?text=Camastro%20Exterior%20Milano" class="ls" target="_blank" rel="noopener noreferrer">Consultar</a></div>
+        </div>
+      </div>
+
+      <!-- ═══ SILLÓN EXTERIOR ════════════════════════════════════════════ -->
+      <div class="pc" data-cat="exterior" data-price="560000" data-name="Sillón Exterior Costa" data-new="true" data-bestseller="true">
+        <div class="pc-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Sillón de exterior Costa con almohadones — Decourban Exteriores Río Cuarto" loading="lazy"/>
+          <div class="pc-badge gold">Bestseller</div>
+          <button class="pc-heart" onclick="event.stopPropagation();this.classList.toggle('loved')" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+          <div class="pc-acts">
+            <a href="https://wa.me/543585075773?text=Sill%C3%B3n%20Exterior%20Costa" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Consultar</a>
+            <button class="a-sec" onclick="event.stopPropagation();quickView(this.closest('.pc'))">Vista rápida</button>
+          </div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-cat">Exterior</div>
+          <div class="pc-name">Sillón Exterior Costa</div>
+          <div class="pc-mat">Estructura de aluminio · Tapizado náutico · Resistente UV · Incluye almohadón</div>
+          <div class="pc-price">Desde $560.000</div>
+          <div class="pc-swatches"><div class="sw on" style="background:#c8b49a"></div><div class="sw" style="background:#6b7c6e"></div><div class="sw" style="background:#e0dbd4"></div></div>
+          <div class="list-cta"><button class="lm" onclick="quickView(this.closest('.pc'))">Vista rápida</button><a href="https://wa.me/543585075773?text=Sill%C3%B3n%20Exterior%20Costa" class="ls" target="_blank" rel="noopener noreferrer">Consultar</a></div>
+        </div>
+      </div>
+
+      <!-- ═══ ALMOHADONES OUTDOOR ════════════════════════════════════════════ -->
+      <div class="pc" data-cat="exterior" data-price="18900" data-name="Almohadones Outdoor Premium" data-new="true">
+        <div class="pc-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/2f2743d8-42ab-41bc-9d0d-1c492c6a00e0-f1dea557f36908de8b17373906142489-480-0.webp" alt="Almohadones de exterior outdoor anti-humedad — Decourban" loading="lazy"/>
+          <div class="pc-badge new">Nuevo</div>
+          <button class="pc-heart" onclick="event.stopPropagation();this.classList.toggle('loved')" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+          <div class="pc-acts">
+            <a href="https://wa.me/543585075773?text=Almohadones%20Outdoor%20Premium" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Consultar</a>
+            <button class="a-sec" onclick="event.stopPropagation();quickView(this.closest('.pc'))">Vista rápida</button>
+          </div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-cat">Exterior</div>
+          <div class="pc-name">Almohadones Outdoor Premium</div>
+          <div class="pc-mat">Tela náutica anti-humedad · Anti-UV · Múltiples colores · Varios tamaños</div>
+          <div class="pc-price">Desde $18.900</div>
+          <div class="pc-swatches"><div class="sw on" style="background:#c4936a"></div><div class="sw" style="background:#6b8c74"></div><div class="sw" style="background:#5a7a9e"></div><div class="sw" style="background:#e8ddd0"></div></div>
+          <div class="list-cta"><button class="lm" onclick="quickView(this.closest('.pc'))">Vista rápida</button><a href="https://wa.me/543585075773?text=Almohadones%20Outdoor%20Premium" class="ls" target="_blank" rel="noopener noreferrer">Consultar</a></div>
+        </div>
+      </div>
+
+      <!-- ═══ MESA DE EXTERIOR ════════════════════════════════════════════ -->
+      <div class="pc" data-cat="exterior" data-price="420000" data-name="Mesa Exterior Terraza">
+        <div class="pc-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp" alt="Mesa de exterior para terraza — Decourban Río Cuarto" loading="lazy"/>
+          <button class="pc-heart" onclick="event.stopPropagation();this.classList.toggle('loved')" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+          <div class="pc-acts">
+            <a href="https://wa.me/543585075773?text=Mesa%20Exterior%20Terraza" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Consultar</a>
+            <button class="a-sec" onclick="event.stopPropagation();quickView(this.closest('.pc'))">Vista rápida</button>
+          </div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-cat">Exterior</div>
+          <div class="pc-name">Mesa Exterior Terraza</div>
+          <div class="pc-mat">Madera teca + acero inox · Varios tamaños · Resistente intemperie</div>
+          <div class="pc-price">Desde $420.000</div>
+          <div class="list-cta"><button class="lm" onclick="quickView(this.closest('.pc'))">Vista rápida</button><a href="https://wa.me/543585075773?text=Mesa%20Exterior%20Terraza" class="ls" target="_blank" rel="noopener noreferrer">Consultar</a></div>
+        </div>
+      </div>
+
+      <!-- ═══ SILLAS EXTERIOR ════════════════════════════════════════════ -->
+      <div class="pc" data-cat="exterior" data-price="195000" data-name="Sillas Exterior Set x4">
+        <div class="pc-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/img_9109-fbde0aa1d00029292717538840253837-480-0.webp" alt="Sillas de exterior set de 4 — Decourban Río Cuarto" loading="lazy"/>
+          <button class="pc-heart" onclick="event.stopPropagation();this.classList.toggle('loved')" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+          <div class="pc-acts">
+            <a href="https://wa.me/543585075773?text=Sillas%20Exterior%20Set%20x4" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Consultar</a>
+            <button class="a-sec" onclick="event.stopPropagation();quickView(this.closest('.pc'))">Vista rápida</button>
+          </div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-cat">Exterior</div>
+          <div class="pc-name">Sillas Exterior Set x4</div>
+          <div class="pc-mat">Aluminio fundido · Resistente a lluvia · Apilables · Con almohadón</div>
+          <div class="pc-price">Desde $195.000</div>
+          <div class="pc-swatches"><div class="sw on" style="background:#d8cfc4"></div><div class="sw" style="background:#2a2520"></div><div class="sw" style="background:#8a9e8a"></div></div>
+          <div class="list-cta"><button class="lm" onclick="quickView(this.closest('.pc'))">Vista rápida</button><a href="https://wa.me/543585075773?text=Sillas%20Exterior%20Set%20x4" class="ls" target="_blank" rel="noopener noreferrer">Consultar</a></div>
+        </div>
+      </div>
+
+      <!-- ═══ ADORNOS EXTERIOR ════════════════════════════════════════════ -->
+      <div class="pc" data-cat="exterior" data-price="45000" data-name="Farolitos Exterior Decorativos">
+        <div class="pc-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/2fbbfe32-163b-4982-8ccb-a8e28b11c4cf-1c7c46dd64f2dd72e417364480226959-480-0.webp" alt="Farolitos decorativos para exterior y terraza — Decourban" loading="lazy"/>
+          <div class="pc-badge new">Nuevo</div>
+          <button class="pc-heart" onclick="event.stopPropagation();this.classList.toggle('loved')" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button>
+          <div class="pc-acts">
+            <a href="https://wa.me/543585075773?text=Farolitos%20Exterior%20Decorativos" class="a-main" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Consultar</a>
+            <button class="a-sec" onclick="event.stopPropagation();quickView(this.closest('.pc'))">Vista rápida</button>
+          </div>
+        </div>
+        <div class="pc-info">
+          <div class="pc-cat">Exterior</div>
+          <div class="pc-name">Farolitos Exterior Decorativos</div>
+          <div class="pc-mat">Metal y vidrio · Estilo rústico · Interior vela o LED · Set de 2</div>
+          <div class="pc-price">Desde $45.000</div>
+          <div class="list-cta"><button class="lm" onclick="quickView(this.closest('.pc'))">Vista rápida</button><a href="https://wa.me/543585075773?text=Farolitos%20Exterior%20Decorativos" class="ls" target="_blank" rel="noopener noreferrer">Consultar</a></div>
+        </div>
+      </div>
+
     </div><!-- /pgrid -->
 
     <!-- EMPTY STATE -->
@@ -1452,10 +1634,36 @@ footer a:hover{color:var(--gold)}
   </div>
 </div>
 
-<!-- WA FLOAT -->
-<a href="https://wa.me/543585075773" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
-</a>
+<!-- CHAT WIDGET -->
+<div class="chat-widget" id="chatWidget">
+  <div class="chat-bubble" id="chatBubble">
+    <div class="chat-close-row">
+      <button class="chat-close-btn" onclick="closeChatBubble()" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="chat-bubble-head">
+      <div class="chat-bubble-av">
+        <span style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#161412">MK</span>
+      </div>
+      <div>
+        <div class="chat-bubble-name">Marcela K.</div>
+        <div class="chat-bubble-sub">Decourban Estudio · Río Cuarto</div>
+        <div class="chat-bubble-status">Disponible · resp. en ~2 hs</div>
+      </div>
+    </div>
+    <div class="chat-typing" id="chatTyping"><span></span><span></span><span></span></div>
+    <div class="chat-msg" id="chatMsg" style="display:none">Hola, soy Marcela 👋 ¿Estás buscando algo en particular? Te ayudo a encontrarlo.</div>
+    <div class="chat-quick-replies" id="chatQr" style="display:none">
+      <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20quisiera%20consultar%20sobre%20un%20producto%20del%20cat%C3%A1logo.%20%C2%BFMe%20pod%C3%A9s%20ayudar%3F" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">🛒 Consultar un producto</a>
+      <a href="https://wa.me/543585075773?text=Hola%20Marcela%2C%20me%20interesan%20las%20cortinas%20Hunter%20Douglas.%20%C2%BFPodr%C3%ADas%20asesorarme%3F" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">🪟 Ver cortinas Hunter Douglas</a>
+      <a href="https://wa.me/543585075773?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20env%C3%ADos%2C%20tiempos%20de%20entrega%20y%20garant%C3%ADa" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">🚚 Envíos y garantía</a>
+      <a href="https://wa.me/543585075773?text=Hola%2C%20tengo%20una%20consulta%20sobre%20los%20productos%20de%20Decourban" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">💬 Otra consulta</a>
+    </div>
+  </div>
+  <button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Chat WhatsApp">
+    <div class="chat-fab-badge" id="chatBadge">1</div>
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+  </button>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -1801,4 +2009,21 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLightbox();clo
       // Add to cart button
       const btn=document.createElement('button');
       btn.style.cssText='position:absolute;bottom:48px;left:12px;z-index:4;background:#c4a46b;color:#161412;border:none;border-radius:4px;padding:8px 13px;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;display:none;align-items:center;gap:6px;transition:all .3s;white-space:nowrap';
-      btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" heigh
+      btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg> Agregar';
+      btn.onclick=function(e){e.stopPropagation();addToCart({id,name,price,priceNum,img,cat,mat});const orig=btn.innerHTML;btn.style.background='#161412';btn.style.color='#fff';btn.textContent='✓ Agregado';setTimeout(()=>{btn.innerHTML=orig;btn.style.background='#c4a46b';btn.style.color='#161412';},2000);};
+      pcImg.style.position='relative';
+      pcImg.appendChild(btn);
+      pcImg.addEventListener('mouseenter',()=>btn.style.display='flex');
+      pcImg.addEventListener('mouseleave',()=>btn.style.display='none');
+    }
+  });
+})();
+
+// CHAT WIDGET
+let chatOpen=false,chatReady=false;
+function toggleChat(){chatOpen=!chatOpen;document.getElementById('chatWidget').classList.toggle('open',chatOpen);document.getElementById('chatBadge').style.display='none';if(chatOpen&&!chatReady){chatReady=true;setTimeout(()=>{document.getElementById('chatTyping').style.display='none';document.getElementById('chatMsg').style.display='block';document.getElementById('chatQr').style.display='flex';},1800);}}
+function closeChatBubble(){chatOpen=false;document.getElementById('chatWidget').classList.remove('open');}
+setTimeout(()=>{if(!chatOpen&&!sessionStorage.getItem('chatOpened')){toggleChat();sessionStorage.setItem('chatOpened','1');}},15000);
+</script>
+</body>
+</html>

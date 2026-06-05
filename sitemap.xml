@@ -5,39 +5,87 @@
   <!-- PÁGINA PRINCIPAL -->
   <url>
     <loc>https://decourbanestudio.com.ar/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0</image:loc>
       <image:title>Decourban Estudio — Cortinas Hunter Douglas y Decoración en Río Cuarto</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp</image:loc>
+      <image:title>Terraza exterior con camastros, sillones y toldo — Decourban Estudio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213424_b8c1dd71-3eaf-4c42-906b-970447e59134_min.webp</image:loc>
+      <image:title>Living con cortinas Hunter Douglas Silhouette — Decourban Estudio</image:title>
+    </image:image>
   </url>
 
   <!-- CORTINAS HUNTER DOUGLAS — prioridad máxima (producto principal) -->
   <url>
     <loc>https://decourbanestudio.com.ar/cortinas.html</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
       <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp</image:loc>
       <image:title>Cortinas Silhouette Hunter Douglas — Decourban Estudio Río Cuarto</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-480-0.webp</image:loc>
+      <image:title>Cortinas Duette Hunter Douglas — Persianas celulares Río Cuarto</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-480-0.webp</image:loc>
+      <image:title>Cortinas Pirouette Hunter Douglas — Decourban Río Cuarto</image:title>
     </image:image>
   </url>
 
   <!-- CATÁLOGO COMPLETO -->
   <url>
     <loc>https://decourbanestudio.com.ar/coleccion.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- Filtros principales del catálogo -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/coleccion.html?cat=muebles</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://decourbanestudio.com.ar/coleccion.html?cat=iluminacion</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://decourbanestudio.com.ar/coleccion.html?cat=textil</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://decourbanestudio.com.ar/coleccion.html?cat=espejo</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://decourbanestudio.com.ar/coleccion.html?cat=exterior</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- CONTACTO -->
   <url>
     <loc>https://decourbanestudio.com.ar/contacto.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -45,25 +93,8 @@
   <!-- SILLÓN MONACO — página de producto -->
   <url>
     <loc>https://decourbanestudio.com.ar/producto.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <!-- QUIÉNES SOMOS -->
-  <url>
-    <loc>https://decourbanestudio.com.ar/nosotros.html</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- POLÍTICA DE PRIVACIDAD -->
-  <url>
-    <loc>https://decourbanestudio.com.ar/privacidad.html</loc>
-    <lastmod>2026-06-03</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-</urlset>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-panta

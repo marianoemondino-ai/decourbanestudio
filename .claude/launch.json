@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "decourban",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "3000", "."],
+      "port": 3000
+    }
+  ]
+}
