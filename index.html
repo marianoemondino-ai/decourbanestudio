@@ -1443,6 +1443,25 @@ body.dark .cmp-modal{background:#211f1d}
 <div id="loader">
   <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban" fetchpriority="high" loading="eager"/>
 </div>
+<script>
+// Loader independiente — script aislado para evitar que errores en otros scripts lo rompan
+(function(){
+  function hideLoader(){
+    var l=document.getElementById('loader');
+    if(!l)return;
+    l.classList.add('done');
+    setTimeout(function(){l.style.display='none'},700);
+  }
+  // Máximo 1.5s sin importar nada
+  setTimeout(hideLoader,1500);
+  // Apenas carga el DOM básico
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',function(){setTimeout(hideLoader,400)});
+  } else {
+    setTimeout(hideLoader,400);
+  }
+})();
+</script>
 
 <!-- ANNOUNCEMENT BAR (rotating) -->
 <div class="ann" id="annBar">
@@ -3468,10 +3487,6 @@ calcCuotas();
 <script>
 // ── CONSTANTE CDN (única, usada en todo el script) ──
 const CDN_BASE='https://dcdn-us.mitiendanube.com/stores/005/649/615/products/';
-
-// LOADER
-// Ocultar loader: máx 2s sin importar si las imágenes cargaron o no
-(()=>{const hide=()=>{const l=document.getElementById('loader');if(l)l.classList.add('done')};document.addEventListener('DOMContentLoaded',()=>setTimeout(hide,500));setTimeout(hide,2000)})();
 
 // NAV SCROLL
 const navEl=document.getElementById('nav');
