@@ -258,6 +258,15 @@ body.dark .chat-qr:hover{background:var(--gold);color:var(--bg-dark)}
 /* RESPONSIVE */
 @media(max-width:1000px){.contact-inner{grid-template-columns:1fr;gap:48px}.hours-inner{grid-template-columns:1fr}}
 @media(max-width:768px){nav{padding:0 20px}.nav-links{display:none}.ham{display:flex}.methods-inner{grid-template-columns:1fr}.hero-mini{padding:48px 20px 36px}.methods,.contact-main,.faq-mini,.hours{padding-left:20px;padding-right:20px}.fg-row{grid-template-columns:1fr}}
+
+/* ── MOBILE NAV ── */
+.ham{display:none;flex-direction:column;justify-content:center;gap:5px;padding:8px;cursor:pointer;background:none;border:none;flex-shrink:0}
+.ham span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:all .25s}
+.mob-nav{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;background:var(--bg,#fdfaf6);border-bottom:1px solid var(--border,#e8dfd4);z-index:998;padding:72px 24px 20px;box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.mob-nav.open{display:flex}
+.mob-nav a{color:var(--text-mid,#4a3f35);text-decoration:none;font-size:15px;font-weight:500;padding:13px 0;border-bottom:1px solid var(--border-lt,#f0e8de);display:flex;align-items:center;gap:8px}
+.mob-nav a:last-child{border:none;color:var(--gold,#c4a46b);font-weight:700;margin-top:4px}
+@media(max-width:900px){.ham{display:flex}}
 </style>
 </head>
 <body>
@@ -286,6 +295,15 @@ body.dark .chat-qr:hover{background:var(--gold);color:var(--bg-dark)}
       <button class="ham" id="ham" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </nav>
+<!-- MOBILE NAV -->
+<nav class="mob-nav" id="mobNav" aria-label="Navegación móvil">
+  <a href="cortinas.html">Cortinas Hunter Douglas</a>
+  <a href="coleccion.html">Catálogo</a>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">💬 WhatsApp — Cotizar gratis</a>
+</nav>
 </div>
 
 <!-- HERO MINI -->
@@ -657,5 +675,8 @@ setTimeout(()=>{if(!chatOpen&&!sessionStorage.getItem('chatOpened')){toggleChat(
 <a href="https://wa.me/543585075773" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
 </a>
+<script>
+/* Mobile nav toggle */
+(()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
 </body>
 </html>

@@ -50,7 +50,13 @@ body.dark .updated{color:#a09890}
   body:not(.light) .highlight{background:rgba(196,164,107,.1);}
   body:not(.light) h2{color:#ede8e0}
 }
-@media(max-width:600px){nav{padding:0 16px}.content{padding:40px 20px 60px}.nav-links a{display:none}}
+.ham{display:none;flex-direction:column;justify-content:center;gap:5px;padding:8px;cursor:pointer;background:none;border:none;flex-shrink:0}
+.ham span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.75);border-radius:2px;transition:all .25s}
+.mob-nav{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;background:#1a1714;border-bottom:1px solid rgba(255,255,255,.1);z-index:998;padding:72px 24px 20px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.mob-nav.open{display:flex}
+.mob-nav a{color:rgba(255,255,255,.7);text-decoration:none;font-size:15px;font-weight:500;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:8px}
+.mob-nav a:last-child{border:none;color:#c4a46b;font-weight:700;margin-top:4px}
+@media(max-width:600px){nav{padding:0 16px}.content{padding:40px 20px 60px}.nav-links a{display:none}.ham{display:flex}}
 </style>
 </head>
 <body>
@@ -65,6 +71,13 @@ body.dark .updated{color:#a09890}
     <a href="contacto.html">Contacto</a>
     <button class="dark-toggle" id="darkBtn" aria-label="Alternar modo oscuro">🌙</button>
   </div>
+  <button class="ham" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<nav class="mob-nav" id="mobNav" aria-label="Navegación móvil">
+  <a href="index.html">Inicio</a>
+  <a href="coleccion.html">Catálogo</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">💬 WhatsApp — Cotizar gratis</a>
 </nav>
 
 <div class="content">
@@ -164,5 +177,6 @@ body.dark .updated{color:#a09890}
   });
 })();
 </script>
+<script>(()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
 </body>
 </html>

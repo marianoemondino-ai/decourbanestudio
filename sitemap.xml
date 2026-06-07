@@ -169,9 +169,9 @@
   <!-- BLOG — guía cortinas Hunter Douglas 2026 -->
   <url>
     <loc>https://decourbanestudio.com.ar/blog-cortinas-hunter-douglas.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
     <image:image>
       <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp</image:loc>
       <image:title>Guía completa cortinas Hunter Douglas 2026 — Decourban Estudio</image:title>
@@ -193,22 +193,12 @@
   <!-- MUEBLES EXTERIOR — página dedicada -->
   <url>
     <loc>https://decourbanestudio.com.ar/muebles-exterior.html</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp</image:loc>
-      <image:title>Sillones, mesas y muebles de exterior Río Cuarto — Decourban Estudio</image:title>
-    </image:image>
-  </url>
-
-  <!-- BLOG — cortinas hunter douglas guía 2026 -->
-  <url>
-    <loc>https://decourbanestudio.com.ar/blog-cortinas-hunter-douglas.html</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
     <image:image>
-      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp</image:loc>
-      <image:title>Tipos de cortinas Hunter Douglas — Guía completa 2026</image:title>
+      <image:loc>https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213424_fafa0969-c3a1-4a1a-87b3-2b5a9b2e0c3d_min.webp</image:loc>
+      <image:title>Sillones, mesas y muebles de exterior Río Cuarto — Decourban Estudio</image:title>
     </image:image>
   </url>
 

@@ -159,6 +159,15 @@ footer{background:var(--bg-dark);padding:40px 36px 24px;color:rgba(255,255,255,.
 .wa-float::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,.18);animation:wp 2.5s ease-out infinite}
 @keyframes wp{0%{transform:scale(1);opacity:1}100%{transform:scale(1.7);opacity:0}}
 @media(max-width:600px){.selector,.tabla-sec,.cta-final{padding:56px 20px}.guide-hero{padding:60px 20px 52px}.recomendacion{padding:28px 20px}.rec-ctas{flex-direction:column}.cta-btns{flex-direction:column;align-items:center}}
+
+/* ── MOBILE NAV ── */
+.ham{display:none;flex-direction:column;justify-content:center;gap:5px;padding:8px;cursor:pointer;background:none;border:none;flex-shrink:0}
+.ham span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:all .25s}
+.mob-nav{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;background:var(--bg,#fdfaf6);border-bottom:1px solid var(--border,#e8dfd4);z-index:998;padding:72px 24px 20px;box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.mob-nav.open{display:flex}
+.mob-nav a{color:var(--text-mid,#4a3f35);text-decoration:none;font-size:15px;font-weight:500;padding:13px 0;border-bottom:1px solid var(--border-lt,#f0e8de);display:flex;align-items:center;gap:8px}
+.mob-nav a:last-child{border:none;color:var(--gold,#c4a46b);font-weight:700;margin-top:4px}
+@media(max-width:900px){.ham{display:flex}}
 </style>
 </head>
 <body>
@@ -174,6 +183,15 @@ footer{background:var(--bg-dark);padding:40px 36px 24px;color:rgba(255,255,255,.
       <button class="ham" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </nav>
+<!-- MOBILE NAV -->
+<nav class="mob-nav" id="mobNav" aria-label="Navegación móvil">
+  <a href="cortinas.html">Cortinas Hunter Douglas</a>
+  <a href="coleccion.html">Catálogo</a>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">💬 WhatsApp — Cotizar gratis</a>
+</nav>
 </div>
 
 <!-- HERO -->
@@ -221,7 +239,7 @@ footer{background:var(--bg-dark);padding:40px 36px 24px;color:rgba(255,255,255,.
         <div class="amb-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
       </button>
       <button class="amb-btn" onclick="showRec('exterior',this)" aria-label="Terraza / Exterior">
-        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Toldos para terraza Hunter Douglas" loading="lazy" style="object-position:center 30%"/>
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213425_fafa0969-109d-46cc-aef4-2b9ca4dbf141_min.webp" alt="Toldos para terraza Hunter Douglas" loading="lazy" style="object-position:center 30%"/>
         <div class="amb-btn-ov"><div class="amb-name">Terraza / Exterior</div></div>
         <div class="amb-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
       </button>
@@ -396,7 +414,7 @@ const recs={
   },
   'exterior':{
     tag:'Exterior Hunter Douglas',
-    img:AI+'hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp',
+    img:AI+'hf_20260605_213425_fafa0969-109d-46cc-aef4-2b9ca4dbf141_min.webp',
     title:'<em>Toldo Gemini®</em> para tu terraza',
     desc:'La terraza expuesta al sol se vuelve inutilizable en verano. El Toldo Gemini soluciona eso definitivamente: motorizado, se extiende y recoge solo, tiene sensor de viento para protegerse automáticamente y sus telas técnicas bloquean el sol mientras dejan pasar la brisa.',
     reasons:['Motor PowerView® — controlá desde el celular o con voz','Sensor de viento automático para días de viento','Telas técnicas UV que reducen la temperatura hasta 8°C','Hecho a medida exacta para tu terraza o balcón'],
@@ -432,5 +450,8 @@ function showRec(key, btn){
   setTimeout(()=>box.scrollIntoView({behavior:'smooth',block:'nearest'}),100);
 }
 </script>
+<script>
+/* Mobile nav toggle */
+(()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
 </body>
 </html>
