@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Comparador de Cortinas Hunter Douglas — ¿Cuál es la tuya? | Decourban Estudio</title>
+<meta name="description" content="Compará Silhouette®, Pirouette®, Duette® y Roller Quantum® lado a lado. Respondé 4 preguntas y te decimos cuál cortina Hunter Douglas es la ideal para tu hogar en Río Cuarto."/>
+<meta name="keywords" content="comparar cortinas Hunter Douglas, silhouette vs pirouette, duette vs silhouette, qué cortina elegir, cortinas río cuarto, hunter douglas argentina"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://decourbanestudio.com.ar/comparador.html"/>
+<meta property="og:title" content="Comparador de Cortinas Hunter Douglas | Decourban"/>
+<meta property="og:description" content="¿Silhouette o Pirouette? ¿Duette o Roller? Respondé 4 preguntas y descubrí cuál cortina es la ideal para tu ventana."/>
+<meta property="og:image" content="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://decourbanestudio.com.ar/comparador.html"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="manifest" href="manifest.json"/>
+<meta name="theme-color" content="#161412"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Inicio","item":"https://decourbanestudio.com.ar/"},
+      {"@type":"ListItem","position":2,"name":"Cortinas Hunter Douglas","item":"https://decourbanestudio.com.ar/cortinas.html"},
+      {"@type":"ListItem","position":3,"name":"Comparador de cortinas","item":"https://decourbanestudio.com.ar/comparador.html"}
+    ]},
+    {"@type":"WebApplication","name":"Comparador de Cortinas Hunter Douglas","url":"https://decourbanestudio.com.ar/comparador.html","applicationCategory":"ShoppingApplication","operatingSystem":"Web","description":"Herramienta interactiva para comparar y elegir la cortina Hunter Douglas ideal según las necesidades del usuario.","author":{"@type":"Organization","name":"Decourban Estudio"}}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--gold:#c4a46b;--gold-lt:#f5ead8;--gold-dark:#a8854a;--bg:#fdfaf6;--bg-dark:#161412;--bg-mid:#f2ede6;--text:#1a1714;--text-mid:#4a3f35;--text-light:#8a7a6a;--border:#e8dfd4;--border-lt:#f0e8de;--r:10px;--ease:.28s cubic-bezier(.4,0,.2,1)}
+/* colors per product */
+--c-sil:#7b9eb5; --c-pir:#b5907b; --c-due:#7b9b7b; --c-rol:#9b8eb5;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;transition:all .35s ease}
+.nav.scrolled{background:rgba(22,20,18,.95);backdrop-filter:blur(10px);padding:12px 40px;box-shadow:0 2px 24px rgba(0,0,0,.3)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;color:#fff;text-decoration:none}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.8);text-decoration:none;font-size:13px;font-weight:500;transition:color var(--ease)}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--bg-dark);font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:9px 18px;border-radius:3px;text-decoration:none}
+@media(max-width:900px){.nav-links{display:none}}
+@media(max-width:600px){.nav{padding:14px 20px}}
+
+/* HERO */
+.hero{background:var(--bg-dark);padding:110px 40px 60px;text-align:center}
+.hero-ey{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;display:block}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;line-height:1.15;max-width:760px;margin:0 auto 16px;font-weight:500}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p{font-size:16px;color:rgba(255,255,255,.6);max-width:520px;margin:0 auto 36px;line-height:1.7}
+.hero-tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hero-tab{padding:10px 20px;border-radius:30px;font-size:13px;font-weight:500;border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);background:none;cursor:pointer;transition:all var(--ease)}
+.hero-tab.active,.hero-tab:hover{background:var(--gold);color:var(--bg-dark);border-color:var(--gold)}
+@media(max-width:600px){.hero{padding:90px 20px 48px}}
+
+/* QUIZ */
+.quiz-wrap{max-width:760px;margin:0 auto;padding:64px 24px}
+.quiz-title{font-family:'Playfair Display',serif;font-size:1.9rem;text-align:center;margin-bottom:6px;font-weight:500}
+.quiz-title em{font-style:italic;color:var(--gold)}
+.quiz-sub{text-align:center;font-size:14.5px;color:var(--text-mid);margin-bottom:40px}
+.progress-bar{height:4px;background:var(--border);border-radius:2px;margin-bottom:40px;overflow:hidden}
+.progress-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .4s ease}
+.quiz-step{display:none}
+.quiz-step.active{display:block}
+.quiz-q{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:500;margin-bottom:8px;line-height:1.35}
+.quiz-hint{font-size:13px;color:var(--text-light);margin-bottom:24px}
+.quiz-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:500px){.quiz-opts{grid-template-columns:1fr}}
+.quiz-opt{padding:16px 20px;border:1.5px solid var(--border);border-radius:var(--r);cursor:pointer;transition:all var(--ease);text-align:left;background:#fff;display:flex;align-items:flex-start;gap:12px}
+.quiz-opt:hover{border-color:var(--gold);background:var(--gold-lt)}
+.quiz-opt.selected{border-color:var(--gold);background:var(--gold-lt);box-shadow:0 0 0 3px rgba(196,164,107,.15)}
+.quiz-opt-icon{width:38px;height:38px;border-radius:8px;background:var(--border-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background var(--ease)}
+.quiz-opt:hover .quiz-opt-icon,.quiz-opt.selected .quiz-opt-icon{background:var(--gold)}
+.quiz-opt-icon svg{width:18px;height:18px;stroke:var(--text-mid);stroke-width:1.8;fill:none;transition:stroke var(--ease)}
+.quiz-opt:hover .quiz-opt-icon svg,.quiz-opt.selected .quiz-opt-icon svg{stroke:var(--bg-dark)}
+.quiz-opt-text{flex:1}
+.quiz-opt-label{font-size:14px;font-weight:600;color:var(--text);margin-bottom:3px}
+.quiz-opt-desc{font-size:12.5px;color:var(--text-mid);line-height:1.45}
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:28px}
+.quiz-back{font-size:13px;color:var(--text-light);cursor:pointer;display:flex;align-items:center;gap:5px;background:none;border:none;font-family:inherit;transition:color var(--ease)}
+.quiz-back:hover{color:var(--text)}
+.quiz-next{background:var(--gold);color:var(--bg-dark);border:none;padding:12px 28px;border-radius:4px;font-size:13px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;font-family:inherit;transition:all var(--ease);display:flex;align-items:center;gap:7px}
+.quiz-next:hover{background:var(--gold-dark);transform:translateY(-2px)}
+.quiz-next:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.step-counter{font-size:12px;color:var(--text-light)}
+
+/* RESULTADO */
+.result-wrap{display:none;animation:fadeUp .5s ease forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:var(--bg-dark);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:18px}
+.result-name{font-family:'Playfair Display',serif;font-size:2rem;font-weight:500;margin-bottom:8px;color:var(--text)}
+.result-tagline{font-size:15px;color:var(--text-mid);margin-bottom:24px;line-height:1.65}
+.result-img{width:100%;border-radius:var(--r);aspect-ratio:16/7;object-fit:cover;margin-bottom:24px}
+.result-reasons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px}
+@media(max-width:500px){.result-reasons{grid-template-columns:1fr}}
+.result-reason{background:var(--gold-lt);border-radius:8px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+.result-reason-icon{color:var(--gold);flex-shrink:0;margin-top:1px}
+.result-reason p{font-size:13px;color:var(--text-mid);line-height:1.55}
+.result-reason strong{color:var(--text);font-weight:600}
+.result-btns{display:flex;gap:12px;flex-wrap:wrap}
+.result-btn-p{display:inline-flex;align-items:center;gap:7px;background:var(--gold);color:var(--bg-dark);padding:13px 24px;border-radius:4px;font-size:13px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;transition:all var(--ease)}
+.result-btn-p:hover{background:var(--gold-dark);transform:translateY(-2px)}
+.result-btn-s{display:inline-flex;align-items:center;gap:7px;border:1.5px solid var(--border);color:var(--text-mid);padding:12px 20px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;transition:all var(--ease);cursor:pointer;background:none;font-family:inherit}
+.result-btn-s:hover{border-color:var(--gold);color:var(--gold)}
+
+/* DIVIDER */
+.sec-divider{max-width:1200px;margin:0 auto;padding:0 24px 24px;display:flex;align-items:center;gap:16px}
+.sec-divider::before,.sec-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.sec-divider span{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);white-space:nowrap}
+
+/* COMPARADOR TABLE */
+.comp-section{padding:0 24px 80px;max-width:1200px;margin:0 auto}
+.comp-title{font-family:'Playfair Display',serif;font-size:1.8rem;text-align:center;margin-bottom:6px;font-weight:500}
+.comp-title em{font-style:italic;color:var(--gold)}
+.comp-sub{text-align:center;font-size:14.5px;color:var(--text-mid);margin-bottom:36px}
+
+/* Product header cards */
+.comp-headers{display:grid;grid-template-columns:200px repeat(4,1fr);gap:0;margin-bottom:0;border-radius:var(--r) var(--r) 0 0;overflow:hidden;border:1.5px solid var(--border);border-bottom:none}
+.comp-hd-empty{background:var(--bg-mid);padding:20px 16px;display:flex;align-items:flex-end}
+.comp-hd-empty span{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light)}
+.comp-prod-hd{padding:20px 16px;border-left:1px solid var(--border);text-align:center;position:relative}
+.comp-prod-hd.best{background:var(--gold-lt)}
+.comp-prod-hd.best::before{content:'Más vendido';position:absolute;top:0;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--bg-dark);font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:0 0 4px 4px}
+.prod-hd-img{width:60px;height:60px;border-radius:50%;object-fit:cover;margin:0 auto 10px;border:2px solid var(--border)}
+.prod-hd-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:500;margin-bottom:3px}
+.prod-hd-price{font-size:11px;color:var(--text-light)}
+
+/* Table rows */
+.comp-table{border:1.5px solid var(--border);border-top:none;border-radius:0 0 var(--r) var(--r);overflow:hidden}
+.comp-row{display:grid;grid-template-columns:200px repeat(4,1fr);border-bottom:1px solid var(--border-lt)}
+.comp-row:last-child{border-bottom:none}
+.comp-row:hover{background:var(--border-lt)}
+.comp-row.cat-row{background:var(--bg-mid)}
+.comp-row.cat-row:hover{background:var(--bg-mid)}
+.comp-cell{padding:14px 16px;border-left:1px solid var(--border-lt);display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;color:var(--text-mid)}
+.comp-cell:first-child{justify-content:flex-start;font-size:13px;color:var(--text);font-weight:500;border-left:none;background:inherit}
+.comp-row.cat-row .comp-cell:first-child{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);font-weight:600}
+.comp-cell .yes{color:#5a9e5a}
+.comp-cell .no{color:#c4786b}
+.comp-cell .partial{color:var(--gold)}
+.stars{color:var(--gold);font-size:14px;letter-spacing:1px}
+.pill{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.pill-hi{background:#e8f5e8;color:#4a8a4a}
+.pill-mid{background:#f5f0e8;color:#8a7a4a}
+.pill-lo{background:#f5e8e8;color:#8a4a4a}
+.pill-gold{background:var(--gold-lt);color:var(--gold-dark)}
+@media(max-width:900px){
+  .comp-headers,.comp-row{grid-template-columns:130px repeat(4,1fr)}
+  .comp-cell{padding:12px 8px;font-size:12px}
+  .comp-cell:first-child{font-size:12px}
+  .prod-hd-name{font-size:13px}
+}
+@media(max-width:600px){
+  .comp-headers,.comp-row{grid-template-columns:100px repeat(4,minmax(0,1fr))}
+  .comp-cell{padding:10px 6px;font-size:11px}
+  .prod-hd-img{display:none}
+}
+
+/* PRODUCT CARDS STRIP */
+.prod-strip{padding:0 24px 80px;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:800px){.prod-strip{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.prod-strip{grid-template-columns:1fr}}
+.prod-card{border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;text-decoration:none;color:inherit;transition:all var(--ease);background:#fff}
+.prod-card:hover{border-color:var(--gold);box-shadow:0 12px 36px rgba(0,0,0,.08);transform:translateY(-4px)}
+.prod-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.prod-card-body{padding:18px}
+.prod-card-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:500;margin-bottom:4px}
+.prod-card-sub{font-size:12px;color:var(--text-light);margin-bottom:10px}
+.prod-card-tag{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.8px;text-transform:uppercase;display:flex;align-items:center;gap:4px}
+
+/* BOTTOM CTA */
+.cta-band{background:var(--bg-dark);padding:64px 40px;text-align:center}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.4rem);color:#fff;margin-bottom:10px;font-weight:500}
+.cta-band h2 em{color:var(--gold);font-style:italic}
+.cta-band p{font-size:14.5px;color:rgba(255,255,255,.55);max-width:440px;margin:0 auto 28px;line-height:1.7}
+.cta-band a{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--bg-dark);font-size:13px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:14px 28px;border-radius:4px;text-decoration:none;transition:all var(--ease)}
+.cta-band a:hover{background:#d4b47b;transform:translateY(-2px)}
+
+/* FOOTER */
+.foot{background:#0e0c0a;padding:36px 40px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.foot-logo{font-family:'Playfair Display',serif;font-size:20px;color:#fff}
+.foot-logo span{color:var(--gold)}
+.foot-nav{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.foot-nav a{font-size:12.5px;color:rgba(255,255,255,.4);text-decoration:none;transition:color var(--ease)}
+.foot-nav a:hover{color:var(--gold)}
+.foot-copy{font-size:11px;color:rgba(255,255,255,.22)}
+.wapp{position:fixed;bottom:28px;right:28px;z-index:200;background:#25d366;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.35);transition:transform var(--ease)}
+.wapp:hover{transform:scale(1.1)}
+
+/* SVG icons shortcuts */
+svg.ic{fill:none;stroke:currentColor;stroke-width:1.8}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:800;filter:drop-shadow(0 4px 20px rgba(37,211,102,.35));width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .28s cubic-bezier(.4,0,.2,1)}
+.wa-float:hover{background:#1bb558;transform:scale(1.12)}
+.wa-float::before{content:'';position:absolute;inset:-5px;border-radius:50%;background:rgba(37,211,102,.2);animation:wp 2.5s ease-out infinite}
+@keyframes wp{0%{transform:scale(1);opacity:1}100%{transform:scale(1.7);opacity:0}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">Decourban<span> Estudio</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="cortinas.html">Cortinas HD</a></li>
+    <li><a href="coleccion.html">Catálogo</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="guia-por-ambiente.html">Guía</a></li>
+  </ul>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20hice%20el%20comparador%20y%20quiero%20consultar" target="_blank" rel="noopener noreferrer" class="nav-cta">Consultar</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-ey">Herramienta gratuita · Hunter Douglas</span>
+  <h1>¿Silhouette, Pirouette, Duette<br>o Roller? <em>Encontrá la tuya</em></h1>
+  <p>Respondé 4 preguntas y te decimos cuál cortina Hunter Douglas es la más indicada para tu ventana, tu estilo y tu presupuesto.</p>
+  <div class="hero-tabs">
+    <button class="hero-tab active" onclick="scrollToQuiz()">Hacer el quiz →</button>
+    <button class="hero-tab" onclick="scrollToTable()">Ver tabla comparativa</button>
+    <button class="hero-tab" onclick="scrollToCards()">Ver todos los productos</button>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<section id="quiz-section" style="background:var(--bg);padding-bottom:0">
+  <div class="quiz-wrap">
+    <p style="text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px">Quiz interactivo</p>
+    <h2 class="quiz-title">Encontrá tu cortina <em>ideal</em></h2>
+    <p class="quiz-sub">4 preguntas · 2 minutos · Sin compromiso</p>
+    <div class="progress-bar"><div class="progress-fill" id="progress" style="width:0%"></div></div>
+
+    <!-- STEP 1 -->
+    <div class="quiz-step active" id="step-1">
+      <p class="quiz-q">¿Cuál es el principal objetivo para tu ventana?</p>
+      <p class="quiz-hint">Podés priorizar uno solo — es lo que más peso tendrá en la recomendación.</p>
+      <div class="quiz-opts">
+        <div class="quiz-opt" data-step="1" data-val="privacidad" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Privacidad total</div><div class="quiz-opt-desc">Que no se vea desde afuera, especialmente de noche</div></div>
+        </div>
+        <div class="quiz-opt" data-step="1" data-val="luz" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Control de luz</div><div class="quiz-opt-desc">Tamizar la luz solar sin perder luminosidad natural</div></div>
+        </div>
+        <div class="quiz-opt" data-step="1" data-val="aislacion" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Aislación térmica</div><div class="quiz-opt-desc">Reducir calor en verano y frío en invierno</div></div>
+        </div>
+        <div class="quiz-opt" data-step="1" data-val="estetica" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Diseño y estética</div><div class="quiz-opt-desc">Que sea lo más bonita y que sume al ambiente</div></div>
+        </div>
+      </div>
+      <div class="quiz-nav">
+        <span></span>
+        <span class="step-counter">1 de 4</span>
+        <button class="quiz-next" id="next-1" disabled onclick="goStep(2)">Siguiente <svg viewBox="0 0 24 24" class="ic" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="quiz-step" id="step-2">
+      <p class="quiz-q">¿Cómo preferís manejar la cortina?</p>
+      <p class="quiz-hint">Algunos sistemas tienen motorización inteligente con app; otros son 100% manuales.</p>
+      <div class="quiz-opts">
+        <div class="quiz-opt" data-step="2" data-val="manual" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8"/><path d="M6 14v0a6 6 0 006 6h2a6 6 0 006-6v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2z"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Manual</div><div class="quiz-opt-desc">Cadena o cordón — simple, duradero y sin tecnología</div></div>
+        </div>
+        <div class="quiz-opt" data-step="2" data-val="motor" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Motorizada</div><div class="quiz-opt-desc">Control con app, voz (Alexa/Google) o control remoto</div></div>
+        </div>
+        <div class="quiz-opt" data-step="2" data-val="cualquiera" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Me da igual</div><div class="quiz-opt-desc">Lo que mejor se adapte al producto recomendado</div></div>
+        </div>
+        <div class="quiz-opt" data-step="2" data-val="simple" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Fácil de usar</div><div class="quiz-opt-desc">Que sea sencillo para toda la familia, sin curva de aprendizaje</div></div>
+        </div>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-back" onclick="goStep(1)"><svg viewBox="0 0 24 24" class="ic" width="13" height="13"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Anterior</button>
+        <span class="step-counter">2 de 4</span>
+        <button class="quiz-next" id="next-2" disabled onclick="goStep(3)">Siguiente <svg viewBox="0 0 24 24" class="ic" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="quiz-step" id="step-3">
+      <p class="quiz-q">¿En qué ambiente van las cortinas?</p>
+      <p class="quiz-hint">El uso del ambiente cambia bastante la prioridad entre los modelos.</p>
+      <div class="quiz-opts">
+        <div class="quiz-opt" data-step="3" data-val="living" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Living / Comedor</div><div class="quiz-opt-desc">Zona social de la casa, ventanas grandes</div></div>
+        </div>
+        <div class="quiz-opt" data-step="3" data-val="dormitorio" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><path d="M3 12h18M3 18h18M3 6h18M9 12v6M15 12v6"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Dormitorio</div><div class="quiz-opt-desc">Privacidad y oscurecimiento para dormir bien</div></div>
+        </div>
+        <div class="quiz-opt" data-step="3" data-val="oficina" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Oficina / Estudio</div><div class="quiz-opt-desc">Sin reflejos en pantallas, concentración y profesionalismo</div></div>
+        </div>
+        <div class="quiz-opt" data-step="3" data-val="cocina" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Cocina / Baño</div><div class="quiz-opt-desc">Humedad, fácil limpieza y funcionalidad práctica</div></div>
+        </div>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-back" onclick="goStep(2)"><svg viewBox="0 0 24 24" class="ic" width="13" height="13"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Anterior</button>
+        <span class="step-counter">3 de 4</span>
+        <button class="quiz-next" id="next-3" disabled onclick="goStep(4)">Siguiente <svg viewBox="0 0 24 24" class="ic" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="quiz-step" id="step-4">
+      <p class="quiz-q">¿Cuál es tu rango de inversión aproximada?</p>
+      <p class="quiz-hint">Todos los modelos se fabrican a medida. Los precios varían según tamaño y tela elegida.</p>
+      <div class="quiz-opts">
+        <div class="quiz-opt" data-step="4" data-val="eco" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Económico</div><div class="quiz-opt-desc">Buscás la mejor relación calidad/precio posible</div></div>
+        </div>
+        <div class="quiz-opt" data-step="4" data-val="medio" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Intermedio</div><div class="quiz-opt-desc">Buen producto sin ser el más caro de la línea</div></div>
+        </div>
+        <div class="quiz-opt" data-step="4" data-val="alto" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">Alta gama</div><div class="quiz-opt-desc">Lo mejor disponible, sin comprometer calidad</div></div>
+        </div>
+        <div class="quiz-opt" data-step="4" data-val="nosé" onclick="selectOpt(this)">
+          <div class="quiz-opt-icon"><svg viewBox="0 0 24 24" class="ic" width="18" height="18"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div class="quiz-opt-text"><div class="quiz-opt-label">No sé aún</div><div class="quiz-opt-desc">Prefiero recibir asesoramiento personalizado primero</div></div>
+        </div>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-back" onclick="goStep(3)"><svg viewBox="0 0 24 24" class="ic" width="13" height="13"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Anterior</button>
+        <span class="step-counter">4 de 4</span>
+        <button class="quiz-next" id="next-4" disabled onclick="showResult()">Ver mi resultado <svg viewBox="0 0 24 24" class="ic" width="14" height="14"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></button>
+      </div>
+    </div>
+
+    <!-- RESULTADO -->
+    <div id="result-section" class="result-wrap">
+      <div class="result-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Recomendado para vos</div>
+      <h3 class="result-name" id="result-name">Cortinas Silhouette®</h3>
+      <p class="result-tagline" id="result-tagline"></p>
+      <img id="result-img" class="result-img" src="" alt=""/>
+      <div class="result-reasons" id="result-reasons"></div>
+      <div class="result-btns">
+        <a id="result-link" href="cortinas.html" class="result-btn-p">Ver esta cortina <svg viewBox="0 0 24 24" class="ic" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="https://wa.me/543585075773?text=Hice%20el%20quiz%20y%20me%20recomendaron%20la%20cortina%20" id="result-wa" target="_blank" rel="noopener noreferrer" class="result-btn-p" style="background:#25d366;color:#fff">Consultar a Marcela</a>
+        <button class="result-btn-s" onclick="restartQuiz()">Hacer de nuevo</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TABLE SECTION -->
+<div class="sec-divider" id="tabla-section"><span>Tabla comparativa completa</span></div>
+
+<section class="comp-section">
+  <h2 class="comp-title">Silhouette vs Pirouette vs Duette vs Roller — <em>comparativa total</em></h2>
+  <p class="comp-sub">Todos los factores que importan, uno al lado del otro. Hacé scroll horizontal en mobile.</p>
+  <div style="overflow-x:auto">
+    <!-- HEADERS -->
+    <div class="comp-headers" style="min-width:600px">
+      <div class="comp-hd-empty"><span>Característica</span></div>
+      <div class="comp-prod-hd best">
+        <img class="prod-hd-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp" alt="Silhouette"/>
+        <div class="prod-hd-name">Silhouette®</div>
+        <div class="prod-hd-price">Alta gama</div>
+      </div>
+      <div class="comp-prod-hd">
+        <img class="prod-hd-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-480-0.webp" alt="Pirouette"/>
+        <div class="prod-hd-name">Pirouette®</div>
+        <div class="prod-hd-price">Alta gama</div>
+      </div>
+      <div class="comp-prod-hd">
+        <img class="prod-hd-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-480-0.webp" alt="Duette"/>
+        <div class="prod-hd-name">Duette®</div>
+        <div class="prod-hd-price">Media-alta</div>
+      </div>
+      <div class="comp-prod-hd">
+        <img class="prod-hd-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-480-0.webp" alt="Roller Quantum"/>
+        <div class="prod-hd-name">Roller Quantum®</div>
+        <div class="prod-hd-price">Media</div>
+      </div>
+    </div>
+    <!-- ROWS -->
+    <div class="comp-table" style="min-width:600px">
+      <!-- Cat: Funcionalidad -->
+      <div class="comp-row cat-row"><div class="comp-cell">Funcionalidad</div><div class="comp-cell"></div><div class="comp-cell"></div><div class="comp-cell"></div><div class="comp-cell"></div></div>
+      <div class="comp-row">
+        <div class="comp-cell">Control de luz</div>
+        <div class="comp-cell"><span class="stars">★★★★★</span></div>
+        <div class="comp-cell"><span class="stars">★★★★★</span></div>
+        <div class="comp-cell"><span class="stars">★★★★☆</span></div>
+        <div class="comp-cell"><span class="stars">★★★☆☆</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">Privacidad</div>
+        <div class="comp-cell"><span class="pill pill-mid">Intermedia</span></div>
+        <div class="comp-cell"><span class="pill pill-hi">Alta</span></div>
+        <div class="comp-cell"><span class="pill pill-hi">Alta</span></div>
+        <div class="comp-cell"><span class="pill pill-hi">Alta</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">Vista al exterior de día</div>
+        <div class="comp-cell"><span class="yes">✓ Sí</span></div>
+        <div class="comp-cell"><span class="yes">✓ Sí</span></div>
+        <div class="comp-cell"><span class="no">✗ No</span></div>
+        <div class="comp-cell"><span class="partial">~ Parcial</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">Aislación térmica</div>
+        <div class="comp-cell"><span class="pill pill-mid">Media</span></div>
+        <div class="comp-cell"><span class="pill pill-mid">Media</span></div>
+        <div class="comp-cell"><span class="pill pill-hi">Excelente</span></div>
+        <div class="comp-cell"><span class="pill pill-lo">Baja</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">Bloqueo UV</div>
+        <div class="comp-cell">99%</div>
+        <div class="comp-cell">99%</div>
+        <div class="comp-cell">99%</div>
+        <div class="comp-cell">Varía por tela</div>
+      </div>
+      <!-- Cat: Diseño -->
+      <div class="comp-row cat-row"><div class="comp-cell">Diseño</div><div class="comp-cell"></div><div class="comp-cell"></div><div class="comp-cell"></div><div class="comp-cell"></div></div>
+      <div class="comp-row">
+        <div class="comp-cell">Efecto visual</div>
+        <div class="comp-cell" style="font-size:12px">Láminas flotantes, suave y elegante</div>
+        <div class="comp-cell" style="font-size:12px">Arquitectónico, limpio y moderno</div>
+        <div class="comp-cell" style="font-size:12px">Tejido alveolar tridimensional</div>
+        <div class="comp-cell" style="font-size:12px">Minimalista, tela plana</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">Variedad de telas</div>
+        <div class="comp-cell">+75 telas</div>
+        <div class="comp-cell">+50 telas</div>
+        <div class="comp-cell">+80 telas</div>
+        <div class="comp-cell">+100 telas</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">Colores disponibles</div>
+        <div class="comp-cell"><span class="pill pill-hi">Amplio</span></div>
+        <div class="comp-cell"><span class="pill pill-hi">Amplio</span></div>
+        <div class="comp-cell"><span class="pill pill-hi">Amplio</span></div>
+        <div class="comp-cell"><span class="pill pill-hi">Muy amplio</span></div>
+      </div>
+      <!-- Cat: Tecnología -->
+      <div class="comp-row cat-row"><div class="comp-cell">Tecnología</div><div class="comp-cell"></div><div class="comp-cell"></div><div class="comp-cell"></div><div class="comp-cell"></div></div>
+      <div class="comp-row">
+        <div class="comp-cell">Motorización PowerView®</div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">Compatible Alexa/Google</div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">A medida exacta</div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+      </div>
+      <!-- Cat: Uso ideal -->
+      <div class="comp-row cat-row"><div class="comp-cell">Uso recomendado</div><div class="comp-cell"></div><div class="comp-cell"></div><div class="comp-cell"></div><div class="comp-cell"></div></div>
+      <div class="comp-row">
+        <div class="comp-cell">Living / Comedor</div>
+        <div class="comp-cell"><span class="pill pill-gold">Ideal</span></div>
+        <div class="comp-cell"><span class="pill pill-gold">Ideal</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">Dormitorio</div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="pill pill-gold">Ideal</span></div>
+        <div class="comp-cell"><span class="pill pill-gold">Ideal</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">Oficina / Estudio</div>
+        <div class="comp-cell"><span class="pill pill-gold">Ideal</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="yes">✓</span></div>
+        <div class="comp-cell"><span class="pill pill-gold">Ideal</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">Cocina / Baño</div>
+        <div class="comp-cell"><span class="partial">~ Va</span></div>
+        <div class="comp-cell"><span class="partial">~ Va</span></div>
+        <div class="comp-cell"><span class="partial">~ Va</span></div>
+        <div class="comp-cell"><span class="pill pill-gold">Ideal</span></div>
+      </div>
+      <!-- Cat: Precio relativo -->
+      <div class="comp-row cat-row"><div class="comp-cell">Inversión</div><div class="comp-cell"></div><div class="comp-cell"></div><div class="comp-cell"></div><div class="comp-cell"></div></div>
+      <div class="comp-row">
+        <div class="comp-cell">Nivel de precio</div>
+        <div class="comp-cell"><span class="pill" style="background:#f5e8e8;color:#8a4a4a">Alta gama</span></div>
+        <div class="comp-cell"><span class="pill" style="background:#f5e8e8;color:#8a4a4a">Alta gama</span></div>
+        <div class="comp-cell"><span class="pill" style="background:#f5f0e8;color:#8a7a4a">Media-alta</span></div>
+        <div class="comp-cell"><span class="pill" style="background:#e8f5e8;color:#4a8a4a">Media</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell">Garantía Hunter Douglas</div>
+        <div class="comp-cell"><span class="yes">✓ Sí</span></div>
+        <div class="comp-cell"><span class="yes">✓ Sí</span></div>
+        <div class="comp-cell"><span class="yes">✓ Sí</span></div>
+        <div class="comp-cell"><span class="yes">✓ Sí</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT CARDS -->
+<div class="sec-divider" id="productos-section"><span>Los cuatro modelos</span></div>
+
+<div class="prod-strip">
+  <a href="cortinas-silhouette.html" class="prod-card">
+    <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette Hunter Douglas Río Cuarto" loading="lazy"/>
+    <div class="prod-card-body">
+      <div class="prod-card-name">Silhouette®</div>
+      <div class="prod-card-sub">La más vendida · Alta gama</div>
+      <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px">Luz difusa perfecta y vista preservada al exterior. El ícono de Hunter Douglas.</p>
+      <div class="prod-card-tag">Ver página completa <svg viewBox="0 0 24 24" class="ic" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+  </a>
+  <a href="cortinas-pirouette.html" class="prod-card">
+    <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette Hunter Douglas Río Cuarto" loading="lazy"/>
+    <div class="prod-card-body">
+      <div class="prod-card-name">Pirouette®</div>
+      <div class="prod-card-sub">La más versátil · Alta gama</div>
+      <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px">Láminas giratorias — de privacidad total a vista abierta con un giro.</p>
+      <div class="prod-card-tag">Ver página completa <svg viewBox="0 0 24 24" class="ic" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+  </a>
+  <a href="cortinas-duette.html" class="prod-card">
+    <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette Hunter Douglas Río Cuarto" loading="lazy"/>
+    <div class="prod-card-body">
+      <div class="prod-card-name">Duette®</div>
+      <div class="prod-card-sub">La más eficiente · Media-alta</div>
+      <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px">Tejido alveolar que ahorra energía — el mejor en aislación térmica y acústica.</p>
+      <div class="prod-card-tag">Ver página completa <svg viewBox="0 0 24 24" class="ic" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+  </a>
+  <a href="cortinas-roller.html" class="prod-card">
+    <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Roller Quantum Hunter Douglas Río Cuarto" loading="lazy"/>
+    <div class="prod-card-body">
+      <div class="prod-card-name">Roller Quantum®</div>
+      <div class="prod-card-sub">La más práctica · Media</div>
+      <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px">Perfil mínimo, máximo color. La mejor opción para quien busca calidad sin sobrepasar el presupuesto.</p>
+      <div class="prod-card-tag">Ver cortinas <svg viewBox="0 0 24 24" class="ic" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+  </a>
+</div>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>¿Seguís con dudas? <em>Marcela te ayuda</em></h2>
+  <p>Consulta sin costo. Viene al showroom de Juan de Garay 1550 o te hace una visita a domicilio en Río Cuarto y zona.</p>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20us%C3%A9%20el%20comparador%20y%20quiero%20asesorarme%20con%20Marcela" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Hablar con Marcela
+  </a>
+</div>
+
+<footer class="foot">
+  <div class="foot-logo">Decourban<span> Estudio</span></div>
+  <nav class="foot-nav">
+    <a href="index.html">Inicio</a>
+    <a href="cortinas.html">Cortinas HD</a>
+    <a href="coleccion.html">Catálogo</a>
+    <a href="proyectos.html">Proyectos</a>
+    <a href="guia-por-ambiente.html">Guía</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <div class="foot-copy">© 2026 Decourban Estudio — Juan de Garay 1550, Río Cuarto, Córdoba</div>
+</footer>
+
+<a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer" class="wapp" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+var nav=document.getElementById('nav');
+window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
+
+function scrollToQuiz(){document.getElementById('quiz-section').scrollIntoView({behavior:'smooth'})}
+function scrollToTable(){document.getElementById('tabla-section').scrollIntoView({behavior:'smooth'})}
+function scrollToCards(){document.getElementById('productos-section').scrollIntoView({behavior:'smooth'})}
+
+/* QUIZ LOGIC */
+var answers={};
+var steps=[1,2,3,4];
+
+function selectOpt(el){
+  var step=el.dataset.step;
+  var val=el.dataset.val;
+  document.querySelectorAll('.quiz-opt[data-step="'+step+'"]').forEach(function(o){o.classList.remove('selected')});
+  el.classList.add('selected');
+  answers['step'+step]=val;
+  var nxt=document.getElementById('next-'+step);
+  if(nxt) nxt.disabled=false;
+}
+
+function goStep(n){
+  document.querySelectorAll('.quiz-step').forEach(function(s){s.classList.remove('active')});
+  var s=document.getElementById('step-'+n);
+  if(s) s.classList.add('active');
+  var pct=((n-1)/4)*100;
+  document.getElementById('progress').style.width=pct+'%';
+  document.getElementById('quiz-section').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+var PRODUCTS={
+  silhouette:{
+    name:'Cortinas Silhouette®',
+    tagline:'La cortina más elegante de Hunter Douglas. Láminas de tela que flotan en el aire y difunden la luz de forma suave, mientras mantenés la vista al exterior durante el día.',
+    img:'https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp',
+    link:'cortinas-silhouette.html',
+    reasons:[
+      {title:'Control de luz magistral',desc:'Filtra y suaviza la luz solar sin perder luminosidad natural. El ambiente queda siempre cálido.'},
+      {title:'Vista al exterior preservada',desc:'Durante el día podés ver afuera sin que te vean desde la calle.'},
+      {title:'+75 telas disponibles',desc:'Una para cada estilo de decoración, desde lo neutro hasta lo sofisticado.'},
+      {title:'PowerView® opcional',desc:'Compatible con motorización inteligente por app o voz.'}
+    ]
+  },
+  pirouette:{
+    name:'Cortinas Pirouette®',
+    tagline:'Las láminas giratorias que te dan control total. Desde privacidad absoluta hasta vista completamente abierta, con un solo movimiento.',
+    img:'https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp',
+    link:'cortinas-pirouette.html',
+    reasons:[
+      {title:'Privacidad regulable',desc:'Ajustás el ángulo de las láminas para pasar de total privacidad a vista abierta.'},
+      {title:'Diseño arquitectónico',desc:'Líneas limpias y modernas. Perfectas para espacios contemporáneos.'},
+      {title:'99% bloqueo UV',desc:'Protege muebles, pisos y telas del daño solar.'},
+      {title:'Versátil por ambiente',desc:'Funciona en living, dormitorios y espacios de trabajo con igual elegancia.'}
+    ]
+  },
+  duette:{
+    name:'Cortinas Duette®',
+    tagline:'El mejor desempeño térmico y acústico en la línea Hunter Douglas. El tejido alveolar atrapa el aire y actúa como barrera natural contra el calor y el frío.',
+    img:'https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp',
+    link:'cortinas-duette.html',
+    reasons:[
+      {title:'Aislación térmica líder',desc:'La cámara de aire del tejido reduce significativamente el ingreso de calor y frío.'},
+      {title:'Ahorro en climatización',desc:'Menor uso de aire acondicionado y calefacción = facturas más bajas.'},
+      {title:'Doble vista disponible',desc:'La versión Duette® Architella tiene doble capa para aislación máxima.'},
+      {title:'Silencio mejorado',desc:'También absorbe sonido externo, ideal para dormitorios en zonas ruidosas.'}
+    ]
+  },
+  roller:{
+    name:'Roller Quantum®',
+    tagline:'La solución Hunter Douglas más versátil y accesible. Perfil mínimo, telas técnicas de primera calidad y el mayor abanico de colores de toda la línea.',
+    img:'https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp',
+    link:'cortinas-roller.html',
+    reasons:[
+      {title:'Mayor variedad de telas',desc:'+100 telas técnicas en todos los porcentajes de apertura y colores.'},
+      {title:'Perfil ultra-delgado',desc:'Casi invisible cuando está enrollada. Diseño limpio y minimalista.'},
+      {title:'Fácil de limpiar',desc:'Telas técnicas que se limpian con un trapo húmedo. Ideal para cocinas y baños.'},
+      {title:'Mejor relación precio/calidad',desc:'Producto Hunter Douglas con inversión más accesible sin sacrificar calidad.'}
+    ]
+  }
+};
+
+function showResult(){
+  /* Algoritmo de recomendación */
+  var a=answers;
+  var scores={silhouette:0,pirouette:0,duette:0,roller:0};
+  /* Step 1: objetivo */
+  if(a.step1==='luz'){scores.silhouette+=3;scores.pirouette+=2;}
+  if(a.step1==='privacidad'){scores.pirouette+=3;scores.duette+=2;scores.roller+=2;}
+  if(a.step1==='aislacion'){scores.duette+=4;}
+  if(a.step1==='estetica'){scores.silhouette+=3;scores.pirouette+=3;}
+  /* Step 2: manejo */
+  if(a.step2==='motor'){scores.silhouette+=1;scores.pirouette+=1;scores.duette+=1;scores.roller+=1;}
+  if(a.step2==='simple'){scores.roller+=2;scores.duette+=1;}
+  /* Step 3: ambiente */
+  if(a.step3==='living'){scores.silhouette+=3;scores.pirouette+=2;}
+  if(a.step3==='dormitorio'){scores.duette+=3;scores.roller+=2;}
+  if(a.step3==='oficina'){scores.silhouette+=3;scores.roller+=2;}
+  if(a.step3==='cocina'){scores.roller+=4;}
+  /* Step 4: presupuesto */
+  if(a.step4==='eco'){scores.roller+=3;}
+  if(a.step4==='medio'){scores.duette+=2;scores.roller+=1;}
+  if(a.step4==='alto'){scores.silhouette+=2;scores.pirouette+=2;}
+  if(a.step4==='nosé'){/* sin cambio */}
+  /* Pick winner */
+  var best='silhouette';
+  var bestScore=0;
+  for(var k in scores){if(scores[k]>bestScore){bestScore=scores[k];best=k;}}
+  var prod=PRODUCTS[best];
+  /* Render */
+  document.getElementById('result-name').textContent=prod.name;
+  document.getElementById('result-tagline').textContent=prod.tagline;
+  document.getElementById('result-img').src=prod.img;
+  document.getElementById('result-img').alt=prod.name;
+  document.getElementById('result-link').href=prod.link;
+  document.getElementById('result-wa').href='https://wa.me/543585075773?text=Hice%20el%20comparador%20y%20me%20recomend%C3%B3%20'+encodeURIComponent(prod.name)+'%20%E2%80%94%20quiero%20asesorarme';
+  var rDiv=document.getElementById('result-reasons');
+  rDiv.innerHTML=prod.reasons.map(function(r){
+    return '<div class="result-reason"><div class="result-reason-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg></div><p><strong>'+r.title+'</strong> — '+r.desc+'</p></div>';
+  }).join('');
+  /* Show result */
+  document.querySelectorAll('.quiz-step').forEach(function(s){s.classList.remove('active')});
+  document.getElementById('progress').style.width='100%';
+  var rs=document.getElementById('result-section');
+  rs.style.display='block';
+  rs.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function restartQuiz(){
+  answers={};
+  document.getElementById('result-section').style.display='none';
+  document.querySelectorAll('.quiz-opt').forEach(function(o){o.classList.remove('selected')});
+  document.querySelectorAll('.quiz-next').forEach(function(b){b.disabled=true});
+  goStep(1);
+  document.getElementById('progress').style.width='0%';
+  document.getElementById('quiz-section').scrollIntoView({behavior:'smooth'});
+}
+</script>
+<a href="https://wa.me/543585075773" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+</a>
+</body>
+</html>

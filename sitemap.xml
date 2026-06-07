@@ -82,6 +82,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- QUIÉNES SOMOS -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/nosotros.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
   <!-- CONTACTO -->
   <url>
     <loc>https://decourbanestudio.com.ar/contacto.html</loc>
@@ -97,4 +105,191 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-panta
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp</image:loc>
+      <image:title>Sillón Monaco — Decourban Estudio</image:title>
+    </image:image>
+  </url>
+
+  <!-- GUÍA POR AMBIENTE — herramienta interactiva -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/guia-por-ambiente.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- CORTINAS DUETTE — producto dedicado -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/cortinas-duette.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp</image:loc>
+      <image:title>Cortinas Duette Hunter Douglas — Aislación Térmica Río Cuarto</image:title>
+    </image:image>
+  </url>
+
+  <!-- TOLDO GEMINI — producto dedicado -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/toldo-gemini.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp</image:loc>
+      <image:title>Toldo Gemini Hunter Douglas Motorizado — Decourban Río Cuarto</image:title>
+    </image:image>
+  </url>
+
+  <!-- CORTINAS PIROUETTE — producto dedicado -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/cortinas-pirouette.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp</image:loc>
+      <image:title>Cortinas Pirouette Hunter Douglas — Láminas giratorias Río Cuarto</image:title>
+    </image:image>
+  </url>
+
+  <!-- CORTINAS SILHOUETTE — producto dedicado -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/cortinas-silhouette.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp</image:loc>
+      <image:title>Cortinas Silhouette Hunter Douglas — Decourban Estudio Río Cuarto</image:title>
+    </image:image>
+  </url>
+
+  <!-- BLOG — guía cortinas Hunter Douglas 2026 -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/blog-cortinas-hunter-douglas.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp</image:loc>
+      <image:title>Guía completa cortinas Hunter Douglas 2026 — Decourban Estudio</image:title>
+    </image:image>
+  </url>
+
+  <!-- PROYECTOS — galería de antes y después -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/proyectos.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+    <image:image>
+      <image:loc>https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213424_b8c1dd71-3eaf-4c42-906b-970447e59134_min.webp</image:loc>
+      <image:title>Proyectos realizados — Decoración de interiores Río Cuarto — Decourban Estudio</image:title>
+    </image:image>
+  </url>
+
+  <!-- MUEBLES EXTERIOR — página dedicada -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/muebles-exterior.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp</image:loc>
+      <image:title>Sillones, mesas y muebles de exterior Río Cuarto — Decourban Estudio</image:title>
+    </image:image>
+  </url>
+
+  <!-- BLOG — cortinas hunter douglas guía 2026 -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/blog-cortinas-hunter-douglas.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp</image:loc>
+      <image:title>Tipos de cortinas Hunter Douglas — Guía completa 2026</image:title>
+    </image:image>
+  </url>
+
+  <!-- BLOG — toldos motorizados 2026 -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/blog-toldos-motorizados.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- BLOG — decorar living 2026 -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/blog-decorar-living-2026.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp</image:loc>
+      <image:title>Cómo decorar un living en 2026 — colores y cortinas Hunter Douglas</image:title>
+    </image:image>
+  </url>
+
+  <!-- QUIZ de productos -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/quiz-cortinas.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- BLOG — cortinas para dormitorio blackout 2026 -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/blog-cortinas-dormitorio.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp</image:loc>
+      <image:title>Cortinas para dormitorio blackout 2026 — Decourban Estudio Río Cuarto</image:title>
+    </image:image>
+  </url>
+
+  <!-- BLOG — precio cortinas hunter douglas argentina 2026 -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/blog-precio-cortinas-hunter-douglas.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp</image:loc>
+      <image:title>Precio Cortinas Hunter Douglas Argentina 2026 — Guía completa de valores</image:title>
+    </image:image>
+  </url>
+
+  <!-- BLOG — cortinas oficina y home office 2026 -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/blog-cortinas-oficina-home-office.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://dcdn-us.mitiendanube.com/stores/005/649/615/products/foldingjpg-optimized-b09406c29d63067e7117462924956836-640-0.webp</image:loc>
+      <image:title>Cortinas para oficina y home office sin reflejo en pantalla 2026</image:title>
+    </image:image>
+  </url>
+
+  <!-- GARANTÍA -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/garantia.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- POLÍTICA DE PRIVACIDAD -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/privacidad.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

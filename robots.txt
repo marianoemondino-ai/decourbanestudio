@@ -5,5 +5,8 @@ Allow: /
 Disallow: /gracias.html
 Disallow: /404.html
 
+# Crawl-delay para bots agresivos
+Crawl-delay: 2
+
 # Sitemap
 Sitemap: https://decourbanestudio.com.ar/sitemap.xml
