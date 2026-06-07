@@ -117,7 +117,12 @@
 <link rel="stylesheet" href="styles.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://d8j0ntlcm91z4.cloudfront.net" crossorigin/>
+<link rel="preconnect" href="https://dcdn-us.mitiendanube.com" crossorigin/>
+<!-- Fuentes cargadas async — no bloquean el render -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/></noscript>
 <style>
 :root{
   --gold:#c4a46b;--gold-dark:#a8854a;--gold-text:#8a6c38;--gold-light:#f5ead8;
@@ -137,7 +142,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 /* LOADER */
 #loader{position:fixed;inset:0;background:var(--bg-dark);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity .6s ease,visibility .6s ease}
 #loader.done{opacity:0;visibility:hidden}
-#loader img{width:160px;opacity:.9;animation:loaderPulse 1.2s ease-in-out infinite;filter:brightness(0) invert(1)}
+#loader img{width:180px;opacity:1;animation:loaderPulse 1.2s ease-in-out infinite}
 @keyframes loaderPulse{0%,100%{opacity:.5;transform:scale(.97)}50%{opacity:1;transform:scale(1.03)}}
 
 /* ANNOUNCE */
@@ -155,7 +160,7 @@ nav{max-width:1440px;margin:0 auto;padding:0 36px;height:96px;display:grid;grid-
 /* CENTER: logo */
 .nav-logo-center{display:flex;align-items:center;text-decoration:none;transition:opacity var(--ease)}
 .nav-logo-center:hover{opacity:.82}
-.logo-img{height:78px;width:auto;object-fit:contain;display:block}
+.logo-img{height:96px;width:auto;object-fit:contain;display:block}
 /* RIGHT: actions */
 .nav-right{display:flex;align-items:center;justify-content:flex-end;gap:6px}
 /* shared link style */
@@ -422,7 +427,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
 footer{background:var(--bg-dark);padding:80px 36px 36px;color:rgba(255,255,255,.55)}
 .ft{max-width:1440px;margin:0 auto}
 .ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:56px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.08)}
-.ft-logo img{height:44px;filter:brightness(0) invert(1);object-fit:contain;margin-bottom:18px}
+.ft-logo img{height:52px;object-fit:contain;margin-bottom:18px}
 .ft-desc{font-size:13.5px;line-height:1.8;color:rgba(255,255,255,.42);margin-bottom:26px}
 .ft-soc{display:flex;gap:10px}
 .soc-btn{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:all var(--ease)}
@@ -477,13 +482,13 @@ footer{background:var(--bg-dark);padding:80px 36px 36px;color:rgba(255,255,255,.
   nav{grid-template-columns:1fr auto;height:84px}
   .nav-left{display:none}
   .nav-logo-center{justify-self:start}
-  .logo-img{height:64px}
+  .logo-img{height:80px}
   .nav-right ul.nav-links{display:none}
 }
 @media(max-width:900px){
   nav{padding:0 20px;grid-template-columns:auto 1fr;height:72px;position:relative}
   .nav-logo-center{position:absolute;left:50%;transform:translateX(-50%)}
-  .logo-img{height:52px}
+  .logo-img{height:56px}
   .ham{display:flex}
   .btn-wa-nav .wlabel{display:none}
   .ic-btn:not(#cartNavBtn):not(.ham){display:none}
@@ -905,8 +910,7 @@ body.dark .footer-brand-desc{color:rgba(255,255,255,.38)}
 body.dark .sp-popup{background:#211f1d;border-color:var(--gold)}
 body.dark .sp-popup-txt{color:#ede8e0}
 body.dark .sp-popup-txt strong{color:#ede8e0}
-/* LOGO — invertir en dark para visibilidad */
-body.dark .logo-img{filter:brightness(0) invert(1)}
+/* LOGO — mantener colores originales naranja/blanco siempre */
 /* Mobile bar */
 body.dark .mob-bar{background:#181614;border-color:#302c28}
 /* Size guide popup */
@@ -3467,7 +3471,8 @@ calcCuotas();
 const CDN_BASE='https://dcdn-us.mitiendanube.com/stores/005/649/615/products/';
 
 // LOADER
-window.addEventListener('load',()=>{setTimeout(()=>{document.getElementById('loader').classList.add('done')},400)});
+// Ocultar loader: máx 2s sin importar si las imágenes cargaron o no
+(()=>{const hide=()=>{const l=document.getElementById('loader');if(l)l.classList.add('done')};document.addEventListener('DOMContentLoaded',()=>setTimeout(hide,500));setTimeout(hide,2000)})();
 
 // NAV SCROLL
 const navEl=document.getElementById('nav');
