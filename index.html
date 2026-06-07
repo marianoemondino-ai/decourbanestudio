@@ -1586,7 +1586,7 @@ body.dark .cmp-modal{background:#211f1d}
 </div>
 
 <!-- H1 oculto visualmente para buscadores (refuerzo SEO) -->
-<h1 class="sr-only">Cortinas Hunter Douglas en Río Cuarto — Decoración de Interiores y Exteriores · Decourban Estudio</h1>
+<div class="sr-only">Cortinas Hunter Douglas en Río Cuarto — Decoración de Interiores y Exteriores · Decourban Estudio</div>
 
 <!-- HERO -->
 <section class="hero" id="inicio">
@@ -4169,12 +4169,25 @@ const rvProducts={
   'Lámpara Día':{cat:'Lámparas',price:'$394.859',img:CDN_BASE+'2fbbfe32-163b-4982-8ccb-a8e28b11c4cf-1c7c46dd64f2dd72e417364480226959-480-0.webp'},
   'Alfombra Kilim':{cat:'Alfombras',price:'$1.254.000',img:CDN_BASE+'2f2743d8-42ab-41bc-9d0d-1c492c6a00e0-f1dea557f36908de8b17373906142489-480-0.webp'},
   'Almohadón Altamisqui 25x85':{cat:'Almohadones',price:'$119.900',img:CDN_BASE+'2c9f487d-51b3-47b8-994d-6df4e3d1206e-8617b535f816dd0df517684034134679-480-0.webp'},
+  'Banco Parrilla':{cat:'Muebles',price:'$407.113',img:CDN_BASE+'capturasa-406-2-2255ba8a238db84da117379944646859-480-0.webp'},
+  'Puff Jacinto':{cat:'Muebles',price:'$165.000',img:CDN_BASE+'captura-de-pantalla-2025-08-17-223623-d869e7742b0968fa0c17554810109994-480-0.webp'},
+  'Mesa de arrime':{cat:'Mesas',price:'$534.599',img:CDN_BASE+'captura-de-pantalla-2025-08-17-223231-ccdc23b7ba1985308a17554807757747-480-0.webp'},
+  'Consola Torreon':{cat:'Mesas',price:'$961.997',img:CDN_BASE+'captura-de-pantalla-2025-08-17-222601-c356865dcd9b9009e717554803923645-480-0.webp'},
+  'Banqueta Negra':{cat:'Muebles',price:'$420.350',img:CDN_BASE+'imagen-de-whatsapp-2025-10-21-a-las-10-27-04_5f0d42aa-a10fa3c3ce621f87d017618537869001-480-0.webp'},
+  'Candelabro Serra':{cat:'Adornos',price:'$85.798',img:CDN_BASE+'img_9136-37f4a7f396659fa6b417538930747256-480-0.webp'},
+  'Rueda de Teca':{cat:'Adornos',price:'$590.040',img:CDN_BASE+'imagen-de-whatsapp-2025-01-09-a-las-14-04-29_3a0ed394-c35b940aa890fe7ce417364423086792-480-0.webp'},
+  'Trio de cestos Seagrass':{cat:'Adornos',price:'$88.000',img:CDN_BASE+'captura-de-pantalla-2025-08-17-223841-4826a1b6c4c3b56e3217554811338283-480-0.webp'},
+  'Cesta':{cat:'Adornos',price:'Desde $54.890',img:CDN_BASE+'img_9121-77983c673f716b881317539847516459-480-0.webp'},
+  'Velas aromáticas':{cat:'Adornos',price:'$42.900',img:CDN_BASE+'b882aa3e-0ed8-4dd8-9fb3-01ce8c8cd840-00ecc5c0981706f8ae17374016037793-480-0.webp'},
+  'Batea de Teka Hindú':{cat:'Adornos',price:'$165.000',img:CDN_BASE+'413f0c5d-d1dc-469e-b741-3553a53da56e-eb10282001d62a1b9617368642972732-480-0.webp'},
 };
+
+// ── RECENTLY VIEWED — funciones ────────────────────────────────────────────
 function trackRv(name){
   if(!rvProducts[name])return;
-  rvList=rvList.filter(n=>n!==name);
+  rvList=rvList.filter(x=>x!==name);
   rvList.unshift(name);
-  if(rvList.length>6)rvList.pop();
+  if(rvList.length>6)rvList=rvList.slice(0,6);
   sessionStorage.setItem('rv',JSON.stringify(rvList));
   renderRv();
 }
@@ -4186,6 +4199,20 @@ function renderRv(){
   track.innerHTML=rvList.map(name=>{
     const p=rvProducts[name];
     if(!p)return'';
-    return`<div class="rv-card" onclick="openModal('${name}')">
+    return`<div class="rv-card" onclick="openModal('${name.replace(/'/g,"\\'")}')">
       <div class="rv-card-img"><img src="${p.img}" alt="${name}" loading="lazy"/></div>
-      <div class="rv-
+      <div class="rv-card-cat">${p.cat}</div>
+      <div class="rv-card-name">${name}</div>
+      <div class="rv-card-price">${p.price}</div>
+    </div>`;
+  }).filter(Boolean).join('');
+}
+// Parchar openModal para registrar productos vistos
+const _origOpenModal=window.openModal||function(){};
+window.openModal=function(name){_origOpenModal(name);trackRv(name);};
+// Render inicial (por si hay items en sessionStorage)
+renderRv();
+
+</script>
+</body>
+</html>
