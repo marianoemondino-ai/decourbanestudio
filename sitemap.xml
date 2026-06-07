@@ -282,4 +282,38 @@
     <priority>0.3</priority>
   </url>
 
+
+  <!-- CORTINAS LUMINETTE — producto dedicado -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/cortinas-luminette.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- CORTINAS ROLLER QUANTUM — producto dedicado -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/cortinas-roller.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- POWERVIEW — automatización -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/powerview.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- COMPARADOR DE CORTINAS — herramienta interactiva -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/comparador.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+
 </urlset>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

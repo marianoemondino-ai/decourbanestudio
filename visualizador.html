@@ -81,14 +81,34 @@ input[type=range]{width:100%;accent-color:var(--gold);cursor:pointer;height:4px}
 .uz-btn{background:var(--gold);color:#fff;padding:9px 20px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;pointer-events:none;margin-top:4px}
 #file-input{display:none}
 .tip-bar{background:var(--gold-lt);border:1.5px solid var(--border);border-radius:8px;padding:10px 14px;font-size:12.5px;color:var(--text-mid);display:none;align-items:flex-start;gap:8px;line-height:1.6}
-.note-box{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:16px 18px;font-size:13px;color:var(--text-mid);line-height:1.7}
-.note-box strong{color:var(--text)}
-.ai-upgrade{background:var(--bg-dark);border-radius:var(--r);padding:20px 24px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;margin-top:4px}
-@media(max-width:700px){.ai-upgrade{grid-template-columns:1fr}}
-.ai-upgrade h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:500;color:#fff;margin-bottom:5px}
-.ai-upgrade p{font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6}
-.btn-ai{display:inline-flex;align-items:center;gap:7px;background:var(--gold);color:var(--bg-dark);padding:10px 18px;border-radius:4px;font-size:12px;font-weight:600;text-decoration:none;white-space:nowrap;transition:background var(--ease)}
-.btn-ai:hover{background:var(--gold-dark)}
+.tip-pro{background:var(--gold-lt);border:1.5px solid #e8d8b8;border-radius:var(--r);padding:13px 16px;font-size:13px;color:var(--text-mid);line-height:1.65;display:flex;align-items:flex-start;gap:10px}
+.tip-pro strong{color:var(--text)}
+/* INSPIRATION GALLERY */
+.inspo{background:var(--bg-mid);padding:64px 20px}
+.inspo-inner{max-width:1200px;margin:0 auto}
+.inspo-hdr{text-align:center;margin-bottom:36px}
+.inspo-ey{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:10px}
+.inspo-ey::before,.inspo-ey::after{content:'';width:24px;height:1px;background:var(--gold)}
+.inspo-title{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:500;color:var(--text);margin-bottom:10px}
+.inspo-sub{font-size:14px;color:var(--text-light);max-width:480px;margin:0 auto;line-height:1.7}
+.inspo-tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
+.inspo-tab{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:7px 16px;font-size:12px;font-weight:600;color:var(--text-mid);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all var(--ease)}
+.inspo-tab:hover{border-color:var(--gold);color:var(--gold)}
+.inspo-tab.active{background:var(--gold);border-color:var(--gold);color:#fff}
+.inspo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.ig-card{border-radius:var(--r);overflow:hidden;background:#fff;border:1.5px solid var(--border);transition:transform var(--ease),box-shadow var(--ease)}
+.ig-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
+.ig-card.hidden{display:none}
+.ig-img{height:180px;overflow:hidden;background:var(--bg-mid)}
+.ig-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.ig-card:hover .ig-img img{transform:scale(1.05)}
+.ig-info{padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.ig-tag{font-size:10.5px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.8px}
+.ig-room{font-size:12px;color:var(--text-light)}
+.inspo-cta{text-align:center;margin-top:40px;padding:32px;background:#fff;border-radius:var(--r);border:1.5px solid var(--border)}
+.inspo-cta p{font-size:15px;color:var(--text-mid);margin-bottom:16px;line-height:1.6}
+.btn-inspo-wa{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:12px 24px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;transition:background var(--ease)}
+.btn-inspo-wa:hover{background:#1da855}
 .foot{background:#0e0c0a;padding:28px 40px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
 .foot-logo{font-family:'Playfair Display',serif;font-size:18px;color:#fff}
 .foot-logo span{color:var(--gold)}
@@ -96,9 +116,6 @@ input[type=range]{width:100%;accent-color:var(--gold);cursor:pointer;height:4px}
 .foot-nav a{font-size:12px;color:rgba(255,255,255,.35);text-decoration:none;transition:color var(--ease)}
 .foot-nav a:hover{color:var(--gold)}
 .foot-copy{font-size:11px;color:rgba(255,255,255,.18)}
-.wapp{position:fixed;bottom:28px;right:28px;z-index:200;background:#25d366;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.35);transition:transform var(--ease)}
-.wapp:hover{transform:scale(1.1)}
-
 /* WA FLOAT */
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:800;filter:drop-shadow(0 4px 20px rgba(37,211,102,.35));width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .28s cubic-bezier(.4,0,.2,1)}
 .wa-float:hover{background:#1bb558;transform:scale(1.12)}
@@ -187,15 +204,24 @@ input[type=range]{width:100%;accent-color:var(--gold);cursor:pointer;height:4px}
 
     <div class="ctrl-sec">
       <div class="ctrl-ttl">Color / Tela</div>
+      <div id="color-name" style="font-size:11px;color:var(--gold);font-weight:600;min-height:15px;margin-bottom:6px"></div>
       <div class="color-row">
-        <div class="csw active" style="background:#f5f0eb" title="Blanco Marfil" onclick="setColor('#f5f0eb',this)"></div>
-        <div class="csw" style="background:#ecdec8" title="Arena Natural" onclick="setColor('#ecdec8',this)"></div>
-        <div class="csw" style="background:#c8b48a" title="Lino Cálido" onclick="setColor('#c8b48a',this)"></div>
-        <div class="csw" style="background:#a8906a" title="Tostado" onclick="setColor('#a8906a',this)"></div>
-        <div class="csw" style="background:#909090" title="Gris Mineral" onclick="setColor('#909090',this)"></div>
-        <div class="csw" style="background:#565050" title="Grafito" onclick="setColor('#565050',this)"></div>
-        <div class="csw" style="background:#252020" title="Negro" onclick="setColor('#252020',this)"></div>
-        <div class="csw" style="background:#7a5a44" title="Chocolate" onclick="setColor('#7a5a44',this)"></div>
+        <div class="csw active" style="background:#f5f0eb" title="Blanco Marfil" onclick="setColor('#f5f0eb',this,'Blanco Marfil')"></div>
+        <div class="csw" style="background:#ecdec8" title="Arena Natural" onclick="setColor('#ecdec8',this,'Arena Natural')"></div>
+        <div class="csw" style="background:#e8dcc0" title="Crema" onclick="setColor('#e8dcc0',this,'Crema')"></div>
+        <div class="csw" style="background:#c8b48a" title="Lino Cálido" onclick="setColor('#c8b48a',this,'Lino Cálido')"></div>
+        <div class="csw" style="background:#a8906a" title="Tostado" onclick="setColor('#a8906a',this,'Tostado')"></div>
+        <div class="csw" style="background:#c4a46b" title="Dorado" onclick="setColor('#c4a46b',this,'Dorado')"></div>
+        <div class="csw" style="background:#b88a6a" title="Terracota" onclick="setColor('#b88a6a',this,'Terracota')"></div>
+        <div class="csw" style="background:#7a5a44" title="Chocolate" onclick="setColor('#7a5a44',this,'Chocolate')"></div>
+        <div class="csw" style="background:#c8c0b4" title="Gris Perla" onclick="setColor('#c8c0b4',this,'Gris Perla')"></div>
+        <div class="csw" style="background:#a8a09a" title="Gris Arena" onclick="setColor('#a8a09a',this,'Gris Arena')"></div>
+        <div class="csw" style="background:#909090" title="Gris Mineral" onclick="setColor('#909090',this,'Gris Mineral')"></div>
+        <div class="csw" style="background:#565050" title="Grafito" onclick="setColor('#565050',this,'Grafito')"></div>
+        <div class="csw" style="background:#252020" title="Negro" onclick="setColor('#252020',this,'Negro')"></div>
+        <div class="csw" style="background:#6a7a70" title="Salvia" onclick="setColor('#6a7a70',this,'Salvia')"></div>
+        <div class="csw" style="background:#4a5c68" title="Azul Noche" onclick="setColor('#4a5c68',this,'Azul Noche')"></div>
+        <div class="csw" style="background:#b8a8b0" title="Malva" onclick="setColor('#b8a8b0',this,'Malva')"></div>
       </div>
     </div>
 
@@ -257,23 +283,113 @@ input[type=range]{width:100%;accent-color:var(--gold);cursor:pointer;height:4px}
       <span id="tip-txt">Foto cargada. Arrastrá el recuadro dorado sobre tu ventana, luego ajustá modelo, color y opacidad.</span>
     </div>
 
-    <div class="note-box">
-      <strong>Sobre esta herramienta:</strong> la simulación muestra texturas y colores representativos de cada línea Hunter Douglas. Los materiales reales tienen matices únicos que se aprecian mejor en el showroom o en la visita de asesoramiento. Para una cotización exacta y medición gratuita en tu domicilio en Río Cuarto, escribinos por WhatsApp.
-    </div>
-
-    <div class="ai-upgrade">
-      <div>
-        <h4>¿Querés una versión con IA generativa real?</h4>
-        <p>Existe la posibilidad de integrar DALL-E 3 o Stable Diffusion para generar una imagen fotorrealista de tu habitación con las cortinas renderizadas sobre la foto. Requiere configuración adicional de backend. Consultanos si te interesa.</p>
-      </div>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20me%20interesa%20la%20herramienta%20de%20visualización%20IA%20avanzada%20para%20cortinas" target="_blank" class="btn-ai">
-        Consultar →
-      </a>
+    <div class="tip-pro">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="flex-shrink:0;color:var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <span><strong>Consejo:</strong> usá una foto con buena luz natural y la ventana bien visible para obtener el mejor resultado. Podés descargar la imagen y compartirla con nuestro equipo para una cotización más precisa.</span>
     </div>
   </div>
 </div>
 
 <input type="file" id="file-input" accept="image/*"/>
+
+<!-- INSPIRATION GALLERY -->
+<section class="inspo">
+  <div class="inspo-inner">
+    <div class="inspo-hdr">
+      <div class="inspo-ey">Galería de inspiración</div>
+      <h2 class="inspo-title">Mirá cómo quedan en ambientes reales</h2>
+      <p class="inspo-sub">Cada instalación es un proyecto a medida. Elegí tu estilo y consultanos para recibir asesoramiento gratuito en Río Cuarto.</p>
+    </div>
+
+    <div class="inspo-tabs" id="inspoTabs">
+      <button class="inspo-tab active" onclick="filterInspo('all',this)">Todos</button>
+      <button class="inspo-tab" onclick="filterInspo('roller',this)">Roller</button>
+      <button class="inspo-tab" onclick="filterInspo('silhouette',this)">Silhouette®</button>
+      <button class="inspo-tab" onclick="filterInspo('pirouette',this)">Pirouette®</button>
+      <button class="inspo-tab" onclick="filterInspo('duette',this)">Duette®</button>
+      <button class="inspo-tab" onclick="filterInspo('luminette',this)">Luminette®</button>
+    </div>
+
+    <div class="inspo-grid" id="inspoGrid">
+      <!-- Roller -->
+      <div class="ig-card" data-cat="roller">
+        <div class="ig-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/roller-beige-salon-1746231518.jpg" onerror="this.parentElement.style.background='var(--bg-mid)';this.style.display='none'" loading="lazy" alt="Roller beige salón"/></div>
+        <div class="ig-info"><span class="ig-tag">Roller</span><span class="ig-room">Living — Tono arena</span></div>
+      </div>
+      <div class="ig-card" data-cat="roller">
+        <div class="ig-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/banner-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.jpg" onerror="this.parentElement.style.background='var(--bg-mid)';this.style.display='none'" loading="lazy" alt="Roller blackout dormitorio"/></div>
+        <div class="ig-info"><span class="ig-tag">Roller Blackout</span><span class="ig-room">Dormitorio — Negro</span></div>
+      </div>
+      <!-- Silhouette -->
+      <div class="ig-card" data-cat="silhouette">
+        <div class="ig-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/silhouette-living-1746231518.jpg" onerror="this.parentElement.style.background='var(--bg-mid)';this.style.display='none'" loading="lazy" alt="Silhouette living"/></div>
+        <div class="ig-info"><span class="ig-tag">Silhouette®</span><span class="ig-room">Living — Láminas S</span></div>
+      </div>
+      <div class="ig-card" data-cat="silhouette">
+        <div class="ig-img" style="background:var(--bg-mid);display:flex;align-items:center;justify-content:center">
+          <div style="text-align:center;padding:20px">
+            <div style="font-size:32px;margin-bottom:8px">〰</div>
+            <div style="font-size:13px;color:var(--text-light)">Silhouette® Blanco Marfil</div>
+          </div>
+        </div>
+        <div class="ig-info"><span class="ig-tag">Silhouette®</span><span class="ig-room">Comedor — Blanco marfil</span></div>
+      </div>
+      <!-- Pirouette -->
+      <div class="ig-card" data-cat="pirouette">
+        <div class="ig-img" style="background:linear-gradient(135deg,#e8ddd0,#c8b89a);display:flex;align-items:center;justify-content:center">
+          <div style="text-align:center;padding:20px">
+            <div style="font-size:32px;margin-bottom:8px">〜</div>
+            <div style="font-size:13px;color:var(--text-mid)">Pirouette® Lino Cálido</div>
+          </div>
+        </div>
+        <div class="ig-info"><span class="ig-tag">Pirouette®</span><span class="ig-room">Dormitorio — Lino cálido</span></div>
+      </div>
+      <div class="ig-card" data-cat="pirouette">
+        <div class="ig-img" style="background:linear-gradient(135deg,#d4cfc8,#aaa098);display:flex;align-items:center;justify-content:center">
+          <div style="text-align:center;padding:20px">
+            <div style="font-size:32px;margin-bottom:8px">〜</div>
+            <div style="font-size:13px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.3)">Pirouette® Grafito</div>
+          </div>
+        </div>
+        <div class="ig-info"><span class="ig-tag">Pirouette®</span><span class="ig-room">Oficina — Grafito</span></div>
+      </div>
+      <!-- Duette -->
+      <div class="ig-card" data-cat="duette">
+        <div class="ig-img" style="background:linear-gradient(180deg,#f0ede6 0%,#f0ede6 7%,#e8e0d4 7%,#e8e0d4 14%,#f0ede6 14%,#f0ede6 21%,#e8e0d4 21%,#e8e0d4 28%,#f0ede6 28%,#f0ede6 35%,#e8e0d4 35%,#e8e0d4 42%,#f0ede6 42%,#f0ede6 49%,#e8e0d4 49%,#e8e0d4 56%,#f0ede6 56%,#f0ede6 63%,#e8e0d4 63%,#e8e0d4 70%,#f0ede6 70%,#f0ede6 77%,#e8e0d4 77%,#e8e0d4 84%,#f0ede6 84%,#f0ede6 91%,#e8e0d4 91%);display:flex;align-items:flex-end;justify-content:flex-start;padding:12px">
+          <div style="font-size:11px;color:var(--text-mid);font-weight:600;background:rgba(255,255,255,.8);padding:4px 8px;border-radius:4px">Duette® Arena</div>
+        </div>
+        <div class="ig-info"><span class="ig-tag">Duette®</span><span class="ig-room">Dormitorio — Aislación térmica</span></div>
+      </div>
+      <div class="ig-card" data-cat="duette">
+        <div class="ig-img" style="background:linear-gradient(180deg,#c8d4d0 0%,#c8d4d0 7%,#b8c4c0 7%,#b8c4c0 14%,#c8d4d0 14%,#c8d4d0 21%,#b8c4c0 21%,#b8c4c0 28%,#c8d4d0 28%,#c8d4d0 35%,#b8c4c0 35%,#b8c4c0 42%,#c8d4d0 42%,#c8d4d0 49%,#b8c4c0 49%,#b8c4c0 56%,#c8d4d0 56%,#c8d4d0 63%,#b8c4c0 63%,#b8c4c0 70%,#c8d4d0 70%,#c8d4d0 77%,#b8c4c0 77%,#b8c4c0 84%,#c8d4d0 84%,#c8d4d0 91%,#b8c4c0 91%);display:flex;align-items:flex-end;padding:12px">
+          <div style="font-size:11px;color:#fff;font-weight:600;background:rgba(0,0,0,.25);padding:4px 8px;border-radius:4px">Duette® Salvia</div>
+        </div>
+        <div class="ig-info"><span class="ig-tag">Duette®</span><span class="ig-room">Oficina — Verde salvia</span></div>
+      </div>
+      <!-- Luminette -->
+      <div class="ig-card" data-cat="luminette">
+        <div class="ig-img" style="background:linear-gradient(90deg,rgba(245,240,235,.9) 0%,rgba(245,240,235,.9) 18%,rgba(235,228,218,.4) 18%,rgba(235,228,218,.4) 22%,rgba(245,240,235,.9) 22%,rgba(245,240,235,.9) 40%,rgba(235,228,218,.4) 40%,rgba(235,228,218,.4) 44%,rgba(245,240,235,.9) 44%,rgba(245,240,235,.9) 62%,rgba(235,228,218,.4) 62%,rgba(235,228,218,.4) 66%,rgba(245,240,235,.9) 66%,rgba(245,240,235,.9) 84%,rgba(235,228,218,.4) 84%,rgba(235,228,218,.4) 88%,rgba(245,240,235,.9) 88%,rgba(245,240,235,.9) 100%),linear-gradient(135deg,#c8e8f8,#b0d0e8);display:flex;align-items:flex-end;padding:12px">
+          <div style="font-size:11px;color:var(--text-mid);font-weight:600;background:rgba(255,255,255,.8);padding:4px 8px;border-radius:4px">Luminette® Blanco</div>
+        </div>
+        <div class="ig-info"><span class="ig-tag">Luminette®</span><span class="ig-room">Ventanal — Paños verticales</span></div>
+      </div>
+      <div class="ig-card" data-cat="luminette">
+        <div class="ig-img" style="background:linear-gradient(90deg,rgba(80,88,100,.85) 0%,rgba(80,88,100,.85) 18%,rgba(60,68,78,.3) 18%,rgba(60,68,78,.3) 22%,rgba(80,88,100,.85) 22%,rgba(80,88,100,.85) 40%,rgba(60,68,78,.3) 40%,rgba(60,68,78,.3) 44%,rgba(80,88,100,.85) 44%,rgba(80,88,100,.85) 62%,rgba(60,68,78,.3) 62%,rgba(60,68,78,.3) 66%,rgba(80,88,100,.85) 66%,rgba(80,88,100,.85) 84%,rgba(60,68,78,.3) 84%,rgba(60,68,78,.3) 88%,rgba(80,88,100,.85) 88%),linear-gradient(135deg,#8898b0,#7080a0);display:flex;align-items:flex-end;padding:12px">
+          <div style="font-size:11px;color:#fff;font-weight:600;background:rgba(0,0,0,.3);padding:4px 8px;border-radius:4px">Luminette® Azul Noche</div>
+        </div>
+        <div class="ig-info"><span class="ig-tag">Luminette®</span><span class="ig-room">Puerta-ventana — Azul noche</span></div>
+      </div>
+    </div>
+
+    <div class="inspo-cta">
+      <p>¿Te inspiraste? Pedí una medición sin cargo y te mostramos muestras reales en tu domicilio.</p>
+      <a href="https://wa.me/543585075773?text=Hola%2C%20vi%20la%20galería%20del%20visualizador%20y%20me%20gustaría%20recibir%20asesoramiento%20gratuito" target="_blank" class="btn-inspo-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Quiero asesoramiento gratuito
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer class="foot">
   <div class="foot-logo">Decourban<span> Estudio</span></div>
@@ -288,9 +404,6 @@ input[type=range]{width:100%;accent-color:var(--gold);cursor:pointer;height:4px}
   <div class="foot-copy">© 2026 Decourban Estudio — Río Cuarto, Córdoba</div>
 </footer>
 
-<a href="https://wa.me/543585075773" target="_blank" class="wapp" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
 
 <script>
 var S = {
@@ -622,10 +735,12 @@ function setProd(p,btn){
   btn.classList.add('active');
   render();
 }
-function setColor(c,sw){
+function setColor(c,sw,name){
   S.color=c;
   document.querySelectorAll('.csw').forEach(function(s){s.classList.remove('active');});
   sw.classList.add('active');
+  var lbl=document.getElementById('color-name');
+  if(lbl&&name)lbl.textContent=name;
   render();
 }
 function setCS(cs,btn){
@@ -672,6 +787,15 @@ function resetAll(){
   document.getElementById('file-input').value='';
   ctx.clearRect(0,0,canvas.width,canvas.height);
 }
+
+function filterInspo(cat,btn){
+  document.querySelectorAll('.inspo-tab').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  document.querySelectorAll('.ig-card').forEach(function(c){
+    if(cat==='all'||c.dataset.cat===cat){c.classList.remove('hidden');}
+    else{c.classList.add('hidden');}
+  });
+}
 </script>
 <a href="https://wa.me/543585075773" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
@@ -679,5 +803,273 @@ function resetAll(){
 <script>
 /* Mobile nav toggle */
 (()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
+</body>
+</html>
+
+    ctx.fillStyle=g;
+    ctx.fillRect(x,vy-half,w,half*2);
+  }
+  // side shadow
+  ctx.globalAlpha=op*0.1;
+  var sg=ctx.createLinearGradient(x,y,x+w,y);
+  sg.addColorStop(0,'rgba(0,0,0,0.6)');sg.addColorStop(0.05,'rgba(0,0,0,0)');
+  sg.addColorStop(0.95,'rgba(0,0,0,0)');sg.addColorStop(1,'rgba(0,0,0,0.6)');
+  ctx.fillStyle=sg;ctx.fillRect(x,y,w,h);
+  // rail
+  ctx.globalAlpha=op*0.95;ctx.fillStyle='#2a2520';ctx.fillRect(x-3,y,w+6,9);
+}
+
+function drawPirouette(x,y,w,h,col,op,cs){
+  ctx.globalAlpha=op*0.38;
+  ctx.fillStyle='#f5ede0';
+  ctx.fillRect(x,y,w,h);
+  var n=Math.max(5,Math.floor(h/28));
+  var vH=h/n;
+  var thick=cs==='open'?0.2:cs==='half'?0.6:0.92;
+  for(var i=0;i<n;i++){
+    var vy=y+i*vH+vH/2;
+    var half=vH*thick/2;
+    var g=ctx.createLinearGradient(x,vy-half,x,vy+half);
+    g.addColorStop(0,rgba(col,0.15));
+    g.addColorStop(0.2,rgba(col,0.85));
+    g.addColorStop(0.5,rgba(col,1));
+    g.addColorStop(0.8,rgba(col,0.5));
+    g.addColorStop(1,rgba(col,0.1));
+    ctx.globalAlpha=op*thick*0.95;
+    ctx.fillStyle=g;
+    ctx.fillRect(x,vy-half,w,half*2);
+  }
+  ctx.globalAlpha=op*0.1;
+  var sg=ctx.createLinearGradient(x,y,x+w,y);
+  sg.addColorStop(0,'rgba(0,0,0,0.6)');sg.addColorStop(0.05,'rgba(0,0,0,0)');
+  sg.addColorStop(0.95,'rgba(0,0,0,0)');sg.addColorStop(1,'rgba(0,0,0,0.6)');
+  ctx.fillStyle=sg;ctx.fillRect(x,y,w,h);
+  ctx.globalAlpha=op*0.95;ctx.fillStyle='#2a2520';ctx.fillRect(x-3,y,w+6,9);
+}
+
+function drawDuette(x,y,w,h,col,op){
+  var cellH=Math.max(16,Math.round(h/14));
+  for(var i=0;i<h;i+=cellH){
+    var cy=y+i;
+    var ch=Math.min(cellH,h-i);
+    ctx.globalAlpha=op;
+    ctx.fillStyle=col;
+    ctx.fillRect(x,cy,w,ch);
+    var g=ctx.createLinearGradient(x,cy,x,cy+ch);
+    g.addColorStop(0,'rgba(255,255,255,0.3)');
+    g.addColorStop(0.45,'rgba(255,255,255,0.04)');
+    g.addColorStop(0.55,'rgba(0,0,0,0.04)');
+    g.addColorStop(1,'rgba(0,0,0,0.25)');
+    ctx.globalAlpha=op;
+    ctx.fillStyle=g;
+    ctx.fillRect(x,cy,w,ch);
+    ctx.globalAlpha=op*0.3;
+    ctx.fillStyle='rgba(0,0,0,0.4)';
+    ctx.fillRect(x,cy+ch-1.5,w,1.5);
+  }
+  ctx.globalAlpha=op*0.12;
+  var sg=ctx.createLinearGradient(x,y,x+w,y);
+  sg.addColorStop(0,'rgba(0,0,0,1)');sg.addColorStop(0.04,'rgba(0,0,0,0)');
+  sg.addColorStop(0.96,'rgba(0,0,0,0)');sg.addColorStop(1,'rgba(0,0,0,1)');
+  ctx.fillStyle=sg;ctx.fillRect(x,y,w,h);
+  ctx.globalAlpha=op*0.95;ctx.fillStyle='#2a2520';ctx.fillRect(x-3,y,w+6,11);
+  var rg=ctx.createLinearGradient(x,y,x,y+11);
+  rg.addColorStop(0,'rgba(255,255,255,0.12)');rg.addColorStop(1,'rgba(0,0,0,0.2)');
+  ctx.fillStyle=rg;ctx.fillRect(x-3,y,w+6,11);
+}
+
+function drawLuminette(x,y,w,h,col,op,cs){
+  ctx.globalAlpha=op*0.22;
+  ctx.fillStyle='#f8f4ee';
+  ctx.fillRect(x,y,w,h);
+  var n=Math.max(4,Math.round(w/55));
+  var pW=w/n;
+  var pOp=cs==='open'?0.18:cs==='half'?0.6:0.92;
+  for(var i=0;i<n;i++){
+    var px=x+i*pW;
+    ctx.globalAlpha=op*pOp;
+    ctx.fillStyle=col;
+    ctx.fillRect(px,y,pW,h);
+    var pg=ctx.createLinearGradient(px,y,px+pW,y);
+    pg.addColorStop(0,'rgba(0,0,0,0.25)');
+    pg.addColorStop(0.12,'rgba(0,0,0,0)');
+    pg.addColorStop(0.88,'rgba(0,0,0,0)');
+    pg.addColorStop(1,'rgba(0,0,0,0.25)');
+    ctx.fillStyle=pg;
+    ctx.fillRect(px,y,pW,h);
+    ctx.globalAlpha=op*pOp*0.2;
+    var hg=ctx.createLinearGradient(px,y,px+pW,y);
+    hg.addColorStop(0.3,'rgba(255,255,255,0.5)');
+    hg.addColorStop(0.7,'rgba(255,255,255,0)');
+    ctx.fillStyle=hg;
+    ctx.fillRect(px,y,pW,h);
+  }
+  ctx.globalAlpha=op*0.95;ctx.fillStyle='#2a2520';ctx.fillRect(x-3,y,w+6,9);
+}
+
+// ---- HANDLES ----
+function getHandles(r){
+  return[
+    {x:r.x,       y:r.y,       m:'tl', cur:'nw-resize'},
+    {x:r.x+r.w/2, y:r.y,       m:'t',  cur:'n-resize'},
+    {x:r.x+r.w,   y:r.y,       m:'tr', cur:'ne-resize'},
+    {x:r.x+r.w,   y:r.y+r.h/2, m:'r',  cur:'e-resize'},
+    {x:r.x+r.w,   y:r.y+r.h,   m:'br', cur:'se-resize'},
+    {x:r.x+r.w/2, y:r.y+r.h,   m:'b',  cur:'s-resize'},
+    {x:r.x,       y:r.y+r.h,   m:'bl', cur:'sw-resize'},
+    {x:r.x,       y:r.y+r.h/2, m:'l',  cur:'w-resize'},
+  ];
+}
+
+function drawHandles(r){
+  ctx.save();
+  ctx.strokeStyle='rgba(196,164,107,0.8)';
+  ctx.lineWidth=1.8;
+  ctx.setLineDash([7,4]);
+  ctx.strokeRect(r.x,r.y,r.w,r.h);
+  ctx.setLineDash([]);
+  getHandles(r).forEach(function(h){
+    ctx.beginPath();
+    ctx.arc(h.x,h.y,HR,0,Math.PI*2);
+    ctx.fillStyle='#c4a46b';ctx.fill();
+    ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.stroke();
+  });
+  ctx.restore();
+}
+
+// ---- MOUSE EVENTS ----
+function getPos(e){
+  var b=canvas.getBoundingClientRect();
+  var scaleX=canvas.width/b.width;
+  var scaleY=canvas.height/b.height;
+  var src=e.touches?e.touches[0]:e;
+  return{x:(src.clientX-b.left)*scaleX, y:(src.clientY-b.top)*scaleY};
+}
+
+function hitHandle(pos,r){
+  var hs=getHandles(r);
+  for(var i=0;i<hs.length;i++){
+    var dx=pos.x-hs[i].x,dy=pos.y-hs[i].y;
+    if(Math.sqrt(dx*dx+dy*dy)<=HR+5)return hs[i];
+  }
+  return null;
+}
+
+canvas.addEventListener('mousedown',onDown);
+canvas.addEventListener('touchstart',function(e){e.preventDefault();onDown(e);},{passive:false});
+function onDown(e){
+  if(!S.img)return;
+  var p=getPos(e);
+  var h=hitHandle(p,S.rect);
+  if(h){S.dragging=true;S.mode=h.m;S.dragStart=p;S.rectStart={x:S.rect.x,y:S.rect.y,w:S.rect.w,h:S.rect.h};return;}
+  var r=S.rect;
+  if(p.x>=r.x&&p.x<=r.x+r.w&&p.y>=r.y&&p.y<=r.y+r.h){
+    S.dragging=true;S.mode='move';S.dragStart=p;S.rectStart={x:r.x,y:r.y,w:r.w,h:r.h};
+  }
+}
+
+document.addEventListener('mousemove',onMove);
+document.addEventListener('touchmove',function(e){if(S.dragging){e.preventDefault();onMove(e);}},{passive:false});
+function onMove(e){
+  if(!S.img)return;
+  var p=getPos(e);
+  if(!S.dragging){
+    var h=hitHandle(p,S.rect);
+    canvas.style.cursor=h?h.cur:(p.x>=S.rect.x&&p.x<=S.rect.x+S.rect.w&&p.y>=S.rect.y&&p.y<=S.rect.y+S.rect.h?'move':'default');
+    return;
+  }
+  var dx=p.x-S.dragStart.x, dy=p.y-S.dragStart.y;
+  var r0=S.rectStart, cw=canvas.width, ch=canvas.height, MIN=40;
+  var m=S.mode;
+  if(m==='move'){
+    S.rect.x=Math.max(0,Math.min(cw-r0.w,r0.x+dx));
+    S.rect.y=Math.max(0,Math.min(ch-r0.h,r0.y+dy));
+  }else if(m==='br'){S.rect.w=Math.max(MIN,r0.w+dx);S.rect.h=Math.max(MIN,r0.h+dy);
+  }else if(m==='bl'){var nw=Math.max(MIN,r0.w-dx);S.rect.x=r0.x+r0.w-nw;S.rect.w=nw;S.rect.h=Math.max(MIN,r0.h+dy);
+  }else if(m==='tr'){S.rect.w=Math.max(MIN,r0.w+dx);var nh=Math.max(MIN,r0.h-dy);S.rect.y=r0.y+r0.h-nh;S.rect.h=nh;
+  }else if(m==='tl'){var nw2=Math.max(MIN,r0.w-dx);var nh2=Math.max(MIN,r0.h-dy);S.rect.x=r0.x+r0.w-nw2;S.rect.y=r0.y+r0.h-nh2;S.rect.w=nw2;S.rect.h=nh2;
+  }else if(m==='t'){var nh3=Math.max(MIN,r0.h-dy);S.rect.y=r0.y+r0.h-nh3;S.rect.h=nh3;
+  }else if(m==='b'){S.rect.h=Math.max(MIN,r0.h+dy);
+  }else if(m==='r'){S.rect.w=Math.max(MIN,r0.w+dx);
+  }else if(m==='l'){var nw3=Math.max(MIN,r0.w-dx);S.rect.x=r0.x+r0.w-nw3;S.rect.w=nw3;}
+  render();
+}
+
+document.addEventListener('mouseup',function(){S.dragging=false;});
+document.addEventListener('touchend',function(){S.dragging=false;});
+
+// ---- CONTROLS ----
+function setProd(p,btn){
+  S.prod=p;
+  document.querySelectorAll('.prod-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  render();
+}
+function setColor(c,sw,name){
+  S.color=c;
+  document.querySelectorAll('.csw').forEach(function(s){s.classList.remove('active');});
+  sw.classList.add('active');
+  var lbl=document.getElementById('color-name');
+  if(lbl&&name)lbl.textContent=name;
+  render();
+}
+function setCS(cs,btn){
+  S.cstate=cs;
+  document.querySelectorAll('.state-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  render();
+}
+function setOp(v){
+  S.opacity=v/100;
+  document.getElementById('opv').textContent=v+'%';
+  render();
+}
+
+// ---- DOWNLOAD ----
+function downloadImg(){
+  if(!S.img)return;
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.drawImage(S.img,0,0,canvas.width,canvas.height);
+  var r=S.rect;
+  drawCurtain(r.x,r.y,r.w,r.h);
+  ctx.save();
+  ctx.globalAlpha=0.55;
+  ctx.fillStyle='#fff';
+  ctx.font='bold 13px DM Sans,sans-serif';
+  ctx.fillText('decourbanestudio.com.ar',canvas.width-220,canvas.height-12);
+  ctx.restore();
+  var link=document.createElement('a');
+  link.download='decourban-visualizador.jpg';
+  link.href=canvas.toDataURL('image/jpeg',0.92);
+  link.click();
+  render();
+}
+
+function resetAll(){
+  S.img=null;S.rect=null;S.dragging=false;
+  canvas.style.display='none';
+  document.getElementById('upload-z').style.display='flex';
+  document.getElementById('tip-bar').style.display='none';
+  document.getElementById('dl-btn').disabled=true;
+  document.getElementById('file-input').value='';
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+}
+
+function filterInspo(cat,btn){
+  document.querySelectorAll('.inspo-tab').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  document.querySelectorAll('.ig-card').forEach(function(c){
+    if(cat==='all'||c.dataset.cat===cat){c.classList.remove('hidden');}
+    else{c.classList.add('hidden');}
+  });
+}
+</script>
+<a href="https://wa.me/543585075773" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script>
+/* Mobile nav toggle */
+(()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();
+</script>
 </body>
 </html>
