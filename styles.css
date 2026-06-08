@@ -60,7 +60,7 @@ p { color: #555; font-size: 0.94rem; line-height: 1.75; }
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 72px;
+  height: 84px;
   display: flex;
   align-items: center;
   transition: background 0.4s, box-shadow 0.4s;
@@ -79,7 +79,7 @@ p { color: #555; font-size: 0.94rem; line-height: 1.75; }
   justify-content: space-between;
 }
 .nav-logo img {
-  height: 52px;
+  height: 64px;
   width: auto;
   transition: filter 0.4s;
 }
@@ -139,7 +139,7 @@ p { color: #555; font-size: 0.94rem; line-height: 1.75; }
 .nav-mobile {
   display: none;
   position: fixed;
-  inset: 72px 0 0;
+  inset: 84px 0 0;
   background: #fff;
   z-index: 999;
   padding: 40px 32px;
@@ -488,7 +488,7 @@ p { color: #555; font-size: 0.94rem; line-height: 1.75; }
 }
 .footer-col a:hover { color: #fff; }
 .footer-col p { font-size: 0.84rem; color: rgba(255,255,255,0.45); line-height: 1.7; }
-.footer-logo img { height: 44px; width: auto; filter: brightness(0) invert(1); opacity: 0.6; margin-bottom: 16px; }
+.footer-logo img { height: 52px; width: auto; filter: brightness(0) invert(1); opacity: 0.7; margin-bottom: 16px; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 32px;
@@ -630,7 +630,7 @@ p { color: #555; font-size: 0.94rem; line-height: 1.75; }
 .blog-card-excerpt { font-size: 0.82rem; color: #777; }
 
 /* Individual product pages */
-.prod-hero { padding-top: 72px; }
+.prod-hero { padding-top: 84px; }
 .prod-split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 .prod-img-main img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
 .prod-body { padding: 48px 0; }
@@ -786,7 +786,7 @@ p { color: #555; font-size: 0.94rem; line-height: 1.75; }
 /* Hero */
 .col-hero {
   background: #f5f5f0;
-  padding: 120px 0 56px;
+  padding: 140px 0 56px;
   border-bottom: 1px solid #e8e8e4;
 }
 .col-hero-inner {
@@ -853,7 +853,7 @@ p { color: #555; font-size: 0.94rem; line-height: 1.75; }
 /* ── Sidebar ── */
 .sidebar {
   position: sticky;
-  top: 88px;
+  top: 100px;
 }
 .col-search {
   position: relative;
