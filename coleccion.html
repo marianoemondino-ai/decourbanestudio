@@ -51,13 +51,14 @@
 }
 </script>
 <link rel="stylesheet" href="styles.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
 
 </head>
 <body>
-<nav class="site-nav">
+
+
+
+<!-- NAV -->
+<nav class="site-nav solid" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" width="160" height="38"/>
@@ -67,23 +68,22 @@
       <a href="proyectos.html">Proyectos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="nav-cta" target="_blank" rel="noopener">Consultar</a>
+      <a href="contacto.html" class="nav-cta">Consultar</a>
     </div>
-    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <button class="nav-hamburger" id="menuBtn" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
-  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
-  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
-  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
-  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+  <a href="cortinas.html">Productos</a>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:#111;color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;">Consultar</a>
 </div>
-
-<!-- NAV -->
-
 
 <!-- HERO BANNER -->
 <div class="col-hero">
@@ -1357,7 +1357,7 @@
     </div>
     <div class="chat-bubble-head">
       <div class="chat-bubble-av">
-        <span style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#161412">MK</span>
+        <span style="font-family:inherit;font-size:14px;font-weight:700;color:#161412">MK</span>
       </div>
       <div>
         <div class="chat-bubble-name">Decourban</div>
@@ -1382,398 +1382,61 @@
 
 <!-- FOOTER -->
 <footer class="site-footer">
-  <div class="container">
+  <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
-        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores desde 2004.</p>
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+        </div>
+        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores a medida desde 2004.</p>
+        <p style="margin-top:16px;color:rgba(255,255,255,.35);">Juan de Garay 1550, Río Cuarto<br/>+54 358 507-5773<br/>ventas@decourban.com.ar</p>
       </div>
       <div class="footer-col">
         <h4>Productos</h4>
-        <a href="cortinas-silhouette.html">Silhouette</a>
-        <a href="cortinas-pirouette.html">Pirouette</a>
-        <a href="cortinas-duette.html">Duette</a>
-        <a href="cortinas-roller.html">Roller</a>
+        <a href="cortinas-silhouette.html">Silhouette®</a>
+        <a href="cortinas-pirouette.html">Pirouette®</a>
+        <a href="cortinas-duette.html">Duette®</a>
         <a href="toldo-gemini.html">Toldo Gemini</a>
-        <a href="powerview.html">PowerView</a>
+        <a href="cortinas.html">Ver todos</a>
       </div>
       <div class="footer-col">
-        <h4>Empresa</h4>
-        <a href="nosotros.html">Nosotros</a>
+        <h4>Nosotros</h4>
+        <a href="nosotros.html">La empresa</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="garantia.html">Garantía</a>
         <a href="contacto.html">Contacto</a>
+        <a href="https://decourbanestudio.com.ar/productos" target="_blank" rel="noopener">Tienda online</a>
       </div>
       <div class="footer-col">
-        <h4>Contacto</h4>
-        <a href="tel:+543585075773">358 507-5773</a>
-        <a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a>
-        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+R%C3%ADo+Cuarto" target="_blank" rel="noopener">Juan de Garay 1550, Río Cuarto</a>
-        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">@decourbanestudio</a>
+        <h4>Recursos</h4>
+        <a href="blog-cortinas-hunter-douglas.html">Blog</a>
+        <a href="quiz-cortinas.html">Quiz de cortinas</a>
+        <a href="visualizador.html">Visualizador</a>
+        <a href="guia-por-ambiente.html">Guía por ambiente</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Decourban Estudio. Todos los derechos reservados.</span>
-      <span>Río Cuarto, Córdoba, Argentina</span>
+      <p>© 2026 Decourban Estudio. Todos los derechos reservados.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/543585075773" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:ventas@decourban.com.ar">Email</a>
+      </div>
     </div>
   </div>
 </footer>
 
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/543585075773?text=Hola,%20me%20gustaría%20consultar%20sobre%20sus%20productos" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
 <script>
-// ── STATE ──────────────────────────────
-let activeCat='all', activeMats=new Set(), activeColors=new Set(), activeRating=0, searchQ='';
-
-// ── CATEGORY FILTER ────────────────────
-function selectCat(el,cat){
-  activeCat=cat;
-  document.querySelectorAll('.cat-item').forEach(i=>i.classList.toggle('on',i.dataset.cat===cat));
-  applyFilters();
-}
-function clearCat(){selectCat(document.querySelector('[data-cat="all"]'),'all')}
-
-// ── MATERIAL FILTER ────────────────────
-function toggleMat(el,mat){
-  el.classList.toggle('on');
-  if(activeMats.has(mat)) activeMats.delete(mat);
-  else activeMats.add(mat);
-  applyFilters();
-}
-function clearMat(){document.querySelectorAll('.mat-tag').forEach(t=>t.classList.remove('on'));activeMats.clear();applyFilters()}
-
-// ── COLOR FILTER ───────────────────────
-function toggleColor(el){
-  el.classList.toggle('on');
-  applyFilters();
-}
-
-// ── RATING FILTER ──────────────────────
-function toggleRating(el,r){
-  const wasOn=el.classList.contains('on');
-  document.querySelectorAll('.rating-row').forEach(x=>x.classList.remove('on'));
-  activeRating=wasOn?0:r;
-  if(!wasOn)el.classList.add('on');
-  applyFilters();
-}
-
-// ── PRICE ─────────────────────────────
-function updatePriceFromSlider(s){
-  document.getElementById('priceMax').value=s.value;
-  applyFilters();
-}
-function setBudget(min,max){
-  document.querySelectorAll('.bchip').forEach(b=>b.classList.remove('on'));
-  event?.target?.classList.add('on');
-  const minEl=document.getElementById('priceMin');
-  const maxEl=document.getElementById('priceMax');
-  const slider=document.getElementById('budgetSlider');
-  if(minEl)minEl.value=min||'';
-  if(maxEl)maxEl.value=max||'';
-  if(slider)slider.value=max||4000000;
-  const label=document.getElementById('sliderLabel');
-  if(label)label.textContent=max?'$'+max.toLocaleString('es-AR'):'Sin límite';
-  applyFilters();
-}
-function sliderFilter(s){
-  const max=parseInt(s.value);
-  const maxEl=document.getElementById('priceMax');
-  if(maxEl)maxEl.value=max>=4000000?'':max;
-  const label=document.getElementById('sliderLabel');
-  if(label)label.textContent=max>=4000000?'Sin límite':'$'+max.toLocaleString('es-AR');
-  document.querySelectorAll('.bchip').forEach(b=>b.classList.remove('on'));
-  applyFilters();
-}
-
-// ── SORT ──────────────────────────────
-let sortMode='default';
-function sortProducts(mode){
-  sortMode=mode;
-  applyFilters();
-}
-
-// ── APPLY ALL FILTERS ─────────────────
-let _filterTimer;
-function debouncedFilter(){clearTimeout(_filterTimer);_filterTimer=setTimeout(applyFilters,220);}
-function syncURL(){
-  const p=new URLSearchParams();
-  const q=(document.getElementById('colSearch')?.value||'').trim();
-  if(activeCat&&activeCat!=='all')p.set('cat',activeCat);
-  if(q)p.set('q',q);
-  const minP=document.getElementById('priceMin')?.value;
-  const maxP=document.getElementById('priceMax')?.value;
-  if(minP)p.set('min',minP);
-  if(maxP)p.set('max',maxP);
-  const str=p.toString();
-  history.replaceState(null,'',str?'?'+str:window.location.pathname);
-}
-function applyFilters(){
-  const grid=document.getElementById('pgrid');
-  grid.classList.add('filtering');
-  const q=(document.getElementById('colSearch')?.value||'').toLowerCase().trim();
-  const minP=parseFloat(document.getElementById('priceMin')?.value)||0;
-  const maxP=parseFloat(document.getElementById('priceMax')?.value)||Infinity;
-
-  let cards=[...document.querySelectorAll('#pgrid .pc')];
-
-  // Filter
-  const visible=cards.filter(c=>{
-    const cat=c.dataset.cat;
-    const price=parseFloat(c.dataset.price)||0;
-    const name=(c.dataset.name||'').toLowerCase();
-    if(activeCat!=='all'&&cat!==activeCat)return false;
-    if(q&&!name.includes(q))return false;
-    if(price>0&&(price<minP||price>maxP))return false;
-    return true;
-  });
-
-  // Sort
-  const sorted=[...visible];
-  if(sortMode==='price-asc')sorted.sort((a,b)=>parseFloat(a.dataset.price||0)-parseFloat(b.dataset.price||0));
-  else if(sortMode==='price-desc')sorted.sort((a,b)=>parseFloat(b.dataset.price||0)-parseFloat(a.dataset.price||0));
-  else if(sortMode==='name-asc')sorted.sort((a,b)=>(a.dataset.name||'').localeCompare(b.dataset.name||''));
-  else if(sortMode==='newest')sorted.sort((a,b)=>(b.dataset.new?1:0)-(a.dataset.new?1:0));
-  else if(sortMode==='bestseller')sorted.sort((a,b)=>(b.dataset.bestseller?1:0)-(a.dataset.bestseller?1:0));
-
-  // Apply visibility + reorder
-  cards.forEach(c=>c.classList.add('hidden'));
-  sorted.forEach((c,i)=>{
-    c.classList.remove('hidden');
-    grid.appendChild(c);
-  });
-
-  // Update count
-  document.getElementById('visibleCount').textContent=sorted.length;
-  document.getElementById('statTotal').textContent=sorted.length;
-
-  // Empty state
-  document.getElementById('emptyState').style.display=sorted.length===0?'block':'none';
-  document.getElementById('loadMore').style.display=sorted.length===0?'none':'flex';
-
-  // Active filters chips
-  renderActiveFilters();
-
-  // Sync current filters to URL so links can be shared
-  syncURL();
-
-  setTimeout(()=>grid.classList.remove('filtering'),350);
-}
-
-// ── ACTIVE FILTER CHIPS ────────────────
-function renderActiveFilters(){
-  const cont=document.getElementById('activeFilters');
-  const chips=[];
-  if(activeCat!=='all'){
-    const label=document.querySelector(`.cat-item[data-cat="${activeCat}"]`)?.firstElementChild?.nextSibling?.textContent?.trim()||activeCat;
-    chips.push({label:label.split('(')[0].trim(),clear:()=>{clearCat()}});
-  }
-  cont.innerHTML=chips.map(c=>`<div class="af-chip">${c.label}<button onclick="(${c.clear.toString()})()">✕</button></div>`).join('');
-}
-
-// ── CLEAR ALL ─────────────────────────
-function clearAll(){
-  activeCat='all';activeMats.clear();activeColors.clear();activeRating=0;
-  document.getElementById('priceMin').value='';
-  document.getElementById('priceMax').value='';
-  document.getElementById('colSearch').value='';
-  document.querySelectorAll('.cat-item').forEach(i=>i.classList.toggle('on',i.dataset.cat==='all'));
-  document.querySelectorAll('.mat-tag,.rating-row').forEach(t=>t.classList.remove('on'));
-  applyFilters();
-}
-
-// ── VIEW TOGGLE ────────────────────────
-function setView(v){
-  const grid=document.getElementById('pgrid');
-  grid.classList.toggle('list-view',v==='list');
-  document.getElementById('vbGrid').classList.toggle('on',v==='grid');
-  document.getElementById('vbList').classList.toggle('on',v==='list');
-}
-
-// ── MOBILE FILTER ─────────────────────
-function openMobFilter(){document.getElementById('mobFilterOv').classList.add('open');document.body.style.overflow='hidden'}
-function closeMobFilter(){document.getElementById('mobFilterOv').classList.remove('open');document.body.style.overflow=''}
-
-// ── QUICK VIEW MODAL ───────────────────
-const BASE='https://dcdn-us.mitiendanube.com/stores/005/649/615/products/';
-const qvImgs={
-  'Sillón Monaco':BASE+'captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp',
-  'Sillón Kenzo':BASE+'img_9109-fbde0aa1d00029292717538840253837-480-0.webp',
-  'Sillón Fenix un cuerpo':BASE+'captura-de-pantalla-2025-08-17-223725-7c8f8c4069c927b82917554810736065-480-0.webp',
-  'Espejo Dalia':BASE+'captura-de-pantalla-2025-08-17-223048-079d0efd19c38b89e717554806596677-480-0.webp',
-  'Espejo Rectangular':BASE+'4e39170a-f757-457d-b7f9-dffeb81ed482-8d2aa96f4320122a8b17374010605859-480-0.webp',
-  'Mesa de Centro Estocolmo':BASE+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp',
-  'Mesa de centro Estocolmo':BASE+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp',
-  'Mesa de centro Ratán':BASE+'captura-de-pantalla-2025-08-17-223331-b8c910fb731ccaf5ee17554808634179-480-0.webp',
-  'Mesa Pacamara':BASE+'img-20250926-wa0098-280dd9e73fa2e0378917589219616975-480-0.webp',
-  'Consola Naturale':BASE+'captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp',
-  'Candelabro Shiv':BASE+'imagen-de-whatsapp-2025-01-09-a-las-13-54-57_fbab22c7-39ca1ab708b7e5e04a17364417205021-480-0.webp',
-  'Lámpara Día':BASE+'2fbbfe32-163b-4982-8ccb-a8e28b11c4cf-1c7c46dd64f2dd72e417364480226959-480-0.webp',
-  'Lámpara Camarón':BASE+'img_9129-666d29e6545bf63ab117539863996144-480-0.webp',
-  'Alfombra Kilim':BASE+'2f2743d8-42ab-41bc-9d0d-1c492c6a00e0-f1dea557f36908de8b17373906142489-480-0.webp',
-  'Alfombra Redonda Yute':BASE+'4d8ac0bc-75b3-4fc6-a6bb-9b41a94ffe3d-5edb589bc7f614cce217373854427634-480-0.webp',
-  'Persiana Duette® Hunter Douglas':BASE+'hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-480-0.webp',
-  'Cortina Silhouette® Hunter Douglas':BASE+'cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp',
-  'Cortina Silhouette Hunter Douglas':BASE+'cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp',
-  'Pérgola Retráctil Outdoor':BASE+'foldingjpg-optimized-b09406c29d63067e7117462924956836-480-0.webp',
-  'Mesa de Centro Circular Hierro':BASE+'c208d00d-8fe3-43d5-bd48-539c82553e03-25ba2981f8c2dd831717379836430019-480-0.webp',
-  'Lámpara Camarón':BASE+'img_9129-666d29e6545bf63ab117539863996144-480-0.webp',
-  'Alfombra Redonda Yute':BASE+'4d8ac0bc-75b3-4fc6-a6bb-9b41a94ffe3d-5edb589bc7f614cce217373854427634-480-0.webp',
-  'Almohadón Tejido Coca 40x60':BASE+'050fce7d-7fef-491c-bc10-45f12a02f36c-483ec3b66c263cae3117684031217022-480-0.webp',
-  'Almohadón Salar 50x70':BASE+'7d1d11d1-5ea6-4874-9bda-d3d8cf59fa29-ba3737237cd275550217684029786669-480-0.webp',
-  'Almohadón Altamisqui 25x85':BASE+'2c9f487d-51b3-47b8-994d-6df4e3d1206e-8617b535f816dd0df517684034134679-480-0.webp',
-  'Banco Parrilla':BASE+'capturasa-406-2-2255ba8a238db84da117379944646859-480-0.webp',
-  'Puff Jacinto':BASE+'captura-de-pantalla-2025-08-17-223623-d869e7742b0968fa0c17554810109994-480-0.webp',
-  'Mesa de arrime':BASE+'captura-de-pantalla-2025-08-17-223231-ccdc23b7ba1985308a17554807757747-480-0.webp',
-  'Consola Torreon':BASE+'captura-de-pantalla-2025-08-17-222601-c356865dcd9b9009e717554803923645-480-0.webp',
-  'Banqueta Negra':BASE+'imagen-de-whatsapp-2025-10-21-a-las-10-27-04_5f0d42aa-a10fa3c3ce621f87d017618537869001-480-0.webp',
-  'Trio de cestos Seagrass':BASE+'captura-de-pantalla-2025-08-17-223841-4826a1b6c4c3b56e3217554811338283-480-0.webp',
-  'Candelabro Serra':BASE+'img_9136-37f4a7f396659fa6b417538930747256-480-0.webp',
-  'Rueda de Teca':BASE+'imagen-de-whatsapp-2025-01-09-a-las-14-04-29_3a0ed394-c35b940aa890fe7ce417364423086792-480-0.webp',
-  'Bandeja de mármol':BASE+'e2c22c5f-67c8-47b5-9cb6-213cb76a96ed-098175058aa29d3dcd17373908436748-480-0.webp',
-  'Velas aromáticas':BASE+'b882aa3e-0ed8-4dd8-9fb3-01ce8c8cd840-00ecc5c0981706f8ae17374016037793-480-0.webp',
-  'Batea de Teka Hindú':BASE+'413f0c5d-d1dc-469e-b741-3553a53da56e-eb10282001d62a1b9617368642972732-480-0.webp',
-  'Manta tejida al telar':BASE+'imagen-de-whatsapp-2025-05-05-a-las-11-56-58_8d2709ad-6c78b526a6314ae97117464694559956-480-0.webp',
-  'Toallón Tusor y Algodón':BASE+'imagen-de-whatsapp-2025-05-05-a-las-11-49-41_ca492f8f-387f5278af5c95233b17464703916971-480-0.webp',
-  'Alfombra yute con franjas blancas':BASE+'767746ce-390a-44f0-bcdf-6c6329e6e24c-fe9829038583c8386b17373877501118-480-0.webp',
-  'Alfombra yute Tejido':BASE+'98083d8b-a1a9-4ad5-b530-24641c528efc-bb990920fc32d0aa0f17373865924837-480-0.webp',
-  'Alfombra Yute y Algodón':BASE+'captura-de-pantalla-2025-08-17-224106-9c172ed62d5e802db417554812916643-480-0.webp',
-  'Alfombra Kiram':BASE+'captura-de-pantalla-2025-08-17-224221-76d228021f73b8b54217554813485831-480-0.webp',
-  'Almohadón Rouge':BASE+'imagen-de-whatsapp-2025-04-26-a-las-19-57-50_14b66424-e6ce1444ade0c4cc9817457082805969-480-0.webp',
-  'Almohadón Lino Belga':BASE+'captura-de-pantalla-2025-04-26-185913-b68d89e8fb3d7b00b117457049687807-480-0.webp',
-  'Almohadón Terciopelo Blush':BASE+'img_6146-09433aeaef2808a83f17452437102499-480-0.webp',
-  'Almohadón Pana Moka':BASE+'captura-de-pantalla-2025-01-27-133717-860a51484d4cab342617379959654899-480-0.webp',
-  'Almohadón corazón':BASE+'185606568_111797404403097_6816472677090391078_n-fc6bf7821ffaaf00b117459469787162-480-0.webp',
-  'Acolchado Tusor Reversible King':BASE+'imagen-de-whatsapp-2025-04-29-a-las-14-18-39_7ccb1743-7268fd356230597d4f17459471288944-480-0.webp',
-  'Acolchado Tusor Reversible Super King':BASE+'captura-de-pantalla-2025-04-29-132945-bf32a86e7ab53ea6f317459442110123-480-0.webp',
-  'Acolchado Tusor Reversible Twin':BASE+'captura-de-pantalla-2025-04-29-130431-2333848cc7bb05fcb417459433977338-480-0.webp',
-  'Pantalla Cesta Mimbre M':BASE+'2c55d9cc-b16c-45c1-a409-449bb1052337-2bb50213f0abd94c2417364350462646-480-0.webp',
-  'Pantalla Cesta Mimbre G':BASE+'pantalla-cesto-de-mimbre-2-e541cab590a3d91c0917364342767927-480-0.webp',
-  'Maceta de PVC':BASE+'ebc895b3-6b71-4244-84a4-58eff69b1da6-bae19edc26b870d3d517373880822516-480-0.webp',
-  'Tochos de madera':BASE+'3273bc3b-0fba-447d-b785-c9655fc5638b-ed513daef0d47a806a17684047714559-480-0.webp',
-  'Set de botellas de Arcilla':BASE+'58568014-223e-4638-8440-e33208503a57-5e5a0c5cac28d8898b17684041190364-480-0.webp',
-  'Vasija en Arcilla Ruka':BASE+'9ba0aa9b-1da6-4d78-9f96-a1fd1efe9044-d0aecf0bfdbc46456f17684040316003-480-0.webp',
-  'Vasija de Arcilla':BASE+'f0251644-3444-4d99-8069-fe45e58f2970-b567cb3e1987c27d2e17684036640180-480-0.webp',
-  'Plantas artificiales':BASE+'18ba3486-7c42-4300-afd7-8a6942434961-ae6e3ae734fd82cbe917364486643179-480-0.webp',
-  'Funda nórdica King':BASE+'99aea311-cda7-4cd7-8569-9770846811d7-376168386d2bdb045917464753747017-480-0.webp',
-  'Funda nórdica Twin rosa':BASE+'2c66a35e-18c4-4325-a841-faaa00da8d5b-2039c99d8779a21ce117464749577340-480-0.webp',
-  'default':BASE+'img_9109-fbde0aa1d00029292717538840253837-480-0.webp',
-};
-function quickView(card){
-  const name=card.dataset.name||card.querySelector('.pc-name')?.textContent||'Producto';
-  const cat=card.querySelector('.pc-cat')?.textContent||'';
-  const mat=card.querySelector('.pc-mat')?.textContent||'';
-  const price=card.querySelector('.pc-price')?.textContent||'Consultar';
-  const priceNum=parseFloat(card.dataset.price)||0;
-  const img=qvImgs[name]||card.querySelector('img')?.src||qvImgs.default;
-  document.getElementById('mImg').src=img;
-  document.getElementById('mCat').textContent=cat;
-  document.getElementById('mName').textContent=name;
-  document.getElementById('mMat').textContent=mat;
-  document.getElementById('mPrice').textContent=price;
-  document.getElementById('mCuota').textContent=priceNum>0?`o 12 cuotas de $${Math.round(priceNum/12).toLocaleString('es-AR')} sin interés`:'';
-  document.getElementById('mWa').href='https://wa.me/543585075773?text='+encodeURIComponent('Hola, me interesa: '+name);
-  const detailEl=document.getElementById('mDetail');
-  if(detailEl){
-    if(name==='Sillón Monaco'){
-      detailEl.href='producto.html';detailEl.style.display='';
-    } else {
-      detailEl.style.display='none';
-    }
-  }
-  document.getElementById('modalBg').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeModal(){document.getElementById('modalBg').classList.remove('open');document.body.style.overflow=''}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-
-// ── URL PARAMS ────────────────────────
 (function(){
-  const p=new URLSearchParams(window.location.search);
-  const cat=p.get('cat');
-  const q=p.get('q');
-  if(cat){
-    const el=document.querySelector(`.cat-item[data-cat="${cat}"]`);
-    if(el)selectCat(el,cat);
-  }
-  if(q){
-    const inp=document.getElementById('colSearch');
-    if(inp){inp.value=q;}
-  }
-  const min=p.get('min');const max=p.get('max');
-  if(min){const el=document.getElementById('priceMin');if(el)el.value=min;}
-  if(max){const el=document.getElementById('priceMax');if(el)el.value=max;}
-})();
-
-// ── INIT ──────────────────────────────
-applyFilters();
-if('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>{});
-if(localStorage.getItem('dark')==='1') document.body.classList.add('dark');
-
-// ── CART (shared with index) ──────────
-const CART_KEY='decourban_cart_v1';
-function getCart(){try{return JSON.parse(localStorage.getItem(CART_KEY))||[];}catch{return[];}}
-function saveCart(c){localStorage.setItem(CART_KEY,JSON.stringify(c));}
-function addToCart(item){const cart=getCart();const ex=cart.find(x=>x.id===item.id);if(ex){ex.qty=Math.min(ex.qty+1,99);}else{cart.push({...item,qty:1});}saveCart(cart);renderCartBadge();renderCartDrawer();}
-function removeFromCart(id){saveCart(getCart().filter(x=>x.id!==id));renderCartBadge();renderCartDrawer();}
-function updateCartQty(id,delta){const cart=getCart();const item=cart.find(x=>x.id===id);if(item){item.qty=Math.max(1,item.qty+delta);saveCart(cart);renderCartDrawer();}}
-function clearCart(){saveCart([]);renderCartBadge();renderCartDrawer();}
-function renderCartBadge(){const n=getCart().reduce((s,x)=>s+x.qty,0);const b=document.getElementById('cartNavBadge');if(b){b.textContent=n;b.style.display=n>0?'flex':'none';}const bb=document.getElementById('cartBadge');if(bb)bb.textContent=n;}
-function renderCartDrawer(){const cart=getCart();const body=document.getElementById('cartItems');const empty=document.getElementById('cartEmpty');const foot=document.getElementById('cartFoot');if(!body)return;if(cart.length===0){empty.style.display='flex';body.innerHTML='';if(foot)foot.style.display='none';return;}empty.style.display='none';if(foot)foot.style.display='block';let total=0,count=0;body.innerHTML=cart.map(item=>{total+=item.priceNum*item.qty;count+=item.qty;return`<div class="cart-item" style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #e6dfd6;align-items:flex-start"><div style="width:76px;height:82px;border-radius:4px;overflow:hidden;flex-shrink:0;background:#f2ede6;cursor:pointer" onclick="openLightbox('${item.img}','${item.name}',null)"><img src="${item.img}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover"/></div><div style="flex:1;min-width:0"><div style="font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:#c4a46b;font-weight:600;margin-bottom:3px">${item.cat}</div><div style="font-size:14px;font-weight:600;color:#1c1a18;line-height:1.3;margin-bottom:3px">${item.name}</div><div style="font-size:11.5px;color:#9c958d;margin-bottom:10px">${item.mat}</div><div style="font-size:14.5px;font-weight:700;color:#1c1a18">${item.price}</div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px"><div style="display:flex;align-items:center;gap:10px;background:#f2ede6;border-radius:20px;padding:4px 12px"><button onclick="updateCartQty('${item.id}',-1)" style="width:24px;height:24px;border:none;background:none;cursor:pointer;font-size:17px;color:#5c5550;transition:color .2s">−</button><span style="font-size:14px;font-weight:700;color:#1c1a18;min-width:16px;text-align:center">${item.qty}</span><button onclick="updateCartQty('${item.id}',1)" style="width:24px;height:24px;border:none;background:none;cursor:pointer;font-size:17px;color:#5c5550">+</button></div><button onclick="removeFromCart('${item.id}')" style="background:none;border:none;cursor:pointer;color:#9c958d;transition:color .2s;display:flex;align-items:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/></svg></button></div></div></div>`;}).join('');const tot=document.getElementById('cartTotal');const cnt=document.getElementById('cartItemCount');if(tot)tot.textContent='$'+total.toLocaleString('es-AR');if(cnt)cnt.textContent=count+' producto'+(count!==1?'s':'');}
-function openCart(){renderCartDrawer();document.getElementById('cartOv').classList.add('open');document.body.style.overflow='hidden';}
-function closeCart(){document.getElementById('cartOv').classList.remove('open');document.body.style.overflow='';}
-function sendCartToWA(){const cart=getCart();if(!cart.length)return;let msg='Hola! Me interesa consultar por los siguientes productos de Decourban:\n\n';cart.forEach(x=>{msg+=`• ${x.name} (x${x.qty}) — ${x.price}\n`;});const total=cart.reduce((s,x)=>s+x.priceNum*x.qty,0);msg+=`\nTotal estimado: $${total.toLocaleString('es-AR')}\n\n¿Pueden asesorarme?`;window.open('https://wa.me/543585075773?text='+encodeURIComponent(msg),'_blank');}
-let _ilbItem=null;
-function openLightbox(src,caption,item){_ilbItem=item||null;const lb=document.getElementById('ilb');const img=document.getElementById('ilbImg');const cap=document.getElementById('ilbCaption');const ab=document.getElementById('ilbAddBtn');img.src=src;if(cap)cap.textContent=caption||'';if(ab)ab.style.display=item?'flex':'none';lb.style.display='flex';lb.style.opacity='0';lb.style.visibility='visible';requestAnimationFrame(()=>{lb.style.transition='opacity .3s';lb.style.opacity='1';});document.body.style.overflow='hidden';}
-function closeLightbox(){const lb=document.getElementById('ilb');if(!lb)return;lb.style.opacity='0';setTimeout(()=>{lb.style.display='none';document.getElementById('ilbImg').src='';},300);document.body.style.overflow='';_ilbItem=null;}
-function ilbAddToCart(){if(_ilbItem){addToCart(_ilbItem);closeLightbox();}}
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLightbox();closeCart();}});
-
-// Inject cart buttons on catalog products
-(function(){
-  document.querySelectorAll('.pgrid .pc,.pgrid-list .pc').forEach(card=>{
-    const name=card.querySelector('.pc-name')?.textContent.trim()||'';
-    const price=card.querySelector('.pc-price')?.textContent.trim().split('\n')[0]||'Consultar';
-    const priceNum=parseInt(price.replace(/\D/g,''))||0;
-    const img=card.querySelector('.pc-img img')?.src||'';
-    const cat=card.querySelector('.pc-cat')?.textContent.trim()||'';
-    const mat=card.querySelector('.pc-mat')?.textContent.trim()||'';
-    const id=name.toLowerCase().replace(/\s+/g,'-');
-    const pcImg=card.querySelector('.pc-img');
-    if(pcImg){
-      // Zoom cursor
-      pcImg.style.cursor='zoom-in';
-      pcImg.addEventListener('click',function(e){
-        if(e.target.closest('button,.pc-acts'))return;
-        e.stopPropagation();
-        openLightbox(img,name,{id,name,price,priceNum,img,cat,mat});
-      });
-      // Add to cart button
-      const btn=document.createElement('button');
-      btn.style.cssText='position:absolute;bottom:48px;left:12px;z-index:4;background:#c4a46b;color:#161412;border:none;border-radius:4px;padding:8px 13px;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;display:none;align-items:center;gap:6px;transition:all .3s;white-space:nowrap';
-      btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg> Agregar';
-      btn.onclick=function(e){e.stopPropagation();addToCart({id,name,price,priceNum,img,cat,mat});const orig=btn.innerHTML;btn.style.background='#161412';btn.style.color='#fff';btn.textContent='✓ Agregado';setTimeout(()=>{btn.innerHTML=orig;btn.style.background='#c4a46b';btn.style.color='#161412';},2000);};
-      pcImg.style.position='relative';
-      pcImg.appendChild(btn);
-      pcImg.addEventListener('mouseenter',()=>btn.style.display='flex');
-      pcImg.addEventListener('mouseleave',()=>btn.style.display='none');
-    }
+  document.getElementById('menuBtn').addEventListener('click', function() {
+    document.getElementById('navMobile').classList.toggle('open');
   });
 })();
-
-// CHAT WIDGET
-let chatOpen=false,chatReady=false;
-function toggleChat(){chatOpen=!chatOpen;document.getElementById('chatWidget').classList.toggle('open',chatOpen);document.getElementById('chatBadge').style.display='none';if(chatOpen&&!chatReady){chatReady=true;setTimeout(()=>{document.getElementById('chatTyping').style.display='none';document.getElementById('chatMsg').style.display='block';document.getElementById('chatQr').style.display='flex';},1800);}}
-function closeChatBubble(){chatOpen=false;document.getElementById('chatWidget').classList.remove('open');}
-setTimeout(()=>{if(!chatOpen&&!sessionStorage.getItem('chatOpened')){toggleChat();sessionStorage.setItem('chatOpened','1');}},15000);
 </script>
-<a href="https://wa.me/543585075773" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
-</a>
-<script>
-/* Mobile nav toggle */
-(()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
-<a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
 </body>
 </html>

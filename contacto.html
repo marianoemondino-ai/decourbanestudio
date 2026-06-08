@@ -61,13 +61,14 @@
 </script>
 <link rel="dns-prefetch" href="https://dcdn-us.mitiendanube.com"/>
 <link rel="stylesheet" href="styles.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
 
 </head>
 <body>
-<nav class="site-nav">
+
+
+
+<!-- NAV -->
+<nav class="site-nav solid" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" width="160" height="38"/>
@@ -77,23 +78,22 @@
       <a href="proyectos.html">Proyectos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="nav-cta" target="_blank" rel="noopener">Consultar</a>
+      <a href="contacto.html" class="nav-cta">Consultar</a>
     </div>
-    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <button class="nav-hamburger" id="menuBtn" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
-  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
-  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
-  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
-  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+  <a href="cortinas.html">Productos</a>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:#111;color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;">Consultar</a>
 </div>
-
-<!-- NAV -->
-
 
 <!-- HERO MINI -->
 <div class="hero-mini">
@@ -279,7 +279,7 @@
   <div class="hours-inner">
     <div class="hours-text rv">
       <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>Showroom</p>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,36px);font-weight:500;margin-bottom:16px;line-height:1.15">Horarios de <em style="font-style:italic;color:var(--gold)">atención</em></h2>
+      <h2 style="font-family:inherit;font-size:clamp(26px,3vw,36px);font-weight:500;margin-bottom:16px;line-height:1.15">Horarios de <em style="font-style:italic;color:var(--gold)">atención</em></h2>
       <p>Nuestro showroom está abierto para que puedas ver, tocar y elegir con calma. Te recomendamos coordinar una visita para que un asesor esté disponible exclusivamente para vos.</p>
       <table class="hours-table" style="margin-top:24px">
         <tr><td>Lunes</td><td>9:00 – 18:00</td></tr>
@@ -339,164 +339,61 @@
 
 <!-- FOOTER -->
 <footer class="site-footer">
-  <div class="container">
+  <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
-        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores desde 2004.</p>
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+        </div>
+        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores a medida desde 2004.</p>
+        <p style="margin-top:16px;color:rgba(255,255,255,.35);">Juan de Garay 1550, Río Cuarto<br/>+54 358 507-5773<br/>ventas@decourban.com.ar</p>
       </div>
       <div class="footer-col">
         <h4>Productos</h4>
-        <a href="cortinas-silhouette.html">Silhouette</a>
-        <a href="cortinas-pirouette.html">Pirouette</a>
-        <a href="cortinas-duette.html">Duette</a>
-        <a href="cortinas-roller.html">Roller</a>
+        <a href="cortinas-silhouette.html">Silhouette®</a>
+        <a href="cortinas-pirouette.html">Pirouette®</a>
+        <a href="cortinas-duette.html">Duette®</a>
         <a href="toldo-gemini.html">Toldo Gemini</a>
-        <a href="powerview.html">PowerView</a>
+        <a href="cortinas.html">Ver todos</a>
       </div>
       <div class="footer-col">
-        <h4>Empresa</h4>
-        <a href="nosotros.html">Nosotros</a>
+        <h4>Nosotros</h4>
+        <a href="nosotros.html">La empresa</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="garantia.html">Garantía</a>
         <a href="contacto.html">Contacto</a>
+        <a href="https://decourbanestudio.com.ar/productos" target="_blank" rel="noopener">Tienda online</a>
       </div>
       <div class="footer-col">
-        <h4>Contacto</h4>
-        <a href="tel:+543585075773">358 507-5773</a>
-        <a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a>
-        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+R%C3%ADo+Cuarto" target="_blank" rel="noopener">Juan de Garay 1550, Río Cuarto</a>
-        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">@decourbanestudio</a>
+        <h4>Recursos</h4>
+        <a href="blog-cortinas-hunter-douglas.html">Blog</a>
+        <a href="quiz-cortinas.html">Quiz de cortinas</a>
+        <a href="visualizador.html">Visualizador</a>
+        <a href="guia-por-ambiente.html">Guía por ambiente</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Decourban Estudio. Todos los derechos reservados.</span>
-      <span>Río Cuarto, Córdoba, Argentina</span>
+      <p>© 2026 Decourban Estudio. Todos los derechos reservados.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/543585075773" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:ventas@decourban.com.ar">Email</a>
+      </div>
     </div>
   </div>
 </footer>
 
-<!-- CHAT WIDGET -->
-<div class="chat-widget" id="chatWidget">
-  <div class="chat-bubble" id="chatBubble">
-    <div class="chat-close-row"><button class="chat-close-btn" onclick="closeChatBubble()" aria-label="Cerrar">✕</button></div>
-    <div class="chat-bubble-head">
-      <div class="chat-bubble-av"><span style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#161412">MK</span></div>
-      <div>
-        <div class="chat-bubble-name">Decourban</div>
-        <div class="chat-bubble-sub">Decourban Estudio · Río Cuarto</div>
-        <div class="chat-bubble-status">Disponible · resp. en ~2 hs</div>
-      </div>
-    </div>
-    <div class="chat-typing" id="chatTyping"><span></span><span></span><span></span></div>
-    <div class="chat-msg" id="chatMsg" style="display:none">Hola, somos el equipo de DecoUrban Studio 👋 ¿Preferís hablar por WhatsApp en vez del formulario? Es más rápido.</div>
-    <div class="chat-quick-replies" id="chatQr" style="display:none">
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quisiera%20cotizar%20cortinas%20Hunter%20Douglas%20para%20mi%20casa" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">🪟 Cotizar cortinas</a>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20me%20interesa%20una%20pieza%20del%20cat%C3%A1logo%20de%20muebles%20y%20decoraci%C3%B3n" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">🛋 Consultar muebles</a>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20%C2%BFc%C3%B3mo%20puedo%20llegar%20al%20showroom%20en%20Juan%20de%20Garay%201550%2C%20R%C3%ADo%20Cuarto%3F" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">📍 Cómo llegar al showroom</a>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20tengo%20una%20consulta%20para%20Decourban" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">💬 Otra consulta</a>
-    </div>
-  </div>
-  <button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Chat WhatsApp">
-    <div class="chat-fab-badge" id="chatBadge">1</div>
-    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
-  </button>
-</div>
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/543585075773?text=Hola,%20me%20gustaría%20consultar%20sobre%20sus%20productos" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
 <script>
-// FAQ
-function toggleFq(el){
-  const item=el.parentElement;
-  const wasOpen=item.classList.contains('open');
-  document.querySelectorAll('.fq-item').forEach(i=>i.classList.remove('open'));
-  if(!wasOpen)item.classList.add('open');
-}
-
-// FORM
-function showErr(id,msg){const el=document.getElementById(id);if(el){el.textContent=msg;el.style.display=msg?'block':'none'}}
-function clearErr(id){showErr(id,'')}
-
-function submitContact(e){
-  e.preventDefault();
-  const name=(document.getElementById('cf-name')?.value||'').trim();
-  const phone=(document.getElementById('cf-phone')?.value||'').replace(/\s/g,'').trim();
-  const service=document.getElementById('cf-service')?.value||'';
-  const msg=(document.getElementById('cf-msg')?.value||'').trim();
-  const pref=document.querySelector('input[name=contact_pref]:checked')?.value||'whatsapp';
-
-  let valid=true;
-  clearErr('err-name');clearErr('err-phone');
-
-  if(!name){showErr('err-name','Por favor ingresá tu nombre.');valid=false;}
-  if(!phone||phone.replace(/\D/g,'').length<8){showErr('err-phone','Ingresá un número de teléfono válido (mín. 8 dígitos).');valid=false;}
-  if(!service){
-    const sel=document.getElementById('cf-service');
-    if(sel){sel.style.borderColor='#e05'; setTimeout(()=>sel.style.borderColor='',2000);}
-    valid=false;
-  }
-  if(!valid)return;
-
-  const btn=e.target.querySelector('.submit-btn');
-  btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" opacity=".25"/><path d="M21 12a9 9 0 01-9 9"/></svg> Enviando…';
-  btn.disabled=true;
-
-  const prefMap={whatsapp:'WhatsApp',email:'Email',visita:'Visita al showroom'};
-  const lines=[
-    `Hola, soy *${name}*.`,
-    `*Consulta desde el formulario web*`,
-    ``,
-    `Servicio: ${service}`,
-    pref!=='whatsapp'?`Preferencia de contacto: ${prefMap[pref]||pref}`:'',
-    msg?`Mensaje: ${msg}`:'',
-    ``,
-    `Teléfono: ${phone}`,
-  ].filter(l=>l!==undefined&&l!==null);
-
-  const waText=lines.join('\n').replace(/\n{3,}/g,'\n\n').trim();
-
-  setTimeout(()=>{
-    document.getElementById('successMsg').classList.add('show');
-    btn.style.display='none';
-    window.open('https://wa.me/543585075773?text='+encodeURIComponent(waText),'_blank');
-  },500);
-}
-
-// Character counter for textarea
-document.getElementById('cf-msg')?.addEventListener('input',function(){
-  const count=this.value.length;
-  const el=document.getElementById('cf-msg-count');
-  if(el)el.textContent=count+' / 1000';
-});
-
-// REVEAL
-const ro=new IntersectionObserver(ents=>{
-  ents.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);ro.unobserve(e.target)}});
-},{threshold:.08,rootMargin:'0px 0px -36px 0px'});
-document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
-
-// HAMBURGER MENU
-(function(){const btn=document.getElementById('ham');const nav=document.querySelector('.nav-links');if(!btn||!nav)return;const overlay=document.createElement('div');overlay.style.cssText='position:fixed;inset:0;background:rgba(22,20,18,.97);z-index:800;display:none;flex-direction:column;padding:90px 36px 40px;gap:0;overflow-y:auto';nav.querySelectorAll('a').forEach(l=>{const a=document.createElement('a');a.href=l.href;a.textContent=l.textContent;a.style.cssText='font-family:"Playfair Display",serif;font-size:26px;font-weight:500;color:#fff;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);display:block';a.addEventListener('click',()=>{overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')});overlay.appendChild(a);});const wa=document.createElement('a');wa.href='https://wa.me/543585075773';wa.target='_blank';wa.textContent='+54 358 5075773';wa.style.cssText='color:#25D366;font-size:16px;padding:20px 0;display:block;margin-top:16px;font-weight:600';overlay.appendChild(wa);document.body.appendChild(overlay);btn.addEventListener('click',()=>{const open=overlay.style.display==='flex';overlay.style.display=open?'none':'flex';document.body.style.overflow=open?'':'hidden';btn.classList.toggle('is-open',!open)});overlay.addEventListener('click',e=>{if(e.target===overlay){overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')}});})();
-
-// SERVICE WORKER
-if('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>{});
-if(localStorage.getItem('dark')==='1') document.body.classList.add('dark');
-
-// CHAT WIDGET
-let chatOpen=false,chatReady=false;
-function toggleChat(){chatOpen=!chatOpen;document.getElementById('chatWidget').classList.toggle('open',chatOpen);document.getElementById('chatBadge').style.display='none';if(chatOpen&&!chatReady){chatReady=true;setTimeout(()=>{document.getElementById('chatTyping').style.display='none';document.getElementById('chatMsg').style.display='block';document.getElementById('chatQr').style.display='flex';},1800);}}
-function closeChatBubble(){chatOpen=false;document.getElementById('chatWidget').classList.remove('open');}
-setTimeout(()=>{if(!chatOpen&&!sessionStorage.getItem('chatOpened')){toggleChat();sessionStorage.setItem('chatOpened','1');}},15000);
+(function(){
+  document.getElementById('menuBtn').addEventListener('click', function() {
+    document.getElementById('navMobile').classList.toggle('open');
+  });
+})();
 </script>
-<a href="https://wa.me/543585075773" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
-</a>
-<script>
-/* Mobile nav toggle */
-(()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
-<a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
 </body>
 </html>

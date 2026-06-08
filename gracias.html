@@ -7,86 +7,8 @@
 <meta name="robots" content="noindex,nofollow"/>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="manifest" href="manifest.json"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
-<style>
-:root{--gold:#c4a46b;--gold-light:#f5ead8;--bg:#faf8f5;--bg-dark:#161412;--text:#1c1a18;--text-mid:#5c5550;--text-light:#756d66;--border:#e6dfd6;--r:3px;--ease:0.38s cubic-bezier(.25,.46,.45,.94)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
 
-/* NAV */
-nav{background:rgba(250,248,245,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;flex-shrink:0}
-.logo-img{height:44px;object-fit:contain}
-.nav-back{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-mid);transition:color var(--ease)}
-.nav-back:hover{color:var(--gold)}
-.nav-back svg{width:16px;height:16px}
-
-/* HERO */
-.hero{flex:1;display:flex;align-items:center;justify-content:center;padding:80px 36px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(196,164,107,.08),transparent)}
-.hero-inner{max-width:720px;text-align:center;position:relative;z-index:1}
-
-/* CHECK ANIMATION */
-.check-wrap{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#e8c47a);display:flex;align-items:center;justify-content:center;margin:0 auto 36px;animation:checkPop .6s cubic-bezier(.34,1.56,.64,1) both;box-shadow:0 8px 40px rgba(196,164,107,.35)}
-@keyframes checkPop{from{transform:scale(0) rotate(-20deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
-.check-wrap svg{width:48px;height:48px;color:#fff;stroke-width:2.5}
-.check-wrap svg path{stroke-dasharray:100;stroke-dashoffset:100;animation:drawCheck .5s ease .3s forwards}
-@keyframes drawCheck{to{stroke-dashoffset:0}}
-
-.tag{display:inline-block;background:var(--gold-light);color:var(--gold);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;padding:6px 16px;border-radius:40px;margin-bottom:20px;animation:fadeUp .5s ease .2s both}
-h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,64px);font-weight:500;line-height:1.1;margin-bottom:20px;animation:fadeUp .5s ease .3s both}
-h1 em{font-style:italic;color:var(--gold)}
-.subtitle{font-size:17px;color:var(--text-mid);line-height:1.75;max-width:520px;margin:0 auto 48px;animation:fadeUp .5s ease .4s both}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-
-/* TIMELINE */
-.timeline{display:flex;gap:0;justify-content:center;margin-bottom:56px;animation:fadeUp .5s ease .5s both;flex-wrap:wrap}
-.tl-step{display:flex;flex-direction:column;align-items:center;flex:1;min-width:140px;max-width:200px;position:relative}
-.tl-step:not(:last-child)::after{content:'';position:absolute;top:24px;left:calc(50% + 28px);right:calc(-50% + 28px);height:1px;background:var(--border)}
-.tl-icon{width:48px;height:48px;border-radius:50%;background:var(--bg);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:var(--gold);transition:all var(--ease);position:relative;z-index:1}
-.tl-icon svg{width:20px;height:20px}
-.tl-step.done .tl-icon{background:var(--gold);border-color:var(--gold);color:#fff}
-.tl-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;text-align:center}
-.tl-desc{font-size:11.5px;color:var(--text-light);text-align:center;line-height:1.5}
-
-/* ACTIONS */
-.actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:fadeUp .5s ease .6s both}
-.btn-wa{display:flex;align-items:center;gap:9px;background:#25D366;color:#fff;padding:16px 32px;border-radius:40px;font-size:13px;font-weight:700;letter-spacing:.5px;transition:all var(--ease);box-shadow:0 4px 24px rgba(37,211,102,.3)}
-.btn-wa:hover{background:#1bb558;transform:translateY(-2px);box-shadow:0 8px 32px rgba(37,211,102,.4)}
-.btn-wa svg{width:20px;height:20px}
-.btn-home{display:flex;align-items:center;gap:9px;background:var(--bg);border:1.5px solid var(--border);color:var(--text-mid);padding:15px 28px;border-radius:40px;font-size:13px;font-weight:600;transition:all var(--ease)}
-.btn-home:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-1px)}
-.btn-home svg{width:16px;height:16px}
-
-/* SOCIAL STRIP */
-.social-strip{text-align:center;margin-top:56px;padding-top:40px;border-top:1px solid var(--border);animation:fadeUp .5s ease .7s both}
-.social-strip p{font-size:13.5px;color:var(--text-mid);margin-bottom:20px}
-.social-btns{display:flex;gap:12px;justify-content:center}
-.soc-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-mid);transition:all var(--ease)}
-.soc-btn:hover{background:var(--gold);border-color:var(--gold);color:#fff;transform:translateY(-2px)}
-.soc-btn svg{width:18px;height:18px}
-
-/* FOOTER */
-footer{background:var(--bg-dark);padding:24px 36px;text-align:center;font-size:12px;color:rgba(255,255,255,.25)}
-footer a{color:rgba(255,255,255,.35);transition:color var(--ease)}
-footer a:hover{color:var(--gold)}
-
-/* CONFETTI */
-.confetti-piece{position:fixed;width:8px;height:8px;border-radius:50%;top:-10px;animation:confettiFall linear forwards;pointer-events:none;z-index:9999}
-@keyframes confettiFall{0%{transform:translateY(0) rotate(0) scale(1);opacity:1}100%{transform:translateY(100vh) rotate(720deg) scale(.5);opacity:0}}
-
-@media(max-width:600px){
-  nav{padding:0 20px}
-  .hero{padding:48px 20px}
-  .tl-step:not(:last-child)::after{display:none}
-  .timeline{gap:20px}
-  .actions{flex-direction:column;align-items:center}
-}
-</style>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
@@ -170,9 +92,64 @@ footer a:hover{color:var(--gold)}
   </div>
 </div>
 
-<footer>
-  <span>© 2026 Decourban Estudio · <a href="index.html">Inicio</a> · <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">WhatsApp</a></span>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+        </div>
+        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores a medida desde 2004.</p>
+        <p style="margin-top:16px;color:rgba(255,255,255,.35);">Juan de Garay 1550, Río Cuarto<br/>+54 358 507-5773<br/>ventas@decourban.com.ar</p>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <a href="cortinas-silhouette.html">Silhouette®</a>
+        <a href="cortinas-pirouette.html">Pirouette®</a>
+        <a href="cortinas-duette.html">Duette®</a>
+        <a href="toldo-gemini.html">Toldo Gemini</a>
+        <a href="cortinas.html">Ver todos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Nosotros</h4>
+        <a href="nosotros.html">La empresa</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="garantia.html">Garantía</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="https://decourbanestudio.com.ar/productos" target="_blank" rel="noopener">Tienda online</a>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="blog-cortinas-hunter-douglas.html">Blog</a>
+        <a href="quiz-cortinas.html">Quiz de cortinas</a>
+        <a href="visualizador.html">Visualizador</a>
+        <a href="guia-por-ambiente.html">Guía por ambiente</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Decourban Estudio. Todos los derechos reservados.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/543585075773" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:ventas@decourban.com.ar">Email</a>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/543585075773?text=Hola,%20me%20gustaría%20consultar%20sobre%20sus%20productos" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+(function(){
+  document.getElementById('menuBtn').addEventListener('click', function() {
+    document.getElementById('navMobile').classList.toggle('open');
+  });
+})();
+</script>
 
 <script>
 // CONFETTI

@@ -70,13 +70,14 @@
 <link rel="dns-prefetch" href="https://dcdn-us.mitiendanube.com"/>
 <link rel="preconnect" href="https://dcdn-us.mitiendanube.com" crossorigin/>
 <link rel="stylesheet" href="styles.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
 
 </head>
 <body>
-<nav class="site-nav">
+
+
+
+<!-- NAV -->
+<nav class="site-nav solid" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" width="160" height="38"/>
@@ -86,23 +87,22 @@
       <a href="proyectos.html">Proyectos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="nav-cta" target="_blank" rel="noopener">Consultar</a>
+      <a href="contacto.html" class="nav-cta">Consultar</a>
     </div>
-    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <button class="nav-hamburger" id="menuBtn" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
-  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
-  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
-  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
-  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+  <a href="cortinas.html">Productos</a>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:#111;color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;">Consultar</a>
 </div>
-
-<!-- NAV -->
-
 
 <!-- HERO -->
 <section class="hero">
@@ -156,19 +156,19 @@
       </div>
       <div style="background:var(--bg-dark);border-radius:6px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div style="text-align:center;padding:20px;border-radius:4px;background:rgba(196,164,107,.08)">
-          <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:var(--gold);line-height:1">75+</div>
+          <div style="font-family:inherit;font-size:36px;font-weight:600;color:var(--gold);line-height:1">75+</div>
           <div style="font-size:11.5px;color:rgba(255,255,255,.5);margin-top:6px;line-height:1.4">Años de<br>innovación</div>
         </div>
         <div style="text-align:center;padding:20px;border-radius:4px;background:rgba(196,164,107,.08)">
-          <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:var(--gold);line-height:1">100+</div>
+          <div style="font-family:inherit;font-size:36px;font-weight:600;color:var(--gold);line-height:1">100+</div>
           <div style="font-size:11.5px;color:rgba(255,255,255,.5);margin-top:6px;line-height:1.4">Países donde<br>opera</div>
         </div>
         <div style="text-align:center;padding:20px;border-radius:4px;background:rgba(196,164,107,.08)">
-          <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:var(--gold);line-height:1">9</div>
+          <div style="font-family:inherit;font-size:36px;font-weight:600;color:var(--gold);line-height:1">9</div>
           <div style="font-size:11.5px;color:rgba(255,255,255,.5);margin-top:6px;line-height:1.4">Colecciones<br>disponibles</div>
         </div>
         <div style="text-align:center;padding:20px;border-radius:4px;background:rgba(196,164,107,.08)">
-          <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:var(--gold);line-height:1">5★</div>
+          <div style="font-family:inherit;font-size:36px;font-weight:600;color:var(--gold);line-height:1">5★</div>
           <div style="font-size:11.5px;color:rgba(255,255,255,.5);margin-top:6px;line-height:1.4">Garantía en<br>productos</div>
         </div>
       </div>
@@ -513,7 +513,7 @@
     <div class="rangos-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
       <div class="rv" style="background:#fff;border:1.5px solid var(--border);border-radius:4px;padding:28px 24px;text-align:center">
         <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);font-weight:600;margin-bottom:12px">Roller Quantum®</div>
-        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--text);line-height:1;margin-bottom:6px">$$</div>
+        <div style="font-family:inherit;font-size:32px;font-weight:600;color:var(--text);line-height:1;margin-bottom:6px">$$</div>
         <div style="font-size:22px;font-weight:700;color:var(--gold);margin-bottom:8px">Desde $80.000</div>
         <div style="font-size:12.5px;color:var(--text-mid);line-height:1.65">La opción más accesible de la línea Hunter Douglas. Blackout, screen o decorativa.</div>
         <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--text-light)">Instalación incluida · Fabricación a medida</div>
@@ -521,14 +521,14 @@
       <div class="rv" style="background:var(--bg-dark);border:2px solid var(--gold);border-radius:4px;padding:28px 24px;text-align:center;position:relative">
         <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--bg-dark);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 14px;border-radius:40px">Más elegida</div>
         <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(196,164,107,.7);font-weight:600;margin-bottom:12px">Duette® · Silhouette®</div>
-        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:#fff;line-height:1;margin-bottom:6px">$$$</div>
+        <div style="font-family:inherit;font-size:32px;font-weight:600;color:#fff;line-height:1;margin-bottom:6px">$$$</div>
         <div style="font-size:22px;font-weight:700;color:var(--gold);margin-bottom:8px">Desde $150.000</div>
         <div style="font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.65">La relación precio-calidad más valorada. Aislación, elegancia y durabilidad máxima.</div>
         <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:rgba(255,255,255,.35)">Instalación incluida · Garantía 5 años HD</div>
       </div>
       <div class="rv" style="background:#fff;border:1.5px solid var(--border);border-radius:4px;padding:28px 24px;text-align:center">
         <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);font-weight:600;margin-bottom:12px">Pirouette® · Luminette®</div>
-        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--text);line-height:1;margin-bottom:6px">$$$$</div>
+        <div style="font-family:inherit;font-size:32px;font-weight:600;color:var(--text);line-height:1;margin-bottom:6px">$$$$</div>
         <div style="font-size:22px;font-weight:700;color:var(--gold);margin-bottom:8px">Desde $200.000</div>
         <div style="font-size:12.5px;color:var(--text-mid);line-height:1.65">La línea premium. Diseño único, mecanismos exclusivos y el mejor control de luz del mercado.</div>
         <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--text-light)">Instalación incluida · PowerView® disponible</div>
@@ -624,21 +624,21 @@
         <div style="width:56px;height:56px;border-radius:50%;background:rgba(196,164,107,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26" style="color:var(--gold)"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
         </div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:#fff;margin-bottom:10px">App PowerView®</h3>
+        <h3 style="font-family:inherit;font-size:18px;font-weight:500;color:#fff;margin-bottom:10px">App PowerView®</h3>
         <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75">Controlá todas tus cortinas desde el celular. Programá escenas según la hora del día y el ambiente que querés crear.</p>
       </div>
       <div class="rv" style="background:var(--bg-dark);padding:36px 28px;border-radius:4px;text-align:center">
         <div style="width:56px;height:56px;border-radius:50%;background:rgba(196,164,107,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26" style="color:var(--gold)"><path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
         </div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:#fff;margin-bottom:10px">Asistente de voz</h3>
+        <h3 style="font-family:inherit;font-size:18px;font-weight:500;color:#fff;margin-bottom:10px">Asistente de voz</h3>
         <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75">Compatible con Amazon Alexa, Google Home y Apple HomeKit. Abrí o cerrá tus cortinas con un simple comando de voz.</p>
       </div>
       <div class="rv" style="background:var(--bg-dark);padding:36px 28px;border-radius:4px;text-align:center">
         <div style="width:56px;height:56px;border-radius:50%;background:rgba(196,164,107,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26" style="color:var(--gold)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:#fff;margin-bottom:10px">Programación automática</h3>
+        <h3 style="font-family:inherit;font-size:18px;font-weight:500;color:#fff;margin-bottom:10px">Programación automática</h3>
         <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75">Escenas programadas por hora, por sensor de luz solar o por temperatura. Tu hogar se adapta solo a cada momento del día.</p>
       </div>
     </div>
@@ -656,7 +656,7 @@
   <div class="mcta-inner rv">
     <div class="mcta-img" style="display:flex;align-items:center;justify-content:center">
       <!-- Reemplazar con la foto real: <img src="marcela.jpg" ...> -->
-      <span style="font-family:'Playfair Display',serif;font-size:64px;font-weight:600;color:var(--gold);letter-spacing:3px;user-select:none">MK</span>
+      <span style="font-family:inherit;font-size:64px;font-weight:600;color:var(--gold);letter-spacing:3px;user-select:none">MK</span>
     </div>
     <div class="mcta-text">
       <p class="ey" style="color:rgba(196,164,107,.7)">Asesoramiento personalizado</p>
@@ -681,7 +681,7 @@
   <div style="max-width:1000px;margin:0 auto">
     <div style="text-align:center;margin-bottom:44px">
       <p class="ey ey-c" style="justify-content:center;display:flex;margin-bottom:10px">Antes de cotizar</p>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);font-weight:500;line-height:1.15">¿Cómo medir <em style="font-style:italic;color:var(--gold)">tu ventana</em>?</h2>
+      <h2 style="font-family:inherit;font-size:clamp(26px,3vw,38px);font-weight:500;line-height:1.15">¿Cómo medir <em style="font-style:italic;color:var(--gold)">tu ventana</em>?</h2>
       <p style="font-size:15px;color:var(--text-mid);max-width:520px;margin:12px auto 0;line-height:1.7">No necesitás medirla vos — Enviamos un técnico a domicilio sin costo. Pero si querés una idea del precio antes, aquí te explicamos cómo.</p>
     </div>
     <div class="medicion-grid">
@@ -689,21 +689,21 @@
         <div style="width:56px;height:56px;border-radius:50%;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24" style="color:var(--gold)"><path d="M3 10h18M3 6h18M3 14h18M3 18h18"/></svg>
         </div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:17px;margin-bottom:10px">1. Ancho</h3>
+        <h3 style="font-family:inherit;font-size:17px;margin-bottom:10px">1. Ancho</h3>
         <p style="font-size:13.5px;color:var(--text-mid);line-height:1.7">Medí el ancho de la pared donde va la cortina, no solo el vidrio. Para una cobertura perfecta, sumá 15-20 cm a cada lado del hueco de la ventana.</p>
       </div>
       <div style="background:#fff;padding:28px;border-radius:4px;border:1.5px solid var(--border);text-align:center">
         <div style="width:56px;height:56px;border-radius:50%;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24" style="color:var(--gold)"><path d="M12 2v20M2 12h20"/></svg>
         </div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:17px;margin-bottom:10px">2. Alto</h3>
+        <h3 style="font-family:inherit;font-size:17px;margin-bottom:10px">2. Alto</h3>
         <p style="font-size:13.5px;color:var(--text-mid);line-height:1.7">Medí desde donde va el riel (techo o dintel) hasta donde terminará la cortina (piso, alféizar o entre medias). Nuestro equipo te asesora cuál es la mejor opción.</p>
       </div>
       <div style="background:#fff;padding:28px;border-radius:4px;border:1.5px solid var(--border);text-align:center">
         <div style="width:56px;height:56px;border-radius:50%;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24" style="color:var(--gold)"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:17px;margin-bottom:10px">3. Mejor aún: pedí medición gratis</h3>
+        <h3 style="font-family:inherit;font-size:17px;margin-bottom:10px">3. Mejor aún: pedí medición gratis</h3>
         <p style="font-size:13.5px;color:var(--text-mid);line-height:1.7">Nuestro técnico va a tu casa en Río Cuarto y hace las mediciones exactas. Sin costo, sin compromiso. Es la mejor manera de asegurar una instalación perfecta.</p>
       </div>
     </div>
@@ -784,136 +784,61 @@
 
 <!-- FOOTER -->
 <footer class="site-footer">
-  <div class="container">
+  <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
-        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores desde 2004.</p>
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+        </div>
+        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores a medida desde 2004.</p>
+        <p style="margin-top:16px;color:rgba(255,255,255,.35);">Juan de Garay 1550, Río Cuarto<br/>+54 358 507-5773<br/>ventas@decourban.com.ar</p>
       </div>
       <div class="footer-col">
         <h4>Productos</h4>
-        <a href="cortinas-silhouette.html">Silhouette</a>
-        <a href="cortinas-pirouette.html">Pirouette</a>
-        <a href="cortinas-duette.html">Duette</a>
-        <a href="cortinas-roller.html">Roller</a>
+        <a href="cortinas-silhouette.html">Silhouette®</a>
+        <a href="cortinas-pirouette.html">Pirouette®</a>
+        <a href="cortinas-duette.html">Duette®</a>
         <a href="toldo-gemini.html">Toldo Gemini</a>
-        <a href="powerview.html">PowerView</a>
+        <a href="cortinas.html">Ver todos</a>
       </div>
       <div class="footer-col">
-        <h4>Empresa</h4>
-        <a href="nosotros.html">Nosotros</a>
+        <h4>Nosotros</h4>
+        <a href="nosotros.html">La empresa</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="garantia.html">Garantía</a>
         <a href="contacto.html">Contacto</a>
+        <a href="https://decourbanestudio.com.ar/productos" target="_blank" rel="noopener">Tienda online</a>
       </div>
       <div class="footer-col">
-        <h4>Contacto</h4>
-        <a href="tel:+543585075773">358 507-5773</a>
-        <a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a>
-        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+R%C3%ADo+Cuarto" target="_blank" rel="noopener">Juan de Garay 1550, Río Cuarto</a>
-        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">@decourbanestudio</a>
+        <h4>Recursos</h4>
+        <a href="blog-cortinas-hunter-douglas.html">Blog</a>
+        <a href="quiz-cortinas.html">Quiz de cortinas</a>
+        <a href="visualizador.html">Visualizador</a>
+        <a href="guia-por-ambiente.html">Guía por ambiente</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Decourban Estudio. Todos los derechos reservados.</span>
-      <span>Río Cuarto, Córdoba, Argentina</span>
+      <p>© 2026 Decourban Estudio. Todos los derechos reservados.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/543585075773" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:ventas@decourban.com.ar">Email</a>
+      </div>
     </div>
   </div>
 </footer>
 
-<!-- CHAT WIDGET -->
-<div class="chat-widget" id="chatWidget">
-  <div class="chat-bubble" id="chatBubble">
-    <div class="chat-close-row">
-      <button class="chat-close-btn" onclick="closeChatBubble()" aria-label="Cerrar">✕</button>
-    </div>
-    <div class="chat-bubble-head">
-      <div class="chat-bubble-av">
-        <span style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#161412">MK</span>
-      </div>
-      <div>
-        <div class="chat-bubble-name">Decourban</div>
-        <div class="chat-bubble-sub">Decourban Estudio · Río Cuarto</div>
-        <div class="chat-bubble-status">Disponible · resp. en ~2 hs</div>
-      </div>
-    </div>
-    <div class="chat-typing" id="chatTyping"><span></span><span></span><span></span></div>
-    <div class="chat-msg" id="chatMsg" style="display:none">Hola, somos el equipo de DecoUrban Studio 👋 ¿Qué cortinas te interesan? Te asesoro sin cargo ni compromiso.</div>
-    <div class="chat-quick-replies" id="chatQr" style="display:none">
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quisiera%20cotizar%20cortinas%20Hunter%20Douglas%20(Silhouette%C2%AE%2C%20Duette%C2%AE%20o%20Pirouette%C2%AE).%20%C2%BFMe%20pod%C3%A9s%20asesorar%3F" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">🪟 Cotizar Silhouette® / Duette®</a>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quisiera%20solicitar%20una%20medici%C3%B3n%20a%20domicilio%20sin%20cargo.%20%C2%BFC%C3%BA%C3%A1ndo%20tienen%20disponibilidad%3F" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">📐 Medición a domicilio gratis</a>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20la%20motorizaci%C3%B3n%20PowerView%C2%AE%20de%20Hunter%20Douglas" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">⚡ Motorización PowerView®</a>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20tengo%20una%20consulta%20sobre%20cortinas%20Hunter%20Douglas" class="chat-qr" target="_blank" rel="noopener noreferrer" onclick="closeChatBubble()">💬 Otra consulta</a>
-    </div>
-  </div>
-  <button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Chat WhatsApp">
-    <div class="chat-fab-badge" id="chatBadge">1</div>
-    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
-  </button>
-</div>
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/543585075773?text=Hola,%20me%20gustaría%20consultar%20sobre%20sus%20productos" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
 <script>
-// HERO BG ZOOM
-const hb=document.getElementById('heroBg');
-if(hb){hb.style.backgroundImage="url('https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp')";setTimeout(()=>hb.classList.add('loaded'),150)}
-
-// FAQ
-function toggleFq(btn){
-  const item=btn.closest('.fq-item');
-  const isOpen=item.classList.contains('open');
-  document.querySelectorAll('.fq-item').forEach(i=>i.classList.remove('open'));
-  if(!isOpen)item.classList.add('open');
-}
-
-// REVEAL
-const ro=new IntersectionObserver(ents=>{
-  ents.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);ro.unobserve(e.target)}});
-},{threshold:.08,rootMargin:'0px 0px -36px 0px'});
-document.querySelectorAll('.rv,.rvl,.rvr').forEach(el=>ro.observe(el));
-
-// COPYRIGHT YEAR
-document.querySelectorAll('.ft-year').forEach(el=>el.textContent=new Date().getFullYear());
-
-// HAMBURGER MENU
-(function(){const btn=document.getElementById('ham');const nav=document.querySelector('.nav-links');if(!btn||!nav)return;const overlay=document.createElement('div');overlay.style.cssText='position:fixed;inset:0;background:rgba(22,20,18,.97);z-index:800;display:none;flex-direction:column;padding:90px 36px 40px;gap:0;overflow-y:auto';nav.querySelectorAll('a').forEach(l=>{const a=document.createElement('a');a.href=l.href;a.textContent=l.textContent;a.style.cssText='font-family:"Playfair Display",serif;font-size:26px;font-weight:500;color:#fff;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);display:block';a.addEventListener('click',()=>{overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')});overlay.appendChild(a);});const wa=document.createElement('a');wa.href='https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20cortinas%20Hunter%20Douglas';wa.target='_blank';wa.textContent='+54 358 5075773 — Cotizar cortinas';wa.style.cssText='color:#25D366;font-size:16px;padding:20px 0;display:block;margin-top:16px;font-weight:600';overlay.appendChild(wa);document.body.appendChild(overlay);btn.addEventListener('click',()=>{const open=overlay.style.display==='flex';overlay.style.display=open?'none':'flex';document.body.style.overflow=open?'':'hidden';btn.classList.toggle('is-open',!open)});overlay.addEventListener('click',e=>{if(e.target===overlay){overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')}});})();
-
-// NAV DROPDOWN KEYBOARD
 (function(){
-  const dd=document.querySelector('.nav-dropdown');
-  if(!dd)return;
-  const trigger=dd.querySelector('.nav-dd-trigger');
-  const menu=dd.querySelector('.nav-dd-menu');
-  if(!trigger||!menu)return;
-  trigger.setAttribute('tabindex','0');
-  trigger.setAttribute('role','button');
-  trigger.setAttribute('aria-haspopup','true');
-  trigger.setAttribute('aria-expanded','false');
-  function openDD(){dd.classList.add('open');trigger.setAttribute('aria-expanded','true');const first=menu.querySelector('a');if(first)first.focus();}
-  function closeDD(){dd.classList.remove('open');trigger.setAttribute('aria-expanded','false');}
-  trigger.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();dd.classList.contains('open')?closeDD():openDD();}if(e.key==='Escape')closeDD();});
-  menu.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDD();trigger.focus();}});
-  document.addEventListener('click',e=>{if(!dd.contains(e.target))closeDD();});
+  document.getElementById('menuBtn').addEventListener('click', function() {
+    document.getElementById('navMobile').classList.toggle('open');
+  });
 })();
-
-if('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>{});
-if(localStorage.getItem('dark')==='1') document.body.classList.add('dark');
-
-// CHAT WIDGET
-let chatOpen=false,chatReady=false;
-function toggleChat(){chatOpen=!chatOpen;document.getElementById('chatWidget').classList.toggle('open',chatOpen);document.getElementById('chatBadge').style.display='none';if(chatOpen&&!chatReady){chatReady=true;setTimeout(()=>{document.getElementById('chatTyping').style.display='none';document.getElementById('chatMsg').style.display='block';document.getElementById('chatQr').style.display='flex';},1800);}}
-function closeChatBubble(){chatOpen=false;document.getElementById('chatWidget').classList.remove('open');}
-setTimeout(()=>{if(!chatOpen&&!sessionStorage.getItem('chatOpened')){toggleChat();sessionStorage.setItem('chatOpened','1');}},15000);
 </script>
-<a href="https://wa.me/543585075773" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
-</a>
-<script>
-/* Mobile nav toggle */
-(()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
-<a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
 </body>
 </html>

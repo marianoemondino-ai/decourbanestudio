@@ -63,13 +63,14 @@
 }
 </script>
 <link rel="stylesheet" href="styles.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
 
 </head>
 <body>
-<nav class="site-nav">
+
+
+
+<!-- NAV -->
+<nav class="site-nav solid" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" width="160" height="38"/>
@@ -79,206 +80,29 @@
       <a href="proyectos.html">Proyectos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="nav-cta" target="_blank" rel="noopener">Consultar</a>
+      <a href="contacto.html" class="nav-cta">Consultar</a>
     </div>
-    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <button class="nav-hamburger" id="menuBtn" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
-  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
-  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
-  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
-  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+  <a href="cortinas.html">Productos</a>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:#111;color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;">Consultar</a>
 </div>
 
-<!-- NAV -->
-
-
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
-  <a href="index.html">Inicio</a>
-  <span class="bc-sep">›</span>
-  <a href="coleccion.html?cat=muebles">Muebles</a>
-  <span class="bc-sep">›</span>
-  <span class="bc-current">Sillón Monaco</span>
-</div>
-
-<!-- PRODUCT MAIN -->
-<div class="product">
-
-  <!-- GALLERY -->
-  <div class="gallery rv">
-    <div class="gallery-main" id="mainImg">
-      <img id="mainImgEl" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Sillón Monaco — Decourban Estudio"/>
-      <div class="gallery-badge">Nuevo</div>
-    </div>
-    <div class="gallery-thumbs">
-      <div class="gthumb on" onclick="setImg(0)">
-        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Sillón Monaco — vista frontal" loading="lazy"/>
-      </div>
-      <div class="gthumb" onclick="setImg(1)">
-        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Sillón Monaco — detalle de tela" loading="lazy"/>
-      </div>
-      <div class="gthumb" onclick="setImg(2)">
-        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Sillón Monaco — color blanco" loading="lazy"/>
-      </div>
-      <div class="gthumb" onclick="setImg(3)">
-        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Sillón Monaco — vista lateral" loading="lazy"/>
-      </div>
-    </div>
-    <div class="gallery-actions">
-      <button class="gact-btn" id="wlBtn" onclick="toggleWL()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-        Guardar
-      </button>
-      <button class="gact-btn" onclick="shareProduct()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-        Compartir
-      </button>
-      <button class="gact-btn" onclick="printPage()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-        Imprimir
-      </button>
-    </div>
-  </div>
-
-  <!-- PRODUCT INFO -->
-  <div class="pinfo rv">
-
-    <div class="pinfo-cat">Muebles · SKU: DC-MON-001</div>
-    <h1 class="pinfo-title">Sillón Monaco</h1>
-
-    <div class="pinfo-rating">
-      <div class="stars-small">
-        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      </div>
-      <span class="rating-num">5.0</span>
-      <a href="#reviews" class="rating-count">12 reseñas</a>
-    </div>
-
-    <div class="pinfo-price">
-      <div class="price-main" id="priceDisplay">$344.350</div>
-      <div class="price-usd" style="font-size:12.5px;color:var(--text-mid);margin-top:4px;display:flex;align-items:center;gap:6px">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M3 10h18M3 6h18M3 14h18M3 18h18"/></svg>
-        67×70×90 cm · Peso: 10 kg · No incluye almohadones
-      </div>
-      <div class="price-cuotas" id="cuotaDisplay">o 12 cuotas de $28.696 sin interés</div>
-    </div>
-
-    <!-- COLOR SELECTOR -->
-    <div class="selector-block">
-      <div class="selector-label">Color <span id="colorLabel">Negro</span></div>
-      <div class="color-opts">
-        <div class="col-opt on" style="background:#1a1a1a" onclick="selectColor(this,'Negro')" title="Negro — En stock"></div>
-        <div class="col-opt" style="background:#f5f5f5;border:1px solid #ddd" onclick="selectColor(this,'Blanco')" title="Blanco — Consultar stock"></div>
-      </div>
-      <p style="font-size:11.5px;color:var(--text-light);margin-top:6px">Negro: en stock · Blanco: consultar disponibilidad</p>
-    </div>
-
-    <!-- CUOTAS BOX -->
-    <div class="cuotas-box">
-      <div class="cuotas-title">Financiación sin interés</div>
-      <div class="cuotas-opts">
-        <div class="cuota-chip" onclick="selectCuota(this,3,114783)">
-          <div class="months">3 cuotas</div>
-          <div class="amount">$114.783</div>
-          <div class="interest">Sin interés</div>
-        </div>
-        <div class="cuota-chip on" onclick="selectCuota(this,6,57392)">
-          <div class="months">6 cuotas</div>
-          <div class="amount">$57.392</div>
-          <div class="interest">Sin interés</div>
-        </div>
-        <div class="cuota-chip" onclick="selectCuota(this,12,28696)">
-          <div class="months">12 cuotas</div>
-          <div class="amount">$28.696</div>
-          <div class="interest">Sin interés</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CTAs -->
-    <div class="cta-stack">
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20el%20Sill%C3%B3n%20Monaco%20(SKU%3A%20DC-MON-001).%20%C2%BFTiene%20disponibilidad%3F" class="btn-main-wa" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
-        Consultar disponibilidad
-      </a>
-      <button class="btn-sec-wl" id="wlBtnMain" onclick="toggleWL()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-        <span id="wlBtnTxt">Guardar en favoritos</span>
-      </button>
-    </div>
-
-    <!-- TRUST MINI -->
-    <div class="trust-mini">
-      <div class="tm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg><span><strong>Envío gratis</strong> a todo el país · Despacho en 3-5 días hábiles</span></div>
-      <div class="tm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg><span><strong>Garantía de 12 meses</strong> por defectos de fabricación · Si no llega perfecto, lo reponemos</span></div>
-      <div class="tm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4z"/></svg><span>Instalación incluida en Río Cuarto y zona · Coordinamos a distancia</span></div>
-      <div class="tm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>Respondemos en menos de <strong>2 horas</strong> · <a href="mailto:Ventas@decourban.com.ar" style="color:var(--gold);font-weight:500">Ventas@decourban.com.ar</a></span></div>
-      <div class="tm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg><span><strong>Política de devolución:</strong> Muebles tienen 10 días. Productos a medida sin devolución. Consultá con el equipo antes de confirmar.</span></div>
-    </div>
-
-    <!-- PRODUCT TABS -->
-    <div class="ptabs">
-      <div class="ptab-nav">
-        <button class="ptab-btn on" onclick="showTab(0,this)">Descripción</button>
-        <button class="ptab-btn" onclick="showTab(1,this)">Especificaciones</button>
-        <button class="ptab-btn" onclick="showTab(2,this)">Cuidados</button>
-      </div>
-      <div class="ptab-panel on" id="tab0">
-        <p>El <strong>Sillón Monaco</strong> es una pieza de diseño contemporáneo disponible en dos colores: <strong>Negro y Blanco</strong>. Vendido directamente por <strong>Decourban Estudio</strong> en Río Cuarto, con envío gratis a todo el país.</p>
-        <p>Medidas: 67 cm × 70 cm × 90 cm. Peso: 10 kg. <strong>No incluye almohadones.</strong> Nuestro equipo te asesora personalmente para elegir el color y el ambiente ideal para este sillón.</p>
-        <ul>
-          <li>Disponible en Negro (en stock) y Blanco (consultar disponibilidad)</li>
-          <li>Peso: 10 kg · Medidas: 67×70×90 cm</li>
-          <li>No incluye almohadones</li>
-          <li>Envío gratis a todo el país desde Río Cuarto, Córdoba</li>
-          <li>Vendido por Decourban Estudio — DecoUrban Studio Staff, 22 años de trayectoria</li>
-        </ul>
-      </div>
-      <div class="ptab-panel" id="tab1">
-        <table class="specs-table">
-          <tr><td>Ancho</td><td>67 cm</td></tr>
-          <tr><td>Profundidad</td><td>70 cm</td></tr>
-          <tr><td>Alto total</td><td>90 cm</td></tr>
-          <tr><td>Peso</td><td>10 kg</td></tr>
-          <tr><td>Colores disponibles</td><td>Negro (en stock) · Blanco (consultar)</td></tr>
-          <tr><td>Almohadones</td><td>No incluye</td></tr>
-          <tr><td>Envío</td><td>Gratis a todo el país</td></tr>
-          <tr><td>Garantía</td><td>12 meses</td></tr>
-          <tr><td>Vendido por</td><td>Decourban Estudio · Juan de Garay 1550 · Río Cuarto</td></tr>
-        </table>
-      </div>
-      <div class="ptab-panel" id="tab2">
-        <p>Para mantener el Sillón Monaco en perfectas condiciones, seguí estas recomendaciones básicas:</p>
-        <ul>
-          <li>Limpiar manchas frescas con paño húmedo y jabón neutro — no restregar</li>
-          <li>Evitar exposición directa al sol prolongada para preservar el color de la tela</li>
-          <li>No usar blanqueadores, solventes ni productos abrasivos</li>
-          <li>Aspirar suavemente la tela para evitar acumulación de polvo</li>
-          <li>No incluye almohadones — podés agregar los de tu elección</li>
-        </ul>
-        <p style="margin-top:14px;font-size:13.5px;color:var(--text-mid)">¿Tenés dudas sobre el cuidado de tu producto? Escribinos a <a href="mailto:Ventas@decourban.com.ar" style="color:var(--gold)">Ventas@decourban.com.ar</a> — respondemos en menos de 24 horas.</p>
-      </div>
-    </div>
-
-  </div><!-- /pinfo -->
-</div><!-- /product -->
-
-<!-- RELATED PRODUCTS -->
 <section class="related">
   <div class="related-inner">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0">
       <div>
         <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px">Completá tu living</p>
-        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,36px);font-weight:500;color:var(--text)">Lo que va bien<br><em style="font-style:italic;color:var(--gold)">con el Monaco</em></h2>
+        <h2 style="font-family:inherit;font-size:clamp(26px,3vw,36px);font-weight:500;color:var(--text)">Lo que va bien<br><em style="font-style:italic;color:var(--gold)">con el Monaco</em></h2>
       </div>
       <a href="coleccion.html" style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-mid);display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);padding-bottom:3px;transition:all .35s ease">Ver catálogo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
@@ -314,7 +138,7 @@
 <!-- REVIEWS -->
 <section class="reviews" id="reviews">
   <div class="reviews-inner">
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,36px);font-weight:500;margin-bottom:40px">Opiniones de <em style="font-style:italic;color:var(--gold)">clientes</em></h2>
+    <h2 style="font-family:inherit;font-size:clamp(26px,3vw,36px);font-weight:500;margin-bottom:40px">Opiniones de <em style="font-style:italic;color:var(--gold)">clientes</em></h2>
 
     <div class="rev-summary rv">
       <div class="rev-score">
@@ -395,43 +219,64 @@
 </section>
 
 <!-- FOOTER MINI -->
+<!-- FOOTER -->
 <footer class="site-footer">
-  <div class="container">
+  <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
-        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores desde 2004.</p>
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+        </div>
+        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores a medida desde 2004.</p>
+        <p style="margin-top:16px;color:rgba(255,255,255,.35);">Juan de Garay 1550, Río Cuarto<br/>+54 358 507-5773<br/>ventas@decourban.com.ar</p>
       </div>
       <div class="footer-col">
         <h4>Productos</h4>
-        <a href="cortinas-silhouette.html">Silhouette</a>
-        <a href="cortinas-pirouette.html">Pirouette</a>
-        <a href="cortinas-duette.html">Duette</a>
-        <a href="cortinas-roller.html">Roller</a>
+        <a href="cortinas-silhouette.html">Silhouette®</a>
+        <a href="cortinas-pirouette.html">Pirouette®</a>
+        <a href="cortinas-duette.html">Duette®</a>
         <a href="toldo-gemini.html">Toldo Gemini</a>
-        <a href="powerview.html">PowerView</a>
+        <a href="cortinas.html">Ver todos</a>
       </div>
       <div class="footer-col">
-        <h4>Empresa</h4>
-        <a href="nosotros.html">Nosotros</a>
+        <h4>Nosotros</h4>
+        <a href="nosotros.html">La empresa</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="garantia.html">Garantía</a>
         <a href="contacto.html">Contacto</a>
+        <a href="https://decourbanestudio.com.ar/productos" target="_blank" rel="noopener">Tienda online</a>
       </div>
       <div class="footer-col">
-        <h4>Contacto</h4>
-        <a href="tel:+543585075773">358 507-5773</a>
-        <a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a>
-        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+R%C3%ADo+Cuarto" target="_blank" rel="noopener">Juan de Garay 1550, Río Cuarto</a>
-        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">@decourbanestudio</a>
+        <h4>Recursos</h4>
+        <a href="blog-cortinas-hunter-douglas.html">Blog</a>
+        <a href="quiz-cortinas.html">Quiz de cortinas</a>
+        <a href="visualizador.html">Visualizador</a>
+        <a href="guia-por-ambiente.html">Guía por ambiente</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Decourban Estudio. Todos los derechos reservados.</span>
-      <span>Río Cuarto, Córdoba, Argentina</span>
+      <p>© 2026 Decourban Estudio. Todos los derechos reservados.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/543585075773" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:ventas@decourban.com.ar">Email</a>
+      </div>
     </div>
   </div>
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/543585075773?text=Hola,%20me%20gustaría%20consultar%20sobre%20sus%20productos" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+(function(){
+  document.getElementById('menuBtn').addEventListener('click', function() {
+    document.getElementById('navMobile').classList.toggle('open');
+  });
+})();
+</script>
 
 <!-- STICKY MOBILE BAR -->
 <div class="sticky-prod-bar">
@@ -450,7 +295,7 @@
   <div class="chat-bubble" id="chatBubble">
     <div class="chat-close-row"><button class="chat-close-btn" onclick="closeChatBubble()" aria-label="Cerrar">✕</button></div>
     <div class="chat-bubble-head">
-      <div class="chat-bubble-av"><span style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#161412">MK</span></div>
+      <div class="chat-bubble-av"><span style="font-family:inherit;font-size:14px;font-weight:700;color:#161412">MK</span></div>
       <div>
         <div class="chat-bubble-name">Decourban</div>
         <div class="chat-bubble-sub">Decourban Estudio · Río Cuarto</div>
@@ -565,7 +410,7 @@ const ro=new IntersectionObserver(entries=>{
 document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
 
 // HAMBURGER MENU
-(function(){const btn=document.getElementById('ham');const nav=document.querySelector('.nav-links');if(!btn||!nav)return;const overlay=document.createElement('div');overlay.style.cssText='position:fixed;inset:0;background:rgba(22,20,18,.97);z-index:800;display:none;flex-direction:column;padding:90px 36px 40px;gap:0;overflow-y:auto';nav.querySelectorAll('a').forEach(l=>{const a=document.createElement('a');a.href=l.href;a.textContent=l.textContent;a.style.cssText='font-family:"Playfair Display",serif;font-size:26px;font-weight:500;color:#fff;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);display:block';a.addEventListener('click',()=>{overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')});overlay.appendChild(a);});const wa=document.createElement('a');wa.href='https://wa.me/543585075773';wa.target='_blank';wa.textContent='+54 358 5075773';wa.style.cssText='color:#25D366;font-size:16px;padding:20px 0;display:block;margin-top:16px;font-weight:600';overlay.appendChild(wa);document.body.appendChild(overlay);btn.addEventListener('click',()=>{const open=overlay.style.display==='flex';overlay.style.display=open?'none':'flex';document.body.style.overflow=open?'':'hidden';btn.classList.toggle('is-open',!open)});overlay.addEventListener('click',e=>{if(e.target===overlay){overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')}});})();
+(function(){const btn=document.getElementById('ham');const nav=document.querySelector('.nav-links');if(!btn||!nav)return;const overlay=document.createElement('div');overlay.style.cssText='position:fixed;inset:0;background:rgba(22,20,18,.97);z-index:800;display:none;flex-direction:column;padding:90px 36px 40px;gap:0;overflow-y:auto';nav.querySelectorAll('a').forEach(l=>{const a=document.createElement('a');a.href=l.href;a.textContent=l.textContent;a.style.cssText='font-family:inherit;font-size:26px;font-weight:500;color:#fff;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);display:block';a.addEventListener('click',()=>{overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')});overlay.appendChild(a);});const wa=document.createElement('a');wa.href='https://wa.me/543585075773';wa.target='_blank';wa.textContent='+54 358 5075773';wa.style.cssText='color:#25D366;font-size:16px;padding:20px 0;display:block;margin-top:16px;font-weight:600';overlay.appendChild(wa);document.body.appendChild(overlay);btn.addEventListener('click',()=>{const open=overlay.style.display==='flex';overlay.style.display=open?'none':'flex';document.body.style.overflow=open?'':'hidden';btn.classList.toggle('is-open',!open)});overlay.addEventListener('click',e=>{if(e.target===overlay){overlay.style.display='none';document.body.style.overflow='';btn.classList.remove('is-open')}});})();
 
 // SERVICE WORKER
 if('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>{});
