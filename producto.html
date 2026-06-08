@@ -97,6 +97,141 @@
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:#111;color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;">Consultar</a>
 </div>
 
+<!-- PRODUCT MAIN -->
+<main class="pdp-wrap">
+  <div class="pdp-inner">
+
+    <!-- GALLERY -->
+    <div class="pdp-gallery">
+      <div class="pdp-thumbs">
+        <button class="gthumb on" onclick="setImg(0)" aria-label="Imagen 1">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="" loading="lazy"/>
+        </button>
+        <button class="gthumb" onclick="setImg(1)" aria-label="Imagen 2">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/2f2743d8-42ab-41bc-9d0d-1c492c6a00e0-f1dea557f36908de8b17373906142489-480-0.webp" alt="" loading="lazy"/>
+        </button>
+        <button class="gthumb" onclick="setImg(2)" aria-label="Imagen 3">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp" alt="" loading="lazy"/>
+        </button>
+        <button class="gthumb" onclick="setImg(3)" aria-label="Imagen 4">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/2fbbfe32-163b-4982-8ccb-a8e28b11c4cf-1c7c46dd64f2dd72e417364480226959-480-0.webp" alt="" loading="lazy"/>
+        </button>
+      </div>
+      <div class="pdp-main-img">
+        <img id="mainImgEl" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Sillón Monaco — Decourban Estudio" fetchpriority="high"/>
+        <button id="wlBtnMain" class="wl-btn" onclick="toggleWL()" aria-label="Guardar en lista de deseos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="pdp-info">
+      <p class="pdp-cat" style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px">Muebles · Sillones</p>
+      <h1 style="font-size:clamp(28px,3.5vw,42px);font-weight:500;line-height:1.1;margin-bottom:12px">Sillón <em style="font-style:italic;color:var(--gold)">Monaco</em></h1>
+      <div style="font-size:clamp(24px,2.5vw,32px);font-weight:600;color:var(--text);margin-bottom:6px">$344.350</div>
+      <div id="cuotaDisplay" style="font-size:13px;color:var(--text-mid);margin-bottom:24px">o 12 cuotas de $28.696 sin interés</div>
+
+      <!-- CUOTAS -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px">
+        <button class="cuota-chip" onclick="selectCuota(this,3,114783)" style="font-size:11px;padding:7px 14px;border:1px solid var(--border);background:none;cursor:pointer;letter-spacing:.5px">3 cuotas</button>
+        <button class="cuota-chip" onclick="selectCuota(this,6,57392)" style="font-size:11px;padding:7px 14px;border:1px solid var(--border);background:none;cursor:pointer;letter-spacing:.5px">6 cuotas</button>
+        <button class="cuota-chip on" onclick="selectCuota(this,12,28696)" style="font-size:11px;padding:7px 14px;border:1px solid var(--border);background:none;cursor:pointer;letter-spacing:.5px">12 cuotas</button>
+      </div>
+
+      <!-- COLOR -->
+      <div style="margin-bottom:20px">
+        <p style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px">Color: <span id="colorLabel">Negro</span></p>
+        <div style="display:flex;gap:8px">
+          <button class="col-opt on" onclick="selectColor(this,'Negro')" aria-label="Negro" style="width:32px;height:32px;border-radius:50%;background:#1a1a1a;border:2px solid #1a1a1a;cursor:pointer"></button>
+          <button class="col-opt" onclick="selectColor(this,'Blanco')" aria-label="Blanco" style="width:32px;height:32px;border-radius:50%;background:#f5f5f0;border:2px solid var(--border);cursor:pointer"></button>
+        </div>
+      </div>
+
+      <!-- MATERIAL -->
+      <div style="margin-bottom:28px">
+        <p style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px">Tapizado</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="mat-opt on" style="font-size:11px;padding:8px 16px;border:1px solid var(--border);background:none;cursor:pointer">Tela premium</button>
+          <button class="mat-opt" style="font-size:11px;padding:8px 16px;border:1px solid var(--border);background:none;cursor:pointer">Cuero sintético</button>
+        </div>
+      </div>
+
+      <!-- CTAS -->
+      <div style="display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap">
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sill%C3%B3n%20Monaco" target="_blank" rel="noopener" style="flex:1;min-width:160px;display:flex;align-items:center;justify-content:center;gap:8px;background:#111;color:#fff;padding:16px 24px;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Consultar por WhatsApp
+        </a>
+        <button id="wlBtn" onclick="toggleWL()" style="padding:16px 20px;border:1px solid var(--border);background:none;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          <span id="wlBtnTxt">Guardar</span>
+        </button>
+      </div>
+
+      <!-- TRUST BADGES -->
+      <div style="display:flex;gap:20px;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--border)">
+        <div style="font-size:11px;color:var(--text-mid);display:flex;align-items:center;gap:6px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Envío a todo el país
+        </div>
+        <div style="font-size:11px;color:var(--text-mid);display:flex;align-items:center;gap:6px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+          Fabricado a pedido
+        </div>
+        <div style="font-size:11px;color:var(--text-mid);display:flex;align-items:center;gap:6px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Garantía 1 año
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div style="margin-top:28px">
+        <div style="display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:20px">
+          <button class="ptab-btn on" onclick="showTab(0,this)" style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:10px 18px;background:none;border:none;border-bottom:2px solid var(--gold);cursor:pointer;color:var(--text)">Descripción</button>
+          <button class="ptab-btn" onclick="showTab(1,this)" style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:10px 18px;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;color:var(--text-mid)">Medidas</button>
+          <button class="ptab-btn" onclick="showTab(2,this)" style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:10px 18px;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;color:var(--text-mid)">Envío</button>
+        </div>
+        <div class="ptab-panel on" id="tab0" style="font-size:14px;line-height:1.7;color:var(--text-mid)">
+          <p>El Sillón Monaco combina diseño contemporáneo con materiales de calidad duradera. Estructura en madera de roble, tapizado en tela premium disponible en Negro y Blanco. Ideal para living, estudio o dormitorio principal.</p>
+          <p style="margin-top:10px">Fabricado bajo pedido en nuestro taller de Río Cuarto. Tiempo de producción: 15 a 20 días hábiles.</p>
+        </div>
+        <div class="ptab-panel" id="tab1" style="font-size:14px;line-height:1.7;color:var(--text-mid);display:none">
+          <p>Alto: 90 cm &nbsp;·&nbsp; Ancho: 67 cm &nbsp;·&nbsp; Profundidad: 70 cm</p>
+          <p style="margin-top:8px">Peso: 10 kg &nbsp;·&nbsp; SKU: DC-MON-001</p>
+        </div>
+        <div class="ptab-panel" id="tab2" style="font-size:14px;line-height:1.7;color:var(--text-mid);display:none">
+          <p>Envío a todo el país. Entrega a domicilio en Río Cuarto y zona. Tiempo estimado: 5 a 10 días hábiles desde el despacho.</p>
+          <p style="margin-top:8px">Consultar por costo de envío a tu localidad vía WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- STYLES -->
+<style>
+.pdp-wrap{padding:100px 0 60px;max-width:1200px;margin:0 auto}
+.pdp-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:0 40px}
+.pdp-gallery{display:flex;gap:12px}
+.pdp-thumbs{display:flex;flex-direction:column;gap:8px}
+.gthumb{width:72px;height:72px;border:2px solid transparent;cursor:pointer;overflow:hidden;background:var(--surface,#f5f5f0);padding:0}
+.gthumb.on{border-color:var(--gold,#c4a46b)}
+.gthumb img{width:100%;height:100%;object-fit:cover}
+.pdp-main-img{flex:1;position:relative}
+.pdp-main-img img{width:100%;aspect-ratio:1;object-fit:cover}
+.wl-btn{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.9);border:none;cursor:pointer;padding:10px;border-radius:50%}
+.col-opt{outline-offset:3px}
+.col-opt.on{outline:2px solid var(--gold,#c4a46b)}
+.mat-opt.on{border-color:var(--text,#1a1a1a)!important;background:var(--text,#1a1a1a)!important;color:#fff!important}
+.cuota-chip.on{border-color:var(--text,#1a1a1a)!important;background:var(--text,#1a1a1a)!important;color:#fff!important}
+.ptab-panel{display:none}
+.ptab-panel.on{display:block}
+.ptab-btn.on{border-bottom-color:var(--gold,#c4a46b)!important;color:var(--text,#1a1a1a)!important}
+@media(max-width:768px){.pdp-inner{grid-template-columns:1fr;padding:0 20px;gap:30px}.pdp-wrap{padding:80px 0 40px}}
+</style>
+
 <section class="related">
   <div class="related-inner">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0">
@@ -322,9 +457,9 @@
 const B='https://dcdn-us.mitiendanube.com/stores/005/649/615/products/';
 const imgs=[
   B+'captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp',
-  B+'captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp',
-  B+'captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp',
-  B+'captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp',
+  B+'2f2743d8-42ab-41bc-9d0d-1c492c6a00e0-f1dea557f36908de8b17373906142489-480-0.webp',
+  B+'imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-480-0.webp',
+  B+'2fbbfe32-163b-4982-8ccb-a8e28b11c4cf-1c7c46dd64f2dd72e417364480226959-480-0.webp',
 ];
 function setImg(i){
   document.getElementById('mainImgEl').src=imgs[i];

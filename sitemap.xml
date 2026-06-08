@@ -315,5 +315,30 @@
     <priority>0.82</priority>
   </url>
 
+
+  <!-- VISUALIZADOR DE AMBIENTES — herramienta interactiva -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/visualizador.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- FINANCIACIÓN — opciones de pago -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/financiacion.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <!-- COTIZADOR — cotización online -->
+  <url>
+    <loc>https://decourbanestudio.com.ar/cotizador.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
 </urlset>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

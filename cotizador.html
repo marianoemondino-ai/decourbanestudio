@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://decourbanestudio.com.ar/cotizador.html"/>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="manifest" href="manifest.json"/>
-<meta name="theme-color" content="#161412"/>
+<meta name="theme-color" content="#ffffff"/>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -35,26 +35,31 @@
 </head>
 <body>
 
-<nav class="nav">
-  <a href="index.html" class="nav-logo">Decourban<span> Estudio</span></a>
-  <ul class="nav-links">
-    <li><a href="cortinas.html">Cortinas HD</a></li>
-    <li><a href="comparador.html">Comparador</a></li>
-    <li><a href="guia-por-ambiente.html">Guía</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
-  </ul>
-  <button class="ham" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
-  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer" class="nav-cta">Consultar</a>
+<nav class="site-nav solid" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" width="160" height="38"/>
+    </a>
+    <div class="nav-links">
+      <a href="cortinas.html">Productos</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="contacto.html" class="nav-cta">Consultar</a>
+    </div>
+    <button class="nav-hamburger" id="menuBtn" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
-<!-- MOBILE NAV -->
-<nav class="mob-nav" id="mobNav" aria-label="Navegación móvil">
-  <a href="cortinas.html">Cortinas Hunter Douglas</a>
-  <a href="coleccion.html">Catálogo</a>
+<!-- MOBILE MENU -->
+<div class="nav-mobile" id="navMobile">
+  <a href="cortinas.html">Productos</a>
   <a href="proyectos.html">Proyectos</a>
   <a href="nosotros.html">Nosotros</a>
   <a href="contacto.html">Contacto</a>
-  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">💬 WhatsApp — Cotizar gratis</a>
-</nav>
+  <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:#111;color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;">Consultar</a>
+</div>
 
 <div class="hero-strip">
   <span class="hero-ey">Herramienta gratuita · Presupuesto estimado</span>
@@ -465,6 +470,8 @@ function fmt(n){
 </a>
 <script>
 /* Mobile nav toggle */
-(()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
+document.getElementById('menuBtn').addEventListener('click', function() {
+  document.getElementById('navMobile').classList.toggle('open');
+});</script>
 </body>
 </html>
