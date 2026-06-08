@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://decourbanestudio.com.ar/financiacion.html"/>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="manifest" href="manifest.json"/>
-<meta name="theme-color" content="#fdfaf6"/>
+<meta name="theme-color" content="#ffffff"/>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -54,196 +54,45 @@
   ]
 }
 </script>
+
+
+
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-:root{--gold:#c4a46b;--gold-lt:#f5ead8;--gold-dark:#a8854a;--bg:#fdfaf6;--bg-dark:#161412;--bg-mid:#f2ede6;--text:#1a1714;--text-mid:#4a3f35;--text-light:#8a7a6a;--border:#e8dfd4;--border-lt:#f0e8de;--r:10px;--ease:.28s cubic-bezier(.4,0,.2,1);--green:#2e9e5b;--green-lt:rgba(46,158,91,.1)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,246,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-lt);display:flex;align-items:center;justify-content:space-between;padding:16px 40px;transition:all .3s}
-.nav.scrolled{padding:10px 40px;box-shadow:0 2px 20px rgba(0,0,0,.07)}
-.nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--text);text-decoration:none}
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;gap:22px;list-style:none}
-.nav-links a{color:var(--text-mid);text-decoration:none;font-size:13px;font-weight:500;transition:color var(--ease)}
-.nav-links a:hover{color:var(--gold)}
-.nav-cta{background:var(--gold);color:#fff;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:9px 18px;border-radius:3px;text-decoration:none}
-.nav-cta:hover{background:var(--gold-dark)}
-@media(max-width:900px){.nav-links{display:none}}
-@media(max-width:600px){.nav{padding:12px 20px}}
-
-/* HERO */
-.hero{padding:110px 40px 64px;background:linear-gradient(160deg,var(--bg) 60%,var(--gold-lt) 100%)}
-.hero-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-@media(max-width:860px){.hero-inner{grid-template-columns:1fr;gap:36px}}
-.hero-ey{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:9px;margin-bottom:14px}
-.hero-ey::before{content:'';width:22px;height:1px;background:var(--gold)}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1.12;margin-bottom:16px;font-weight:500}
-.hero h1 em{font-style:italic;color:var(--gold)}
-.hero-p{font-size:15.5px;color:var(--text-mid);line-height:1.75;margin-bottom:28px;max-width:450px}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#fff;padding:14px 26px;border-radius:4px;font-size:13px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;text-decoration:none;transition:all var(--ease)}
-.btn-p:hover{background:var(--gold-dark);transform:translateY(-2px)}
-.btn-s{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--border);color:var(--text-mid);padding:12px 20px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;transition:all var(--ease)}
-.btn-s:hover{border-color:var(--gold);color:var(--gold)}
-/* Card tarjetas hero */
-.cards-hero{display:flex;flex-direction:column;gap:14px}
-.card-h{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:16px;box-shadow:0 4px 20px rgba(0,0,0,.04)}
-.card-h-logo{width:56px;height:34px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;letter-spacing:.5px;flex-shrink:0}
-.card-h-info{flex:1}
-.card-h-name{font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px}
-.card-h-sub{font-size:12px;color:var(--text-light)}
-.card-h-badge{font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:10px}
-
-/* CALCULADORA */
-.calc{padding:80px 40px;background:var(--bg-mid)}
-.calc-inner{max-width:900px;margin:0 auto}
-.sec-ey{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:9px;margin-bottom:10px}
-.sec-ey::before{content:'';width:20px;height:1px;background:var(--gold)}
-h2.sec{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:500;line-height:1.2;margin-bottom:8px}
-h2.sec em{font-style:italic;color:var(--gold)}
-.sec-sub{font-size:15px;color:var(--text-mid);max-width:540px;line-height:1.7;margin-bottom:44px}
-.calc-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:36px;box-shadow:0 8px 32px rgba(0,0,0,.05)}
-.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:28px}
-@media(max-width:640px){.calc-grid{grid-template-columns:1fr}}
-.calc-field label{font-size:12px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--text-light);display:block;margin-bottom:8px}
-.calc-field select,.calc-field input{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:inherit;font-size:14px;color:var(--text);background:var(--bg);appearance:none;-webkit-appearance:none;cursor:pointer;transition:border-color var(--ease)}
-.calc-field select:focus,.calc-field input:focus{outline:none;border-color:var(--gold)}
-.calc-field-full{grid-column:1/-1}
-/* Cuotas slider */
-.cuotas-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.cuota-btn{padding:8px 16px;border-radius:20px;border:1.5px solid var(--border);font-size:13px;font-weight:500;cursor:pointer;background:#fff;color:var(--text-mid);transition:all var(--ease)}
-.cuota-btn:hover{border-color:var(--gold)}
-.cuota-btn.active{background:var(--gold);border-color:var(--gold);color:#fff}
-/* Resultado */
-.calc-result{background:var(--bg-dark);border-radius:var(--r);padding:28px;margin-top:28px;display:none}
-.calc-result.show{display:block}
-.res-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.08)}
-.res-model{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;font-weight:500;margin-bottom:4px}
-.res-total-label{font-size:11px;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
-.res-total{font-family:'Playfair Display',serif;font-size:1rem;color:rgba(255,255,255,.6)}
-.res-cuota-label{font-size:11px;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;text-align:right}
-.res-cuota{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);font-weight:600;text-align:right;line-height:1}
-.res-cuota-sub{font-size:12px;color:rgba(255,255,255,.4);text-align:right;margin-top:3px}
-.res-breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
-.res-b{background:rgba(255,255,255,.04);border-radius:8px;padding:12px;text-align:center}
-.res-b-val{font-size:15px;font-weight:600;color:#fff;margin-bottom:3px}
-.res-b-label{font-size:11px;color:rgba(255,255,255,.35)}
-.res-disc{font-size:11.5px;color:rgba(255,255,255,.3);line-height:1.6;margin-bottom:18px}
-.res-ctas{display:flex;gap:10px;flex-wrap:wrap}
-.btn-wapp{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:12px 20px;border-radius:4px;font-size:12.5px;font-weight:600;text-decoration:none}
-.btn-cot{display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);padding:11px 18px;border-radius:4px;font-size:12.5px;font-weight:500;text-decoration:none;transition:all var(--ease)}
-.btn-cot:hover{border-color:var(--gold);color:var(--gold)}
-
-/* TARJETAS SECTION */
-.tarjetas{padding:72px 40px;background:var(--bg)}
-.tarjetas-inner{max-width:1060px;margin:0 auto}
-.tarj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
-@media(max-width:860px){.tarj-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.tarj-grid{grid-template-columns:1fr}}
-.tarj-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:24px 20px;text-align:center;transition:all var(--ease)}
-.tarj-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.06)}
-.tarj-logo{height:44px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.tarj-name{font-size:15px;font-weight:600;margin-bottom:6px}
-.tarj-cuotas{font-size:22px;font-family:'Playfair Display',serif;color:var(--gold);font-weight:600;margin-bottom:4px}
-.tarj-label{font-size:11.5px;color:var(--text-light)}
-.tarj-badge{display:inline-block;margin-top:10px;padding:4px 11px;border-radius:10px;font-size:11px;font-weight:600}
-
-/* COMO FUNCIONA */
-.como{padding:72px 40px;background:var(--bg-mid)}
-.como-inner{max-width:1060px;margin:0 auto}
-.como-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px;position:relative}
-@media(max-width:780px){.como-steps{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.como-steps{grid-template-columns:1fr}}
-.como-line{position:absolute;top:28px;left:10%;right:10%;height:1.5px;background:var(--border);z-index:0}
-@media(max-width:780px){.como-line{display:none}}
-.cs{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:24px;text-align:center;position:relative;z-index:1;transition:all var(--ease)}
-.cs:hover{border-color:var(--gold)}
-.cs-num{width:44px;height:44px;border-radius:50%;background:var(--gold);color:#fff;font-family:'Playfair Display',serif;font-size:18px;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
-.cs-title{font-size:14px;font-weight:600;margin-bottom:8px}
-.cs-desc{font-size:13px;color:var(--text-mid);line-height:1.6}
-
-/* FAQ */
-.faq{padding:72px 40px;background:var(--bg)}
-.faq-inner{max-width:760px;margin:0 auto}
-.faq-list{margin-top:40px;border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-item:last-child{border-bottom:none}
-.faq-q{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;cursor:pointer;font-size:15px;font-weight:500;background:#fff;width:100%;text-align:left;border:none;font-family:inherit;color:var(--text);transition:background var(--ease)}
-.faq-q:hover{background:var(--gold-lt)}
-.faq-icon{width:26px;height:26px;border-radius:50%;background:var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all var(--ease)}
-.faq-icon svg{width:12px;height:12px;fill:none;stroke:var(--text-mid);stroke-width:2.2;transition:transform var(--ease)}
-.faq-item.open .faq-q{background:var(--gold-lt)}
-.faq-item.open .faq-icon{background:var(--gold)}
-.faq-item.open .faq-icon svg{stroke:var(--bg-dark);transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:14px;color:var(--text-mid);line-height:1.8;background:#fff}
-.faq-item.open .faq-a{max-height:300px;padding:0 24px 18px}
-
-/* CTA FINAL */
-.cta{padding:72px 40px;background:var(--gold);text-align:center}
-.cta h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);color:#fff;margin-bottom:10px;font-weight:500}
-.cta p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:28px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.7}
-.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-dark{display:inline-flex;align-items:center;gap:8px;background:var(--bg-dark);color:#fff;padding:14px 26px;border-radius:4px;font-size:13px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;text-decoration:none;transition:all var(--ease)}
-.btn-dark:hover{background:#000;transform:translateY(-2px)}
-.btn-lt{display:inline-flex;align-items:center;gap:8px;border:2px solid rgba(255,255,255,.5);color:#fff;padding:13px 22px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;transition:all var(--ease)}
-.btn-lt:hover{border-color:#fff;background:rgba(255,255,255,.1)}
-
-/* FOOTER */
-.foot{background:#0e0c0a;padding:32px 40px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
-.foot-logo{font-family:'Playfair Display',serif;font-size:19px;color:#fff}
-.foot-logo span{color:var(--gold)}
-.foot-nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
-.foot-nav a{font-size:12.5px;color:rgba(255,255,255,.38);text-decoration:none;transition:color var(--ease)}
-.foot-nav a:hover{color:var(--gold)}
-.foot-copy{font-size:11px;color:rgba(255,255,255,.2)}
-.wapp{position:fixed;bottom:28px;right:28px;z-index:200;background:#25d366;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.35);transition:transform var(--ease)}
-.wapp:hover{transform:scale(1.1)}
-.rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
-.rv.in{opacity:1;transform:none}
-
-/* WA FLOAT */
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:800;filter:drop-shadow(0 4px 20px rgba(37,211,102,.35));width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .28s cubic-bezier(.4,0,.2,1)}
-.wa-float:hover{background:#1bb558;transform:scale(1.12)}
-.wa-float::before{content:'';position:absolute;inset:-5px;border-radius:50%;background:rgba(37,211,102,.2);animation:wp 2.5s ease-out infinite}
-@keyframes wp{0%{transform:scale(1);opacity:1}100%{transform:scale(1.7);opacity:0}}
-
-/* ── MOBILE NAV ── */
-.ham{display:none;flex-direction:column;justify-content:center;gap:5px;padding:8px;cursor:pointer;background:none;border:none;flex-shrink:0}
-.ham span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:all .25s}
-.mob-nav{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;background:var(--bg,#fdfaf6);border-bottom:1px solid var(--border,#e8dfd4);z-index:998;padding:72px 24px 20px;box-shadow:0 8px 24px rgba(0,0,0,.1)}
-.mob-nav.open{display:flex}
-.mob-nav a{color:var(--text-mid,#4a3f35);text-decoration:none;font-size:15px;font-weight:500;padding:13px 0;border-bottom:1px solid var(--border-lt,#f0e8de);display:flex;align-items:center;gap:8px}
-.mob-nav a:last-child{border:none;color:var(--gold,#c4a46b);font-weight:700;margin-top:4px}
-@media(max-width:900px){.ham{display:flex}}
-</style>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo">Decourban<span> Estudio</span></a>
-  <ul class="nav-links">
-    <li><a href="cortinas.html">Cortinas HD</a></li>
-    <li><a href="cotizador.html">Cotizador</a></li>
-    <li><a href="comparador.html">Comparador</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-  <button class="ham" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
-  <a href="cotizador.html" class="nav-cta">Cotizá ahora</a>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" width="160" height="38"/>
+    </a>
+    <div class="nav-links">
+      <a href="cortinas.html">Productos</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="nav-cta" target="_blank" rel="noopener">Consultar</a>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
+  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
+  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
+  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+</div>
 <!-- MOBILE NAV -->
-<nav class="mob-nav" id="mobNav" aria-label="Navegación móvil">
-  <a href="cortinas.html">Cortinas Hunter Douglas</a>
-  <a href="coleccion.html">Catálogo</a>
-  <a href="proyectos.html">Proyectos</a>
-  <a href="nosotros.html">Nosotros</a>
-  <a href="contacto.html">Contacto</a>
-  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">💬 WhatsApp — Cotizar gratis</a>
-</nav>
+
+
 
 <!-- HERO -->
 <section class="hero">
@@ -254,7 +103,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
       <p class="hero-p">Decorá tu casa con Hunter Douglas sin desembolsar todo junto. Hasta 12 cuotas con las principales tarjetas de crédito. Calculá tu cuota mensual en segundos.</p>
       <div class="hero-btns">
         <a href="#calculadora" class="btn-p">Calcular mi cuota <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="cotizador.html" class="btn-s">Cotizador completo</a>
+        
       </div>
     </div>
     <div class="cards-hero rv">
@@ -349,7 +198,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
             <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Consultar con el equipo
           </a>
-          <a href="cotizador.html" class="btn-cot">Cotizador detallado <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          
         </div>
       </div>
     </div>
@@ -486,22 +335,46 @@ h2.sec em{font-style:italic;color:var(--gold)}
       <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Pedir visita gratuita
     </a>
-    <a href="cotizador.html" class="btn-lt">Ver cotizador <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    
   </div>
 </section>
 
-<footer class="foot">
-  <div class="foot-logo">Decourban<span> Estudio</span></div>
-  <nav class="foot-nav">
-    <a href="index.html">Inicio</a>
-    <a href="cortinas.html">Cortinas HD</a>
-    <a href="cotizador.html">Cotizador</a>
-    <a href="comparador.html">Comparador</a>
-    <a href="powerview.html">PowerView®</a>
-    <a href="nosotros.html">Nosotros</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-  <div class="foot-copy">© 2026 Decourban Estudio — Juan de Garay 1550, Río Cuarto, Córdoba</div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores desde 2004.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <a href="cortinas-silhouette.html">Silhouette</a>
+        <a href="cortinas-pirouette.html">Pirouette</a>
+        <a href="cortinas-duette.html">Duette</a>
+        <a href="cortinas-roller.html">Roller</a>
+        <a href="toldo-gemini.html">Toldo Gemini</a>
+        <a href="powerview.html">PowerView</a>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="garantia.html">Garantía</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="tel:+543585075773">358 507-5773</a>
+        <a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a>
+        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+R%C3%ADo+Cuarto" target="_blank" rel="noopener">Juan de Garay 1550, Río Cuarto</a>
+        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">@decourbanestudio</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Decourban Estudio. Todos los derechos reservados.</span>
+      <span>Río Cuarto, Córdoba, Argentina</span>
+    </div>
+  </div>
 </footer>
 
 <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer" class="wapp" aria-label="WhatsApp">
@@ -586,5 +459,10 @@ window.addEventListener('DOMContentLoaded',function(){
 <script>
 /* Mobile nav toggle */
 (()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
+<a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
 </body>
 </html>

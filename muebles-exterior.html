@@ -21,7 +21,7 @@
 <link rel="canonical" href="https://decourbanestudio.com.ar/muebles-exterior.html"/>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="manifest" href="manifest.json"/>
-<meta name="theme-color" content="#161412"/>
+<meta name="theme-color" content="#ffffff"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -78,310 +78,38 @@
 }
 </script>
 <link rel="stylesheet" href="styles.css"/>
-<style>
-/* ─── PAGE VARIABLES ───────────────────────────────── */
-:root{
-  --gold:#c4a46b;--gold-lt:#d4b47b;
-  --bg:#fdfaf6;--bg-dark:#161412;
-  --text:#1a1714;--text-mid:#4a3f35;--text-light:#8a7a6a;
-  --border:#e8dfd4;--border-lt:#f0e8de;
-  --r:10px;--r-sm:6px;
-  --ease:.28s cubic-bezier(.4,0,.2,1);
-  --wrap:1200px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 
-/* ─── HERO ──────────────────────────────────────────── */
-.hero-ext{
-  position:relative;min-height:88vh;display:flex;align-items:flex-end;
-  overflow:hidden;background:var(--bg-dark);
-}
-.hero-ext-bg{
-  position:absolute;inset:0;
-  background:url('https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp') center 30%/cover no-repeat;
-  animation:zoom 14s ease-in-out infinite alternate;
-}
-@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.06)}}
-.hero-ext-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to top, rgba(16,12,9,.85) 0%, rgba(16,12,9,.45) 55%, rgba(16,12,9,.15) 100%);
-}
-.hero-ext-cnt{
-  position:relative;z-index:2;max-width:var(--wrap);margin:0 auto;
-  padding:0 40px 70px;width:100%;
-}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:7px;
-  background:rgba(196,164,107,.18);border:1px solid rgba(196,164,107,.4);
-  color:var(--gold);font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
-  padding:7px 14px;border-radius:40px;margin-bottom:22px;
-}
-.hero-ext h1{
-  font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,4.2rem);
-  font-weight:500;color:#fff;line-height:1.15;max-width:760px;margin-bottom:18px;
-}
-.hero-ext h1 em{color:var(--gold);font-style:italic}
-.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.75);max-width:520px;margin-bottom:34px;line-height:1.7}
-.hero-acts{display:flex;gap:14px;flex-wrap:wrap}
-.btn-p{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--gold);color:var(--bg-dark);
-  font-size:13px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;
-  padding:14px 26px;border-radius:4px;text-decoration:none;border:none;cursor:pointer;
-  transition:background var(--ease),transform var(--ease);
-}
-.btn-p:hover{background:var(--gold-lt);transform:translateY(-2px)}
-.btn-s{
-  display:inline-flex;align-items:center;gap:8px;
-  background:transparent;color:#fff;
-  font-size:13px;font-weight:500;letter-spacing:.8px;text-transform:uppercase;
-  padding:13px 24px;border-radius:4px;text-decoration:none;
-  border:1.5px solid rgba(255,255,255,.4);
-  transition:all var(--ease);
-}
-.btn-s:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-
-/* ─── NAV ───────────────────────────────────────────── */
-.nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:18px 40px;
-  transition:all .35s ease;
-}
-.nav.scrolled{
-  background:rgba(22,20,18,.95);backdrop-filter:blur(10px);
-  padding:12px 40px;box-shadow:0 2px 24px rgba(0,0,0,.3);
-}
-.nav-logo{
-  font-family:'Playfair Display',serif;font-size:20px;font-weight:500;
-  color:#fff;text-decoration:none;letter-spacing:.5px;
-}
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
-.nav-links a{color:rgba(255,255,255,.8);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.5px;transition:color var(--ease)}
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.nav-cta{
-  background:var(--gold);color:var(--bg-dark);
-  font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;
-  padding:9px 18px;border-radius:3px;text-decoration:none;
-  transition:background var(--ease);
-}
-.nav-cta:hover{background:var(--gold-lt)}
-@media(max-width:900px){.nav-links{display:none}}
-@media(max-width:600px){.nav{padding:14px 20px}.nav.scrolled{padding:10px 20px}}
-
-/* ─── STATS BAR ─────────────────────────────────────── */
-.stats-bar{
-  background:var(--bg-dark);padding:22px 40px;
-  display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;
-}
-.stat-item{
-  display:flex;flex-direction:column;align-items:center;
-  padding:10px 40px;border-right:1px solid rgba(255,255,255,.1);
-}
-.stat-item:last-child{border-right:none}
-.stat-n{font-family:'Playfair Display',serif;font-size:2rem;font-weight:500;color:var(--gold)}
-.stat-l{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:2px}
-@media(max-width:600px){
-  .stats-bar{gap:0;padding:16px 20px}
-  .stat-item{padding:10px 18px}
-  .stat-n{font-size:1.6rem}
-}
-
-/* ─── WRAP / SECTION ────────────────────────────────── */
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 40px}
-section{padding:90px 0}
-@media(max-width:600px){section{padding:60px 0}.wrap{padding:0 20px}}
-.ey{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
-.sec{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:500;line-height:1.25}
-.sec em{font-style:italic;color:var(--gold)}
-.sec-hd{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:48px;flex-wrap:wrap}
-.sec-hd-c{text-align:center;margin-bottom:52px}
-
-/* ─── PRODUCT GRID ───────────────────────────────────── */
-.ext-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
-}
-@media(max-width:960px){.ext-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.ext-grid{grid-template-columns:1fr}}
-
-.ext-card{
-  background:#fff;border:1.5px solid var(--border);
-  border-radius:var(--r);overflow:hidden;
-  transition:all var(--ease);display:flex;flex-direction:column;
-}
-.ext-card:hover{transform:translateY(-7px);box-shadow:0 24px 60px rgba(0,0,0,.1);border-color:var(--gold)}
-.ext-card-img{
-  position:relative;aspect-ratio:4/3;overflow:hidden;
-}
-.ext-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.ext-card:hover .ext-card-img img{transform:scale(1.06)}
-.ext-badge{
-  position:absolute;top:12px;left:12px;
-  font-size:9.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
-  padding:5px 11px;border-radius:2px;
-}
-.ext-badge-new{background:var(--gold);color:var(--bg-dark)}
-.ext-badge-hd{background:var(--bg-dark);color:#fff}
-.ext-badge-out{background:#2d5a3d;color:#fff}
-.ext-card-body{padding:22px;flex:1;display:flex;flex-direction:column}
-.ext-cat{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-light);margin-bottom:8px}
-.ext-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:500;color:var(--text);margin-bottom:6px;line-height:1.35}
-.ext-mat{font-size:12.5px;color:var(--text-mid);margin-bottom:14px;line-height:1.5}
-.ext-price{font-size:15px;font-weight:600;color:var(--text);margin-top:auto;margin-bottom:14px}
-.ext-cta{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--gold);color:var(--bg-dark);
-  font-size:11.5px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;
-  padding:10px 18px;border-radius:3px;text-decoration:none;
-  transition:background var(--ease);width:100%;justify-content:center;
-}
-.ext-cta:hover{background:var(--gold-lt)}
-
-/* ─── CATEGORIES NAV ─────────────────────────────────── */
-.cat-nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
-.cat-btn{
-  padding:9px 20px;border:1.5px solid var(--border);border-radius:40px;
-  font-size:12.5px;font-weight:500;color:var(--text-mid);
-  background:none;cursor:pointer;transition:all var(--ease);
-}
-.cat-btn:hover,.cat-btn.active{
-  border-color:var(--gold);background:var(--gold);color:var(--bg-dark);font-weight:600;
-}
-
-/* ─── SPLIT SECTION ──────────────────────────────────── */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-@media(max-width:800px){.split{grid-template-columns:1fr;gap:40px}}
-.split-img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3}
-.split-img img{width:100%;height:100%;object-fit:cover}
-.checklist{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:24px}
-.checklist li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--text-mid);line-height:1.6}
-.chk{
-  width:20px;height:20px;border-radius:50%;background:var(--gold);
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;
-}
-.chk svg{width:11px;height:11px;stroke:#fff;stroke-width:2.5;fill:none}
-
-/* ─── FEATURES STRIP ─────────────────────────────────── */
-.feat-strip{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
-  background:var(--bg-dark);border-radius:var(--r);overflow:hidden;
-}
-@media(max-width:800px){.feat-strip{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.feat-strip{grid-template-columns:1fr}}
-.feat-item{
-  padding:36px 28px;border-right:1px solid rgba(255,255,255,.08);text-align:center;
-}
-.feat-item:last-child{border-right:none}
-.feat-icon{font-size:28px;margin-bottom:12px}
-.feat-title{font-family:'Playfair Display',serif;font-size:16px;color:#fff;margin-bottom:6px}
-.feat-desc{font-size:12px;color:rgba(255,255,255,.55);line-height:1.6}
-
-/* ─── TOLDO CTA BAND ─────────────────────────────────── */
-.toldo-band{
-  background:linear-gradient(135deg,#1c1410 0%,#2d1e0f 100%);
-  border-radius:var(--r);padding:56px 52px;
-  display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
-}
-.toldo-band-txt h3{
-  font-family:'Playfair Display',serif;font-size:clamp(1.5rem,2.8vw,2.1rem);
-  color:#fff;margin-bottom:10px;
-}
-.toldo-band-txt p{color:rgba(255,255,255,.65);font-size:14.5px;max-width:460px}
-@media(max-width:700px){.toldo-band{padding:36px 28px}}
-
-/* ─── FAQ ────────────────────────────────────────────── */
-.faq-list{display:flex;flex-direction:column;gap:0;border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-item:last-child{border-bottom:none}
-.faq-q{
-  display:flex;align-items:center;justify-content:space-between;gap:16px;
-  padding:22px 26px;cursor:pointer;
-  font-size:15px;font-weight:500;color:var(--text);
-  background:none;border:none;width:100%;text-align:left;
-  transition:background var(--ease);
-}
-.faq-q:hover{background:var(--border-lt)}
-.faq-q .faq-icon{
-  width:26px;height:26px;border-radius:50%;background:var(--border);
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  transition:background var(--ease),transform var(--ease);
-}
-.faq-q svg{width:13px;height:13px;stroke:var(--text-mid);stroke-width:2;fill:none;transition:transform var(--ease)}
-.faq-item.open .faq-q{background:var(--border-lt)}
-.faq-item.open .faq-icon{background:var(--gold)}
-.faq-item.open .faq-icon svg{stroke:var(--bg-dark);transform:rotate(45deg)}
-.faq-a{
-  max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s ease;
-  font-size:14px;color:var(--text-mid);line-height:1.75;padding:0 26px;
-}
-.faq-item.open .faq-a{max-height:400px;padding:0 26px 22px}
-
-/* ─── FOOTER SIMPLE ──────────────────────────────────── */
-.foot-simple{
-  background:var(--bg-dark);padding:48px 40px;text-align:center;
-  display:flex;flex-direction:column;align-items:center;gap:18px;
-}
-.foot-logo{font-family:'Playfair Display',serif;font-size:22px;color:#fff;letter-spacing:.5px}
-.foot-logo span{color:var(--gold)}
-.foot-nav{display:flex;gap:22px;flex-wrap:wrap;justify-content:center}
-.foot-nav a{font-size:12.5px;color:rgba(255,255,255,.55);text-decoration:none;transition:color var(--ease)}
-.foot-nav a:hover{color:var(--gold)}
-.foot-copy{font-size:11.5px;color:rgba(255,255,255,.3);margin-top:4px}
-.wapp-float{
-  position:fixed;bottom:28px;right:28px;z-index:200;
-  background:#25d366;color:#fff;border-radius:50%;
-  width:56px;height:56px;display:flex;align-items:center;justify-content:center;
-  text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.35);
-  transition:transform var(--ease);
-}
-.wapp-float:hover{transform:scale(1.1)}
-.rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
-.rv.visible{opacity:1;transform:none}
-
-/* WA FLOAT */
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:800;filter:drop-shadow(0 4px 20px rgba(37,211,102,.35));width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .28s cubic-bezier(.4,0,.2,1)}
-.wa-float:hover{background:#1bb558;transform:scale(1.12)}
-.wa-float::before{content:'';position:absolute;inset:-5px;border-radius:50%;background:rgba(37,211,102,.2);animation:wp 2.5s ease-out infinite}
-@keyframes wp{0%{transform:scale(1);opacity:1}100%{transform:scale(1.7);opacity:0}}
-
-/* ── MOBILE NAV ── */
-.ham{display:none;flex-direction:column;justify-content:center;gap:5px;padding:8px;cursor:pointer;background:none;border:none;flex-shrink:0}
-.ham span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:all .25s}
-.mob-nav{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;background:var(--bg,#fdfaf6);border-bottom:1px solid var(--border,#e8dfd4);z-index:998;padding:72px 24px 20px;box-shadow:0 8px 24px rgba(0,0,0,.1)}
-.mob-nav.open{display:flex}
-.mob-nav a{color:var(--text-mid,#4a3f35);text-decoration:none;font-size:15px;font-weight:500;padding:13px 0;border-bottom:1px solid var(--border-lt,#f0e8de);display:flex;align-items:center;gap:8px}
-.mob-nav a:last-child{border:none;color:var(--gold,#c4a46b);font-weight:700;margin-top:4px}
-@media(max-width:900px){.ham{display:flex}}
-</style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo">Decourban<span> Estudio</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="cortinas.html">Cortinas HD</a></li>
-    <li><a href="muebles-exterior.html" class="active">Exterior</a></li>
-    <li><a href="coleccion.html">Catálogo</a></li>
-    <li><a href="nosotros.html">Nosotros</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-  <button class="ham" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20muebles%20de%20exterior" target="_blank" rel="noopener noreferrer" class="nav-cta">Consultar</a>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" width="160" height="38"/>
+    </a>
+    <div class="nav-links">
+      <a href="cortinas.html">Productos</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="nav-cta" target="_blank" rel="noopener">Consultar</a>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
+  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
+  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
+  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+</div>
 <!-- MOBILE NAV -->
-<nav class="mob-nav" id="mobNav" aria-label="Navegación móvil">
-  <a href="cortinas.html">Cortinas Hunter Douglas</a>
-  <a href="coleccion.html">Catálogo</a>
-  <a href="proyectos.html">Proyectos</a>
-  <a href="nosotros.html">Nosotros</a>
-  <a href="contacto.html">Contacto</a>
-  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">💬 WhatsApp — Cotizar gratis</a>
-</nav>
+
+
 
 <!-- HERO -->
 <header class="hero-ext">
@@ -639,17 +367,42 @@ section{padding:90px 0}
 </section>
 
 <!-- FOOTER -->
-<footer class="foot-simple">
-  <div class="foot-logo">Decourban<span> Estudio</span></div>
-  <nav class="foot-nav">
-    <a href="index.html">Inicio</a>
-    <a href="cortinas.html">Cortinas HD</a>
-    <a href="coleccion.html">Catálogo</a>
-    <a href="guia-por-ambiente.html">Guía por ambiente</a>
-    <a href="nosotros.html">Nosotros</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-  <div class="foot-copy">© 2026 Decourban Estudio — Juan de Garay 1550, Río Cuarto, Córdoba · +54 358 507-5773</div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores desde 2004.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <a href="cortinas-silhouette.html">Silhouette</a>
+        <a href="cortinas-pirouette.html">Pirouette</a>
+        <a href="cortinas-duette.html">Duette</a>
+        <a href="cortinas-roller.html">Roller</a>
+        <a href="toldo-gemini.html">Toldo Gemini</a>
+        <a href="powerview.html">PowerView</a>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="garantia.html">Garantía</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="tel:+543585075773">358 507-5773</a>
+        <a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a>
+        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+R%C3%ADo+Cuarto" target="_blank" rel="noopener">Juan de Garay 1550, Río Cuarto</a>
+        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">@decourbanestudio</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Decourban Estudio. Todos los derechos reservados.</span>
+      <span>Río Cuarto, Córdoba, Argentina</span>
+    </div>
+  </div>
 </footer>
 
 <!-- WhatsApp float -->
@@ -690,5 +443,10 @@ function filterCat(cat,btn){
 <script>
 /* Mobile nav toggle */
 (()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
+<a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
 </body>
 </html>

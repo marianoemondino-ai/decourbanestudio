@@ -31,7 +31,7 @@
 </script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="manifest" href="manifest.json"/>
-<meta name="theme-color" content="#161412"/>
+<meta name="theme-color" content="#ffffff"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://decourbanestudio.com.ar/cortinas.html"/>
 <script type="application/ld+json">
@@ -73,328 +73,36 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
-<style>
-:root{
-  --gold:#c4a46b;--gold-dark:#a8854a;--gold-text:#8a6c38;--gold-light:#f5ead8;
-  --bg:#faf8f5;--bg-mid:#f2ede6;--bg-dark:#161412;
-  --text:#1c1a18;--text-mid:#5c5550;--text-light:#756d66;
-  --border:#e6dfd6;--white:#fff;--r:3px;
-  --ease:0.38s cubic-bezier(.25,.46,.45,.94);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{display:block;max-width:100%}
-a{text-decoration:none;color:inherit}
-ul{list-style:none}
-button{cursor:pointer;border:none;background:none;font-family:inherit}
 
-/* NAV */
-.nav-wrap{background:rgba(250,248,245,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:900}
-nav{max-width:1440px;margin:0 auto;padding:0 36px;height:96px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
-.nav-logo-c{display:flex;align-items:center;text-decoration:none;transition:opacity .3s;justify-self:center}
-.nav-logo-c:hover{opacity:.82}
-.logo-img{height:78px;object-fit:contain;display:block}
-.logo-tag{display:none}
-.nav-links{display:flex;align-items:center;gap:22px}
-.nav-links a{font-size:12px;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;color:var(--text-mid);transition:color var(--ease);white-space:nowrap;padding-bottom:3px;border-bottom:1.5px solid transparent}
-.nav-links a:hover,.nav-links a.active{color:var(--text);border-color:var(--gold)}
-.nav-dropdown{position:relative}
-.nav-dropdown>.nav-dd-trigger{cursor:pointer;display:flex;align-items:center;gap:4px}
-.nav-dd-arrow{width:10px;height:10px;transition:transform .25s ease}
-.nav-dropdown:hover .nav-dd-arrow,.nav-dropdown.open .nav-dd-arrow{transform:rotate(180deg)}
-.nav-dd-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);background:#fff;border:1px solid var(--border);border-radius:4px;box-shadow:0 8px 32px rgba(0,0,0,.1);min-width:220px;padding:8px 0;opacity:0;visibility:hidden;transition:opacity .2s ease,transform .2s ease,visibility .2s;z-index:999}
-.nav-dropdown:hover .nav-dd-menu,.nav-dropdown.open .nav-dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-.nav-dd-menu a{display:flex;align-items:center;gap:10px;padding:10px 18px;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text-mid);transition:background .2s,color .2s;border-bottom:none}
-.nav-dd-menu a:hover,.nav-dd-menu a:focus{background:var(--gold-light);color:var(--text);outline:none}
-.nav-dd-menu a svg{flex-shrink:0;color:var(--gold)}
-.nav-right{display:flex;align-items:center;gap:8px;justify-content:flex-end}
-.btn-wa{display:flex;align-items:center;gap:7px;background:#25D366;color:#fff;padding:9px 18px;border-radius:40px;font-size:11.5px;font-weight:600;transition:all var(--ease)}
-.btn-wa:hover{background:#1bb558}
-.btn-wa svg{width:15px;height:15px}
-.ham{display:none;flex-direction:column;gap:5px;padding:8px}
-.ham span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px}
-
-/* HERO */
-.hero{position:relative;height:85vh;min-height:580px;overflow:hidden;display:flex;align-items:flex-end}
-.hero-bg{position:absolute;inset:0;background:url('https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp') center/cover no-repeat;transform:scale(1.03);transition:transform 7s ease}
-.hero-bg.loaded{transform:scale(1)}
-.hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(18,15,12,.9) 0%,rgba(18,15,12,.35) 50%,rgba(18,15,12,.1) 100%)}
-.hero-content{position:relative;z-index:2;max-width:1440px;margin:0 auto;width:100%;padding:0 52px 80px}
-.eyebrow{font-size:10.5px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(42px,6vw,84px);font-weight:500;color:#fff;line-height:1.05;max-width:800px;margin-bottom:20px}
-.hero h1 em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:16.5px;color:rgba(255,255,255,.7);max-width:520px;line-height:1.75;margin-bottom:36px;font-weight:400}
-.hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}
-.hb{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#fff;padding:8px 16px;border-radius:40px;font-size:12px;font-weight:500}
-.hb svg{width:14px;height:14px;color:var(--gold);flex-shrink:0}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-.btn-p{display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:var(--bg-dark);padding:15px 32px;border-radius:var(--r);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:all var(--ease)}
-.btn-p:hover{background:var(--white);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.25)}
-.btn-s{display:inline-flex;align-items:center;gap:9px;color:#fff;padding:15px 32px;border-radius:var(--r);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;border:1px solid rgba(255,255,255,.35);transition:all var(--ease)}
-.btn-s:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7)}
-
-/* WHY HD */
-.why-hd{background:var(--bg-dark);padding:80px 36px}
-.why-hd-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.why-img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;position:relative}
-.why-img img{width:100%;height:100%;object-fit:cover}
-.why-badge{position:absolute;bottom:20px;left:20px;background:rgba(196,164,107,.92);color:var(--bg-dark);padding:10px 18px;border-radius:var(--r);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
-.why-text .ey{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(196,164,107,.7);font-weight:600;display:flex;align-items:center;gap:9px;margin-bottom:12px}
-.why-text .ey::before{content:'';display:block;width:22px;height:1px;background:rgba(196,164,107,.7)}
-.why-text h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);font-weight:500;color:#fff;line-height:1.15;margin-bottom:20px}
-.why-text h2 em{font-style:italic;color:var(--gold)}
-.why-text p{font-size:14.5px;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:20px}
-.why-points{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
-.wp{display:flex;align-items:flex-start;gap:12px}
-.wp-icon{width:28px;height:28px;border-radius:50%;background:rgba(196,164,107,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
-.wp-icon svg{width:14px;height:14px;color:var(--gold)}
-.wp-t{font-size:13.5px;font-weight:600;color:#fff;margin-bottom:2px}
-.wp-d{font-size:12.5px;color:rgba(255,255,255,.45)}
-
-/* PRODUCTS */
-.products{padding:96px 36px;background:var(--bg)}
-.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
-.pc{border-radius:var(--r);overflow:hidden;border:1.5px solid var(--border);background:var(--white);transition:all var(--ease);cursor:pointer}
-.pc:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 20px 56px rgba(0,0,0,.09)}
-.pc-img{position:relative;overflow:hidden;aspect-ratio:4/3}
-.pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.pc:hover .pc-img img{transform:scale(1.07)}
-.pc-tag{position:absolute;top:14px;left:14px;background:var(--gold);color:var(--bg-dark);font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:2px;font-weight:700}
-.pc-tag.dark{background:var(--bg-dark);color:#fff}
-.pc-body{padding:22px 22px 20px}
-.pc-cat{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-text);font-weight:600;margin-bottom:6px}
-.pc-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:500;color:var(--text);margin-bottom:10px}
-.pc-desc{font-size:13.5px;color:var(--text-mid);line-height:1.7;margin-bottom:16px}
-.pc-features{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
-.pf{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--text-mid)}
-.pf svg{width:14px;height:14px;color:var(--gold);flex-shrink:0}
-.pc-cta{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:var(--bg-dark);padding:12px;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-radius:var(--r);width:100%;transition:all var(--ease)}
-.pc-cta:hover{background:var(--gold-dark)}
-
-/* PROCESS */
-.process{background:var(--bg-mid);padding:80px 36px}
-.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;position:relative}
-.proc-steps::before{content:'';position:absolute;top:32px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(90deg,var(--gold),rgba(196,164,107,.3),var(--gold));z-index:0}
-.ps{text-align:center;padding:0 16px;position:relative;z-index:1}
-.ps-num{width:64px;height:64px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--gold)}
-.ps-t{font-size:14.5px;font-weight:600;color:var(--text);margin-bottom:8px}
-.ps-d{font-size:13px;color:var(--text-mid);line-height:1.65}
-
-/* MARCELA CTA */
-.marcela-cta{background:var(--bg-dark);padding:80px 36px;position:relative;overflow:hidden}
-.marcela-cta::before{content:'EQUIPO';position:absolute;left:-20px;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:200px;font-weight:700;color:rgba(255,255,255,.02);pointer-events:none;white-space:nowrap}
-.mcta-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;position:relative}
-.mcta-img{width:160px;height:160px;border-radius:50%;overflow:hidden;border:3px solid var(--gold);flex-shrink:0;background:var(--bg-dark)}
-.mcta-img img{width:100%;height:100%;object-fit:cover}
-.mcta-text h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:500;color:#fff;line-height:1.15;margin-bottom:12px}
-.mcta-text h2 em{font-style:italic;color:var(--gold)}
-.mcta-text p{font-size:15px;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:28px;max-width:520px}
-.mcta-btns{display:flex;gap:12px;flex-wrap:wrap}
-
-/* FAQ */
-.faq{padding:80px 36px;background:var(--bg)}
-.faq-inner{max-width:820px;margin:0 auto}
-.fq-item{border-bottom:1px solid var(--border);padding:20px 0;cursor:pointer}
-.fq-q{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:15px;font-weight:500;color:var(--text)}
-.fq-icon{width:28px;height:28px;border-radius:50%;background:var(--gold-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all var(--ease)}
-.fq-item.open .fq-icon{background:var(--gold);transform:rotate(45deg)}
-.fq-icon svg{width:14px;height:14px;color:var(--gold)}
-.fq-item.open .fq-icon svg{color:var(--bg-dark)}
-.fq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.fq-item.open .fq-a{max-height:300px}
-.fq-a p{padding:14px 0 4px;font-size:14.5px;color:var(--text-mid);line-height:1.8}
-.fq-a p strong{color:var(--text)}
-.fq-a p a{color:var(--gold);font-weight:500}
-
-/* GALLERY */
-.gallery{padding:0;background:var(--bg-mid)}
-.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
-.gal-item{position:relative;overflow:hidden;aspect-ratio:4/3;cursor:pointer}
-.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.gal-item:hover img{transform:scale(1.08)}
-.gal-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(18,15,12,.75),transparent);display:flex;align-items:flex-end;padding:20px;opacity:0;transition:opacity .35s ease}
-.gal-item:hover .gal-ov{opacity:1}
-.gal-label{font-family:'Playfair Display',serif;font-size:16px;color:#fff;font-weight:500}
-.gal-sub{font-size:11px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-top:3px}
-
-/* TRUST STRIP */
-.trust-strip{background:var(--bg-dark);padding:48px 36px}
-.trust-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
-.ts-num{font-family:'Playfair Display',serif;font-size:42px;font-weight:600;color:var(--gold);line-height:1}
-.ts-lbl{font-size:12px;color:rgba(255,255,255,.45);margin-top:6px;line-height:1.4}
-
-/* FOOTER */
-.footer-mini{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,.06);padding:36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:12.5px;color:rgba(255,255,255,.28)}
-.footer-mini img{height:36px;filter:brightness(0) invert(1);opacity:.6}
-.footer-links{display:flex;gap:20px;flex-wrap:wrap}
-.footer-links a{color:rgba(255,255,255,.38);transition:color var(--ease)}
-.footer-links a:hover{color:var(--gold)}
-
-/* WA FLOAT */
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:800;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all var(--ease)}
-.wa-float:hover{background:#1bb558;transform:scale(1.1)}
-.wa-float::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,.18);animation:wp 2.5s ease-out infinite}
-@keyframes wp{0%{transform:scale(1);opacity:1}100%{transform:scale(1.7);opacity:0}}
-/* CHAT WIDGET */
-.chat-widget{position:fixed;bottom:28px;right:28px;z-index:800}
-.chat-bubble{position:absolute;bottom:70px;right:0;background:#fff;border-radius:16px 16px 4px 16px;padding:16px 18px;width:295px;box-shadow:0 8px 36px rgba(0,0,0,.16);opacity:0;visibility:hidden;transform:translateY(12px) scale(.96);transition:all .4s cubic-bezier(.34,1.2,.64,1);border:1px solid var(--border)}
-.chat-widget.open .chat-bubble{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
-.chat-close-row{display:flex;justify-content:flex-end;margin-bottom:6px}
-.chat-close-btn{background:none;border:none;color:var(--text-light);cursor:pointer;font-size:18px;line-height:1;padding:2px 4px;transition:color .3s}
-.chat-close-btn:hover{color:var(--text)}
-.chat-bubble-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border)}
-.chat-bubble-av{width:40px;height:40px;border-radius:50%;flex-shrink:0;border:2px solid #25D366;display:flex;align-items:center;justify-content:center;background:var(--gold)}
-.chat-bubble-name{font-size:13px;font-weight:700;color:var(--text)}
-.chat-bubble-sub{font-size:10.5px;color:var(--text-light);margin-top:1px}
-.chat-bubble-status{font-size:11px;color:#25D366;display:flex;align-items:center;gap:4px;margin-top:2px}
-.chat-bubble-status::before{content:'';width:6px;height:6px;border-radius:50%;background:#25D366;display:inline-block}
-.chat-msg{background:#f0f0f0;border-radius:12px 12px 12px 4px;padding:10px 14px;font-size:13px;color:var(--text);line-height:1.6;margin-bottom:12px}
-.chat-typing{display:flex;gap:4px;align-items:center;padding:10px 14px;background:#f0f0f0;border-radius:12px;width:fit-content}
-.chat-typing span{width:7px;height:7px;border-radius:50%;background:#aaa;animation:chatTyp .9s ease-in-out infinite}
-.chat-typing span:nth-child(2){animation-delay:.2s}
-.chat-typing span:nth-child(3){animation-delay:.4s}
-@keyframes chatTyp{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
-.chat-quick-replies{display:flex;flex-direction:column;gap:7px}
-.chat-qr{display:block;padding:9px 14px;background:var(--gold-light);border:1.5px solid rgba(196,164,107,.3);border-radius:20px;font-size:12.5px;color:var(--gold-dark);font-weight:500;text-align:left;transition:all .2s ease;text-decoration:none;line-height:1.3}
-.chat-qr:hover{background:var(--gold);color:var(--bg-dark);border-color:var(--gold);transform:translateX(3px)}
-.chat-fab{width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;box-shadow:0 4px 20px rgba(37,211,102,.4);position:relative;transition:all .38s ease}
-.chat-fab:hover{background:#1bb558;transform:scale(1.08)}
-.chat-fab svg{width:28px;height:28px;color:#fff}
-.chat-fab-badge{position:absolute;top:-3px;right:-3px;background:#e74c3c;color:#fff;width:18px;height:18px;border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
-.chat-fab::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,.18);animation:wp 2.8s ease-out infinite}
-body.dark .chat-bubble{background:#211f1d;border-color:#302c28}
-body.dark .chat-bubble-name{color:#ede8e0}
-body.dark .chat-msg{background:#2a2826;color:#ede8e0}
-body.dark .chat-qr{background:rgba(196,164,107,.1);color:var(--gold);border-color:rgba(196,164,107,.25)}
-body.dark .chat-qr:hover{background:var(--gold);color:var(--bg-dark)}
-
-/* REVEAL */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
-.rvl{opacity:0;transform:translateX(-28px);transition:opacity .65s ease,transform .65s ease}
-.rvr{opacity:0;transform:translateX(28px);transition:opacity .65s ease,transform .65s ease}
-.rv.in,.rvl.in,.rvr.in{opacity:1;transform:translate(0)}
-.ey{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:9px;margin-bottom:12px}
-.ey::before{content:'';display:block;width:22px;height:1px;background:var(--gold)}
-.ey-c{justify-content:center}
-.ey-c::before{display:none}
-h2.sec{font-family:'Playfair Display',serif;font-size:clamp(30px,3.5vw,44px);font-weight:500;line-height:1.15;color:var(--text)}
-h2.sec em{font-style:italic;color:var(--gold)}
-
-@media(max-width:1000px){.why-hd-inner{grid-template-columns:1fr;gap:36px}.why-img{display:none}}
-@media(max-width:900px){
-  nav{padding:0 20px}.nav-links{display:none}.ham{display:flex}
-  .prod-grid{grid-template-columns:1fr 1fr}
-  .proc-steps{grid-template-columns:1fr 1fr;gap:28px}
-  .proc-steps::before{display:none}
-  .trust-inner{grid-template-columns:1fr 1fr}
-  .mcta-inner{grid-template-columns:1fr;text-align:center}
-  .mcta-img{margin:0 auto}
-  .gal-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-  .hero-content{padding:0 24px 56px}
-  .prod-grid{grid-template-columns:1fr}
-  .proc-steps{grid-template-columns:1fr}
-  .trust-inner{grid-template-columns:1fr 1fr}
-  .hero-ctas{flex-direction:column}
-}
-
-/* Measurement guide responsive */
-.medicion-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-@media(max-width:768px){.medicion-grid{grid-template-columns:1fr}}
-
-/* Comparador responsive */
-@media(max-width:700px){
-  #comparador table th,#comparador table td{padding:10px 10px;font-size:12px}
-  #comparador table th:first-child,#comparador table td:first-child{font-size:11.5px}
-}
-
-/* Rangos de precio responsive */
-@media(max-width:768px){
-  .rangos-grid{grid-template-columns:1fr 1fr!important}
-}
-@media(max-width:500px){
-  .rangos-grid{grid-template-columns:1fr!important}
-}
-
-/* PowerView grid responsive */
-@media(max-width:768px){
-  .powerview-grid{grid-template-columns:1fr!important}
-}
-
-/* Cómo trabajamos (index) responsive */
-@media(max-width:768px){
-  .como-steps{grid-template-columns:1fr 1fr!important}
-  .como-steps::before{display:none!important}
-}
-@media(max-width:500px){
-  .como-steps{grid-template-columns:1fr!important}
-}
-
-/* ── MOBILE NAV ── */
-.ham{display:none;flex-direction:column;justify-content:center;gap:5px;padding:8px;cursor:pointer;background:none;border:none;flex-shrink:0}
-.ham span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:all .25s}
-.mob-nav{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;background:var(--bg,#fdfaf6);border-bottom:1px solid var(--border,#e8dfd4);z-index:998;padding:72px 24px 20px;box-shadow:0 8px 24px rgba(0,0,0,.1)}
-.mob-nav.open{display:flex}
-.mob-nav a{color:var(--text-mid,#4a3f35);text-decoration:none;font-size:15px;font-weight:500;padding:13px 0;border-bottom:1px solid var(--border-lt,#f0e8de);display:flex;align-items:center;gap:8px}
-.mob-nav a:last-child{border:none;color:var(--gold,#c4a46b);font-weight:700;margin-top:4px}
-@media(max-width:900px){.ham{display:flex}}
-</style>
 </head>
 <body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" width="160" height="38"/>
+    </a>
+    <div class="nav-links">
+      <a href="cortinas.html">Productos</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="nav-cta" target="_blank" rel="noopener">Consultar</a>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
+  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
+  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
+  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+</div>
 
 <!-- NAV -->
-<div class="nav-wrap">
-  <nav>
-    <div class="nav-links">
-      <a href="index.html">Inicio</a>
-      <div class="nav-dropdown">
-        <span class="nav-dd-trigger active" style="font-size:12px;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;color:var(--text);padding-bottom:3px;border-bottom:1.5px solid var(--gold)">Hunter Douglas
-          <svg class="nav-dd-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-        </span>
-        <div class="nav-dd-menu">
-          <a href="cortinas.html#silhouette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><circle cx="12" cy="12" r="5"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2"/></svg>Silhouette®</a>
-          <a href="cortinas.html#duette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>Duette®</a>
-          <a href="cortinas.html#pirouette"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M4 6h16M4 10h16M4 14h10"/></svg>Pirouette®</a>
-          <a href="cortinas-roller.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 3h18v18H3z"/></svg>Roller Quantum®</a>
-          <a href="cortinas-luminette.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 3h18v18H3z"/></svg>Luminette®</a>
-          <a href="cortinas.html#gemini"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Toldos · Exterior</a>
-          <a href="comparador.html" style="color:var(--gold-text);font-weight:600"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Comparar modelos</a>
-          <a href="powerview.html" style="color:var(--gold);font-weight:600"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>⚡ PowerView® Motorización</a>
-          <a href="guia-por-ambiente.html" style="border-top:1px solid var(--border);margin-top:4px;padding-top:12px;color:var(--gold);font-weight:600"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>★ Guía por ambiente</a>
-      <a href="cotizador.html" style="color:var(--gold);font-weight:600"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Cotizador de cortinas</a>
-        </div>
-      </div>
-      <a href="coleccion.html">Catálogo</a>
-    </div>
-    <a href="index.html" class="nav-logo-c" aria-label="Decourban Estudio">
-      <img class="logo-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" fetchpriority="high" loading="eager"/>
-      <span class="logo-tag">Decoración · Río Cuarto, Córdoba</span>
-    </a>
-    <div class="nav-right">
-      <div class="nav-links" style="margin-right:10px">
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-      </div>
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20cortinas%20Hunter%20Douglas" class="btn-wa" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-        Cotizar
-      </a>
-      <button class="ham" id="ham" aria-label="Menú"><span></span><span></span><span></span></button>
-    </div>
-  </nav>
-<!-- MOBILE NAV -->
-<nav class="mob-nav" id="mobNav" aria-label="Navegación móvil">
-  <a href="cortinas.html">Cortinas Hunter Douglas</a>
-  <a href="coleccion.html">Catálogo</a>
-  <a href="proyectos.html">Proyectos</a>
-  <a href="nosotros.html">Nosotros</a>
-  <a href="contacto.html">Contacto</a>
-  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">💬 WhatsApp — Cotizar gratis</a>
-</nav>
-</div>
+
 
 <!-- HERO -->
 <section class="hero">
@@ -467,9 +175,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
     </div>
   </div>
 </section>
-<style>
-@media(max-width:768px){#tipos~section .rv[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}}
-</style>
+
 
 <!-- MUESTRAS GRATIS -->
 <section style="background:var(--gold-light);padding:40px 36px;border-bottom:1px solid rgba(196,164,107,.3)">
@@ -1077,22 +783,43 @@ h2.sec em{font-style:italic;color:var(--gold)}
 </section>
 
 <!-- FOOTER -->
-<div class="footer-mini">
-  <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
-  <span>© 2026 Decourban Estudio · Río Cuarto, Córdoba · <a href="mailto:Ventas@decourban.com.ar" style="color:rgba(255,255,255,.45)">Ventas@decourban.com.ar</a></span>
-  <div class="footer-links">
-    <a href="index.html">Inicio</a>
-    <a href="cortinas-silhouette.html">Silhouette®</a>
-    <a href="cortinas-duette.html">Duette®</a>
-    <a href="toldo-gemini.html">Toldo Gemini®</a>
-    <a href="guia-por-ambiente.html">Guía por ambiente</a>
-    <a href="comparador.html">Comparador</a>
-    <a href="blog-cortinas-hunter-douglas.html">Blog</a>
-    <a href="coleccion.html">Catálogo</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores desde 2004.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <a href="cortinas-silhouette.html">Silhouette</a>
+        <a href="cortinas-pirouette.html">Pirouette</a>
+        <a href="cortinas-duette.html">Duette</a>
+        <a href="cortinas-roller.html">Roller</a>
+        <a href="toldo-gemini.html">Toldo Gemini</a>
+        <a href="powerview.html">PowerView</a>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="garantia.html">Garantía</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="tel:+543585075773">358 507-5773</a>
+        <a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a>
+        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+R%C3%ADo+Cuarto" target="_blank" rel="noopener">Juan de Garay 1550, Río Cuarto</a>
+        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">@decourbanestudio</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Decourban Estudio. Todos los derechos reservados.</span>
+      <span>Río Cuarto, Córdoba, Argentina</span>
+    </div>
   </div>
-</div>
+</footer>
 
 <!-- CHAT WIDGET -->
 <div class="chat-widget" id="chatWidget">
@@ -1183,5 +910,10 @@ setTimeout(()=>{if(!chatOpen&&!sessionStorage.getItem('chatOpened')){toggleChat(
 <script>
 /* Mobile nav toggle */
 (()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
+<a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
 </body>
 </html>

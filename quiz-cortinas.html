@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://decourbanestudio.com.ar/quiz-cortinas.html"/>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="manifest" href="manifest.json"/>
-<meta name="theme-color" content="#161412"/>
+<meta name="theme-color" content="#ffffff"/>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -31,41 +31,41 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+
+
 <style>
-:root{--gold:#c4a46b;--gold-lt:#f5ead8;--gold-dark:#a8854a;--bg:#fdfaf6;--bg-dark:#161412;--bg-mid:#f2ede6;--text:#1a1714;--text-mid:#4a3f35;--text-light:#8a7a6a;--border:#e8dfd4;--border-lt:#f0e8de;--r:10px;--ease:.28s cubic-bezier(.4,0,.2,1)}
+:root{}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--text);min-height:100vh;overflow-x:hidden}
 
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,246,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-lt);display:flex;align-items:center;justify-content:space-between;padding:16px 40px;transition:all .3s}
 .nav.scrolled{padding:10px 40px;box-shadow:0 2px 20px rgba(0,0,0,.07)}
 .nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--text);text-decoration:none}
-.nav-logo span{color:var(--gold)}
+.nav-logo span{color:#111}
 .nav-links{display:flex;gap:22px;list-style:none}
 .nav-links a{color:var(--text-mid);text-decoration:none;font-size:13px;font-weight:500;transition:color var(--ease)}
-.nav-links a:hover{color:var(--gold)}
-.nav-cta{background:var(--gold);color:#fff;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:9px 18px;border-radius:3px;text-decoration:none;transition:background var(--ease)}
+.nav-links a:hover{color:#111}
+.nav-cta{background:#111;color:#fff;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:9px 18px;border-radius:3px;text-decoration:none;transition:background var(--ease)}
 .nav-cta:hover{background:var(--gold-dark)}
 @media(max-width:900px){.nav-links{display:none}}
 @media(max-width:600px){.nav{padding:12px 20px}}
 
 /* HERO */
 .quiz-hero{padding:120px 40px 60px;text-align:center;background:linear-gradient(160deg,var(--bg-mid) 0%,var(--bg) 60%)}
-.quiz-hero .eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-.quiz-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:500;line-height:1.2;margin-bottom:20px;color:var(--bg-dark)}
+.quiz-hero .eyebrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#111;margin-bottom:16px}
+.quiz-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:500;line-height:1.2;margin-bottom:20px;color:#fff}
 .quiz-hero p{font-size:16px;color:var(--text-mid);max-width:520px;margin:0 auto 40px}
 .hero-badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:8px}
-.badge{background:var(--bg);border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:12px;font-weight:500;color:var(--text-mid);display:flex;align-items:center;gap:6px}
-.badge svg{color:var(--gold)}
+.badge{background:#fff;border:1px solid var(--border);border-radius:20px;padding:6px 16px;font-size:12px;font-weight:500;color:var(--text-mid);display:flex;align-items:center;gap:6px}
+.badge svg{color:#111}
 
 /* PROGRESS */
 .progress-wrap{max-width:560px;margin:0 auto 12px;padding:0 40px}
 .progress-bar-bg{height:4px;background:var(--border);border-radius:2px;overflow:hidden}
-.progress-bar-fill{height:100%;background:var(--gold);border-radius:2px;transition:width .5s var(--ease)}
+.progress-bar-fill{height:100%;background:#111;border-radius:2px;transition:width .5s var(--ease)}
 .progress-label{display:flex;justify-content:space-between;font-size:11px;font-weight:500;color:var(--text-light);margin-top:8px}
 
 /* QUIZ CARD */
@@ -75,16 +75,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 
 .step-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gold-lt);color:var(--gold-dark);font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:20px}
-.quiz-q{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:500;line-height:1.35;margin-bottom:8px;color:var(--bg-dark)}
+.quiz-q{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:500;line-height:1.35;margin-bottom:8px;color:#fff}
 .quiz-sub{font-size:13px;color:var(--text-light);margin-bottom:28px}
 
 .options{display:grid;gap:12px}
 .option{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:all var(--ease);background:#fff;text-align:left}
-.option:hover{border-color:var(--gold);background:var(--gold-lt)}
-.option.selected{border-color:var(--gold);background:var(--gold-lt)}
+.option:hover{border-color:#111;background:var(--gold-lt)}
+.option.selected{border-color:#111;background:var(--gold-lt)}
 .option-icon{width:40px;height:40px;min-width:40px;border-radius:10px;background:var(--bg-mid);display:flex;align-items:center;justify-content:center;transition:background var(--ease)}
-.option.selected .option-icon{background:var(--gold);color:#fff}
-.option-icon svg{width:18px;height:18px;color:var(--gold)}
+.option.selected .option-icon{background:#111;color:#fff}
+.option-icon svg{width:18px;height:18px;color:#111}
 .option.selected .option-icon svg{color:#fff}
 .option-text{}
 .option-title{font-weight:600;font-size:14px;color:var(--text);margin-bottom:3px}
@@ -92,39 +92,39 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 
 .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:28px}
 .btn-back{background:none;border:1px solid var(--border);color:var(--text-mid);padding:10px 20px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;transition:all var(--ease);font-family:'DM Sans',sans-serif}
-.btn-back:hover{border-color:var(--gold);color:var(--gold)}
-.btn-next{background:var(--gold);color:#fff;border:none;padding:12px 28px;border-radius:6px;font-size:13px;font-weight:600;letter-spacing:.5px;cursor:pointer;transition:background var(--ease);font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:8px}
+.btn-back:hover{border-color:#111;color:#111}
+.btn-next{background:#111;color:#fff;border:none;padding:12px 28px;border-radius:6px;font-size:13px;font-weight:600;letter-spacing:.5px;cursor:pointer;transition:background var(--ease);font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:8px}
 .btn-next:hover{background:var(--gold-dark)}
 .btn-next:disabled{opacity:.4;cursor:not-allowed}
 
 /* RESULT */
 .result-card{background:#fff;border:1px solid var(--border-lt);border-radius:20px;padding:40px;box-shadow:0 4px 40px rgba(196,164,107,.12);display:none;animation:fadeUp .4s var(--ease)}
 .result-card.active{display:block}
-.result-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:#fff;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:24px}
-.result-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:500;color:var(--bg-dark);margin-bottom:6px}
+.result-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#111 0%,var(--gold-dark) 100%);color:#fff;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:24px}
+.result-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:500;color:#fff;margin-bottom:6px}
 .result-subtitle{font-size:14px;color:var(--gold-dark);font-weight:600;margin-bottom:16px}
 .result-desc{font-size:15px;color:var(--text-mid);line-height:1.7;margin-bottom:24px}
 .result-img{width:100%;border-radius:12px;object-fit:cover;height:220px;margin-bottom:24px}
 .result-features{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px}
 .result-feat{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-mid)}
-.result-feat svg{color:var(--gold);flex-shrink:0}
+.result-feat svg{color:#111;flex-shrink:0}
 .result-match{background:var(--bg-mid);border-radius:12px;padding:16px 20px;margin-bottom:28px;display:flex;align-items:center;gap:14px}
-.match-pct{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:500;color:var(--gold);line-height:1}
+.match-pct{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:500;color:#111;line-height:1}
 .match-text{font-size:13px;color:var(--text-mid);line-height:1.5}
 .match-text strong{display:block;font-size:15px;color:var(--text);margin-bottom:2px}
 .result-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .btn-wa{background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;transition:background var(--ease)}
 .btn-wa:hover{background:#1ea85a}
-.btn-see{background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;transition:background var(--ease)}
+.btn-see{background:#111;color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;transition:background var(--ease)}
 .btn-see:hover{background:var(--gold-dark)}
 .btn-retry{background:none;border:1px solid var(--border);color:var(--text-mid);padding:10px 20px;border-radius:6px;font-size:12px;font-weight:500;cursor:pointer;width:100%;margin-top:16px;transition:all var(--ease);font-family:'DM Sans',sans-serif}
-.btn-retry:hover{border-color:var(--gold);color:var(--gold)}
+.btn-retry:hover{border-color:#111;color:#111}
 
 /* SECONDARY RESULTS */
 .also-title{font-size:13px;font-weight:600;color:var(--text-light);letter-spacing:.8px;text-transform:uppercase;margin:32px 0 14px}
 .also-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .also-card{border:1px solid var(--border-lt);border-radius:10px;padding:14px;text-decoration:none;color:var(--text);transition:all var(--ease);display:flex;gap:12px;align-items:center}
-.also-card:hover{border-color:var(--gold);background:var(--gold-lt)}
+.also-card:hover{border-color:#111;background:var(--gold-lt)}
 .also-img{width:52px;height:52px;border-radius:8px;object-fit:cover}
 .also-name{font-size:13px;font-weight:600;margin-bottom:2px}
 .also-match{font-size:11px;color:var(--gold-dark);font-weight:600}
@@ -153,29 +153,41 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .mob-nav a:last-child{border:none;color:var(--gold,#c4a46b);font-weight:700;margin-top:4px}
 @media(max-width:900px){.ham{display:flex}}
 </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo">Decourban <span>Estudio</span></a>
-  <ul class="nav-links">
-    <li><a href="cortinas.html">Cortinas HD</a></li>
-    <li><a href="coleccion.html">Catálogo</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
-    <li><a href="nosotros.html">Nosotros</a></li>
-  </ul>
-  <button class="ham" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20gratuita" class="nav-cta" target="_blank" rel="noopener noreferrer">Cotizar gratis</a>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" width="160" height="38"/>
+    </a>
+    <div class="nav-links">
+      <a href="cortinas.html">Productos</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="nav-cta" target="_blank" rel="noopener">Consultar</a>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
+  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
+  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
+  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+</div>
 <!-- MOBILE NAV -->
-<nav class="mob-nav" id="mobNav" aria-label="Navegación móvil">
-  <a href="cortinas.html">Cortinas Hunter Douglas</a>
-  <a href="coleccion.html">Catálogo</a>
-  <a href="proyectos.html">Proyectos</a>
-  <a href="nosotros.html">Nosotros</a>
-  <a href="contacto.html">Contacto</a>
-  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">💬 WhatsApp — Cotizar gratis</a>
-</nav>
+
+
 
 <section class="quiz-hero">
   <div class="eyebrow">Quiz de recomendación</div>
@@ -585,5 +597,47 @@ window.addEventListener('scroll', function(){
 <script>
 /* Mobile nav toggle */
 (()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
+<a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores desde 2004.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <a href="cortinas-silhouette.html">Silhouette</a>
+        <a href="cortinas-pirouette.html">Pirouette</a>
+        <a href="cortinas-duette.html">Duette</a>
+        <a href="cortinas-roller.html">Roller</a>
+        <a href="toldo-gemini.html">Toldo Gemini</a>
+        <a href="powerview.html">PowerView</a>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="garantia.html">Garantía</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="tel:+543585075773">358 507-5773</a>
+        <a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a>
+        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+R%C3%ADo+Cuarto" target="_blank" rel="noopener">Juan de Garay 1550, Río Cuarto</a>
+        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">@decourbanestudio</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Decourban Estudio. Todos los derechos reservados.</span>
+      <span>Río Cuarto, Córdoba, Argentina</span>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

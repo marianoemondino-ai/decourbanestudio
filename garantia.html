@@ -49,135 +49,44 @@
   ]
 }
 </script>
+
+
+
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-:root{--gold:#c4a46b;--gold-lt:#f5ead8;--gold-dark:#a8854a;--bg:#fdfaf6;--bg-dark:#161412;--bg-mid:#f2ede6;--text:#1a1714;--text-mid:#4a3f35;--text-light:#8a7a6a;--border:#e8dfd4;--border-lt:#f0e8de;--r:10px;--ease:.28s cubic-bezier(.4,0,.2,1)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,246,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-lt);display:flex;align-items:center;justify-content:space-between;padding:16px 40px;transition:all .3s}
-.nav.scrolled{padding:10px 40px;box-shadow:0 2px 20px rgba(0,0,0,.07)}
-.nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--text);text-decoration:none}.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;gap:22px;list-style:none}.nav-links a{color:var(--text-mid);text-decoration:none;font-size:13px;font-weight:500;transition:color var(--ease)}.nav-links a:hover{color:var(--gold)}
-.nav-cta{background:var(--gold);color:#fff;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:9px 18px;border-radius:3px;text-decoration:none;transition:background var(--ease)}.nav-cta:hover{background:var(--gold-dark)}
-@media(max-width:900px){.nav-links{display:none}}@media(max-width:600px){.nav{padding:12px 20px}}
-
-/* HERO */
-.g-hero{padding:120px 40px 70px;background:var(--bg-dark);text-align:center;position:relative;overflow:hidden}
-.g-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 100%, rgba(196,164,107,.12) 0%, transparent 70%)}
-.g-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(196,164,107,.15);border:1px solid rgba(196,164,107,.3);border-radius:100px;padding:7px 18px;margin-bottom:24px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--gold)}
-.g-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:500;color:#fff;line-height:1.2;margin-bottom:20px;max-width:720px;margin-left:auto;margin-right:auto}
-.g-hero p{font-size:16px;color:rgba(255,255,255,.6);max-width:560px;margin:0 auto 36px;line-height:1.7}
-.g-badges-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
-.g-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px 20px;font-size:13px;color:rgba(255,255,255,.8);font-weight:500}
-.g-badge svg{color:var(--gold)}
-
-/* PAGE LAYOUT */
-.g-wrap{max-width:1100px;margin:0 auto;padding:80px 40px 100px}
-@media(max-width:600px){.g-wrap{padding:48px 20px 80px}.g-hero{padding:90px 20px 50px}}
-
-/* DUAL GUARANTEE */
-.dual-guarantee{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:64px}
-@media(max-width:700px){.dual-guarantee{grid-template-columns:1fr}}
-.dg-card{border-radius:16px;overflow:hidden}
-.dg-card-hd{display:flex;align-items:center;gap:16px;padding:24px 28px;color:#fff}
-.dg-hd-logo{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.15)}
-.dg-hd-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:500;margin-bottom:2px}
-.dg-hd-sub{font-size:12px;opacity:.65}
-.dg-card-body{padding:24px 28px;background:#fff;border:1px solid var(--border);border-top:none;border-radius:0 0 16px 16px}
-.dg-years{font-size:3rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1;margin-bottom:4px}
-.dg-years-label{font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:20px}
-.dg-item{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--border-lt);font-size:13.5px;color:var(--text-mid)}
-.dg-item:last-child{border-bottom:none}
-.dg-item::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px}
-.dg-hd-hd{background:var(--bg-dark)}
-.dg-years-hd{color:var(--gold)}
-.dg-hd-dc{background:linear-gradient(135deg,var(--gold-dark) 0%,var(--gold) 100%)}
-.dg-years-dc{color:var(--bg-dark)}
-
-/* PROCESS */
-.g-section-title{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:500;color:var(--bg-dark);margin-bottom:8px}
-.g-section-sub{font-size:14.5px;color:var(--text-mid);margin-bottom:36px;line-height:1.6}
-.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:64px;position:relative}
-.steps-grid::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:2px;background:linear-gradient(to right,var(--gold) 0%,var(--gold-lt) 100%);z-index:0}
-@media(max-width:700px){.steps-grid{grid-template-columns:1fr 1fr}.steps-grid::before{display:none}}
-@media(max-width:400px){.steps-grid{grid-template-columns:1fr}}
-.step-item{text-align:center;position:relative;z-index:1}
-.step-num{width:56px;height:56px;border-radius:50%;background:var(--bg-dark);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:500;color:var(--gold);margin:0 auto 14px}
-.step-label{font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px}
-.step-desc{font-size:12px;color:var(--text-mid);line-height:1.5}
-
-/* WHAT IS / NOT COVERED */
-.coverage-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:64px}
-@media(max-width:700px){.coverage-grid{grid-template-columns:1fr}}
-.cov-card{border-radius:14px;padding:28px}
-.cov-card-yes{background:#f0faf4;border:1px solid #b7dfca}
-.cov-card-no{background:#fff5f5;border:1px solid #f5c6c6}
-.cov-card-title{font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:8px}
-.cov-yes-title{color:#2e7d32}.cov-no-title{color:#c62828}
-.cov-item{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid rgba(0,0,0,.05);font-size:13.5px;color:var(--text-mid)}
-.cov-item:last-child{border-bottom:none}
-.cov-yes-item::before{content:'✓';color:#2e7d32;font-weight:700;flex-shrink:0}
-.cov-no-item::before{content:'✕';color:#c62828;font-weight:700;flex-shrink:0}
-
-/* FAQ */
-.faq-list{display:flex;flex-direction:column;gap:12px;margin-bottom:64px}
-.faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.faq-q{width:100%;background:none;border:none;padding:20px 24px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;color:var(--text);transition:background var(--ease)}
-.faq-q:hover{background:var(--bg-mid)}
-.faq-q.open{background:var(--bg-mid)}
-.faq-arrow{transition:transform var(--ease);flex-shrink:0;color:var(--gold)}
-.faq-q.open .faq-arrow{transform:rotate(180deg)}
-.faq-a{display:none;padding:0 24px 20px;font-size:14.5px;color:var(--text-mid);line-height:1.75}
-.faq-a.open{display:block}
-
-/* CTA */
-.g-cta{background:var(--bg-mid);border-radius:16px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.g-cta-text h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:500;margin-bottom:8px;color:var(--bg-dark)}
-.g-cta-text p{font-size:14px;color:var(--text-mid);line-height:1.6}
-.g-cta-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn-wa{background:#25D366;color:#fff;padding:13px 22px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:8px;transition:background var(--ease);white-space:nowrap}.btn-wa:hover{background:#1ea85a}
-.btn-sec{background:var(--bg-dark);color:#fff;padding:13px 22px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:8px;transition:background var(--ease);white-space:nowrap}.btn-sec:hover{background:#2d2520}
-
-/* WA FLOAT */
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:800;filter:drop-shadow(0 4px 20px rgba(37,211,102,.35));width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .28s cubic-bezier(.4,0,.2,1)}
-.wa-float:hover{background:#1bb558;transform:scale(1.12)}
-.wa-float::before{content:'';position:absolute;inset:-5px;border-radius:50%;background:rgba(37,211,102,.2);animation:wp 2.5s ease-out infinite}
-@keyframes wp{0%{transform:scale(1);opacity:1}100%{transform:scale(1.7);opacity:0}}
-
-/* ── MOBILE NAV ── */
-.ham{display:none;flex-direction:column;justify-content:center;gap:5px;padding:8px;cursor:pointer;background:none;border:none;flex-shrink:0}
-.ham span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:all .25s}
-.mob-nav{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;background:var(--bg,#fdfaf6);border-bottom:1px solid var(--border,#e8dfd4);z-index:998;padding:72px 24px 20px;box-shadow:0 8px 24px rgba(0,0,0,.1)}
-.mob-nav.open{display:flex}
-.mob-nav a{color:var(--text-mid,#4a3f35);text-decoration:none;font-size:15px;font-weight:500;padding:13px 0;border-bottom:1px solid var(--border-lt,#f0e8de);display:flex;align-items:center;gap:8px}
-.mob-nav a:last-child{border:none;color:var(--gold,#c4a46b);font-weight:700;margin-top:4px}
-@media(max-width:900px){.ham{display:flex}}
-</style>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo">Decourban <span>Estudio</span></a>
-  <ul class="nav-links">
-    <li><a href="cortinas.html">Cortinas HD</a></li>
-    <li><a href="cotizador.html">Cotizador</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
-    <li><a href="nosotros.html">Nosotros</a></li>
-  </ul>
-  <button class="ham" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20tengo%20una%20consulta%20sobre%20la%20garant%C3%ADa" class="nav-cta" target="_blank" rel="noopener noreferrer">Consultar garantía</a>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" width="160" height="38"/>
+    </a>
+    <div class="nav-links">
+      <a href="cortinas.html">Productos</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="nav-cta" target="_blank" rel="noopener">Consultar</a>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
+  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
+  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
+  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+</div>
 <!-- MOBILE NAV -->
-<nav class="mob-nav" id="mobNav" aria-label="Navegación móvil">
-  <a href="cortinas.html">Cortinas Hunter Douglas</a>
-  <a href="coleccion.html">Catálogo</a>
-  <a href="proyectos.html">Proyectos</a>
-  <a href="nosotros.html">Nosotros</a>
-  <a href="contacto.html">Contacto</a>
-  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">💬 WhatsApp — Cotizar gratis</a>
-</nav>
+
+
 
 <header class="g-hero">
   <div class="g-hero-badge">
@@ -373,5 +282,47 @@ function toggle(btn){
 <script>
 /* Mobile nav toggle */
 (()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
+<a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores desde 2004.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <a href="cortinas-silhouette.html">Silhouette</a>
+        <a href="cortinas-pirouette.html">Pirouette</a>
+        <a href="cortinas-duette.html">Duette</a>
+        <a href="cortinas-roller.html">Roller</a>
+        <a href="toldo-gemini.html">Toldo Gemini</a>
+        <a href="powerview.html">PowerView</a>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="garantia.html">Garantía</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="tel:+543585075773">358 507-5773</a>
+        <a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a>
+        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+R%C3%ADo+Cuarto" target="_blank" rel="noopener">Juan de Garay 1550, Río Cuarto</a>
+        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">@decourbanestudio</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Decourban Estudio. Todos los derechos reservados.</span>
+      <span>Río Cuarto, Córdoba, Argentina</span>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

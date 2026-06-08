@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://decourbanestudio.com.ar/cortinas-roller.html"/>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="manifest" href="manifest.json"/>
-<meta name="theme-color" content="#fdfaf6"/>
+<meta name="theme-color" content="#ffffff"/>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -84,218 +84,45 @@
   ]
 }
 </script>
+
+
+
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-:root{--gold:#c4a46b;--gold-lt:#f5ead8;--gold-dark:#a8854a;--bg:#fdfaf6;--bg-dark:#161412;--bg-mid:#f2ede6;--text:#1a1714;--text-mid:#4a3f35;--text-light:#8a7a6a;--border:#e8dfd4;--border-lt:#f0e8de;--r:10px;--ease:.28s cubic-bezier(.4,0,.2,1)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,246,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border-lt);display:flex;align-items:center;justify-content:space-between;padding:16px 40px;transition:all .3s}
-.nav.scrolled{padding:10px 40px;box-shadow:0 2px 20px rgba(0,0,0,.07)}
-.nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--text);text-decoration:none}
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;gap:22px;list-style:none}
-.nav-links a{color:var(--text-mid);text-decoration:none;font-size:13px;font-weight:500;transition:color var(--ease)}
-.nav-links a:hover{color:var(--gold)}
-.nav-cta{background:var(--gold);color:#fff;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:9px 18px;border-radius:3px;text-decoration:none;transition:background var(--ease)}
-.nav-cta:hover{background:var(--gold-dark)}
-@media(max-width:900px){.nav-links{display:none}}
-@media(max-width:600px){.nav{padding:12px 20px}}
-
-/* HERO */
-.hero{padding:100px 40px 0;background:var(--bg)}
-.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
-@media(max-width:860px){.hero-inner{grid-template-columns:1fr;gap:32px;padding-bottom:0}}
-.hero-ey{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:9px;margin-bottom:14px}
-.hero-ey::before{content:'';width:22px;height:1px;background:var(--gold)}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.4rem);line-height:1.1;margin-bottom:16px;font-weight:500}
-.hero h1 em{font-style:italic;color:var(--gold)}
-.hero-desc{font-size:15.5px;color:var(--text-mid);line-height:1.75;margin-bottom:28px;max-width:460px}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
-.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#fff;padding:13px 24px;border-radius:4px;font-size:13px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;text-decoration:none;transition:all var(--ease)}
-.btn-p:hover{background:var(--gold-dark);transform:translateY(-2px)}
-.btn-s{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--border);color:var(--text-mid);padding:12px 20px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;transition:all var(--ease)}
-.btn-s:hover{border-color:var(--gold);color:var(--gold)}
-.hero-stats{display:flex;gap:24px;flex-wrap:wrap}
-.h-stat{display:flex;flex-direction:column;gap:3px}
-.h-stat-n{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:var(--text);line-height:1}
-.h-stat-l{font-size:11.5px;color:var(--text-light)}
-.h-stat-sep{width:1px;background:var(--border);align-self:stretch;margin:4px 0}
-/* Hero image */
-.hero-img-wrap{position:relative;border-radius:var(--r) var(--r) 0 0;overflow:hidden;aspect-ratio:4/3;background:var(--bg-mid)}
-.hero-img-wrap img{width:100%;height:100%;object-fit:cover}
-.hero-img-badge{position:absolute;bottom:16px;left:16px;background:rgba(22,20,18,.82);backdrop-filter:blur(10px);color:#fff;padding:9px 14px;border-radius:6px;font-size:12px;display:flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12)}
-.hero-img-badge strong{color:var(--gold)}
-
-/* FABRIC SELECTOR */
-.fab{background:var(--bg-mid);padding:72px 40px}
-.fab-inner{max-width:1100px;margin:0 auto}
-.sec-ey{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:9px;margin-bottom:10px}
-.sec-ey::before{content:'';width:20px;height:1px;background:var(--gold)}
-h2.sec{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:500;line-height:1.2;margin-bottom:8px}
-h2.sec em{font-style:italic;color:var(--gold)}
-.sec-sub{font-size:15px;color:var(--text-mid);max-width:540px;line-height:1.7;margin-bottom:44px}
-.fab-tabs{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap}
-.fab-tab{padding:9px 18px;border-radius:20px;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid var(--border);color:var(--text-mid);background:#fff;transition:all var(--ease)}
-.fab-tab.active,.fab-tab:hover{background:var(--gold);border-color:var(--gold);color:#fff}
-.fab-panels{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden}
-.fab-panel{display:none;padding:32px;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
-.fab-panel.show{display:grid}
-@media(max-width:700px){.fab-panel{grid-template-columns:1fr}}
-.fab-panel-img{aspect-ratio:16/10;border-radius:8px;overflow:hidden}
-.fab-panel-img img{width:100%;height:100%;object-fit:cover}
-.fab-panel-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:500;margin-bottom:10px}
-.fab-panel-desc{font-size:14px;color:var(--text-mid);line-height:1.75;margin-bottom:20px}
-.fab-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.fab-pill{background:var(--gold-lt);border-radius:20px;padding:5px 13px;font-size:12px;color:var(--text-mid);font-weight:500}
-.fab-pill.em{background:var(--gold);color:#fff}
-.fab-ideal{display:flex;align-items:flex-start;gap:10px;background:var(--bg-mid);border-radius:8px;padding:14px 16px}
-.fab-ideal svg{flex-shrink:0;margin-top:1px}
-.fab-ideal-t{font-size:13px;color:var(--text-mid);line-height:1.6}
-.fab-ideal-t strong{color:var(--text);display:block;margin-bottom:2px}
-
-/* VENTAJAS */
-.vent{padding:72px 40px;background:var(--bg)}
-.vent-inner{max-width:1100px;margin:0 auto}
-.vent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
-@media(max-width:780px){.vent-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:500px){.vent-grid{grid-template-columns:1fr}}
-.vent-card{padding:28px 24px;background:#fff;border:1.5px solid var(--border);border-radius:var(--r);transition:all var(--ease)}
-.vent-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.06)}
-.vent-icon{width:46px;height:46px;border-radius:11px;background:var(--gold-lt);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.vent-icon svg{width:20px;height:20px;fill:none;stroke:var(--gold-dark);stroke-width:1.8}
-.vent-title{font-size:15px;font-weight:600;margin-bottom:8px}
-.vent-desc{font-size:13.5px;color:var(--text-mid);line-height:1.7}
-
-/* QUANTUM DIFERENCIA */
-.quantum{padding:72px 40px;background:var(--bg-mid)}
-.quantum-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-@media(max-width:860px){.quantum-inner{grid-template-columns:1fr;gap:32px}}
-.quantum-vs{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden}
-.qvs-row{display:grid;grid-template-columns:1fr auto 1fr;gap:0;border-bottom:1px solid var(--border)}
-.qvs-row:last-child{border-bottom:none}
-.qvs-cell{padding:13px 16px;font-size:13px}
-.qvs-cell.label{background:var(--bg-mid);font-weight:600;font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:var(--text-light);text-align:center;display:flex;align-items:center;justify-content:center;border-left:1px solid var(--border);border-right:1px solid var(--border)}
-.qvs-cell.bad{color:var(--text-light);display:flex;align-items:center;gap:6px}
-.qvs-cell.good{color:var(--text);font-weight:500;display:flex;align-items:center;gap:6px;justify-content:flex-end;text-align:right}
-.qvs-hdr{background:var(--bg-dark);display:grid;grid-template-columns:1fr auto 1fr;border-radius:0}
-.qvs-hdr-cell{padding:12px 16px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:rgba(255,255,255,.5)}
-.qvs-hdr-cell.qvs-hdr-good{color:var(--gold);text-align:right}
-.qvs-hdr-cell.qvs-hdr-mid{text-align:center}
-
-/* AMBIENTES */
-.amb{padding:72px 40px;background:var(--bg)}
-.amb-inner{max-width:1100px;margin:0 auto}
-.amb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
-@media(max-width:860px){.amb-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.amb-grid{grid-template-columns:1fr}}
-.amb-card{border-radius:var(--r);overflow:hidden;border:1.5px solid var(--border);background:#fff;transition:all var(--ease);cursor:default}
-.amb-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.07)}
-.amb-img{aspect-ratio:3/2;overflow:hidden;background:var(--bg-mid);display:flex;align-items:center;justify-content:center}
-.amb-img svg{width:48px;height:48px;stroke:var(--border);fill:none;stroke-width:1}
-.amb-body{padding:18px}
-.amb-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:500;margin-bottom:6px}
-.amb-desc{font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:10px}
-.amb-tags{display:flex;gap:5px;flex-wrap:wrap}
-.amb-tag{background:var(--gold-lt);border-radius:10px;padding:3px 9px;font-size:11px;color:var(--text-light)}
-
-/* CROSS-SELL */
-.cross{padding:72px 40px;background:var(--bg-dark)}
-.cross-inner{max-width:1100px;margin:0 auto}
-.cross-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);color:#fff;margin-bottom:8px;font-weight:500}
-.cross-title em{color:var(--gold);font-style:italic}
-.cross-sub{font-size:14px;color:rgba(255,255,255,.45);margin-bottom:44px;max-width:520px;line-height:1.7}
-.cross-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media(max-width:780px){.cross-grid{grid-template-columns:1fr}}
-.cross-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:24px;text-decoration:none;transition:all var(--ease);display:block}
-.cross-card:hover{background:rgba(196,164,107,.1);border-color:rgba(196,164,107,.3);transform:translateY(-3px)}
-.cross-tag{font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.cross-name{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;margin-bottom:8px;font-weight:500}
-.cross-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.6;margin-bottom:12px}
-.cross-link{font-size:12px;font-weight:600;color:var(--gold);display:flex;align-items:center;gap:5px;text-transform:uppercase;letter-spacing:.8px}
-
-/* FAQ */
-.faq{padding:72px 40px;background:var(--bg-mid)}
-.faq-inner{max-width:760px;margin:0 auto}
-.faq-list{margin-top:40px;border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-item:last-child{border-bottom:none}
-.faq-q{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;cursor:pointer;font-size:15px;font-weight:500;background:#fff;width:100%;text-align:left;border:none;font-family:inherit;color:var(--text);transition:background var(--ease)}
-.faq-q:hover{background:var(--gold-lt)}
-.faq-icon{width:26px;height:26px;border-radius:50%;background:var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all var(--ease)}
-.faq-icon svg{width:12px;height:12px;fill:none;stroke:var(--text-mid);stroke-width:2.2;transition:transform var(--ease)}
-.faq-item.open .faq-q{background:var(--gold-lt)}
-.faq-item.open .faq-icon{background:var(--gold)}
-.faq-item.open .faq-icon svg{stroke:var(--bg-dark);transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:14px;color:var(--text-mid);line-height:1.8;background:#fff}
-.faq-item.open .faq-a{max-height:300px;padding:0 24px 18px}
-
-/* CTA BAND */
-.cta-band{background:linear-gradient(135deg,var(--gold-dark),var(--gold));padding:64px 40px;text-align:center}
-.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);color:#fff;margin-bottom:10px;font-weight:500}
-.cta-band p{font-size:15px;color:rgba(255,255,255,.75);margin-bottom:28px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.7}
-.cta-band-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-wht{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--gold-dark);padding:14px 26px;border-radius:4px;font-size:13px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;text-decoration:none;transition:all var(--ease)}
-.btn-wht:hover{background:var(--bg-dark);color:var(--gold);transform:translateY(-2px)}
-.btn-trans{display:inline-flex;align-items:center;gap:8px;border:2px solid rgba(255,255,255,.5);color:#fff;padding:13px 22px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;transition:all var(--ease)}
-.btn-trans:hover{border-color:#fff;background:rgba(255,255,255,.1)}
-
-/* FOOTER */
-.foot{background:#0e0c0a;padding:32px 40px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
-.foot-logo{font-family:'Playfair Display',serif;font-size:19px;color:#fff}
-.foot-logo span{color:var(--gold)}
-.foot-nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
-.foot-nav a{font-size:12.5px;color:rgba(255,255,255,.38);text-decoration:none;transition:color var(--ease)}
-.foot-nav a:hover{color:var(--gold)}
-.foot-copy{font-size:11px;color:rgba(255,255,255,.2)}
-.wapp{position:fixed;bottom:28px;right:28px;z-index:200;background:#25d366;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.35);transition:transform var(--ease)}
-.wapp:hover{transform:scale(1.1)}
-/* rv */
-.rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
-.rv.in{opacity:1;transform:none}
-
-/* WA FLOAT */
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:800;filter:drop-shadow(0 4px 20px rgba(37,211,102,.35));width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .28s cubic-bezier(.4,0,.2,1)}
-.wa-float:hover{background:#1bb558;transform:scale(1.12)}
-.wa-float::before{content:'';position:absolute;inset:-5px;border-radius:50%;background:rgba(37,211,102,.2);animation:wp 2.5s ease-out infinite}
-@keyframes wp{0%{transform:scale(1);opacity:1}100%{transform:scale(1.7);opacity:0}}
-
-/* ── MOBILE NAV ── */
-.ham{display:none;flex-direction:column;justify-content:center;gap:5px;padding:8px;cursor:pointer;background:none;border:none;flex-shrink:0}
-.ham span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:all .25s}
-.mob-nav{display:none;flex-direction:column;position:fixed;top:0;left:0;right:0;background:var(--bg,#fdfaf6);border-bottom:1px solid var(--border,#e8dfd4);z-index:998;padding:72px 24px 20px;box-shadow:0 8px 24px rgba(0,0,0,.1)}
-.mob-nav.open{display:flex}
-.mob-nav a{color:var(--text-mid,#4a3f35);text-decoration:none;font-size:15px;font-weight:500;padding:13px 0;border-bottom:1px solid var(--border-lt,#f0e8de);display:flex;align-items:center;gap:8px}
-.mob-nav a:last-child{border:none;color:var(--gold,#c4a46b);font-weight:700;margin-top:4px}
-@media(max-width:900px){.ham{display:flex}}
-</style>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo">Decourban<span> Estudio</span></a>
-  <ul class="nav-links">
-    <li><a href="cortinas.html">Cortinas HD</a></li>
-    <li><a href="comparador.html">Comparador</a></li>
-    <li><a href="cotizador.html">Cotizador</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
-  </ul>
-  <button class="ham" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
-  <a href="cotizador.html" class="nav-cta">Cotizá ahora</a>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio" width="160" height="38"/>
+    </a>
+    <div class="nav-links">
+      <a href="cortinas.html">Productos</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="nav-cta" target="_blank" rel="noopener">Consultar</a>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
+  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
+  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
+  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+</div>
 <!-- MOBILE NAV -->
-<nav class="mob-nav" id="mobNav" aria-label="Navegación móvil">
-  <a href="cortinas.html">Cortinas Hunter Douglas</a>
-  <a href="coleccion.html">Catálogo</a>
-  <a href="proyectos.html">Proyectos</a>
-  <a href="nosotros.html">Nosotros</a>
-  <a href="contacto.html">Contacto</a>
-  <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">💬 WhatsApp — Cotizar gratis</a>
-</nav>
+
+
 
 <!-- HERO -->
 <section class="hero">
@@ -305,7 +132,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
       <h1>Roller Quantum®<br>la cortina que <em>nunca falla</em></h1>
       <p class="hero-desc">Blackout total, screen solar o traslúcido suave. El Roller Quantum® de Hunter Douglas es la cortina de tela más vendida del mundo — fabricada a medida, instalada por nuestro equipo en Río Cuarto.</p>
       <div class="hero-btns">
-        <a href="cotizador.html" class="btn-p">Cotizar Roller <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        
         <a href="#tipos" class="btn-s">Ver tipos de tela</a>
       </div>
       <div class="hero-stats">
@@ -609,7 +436,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
   <h2>Cotizá tu Roller Quantum®<br>hoy mismo — sin costo</h2>
   <p>Usá el cotizador online para una estimación en segundos, o pedí visita gratuita en Río Cuarto y zona.</p>
   <div class="cta-band-btns">
-    <a href="cotizador.html" class="btn-wht">Cotizar online <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    
     <a href="https://wa.me/543585075773?text=Quiero%20cotizar%20cortinas%20Roller%20Quantum%20Hunter%20Douglas%20para%20mi%20casa" target="_blank" rel="noopener noreferrer" class="btn-trans">
       <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Consultar por WhatsApp
@@ -617,20 +444,42 @@ h2.sec em{font-style:italic;color:var(--gold)}
   </div>
 </section>
 
-<footer class="foot">
-  <div class="foot-logo">Decourban<span> Estudio</span></div>
-  <nav class="foot-nav">
-    <a href="index.html">Inicio</a>
-    <a href="cortinas.html">Cortinas HD</a>
-    <a href="cortinas-silhouette.html">Silhouette®</a>
-    <a href="cortinas-pirouette.html">Pirouette®</a>
-    <a href="cortinas-duette.html">Duette®</a>
-    <a href="powerview.html">PowerView®</a>
-    <a href="cotizador.html">Cotizador</a>
-    <a href="comparador.html">Comparador</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-  <div class="foot-copy">© 2026 Decourban Estudio — Juan de Garay 1550, Río Cuarto, Córdoba</div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
+        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores desde 2004.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <a href="cortinas-silhouette.html">Silhouette</a>
+        <a href="cortinas-pirouette.html">Pirouette</a>
+        <a href="cortinas-duette.html">Duette</a>
+        <a href="cortinas-roller.html">Roller</a>
+        <a href="toldo-gemini.html">Toldo Gemini</a>
+        <a href="powerview.html">PowerView</a>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="garantia.html">Garantía</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="tel:+543585075773">358 507-5773</a>
+        <a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a>
+        <a href="https://maps.google.com/?q=Juan+de+Garay+1550+R%C3%ADo+Cuarto" target="_blank" rel="noopener">Juan de Garay 1550, Río Cuarto</a>
+        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">@decourbanestudio</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Decourban Estudio. Todos los derechos reservados.</span>
+      <span>Río Cuarto, Córdoba, Argentina</span>
+    </div>
+  </div>
 </footer>
 
 <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer" class="wapp" aria-label="WhatsApp">
@@ -664,6 +513,11 @@ document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
 <script>
 /* Mobile nav toggle */
 (()=>{const h=document.querySelector('.ham'),m=document.getElementById('mobNav');if(!h||!m)return;h.onclick=()=>{const o=m.classList.toggle('open');h.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(m.classList.contains('open')&&!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.removeAttribute('aria-expanded')}})})();</script>
+<a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20cortinas%20Hunter%20Douglas" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
 </body>
 </html>
       
