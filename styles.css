@@ -529,9 +529,6 @@ p { color: #555; font-size: 0.94rem; line-height: 1.75; }
 .wa-float:hover { transform: scale(1.08); }
 .wa-float svg { width: 27px; height: 27px; fill: #fff; }
 
-/* ── CHAT WIDGET OVERRIDE ────────────────────────────── */
-.chat-widget { display: none !important; }
-
 /* ─── LEGACY CLASS COMPAT ────────────────────────────── */
 /* These classes exist on older pages — map to minimal neutral styles */
 
