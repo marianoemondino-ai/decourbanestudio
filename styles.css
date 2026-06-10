@@ -1844,3 +1844,88 @@ p { color: #555; font-size: 0.94rem; line-height: 1.75; }
   .trust-inner { grid-template-columns: repeat(2,1fr); gap: 20px; }
   .mcta-img { width: 180px; height: 180px; }
 }
+
+/* ============================================================
+   CORTINAS-SILHOUETTE.HTML - product page components
+   ============================================================ */
+
+/* Hero with background image */
+.sil-hero { position: relative; min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; padding: 140px 24px 80px; }
+.sil-hero-bg { position: absolute; inset: 0; background: url('https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp') center/cover no-repeat; }
+.sil-hero-grad { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,.6) 0%, rgba(20,20,20,.35) 45%, rgba(20,20,20,.7) 100%); }
+.sil-hero-content { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+.sil-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.75); margin: 0 0 22px; }
+.sil-hero h1 { color: #fff; font-size: clamp(2.3rem, 5vw, 4rem); font-weight: 300; line-height: 1.18; margin: 0 0 22px; }
+.sil-hero h1 em { font-style: italic; color: var(--gold); }
+.sil-hero-sub { color: rgba(255,255,255,.82); font-size: .95rem; line-height: 1.85; max-width: 620px; margin: 0 auto 36px; }
+
+/* Trust bar */
+.trust { background: #fff; border-bottom: 1px solid var(--border); padding: 28px 0; }
+.trust-in { max-width: 1200px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 32px; }
+.ti { display: flex; align-items: center; gap: 12px; font-size: .82rem; color: var(--text-mid); line-height: 1.4; }
+.ti svg { width: 28px; height: 28px; flex-shrink: 0; color: var(--gold); }
+.ti strong { color: #111; font-weight: 600; }
+
+/* Features grid */
+.sil-features { padding: 96px 0; background: #fff; }
+.feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 32px; margin-top: 56px; }
+.feat { text-align: center; padding: 0 12px; }
+.feat-ic { width: 56px; height: 56px; margin: 0 auto 20px; border-radius: 50%; background: var(--gold-light); color: var(--gold); display: flex; align-items: center; justify-content: center; }
+.feat-ic svg { width: 26px; height: 26px; }
+.feat h3 { font-size: 1.05rem; font-weight: 600; margin: 0 0 10px; color: #111; }
+.feat p { font-size: .85rem; color: var(--text-mid); line-height: 1.75; margin: 0; }
+
+/* Gallery grid (4-up) */
+.sil-gallery { padding: 0 0 96px; background: #fff; }
+.gallery-grid { max-width: 1440px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.gallery-grid .gal-item { aspect-ratio: 3/4; border-radius: var(--r); }
+.gallery-grid .gal-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* How it works */
+.sil-how { padding: 96px 0; background: #f7f6f4; }
+.how-grid { max-width: 1320px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.how-img img { width: 100%; height: 560px; object-fit: cover; border-radius: var(--r); display: block; }
+.steps { display: flex; flex-direction: column; gap: 28px; margin-top: 32px; }
+.step { display: flex; gap: 20px; align-items: flex-start; }
+.step-num { width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: var(--gold); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1rem; }
+.step-t { font-size: .95rem; font-weight: 600; color: #111; margin-bottom: 4px; }
+.step-d { font-size: .85rem; color: var(--text-mid); line-height: 1.75; }
+
+/* FAQ section wrapper (faq-list/item/q/a already defined globally) */
+.sil-faq { padding: 96px 0; background: #fff; }
+/* Fix accordion: open class is toggled on .faq-item, not on .faq-a */
+.faq-item.open .faq-a { display: block; }
+
+/* CTA band */
+.sil-cta { padding: 96px 0; background: var(--bg-dark); text-align: center; }
+.sil-cta-inner { max-width: 700px; margin: 0 auto; padding: 0 48px; }
+.sil-cta h2 { color: #fff; margin: 0 0 16px; font-weight: 300; }
+.sil-cta-inner > p:not(.sil-eyebrow) { color: rgba(255,255,255,.65); line-height: 1.8; font-size: .92rem; margin: 0 0 32px; }
+
+/* Related products grid */
+.sil-related { padding: 96px 0; background: #f7f6f4; }
+.related-grid { max-width: 1200px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.rel-card { display: block; background: #fff; border: 1px solid var(--border); text-decoration: none; color: inherit; transition: box-shadow .3s, transform .3s; }
+.rel-card:hover { box-shadow: 0 16px 40px rgba(0,0,0,.08); transform: translateY(-4px); }
+.rel-card-img { aspect-ratio: 4/3; overflow: hidden; }
+.rel-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rel-card-body { padding: 20px; }
+.rel-cat { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; font-weight: 600; }
+.rel-name { font-size: 1rem; font-weight: 600; color: #111; margin-bottom: 8px; }
+.rel-desc { font-size: .82rem; color: var(--text-mid); line-height: 1.6; margin: 0; }
+
+@media (max-width: 900px) {
+  .trust-in { grid-template-columns: repeat(2, 1fr); }
+  .feat-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .how-grid { grid-template-columns: 1fr; gap: 40px; }
+  .how-img img { height: 360px; }
+  .related-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .trust-in, .how-grid, .related-grid { padding: 0 20px; }
+  .gallery-grid { padding: 0 20px; gap: 10px; }
+  .feat-grid { grid-template-columns: 1fr; padding: 0 8px; }
+  .sil-features, .sil-how, .sil-faq, .sil-cta, .sil-related { padding: 56px 0; }
+  .sil-hero { min-height: 80vh; padding: 120px 20px 60px; }
+}
