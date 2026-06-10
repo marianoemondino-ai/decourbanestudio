@@ -1929,3 +1929,73 @@ p { color: #555; font-size: 0.94rem; line-height: 1.75; }
   .sil-features, .sil-how, .sil-faq, .sil-cta, .sil-related { padding: 56px 0; }
   .sil-hero { min-height: 80vh; padding: 120px 20px 60px; }
 }
+
+/* ============================================================
+   CORTINAS-DUETTE.HTML - product page components
+   ============================================================ */
+
+/* Dark hero w/ nav nested inside */
+.hero-prod { position: relative; min-height: 92vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--bg-dark); padding: 140px 24px 70px; text-align: center; }
+.hero-c { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+.hero-c h1 { color: #fff; font-size: clamp(2.3rem, 5vw, 4rem); font-weight: 300; line-height: 1.18; margin: 0 0 22px; }
+.hero-c h1 em { font-style: italic; color: var(--gold); }
+.ctas { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+.ctas .btn-p, .ctas .btn-s { display: inline-flex; align-items: center; gap: 9px; }
+
+/* Stats bar */
+.stats-bar { background: #fff; border-bottom: 1px solid var(--border); padding: 32px 0; }
+.stats-in { max-width: 1100px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 32px; text-align: center; }
+.stat-n { font-family: inherit; font-size: 1.9rem; font-weight: 300; color: var(--gold); letter-spacing: .02em; line-height: 1; }
+.stat-l { font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: #888; margin-top: 8px; line-height: 1.5; }
+
+/* Split (image + text) section */
+.split { padding: 96px 0; background: #fff; }
+.split-in { max-width: 1240px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.split-img img { width: 100%; height: 520px; object-fit: cover; border-radius: var(--r); display: block; }
+.body-txt h2 { margin-bottom: 16px; }
+.body-txt > p { color: var(--text-mid); line-height: 1.75; font-size: .92rem; margin-bottom: 16px; }
+.check-list { list-style: none; padding: 0; margin: 24px 0 0; display: flex; flex-direction: column; gap: 12px; }
+.check-list li { position: relative; padding-left: 30px; font-size: .85rem; color: #555; line-height: 1.6; }
+.check-list li::before { content: ''; position: absolute; left: 0; top: 2px; width: 18px; height: 18px; border-radius: 50%; background: var(--gold-light); }
+.check-list li::after { content: '\2713'; position: absolute; left: 4px; top: 1px; font-size: .68rem; color: var(--gold); font-weight: 700; line-height: 18px; }
+
+/* Features section + numeric/icon badge */
+.feats { padding: 96px 0; background: #f7f6f4; }
+.feat-n { width: 56px; height: 56px; margin: 0 auto 20px; border-radius: 50%; background: var(--gold-light); color: var(--gold); display: flex; align-items: center; justify-content: center; font-size: 1.05rem; font-weight: 700; }
+
+/* FAQ section + .fq wrapper variant */
+.faq-sec { padding: 96px 0; background: #fff; }
+.faq-hd { text-align: center; margin-bottom: 44px; }
+.fq { border-bottom: 1px solid var(--border); }
+.fq.open .fq-a { display: block; }
+.fq.open .fq-icon { transform: rotate(45deg); }
+
+/* CTA band (dark) */
+.cta-sec { padding: 96px 0; background: var(--bg-dark); text-align: center; }
+.cta-inner { max-width: 700px; margin: 0 auto; padding: 0 48px; }
+.cta-sec h2 { color: #fff; margin: 0 0 16px; font-weight: 300; }
+.cta-inner > p:not(.eyebrow) { color: rgba(255,255,255,.65); line-height: 1.8; font-size: .92rem; margin: 0 0 32px; }
+
+/* Related products section */
+.rel-sec { padding: 96px 0; background: #f7f6f4; }
+.rel-grid { max-width: 1200px; margin: 32px auto 0; padding: 0 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.rc { display: block; background: #fff; border: 1px solid var(--border); text-decoration: none; color: inherit; transition: box-shadow .3s, transform .3s; }
+.rc:hover { box-shadow: 0 16px 40px rgba(0,0,0,.08); transform: translateY(-4px); }
+.rc-img { aspect-ratio: 4/3; overflow: hidden; }
+.rc-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rc-body { padding: 20px; }
+.rc-cat { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; font-weight: 600; }
+.rc-name { font-size: 1rem; font-weight: 600; color: #111; margin-bottom: 8px; }
+.rc-desc { font-size: .82rem; color: var(--text-mid); line-height: 1.6; margin: 0; }
+
+@media (max-width: 900px) {
+  .stats-in { grid-template-columns: repeat(2, 1fr); }
+  .split-in { grid-template-columns: 1fr; gap: 40px; }
+  .split-img img { height: 360px; }
+  .rel-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .stats-in, .split-in, .rel-grid { padding: 0 20px; }
+  .feats, .faq-sec, .cta-sec, .rel-sec, .split { padding: 56px 0; }
+  .hero-prod { min-height: 80vh; padding: 120px 20px 60px; }
+}
