@@ -543,6 +543,7 @@
 </section>
 
 <!-- PROCESS -->
+<section class="proc-section" style="background:var(--bg);padding:72px 36px">
   <div style="max-width:1440px;margin:0 auto">
     <div class="rv" style="text-align:center">
       <p class="ey ey-c">Simple y sin vueltas</p>
@@ -842,6 +843,14 @@
     document.getElementById('navMobile').classList.toggle('open');
   });
 })();
+</script>
+<script>
+function toggleFq(el){
+  var item = el.parentElement;
+  var ans = item.querySelector('.fq-a');
+  var isOpen = ans.classList.toggle('open');
+  el.classList.toggle('open', isOpen);
+}
 </script>
 </body>
 </html>
