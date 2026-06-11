@@ -353,7 +353,7 @@
   <div class="hours-inner">
     <div class="hours-text rv">
       <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>Showroom</p>
-      <h2 style="font-family:inherit;font-size:clamp(26px,3vw,36px);font-weight:500;margin-bottom:16px;line-height:1.15">Horarios de <em style="font-style:italic;color:var(--gold)">atención</em></h2>
+      <h2 style="font-family:inherit;font-size:clamp(26px,3vw,36px);font-weight:500;margin-bottom:16px;line-height:1.15">Horarios de <em style="font-style:italic">atención</em></h2>
       <p>Nuestro showroom está abierto para que puedas ver, tocar y elegir con calma. Te recomendamos coordinar una visita para que un asesor esté disponible exclusivamente para vos.</p>
       <table class="hours-table" style="margin-top:24px">
         <tr><td>Lunes</td><td>9:00 – 18:00</td></tr>
@@ -383,28 +383,28 @@
     <div class="fq-item rv">
       <div class="fq-q" onclick="toggleFq(this)">
         ¿Cuánto tarda en responderse una consulta?
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        <span class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
       </div>
       <div class="fq-a"><p>Por WhatsApp respondemos en menos de 2 horas en horario de atención (Lun–Vie 9–18 / Sáb 9–13). Por formulario, en menos de 24 horas hábiles. Fuera de horario, respondemos al día siguiente a primera hora.</p></div>
     </div>
     <div class="fq-item rv">
       <div class="fq-q" onclick="toggleFq(this)">
         ¿La consulta de diseño tiene costo?
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        <span class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
       </div>
       <div class="fq-a"><p>No, la consulta inicial es completamente gratuita y sin compromiso. Incluye asesoramiento telefónico/WhatsApp, visita al showroom y primera visita a domicilio para relevamiento.</p></div>
     </div>
     <div class="fq-item rv">
       <div class="fq-q" onclick="toggleFq(this)">
         ¿Envían a toda Argentina?
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        <span class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
       </div>
       <div class="fq-a"><p>Sí, enviamos a todo el territorio nacional. El envío es gratuito en compras superiores a $200.000. Para productos como cortinas Hunter Douglas que requieren instalación, cubrimos Río Cuarto, la región y zonas aledañas con nuestro equipo técnico propio.</p></div>
     </div>
     <div class="fq-item rv">
       <div class="fq-q" onclick="toggleFq(this)">
         ¿Puedo pagar en cuotas?
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        <span class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
       </div>
       <div class="fq-a"><p>Sí. Aceptamos todas las tarjetas de crédito con hasta 12 cuotas sin interés, débito, transferencia bancaria y Mercado Pago. Para proyectos de mayor envergadura, podemos evaluar planes de pago personalizados.</p></div>
     </div>
@@ -490,6 +490,12 @@
     if (e.key === 'Escape') closeProducts();
   });
 })();
+
+// ── FAQ accordion ──────────────────────────────────────
+function toggleFq(el) {
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
 </script>
 </body>
 </html>

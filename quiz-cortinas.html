@@ -311,7 +311,7 @@
   </div>
 
   <!-- RESULT -->
-  <div class="result-card" id="result-card">
+  <div class="result-card" id="quiz-result-card">
     <div class="result-badge">
       <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       Tu recomendación personalizada
@@ -407,19 +407,6 @@ function selectOpt(el) {
 }
 
 function goNext(step) {
-  var current = step - 1;
-  document.getElementById('card-' + (current === 0 ? 'intro' : current - 1 + (current >= 1 ? '' : ''))).classList.remove('active');
-
-  // map step to card id
-  var fromId = current === 0 ? 'card-intro' : 'card-' + (current - 1);
-  // actually:
-  // step 1 → from card-intro, to card-1
-  // step 2 → from card-1, to card-2
-  // etc.
-  var fromCard = step === 1 ? 'card-intro' : 'card-' + (step - 2 + 1);
-  var toCard = 'card-' + step;
-
-  // simpler approach
   hideAllCards();
   document.getElementById('card-' + step).classList.add('active');
   updateProgress(step + 1);
@@ -434,7 +421,7 @@ function goBack(step) {
 
 function hideAllCards() {
   document.querySelectorAll('.quiz-card').forEach(function(c){ c.classList.remove('active'); });
-  document.getElementById('result-card').classList.remove('active');
+  document.getElementById('quiz-result-card').classList.remove('active');
 }
 
 function updateProgress(step) {
@@ -519,7 +506,7 @@ function showResult() {
   }).join('');
 
   hideAllCards();
-  document.getElementById('result-card').classList.add('active');
+  document.getElementById('quiz-result-card').classList.add('active');
   document.getElementById('progressFill').style.width = '100%';
   document.getElementById('progressText').textContent = '¡Resultado listo!';
   document.getElementById('progressPct').textContent = '100%';

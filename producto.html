@@ -226,8 +226,8 @@
       <div style="margin-bottom:28px">
         <p style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px">Tapizado</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <button class="mat-opt on" style="font-size:11px;padding:8px 16px;border:1px solid var(--border);background:none;cursor:pointer">Tela premium</button>
-          <button class="mat-opt" style="font-size:11px;padding:8px 16px;border:1px solid var(--border);background:none;cursor:pointer">Cuero sintético</button>
+          <button class="mat-opt on" onclick="selectMat(this)" style="font-size:11px;padding:8px 16px;border:1px solid var(--border);background:none;cursor:pointer">Tela premium</button>
+          <button class="mat-opt" onclick="selectMat(this)" style="font-size:11px;padding:8px 16px;border:1px solid var(--border);background:none;cursor:pointer">Cuero sintético</button>
         </div>
       </div>
 
@@ -507,6 +507,57 @@
     if (e.key === 'Escape') closeProducts();
   });
 })();
+</script>
+
+<!-- PDP INTERACTIONS -->
+<script>
+function setImg(i) {
+  var thumbs = document.querySelectorAll('.gthumb');
+  thumbs.forEach(function(t, idx){ t.classList.toggle('on', idx === i); });
+  document.getElementById('mainImgEl').src = thumbs[i].querySelector('img').src;
+}
+
+function selectColor(el, name) {
+  document.querySelectorAll('.col-opt').forEach(function(c){ c.classList.remove('on'); });
+  el.classList.add('on');
+  document.getElementById('colorLabel').textContent = name;
+}
+
+function selectMat(el) {
+  document.querySelectorAll('.mat-opt').forEach(function(m){ m.classList.remove('on'); });
+  el.classList.add('on');
+}
+
+function selectCuota(el, n, price) {
+  document.querySelectorAll('.cuota-chip').forEach(function(c){ c.classList.remove('on'); });
+  el.classList.add('on');
+  document.getElementById('cuotaDisplay').textContent = 'o ' + n + ' cuotas de $' + price.toLocaleString('es-AR') + ' sin interés';
+}
+
+var wlActive = false;
+function toggleWL() {
+  wlActive = !wlActive;
+  document.querySelectorAll('.wl-btn, #wlBtn').forEach(function(b){ b.classList.toggle('active', wlActive); });
+  document.getElementById('wlBtnTxt').textContent = wlActive ? 'Guardado' : 'Guardar';
+}
+
+function showTab(i, el) {
+  document.querySelectorAll('.ptab-panel').forEach(function(p, idx){ p.style.display = idx === i ? 'block' : 'none'; });
+  document.querySelectorAll('.ptab-btn').forEach(function(b){ b.style.borderBottomColor = 'transparent'; b.style.color = 'var(--text-mid)'; });
+  el.style.borderBottomColor = 'var(--gold)';
+  el.style.color = 'var(--text)';
+}
+
+function submitReview(e) {
+  e.preventDefault();
+  e.target.innerHTML = '<p style="text-align:center;font-size:.9rem;color:var(--text-mid);padding:20px 0">¡Gracias por tu reseña! La revisaremos antes de publicarla.</p>';
+}
+
+window.addEventListener('load', function(){
+  document.querySelectorAll('.rev-bar-fill').forEach(function(el){
+    el.style.width = el.getAttribute('data-w') + '%';
+  });
+});
 </script>
 
 <!-- STICKY MOBILE BAR -->

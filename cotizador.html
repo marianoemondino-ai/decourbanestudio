@@ -146,7 +146,7 @@
   </div>
 </div>
 
-<div class="main">
+<div class="cotiz-main">
 
   <!-- STEPPER -->
   <div class="stepper" id="stepper">
@@ -160,7 +160,7 @@
   <div class="step-panel active" id="panel-1">
     <p class="panel-title">¿Qué modelo de cortina <em>querés cotizar?</em></p>
     <p class="panel-sub">Elegí uno para continuar. Podés cambiar después.</p>
-    <div class="prod-grid">
+    <div class="cotiz-prod-grid">
       <label class="prod-sel" id="psel-silhouette" onclick="selectProd('silhouette',this)">
         <input type="radio" name="producto" value="silhouette"/>
         <img class="prod-sel-img" src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp" alt="Silhouette"/>
@@ -251,7 +251,7 @@
           <div class="opt-badge">+12–18% al precio base</div>
         </div>
       </div>
-      <div class="opt-toggle" id="opt-instala" onclick="toggleOpt(this,'instala')" class="on">
+      <div class="opt-toggle on" id="opt-instala" onclick="toggleOpt(this,'instala')">
         <input type="checkbox" name="instala" checked/>
         <div class="opt-box"></div>
         <div class="opt-text">
@@ -309,7 +309,7 @@
     </div>
   </div>
 
-</div><!-- /main -->
+</div><!-- /cotiz-main -->
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -565,11 +565,25 @@ function calcular(){
 function fmt(n){
   return Math.round(n).toLocaleString('es-AR');
 }
+
+function restart(){
+  state.producto=null;
+  state.winCount=1;
+  state.windows=[{ancho:150,alto:220}];
+  state.opts={motor:false, blackout:false, instala:true, visita:false};
+  document.querySelectorAll('.prod-sel').forEach(function(e){e.classList.remove('selected')});
+  document.getElementById('btn-next-1').disabled=true;
+  document.querySelectorAll('.opt-toggle').forEach(function(e){e.classList.remove('on')});
+  var instEl=document.getElementById('opt-instala');
+  if(instEl) instEl.classList.add('on');
+  document.querySelectorAll('.opt-toggle input[type=checkbox]').forEach(function(cb){
+    cb.checked=(cb.name==='instala');
+  });
+  var banner=document.getElementById('pv-banner');
+  if(banner) banner.style.display='none';
+  changeWinCount(0);
+  goTo(1);
+}
 </script>
-<script>
-/* Mobile nav toggle */
-document.getElementById('menuBtn').addEventListener('click', function() {
-  document.getElementById('navMobile').classList.toggle('open');
-});</script>
 </body>
 </html>
