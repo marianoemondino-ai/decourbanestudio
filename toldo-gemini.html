@@ -65,18 +65,17 @@
 </head>
 <body>
 
-<section class="hero-prod">
-  <div class="hero-bg" id="heroBg" style="background-image:url('https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp')"></div>
-  <div class="hero-grad"></div>
-  <div class="hero-c">
     <!-- NAV -->
-<nav class="site-nav solid" id="siteNav">
+<nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
     </a>
     <div class="nav-links">
-      <a href="cortinas.html">Productos</a>
+      <button class="products-trigger" id="productsBtn" aria-expanded="false" aria-controls="productsOverlay">
+        <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+        Productos
+      </button>
       <a href="proyectos.html">Proyectos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
@@ -91,26 +90,102 @@
 <!-- MOBILE MENU -->
 
 <div class="nav-mobile" id="navMobile">
-  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
-  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
-  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
-  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+  <button class="products-trigger" id="productsBtnMobile" aria-expanded="false" aria-controls="productsOverlay">
+    Productos
+    <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+  </button>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
 </div>
-    <p class="eyebrow">Distribuidor Oficial Hunter Douglas · Río Cuarto</p>
+
+<!-- PRODUCTS MENU OVERLAY -->
+<div class="products-overlay" id="productsOverlay">
+  <button class="po-close" id="poClose" aria-label="Cerrar menú de productos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="po-inner">
+    <div class="po-group">
+      <div class="po-title">Cortinas Hunter Douglas</div>
+      <div class="po-grid">
+        <a href="cortinas-silhouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette" loading="lazy"/></div>
+          <div class="po-item-name">Silhouette®</div>
+        </a>
+        <a href="cortinas-duette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette" loading="lazy"/></div>
+          <div class="po-item-name">Duette®</div>
+        </a>
+        <a href="cortinas-pirouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette" loading="lazy"/></div>
+          <div class="po-item-name">Pirouette®</div>
+        </a>
+        <a href="cortinas-roller.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Roller Quantum" loading="lazy"/></div>
+          <div class="po-item-name">Roller Quantum®</div>
+        </a>
+        <a href="cortinas-luminette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Luminette" loading="lazy"/></div>
+          <div class="po-item-name">Luminette®</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Exterior</div>
+      <div class="po-grid">
+        <a href="toldo-gemini.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldo Gemini" loading="lazy"/></div>
+          <div class="po-item-name">Toldo Gemini®</div>
+        </a>
+        <a href="muebles-exterior.html" class="po-item">
+          <div class="po-item-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Muebles de exterior" loading="lazy"/></div>
+          <div class="po-item-name">Muebles de Exterior</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Domótica</div>
+      <div class="po-grid">
+        <a href="powerview.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="Sistema PowerView" loading="lazy"/></div>
+          <div class="po-item-name">PowerView®</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Accesorios &amp; Decoración</div>
+      <div class="po-grid">
+        <a href="coleccion.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Accesorios y decoración" loading="lazy"/></div>
+          <div class="po-item-name">Ver colección</div>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-48">
+      <a href="cortinas.html" class="text-link">Ver catálogo completo</a>
+    </div>
+  </div>
+</div>
+<!-- HERO -->
+<section class="prod-hero" style="background-image:url('https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp')">
+  <div class="hero-overlay"></div>
+  <div class="prod-hero-content">
+    <div class="prod-eyebrow">Distribuidor Oficial Hunter Douglas · Río Cuarto</div>
     <h1>Toldo Gemini®<br><em>tu terraza,</em> protegida<br>y motorizada</h1>
-    <p class="hero-sub">El toldo retráctil motorizado de Hunter Douglas. Control desde el celular, sensor de viento automático y telas técnicas que bloquean el sol. Fabricado a medida e instalado por nuestro equipo en Río Cuarto y toda la región.</p>
-    <div class="ctas">
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20el%20Toldo%20Gemini%20Hunter%20Douglas%20para%20mi%20terraza" class="btn-p" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+    <p class="prod-hero-sub">El toldo retráctil motorizado de Hunter Douglas. Control desde el celular, sensor de viento automático y telas técnicas que bloquean el sol. Fabricado a medida e instalado por nuestro equipo en Río Cuarto y toda la región.</p>
+    <div class="prod-hero-ctas">
+      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20el%20Toldo%20Gemini%20Hunter%20Douglas%20para%20mi%20terraza" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="vertical-align:-2px;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
         Cotizar — medición gratis
       </a>
-      <a href="coleccion.html?cat=exterior" class="btn-s">Ver más exterior</a>
+      <a href="coleccion.html?cat=exterior" class="btn-outline-light">Ver más exterior</a>
     </div>
   </div>
 </section>
 
-<div class="trust-bar">
+<!-- TRUST BAR -->
+<div class="trust">
   <div class="trust-in">
     <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg><span>Distribuidor <strong>oficial Hunter Douglas</strong></span></div>
     <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><span>Motor PowerView® — <strong>control desde celular</strong></span></div>
@@ -119,55 +194,33 @@
   </div>
 </div>
 
-<section class="feat-dark">
-  <div class="feat-dark-in">
-    <div style="max-width:560px;margin-bottom:0">
-      <p class="ey">El toldo inteligente de Hunter Douglas</p>
-      <h2 class="sec" style="color:#fff">Por qué el Gemini es<br><em>diferente a los demás</em></h2>
+<!-- POR QUÉ ES DIFERENTE -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">El toldo inteligente de Hunter Douglas</span>
+      <h2>Por qué el Gemini es <em>diferente a los demás</em></h2>
     </div>
-    <div class="feat-dark-grid">
-      <div class="fd">
-        <div class="fd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <h3>PowerView® App</h3>
-        <p>Controlá el toldo desde tu celular donde estés. Extendelo o recogelo con un toque, o programá horarios automáticos para cada día.</p>
-      </div>
-      <div class="fd">
-        <div class="fd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 6v12M16 6v12M2 12h20"/></svg></div>
-        <h3>Sensor de viento</h3>
-        <p>Ante una ráfaga fuerte, el sistema se recoge automáticamente para proteger la tela y la estructura. Tu inversión siempre está segura.</p>
-      </div>
-      <div class="fd">
-        <div class="fd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 6v6l4 2"/></svg></div>
-        <h3>Horarios automáticos</h3>
-        <p>Programá que se extienda al mediodía cuando el sol pega fuerte y que se recoja al atardecer — sin que tengas que pensar en ello.</p>
-      </div>
-      <div class="fd">
-        <div class="fd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
-        <h3>Telas anti-UV técnicas</h3>
-        <p>Las telas de alta performance bloquean la radiación UV y reducen la temperatura bajo el toldo hasta 8°C comparado con el exterior sin sombra.</p>
-      </div>
-      <div class="fd">
-        <div class="fd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
-        <h3>Estructura de aluminio</h3>
-        <p>Brazo articulado de aluminio lacado de alta resistencia. No se oxida, no se deforma con el calor y requiere mínimo mantenimiento.</p>
-      </div>
-      <div class="fd">
-        <div class="fd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-        <h3>A medida</h3>
-        <p>Cada Gemini se fabrica exactamente para las dimensiones de tu terraza o galería. Nuestro equipo mide, asesora sobre el tamaño óptimo e instala.</p>
-      </div>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-n">App</div><h3>PowerView® App</h3><p>Controlá el toldo desde tu celular donde estés. Extendelo o recogelo con un toque, o programá horarios automáticos para cada día.</p></div>
+      <div class="feat"><div class="feat-n">Auto</div><h3>Sensor de viento</h3><p>Ante una ráfaga fuerte, el sistema se recoge automáticamente para proteger la tela y la estructura. Tu inversión siempre está segura.</p></div>
+      <div class="feat"><div class="feat-n">24h</div><h3>Horarios automáticos</h3><p>Programá que se extienda al mediodía cuando el sol pega fuerte y que se recoja al atardecer — sin que tengas que pensar en ello.</p></div>
+      <div class="feat"><div class="feat-n">UV</div><h3>Telas anti-UV técnicas</h3><p>Las telas de alta performance bloquean la radiación UV y reducen la temperatura bajo el toldo hasta 8°C comparado con el exterior sin sombra.</p></div>
+      <div class="feat"><div class="feat-n">Al</div><h3>Estructura de aluminio</h3><p>Brazo articulado de aluminio lacado de alta resistencia. No se oxida, no se deforma con el calor y requiere mínimo mantenimiento.</p></div>
+      <div class="feat"><div class="feat-n">1:1</div><h3>A medida</h3><p>Cada Gemini se fabrica exactamente para las dimensiones de tu terraza o galería. Nuestro equipo mide, asesora sobre el tamaño óptimo e instala.</p></div>
     </div>
   </div>
 </section>
 
-<section class="ext-ctx">
-  <div class="ext-ctx-in">
-    <div class="ext-img">
+<!-- EL TOLDO ES SOLO EL COMIENZO -->
+<section class="section">
+  <div class="container prod-split">
+    <div class="prod-img-main">
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Terraza de diseño con toldo y muebles de exterior — Decourban Estudio Río Cuarto" loading="lazy"/>
     </div>
-    <div class="body-txt">
-      <p class="ey">El toldo es solo el comienzo</p>
-      <h2 class="sec">Completá tu espacio<br>exterior con <em>diseño</em></h2>
+    <div>
+      <span class="section-label">El toldo es solo el comienzo</span>
+      <h2>Completá tu espacio<br>exterior con <em>diseño</em></h2>
       <p>El Toldo Gemini transforma una terraza expuesta en un espacio habitable. Pero para completar el ambiente, también tenemos los muebles: sillones y camastros de exterior, almohadones outdoor resistentes al sol y la lluvia, mesas y accesorios decorativos.</p>
       <p>Todo en un solo lugar — el showroom de Decourban Estudio en Juan de Garay 1550, Río Cuarto.</p>
       <ul class="check-list">
@@ -176,69 +229,99 @@
         <li>Mesas y sillas para terraza en madera teca y aluminio</li>
         <li>Pérgolas retráctiles para mayor cobertura</li>
       </ul>
-      <a href="coleccion.html?cat=exterior" style="display:inline-flex;align-items:center;gap:9px;background:var(--text);color:#fff;padding:13px 24px;border-radius:var(--r);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:.3s;margin-top:24px">Ver catálogo exterior <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <p style="margin-top:24px"><a href="coleccion.html?cat=exterior" class="text-link">Ver catálogo exterior →</a></p>
     </div>
   </div>
 </section>
 
-<section class="sil-gallery" aria-label="Galería Toldos Gemini Hunter Douglas">
-  <div class="gallery-grid">
-    <div class="gal-item">
+<!-- GALERÍA -->
+<section class="section section-gray">
+  <div class="container">
+    <span class="section-label">Galería</span>
+    <div class="gal-grid">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/foldingjpg-optimized-b09406c29d63067e7117462924956836-640-0.webp" alt="Toldo Gemini Hunter Douglas en terraza — protección solar elegante" loading="lazy"/>
-    </div>
-    <div class="gal-item">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Terraza con toldo motorizado — exterior de diseño en Río Cuarto" loading="lazy"/>
-    </div>
-    <div class="gal-item">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/paneloriental-hd_843x338_2-63de1bdb72eeec4a7f17462911968840-640-0.webp" alt="Paneles orientales Hunter Douglas — ambientes interiores y exteriores" loading="lazy"/>
-    </div>
-    <div class="gal-item">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Materiales naturales para exteriores — Decourban Estudio Córdoba" loading="lazy"/>
     </div>
   </div>
 </section>
 
-<section class="faq-sec">
-  <div class="faq-inner">
-    <div class="faq-hd">
-      <p class="ey" style="justify-content:center">Preguntas frecuentes</p>
-      <h2 class="sec" style="text-align:center;color:var(--text)">Todo sobre el <em>Toldo Gemini®</em></h2>
+<!-- FAQ -->
+<section class="section">
+  <div class="container" style="max-width:780px">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Preguntas frecuentes</span>
+      <h2>Todo sobre el <em>Toldo Gemini®</em></h2>
     </div>
     <div class="faq-list">
-      <div class="fq"><div class="fq-q" onclick="this.parentElement.classList.toggle('open')"><span>¿Qué es el Toldo Gemini Hunter Douglas?</span><div class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fq-a"><p>El Gemini es el toldo retráctil motorizado de Hunter Douglas. Tiene brazo articulado de aluminio de alta resistencia, tela técnica anti-UV y motor eléctrico con sistema PowerView® para control desde celular, Alexa o Google Home. Incluye sensor de viento para retracción automática en condiciones adversas.</p></div></div>
-      <div class="fq"><div class="fq-q" onclick="this.parentElement.classList.toggle('open')"><span>¿Qué pasa si hay mucho viento o lluvia?</span><div class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fq-a"><p>El sensor de viento detecta ráfagas fuertes y activa la retracción automática del toldo para proteger la tela y la estructura. Para lluvia leve es posible usarlo, aunque recomendamos recogerlo con lluvia intensa o tormentas eléctricas.</p></div></div>
-      <div class="fq"><div class="fq-q" onclick="this.parentElement.classList.toggle('open')"><span>¿Se instala en cualquier tipo de pared o techo?</span><div class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fq-a"><p>En la visita a domicilio evaluamos el tipo de soporte disponible — pared de ladrillo, hormigón, viga o techo. En la gran mayoría de los casos la instalación es posible. El técnico te informará si hay alguna limitación antes de hacer el pedido.</p></div></div>
-      <div class="fq"><div class="fq-q" onclick="this.parentElement.classList.toggle('open')"><span>¿Cuánto tiempo tarda la instalación?</span><div class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fq-a"><p>La instalación del Gemini toma entre 2 y 4 horas según el tamaño y la dificultad de acceso. Nuestro equipo llega a la hora acordada y deja todo funcionando y configurado en la app el mismo día.</p></div></div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">¿Qué es el Toldo Gemini Hunter Douglas?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>El Gemini es el toldo retráctil motorizado de Hunter Douglas. Tiene brazo articulado de aluminio de alta resistencia, tela técnica anti-UV y motor eléctrico con sistema PowerView® para control desde celular, Alexa o Google Home. Incluye sensor de viento para retracción automática en condiciones adversas.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">¿Qué pasa si hay mucho viento o lluvia?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>El sensor de viento detecta ráfagas fuertes y activa la retracción automática del toldo para proteger la tela y la estructura. Para lluvia leve es posible usarlo, aunque recomendamos recogerlo con lluvia intensa o tormentas eléctricas.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">¿Se instala en cualquier tipo de pared o techo?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>En la visita a domicilio evaluamos el tipo de soporte disponible — pared de ladrillo, hormigón, viga o techo. En la gran mayoría de los casos la instalación es posible. El técnico te informará si hay alguna limitación antes de hacer el pedido.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">¿Cuánto tiempo tarda la instalación?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>La instalación del Gemini toma entre 2 y 4 horas según el tamaño y la dificultad de acceso. Nuestro equipo llega a la hora acordada y deja todo funcionando y configurado en la app el mismo día.</p></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="cta-sec">
-  <div class="cta-inner">
-    <p class="eyebrow" style="justify-content:center;color:rgba(196,164,107,.7)">Medición gratis · Instalación incluida</p>
-    <h2>¿Listo para aprovechar<br><em>tu terraza los 365 días?</em></h2>
-    <p>Coordinamos una visita gratuita para ver el espacio, asesorarte sobre tamaño y tela, y darte el presupuesto en el momento. Sin compromisos.</p>
-    <div class="cta-btns">
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20el%20Toldo%20Gemini%20Hunter%20Douglas%20para%20mi%20terraza" class="btn-p" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
-        Cotizar toldo gratis
+<!-- RELACIONADOS -->
+<section class="section section-gray">
+  <div class="container">
+    <p class="text-center mb-40"><a href="comparador.html" class="text-link">Comparar todos los modelos Hunter Douglas lado a lado →</a></p>
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">También te puede interesar</span>
+      <h2>Completá tu <em>espacio exterior</em></h2>
+    </div>
+    <div class="products-grid">
+      <a href="cortinas-silhouette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp" alt="Cortinas Silhouette Hunter Douglas" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Silhouette®</div>
+        <p class="product-card-desc">La contraparte perfecta al interior: luz suave y filtro UV en ventanas.</p>
       </a>
-      <a href="contacto.html" class="btn-s">Ir al showroom</a>
+      <a href="muebles-exterior.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Muebles de exterior Decourban — camastros sillones almohadones" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Muebles de Exterior</div>
+        <p class="product-card-desc">Camastros, sillones, almohadones outdoor y mesas para completar tu terraza.</p>
+      </a>
+      <a href="guia-por-ambiente.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-480-0.webp" alt="Guía por ambiente cortinas Hunter Douglas" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Guía por Ambiente</div>
+        <p class="product-card-desc">¿No sabés cuál elegir? Usá nuestra guía interactiva.</p>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="rel-sec">
-  <p style="font-size:12px;color:var(--text-mid);text-align:center;margin-bottom:24px;padding:14px 24px;background:var(--bg-alt,#f5f5f0);border:1px solid var(--border)">¿No sabés cuál elegir? → <a href="comparador.html" style="font-weight:600;color:var(--gold);text-decoration:none">Comparar todos los modelos Hunter Douglas lado a lado →</a></p>
-  
-  <div style="text-align:center;max-width:1100px;margin:0 auto">
-    <p class="ey" style="justify-content:center">También te puede interesar</p>
-    <h2 class="sec" style="text-align:center;color:var(--text)">Completá tu <em>espacio exterior</em></h2>
-  </div>
-  <div class="rel-grid">
-    <a href="cortinas-silhouette.html" class="rc"><div class="rc-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp" alt="Cortinas Silhouette Hunter Douglas" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Interior</div><div class="rc-name">Cortinas Silhouette®</div><div class="rc-desc">La contraparte perfecta al interior: luz suave y filtro UV en ventanas.</div></div></a>
-    <a href="coleccion.html?cat=exterior" class="rc"><div class="rc-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Muebles de exterior Decourban — camastros sillones almohadones" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Exterior</div><div class="rc-name">Muebles de Exterior</div><div class="rc-desc">Camastros, sillones, almohadones outdoor y mesas para completar tu terraza.</div></div></a>
-    <a href="cortinas.html" class="rc"><div class="rc-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/foldingjpg-optimized-b09406c29d63067e7117462924956836-480-0.webp" alt="Pérgola Retráctil Hunter Douglas" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Exterior</div><div class="rc-name">Pérgola Retráctil</div><div class="rc-desc">Para mayor cobertura, las pérgolas retráctiles Hunter Douglas.</div></div></a>
+<!-- CTA FINAL -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h3>¿Listo para aprovechar tu terraza los 365 días?</h3>
+        <p>Coordinamos una visita gratuita para ver el espacio, asesorarte sobre tamaño y tela, y darte el presupuesto en el momento. Sin compromisos.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0">
+        <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20el%20Toldo%20Gemini%20Hunter%20Douglas%20para%20mi%20terraza" target="_blank" rel="noopener noreferrer" class="btn-outline-light">Cotizar toldo gratis</a>
+        <a href="contacto.html" class="btn-outline-light">Ir al showroom</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -301,9 +384,32 @@
   document.getElementById('menuBtn').addEventListener('click', function() {
     document.getElementById('navMobile').classList.toggle('open');
   });
+
+  // ── Products menu overlay ───────────────────────────
+  var productsOverlay = document.getElementById('productsOverlay');
+  function openProducts() {
+    productsOverlay.classList.add('open');
+    document.getElementById('navMobile').classList.remove('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProducts() {
+    productsOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.products-trigger').forEach(function(btn){
+    btn.addEventListener('click', openProducts);
+  });
+  document.getElementById('poClose').addEventListener('click', closeProducts);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeProducts();
+  });
 })();
 </script>
 
-<script>window.addEventListener('load',()=>document.getElementById('heroBg').classList.add('zoom'));document.querySelectorAll('.fq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));</script>
+<script>
+function faq(el){
+  el.parentElement.classList.toggle('open');
+}
+</script>
 </body>
 </html>

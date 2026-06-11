@@ -7,7 +7,8 @@
       "Bash(claude mcp *)",
       "Bash(Select-String -Path \"C:\\\\Users\\\\User\\\\decourban-web\\\\coleccion.html\" -Pattern \"</script>|</body>|</html>\")",
       "Bash(Select-Object LineNumber, Line)",
-      "Bash(Select-Object -Last 10)"
+      "Bash(Select-Object -Last 10)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

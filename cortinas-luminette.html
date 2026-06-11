@@ -10,7 +10,7 @@
 <meta property="og:url" content="https://decourbanestudio.com.ar/cortinas-luminette.html"/>
 <meta property="og:title" content="Cortinas Luminette® Hunter Douglas — Para puertas corredizas y ventanas piso a techo"/>
 <meta property="og:description" content="Luminette® Privacy Sheers: suaves paños verticales de tela para puertas corredizas y ventanas grandes. Control de luz, privacidad y vista al exterior. Río Cuarto."/>
-<meta property="og:image" content="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp"/>
+<meta property="og:image" content="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="robots" content="index,follow"/>
 <link rel="canonical" href="https://decourbanestudio.com.ar/cortinas-luminette.html"/>
@@ -75,18 +75,22 @@
 }
 </script>
 
+<link rel="preload" as="image" href="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" fetchpriority="high"/>
 <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="site-nav solid" id="siteNav">
+<nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
     </a>
     <div class="nav-links">
-      <a href="cortinas.html">Productos</a>
+      <button class="products-trigger" id="productsBtn" aria-expanded="false" aria-controls="productsOverlay">
+        <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+        Productos
+      </button>
       <a href="proyectos.html">Proyectos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
@@ -101,325 +105,284 @@
 <!-- MOBILE MENU -->
 
 <div class="nav-mobile" id="navMobile">
-  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
-  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
-  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
-  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+  <button class="products-trigger" id="productsBtnMobile" aria-expanded="false" aria-controls="productsOverlay">
+    Productos
+    <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+  </button>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
 </div>
-<!-- MOBILE NAV -->
 
+<!-- PRODUCTS MENU OVERLAY -->
+<div class="products-overlay" id="productsOverlay">
+  <button class="po-close" id="poClose" aria-label="Cerrar menú de productos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="po-inner">
+    <div class="po-group">
+      <div class="po-title">Cortinas Hunter Douglas</div>
+      <div class="po-grid">
+        <a href="cortinas-silhouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette" loading="lazy"/></div>
+          <div class="po-item-name">Silhouette®</div>
+        </a>
+        <a href="cortinas-duette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette" loading="lazy"/></div>
+          <div class="po-item-name">Duette®</div>
+        </a>
+        <a href="cortinas-pirouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette" loading="lazy"/></div>
+          <div class="po-item-name">Pirouette®</div>
+        </a>
+        <a href="cortinas-roller.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Roller Quantum" loading="lazy"/></div>
+          <div class="po-item-name">Roller Quantum®</div>
+        </a>
+        <a href="cortinas-luminette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Luminette" loading="lazy"/></div>
+          <div class="po-item-name">Luminette®</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Exterior</div>
+      <div class="po-grid">
+        <a href="toldo-gemini.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldo Gemini" loading="lazy"/></div>
+          <div class="po-item-name">Toldo Gemini®</div>
+        </a>
+        <a href="muebles-exterior.html" class="po-item">
+          <div class="po-item-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Muebles de exterior" loading="lazy"/></div>
+          <div class="po-item-name">Muebles de Exterior</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Domótica</div>
+      <div class="po-grid">
+        <a href="powerview.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="Sistema PowerView" loading="lazy"/></div>
+          <div class="po-item-name">PowerView®</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Accesorios &amp; Decoración</div>
+      <div class="po-grid">
+        <a href="coleccion.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Accesorios y decoración" loading="lazy"/></div>
+          <div class="po-item-name">Ver colección</div>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-48">
+      <a href="cortinas.html" class="text-link">Ver catálogo completo</a>
+    </div>
+  </div>
+</div>
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
+<section class="prod-hero" style="background-image:url('https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp')">
+  <div class="hero-overlay"></div>
+  <div class="prod-hero-content">
+    <div class="prod-eyebrow">Hunter Douglas · Paños Verticales</div>
+    <h1>Luminette®<br><em>Privacy Sheers</em></h1>
+    <p class="prod-hero-sub">La única cortina de tela suave que se desliza y rota. Diseñada para puertas corredizas, puertas de balcón y ventanas piso a techo donde un roller o persiana convencional no funciona.</p>
+    <div class="prod-hero-ctas">
+      <a href="https://wa.me/543585075773?text=Hola%2C%20me%20interesan%20las%20cortinas%20Luminette%20para%20puertas%20corredizas%20en%20Río%20Cuarto" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="vertical-align:-2px;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+        Consultar por WhatsApp
+      </a>
+      <a href="#como-funciona" class="btn-outline-light">Cómo funciona</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-in">
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg><span>Puertas <strong>corredizas y de balcón</strong></span></div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><span>Ventanas <strong>piso a techo</strong></span></div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span>Grandes <strong>paños vidriados</strong></span></div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><span>Motorizable con <strong>PowerView®</strong></span></div>
+  </div>
+</div>
+
+<!-- CÓMO FUNCIONA -->
+<section class="section section-gray" id="como-funciona">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Cómo funciona</span>
+      <h2>Tres posiciones,<br><em>control total</em></h2>
+      <p>Los paños verticales de tela rotan hasta 180° y la cortina completa se desliza lateralmente. El resultado: control absoluto de la luz sin sacrificar el estilo.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-n">1</div><h3>Vista abierta</h3><p>Los paños verticales se alinean en paralelo con la ventana, dejando pasar toda la luz natural. La vista al exterior es completamente libre — como si no hubiera cortina.</p></div>
+      <div class="feat"><div class="feat-n">2</div><h3>Luz difusa</h3><p>Los paños se rotan a 45° para filtrar la luz solar convirtiendo la luz dura en una luz suave y homogénea. Desde el exterior no se ve el interior durante el día.</p></div>
+      <div class="feat"><div class="feat-n">3</div><h3>Privacidad total</h3><p>Los paños se cierran completamente, bloqueando la vista desde el exterior y reduciendo la entrada de luz solar. Privacidad total sin perder la suavidad visual de la tela.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASOS DE USO -->
+<section class="section">
+  <div class="container prod-split">
+    <div class="prod-img-main">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Luminette Hunter Douglas instaladas en ventanal piso a techo" loading="lazy"/>
+    </div>
     <div>
-      <p class="hero-ey">Hunter Douglas · Paños verticales</p>
-      <h1>Luminette®<br><em>Privacy Sheers</em></h1>
-      <p class="hero-p">La única cortina de tela suave que se desliza y rota. Diseñada para puertas corredizas, puertas de balcón y ventanas piso a techo donde un roller o persiana convencional no funciona.</p>
-      <div class="hero-btns">
-        
-        <a href="#como-funciona" class="btn-s">Cómo funciona</a>
-      </div>
-      <div class="hero-uses">
-        <span class="hero-use"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>Puertas corredizas</span>
-        <span class="hero-use"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Piso a techo</span>
-        <span class="hero-use"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Ventanales grandes</span>
-      </div>
-    </div>
-    <div>
-      <div class="hero-img-wrap" style="aspect-ratio:4/3">
-        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Luminette Hunter Douglas instaladas en ventanal piso a techo" loading="eager"/>
-        <div class="hero-img-overlay"></div>
-        <div class="hero-img-badge">
-          <span class="hi-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" width="14" height="14"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Hunter Douglas <strong>Certificado</strong></span>
-          <span class="hi-badge">Fabricado a medida</span>
-        </div>
-      </div>
+      <span class="section-label">Casos de uso</span>
+      <h2>Hecha para los<br>vanos <em>más difíciles</em></h2>
+      <p>La Luminette® resuelve los casos donde ninguna cortina convencional funciona bien. Es la única cortina Hunter Douglas que se corre lateralmente como una cortina tradicional, dejando la puerta libre para pasar.</p>
+      <p>En ventanales altos, un roller pierde uniformidad y una persiana de lamas se ve pesada — la Luminette® sube en paños de tela que se ven elegantes sin importar el alto del vano. También funciona como divisor semitransparente entre ambientes.</p>
+      <ul class="check-list">
+        <li>Puertas corredizas y de balcón</li>
+        <li>Ventanas piso a techo</li>
+        <li>Divisiones interiores con luz</li>
+        <li>Oficinas y locales con frente vidriado</li>
+      </ul>
+      <p style="margin-top:24px"><a href="cortinas.html" class="text-link">Ver catálogo completo →</a></p>
     </div>
   </div>
 </section>
 
-<!-- ROTACIÓN Y CONTROL DE LUZ -->
-<section class="rotation" id="como-funciona">
-  <div class="rotation-inner">
-    <div class="rv">
-      <p class="sec-ey">Cómo funciona</p>
-      <h2 class="sec">Tres posiciones, <em>control total</em></h2>
-      <p class="sec-sub">Los paños verticales de tela rotan hasta 180° y la cortina completa se desliza lateralmente. El resultado: control absoluto de la luz sin sacrificar el estilo.</p>
+<!-- COMPARATIVA -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Comparativa</span>
+      <h2>Luminette® vs <em>persiana vertical</em> convencional</h2>
     </div>
-    <div class="rot-grid">
-      <div class="rot-card rv">
-        <div class="vane-demo">
-          <!-- paños en posición abierta (horizontal visto desde arriba) -->
-          <div class="vane" style="height:65px"></div>
-          <div class="vane" style="height:65px"></div>
-          <div class="vane" style="height:65px"></div>
-          <div class="vane" style="height:65px"></div>
-          <div class="vane" style="height:65px"></div>
-        </div>
-        <div class="rot-num">Posición 1</div>
-        <h3 class="rot-title">Vista abierta — entrada plena de luz</h3>
-        <p class="rot-desc">Los paños verticales se alinean en paralelo con la ventana, dejando pasar toda la luz natural. La vista al exterior es completamente libre — como si no hubiera cortina.</p>
-        <span class="rot-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
-          Máxima luminosidad
-        </span>
-      </div>
-      <div class="rot-card rv">
-        <div class="vane-demo">
-          <!-- paños a 45° -->
-          <div class="vane" style="transform:rotate(-30deg);height:68px"></div>
-          <div class="vane" style="transform:rotate(-30deg);height:68px"></div>
-          <div class="vane" style="transform:rotate(-30deg);height:68px"></div>
-          <div class="vane" style="transform:rotate(-30deg);height:68px"></div>
-          <div class="vane" style="transform:rotate(-30deg);height:68px"></div>
-        </div>
-        <div class="rot-num">Posición 2</div>
-        <h3 class="rot-title">Luz difusa — privacidad parcial</h3>
-        <p class="rot-desc">Los paños se rotan a 45° para filtrar la luz solar convirtiendo la luz dura en una luz suave y homogénea. Desde el exterior no se ve el interior durante el día.</p>
-        <span class="rot-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-          Privacidad diurna
-        </span>
-      </div>
-      <div class="rot-card rv">
-        <div class="vane-demo">
-          <!-- paños cerrados (perpendicular a la ventana) -->
-          <div class="vane" style="transform:rotate(-60deg);height:70px;background:#e8dfd4"></div>
-          <div class="vane" style="transform:rotate(-60deg);height:70px;background:#e8dfd4"></div>
-          <div class="vane" style="transform:rotate(-60deg);height:70px;background:#e8dfd4"></div>
-          <div class="vane" style="transform:rotate(-60deg);height:70px;background:#e8dfd4"></div>
-          <div class="vane" style="transform:rotate(-60deg);height:70px;background:#e8dfd4"></div>
-        </div>
-        <div class="rot-num">Posición 3</div>
-        <h3 class="rot-title">Privacidad total — luz bloqueada</h3>
-        <p class="rot-desc">Los paños se cierran completamente, bloqueando la vista desde el exterior y reduciendo la entrada de luz solar. Privacidad total sin perder la suavidad visual de la tela.</p>
-        <span class="rot-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
-          Privacidad completa
-        </span>
-      </div>
-    </div>
-    <!-- Slide lateral -->
-    <div style="margin-top:28px;background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:22px 28px;display:flex;align-items:center;gap:18px" class="rv">
-      <div style="width:48px;height:48px;border-radius:11px;background:var(--gold-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="1.8" width="22" height="22"><path d="M5 12h14M5 12l4-4M5 12l4 4M19 12l-4-4M19 12l-4 4"/></svg>
-      </div>
-      <div>
-        <div style="font-size:15px;font-weight:600;margin-bottom:4px">También se desliza lateralmente</div>
-        <p style="font-size:13.5px;color:var(--text-mid);line-height:1.6">A diferencia de un roller, la Luminette® se corre de un lado al otro como una cortina. Esto la hace compatible con puertas corredizas: podés abrirla completamente para pasar y cerrarla cuando querés privacidad.</p>
-      </div>
+    <div style="overflow-x:auto">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Característica</th>
+            <th>Persiana vertical</th>
+            <th class="hi">Luminette® HD ★</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Material</td>
+            <td class="cross">Lamas de plástico o PVC</td>
+            <td class="check hi">✓ Tela suave traslúcida</td>
+          </tr>
+          <tr>
+            <td>Sonido</td>
+            <td class="cross">Ruido al moverse</td>
+            <td class="check hi">✓ Completamente silenciosa</td>
+          </tr>
+          <tr>
+            <td>Estética</td>
+            <td class="cross">Vista industrial</td>
+            <td class="check hi">✓ Soft, premium, atemporal</td>
+          </tr>
+          <tr>
+            <td>Motorización</td>
+            <td class="cross">No compatible</td>
+            <td class="check hi">✓ PowerView® app + voz</td>
+          </tr>
+          <tr>
+            <td>Durabilidad</td>
+            <td class="cross">Se decoloran y quiebran</td>
+            <td class="check hi">✓ Telas certificadas HD</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
-<!-- USOS IDEALES -->
-<section class="usos" id="usos">
-  <div class="usos-inner">
-    <div class="rv">
-      <p class="sec-ey">Casos de uso</p>
-      <h2 class="sec">Hecha para los <em>vanos más difíciles</em></h2>
-      <p class="sec-sub">La Luminette® resuelve los casos donde ninguna cortina convencional funciona bien.</p>
-    </div>
-    <div class="usos-grid">
-      <div class="uso-card rv">
-        <div class="uso-accent"></div>
-        <div class="uso-body">
-          <div class="uso-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="12" y1="3" x2="12" y2="21"/></svg></div>
-          <div class="uso-name">Puertas corredizas y de balcón</div>
-          <p class="uso-desc">La Luminette® es la única cortina Hunter Douglas que se corre lateralmente para dejar libre el paso por la puerta. Abrís la cortina, abrís la puerta, accedés al exterior — sin enroscar ni enrollar nada. Compatible con riel de doble recorrido para puertas de dos hojas.</p>
-          <div class="uso-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg> Uso más común</div>
-        </div>
-      </div>
-      <div class="uso-card rv">
-        <div class="uso-accent"></div>
-        <div class="uso-body">
-          <div class="uso-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg></div>
-          <div class="uso-name">Ventanas piso a techo</div>
-          <p class="uso-desc">En ventanales altos y anchos, un roller pierde uniformidad y una persiana de lamas se ve pesada. La Luminette® sube suavemente hasta el techo en paños de tela que se ven elegantes sin importar el alto del vano.</p>
-          <div class="uso-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg> Ideal para techos altos</div>
-        </div>
-      </div>
-      <div class="uso-card rv">
-        <div class="uso-accent"></div>
-        <div class="uso-body">
-          <div class="uso-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-          <div class="uso-name">Divisiones interiores con luz</div>
-          <p class="uso-desc">La Luminette® puede funcionar como divisor semitransparente entre ambientes. Separa sin cortar la luz: en posición abierta los paños son casi invisibles; en posición cerrada generan privacidad visual sin oscurecer el espacio.</p>
-          <div class="uso-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg> Uso creativo</div>
-        </div>
-      </div>
-      <div class="uso-card rv">
-        <div class="uso-accent"></div>
-        <div class="uso-body">
-          <div class="uso-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <div class="uso-name">Oficinas y espacios comerciales</div>
-          <p class="uso-desc">En oficinas con frentes vidriados, la Luminette® permite controlar la entrada de sol para pantallas sin oscurecer el ambiente de trabajo. Su estética soft y minimalista es perfecta para espacios profesionales de alta gama.</p>
-          <div class="uso-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg> Uso corporativo</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VS VERTICAL CONVENCIONAL -->
-<section class="vs">
-  <div class="vs-inner">
-    <div class="rv">
-      <p class="sec-ey">Comparativa</p>
-      <h2 class="sec">Luminette® vs <em>persiana vertical</em> convencional</h2>
-      <p style="font-size:15px;color:var(--text-mid);line-height:1.75;margin-top:12px">Ambas resuelven puertas y ventanas grandes. Pero hay una diferencia fundamental en la experiencia de uso y el resultado estético.</p>
-    </div>
-    <div class="vs-table rv">
-      <div class="vs-hdr">
-        <div class="vs-hdr-c">Persiana vertical</div>
-        <div class="vs-hdr-c mid"></div>
-        <div class="vs-hdr-c good">Luminette® Hunter Douglas</div>
-      </div>
-      <div class="vs-row">
-        <div class="vs-c bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 6L6 18M6 6l12 12"/></svg>Lamas de plástico o PVC</div>
-        <div class="vs-c lbl">Material</div>
-        <div class="vs-c good">Tela suave traslúcida <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
-      <div class="vs-row">
-        <div class="vs-c bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 6L6 18M6 6l12 12"/></svg>Ruido al moverse</div>
-        <div class="vs-c lbl">Sonido</div>
-        <div class="vs-c good">Completamente silenciosa <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
-      <div class="vs-row">
-        <div class="vs-c bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 6L6 18M6 6l12 12"/></svg>Vista industrial</div>
-        <div class="vs-c lbl">Estética</div>
-        <div class="vs-c good">Soft, premium, atemporal <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
-      <div class="vs-row">
-        <div class="vs-c bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 6L6 18M6 6l12 12"/></svg>No compatible</div>
-        <div class="vs-c lbl">Motorización</div>
-        <div class="vs-c good">PowerView® app + voz <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
-      <div class="vs-row">
-        <div class="vs-c bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M18 6L6 18M6 6l12 12"/></svg>Se decoloran y quiebran</div>
-        <div class="vs-c lbl">Durabilidad</div>
-        <div class="vs-c good">Telas certificadas HD <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PALETA DE COLORES -->
-<section class="telas">
-  <div class="telas-inner">
-    <div class="rv" style="text-align:center;max-width:540px;margin:0 auto">
-      <p class="sec-ey" style="justify-content:center">Colores y telas</p>
-      <h2 class="sec" style="text-align:center">Tonos que <em>acompañan</em> tu decoración</h2>
-      <p style="font-size:14px;color:var(--text-mid);max-width:500px;margin:10px auto 0;line-height:1.7">La Luminette® está disponible en telas traslúcidas de distintas densidades. Elegís entre neutros atemporales y tonos con personalidad.</p>
-    </div>
-    <div class="telas-grid rv">
-      <div class="tela-swatch"><div class="swatch-color" style="background:#f5f0eb"></div><div class="swatch-info"><div class="swatch-name">Marfil Clásico</div><div class="swatch-desc">Traslúcido suave</div></div></div>
-      <div class="tela-swatch"><div class="swatch-color" style="background:#e8dfd4"></div><div class="swatch-info"><div class="swatch-name">Arena Natural</div><div class="swatch-desc">Traslúcido cálido</div></div></div>
-      <div class="tela-swatch"><div class="swatch-color" style="background:#d4c8b8"></div><div class="swatch-info"><div class="swatch-name">Tostado Suave</div><div class="swatch-desc">Semi-opaco</div></div></div>
-      <div class="tela-swatch"><div class="swatch-color" style="background:#b8b0a4"></div><div class="swatch-info"><div class="swatch-name">Gris Mineral</div><div class="swatch-desc">Traslúcido frío</div></div></div>
-      <div class="tela-swatch"><div class="swatch-color" style="background:#4a3f35"></div><div class="swatch-info"><div class="swatch-name">Tabaco Oscuro</div><div class="swatch-desc">Alta privacidad</div></div></div>
-    </div>
-    <div style="text-align:center;margin-top:20px;font-size:13.5px;color:var(--text-light)">Estos son ejemplos de la paleta. El muestrario completo está disponible en showroom o en la visita de asesoramiento.</div>
-  </div>
-</section>
-
-<!-- POWERVIEW BAND -->
-<section class="pv-band">
-  <div class="pv-band-inner">
-    <div class="pv-band-text">
-      <h3>También motorizable con <em>PowerView®</em></h3>
-      <p>La Luminette® es compatible con el sistema PowerView® de Hunter Douglas. Deslizá y rotá los paños desde la app, con Alexa o con rutinas automáticas programadas. Sin cables, sin esfuerzo.</p>
-    </div>
-    <div class="pv-btns">
-      <a href="powerview.html" class="btn-pv">Ver PowerView® <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      
+<!-- GALERÍA -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">Galería</span>
+    <div class="gal-grid">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Luminette Hunter Douglas — paños verticales junto a ventanal" loading="lazy"/>
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Detalle de paños de tela Luminette junto a puerta corrediza" loading="lazy"/>
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213424_b8c1dd71-3eaf-4c42-906b-970447e59134_min.webp" alt="Living con cortinas a medida — luz natural controlada" loading="lazy"/>
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213434_e0543371-334e-4675-abc4-1dae59319668_min.webp" alt="Dormitorio con grandes ventanales y cortinas Hunter Douglas" loading="lazy"/>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="faq">
-  <div class="faq-inner">
-    <div class="rv" style="text-align:center;max-width:540px;margin:0 auto">
-      <p class="sec-ey" style="justify-content:center">Preguntas frecuentes</p>
-      <h2 class="sec" style="text-align:center">Todo sobre las <em>Luminette®</em></h2>
+<section class="section section-gray">
+  <div class="container" style="max-width:780px">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Preguntas frecuentes</span>
+      <h2>Todo sobre las <em>Luminette®</em></h2>
     </div>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Qué son las cortinas Luminette® de Hunter Douglas?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">Las Luminette® Privacy Sheers son una cortina vertical de tela suave patentada por Hunter Douglas. Tienen paños de tela que rotan hasta 180° — combinando la ligereza visual de una cortina de gasa con el control de luz de una persiana vertical. Se deslizan lateralmente, lo que las hace perfectas para puertas corredizas.</div>
+        <button class="faq-q" onclick="faq(this)">¿Qué son las cortinas Luminette® de Hunter Douglas?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Las Luminette® Privacy Sheers son una cortina vertical de tela suave patentada por Hunter Douglas. Tienen paños de tela que rotan hasta 180° — combinando la ligereza visual de una cortina de gasa con el control de luz de una persiana vertical. Se deslizan lateralmente, lo que las hace perfectas para puertas corredizas.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Para qué tipo de ventanas o puertas son ideales?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">Son especialmente adecuadas para puertas corredizas, puertas de balcón, ventanas piso a techo y grandes paños vidriados. El sistema de deslizamiento lateral permite mantener la puerta accesible mientras se controla la luz. También funcionan muy bien como divisores semitransparentes entre ambientes.</div>
+        <button class="faq-q" onclick="faq(this)">¿Para qué tipo de ventanas o puertas son ideales?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Son especialmente adecuadas para puertas corredizas, puertas de balcón, ventanas piso a techo y grandes paños vidriados. El sistema de deslizamiento lateral permite mantener la puerta accesible mientras se controla la luz. También funcionan muy bien como divisores semitransparentes entre ambientes.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿En qué se diferencia de una persiana vertical común?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">La diferencia principal es el material y el resultado estético. Una persiana vertical tiene lamas rígidas de PVC o aluminio que producen ruido y tienen un aspecto más industrial. La Luminette® tiene paños de tela suave que son completamente silenciosos, cuelgan de forma natural y tienen una apariencia premium comparable a una cortina de diseño de alta gama.</div>
+        <button class="faq-q" onclick="faq(this)">¿En qué se diferencia de una persiana vertical común?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>La diferencia principal es el material y el resultado estético. Una persiana vertical tiene lamas rígidas de PVC o aluminio que producen ruido y tienen un aspecto más industrial. La Luminette® tiene paños de tela suave que son completamente silenciosos, cuelgan de forma natural y tienen una apariencia premium comparable a una cortina de diseño de alta gama.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Se puede motorizar la Luminette®?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">Sí. La Luminette® es compatible con el sistema PowerView® de Hunter Douglas. El motor inalámbrico permite deslizar y rotar los paños desde la app, con Alexa, Google Home o mediante rutinas programadas. En Decourban instalamos y configuramos el sistema completo con puesta en marcha incluida.</div>
+        <button class="faq-q" onclick="faq(this)">¿Se puede motorizar la Luminette®?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Sí. La Luminette® es compatible con el sistema PowerView® de Hunter Douglas. El motor inalámbrico permite deslizar y rotar los paños desde la app, con Alexa, Google Home o mediante rutinas programadas. En Decourban instalamos y configuramos el sistema completo con puesta en marcha incluida.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRODUCTOS RELACIONADOS -->
-<section class="related">
-  <p style="font-size:12px;color:var(--text-mid);text-align:center;margin-bottom:24px;padding:14px 24px;background:var(--bg-alt,#f5f5f0);border:1px solid var(--border)">¿No sabés cuál elegir? → <a href="comparador.html" style="font-weight:600;color:var(--gold);text-decoration:none">Comparar todos los modelos Hunter Douglas →</a></p>
-  
-  <div class="related-inner">
-    <div class="rv" style="text-align:center;max-width:520px;margin:0 auto">
-      <p class="sec-ey" style="justify-content:center">También te puede interesar</p>
-      <h2 class="sec" style="text-align:center">El resto de la línea <em>Hunter Douglas</em></h2>
+<!-- RELACIONADOS -->
+<section class="section">
+  <div class="container">
+    <p class="text-center mb-40"><a href="comparador.html" class="text-link">Comparar todos los modelos Hunter Douglas lado a lado →</a></p>
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">También te puede interesar</span>
+      <h2>El resto de la línea <em>Hunter Douglas</em></h2>
     </div>
-    <div class="related-grid">
-      <a href="cortinas-silhouette.html" class="rel-card rv">
-        <div class="rel-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Silhouette Hunter Douglas" loading="lazy"/></div>
-        <div class="rel-body">
-          <div class="rel-tag">Control de luz premium</div>
-          <div class="rel-name">Silhouette®</div>
-          <p class="rel-desc">Láminas flotantes horizontales entre tela traslúcida. Para ventanas convencionales donde querés lo más elegante de la línea HD.</p>
-          <div class="rel-link">Ver Silhouette® <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    <div class="products-grid">
+      <a href="cortinas-silhouette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp" alt="Cortinas Silhouette Hunter Douglas" loading="lazy"/>
         </div>
+        <div class="product-card-name">Silhouette®</div>
+        <p class="product-card-desc">Láminas flotantes horizontales entre tela traslúcida, para ventanas convencionales.</p>
       </a>
-      <a href="cortinas-pirouette.html" class="rel-card rv">
-        <div class="rel-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Pirouette Hunter Douglas" loading="lazy"/></div>
-        <div class="rel-body">
-          <div class="rel-tag">Láminas giratorias horizontales</div>
-          <div class="rel-name">Pirouette®</div>
-          <p class="rel-desc">El equivalente horizontal de la Luminette®. Para ventanas convencionales donde necesitás el mismo control de ángulo con privacidad total.</p>
-          <div class="rel-link">Ver Pirouette® <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      <a href="cortinas-pirouette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-480-0.webp" alt="Cortinas Pirouette Hunter Douglas" loading="lazy"/>
         </div>
+        <div class="product-card-name">Pirouette®</div>
+        <p class="product-card-desc">El equivalente horizontal de la Luminette®, para ventanas convencionales.</p>
       </a>
-      <a href="powerview.html" class="rel-card rv">
-        <div class="rel-img" style="background:var(--bg-dark);display:flex;align-items:center;justify-content:center">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.2" width="60" height="60"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      <a href="powerview.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="Sistema PowerView Hunter Douglas" loading="lazy"/>
         </div>
-        <div class="rel-body">
-          <div class="rel-tag">Motorización inteligente</div>
-          <div class="rel-name">PowerView® Motorización</div>
-          <p class="rel-desc">Controlá tu Luminette® desde la app, con Alexa o con rutinas automáticas. El sistema inalámbrico que transforma cualquier cortina HD.</p>
-          <div class="rel-link">Ver PowerView® <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-        </div>
+        <div class="product-card-name">PowerView® Motorización</div>
+        <p class="product-card-desc">Controlá tu Luminette® desde la app, con Alexa o con rutinas automáticas.</p>
       </a>
     </div>
   </div>
 </section>
 
 <!-- CTA FINAL -->
-<section class="cta-final">
-  <p class="sec-ey" style="justify-content:center;margin-bottom:12px">¿Empezamos?</p>
-  <h2>Medición gratuita en<br><em>Río Cuarto y zona</em></h2>
-  <p>Nuestro equipo te asesora sobre qué modelo de Luminette® funciona mejor para tus puertas y ventanas. Presupuesto sin cargo.</p>
-  <div class="cta-btns">
-    <a href="https://wa.me/543585075773?text=Hola%2C%20me%20interesan%20las%20cortinas%20Luminette%20para%20puertas%20corredizas%20en%20Río%20Cuarto" target="_blank" rel="noopener noreferrer" class="btn-gold">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Consultar por WhatsApp
-    </a>
-    
+<section class="section section-gray">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h3>Medición gratuita en Río Cuarto y zona</h3>
+        <p>Nuestro equipo te asesora sobre qué modelo de Luminette® funciona mejor para tus puertas y ventanas. Presupuesto sin cargo.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0">
+        <a href="https://wa.me/543585075773?text=Hola%2C%20me%20interesan%20las%20cortinas%20Luminette%20para%20puertas%20corredizas%20en%20Río%20Cuarto" target="_blank" rel="noopener noreferrer" class="btn-outline-light">Consultar por WhatsApp</a>
+        <a href="cortinas.html" class="btn-outline-light">Ver catálogo</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -482,24 +445,32 @@
   document.getElementById('menuBtn').addEventListener('click', function() {
     document.getElementById('navMobile').classList.toggle('open');
   });
+
+  // ── Products menu overlay ───────────────────────────
+  var productsOverlay = document.getElementById('productsOverlay');
+  function openProducts() {
+    productsOverlay.classList.add('open');
+    document.getElementById('navMobile').classList.remove('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProducts() {
+    productsOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.products-trigger').forEach(function(btn){
+    btn.addEventListener('click', openProducts);
+  });
+  document.getElementById('poClose').addEventListener('click', closeProducts);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeProducts();
+  });
 })();
 </script>
 
-<a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer" class="wapp" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-
 <script>
-var nav=document.getElementById('siteNav');
-window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
-function faq(btn){
-  var item=btn.parentElement;
-  var was=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
-  if(!was)item.classList.add('open');
+function faq(el){
+  el.parentElement.classList.toggle('open');
 }
-var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.1});
-document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
 </script>
 </body>
 </html>

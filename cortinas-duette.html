@@ -65,18 +65,17 @@
 </head>
 <body>
 
-<section class="hero-prod">
-  <div class="hero-bg" id="heroBg" style="background-image:url('https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp')"></div>
-  <div class="hero-grad"></div>
-  <div class="hero-c">
-    <!-- NAV -->
-<nav class="site-nav solid" id="siteNav">
+<!-- NAV -->
+<nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
     </a>
     <div class="nav-links">
-      <a href="cortinas.html">Productos</a>
+      <button class="products-trigger" id="productsBtn" aria-expanded="false" aria-controls="productsOverlay">
+        <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+        Productos
+      </button>
       <a href="proyectos.html">Proyectos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
@@ -89,27 +88,103 @@
 </nav>
 
 <!-- MOBILE MENU -->
-
 <div class="nav-mobile" id="navMobile">
-  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
-  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
-  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
-  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+  <button class="products-trigger" id="productsBtnMobile" aria-expanded="false" aria-controls="productsOverlay">
+    Productos
+    <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+  </button>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
 </div>
-    <p class="eyebrow">Distribuidor Oficial Hunter Douglas · Río Cuarto</p>
+
+<!-- PRODUCTS MENU OVERLAY -->
+<div class="products-overlay" id="productsOverlay">
+  <button class="po-close" id="poClose" aria-label="Cerrar menú de productos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="po-inner">
+    <div class="po-group">
+      <div class="po-title">Cortinas Hunter Douglas</div>
+      <div class="po-grid">
+        <a href="cortinas-silhouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette" loading="lazy"/></div>
+          <div class="po-item-name">Silhouette®</div>
+        </a>
+        <a href="cortinas-duette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette" loading="lazy"/></div>
+          <div class="po-item-name">Duette®</div>
+        </a>
+        <a href="cortinas-pirouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette" loading="lazy"/></div>
+          <div class="po-item-name">Pirouette®</div>
+        </a>
+        <a href="cortinas-roller.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Roller Quantum" loading="lazy"/></div>
+          <div class="po-item-name">Roller Quantum®</div>
+        </a>
+        <a href="cortinas-luminette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Luminette" loading="lazy"/></div>
+          <div class="po-item-name">Luminette®</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Exterior</div>
+      <div class="po-grid">
+        <a href="toldo-gemini.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldo Gemini" loading="lazy"/></div>
+          <div class="po-item-name">Toldo Gemini®</div>
+        </a>
+        <a href="muebles-exterior.html" class="po-item">
+          <div class="po-item-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Muebles de exterior" loading="lazy"/></div>
+          <div class="po-item-name">Muebles de Exterior</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Domótica</div>
+      <div class="po-grid">
+        <a href="powerview.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="Sistema PowerView" loading="lazy"/></div>
+          <div class="po-item-name">PowerView®</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Accesorios &amp; Decoración</div>
+      <div class="po-grid">
+        <a href="coleccion.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Accesorios y decoración" loading="lazy"/></div>
+          <div class="po-item-name">Ver colección</div>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-48">
+      <a href="cortinas.html" class="text-link">Ver catálogo completo</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="prod-hero" style="background-image:url('https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp')">
+  <div class="hero-overlay"></div>
+  <div class="prod-hero-content">
+    <div class="prod-eyebrow">Distribuidor Oficial Hunter Douglas · Río Cuarto</div>
     <h1>Cortinas Duette®<br><em>aislación térmica</em><br>que se nota en la factura</h1>
-    <p class="hero-sub">Las Duette son persianas celulares con tecnología de panal de abeja que actúa como aislante natural. Reducen el 80% del calor en verano y el 45% del ruido — fabricadas a medida con instalación incluida en Río Cuarto.</p>
-    <div class="ctas">
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20Cortinas%20Duette%20Hunter%20Douglas" class="btn-p" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+    <p class="prod-hero-sub">Las Duette son persianas celulares con tecnología de panal de abeja que actúa como aislante natural. Reducen el 80% del calor en verano y el 45% del ruido — fabricadas a medida con instalación incluida en Río Cuarto.</p>
+    <div class="prod-hero-ctas">
+      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20Cortinas%20Duette%20Hunter%20Douglas" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="vertical-align:-2px;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
         Cotizar — medición gratis
       </a>
-      <a href="cortinas.html" class="btn-s">Ver todos los modelos</a>
+      <a href="cortinas.html" class="btn-outline-light">Ver todos los modelos</a>
     </div>
   </div>
 </section>
 
+<!-- STATS -->
 <div class="stats-bar">
   <div class="stats-in">
     <div><div class="stat-n">80%</div><div class="stat-l">Reducción de calor en verano</div></div>
@@ -119,12 +194,15 @@
   </div>
 </div>
 
-<section class="split">
-  <div class="split-in">
-    <div class="split-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette Hunter Douglas en home office — aislación térmica y acústica" loading="lazy"/></div>
-    <div class="body-txt">
-      <p class="ey">La tecnología detrás de las Duette</p>
-      <h2 class="sec">El panal de abeja que <em>transforma tu hogar</em></h2>
+<!-- ABOUT / INTRO -->
+<section class="section">
+  <div class="container prod-split">
+    <div class="prod-img-main">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette Hunter Douglas en home office — aislación térmica y acústica" loading="lazy"/>
+    </div>
+    <div>
+      <span class="section-label">La tecnología detrás de las Duette</span>
+      <h2>El panal de abeja que <em>transforma tu hogar</em></h2>
       <p>Las Duette tienen una estructura celular única — celdas de aire atrapadas en su interior actúan como una barrera térmica continua. El resultado: menos calor en verano, menos frío en invierno, sin perder luz natural.</p>
       <p>En Córdoba, con veranos de 40°C e inviernos bajo cero, las Duette marcan una diferencia real. Muchos clientes reportan que desde el primer verano notaron menor uso del aire acondicionado.</p>
       <ul class="check-list">
@@ -139,75 +217,112 @@
   </div>
 </section>
 
-<section class="feats">
-  <div class="feat-grid">
-    <div class="feat"><div class="feat-n">80%</div><h3>Menos calor</h3><p>La estructura celular bloquea la radiación solar y el intercambio térmico. Ideal para ambientes con ventanas orientadas al norte u oeste.</p></div>
-    <div class="feat"><div class="feat-n">45%</div><h3>Menos ruido</h3><p>Las celdas absorben las ondas sonoras. Si vivís en zona de tráfico, vecinos ruidosos o tenés dormitorios que dan a la calle, notarás la diferencia.</p></div>
-    <div class="feat"><div class="feat-n">+100</div><h3>Telas disponibles</h3><p>Desde traslúcidas que filtran la luz suavemente hasta blackout total. Para cada ambiente el nivel correcto de privacidad y luz.</p></div>
-    <div class="feat"><div class="feat-n">A♦</div><h3>Blackout disponible</h3><p>La versión blackout bloquea el 100% de la luz — perfecta para dormitorios, salas de cine en casa o cualquier ambiente donde necesitás oscuridad total.</p></div>
-    <div class="feat"><div class="feat-n">📱</div><h3>PowerView® Smart</h3><p>Compatibles con motorización PowerView® para control desde tu celular, temporizadores automáticos o asistentes de voz (Alexa, Google Home, Siri).</p></div>
-    <div class="feat"><div class="feat-n">5yr</div><h3>Garantía 5 años</h3><p>Garantía oficial Hunter Douglas — la más larga del mercado en tratamientos de ventanas. Como distribuidores oficiales somos el respaldo local.</p></div>
+<!-- BENEFICIOS -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Beneficios</span>
+      <h2>Seis razones para elegir <em>Duette®</em></h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat"><div class="feat-n">80%</div><h3>Menos calor</h3><p>La estructura celular bloquea la radiación solar y el intercambio térmico. Ideal para ambientes con ventanas orientadas al norte u oeste.</p></div>
+      <div class="feat"><div class="feat-n">45%</div><h3>Menos ruido</h3><p>Las celdas absorben las ondas sonoras. Si vivís en zona de tráfico, vecinos ruidosos o tenés dormitorios que dan a la calle, notarás la diferencia.</p></div>
+      <div class="feat"><div class="feat-n">+100</div><h3>Telas disponibles</h3><p>Desde traslúcidas que filtran la luz suavemente hasta blackout total. Para cada ambiente el nivel correcto de privacidad y luz.</p></div>
+      <div class="feat"><div class="feat-n">A♦</div><h3>Blackout disponible</h3><p>La versión blackout bloquea el 100% de la luz — perfecta para dormitorios, salas de cine en casa o cualquier ambiente donde necesitás oscuridad total.</p></div>
+      <div class="feat"><div class="feat-n">📱</div><h3>PowerView® Smart</h3><p>Compatibles con motorización PowerView® para control desde tu celular, temporizadores automáticos o asistentes de voz (Alexa, Google Home, Siri).</p></div>
+      <div class="feat"><div class="feat-n">5yr</div><h3>Garantía 5 años</h3><p>Garantía oficial Hunter Douglas — la más larga del mercado en tratamientos de ventanas. Como distribuidores oficiales somos el respaldo local.</p></div>
+    </div>
   </div>
 </section>
 
-<section class="sil-gallery" aria-label="Galería Cortinas Duette">
-  <div class="gallery-grid">
-    <div class="gal-item">
+<!-- GALERÍA -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">Galería</span>
+    <div class="gal-grid">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette Hunter Douglas en oficina — control de luz preciso" loading="lazy"/>
-    </div>
-    <div class="gal-item">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette Hunter Douglas en dormitorio — aislación y blackout" loading="lazy"/>
-    </div>
-    <div class="gal-item">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Tratamientos de ventana Hunter Douglas en living moderno" loading="lazy"/>
-    </div>
-    <div class="gal-item">
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213424_b8c1dd71-3eaf-4c42-906b-970447e59134_min.webp" alt="Decoración de interiores con cortinas a medida — Decourban Estudio" loading="lazy"/>
     </div>
   </div>
 </section>
 
-<section class="faq-sec">
-  <div class="faq-inner">
-    <div class="faq-hd">
-      <p class="ey" style="justify-content:center">Preguntas frecuentes</p>
-      <h2 class="sec" style="text-align:center">Todo sobre las <em>Cortinas Duette®</em></h2>
+<!-- FAQ -->
+<section class="section section-gray">
+  <div class="container" style="max-width:780px">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Preguntas frecuentes</span>
+      <h2>Todo sobre las <em>Cortinas Duette®</em></h2>
     </div>
     <div class="faq-list">
-      <div class="fq"><div class="fq-q" onclick="this.parentElement.classList.toggle('open')"><span>¿Realmente ahorran energía las Duette?</span><div class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fq-a"><p>Sí. Al reducir el 80% del intercambio térmico por las ventanas, las Duette disminuyen significativamente la demanda del aire acondicionado y la calefacción. En un verano cordobés de 40°C, esa diferencia se nota tanto en confort como en la factura eléctrica.</p></div></div>
-      <div class="fq"><div class="fq-q" onclick="this.parentElement.classList.toggle('open')"><span>¿Cuáles son mejores: Duette simples o dobles?</span><div class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fq-a"><p>Las Duette dobles (con dos capas de celdas) ofrecen mayor aislación térmica y acústica, ideales para dormitorios en zonas muy frías o calurosas. Las simples ya son excelentes para la mayoría de los ambientes. En la consulta gratuita te recomendamos cuál se adapta mejor a tu situación.</p></div></div>
-      <div class="fq"><div class="fq-q" onclick="this.parentElement.classList.toggle('open')"><span>¿Las Duette sirven para dormitorios?</span><div class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fq-a"><p>Son ideales para dormitorios. Además de la aislación, están disponibles en versión blackout que bloquea el 100% de la luz. Combinando blackout + aislación acústica, las Duette crean el dormitorio perfecto para descanso profundo.</p></div></div>
-      <div class="fq"><div class="fq-q" onclick="this.parentElement.classList.toggle('open')"><span>¿Se pueden motorizar?</span><div class="fq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fq-a"><p>Sí. Las Duette son 100% compatibles con PowerView®, el sistema de motorización de Hunter Douglas. Podés programar que se suban solas al amanecer o bajen al anochecer, o controlarlas desde Alexa y Google Home.</p></div></div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">¿Realmente ahorran energía las Duette?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Sí. Al reducir el 80% del intercambio térmico por las ventanas, las Duette disminuyen significativamente la demanda del aire acondicionado y la calefacción. En un verano cordobés de 40°C, esa diferencia se nota tanto en confort como en la factura eléctrica.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">¿Cuáles son mejores: Duette simples o dobles?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Las Duette dobles (con dos capas de celdas) ofrecen mayor aislación térmica y acústica, ideales para dormitorios en zonas muy frías o calurosas. Las simples ya son excelentes para la mayoría de los ambientes. En la consulta gratuita te recomendamos cuál se adapta mejor a tu situación.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">¿Las Duette sirven para dormitorios?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Son ideales para dormitorios. Además de la aislación, están disponibles en versión blackout que bloquea el 100% de la luz. Combinando blackout + aislación acústica, las Duette crean el dormitorio perfecto para descanso profundo.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">¿Se pueden motorizar?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Sí. Las Duette son 100% compatibles con PowerView®, el sistema de motorización de Hunter Douglas. Podés programar que se suban solas al amanecer o bajen al anochecer, o controlarlas desde Alexa y Google Home.</p></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="cta-sec">
-  <div class="cta-inner">
-    <p class="eyebrow" style="justify-content:center;color:rgba(196,164,107,.7)">Medición gratis · Sin compromiso</p>
-    <h2>¿Querés sentir la diferencia<br><em>en tu próxima factura?</em></h2>
-    <p>Coordinamos una visita gratuita para medir tus ventanas y mostrarte las muestras. Te damos el presupuesto en el momento, sin sorpresas.</p>
-    <div class="cta-btns">
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20Cortinas%20Duette%20Hunter%20Douglas%20para%20aislaci%C3%B3n" class="btn-p" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
-        Pedir cotización gratis
+<!-- RELACIONADOS -->
+<section class="section">
+  <div class="container">
+    <p class="text-center mb-40"><a href="comparador.html" class="text-link">Comparar todos los modelos Hunter Douglas lado a lado →</a></p>
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">También te puede interesar</span>
+      <h2>Otros modelos <em>Hunter Douglas</em></h2>
+    </div>
+    <div class="products-grid">
+      <a href="cortinas-silhouette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp" alt="Cortinas Silhouette Hunter Douglas" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Silhouette®</div>
+        <p class="product-card-desc">Control de luz perfecto con láminas suaves. La más elegida para livings y comedores.</p>
       </a>
-      <a href="contacto.html" class="btn-s">Ir al showroom</a>
+      <a href="cortinas-pirouette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-480-0.webp" alt="Cortinas Pirouette Hunter Douglas" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Pirouette®</div>
+        <p class="product-card-desc">Diseño premium con privacidad total y aspecto minimalista.</p>
+      </a>
+      <a href="toldo-gemini.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-480-0.webp" alt="Toldo Gemini Hunter Douglas exterior" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Toldo Gemini®</div>
+        <p class="product-card-desc">Toldo retráctil motorizado para terraza y jardín. PowerView® incluido.</p>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="rel-sec">
-  <p style="font-size:12px;color:var(--text-mid);text-align:center;margin-bottom:24px;padding:14px 24px;background:var(--bg-alt,#f5f5f0);border:1px solid var(--border)">¿No sabés cuál elegir? → <a href="comparador.html" style="font-weight:600;color:var(--gold);text-decoration:none">Comparar todos los modelos Hunter Douglas lado a lado →</a></p>
-  
-  <div style="text-align:center;max-width:1100px;margin:0 auto;margin-bottom:8px">
-    <p class="ey" style="justify-content:center">También te puede interesar</p>
-    <h2 class="sec" style="text-align:center">Otros modelos <em>Hunter Douglas</em></h2>
-  </div>
-  <div class="rel-grid">
-    <a href="cortinas-silhouette.html" class="rc"><div class="rc-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp" alt="Cortinas Silhouette Hunter Douglas" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Hunter Douglas</div><div class="rc-name">Cortinas Silhouette®</div><div class="rc-desc">Control de luz perfecto con láminas suaves. La más elegida para livings y comedores.</div></div></a>
-    <a href="cortinas.html#pirouette" class="rc"><div class="rc-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-480-0.webp" alt="Cortinas Pirouette Hunter Douglas" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Hunter Douglas</div><div class="rc-name">Cortinas Pirouette®</div><div class="rc-desc">Diseño premium con privacidad total y aspecto minimalista.</div></div></a>
-    <a href="toldo-gemini.html" class="rc"><div class="rc-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-480-0.webp" alt="Toldo Gemini Hunter Douglas exterior" loading="lazy"/></div><div class="rc-body"><div class="rc-cat">Exterior</div><div class="rc-name">Toldo Gemini®</div><div class="rc-desc">Toldo retráctil motorizado para terraza y jardín. PowerView® incluido.</div></div></a>
+<!-- CTA FINAL -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h3>¿Querés sentir la diferencia en tu próxima factura?</h3>
+        <p>Coordinamos una visita gratuita para medir tus ventanas y mostrarte las muestras. Te damos el presupuesto en el momento, sin sorpresas.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0">
+        <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20Cortinas%20Duette%20Hunter%20Douglas%20para%20aislaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="btn-outline-light">Pedir cotización gratis</a>
+        <a href="contacto.html" class="btn-outline-light">Ir al showroom</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -270,9 +385,30 @@
   document.getElementById('menuBtn').addEventListener('click', function() {
     document.getElementById('navMobile').classList.toggle('open');
   });
+
+  // ── Products menu overlay ───────────────────────────
+  var productsOverlay = document.getElementById('productsOverlay');
+  function openProducts() {
+    productsOverlay.classList.add('open');
+    document.getElementById('navMobile').classList.remove('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProducts() {
+    productsOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.products-trigger').forEach(function(btn){
+    btn.addEventListener('click', openProducts);
+  });
+  document.getElementById('poClose').addEventListener('click', closeProducts);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeProducts();
+  });
 })();
 </script>
 
-<script>window.addEventListener('load',()=>document.getElementById('heroBg').classList.add('zoom'));document.querySelectorAll('.fq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));</script>
+<script>
+function faq(el){ el.parentElement.classList.toggle('open'); }
+</script>
 </body>
 </html>

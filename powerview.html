@@ -71,18 +71,21 @@
 }
 </script>
 
+<link rel="preload" as="image" href="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" fetchpriority="high"/>
 <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
 <!-- NAV -->
-<nav class="site-nav solid" id="siteNav">
+<nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
     </a>
     <div class="nav-links">
-      <a href="cortinas.html">Productos</a>
+      <button class="products-trigger" id="productsBtn" aria-expanded="false" aria-controls="productsOverlay">
+        <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+        Productos
+      </button>
       <a href="proyectos.html">Proyectos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
@@ -97,316 +100,252 @@
 <!-- MOBILE MENU -->
 
 <div class="nav-mobile" id="navMobile">
-  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
-  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
-  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
-  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+  <button class="products-trigger" id="productsBtnMobile" aria-expanded="false" aria-controls="productsOverlay">
+    Productos
+    <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+  </button>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
 </div>
-<!-- MOBILE NAV -->
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-inner">
-    <div>
-      <p class="hero-ey">Hunter Douglas · Domótica</p>
-      <h1>Cortinas que se<br>mueven <em>solas</em></h1>
-      <p class="hero-p">PowerView® es el sistema de motorización inteligente de Hunter Douglas. Controlá todas las cortinas de tu casa desde el celular, con la voz, o dejá que se muevan solas según la hora del día.</p>
-      <div class="hero-btns">
-        
-        <a href="#como-funciona" class="btn-s">Cómo funciona</a>
+<!-- PRODUCTS MENU OVERLAY -->
+<div class="products-overlay" id="productsOverlay">
+  <button class="po-close" id="poClose" aria-label="Cerrar menú de productos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="po-inner">
+    <div class="po-group">
+      <div class="po-title">Cortinas Hunter Douglas</div>
+      <div class="po-grid">
+        <a href="cortinas-silhouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette" loading="lazy"/></div>
+          <div class="po-item-name">Silhouette®</div>
+        </a>
+        <a href="cortinas-duette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette" loading="lazy"/></div>
+          <div class="po-item-name">Duette®</div>
+        </a>
+        <a href="cortinas-pirouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette" loading="lazy"/></div>
+          <div class="po-item-name">Pirouette®</div>
+        </a>
+        <a href="cortinas-roller.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Roller Quantum" loading="lazy"/></div>
+          <div class="po-item-name">Roller Quantum®</div>
+        </a>
+        <a href="cortinas-luminette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Luminette" loading="lazy"/></div>
+          <div class="po-item-name">Luminette®</div>
+        </a>
       </div>
     </div>
-    <div class="hero-right">
-      <!-- Phone mockup -->
-      <div class="phone-mockup">
-        <div class="phone-screen">
-          <div class="phone-hdr">
-            <div><div class="phone-hdr-title">PowerView®</div><div class="phone-hdr-sub">Casa · 4 ambientes activos</div></div>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" width="20" height="20"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <div class="scene-row">
-            <div class="scene-icon" style="background:rgba(255,196,70,.12)"><svg viewBox="0 0 24 24" fill="none" stroke="#ffc446" stroke-width="1.8" width="16" height="16"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
-            <div><div class="scene-name">Buenos días</div><div class="scene-sub">7:00 am · Activa</div></div>
-            <div class="scene-toggle on"></div>
-          </div>
-          <div class="scene-row">
-            <div class="scene-icon" style="background:rgba(74,158,255,.12)"><svg viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="1.8" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-            <div><div class="scene-name">Modo trabajo</div><div class="scene-sub">9:00 am · Activa</div></div>
-            <div class="scene-toggle on"></div>
-          </div>
-          <div class="scene-row">
-            <div class="scene-icon" style="background:rgba(196,164,107,.12)"><svg viewBox="0 0 24 24" fill="none" stroke="#c4a46b" stroke-width="1.8" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
-            <div><div class="scene-name">Buenas noches</div><div class="scene-sub">10:00 pm · Programada</div></div>
-            <div class="scene-toggle off"></div>
-          </div>
-          <div class="scene-row">
-            <div class="scene-icon" style="background:rgba(164,196,107,.12)"><svg viewBox="0 0 24 24" fill="none" stroke="#a4c46b" stroke-width="1.8" width="16" height="16"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-            <div><div class="scene-name">Cine en casa</div><div class="scene-sub">Manual · En espera</div></div>
-            <div class="scene-toggle off"></div>
-          </div>
-        </div>
+    <div class="po-group">
+      <div class="po-title">Exterior</div>
+      <div class="po-grid">
+        <a href="toldo-gemini.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldo Gemini" loading="lazy"/></div>
+          <div class="po-item-name">Toldo Gemini®</div>
+        </a>
+        <a href="muebles-exterior.html" class="po-item">
+          <div class="po-item-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Muebles de exterior" loading="lazy"/></div>
+          <div class="po-item-name">Muebles de Exterior</div>
+        </a>
       </div>
-      <!-- Stats -->
-      <div class="hero-stats">
-        <div class="h-stat"><div class="h-stat-n">100%</div><div class="h-stat-l">Inalámbrico — sin cables visibles</div></div>
-        <div class="h-stat"><div class="h-stat-n">+50</div><div class="h-stat-l">Modelos compatibles Hunter Douglas</div></div>
-        <div class="h-stat"><div class="h-stat-n">5★</div><div class="h-stat-l">App Store & Google Play</div></div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Domótica</div>
+      <div class="po-grid">
+        <a href="powerview.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="Sistema PowerView" loading="lazy"/></div>
+          <div class="po-item-name">PowerView®</div>
+        </a>
       </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Accesorios &amp; Decoración</div>
+      <div class="po-grid">
+        <a href="coleccion.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Accesorios y decoración" loading="lazy"/></div>
+          <div class="po-item-name">Ver colección</div>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-48">
+      <a href="cortinas.html" class="text-link">Ver catálogo completo</a>
+    </div>
+  </div>
+</div>
+<!-- HERO -->
+<section class="prod-hero" style="background-image:url('https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp')">
+  <div class="hero-overlay"></div>
+  <div class="prod-hero-content">
+    <div class="prod-eyebrow">Hunter Douglas · Domótica</div>
+    <h1>Cortinas que se<br>mueven <em>solas</em></h1>
+    <p class="prod-hero-sub">PowerView® es el sistema de motorización inteligente de Hunter Douglas. Controlá todas las cortinas de tu casa desde el celular, con la voz, o dejá que se muevan solas según la hora del día.</p>
+    <div class="prod-hero-ctas">
+      <a href="https://wa.me/543585075773?text=Quiero%20cotizar%20cortinas%20motorizadas%20PowerView%20para%20mi%20casa" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="vertical-align:-2px;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+        Consultar motorización
+      </a>
+      <a href="#como-funciona" class="btn-outline-light">Cómo funciona</a>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="how" id="como-funciona">
-  <div class="how-inner">
-    <div class="rv">
-      <p class="sec-ey">Funcionamiento</p>
-      <h2 class="sec">Así funciona <em>PowerView®</em></h2>
-      <p class="sec-sub">Todo el sistema es inalámbrico. No requiere obras ni electricistas. Nuestro equipo lo instala y programa en un día.</p>
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-in">
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9z"/><path d="M5 13l2 2a8.14 8.14 0 0110 0l2-2C15.14 9.14 8.87 9.14 5 13z"/><path d="M9 17l2 2c.78-.78 2.05-.78 2.83 0l2-2a5.99 5.99 0 00-6.83 0z"/></svg><span>100% <strong>inalámbrico</strong>, sin cables visibles</span></div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg><span>+50 <strong>modelos compatibles</strong> Hunter Douglas</span></div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg><span>Control por <strong>voz</strong>: Alexa, Google, Siri</span></div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><span><strong>5★</strong> en App Store &amp; Google Play</span></div>
+  </div>
+</div>
+
+<!-- CÓMO FUNCIONA -->
+<section class="section section-gray" id="como-funciona">
+  <div class="container">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Funcionamiento</span>
+      <h2>Así funciona <em>PowerView®</em></h2>
+      <p style="margin:0 auto">Todo el sistema es inalámbrico. No requiere obras ni electricistas. Nuestro equipo lo instala y programa en un día.</p>
     </div>
-    <div class="how-grid">
-      <div class="how-card rv">
-        <div class="how-num">1</div>
-        <div class="how-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-        <h3 class="how-title">Motor en la cortina</h3>
-        <p class="how-desc">Cada cortina recibe un motor silencioso con batería recargable de larga duración. No requiere cableado eléctrico en la pared — instalación limpia y sin obra.</p>
-        <span class="how-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg> Sin obras ni electricistas</span>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="feat-n">1</div>
+        <h3>Motor en la cortina</h3>
+        <p>Cada cortina recibe un motor silencioso con batería recargable de larga duración. No requiere cableado eléctrico en la pared — instalación limpia y sin obra.</p>
       </div>
-      <div class="how-card rv">
-        <div class="how-num">2</div>
-        <div class="how-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 010 8.49m-8.48-.01a6 6 0 010-8.49m11.31-2.82a10 10 0 010 14.14m-14.14 0a10 10 0 010-14.14"/></svg></div>
-        <h3 class="how-title">Hub central PowerView®</h3>
-        <p class="how-desc">El Hub conecta todos los motores a tu red WiFi y habilita el control remoto desde cualquier lugar. Desde el trabajo podés ver que dejaste las cortinas abiertas y cerrarlas con un tap.</p>
-        <span class="how-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg> Control desde cualquier lugar</span>
+      <div class="feat">
+        <div class="feat-n">2</div>
+        <h3>Hub central PowerView®</h3>
+        <p>El Hub conecta todos los motores a tu red WiFi y habilita el control remoto desde cualquier lugar. Cerrá las cortinas que dejaste abiertas con un tap, desde el trabajo.</p>
       </div>
-      <div class="how-card rv">
-        <div class="how-num">3</div>
-        <div class="how-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <h3 class="how-title">App + voz + rutinas</h3>
-        <p class="how-desc">La app PowerView te permite crear escenas personalizadas que se activan automáticamente. "Buenos días" abre las cortinas a las 7. "Película" las cierra todas al mismo tiempo.</p>
-        <span class="how-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg> Automatización total</span>
+      <div class="feat">
+        <div class="feat-n">3</div>
+        <h3>App + voz + rutinas</h3>
+        <p>La app PowerView te permite crear escenas personalizadas que se activan automáticamente. "Buenos días" abre las cortinas a las 7. "Película" las cierra todas al mismo tiempo.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONTROL METHODS -->
-<section class="ctrl">
-  <div class="ctrl-inner">
-    <h2 class="ctrl-title">Cuatro maneras de <em>tomar el control</em></h2>
-    <p class="ctrl-sub">Elegís cómo controlar cada cortina — podés combinar todos los métodos en la misma casa.</p>
-    <div class="ctrl-grid">
-      <div class="ctrl-card">
-        <div class="ctrl-icon" style="background:rgba(74,158,255,.15)">
-          <svg viewBox="0 0 24 24" style="stroke:#4a9eff" width="28" height="28"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-        </div>
-        <div class="ctrl-name">App PowerView®</div>
-        <p class="ctrl-desc">Control total desde el celular. Creá escenas, programá horarios y mové cualquier cortina de la casa desde donde estés.</p>
-        <span class="ctrl-badge">iOS + Android</span>
-      </div>
-      <div class="ctrl-card">
-        <div class="ctrl-icon" style="background:rgba(196,164,107,.15)">
-          <svg viewBox="0 0 24 24" style="stroke:var(--gold)" width="28" height="28"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>
-        </div>
-        <div class="ctrl-name">Control por voz</div>
-        <p class="ctrl-desc">Compatible con Alexa, Google Home y Apple HomeKit. "Alexa, cerrá las cortinas del dormitorio" es suficiente.</p>
-        <span class="ctrl-badge">Alexa · Google · Siri</span>
-      </div>
-      <div class="ctrl-card">
-        <div class="ctrl-icon" style="background:rgba(164,196,107,.15)">
-          <svg viewBox="0 0 24 24" style="stroke:#a4c46b" width="28" height="28"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="ctrl-name">Rutinas automáticas</div>
-        <p class="ctrl-desc">Configurá horarios para que las cortinas se muevan solas. Amanecen abiertas, se cierran con el sol de la tarde, privacidad de noche.</p>
-        <span class="ctrl-badge">Programación solar</span>
-      </div>
-      <div class="ctrl-card">
-        <div class="ctrl-icon" style="background:rgba(196,107,164,.15)">
-          <svg viewBox="0 0 24 24" style="stroke:#c46ba4" width="28" height="28"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-        </div>
-        <div class="ctrl-name">Control remoto</div>
-        <p class="ctrl-desc">El Pebble Remote de PowerView es un control físico sin cables que funciona desde cualquier punto de la habitación. Perfecto para quien prefiere lo tradicional.</p>
-        <span class="ctrl-badge">Sin app necesaria</span>
-      </div>
+<section class="section">
+  <div class="container prod-split">
+    <div class="prod-img-main">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="App PowerView de Hunter Douglas controlando escenas de cortinas" loading="lazy"/>
+    </div>
+    <div>
+      <span class="section-label">Cómo controlarlo</span>
+      <h2>Cuatro maneras de<br><em>tomar el control</em></h2>
+      <p>Elegís cómo controlar cada cortina — podés combinar todos los métodos en la misma casa.</p>
+      <ul class="check-list">
+        <li><strong>App PowerView®</strong> — control total y escenas personalizadas desde el celular (iOS + Android)</li>
+        <li><strong>Control por voz</strong> — compatible con Alexa, Google Home y Apple HomeKit</li>
+        <li><strong>Rutinas automáticas</strong> — programación solar, las cortinas se mueven solas</li>
+        <li><strong>Control remoto Pebble</strong> — sin cables y sin necesidad de la app</li>
+      </ul>
+      <p style="margin-top:24px"><a href="cortinas.html" class="text-link">Ver catálogo completo →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="section section-gray">
+  <div class="container">
+    <span class="section-label">Galería</span>
+    <div class="gal-grid">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldo Gemini Hunter Douglas motorizado con PowerView" loading="lazy"/>
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Luminette Hunter Douglas compatibles con PowerView" loading="lazy"/>
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/foldingjpg-optimized-b09406c29d63067e7117462924956836-640-0.webp" alt="Cortinas roller Hunter Douglas con motorización PowerView" loading="lazy"/>
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/paneloriental-hd_843x338_2-63de1bdb72eeec4a7f17462911968840-640-0.webp" alt="Cortinas Hunter Douglas con motor PowerView instalado" loading="lazy"/>
     </div>
   </div>
 </section>
 
 <!-- COMPATIBLE PRODUCTS -->
-<section class="compat">
-  <div class="compat-inner">
-    <div class="rv" style="text-align:center;max-width:560px;margin:0 auto">
-      <p class="sec-ey" style="justify-content:center">Compatibilidad</p>
-      <h2 class="sec" style="text-align:center">Funciona con los mejores <em>modelos Hunter Douglas</em></h2>
+<section class="section">
+  <div class="container">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Compatibilidad</span>
+      <h2>Funciona con los mejores<br><em>modelos Hunter Douglas</em></h2>
     </div>
-    <div class="compat-grid">
-      <a href="cortinas-silhouette.html" class="compat-card rv">
-        <div class="compat-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Silhouette con PowerView" loading="lazy"/></div>
-        <div class="compat-body">
-          <div class="compat-name">Silhouette® + PowerView®</div>
-          <p class="compat-desc">El combo más elegante. Láminas que bailan suavemente y se posicionan con precisión milimétrica desde tu celular.</p>
-          <div class="compat-link">Ver Silhouette® <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    <div class="products-grid">
+      <a href="cortinas-silhouette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp" alt="Silhouette con PowerView" loading="lazy"/>
         </div>
+        <div class="product-card-name">Silhouette® + PowerView®</div>
+        <p class="product-card-desc">El combo más elegante. Láminas que bailan suavemente y se posicionan con precisión milimétrica desde tu celular.</p>
       </a>
-      <a href="cortinas-pirouette.html" class="compat-card rv">
-        <div class="compat-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Pirouette con PowerView" loading="lazy"/></div>
-        <div class="compat-body">
-          <div class="compat-name">Pirouette® + PowerView®</div>
-          <p class="compat-desc">Controlá el ángulo exacto de las láminas desde la app. De privacidad total a vista abierta con un slider en la pantalla.</p>
-          <div class="compat-link">Ver Pirouette® <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      <a href="cortinas-pirouette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-480-0.webp" alt="Pirouette con PowerView" loading="lazy"/>
         </div>
+        <div class="product-card-name">Pirouette® + PowerView®</div>
+        <p class="product-card-desc">Controlá el ángulo exacto de las láminas desde la app. De privacidad total a vista abierta con un slider en la pantalla.</p>
       </a>
-      <a href="cortinas-duette.html" class="compat-card rv">
-        <div class="compat-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Duette con PowerView" loading="lazy"/></div>
-        <div class="compat-body">
-          <div class="compat-name">Duette® + PowerView®</div>
-          <p class="compat-desc">Maximizá el ahorro energético automáticamente: cerrá al mediodía para bloquear el calor, abrí por la noche para refrescar.</p>
-          <div class="compat-link">Ver Duette® <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      <a href="cortinas-duette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-480-0.webp" alt="Duette con PowerView" loading="lazy"/>
         </div>
+        <div class="product-card-name">Duette® + PowerView®</div>
+        <p class="product-card-desc">Maximizá el ahorro energético automáticamente: cerrá al mediodía para bloquear el calor, abrí por la noche para refrescar.</p>
       </a>
     </div>
-  </div>
-</section>
-
-<!-- SCENES SECTION -->
-<section class="scenes">
-  <div class="scenes-inner">
-    <div>
-      <p class="sec-ey">Escenas inteligentes</p>
-      <h2 class="sec">Tu casa que <em>anticipa</em><br>lo que necesitás</h2>
-      <p style="font-size:15px;color:var(--text-mid);line-height:1.75;margin-bottom:8px;margin-top:12px">Las rutinas de PowerView® van más allá de los horarios. Podés crear escenas que combinen posiciones de cortina con intensidad de luz natural para cada momento del día.</p>
-      <div class="scene-list">
-        <div class="sc-item">
-          <div class="sc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></div>
-          <div><div class="sc-name">Buenos días</div><div class="sc-desc">7:00 am — Dormitorio sube a 60%, living abre completamente para el desayuno</div></div>
-        </div>
-        <div class="sc-item">
-          <div class="sc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <div><div class="sc-name">Modo trabajo</div><div class="sc-desc">9:00 am — Oficina en ángulo anti-reflejo, living a 50% para luz natural sin deslumbramiento</div></div>
-        </div>
-        <div class="sc-item">
-          <div class="sc-icon"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
-          <div><div class="sc-name">Cine en casa</div><div class="sc-desc">Un toque — todas las cortinas del living se cierran completamente para oscurecer el ambiente</div></div>
-        </div>
-        <div class="sc-item">
-          <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
-          <div><div class="sc-name">Buenas noches</div><div class="sc-desc">10:00 pm — Toda la casa con privacidad completa, dormitorios en oscurecimiento total</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="phone-right rv">
-      <div class="phone-right-title">Escenas activas hoy</div>
-      <div class="pr-scene">
-        <div class="pr-scene-dot" style="background:#ffc446"></div>
-        <div class="pr-scene-info"><div class="pr-scene-name">Buenos días</div><div class="pr-scene-time">Ejecutada a las 7:02 am</div></div>
-        <span class="pr-scene-status" style="background:rgba(100,200,100,.15);color:#6ec86e">Activa</span>
-      </div>
-      <div class="pr-scene">
-        <div class="pr-scene-dot" style="background:#4a9eff"></div>
-        <div class="pr-scene-info"><div class="pr-scene-name">Modo trabajo</div><div class="pr-scene-time">Ejecutada a las 9:00 am</div></div>
-        <span class="pr-scene-status" style="background:rgba(100,200,100,.15);color:#6ec86e">Activa</span>
-      </div>
-      <div class="pr-scene">
-        <div class="pr-scene-dot" style="background:rgba(255,255,255,.3)"></div>
-        <div class="pr-scene-info"><div class="pr-scene-name">Cine en casa</div><div class="pr-scene-time">En espera · Manual</div></div>
-        <span class="pr-scene-status" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.4)">En espera</span>
-      </div>
-      <div class="pr-scene">
-        <div class="pr-scene-dot" style="background:var(--gold)"></div>
-        <div class="pr-scene-info"><div class="pr-scene-name">Buenas noches</div><div class="pr-scene-time">Programada para 10:00 pm</div></div>
-        <span class="pr-scene-status" style="background:rgba(196,164,107,.15);color:var(--gold)">Programada</span>
-      </div>
-      <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-          <span style="font-size:12px;color:rgba(255,255,255,.4)">Cortinas activas</span>
-          <span style="font-size:13px;color:#fff;font-weight:600">4 / 6</span>
-        </div>
-        <div style="height:4px;background:rgba(255,255,255,.1);border-radius:2px"><div style="height:100%;width:66%;background:var(--gold);border-radius:2px"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INSTALLATION -->
-<section class="install">
-  <div class="install-inner">
-    <h2>De la consulta a las cortinas <em>funcionando</em></h2>
-    <p>Nuestro equipo certificado por Hunter Douglas maneja todo el proceso. Vos solo elegís las telas y los modelos — nosotros nos encargamos del resto.</p>
-    <div class="install-steps">
-      <div class="is-step">
-        <div class="is-num">1</div>
-        <div class="is-label">Consulta y diseño con el equipo — sin costo</div>
-      </div>
-      <div class="is-step">
-        <div class="is-num">2</div>
-        <div class="is-label">Medición a domicilio y presupuesto en 24 hs</div>
-      </div>
-      <div class="is-step">
-        <div class="is-num">3</div>
-        <div class="is-label">Fabricación a medida — 15 a 20 días hábiles</div>
-      </div>
-      <div class="is-step">
-        <div class="is-num">4</div>
-        <div class="is-label">Instalación, configuración y puesta en marcha</div>
-      </div>
-    </div>
-    <a href="https://wa.me/543585075773?text=Quiero%20cotizar%20cortinas%20motorizadas%20PowerView%20para%20mi%20casa" target="_blank" rel="noopener noreferrer" class="btn-p">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Consultar motorización ahora
-    </a>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="faq">
-  <div class="faq-inner">
-    <div class="rv" style="text-align:center;max-width:540px;margin:0 auto">
-      <p class="sec-ey" style="justify-content:center">Preguntas frecuentes</p>
-      <h2 class="sec" style="text-align:center">Todo lo que querés <em>saber</em></h2>
+<section class="section section-gray">
+  <div class="container" style="max-width:780px">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Preguntas frecuentes</span>
+      <h2>Todo lo que querés <em>saber</em></h2>
     </div>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Qué es PowerView® de Hunter Douglas?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">PowerView® es el sistema de motorización inteligente de Hunter Douglas. Permite controlar todas las cortinas desde la app PowerView, con comandos de voz (Alexa, Google Home, Siri) o mediante escenas automáticas programadas por horario, ubicación solar o tu rutina diaria.</div>
+        <button class="faq-q" onclick="faq(this)">¿Qué es PowerView® de Hunter Douglas?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>PowerView® es el sistema de motorización inteligente de Hunter Douglas. Permite controlar todas las cortinas desde la app PowerView, con comandos de voz (Alexa, Google Home, Siri) o mediante escenas automáticas programadas por horario, ubicación solar o tu rutina diaria.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Es compatible con Alexa y Google Home?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">Sí. PowerView® es compatible con Amazon Alexa, Google Home y Apple HomeKit de forma nativa. Podés decir "Alexa, cerrá las cortinas del dormitorio" o programar las cortinas dentro de tus rutinas de domótica existentes sin configuración adicional.</div>
+        <button class="faq-q" onclick="faq(this)">¿Es compatible con Alexa y Google Home?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Sí. PowerView® es compatible con Amazon Alexa, Google Home y Apple HomeKit de forma nativa. Podés decir "Alexa, cerrá las cortinas del dormitorio" o programar las cortinas dentro de tus rutinas de domótica existentes sin configuración adicional.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Qué cortinas Hunter Douglas son compatibles?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">PowerView® es compatible con prácticamente toda la línea Hunter Douglas: Silhouette®, Pirouette®, Duette®, Luminette®, Roller Quantum® y Toldos Gemini®. En Decourban te asesoramos qué combinación tiene más sentido para cada ambiente de tu casa.</div>
+        <button class="faq-q" onclick="faq(this)">¿Qué cortinas Hunter Douglas son compatibles?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>PowerView® es compatible con prácticamente toda la línea Hunter Douglas: Silhouette®, Pirouette®, Duette®, Luminette®, Roller Quantum® y Toldos Gemini®. En Decourban te asesoramos qué combinación tiene más sentido para cada ambiente de tu casa.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Cuánto cuesta agregar la motorización PowerView®?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">La motorización agrega aproximadamente un 25-35% al costo base de la cortina elegida. El precio exacto varía según el modelo y la cantidad de vanos. En el cotizador del sitio podés activar la opción "Motorización PowerView®" para ver el impacto en el rango estimado. El presupuesto definitivo lo hacemos en persona sin costo.</div>
+        <button class="faq-q" onclick="faq(this)">¿Cuánto cuesta agregar la motorización PowerView®?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>La motorización agrega aproximadamente un 25-35% al costo base de la cortina elegida. El precio exacto varía según el modelo y la cantidad de vanos. En el cotizador del sitio podés activar la opción "Motorización PowerView®" para ver el impacto en el rango estimado. El presupuesto definitivo lo hacemos en persona sin costo.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Incluye instalación y configuración?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">Sí, siempre. Nuestro equipo certificado por Hunter Douglas instala los motores, configura el Hub PowerView, vincula el sistema con la app en tu celular y — si lo querés — conecta todo con Alexa o Google Home. La puesta en marcha completa está incluida en el precio de instalación.</div>
+        <button class="faq-q" onclick="faq(this)">¿Incluye instalación y configuración?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Sí, siempre. Nuestro equipo certificado por Hunter Douglas instala los motores, configura el Hub PowerView, vincula el sistema con la app en tu celular y — si lo querés — conecta todo con Alexa o Google Home. La puesta en marcha completa está incluida en el precio de instalación.</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA FINAL -->
-<section class="cta-final">
-  <p class="sec-ey" style="justify-content:center;margin-bottom:12px">¿Empezamos?</p>
-  <h2>Cortinas que se mueven<br><em>con tu estilo de vida</em></h2>
-  <p>Medición gratuita en Río Cuarto y zona. Presupuesto en 24 hs. Instalación y puesta en marcha incluidas.</p>
-  <div class="cta-final-btns">
-    <a href="https://wa.me/543585075773?text=Quiero%20asesorarme%20sobre%20cortinas%20motorizadas%20PowerView%20Hunter%20Douglas" target="_blank" rel="noopener noreferrer" class="btn-pf">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Consultar por WhatsApp
-    </a>
-    
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h3>Cortinas que se mueven con tu estilo de vida</h3>
+        <p>Medición gratuita en Río Cuarto y zona. Presupuesto en 24 hs. Instalación y puesta en marcha incluidas.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0">
+        <a href="https://wa.me/543585075773?text=Quiero%20asesorarme%20sobre%20cortinas%20motorizadas%20PowerView%20Hunter%20Douglas" target="_blank" rel="noopener noreferrer" class="btn-outline-light">Consultar por WhatsApp</a>
+        <a href="cortinas.html" class="btn-outline-light">Ver catálogo</a>
+      </div>
+    </div>
   </div>
 </section>
-
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
@@ -465,25 +404,32 @@
   document.getElementById('menuBtn').addEventListener('click', function() {
     document.getElementById('navMobile').classList.toggle('open');
   });
+
+  // ── Products menu overlay ───────────────────────────
+  var productsOverlay = document.getElementById('productsOverlay');
+  function openProducts() {
+    productsOverlay.classList.add('open');
+    document.getElementById('navMobile').classList.remove('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProducts() {
+    productsOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.products-trigger').forEach(function(btn){
+    btn.addEventListener('click', openProducts);
+  });
+  document.getElementById('poClose').addEventListener('click', closeProducts);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeProducts();
+  });
 })();
 </script>
 
-<a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer" class="wapp" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-
 <script>
-var nav=document.getElementById('siteNav');
-window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
-function faq(btn){
-  var item=btn.parentElement;
-  var was=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
-  if(!was)item.classList.add('open');
+function faq(el){
+  el.parentElement.classList.toggle('open');
 }
-/* Scroll reveal */
-var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.12});
-document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
 </script>
 </body>
 </html>

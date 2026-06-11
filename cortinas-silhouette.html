@@ -68,13 +68,16 @@
 <body>
 
 <!-- NAV -->
-<nav class="site-nav solid" id="siteNav">
+<nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
     </a>
     <div class="nav-links">
-      <a href="cortinas.html">Productos</a>
+      <button class="products-trigger" id="productsBtn" aria-expanded="false" aria-controls="productsOverlay">
+        <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+        Productos
+      </button>
       <a href="proyectos.html">Proyectos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
@@ -88,27 +91,97 @@
 
 <!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
-  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
-  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
-  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
-  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+  <button class="products-trigger" id="productsBtnMobile" aria-expanded="false" aria-controls="productsOverlay">
+    Productos
+    <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+  </button>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+</div>
+
+<!-- PRODUCTS MENU OVERLAY -->
+<div class="products-overlay" id="productsOverlay">
+  <button class="po-close" id="poClose" aria-label="Cerrar menú de productos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="po-inner">
+    <div class="po-group">
+      <div class="po-title">Cortinas Hunter Douglas</div>
+      <div class="po-grid">
+        <a href="cortinas-silhouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette" loading="lazy"/></div>
+          <div class="po-item-name">Silhouette®</div>
+        </a>
+        <a href="cortinas-duette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette" loading="lazy"/></div>
+          <div class="po-item-name">Duette®</div>
+        </a>
+        <a href="cortinas-pirouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette" loading="lazy"/></div>
+          <div class="po-item-name">Pirouette®</div>
+        </a>
+        <a href="cortinas-roller.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Roller Quantum" loading="lazy"/></div>
+          <div class="po-item-name">Roller Quantum®</div>
+        </a>
+        <a href="cortinas-luminette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Luminette" loading="lazy"/></div>
+          <div class="po-item-name">Luminette®</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Exterior</div>
+      <div class="po-grid">
+        <a href="toldo-gemini.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldo Gemini" loading="lazy"/></div>
+          <div class="po-item-name">Toldo Gemini®</div>
+        </a>
+        <a href="muebles-exterior.html" class="po-item">
+          <div class="po-item-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Muebles de exterior" loading="lazy"/></div>
+          <div class="po-item-name">Muebles de Exterior</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Domótica</div>
+      <div class="po-grid">
+        <a href="powerview.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="Sistema PowerView" loading="lazy"/></div>
+          <div class="po-item-name">PowerView®</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Accesorios &amp; Decoración</div>
+      <div class="po-grid">
+        <a href="coleccion.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Accesorios y decoración" loading="lazy"/></div>
+          <div class="po-item-name">Ver colección</div>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-48">
+      <a href="cortinas.html" class="text-link">Ver catálogo completo</a>
+    </div>
+  </div>
 </div>
 
 <!-- HERO -->
-<section class="sil-hero" id="inicio">
-  <div class="sil-hero-bg" id="heroBg"></div>
-  <div class="sil-hero-grad"></div>
-  <div class="sil-hero-content">
-    <p class="sil-eyebrow">Distribuidor Oficial Hunter Douglas · Río Cuarto</p>
+<section class="prod-hero" style="background-image:url('https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp')">
+  <div class="hero-overlay"></div>
+  <div class="prod-hero-content">
+    <div class="prod-eyebrow">Distribuidor Oficial Hunter Douglas · Río Cuarto</div>
     <h1>Cortinas Silhouette®<br><em>la luz perfecta,</em><br>a medida</h1>
-    <p class="sil-hero-sub">Las Silhouette son el modelo más elegido de Hunter Douglas. Láminas suaves que filtran el 99% de los rayos UV mientras mantienen la vista y crean una luz difusa inigualable. Fabricadas exactamente para tus ventanas, con instalación incluida.</p>
-    <div class="hero-ctas">
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20Cortinas%20Silhouette%20Hunter%20Douglas" class="btn-p" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+    <p class="prod-hero-sub">Las Silhouette son el modelo más elegido de Hunter Douglas. Láminas suaves que filtran el 99% de los rayos UV mientras mantienen la vista y crean una luz difusa inigualable. Fabricadas exactamente para tus ventanas, con instalación incluida.</p>
+    <div class="prod-hero-ctas">
+      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20cotizar%20Cortinas%20Silhouette%20Hunter%20Douglas" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="vertical-align:-2px;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
         Cotizar — medición gratis
       </a>
-      <a href="cortinas.html" class="btn-s">Ver todos los modelos</a>
+      <a href="cortinas.html" class="btn-outline-light">Ver todos los modelos</a>
     </div>
   </div>
 </section>
@@ -123,12 +196,12 @@
   </div>
 </div>
 
-<!-- FEATURES -->
-<section class="sil-features">
-  <div class="wrap">
-    <div class="sec-hd">
-      <p class="ey">Por qué elegir Silhouette®</p>
-      <h2 class="sec">La cortina que <em>redefine</em><br>el control de luz</h2>
+<!-- BENEFICIOS -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Por qué elegir Silhouette®</span>
+      <h2>La cortina que <em>redefine</em> el control de luz</h2>
     </div>
     <div class="feat-grid">
       <div class="feat">
@@ -177,30 +250,25 @@
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="sil-gallery" aria-label="Galería Cortinas Silhouette">
-  <div class="gallery-grid">
-    <div class="gal-item">
+<!-- GALERÍA -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">Galería</span>
+    <div class="gal-grid">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette Hunter Douglas en living — luz difusa suave" loading="lazy"/>
-    </div>
-    <div class="gal-item">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-480-0.webp" alt="Cortinas Hunter Douglas en dormitorio — privacidad y luz" loading="lazy"/>
-    </div>
-    <div class="gal-item">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-480-0.webp" alt="Tratamientos de ventana Hunter Douglas en ambiente moderno" loading="lazy"/>
-    </div>
-    <div class="gal-item">
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213424_b8c1dd71-3eaf-4c42-906b-970447e59134_min.webp" alt="Living elegante con cortinas y decoración Decourban Estudio" loading="lazy"/>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- CÓMO FUNCIONA -->
 <section class="sil-how">
   <div class="how-grid">
     <div>
-      <p class="ey">Cómo funciona</p>
-      <h2 class="sec">El proceso de<br><em>compra sin sorpresas</em></h2>
+      <span class="section-label">Cómo funciona</span>
+      <h2>El proceso de<br><em>compra sin sorpresas</em></h2>
       <p style="font-size:14.5px;color:var(--text-mid);line-height:1.78;margin-top:14px;margin-bottom:0">Desde que nos contactás hasta que las cortinas están instaladas, acompañamos cada paso. Sin cargos ocultos ni demoras.</p>
       <div class="steps">
         <div class="step">
@@ -228,88 +296,84 @@
 </section>
 
 <!-- FAQ -->
-<section class="sil-faq">
-  <div style="max-width:820px;margin:0 auto">
-    <div style="text-align:center;margin-bottom:44px">
-      <p class="ey" style="justify-content:center">Preguntas frecuentes</p>
-      <h2 class="sec">Todo sobre las<br><em>Cortinas Silhouette®</em></h2>
+<section class="section section-gray">
+  <div class="container" style="max-width:780px">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Preguntas frecuentes</span>
+      <h2>Todo sobre las <em>Cortinas Silhouette®</em></h2>
     </div>
     <div class="faq-list">
       <div class="faq-item">
-        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>¿Qué son las cortinas Silhouette Hunter Douglas?</span>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </div>
+        <button class="faq-q" onclick="faq(this)">¿Qué son las cortinas Silhouette Hunter Douglas?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
         <div class="faq-a"><p>Las Silhouette son tratamientos de ventana con láminas suaves suspendidas entre dos telas traslúcidas. Podés girarlas para ir de transparencia total a privacidad completa, siempre con una luz difusa característica que transforma cualquier ambiente.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>¿Cuánto cuestan en Río Cuarto?</span>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </div>
+        <button class="faq-q" onclick="faq(this)">¿Cuánto cuestan en Río Cuarto?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
         <div class="faq-a"><p>El precio depende de las medidas exactas de cada ventana. La cotización es completamente gratuita y sin compromiso — podés escribirnos por WhatsApp o visitarnos en Juan de Garay 1550, Río Cuarto. Tenemos financiación hasta 12 cuotas sin interés.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>¿Se pueden motorizar?</span>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </div>
+        <button class="faq-q" onclick="faq(this)">¿Se pueden motorizar?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
         <div class="faq-a"><p>Sí. Las Silhouette son 100% compatibles con el sistema PowerView® de Hunter Douglas. Esto permite controlarlas desde tu celular, programar horarios automáticos o usarlas con asistentes de voz como Alexa, Google Home o Apple HomeKit.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>¿Cuántos colores tienen disponibles?</span>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </div>
+        <button class="faq-q" onclick="faq(this)">¿Cuántos colores tienen disponibles?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
         <div class="faq-a"><p>Las Silhouette están disponibles en 17 tonos: blancos puros, blancos rotos, neutros cálidos (arena, lino, crema) y neutros fríos. En nuestro showroom tenemos las muestras reales para que puedas comparar antes de decidir.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>¿Qué diferencia hay entre Silhouette y Duette?</span>
-          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </div>
+        <button class="faq-q" onclick="faq(this)">¿Qué diferencia hay entre Silhouette y Duette?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
         <div class="faq-a"><p>Las Silhouette priorizan el diseño y el control de luz: sus láminas giratorias dan luz suave y mantienen la vista. Las Duette priorizan la eficiencia energética: sus celdas de aire aíslan del calor y el frío. Silhouette es ideal para livings y comedores; Duette para dormitorios en climas extremos.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="sil-cta">
-  <div class="sil-cta-inner">
-    <p class="sil-eyebrow" style="justify-content:center;color:rgba(196,164,107,.7)">Medición gratis · Sin compromiso</p>
-    <h2>¿Querés ver las<br><em>Silhouette en tu ventana?</em></h2>
-    <p>Llevamos muestras reales a tu hogar sin costo. Nuestro equipo te asesora, mide cada ventana y te da el presupuesto en el momento.</p>
-    <div class="cta-btns">
-      <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20ver%20muestras%20de%20Cortinas%20Silhouette%20en%20mi%20hogar" class="btn-p" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
-        Pedir muestras gratis
+<!-- RELACIONADOS -->
+<section class="section">
+  <div class="container">
+    <p class="text-center mb-40"><a href="comparador.html" class="text-link">Comparar todos los modelos Hunter Douglas lado a lado →</a></p>
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">También podría interesarte</span>
+      <h2>Otros modelos <em>Hunter Douglas</em></h2>
+    </div>
+    <div class="products-grid">
+      <a href="cortinas-duette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette Hunter Douglas — eficiencia térmica" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Duette®</div>
+        <p class="product-card-desc">Máxima eficiencia térmica y acústica. Ideales para dormitorios y climas extremos.</p>
       </a>
-      <a href="contacto.html" class="btn-s">Ir al showroom</a>
+      <a href="cortinas-pirouette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette Hunter Douglas — diseño moderno" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Pirouette®</div>
+        <p class="product-card-desc">Diseño contemporáneo con privacidad total y láminas que colapsan sin verse.</p>
+      </a>
+      <a href="toldo-gemini.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-480-0.webp" alt="Toldo Gemini Hunter Douglas — exterior motorizado" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Toldo Gemini®</div>
+        <p class="product-card-desc">Toldo retráctil motorizado para terraza y jardín. Compatible PowerView®.</p>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- RELATED -->
-<section class="sil-related">
-  <p style="font-size:12px;color:var(--text-mid);text-align:center;margin-bottom:24px;padding:14px 24px;background:var(--bg-alt,#f5f5f0);border:1px solid var(--border)">¿No sabés cuál elegir? → <a href="comparador.html" style="font-weight:600;color:var(--gold);text-decoration:none">Comparar todos los modelos Hunter Douglas lado a lado →</a></p>
-  <div style="text-align:center;margin-bottom:44px;max-width:1100px;margin-left:auto;margin-right:auto">
-    <p class="ey" style="justify-content:center">También podría interesarte</p>
-    <h2 class="sec" style="text-align:center">Otros modelos <em>Hunter Douglas</em></h2>
-  </div>
-  <div class="related-grid">
-    <a href="cortinas.html#duette" class="rel-card">
-      <div class="rel-card-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette Hunter Douglas — eficiencia térmica" loading="lazy"/></div>
-      <div class="rel-card-body"><div class="rel-cat">Hunter Douglas</div><div class="rel-name">Cortinas Duette®</div><div class="rel-desc">Máxima eficiencia térmica y acústica. Ideales para dormitorios y climas extremos.</div></div>
-    </a>
-    <a href="cortinas.html#pirouette" class="rel-card">
-      <div class="rel-card-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette Hunter Douglas — diseño moderno" loading="lazy"/></div>
-      <div class="rel-card-body"><div class="rel-cat">Hunter Douglas</div><div class="rel-name">Cortinas Pirouette®</div><div class="rel-desc">Diseño contemporáneo con privacidad total y láminas que colapsan sin verse.</div></div>
-    </a>
-    <a href="cortinas.html#gemini" class="rel-card">
-      <div class="rel-card-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-480-0.webp" alt="Toldo Gemini Hunter Douglas — exterior motorizado" loading="lazy"/></div>
-      <div class="rel-card-body"><div class="rel-cat">Exterior</div><div class="rel-name">Toldo Gemini®</div><div class="rel-desc">Toldo retráctil motorizado para terraza y jardín. Compatible PowerView®.</div></div>
-    </a>
+<!-- CTA FINAL -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h3>¿Querés ver las Silhouette en tu ventana?</h3>
+        <p>Llevamos muestras reales a tu hogar sin costo. Nuestro equipo te asesora, mide cada ventana y te da el presupuesto en el momento.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0">
+        <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20ver%20muestras%20de%20Cortinas%20Silhouette%20en%20mi%20hogar" target="_blank" rel="noopener noreferrer" class="btn-outline-light">Pedir muestras gratis</a>
+        <a href="contacto.html" class="btn-outline-light">Ir al showroom</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -372,7 +436,30 @@
   document.getElementById('menuBtn').addEventListener('click', function() {
     document.getElementById('navMobile').classList.toggle('open');
   });
+
+  // ── Products menu overlay ───────────────────────────
+  var productsOverlay = document.getElementById('productsOverlay');
+  function openProducts() {
+    productsOverlay.classList.add('open');
+    document.getElementById('navMobile').classList.remove('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProducts() {
+    productsOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.products-trigger').forEach(function(btn){
+    btn.addEventListener('click', openProducts);
+  });
+  document.getElementById('poClose').addEventListener('click', closeProducts);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeProducts();
+  });
 })();
+</script>
+
+<script>
+function faq(el){ el.parentElement.classList.toggle('open'); }
 </script>
 </body>
 </html>

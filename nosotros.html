@@ -79,7 +79,10 @@
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
     </a>
     <div class="nav-links">
-      <a href="cortinas.html">Productos</a>
+      <button class="products-trigger" id="productsBtn" aria-expanded="false" aria-controls="productsOverlay">
+        <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+        Productos
+      </button>
       <a href="proyectos.html">Proyectos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
@@ -93,23 +96,94 @@
 
 <!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
-  <a href="cortinas.html">Productos</a>
+  <button class="products-trigger" id="productsBtnMobile" aria-expanded="false" aria-controls="productsOverlay">
+    Productos
+    <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+  </button>
   <a href="proyectos.html">Proyectos</a>
   <a href="nosotros.html">Nosotros</a>
   <a href="contacto.html">Contacto</a>
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:#111;color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;">Consultar</a>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grad"></div>
-  <div class="hero-content">
-    <p class="eyebrow">Decourban Estudio · Río Cuarto, Córdoba</p>
-    <h1>22 años vistiendo<br>hogares en <em>Río Cuarto</em></h1>
-    <p class="hero-sub">Especialistas en cortinas y asesoramiento de interiores, con 22 años de experiencia en decoración de interiores.</p>
+<!-- PRODUCTS MENU OVERLAY -->
+<div class="products-overlay" id="productsOverlay">
+  <button class="po-close" id="poClose" aria-label="Cerrar menú de productos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="po-inner">
+    <div class="po-group">
+      <div class="po-title">Cortinas Hunter Douglas</div>
+      <div class="po-grid">
+        <a href="cortinas-silhouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette" loading="lazy"/></div>
+          <div class="po-item-name">Silhouette®</div>
+        </a>
+        <a href="cortinas-duette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette" loading="lazy"/></div>
+          <div class="po-item-name">Duette®</div>
+        </a>
+        <a href="cortinas-pirouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette" loading="lazy"/></div>
+          <div class="po-item-name">Pirouette®</div>
+        </a>
+        <a href="cortinas-roller.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Roller Quantum" loading="lazy"/></div>
+          <div class="po-item-name">Roller Quantum®</div>
+        </a>
+        <a href="cortinas-luminette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Luminette" loading="lazy"/></div>
+          <div class="po-item-name">Luminette®</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Exterior</div>
+      <div class="po-grid">
+        <a href="toldo-gemini.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldo Gemini" loading="lazy"/></div>
+          <div class="po-item-name">Toldo Gemini®</div>
+        </a>
+        <a href="muebles-exterior.html" class="po-item">
+          <div class="po-item-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Muebles de exterior" loading="lazy"/></div>
+          <div class="po-item-name">Muebles de Exterior</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Domótica</div>
+      <div class="po-grid">
+        <a href="powerview.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="Sistema PowerView" loading="lazy"/></div>
+          <div class="po-item-name">PowerView®</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Accesorios &amp; Decoración</div>
+      <div class="po-grid">
+        <a href="coleccion.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Accesorios y decoración" loading="lazy"/></div>
+          <div class="po-item-name">Ver colección</div>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-48">
+      <a href="cortinas.html" class="text-link">Ver catálogo completo</a>
+    </div>
   </div>
-</section>
+</div>
+
+<!-- HERO MINI -->
+<div class="hero-mini">
+  <div class="hero-mini-in">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a><span>›</span><span style="color:rgba(255,255,255,.6)">Nosotros</span>
+    </div>
+    <h1>22 años vistiendo<br>hogares en <em>Río Cuarto</em></h1>
+    <p>Especialistas en cortinas y asesoramiento de interiores, con 22 años de experiencia en decoración de interiores.</p>
+  </div>
+</div>
 
 <!-- INTRO -->
 <section class="intro">
@@ -246,7 +320,7 @@
       <div class="team-card rv" style="max-width:100%">
         <div class="team-img" style="width:200px;height:200px;background:var(--bg-dark);display:flex;align-items:center;justify-content:center;overflow:hidden">
           <!-- Reemplazar con la foto real: <img src="marcela.jpg" ...> -->
-          <span style="font-family:inherit;font-size:54px;font-weight:600;color:var(--gold);letter-spacing:2px;user-select:none">MK</span>
+          <span style="font-family:inherit;font-size:54px;font-weight:600;color:#fff;letter-spacing:2px;user-select:none">MK</span>
         </div>
         <h3 class="team-name" style="font-size:22px">La fundadora</h3>
         <div class="team-role">Decoradora de Interiores & Fundadora</div>
@@ -275,8 +349,8 @@
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
       <!-- Card 1: Fundadora -->
       <div class="rv" style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:36px 28px;text-align:center;transition:all var(--ease)">
-        <div style="width:100px;height:100px;border-radius:50%;background:var(--bg-dark);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
-          <span style="font-family:inherit;font-size:30px;font-weight:600;color:var(--gold)">MK</span>
+        <div style="width:100px;height:100px;border-radius:50%;background:var(--bg-dark);border:3px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+          <span style="font-family:inherit;font-size:30px;font-weight:600;color:#fff">MK</span>
         </div>
         <div style="font-family:inherit;font-size:20px;font-weight:500;margin-bottom:4px">La fundadora</div>
         <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px">Fundadora &amp; Diseñadora</div>
@@ -288,8 +362,8 @@
       </div>
       <!-- Card 2: Instalación -->
       <div class="rv" style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:36px 28px;text-align:center;transition:all var(--ease)">
-        <div style="width:100px;height:100px;border-radius:50%;background:var(--bg-dark);border:3px solid rgba(196,164,107,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" width="38" height="38"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        <div style="width:100px;height:100px;border-radius:50%;background:var(--bg-dark);border:3px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" width="38" height="38"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
         </div>
         <div style="font-family:inherit;font-size:20px;font-weight:500;margin-bottom:4px">Equipo de Instalación</div>
         <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px">Técnicos Certificados</div>
@@ -301,8 +375,8 @@
       </div>
       <!-- Card 3: Taller -->
       <div class="rv" style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:36px 28px;text-align:center;transition:all var(--ease)">
-        <div style="width:100px;height:100px;border-radius:50%;background:var(--bg-dark);border:3px solid rgba(196,164,107,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" width="38" height="38"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <div style="width:100px;height:100px;border-radius:50%;background:var(--bg-dark);border:3px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" width="38" height="38"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
         </div>
         <div style="font-family:inherit;font-size:20px;font-weight:500;margin-bottom:4px">Taller de Confección</div>
         <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px">Corte y terminaciones</div>
@@ -325,30 +399,30 @@
       </div>
     </div>
     <div class="rvr">
-      <p class="section-eyebrow" style="color:rgba(196,164,107,.7)">Partners desde 2013</p>
+      <p style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:600;margin-bottom:12px">Partners desde 2013</p>
       <div class="hd-year">13+</div>
       <div class="hd-year-label">años de alianza oficial</div>
-      <h2 style="font-family:inherit;font-size:clamp(26px,3vw,36px);font-weight:500;color:#fff;line-height:1.2;margin-bottom:18px">El respaldo de la marca líder <em style="font-style:italic;color:var(--gold)">mundial</em></h2>
+      <h2 style="font-family:inherit;font-size:clamp(26px,3vw,36px);font-weight:500;color:#fff;line-height:1.2;margin-bottom:18px">El respaldo de la marca líder <em style="font-style:italic">mundial</em></h2>
       <p style="font-size:14px;color:rgba(255,255,255,.52);line-height:1.8;margin-bottom:24px">Hunter Douglas es la empresa líder mundial en productos para ventanas. Con más de 75 años de historia y presencia en más de 100 países, su tecnología es el estándar de excelencia en la industria.</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px">
-        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(196,164,107,.2);border-radius:4px;padding:14px 16px">
-          <div style="font-size:11px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Línea completa</div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:14px 16px">
+          <div style="font-size:11px;color:rgba(255,255,255,.5);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Línea completa</div>
           <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.6">Silhouette®, Duette®, Pirouette®, Luminette®, Roller Quantum®, Twinline, Horizontales y más</div>
         </div>
-        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(196,164,107,.2);border-radius:4px;padding:14px 16px">
-          <div style="font-size:11px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Capacitación directa</div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:14px 16px">
+          <div style="font-size:11px;color:rgba(255,255,255,.5);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Capacitación directa</div>
           <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.6">El equipo recibe capacitaciones y actualizaciones directas de Hunter Douglas Argentina</div>
         </div>
-        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(196,164,107,.2);border-radius:4px;padding:14px 16px">
-          <div style="font-size:11px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Garantía internacional</div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:14px 16px">
+          <div style="font-size:11px;color:rgba(255,255,255,.5);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Garantía internacional</div>
           <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.6">Todos los productos con respaldo directo de Hunter Douglas Argentina</div>
         </div>
-        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(196,164,107,.2);border-radius:4px;padding:14px 16px">
-          <div style="font-size:11px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">PowerView® Motorización</div>
+        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:14px 16px">
+          <div style="font-size:11px;color:rgba(255,255,255,.5);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">PowerView® Motorización</div>
           <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.6">Instalamos y programamos el sistema de motorización inteligente de Hunter Douglas</div>
         </div>
       </div>
-      <a href="cortinas.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--bg-dark);padding:14px 28px;border-radius:var(--r);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:all var(--ease)">
+      <a href="cortinas.html" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#111;padding:14px 28px;border-radius:var(--r);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:all var(--ease)">
         Ver colección Hunter Douglas Cortinas
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -367,12 +441,12 @@
       <div class="tc rv">
         <div class="tc-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
         <blockquote>"El equipo tiene un ojo increíble. En una sola visita al showroom de Juan de Garay ya sabía qué cortinas iban a transformar nuestro living. Las Silhouette® quedaron perfectas. Realmente superó todo lo que esperábamos."</blockquote>
-        <div class="tc-author"><div class="tc-av" style="background:#c4a46b">V</div><div><div class="tc-name">Valeria M.</div><div class="tc-info">Río Cuarto · Proyecto integral 2024</div></div></div>
+        <div class="tc-author"><div class="tc-av" style="background:#111">V</div><div><div class="tc-name">Valeria M.</div><div class="tc-info">Río Cuarto · Proyecto integral 2024</div></div></div>
       </div>
       <div class="tc rv">
         <div class="tc-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
         <blockquote>"Consulté desde Buenos Aires por videollamada y El equipo me asesoró como si estuviera en persona. Elegí las cortinas Duette® para mi living y llegaron perfectamente en 8 días hábiles. La instalación fue impecable."</blockquote>
-        <div class="tc-author"><div class="tc-av" style="background:#3d2b1f">M</div><div><div class="tc-name">Martín G.</div><div class="tc-info">Buenos Aires · Proyecto comercial 2024</div></div></div>
+        <div class="tc-author"><div class="tc-av" style="background:#555">M</div><div><div class="tc-name">Martín G.</div><div class="tc-info">Buenos Aires · Proyecto comercial 2024</div></div></div>
       </div>
     </div>
   </div>
@@ -450,6 +524,25 @@
 (function(){
   document.getElementById('menuBtn').addEventListener('click', function() {
     document.getElementById('navMobile').classList.toggle('open');
+  });
+
+  // ── Products menu overlay ───────────────────────────
+  var productsOverlay = document.getElementById('productsOverlay');
+  function openProducts() {
+    productsOverlay.classList.add('open');
+    document.getElementById('navMobile').classList.remove('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProducts() {
+    productsOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.products-trigger').forEach(function(btn){
+    btn.addEventListener('click', openProducts);
+  });
+  document.getElementById('poClose').addEventListener('click', closeProducts);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeProducts();
   });
 })();
 </script>

@@ -85,18 +85,21 @@
 }
 </script>
 
+<link rel="preload" as="image" href="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" fetchpriority="high"/>
 <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
 <!-- NAV -->
-<nav class="site-nav solid" id="siteNav">
+<nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
     </a>
     <div class="nav-links">
-      <a href="cortinas.html">Productos</a>
+      <button class="products-trigger" id="productsBtn" aria-expanded="false" aria-controls="productsOverlay">
+        <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+        Productos
+      </button>
       <a href="proyectos.html">Proyectos</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
@@ -111,355 +114,283 @@
 <!-- MOBILE MENU -->
 
 <div class="nav-mobile" id="navMobile">
-  <a href="cortinas.html" onclick="closeMenu()">Productos</a>
-  <a href="proyectos.html" onclick="closeMenu()">Proyectos</a>
-  <a href="nosotros.html" onclick="closeMenu()">Nosotros</a>
-  <a href="contacto.html" onclick="closeMenu()">Contacto</a>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener" onclick="closeMenu()">Consultar por WhatsApp</a>
+  <button class="products-trigger" id="productsBtnMobile" aria-expanded="false" aria-controls="productsOverlay">
+    Productos
+    <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
+  </button>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
 </div>
-<!-- MOBILE NAV -->
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <p class="hero-ey">Hunter Douglas · Cortinas de tela</p>
-      <h1>Roller Quantum®<br>la cortina que <em>nunca falla</em></h1>
-      <p class="hero-desc">Blackout total, screen solar o traslúcido suave. El Roller Quantum® de Hunter Douglas es la cortina de tela más vendida del mundo — fabricada a medida, instalada por nuestro equipo en Río Cuarto.</p>
-      <div class="hero-btns">
-        
-        <a href="#tipos" class="btn-s">Ver tipos de tela</a>
-      </div>
-      <div class="hero-stats">
-        <div class="h-stat"><div class="h-stat-n">100+</div><div class="h-stat-l">Colores y texturas</div></div>
-        <div class="h-stat-sep"></div>
-        <div class="h-stat"><div class="h-stat-n">A medida</div><div class="h-stat-l">Cada pieza fabricada para tu ventana</div></div>
-        <div class="h-stat-sep"></div>
-        <div class="h-stat"><div class="h-stat-n">★ 4.8</div><div class="h-stat-l">Satisfacción de clientes</div></div>
+<!-- PRODUCTS MENU OVERLAY -->
+<div class="products-overlay" id="productsOverlay">
+  <button class="po-close" id="poClose" aria-label="Cerrar menú de productos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="po-inner">
+    <div class="po-group">
+      <div class="po-title">Cortinas Hunter Douglas</div>
+      <div class="po-grid">
+        <a href="cortinas-silhouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette" loading="lazy"/></div>
+          <div class="po-item-name">Silhouette®</div>
+        </a>
+        <a href="cortinas-duette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette" loading="lazy"/></div>
+          <div class="po-item-name">Duette®</div>
+        </a>
+        <a href="cortinas-pirouette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette" loading="lazy"/></div>
+          <div class="po-item-name">Pirouette®</div>
+        </a>
+        <a href="cortinas-roller.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Roller Quantum" loading="lazy"/></div>
+          <div class="po-item-name">Roller Quantum®</div>
+        </a>
+        <a href="cortinas-luminette.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Luminette" loading="lazy"/></div>
+          <div class="po-item-name">Luminette®</div>
+        </a>
       </div>
     </div>
-    <div>
-      <div class="hero-img-wrap">
-        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Roller Quantum Hunter Douglas instaladas en ventana moderna" loading="eager"/>
-        <div class="hero-img-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <span>Certificado <strong>Hunter Douglas</strong> Argentina</span>
-        </div>
+    <div class="po-group">
+      <div class="po-title">Exterior</div>
+      <div class="po-grid">
+        <a href="toldo-gemini.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldo Gemini" loading="lazy"/></div>
+          <div class="po-item-name">Toldo Gemini®</div>
+        </a>
+        <a href="muebles-exterior.html" class="po-item">
+          <div class="po-item-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Muebles de exterior" loading="lazy"/></div>
+          <div class="po-item-name">Muebles de Exterior</div>
+        </a>
       </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Domótica</div>
+      <div class="po-grid">
+        <a href="powerview.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="Sistema PowerView" loading="lazy"/></div>
+          <div class="po-item-name">PowerView®</div>
+        </a>
+      </div>
+    </div>
+    <div class="po-group">
+      <div class="po-title">Accesorios &amp; Decoración</div>
+      <div class="po-grid">
+        <a href="coleccion.html" class="po-item">
+          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Accesorios y decoración" loading="lazy"/></div>
+          <div class="po-item-name">Ver colección</div>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-48">
+      <a href="cortinas.html" class="text-link">Ver catálogo completo</a>
+    </div>
+  </div>
+</div>
+<!-- HERO -->
+<section class="prod-hero" style="background-image:url('https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp')">
+  <div class="hero-overlay"></div>
+  <div class="prod-hero-content">
+    <div class="prod-eyebrow">Hunter Douglas · Cortinas de Tela</div>
+    <h1>Roller Quantum®<br>la cortina que <em>nunca falla</em></h1>
+    <p class="prod-hero-sub">Blackout total, screen solar o traslúcido suave. El Roller Quantum® de Hunter Douglas es la cortina de tela más vendida del mundo — fabricada a medida, instalada por nuestro equipo en Río Cuarto.</p>
+    <div class="prod-hero-ctas">
+      <a href="https://wa.me/543585075773?text=Quiero%20cotizar%20cortinas%20Roller%20Quantum%20Hunter%20Douglas%20para%20mi%20casa" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="vertical-align:-2px;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.554a.5.5 0 00.612.612l5.702-1.475A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/></svg>
+        Consultar por WhatsApp
+      </a>
+      <a href="#tipos" class="btn-outline-light">Ver tipos de tela</a>
     </div>
   </div>
 </section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-in">
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg><span>+100 <strong>colores y texturas</strong></span></div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg><span>Fabricación <strong>100% a medida</strong></span></div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><span><strong>★ 4.8</strong> satisfacción de clientes</span></div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span>Instalación <strong>incluida en Río Cuarto</strong></span></div>
+  </div>
+</div>
 
 <!-- TIPOS DE TELA -->
-<section class="fab" id="tipos">
-  <div class="fab-inner">
-    <div class="rv">
-      <p class="sec-ey">Tipos de tela</p>
-      <h2 class="sec">Elegís la <em>transparencia</em> exacta que necesitás</h2>
-      <p class="sec-sub">Tres familias de telas técnicas con distinto nivel de privacidad y control de luz. Podés combinar distintos tipos en diferentes ambientes de tu casa.</p>
+<section class="section section-gray" id="tipos">
+  <div class="container">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Tipos de tela</span>
+      <h2>Elegís la <em>transparencia</em> exacta que necesitás</h2>
+      <p style="margin:0 auto">Tres familias de telas técnicas con distinto nivel de privacidad y control de luz. Podés combinar distintos tipos en diferentes ambientes de tu casa.</p>
     </div>
-    <div class="fab-tabs">
-      <button class="fab-tab active" onclick="showFab('blackout',this)">Blackout</button>
-      <button class="fab-tab" onclick="showFab('screen',this)">Screen Solar</button>
-      <button class="fab-tab" onclick="showFab('traslucido',this)">Traslúcido</button>
-    </div>
-    <div class="fab-panels rv">
-      <!-- Blackout -->
-      <div class="fab-panel show" id="fab-blackout">
-        <div class="fab-panel-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/paneloriental-hd_843x338_2-63de1bdb72eeec4a7f17462911968840-640-0.webp" alt="Roller blackout oscurecimiento total" loading="lazy"/></div>
-        <div>
-          <div class="fab-panel-name">Blackout — Oscurecimiento total</div>
-          <p class="fab-panel-desc">Bloquea el 100% de la luz solar cuando está bajada. La tela blackout de Hunter Douglas tiene un tratamiento de recubrimiento de alta densidad que no solo oscurece el ambiente sino que también reduce el ruido exterior y mejora el aislamiento térmico del ambiente.</p>
-          <div class="fab-pills">
-            <span class="fab-pill em">100% oscurecimiento</span>
-            <span class="fab-pill">Aislación térmica</span>
-            <span class="fab-pill">Reducción de ruido</span>
-            <span class="fab-pill">+40 colores disponibles</span>
-          </div>
-          <div class="fab-ideal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="1.8" width="18" height="18"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <div class="fab-ideal-t"><strong>Ideal para:</strong> dormitorios, salas de cine en casa, habitaciones de bebés, cuartos donde se trabaja de noche o se duerme de día</div>
-          </div>
-        </div>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="feat-n">0%</div>
+        <h3>Blackout — oscurecimiento total</h3>
+        <p>Bloquea el 100% de la luz solar. Reduce el ruido exterior y mejora el aislamiento térmico. Ideal para dormitorios, salas de cine en casa y habitaciones de bebés.</p>
       </div>
-      <!-- Screen -->
-      <div class="fab-panel" id="fab-screen">
-        <div class="fab-panel-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/foldingjpg-optimized-b09406c29d63067e7117462924956836-640-0.webp" alt="Roller screen solar con vista al exterior" loading="lazy"/></div>
-        <div>
-          <div class="fab-panel-name">Screen Solar — Vista exterior de día</div>
-          <p class="fab-panel-desc">La tela screen tiene una trama abierta del 3-5% que deja pasar aire y una luz filtrada mientras te permite ver el exterior durante el día sin que desde fuera vean hacia adentro. Reduce el deslumbramiento en un 80% y el calor solar en más de 70%.</p>
-          <div class="fab-pills">
-            <span class="fab-pill em">Vista al exterior</span>
-            <span class="fab-pill">-70% calor solar</span>
-            <span class="fab-pill">Anti-deslumbramiento</span>
-            <span class="fab-pill">Privacidad diurna</span>
-          </div>
-          <div class="fab-ideal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="1.8" width="18" height="18"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
-            <div class="fab-ideal-t"><strong>Ideal para:</strong> living, comedor, oficinas con vista, ambientes con entrada de sol intensa donde querés mantener la vista pero controlar el calor</div>
-          </div>
-        </div>
+      <div class="feat">
+        <div class="feat-n">5%</div>
+        <h3>Screen Solar — vista de día</h3>
+        <p>Trama abierta del 3-5% que deja ver el exterior de día sin que te vean desde afuera. Reduce el deslumbramiento un 80% y el calor solar más de un 70%. Ideal para living y oficinas.</p>
       </div>
-      <!-- Traslúcido -->
-      <div class="fab-panel" id="fab-traslucido">
-        <div class="fab-panel-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Roller traslúcido luz suave difusa" loading="lazy"/></div>
-        <div>
-          <div class="fab-panel-name">Traslúcido — Luz suave y difusa</div>
-          <p class="fab-panel-desc">Filtra la luz solar convirtiéndola en una luz suave y homogénea que ilumina sin encandilamiento. Da privacidad desde el exterior durante el día manteniendo una atmósfera luminosa y agradable. Es el tipo de tela más elegante y versátil del catálogo Roller.</p>
-          <div class="fab-pills">
-            <span class="fab-pill em">Luz difusa natural</span>
-            <span class="fab-pill">Privacidad diurna</span>
-            <span class="fab-pill">Ambiente luminoso</span>
-            <span class="fab-pill">+60 colores</span>
-          </div>
-          <div class="fab-ideal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="1.8" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            <div class="fab-ideal-t"><strong>Ideal para:</strong> living, comedor, estudio, cocinas — cualquier ambiente donde querés luz natural pero sin ver directamente al exterior</div>
-          </div>
-        </div>
+      <div class="feat">
+        <div class="feat-n">Soft</div>
+        <h3>Traslúcido — luz suave y difusa</h3>
+        <p>Filtra la luz solar convirtiéndola en una luz suave y homogénea, con privacidad diurna. El tipo de tela más elegante y versátil del catálogo. Ideal para living, comedor y cocina.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VENTAJAS ROLLER QUANTUM -->
-<section class="vent">
-  <div class="vent-inner">
-    <div class="rv">
-      <p class="sec-ey">Por qué Roller Quantum®</p>
-      <h2 class="sec">No es un roller cualquiera — <em>es Hunter Douglas</em></h2>
-      <p class="sec-sub">La tecnología Quantum patentada diferencia este producto de cualquier roller importado o genérico del mercado argentino.</p>
+<!-- POR QUÉ QUANTUM -->
+<section class="section">
+  <div class="container prod-split">
+    <div class="prod-img-main">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Roller Quantum Hunter Douglas instaladas en ventana moderna" loading="lazy"/>
     </div>
-    <div class="vent-grid">
-      <div class="vent-card rv">
-        <div class="vent-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <div class="vent-title">Sistema Quantum — enrollado perfecto</div>
-        <p class="vent-desc">El mecanismo patentado garantiza que la tela suba y baje siempre perfectamente alineada sin desviaciones ni desniveles, incluso después de años de uso diario.</p>
-      </div>
-      <div class="vent-card rv">
-        <div class="vent-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div class="vent-title">Telas certificadas Hunter Douglas</div>
-        <p class="vent-desc">Cada tela pasa pruebas de resistencia UV, solidez del color y dimensionamiento térmico en los laboratorios de Hunter Douglas. No se decoloran, ni encogen, ni pierden forma.</p>
-      </div>
-      <div class="vent-card rv">
-        <div class="vent-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 000 11.4M17.7 6.3a8 8 0 010 11.4M3.4 3.4a12 12 0 000 17.2M20.6 3.4a12 12 0 010 17.2"/></svg></div>
-        <div class="vent-title">Compatible con PowerView®</div>
-        <p class="vent-desc">Se motoriza con el sistema PowerView® de Hunter Douglas. Control por app, voz (Alexa, Google Home) y programación de rutinas automáticas.</p>
-      </div>
-      <div class="vent-card rv">
-        <div class="vent-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
-        <div class="vent-title">Fabricación a medida exacta</div>
-        <p class="vent-desc">Cada pieza se fabrica específicamente para tu ventana — no hay cortes, ajustes ni sobrantes. La tela ocupa el vano de pared a pared con milímetros de tolerancia.</p>
-      </div>
-      <div class="vent-card rv">
-        <div class="vent-icon"><svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM12 12v.01"/><path d="M6 12v.01M18 12v.01"/></svg></div>
-        <div class="vent-title">Control de cadena o bacluz</div>
-        <p class="vent-desc">Disponible en tres sistemas de operación: cadena de plástico, bacluz (cadena metálica sin gancho) y motorización. El sistema de seguridad cumple la normativa europea de protección infantil.</p>
-      </div>
-      <div class="vent-card rv">
-        <div class="vent-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-        <div class="vent-title">Varios tipos de montaje</div>
-        <p class="vent-desc">Montaje dentro del vano, sobre el vano o con soporte de techo. El equipo técnico de Decourban evalúa la instalación óptima para cada ventana durante la visita de medición.</p>
-      </div>
+    <div>
+      <span class="section-label">Por qué Quantum®</span>
+      <h2>No es un roller cualquiera —<br><em>es Hunter Douglas</em></h2>
+      <p>La tecnología Quantum patentada diferencia este producto de cualquier roller importado o genérico del mercado argentino. El mecanismo garantiza que la tela suba y baje siempre perfectamente alineada, sin desviaciones ni desniveles, incluso después de años de uso diario.</p>
+      <ul class="check-list">
+        <li>Sistema Quantum — enrollado siempre perfecto</li>
+        <li>Telas certificadas Hunter Douglas (UV, color, térmico)</li>
+        <li>Compatible con motorización PowerView®</li>
+        <li>Fabricación a medida exacta para tu ventana</li>
+        <li>Control por cadena, bacluz o motor</li>
+        <li>Montaje en el vano, sobre el vano o en el techo</li>
+      </ul>
+      <p style="margin-top:24px"><a href="cortinas.html" class="text-link">Ver catálogo completo →</a></p>
     </div>
   </div>
 </section>
 
-<!-- QUANTUM VS GENÉRICO -->
-<section class="quantum">
-  <div class="quantum-inner">
-    <div class="rv">
-      <p class="sec-ey">Comparativa</p>
-      <h2 class="sec">Roller Quantum® vs <em>roller convencional</em></h2>
-      <p style="font-size:15px;color:var(--text-mid);line-height:1.75;margin-top:12px">Un roller genérico parece igual desde lejos. La diferencia aparece a los 6 meses — o cuando hay viento.</p>
-      <div style="margin-top:24px;padding:18px 20px;background:#fff;border:1.5px solid var(--border);border-radius:var(--r)">
-        <p style="font-family:inherit;font-size:1rem;font-weight:500;margin-bottom:10px">Lo que dicen nuestros clientes</p>
-        <p style="font-size:13.5px;color:var(--text-mid);line-height:1.7;font-style:italic">"Lo que me convenció fue la garantía. Con los roller que compré antes en otro lado a los 8 meses empezaron a desenrollarse chuecas. Estos de Hunter Douglas llevan 3 años y funcionan igual que el primer día."</p>
-        <p style="font-size:12px;color:var(--text-light);margin-top:8px">— Proyecto residencial, Barrio Villa del Lago, Río Cuarto</p>
-      </div>
+<!-- COMPARATIVA -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Comparativa</span>
+      <h2>Roller Quantum® vs <em>roller convencional</em></h2>
     </div>
-    <div class="quantum-vs rv">
-      <div class="qvs-hdr">
-        <div class="qvs-hdr-cell">Roller genérico</div>
-        <div class="qvs-hdr-cell qvs-hdr-mid"></div>
-        <div class="qvs-hdr-cell qvs-hdr-good">Roller Quantum® HD</div>
-      </div>
-      <div class="qvs-row">
-        <div class="qvs-cell bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 6L6 18M6 6l12 12"/></svg>Se tuerce al enrollar</div>
-        <div class="qvs-cell label">Enrollado</div>
-        <div class="qvs-cell good">Siempre perfecto <svg viewBox="0 0 24 24" fill="none" stroke="#c4a46b" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
-      <div class="qvs-row">
-        <div class="qvs-cell bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 6L6 18M6 6l12 12"/></svg>Se decolora en 1–2 años</div>
-        <div class="qvs-cell label">Durabilidad</div>
-        <div class="qvs-cell good">Certificado 10+ años <svg viewBox="0 0 24 24" fill="none" stroke="#c4a46b" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
-      <div class="qvs-row">
-        <div class="qvs-cell bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 6L6 18M6 6l12 12"/></svg>Tallas estándar</div>
-        <div class="qvs-cell label">Medidas</div>
-        <div class="qvs-cell good">A medida exacta <svg viewBox="0 0 24 24" fill="none" stroke="#c4a46b" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
-      <div class="qvs-row">
-        <div class="qvs-cell bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 6L6 18M6 6l12 12"/></svg>No compatible</div>
-        <div class="qvs-cell label">Motorización</div>
-        <div class="qvs-cell good">PowerView® app <svg viewBox="0 0 24 24" fill="none" stroke="#c4a46b" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
-      <div class="qvs-row">
-        <div class="qvs-cell bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 6L6 18M6 6l12 12"/></svg>Sin garantía o 30 días</div>
-        <div class="qvs-cell label">Garantía</div>
-        <div class="qvs-cell good">Garantía HD + instalación <svg viewBox="0 0 24 24" fill="none" stroke="#c4a46b" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
+    <div style="overflow-x:auto">
+      <table class="comp-table">
+        <thead>
+          <tr><th>Característica</th><th>Roller genérico</th><th class="hi">Roller Quantum® HD ★</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Enrollado</td><td class="cross">Se tuerce al enrollar</td><td class="check hi">✓ Siempre perfecto</td></tr>
+          <tr><td>Durabilidad</td><td class="cross">Se decolora en 1–2 años</td><td class="check hi">✓ Certificado 10+ años</td></tr>
+          <tr><td>Medidas</td><td class="cross">Tallas estándar</td><td class="check hi">✓ A medida exacta</td></tr>
+          <tr><td>Motorización</td><td class="cross">No compatible</td><td class="check hi">✓ PowerView® app</td></tr>
+          <tr><td>Garantía</td><td class="cross">Sin garantía o 30 días</td><td class="check hi">✓ Garantía HD + instalación</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="testimonial-card" style="max-width:600px;margin:48px auto 0;text-align:center">
+      <blockquote>"Lo que me convenció fue la garantía. Con los roller que compré antes en otro lado a los 8 meses empezaron a desenrollarse chuecas. Estos de Hunter Douglas llevan 3 años y funcionan igual que el primer día."</blockquote>
+      <cite>— Proyecto residencial, Barrio Villa del Lago, Río Cuarto</cite>
     </div>
   </div>
 </section>
 
-<!-- AMBIENTES -->
-<section class="amb" id="ambientes">
-  <div class="amb-inner">
-    <div class="rv">
-      <p class="sec-ey">Por ambiente</p>
-      <h2 class="sec">¿Qué tipo de roller <em>va en cada ambiente</em>?</h2>
-      <p class="sec-sub" style="margin-bottom:0">Cada espacio tiene necesidades distintas de luz y privacidad. Te recomendamos la tela que mejor funciona para cada caso.</p>
-    </div>
-    <div class="amb-grid">
-      <div class="amb-card rv">
-        <div class="amb-img">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="amb-body">
-          <div class="amb-name">Living</div>
-          <p class="amb-desc">Luz natural filtrada durante el día, privacidad para la noche sin oscurecer el ambiente.</p>
-          <div class="amb-tags"><span class="amb-tag">Traslúcido</span><span class="amb-tag">Screen</span></div>
-        </div>
-      </div>
-      <div class="amb-card rv">
-        <div class="amb-img">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <div class="amb-body">
-          <div class="amb-name">Dormitorio</div>
-          <p class="amb-desc">Oscurecimiento total para dormir en cualquier horario. El blackout es la elección unánime.</p>
-          <div class="amb-tags"><span class="amb-tag">Blackout total</span></div>
-        </div>
-      </div>
-      <div class="amb-card rv">
-        <div class="amb-img">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <div class="amb-body">
-          <div class="amb-name">Oficina / Estudio</div>
-          <p class="amb-desc">Reducir deslumbramiento en pantallas manteniendo luz natural. Screen ideal para control solar sin oscurecer.</p>
-          <div class="amb-tags"><span class="amb-tag">Screen solar</span><span class="amb-tag">Traslúcido</span></div>
-        </div>
-      </div>
-      <div class="amb-card rv">
-        <div class="amb-img">
-          <svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
-        </div>
-        <div class="amb-body">
-          <div class="amb-name">Cocina / Baño</div>
-          <p class="amb-desc">Telas con tratamiento antimicrobiano o lavable. Fácil limpieza con paño húmedo sin desmontar.</p>
-          <div class="amb-tags"><span class="amb-tag">Traslúcido lavable</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CROSS-SELL -->
-<section class="cross">
-  <p style="font-size:12px;color:var(--text-mid);text-align:center;margin-bottom:24px;padding:14px 24px;background:var(--bg-alt,#f5f5f0);border:1px solid var(--border)">¿No sabés cuál elegir? → <a href="comparador.html" style="font-weight:600;color:var(--gold);text-decoration:none">Comparar todos los modelos Hunter Douglas →</a></p>
-  
-  <div class="cross-inner">
-    <h2 class="cross-title rv">¿Buscás algo más <em>premium</em>?</h2>
-    <p class="cross-sub rv">El Roller es nuestro producto de entrada al catálogo Hunter Douglas. Si tu prioridad es el control de luz más sofisticado, hay opciones superiores.</p>
-    <div class="cross-grid">
-      <a href="cortinas-silhouette.html" class="cross-card rv">
-        <div class="cross-tag">Control de luz · Premium</div>
-        <div class="cross-name">Silhouette®</div>
-        <p class="cross-desc">Láminas flotantes entre dos capas de tela transparente. Pasás de vista abierta a privacidad total sin perder la luz natural.</p>
-        <div class="cross-link">Ver Silhouette® <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </a>
-      <a href="cortinas-pirouette.html" class="cross-card rv">
-        <div class="cross-tag">Láminas giratorias · Alto diseño</div>
-        <div class="cross-name">Pirouette®</div>
-        <p class="cross-desc">Suaves láminas horizontales que giran para controlar exactamente la dirección de la luz. El equilibrio perfecto entre funcionalidad y elegancia.</p>
-        <div class="cross-link">Ver Pirouette® <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </a>
-      <a href="cortinas-duette.html" class="cross-card rv">
-        <div class="cross-tag">Aislación térmica · Celulares</div>
-        <div class="cross-name">Duette®</div>
-        <p class="cross-desc">Celdas hexagonales de aire atrapan el calor en invierno y el frío en verano. La cortina que más ahorra energía de toda la línea Hunter Douglas.</p>
-        <div class="cross-link">Ver Duette® <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </a>
+<!-- GALERÍA -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">Galería</span>
+    <div class="gal-grid">
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas roller y aluminio Hunter Douglas — home office sin reflejo" loading="lazy"/>
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/paneloriental-hd_843x338_2-63de1bdb72eeec4a7f17462911968840-640-0.webp" alt="Roller blackout Hunter Douglas — oscurecimiento total" loading="lazy"/>
+      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/foldingjpg-optimized-b09406c29d63067e7117462924956836-640-0.webp" alt="Roller screen solar Hunter Douglas — control de luz y calor" loading="lazy"/>
+      <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Living moderno con cortinas roller — decoración a medida Río Cuarto" loading="lazy"/>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-
-<section class="sil-gallery" aria-label="Galería Cortinas Roller Hunter Douglas">
-  <div class="gallery-grid">
-    <div class="gal-item">
-      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas roller y aluminio Hunter Douglas — home office sin reflejo" loading="lazy"/>
-    </div>
-    <div class="gal-item">
-      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas de madera Hunter Douglas — calidez natural en living" loading="lazy"/>
-    </div>
-    <div class="gal-item">
-      <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=640" alt="Living moderno con cortinas roller — decoración a medida Río Cuarto" loading="lazy"/>
-    </div>
-    <div class="gal-item">
-      <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/foldingjpg-optimized-b09406c29d63067e7117462924956836-640-0.webp" alt="Plegables Hunter Douglas — control de luz y privacidad" loading="lazy"/>
-    </div>
-  </div>
-</section>
-
-<section class="faq">
-  <div class="faq-inner">
-    <div class="rv" style="text-align:center;max-width:540px;margin:0 auto">
-      <p class="sec-ey" style="justify-content:center">Preguntas frecuentes</p>
-      <h2 class="sec" style="text-align:center">Todo sobre las <em>Roller Quantum®</em></h2>
+<section class="section section-gray">
+  <div class="container" style="max-width:780px">
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">Preguntas frecuentes</span>
+      <h2>Todo sobre las <em>Roller Quantum®</em></h2>
     </div>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Qué es el Roller Quantum® de Hunter Douglas?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">El Roller Quantum® es la cortina enrollable de tela técnica de Hunter Douglas con sistema de enrollado patentado. A diferencia de rollers convencionales, su mecanismo Quantum garantiza que la tela suba y baje siempre perfectamente alineada. Disponible en telas blackout, screen y traslúcido, fabricadas en las plantas Hunter Douglas de alta precisión.</div>
+        <button class="faq-q" onclick="faq(this)">¿Qué es el Roller Quantum® de Hunter Douglas?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>El Roller Quantum® es la cortina enrollable de tela técnica de Hunter Douglas con sistema de enrollado patentado. A diferencia de rollers convencionales, su mecanismo Quantum garantiza que la tela suba y baje siempre perfectamente alineada. Disponible en telas blackout, screen y traslúcido, fabricadas en las plantas Hunter Douglas de alta precisión.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Cuánto cuestan las cortinas Roller Hunter Douglas en Río Cuarto?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">El Roller Quantum® tiene un rango estimado de $42.000 a $62.000 por metro cuadrado en Río Cuarto (instalación incluida). Es el producto de entrada de la línea Hunter Douglas. Podés usar nuestro cotizador online para estimar tu presupuesto con las medidas reales de tus ventanas, o solicitar visita gratuita para un presupuesto definitivo.</div>
+        <button class="faq-q" onclick="faq(this)">¿Cuánto cuestan las cortinas Roller Hunter Douglas en Río Cuarto?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>El Roller Quantum® tiene un rango estimado de $42.000 a $62.000 por metro cuadrado en Río Cuarto (instalación incluida). Es el producto de entrada de la línea Hunter Douglas. Podés usar nuestro cotizador online para estimar tu presupuesto con las medidas reales de tus ventanas, o solicitar visita gratuita para un presupuesto definitivo.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Qué diferencia hay entre blackout, screen y traslúcido?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">Blackout bloquea el 100% de la luz — ideal para dormitorios y salas de cine. Screen tiene una trama abierta (3–5%) que filtra calor y deslumbramiento dejando ver el exterior durante el día, ideal para living y oficinas. Traslúcido filtra la luz convirtiéndola en luz difusa suave con privacidad diurna, ideal para ambientes donde querés luz natural sin ver hacia afuera.</div>
+        <button class="faq-q" onclick="faq(this)">¿Qué diferencia hay entre blackout, screen y traslúcido?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Blackout bloquea el 100% de la luz — ideal para dormitorios y salas de cine. Screen tiene una trama abierta (3–5%) que filtra calor y deslumbramiento dejando ver el exterior durante el día, ideal para living y oficinas. Traslúcido filtra la luz convirtiéndola en luz difusa suave con privacidad diurna, ideal para ambientes donde querés luz natural sin ver hacia afuera.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Se puede motorizar una cortina Roller?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">Sí. El Roller Quantum® es compatible con el sistema de motorización PowerView® de Hunter Douglas. El motor es inalámbrico con batería recargable — sin cables eléctricos visibles. Podés controlar las cortinas desde la app PowerView, con Alexa, Google Home o programar rutinas automáticas. En Decourban instalamos y configuramos todo el sistema.</div>
+        <button class="faq-q" onclick="faq(this)">¿Se puede motorizar una cortina Roller?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Sí. El Roller Quantum® es compatible con el sistema de motorización PowerView® de Hunter Douglas. El motor es inalámbrico con batería recargable — sin cables eléctricos visibles. Podés controlar las cortinas desde la app PowerView, con Alexa, Google Home o programar rutinas automáticas. En Decourban instalamos y configuramos todo el sistema.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="faq(this)">¿Incluye instalación en Río Cuarto?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-        <div class="faq-a">Sí, siempre. Todos los productos Hunter Douglas de Decourban incluyen medición a domicilio (sin cargo en Río Cuarto), fabricación a medida y montaje profesional por nuestro equipo certificado. Si agregás motorización también hacemos la puesta en marcha completa del sistema PowerView.</div>
+        <button class="faq-q" onclick="faq(this)">¿Incluye instalación en Río Cuarto?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><p>Sí, siempre. Todos los productos Hunter Douglas de Decourban incluyen medición a domicilio (sin cargo en Río Cuarto), fabricación a medida y montaje profesional por nuestro equipo certificado. Si agregás motorización también hacemos la puesta en marcha completa del sistema PowerView.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA BAND -->
-<section class="cta-band">
-  <h2>Cotizá tu Roller Quantum®<br>hoy mismo — sin costo</h2>
-  <p>Usá el cotizador online para una estimación en segundos, o pedí visita gratuita en Río Cuarto y zona.</p>
-  <div class="cta-band-btns">
-    
-    <a href="https://wa.me/543585075773?text=Quiero%20cotizar%20cortinas%20Roller%20Quantum%20Hunter%20Douglas%20para%20mi%20casa" target="_blank" rel="noopener noreferrer" class="btn-trans">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Consultar por WhatsApp
-    </a>
+<!-- RELACIONADOS -->
+<section class="section">
+  <div class="container">
+    <p class="text-center mb-40"><a href="comparador.html" class="text-link">Comparar todos los modelos Hunter Douglas lado a lado →</a></p>
+    <div class="section-header" style="text-align:center">
+      <span class="section-label">¿Buscás algo más premium?</span>
+      <h2>El resto de la línea <em>Hunter Douglas</em></h2>
+    </div>
+    <div class="products-grid">
+      <a href="cortinas-silhouette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-480-0.webp" alt="Cortinas Silhouette Hunter Douglas" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Silhouette®</div>
+        <p class="product-card-desc">Láminas flotantes entre dos capas de tela transparente. Pasás de vista abierta a privacidad total sin perder la luz natural.</p>
+      </a>
+      <a href="cortinas-pirouette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-480-0.webp" alt="Cortinas Pirouette Hunter Douglas" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Pirouette®</div>
+        <p class="product-card-desc">Suaves láminas horizontales que giran para controlar exactamente la dirección de la luz. El equilibrio entre funcionalidad y elegancia.</p>
+      </a>
+      <a href="cortinas-duette.html" class="product-card">
+        <div class="product-card-img">
+          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-480-0.webp" alt="Cortinas Duette Hunter Douglas" loading="lazy"/>
+        </div>
+        <div class="product-card-name">Duette®</div>
+        <p class="product-card-desc">Celdas hexagonales de aire que aíslan del calor y el frío. La cortina que más ahorra energía de toda la línea Hunter Douglas.</p>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- CTA FINAL -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h3>Cotizá tu Roller Quantum® sin costo</h3>
+        <p>Usá el cotizador online para una estimación en segundos, o pedí visita gratuita en Río Cuarto y zona.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0">
+        <a href="https://wa.me/543585075773?text=Quiero%20cotizar%20cortinas%20Roller%20Quantum%20Hunter%20Douglas%20para%20mi%20casa" target="_blank" rel="noopener noreferrer" class="btn-outline-light">Consultar por WhatsApp</a>
+        <a href="cotizador.html" class="btn-outline-light">Ir al cotizador</a>
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
@@ -518,33 +449,32 @@
   document.getElementById('menuBtn').addEventListener('click', function() {
     document.getElementById('navMobile').classList.toggle('open');
   });
+
+  // ── Products menu overlay ───────────────────────────
+  var productsOverlay = document.getElementById('productsOverlay');
+  function openProducts() {
+    productsOverlay.classList.add('open');
+    document.getElementById('navMobile').classList.remove('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProducts() {
+    productsOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.products-trigger').forEach(function(btn){
+    btn.addEventListener('click', openProducts);
+  });
+  document.getElementById('poClose').addEventListener('click', closeProducts);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeProducts();
+  });
 })();
 </script>
 
-<a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer" class="wapp" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-
 <script>
-var nav=document.getElementById('siteNav');
-window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
-
-function showFab(id,btn){
-  document.querySelectorAll('.fab-panel').forEach(function(p){p.classList.remove('show')});
-  document.querySelectorAll('.fab-tab').forEach(function(t){t.classList.remove('active')});
-  document.getElementById('fab-'+id).classList.add('show');
-  btn.classList.add('active');
+function faq(el){
+  el.parentElement.classList.toggle('open');
 }
-
-function faq(btn){
-  var item=btn.parentElement;
-  var was=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
-  if(!was)item.classList.add('open');
-}
-
-var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.1});
-document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
 </script>
 </body>
 </html>
