@@ -48,10 +48,15 @@
 
 <!-- NAV -->
 <nav class="site-nav" id="siteNav">
-  <div class="nav-inner">
+  <div class="nav-top">
     <a href="index.html" class="nav-logo">
-      <img src="img/logo.svg" alt="Decourban Estudio"/>
+      <img src="img/logo.webp" alt="Decourban Estudio"/>
     </a>
+    <button class="nav-hamburger" id="menuBtn" aria-label="Menú" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-bottom">
     <div class="nav-links">
       <a href="index.html" class="active">Inicio</a>
       <a href="proyectos.html">Proyectos</a>
@@ -60,9 +65,6 @@
       <a href="contacto.html">Contacto</a>
       <a href="contacto.html" class="nav-cta">Asesoramiento</a>
     </div>
-    <button class="nav-hamburger" id="menuBtn" aria-label="Menú" aria-expanded="false" aria-controls="navMobile">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </nav>
 
@@ -81,16 +83,6 @@
   <video class="hero-video" autoplay muted loop playsinline poster="img/hero-poster.jpg">
     <source src="img/hero-video.mp4" type="video/mp4"/>
   </video>
-  <div class="hero-full-overlay"></div>
-  <div class="hero-full-content">
-    <div class="hero-full-eyebrow">Estudio de diseño de interiores · Río Cuarto</div>
-    <h1>Cada espacio cuenta <em>una historia</em></h1>
-    <p class="hero-full-sub">Diseñamos, vestimos y transformamos ambientes con una mirada integral — arquitectura textil, mobiliario y luz, pensados para tu forma de vivir.</p>
-    <div class="hero-full-ctas">
-      <a href="https://wa.me/543585075773?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20asesoramiento%20de%20dise%C3%B1o" target="_blank" rel="noopener" class="btn-accent">Solicitar asesoramiento</a>
-      <a href="proyectos.html" class="btn-outline-light">Ver proyectos</a>
-    </div>
-  </div>
 </section>
 
 <!-- FILOSOFÍA / MANIFIESTO -->
@@ -255,7 +247,7 @@
     <div class="footer-grid footer-grid-min">
       <div class="footer-col">
         <div class="footer-logo footer-logo-badge">
-          <img src="img/logo.svg" alt="Decourban Estudio"/>
+          <img src="img/logo.webp" alt="Decourban Estudio"/>
         </div>
         <p>Estudio de diseño de interiores en Río Cuarto, Córdoba. Interiorismo, cortinas a medida, mobiliario y asesoramiento integral desde 2004.</p>
         <div class="footer-social" style="margin-top:20px;">
