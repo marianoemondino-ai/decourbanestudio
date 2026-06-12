@@ -5,28 +5,30 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Política de Privacidad — Decourban Estudio</title>
 <meta name="robots" content="noindex,follow"/>
-<meta name="description" content="Política de privacidad de Decourban Estudio. Información sobre el tratamiento de datos personales."/>
+<meta name="description" content="Información sobre cómo Decourban Estudio recopila, usa y protege tus datos personales. Estudio de diseño de interiores en Río Cuarto, Córdoba."/>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
-
+<link rel="manifest" href="manifest.json"/>
+<meta name="theme-color" content="#ffffff"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="site-nav solid" id="siteNav">
+<nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
     </a>
     <div class="nav-links">
-      <button class="products-trigger" id="productsBtn" aria-expanded="false" aria-controls="productsOverlay">
-        <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
-        Productos
-      </button>
+      <a href="index.html">Inicio</a>
       <a href="proyectos.html">Proyectos</a>
+      <a href="servicios.html">Servicios</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
-      <a href="contacto.html" class="nav-cta">Consultar</a>
+      <a href="contacto.html" class="nav-cta">Asesoramiento</a>
     </div>
     <button class="nav-hamburger" id="menuBtn" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -35,253 +37,134 @@
 </nav>
 
 <!-- MOBILE MENU -->
-
 <div class="nav-mobile" id="navMobile">
-  <button class="products-trigger" id="productsBtnMobile" aria-expanded="false" aria-controls="productsOverlay">
-    Productos
-    <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
-  </button>
+  <a href="index.html">Inicio</a>
   <a href="proyectos.html">Proyectos</a>
+  <a href="servicios.html">Servicios</a>
   <a href="nosotros.html">Nosotros</a>
   <a href="contacto.html">Contacto</a>
-  <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+  <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
 </div>
 
-<!-- PRODUCTS MENU OVERLAY -->
-<div class="products-overlay" id="productsOverlay">
-  <button class="po-close" id="poClose" aria-label="Cerrar menú de productos">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-  </button>
-  <div class="po-inner">
-    <div class="po-group">
-      <div class="po-title">Cortinas Hunter Douglas</div>
-      <div class="po-grid">
-        <a href="cortinas-silhouette.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette" loading="lazy"/></div>
-          <div class="po-item-name">Silhouette®</div>
-        </a>
-        <a href="cortinas-duette.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette" loading="lazy"/></div>
-          <div class="po-item-name">Duette®</div>
-        </a>
-        <a href="cortinas-pirouette.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette" loading="lazy"/></div>
-          <div class="po-item-name">Pirouette®</div>
-        </a>
-        <a href="cortinas-roller.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Roller Quantum" loading="lazy"/></div>
-          <div class="po-item-name">Roller Quantum®</div>
-        </a>
-        <a href="cortinas-luminette.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Luminette" loading="lazy"/></div>
-          <div class="po-item-name">Luminette®</div>
-        </a>
-      </div>
+<!-- HERO MINI -->
+<div class="hero-mini">
+  <div class="hero-mini-in">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a><span>›</span><span style="color:rgba(255,255,255,.6)">Privacidad</span>
     </div>
-    <div class="po-group">
-      <div class="po-title">Exterior</div>
-      <div class="po-grid">
-        <a href="toldo-gemini.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldo Gemini" loading="lazy"/></div>
-          <div class="po-item-name">Toldo Gemini®</div>
-        </a>
-        <a href="muebles-exterior.html" class="po-item">
-          <div class="po-item-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Muebles de exterior" loading="lazy"/></div>
-          <div class="po-item-name">Muebles de Exterior</div>
-        </a>
-      </div>
-    </div>
-    <div class="po-group">
-      <div class="po-title">Domótica</div>
-      <div class="po-grid">
-        <a href="powerview.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="Sistema PowerView" loading="lazy"/></div>
-          <div class="po-item-name">PowerView®</div>
-        </a>
-      </div>
-    </div>
-    <div class="po-group">
-      <div class="po-title">Accesorios &amp; Decoración</div>
-      <div class="po-grid">
-        <a href="coleccion.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Accesorios y decoración" loading="lazy"/></div>
-          <div class="po-item-name">Ver colección</div>
-        </a>
-      </div>
-    </div>
-    <div class="text-center mt-48">
-      <a href="cortinas.html" class="text-link">Ver catálogo completo</a>
-    </div>
+    <h1>Política de <em>Privacidad</em></h1>
+    <p>Cómo recopilamos, usamos y protegemos tu información cuando te contactás con nuestro estudio. Última actualización: junio de 2026.</p>
   </div>
 </div>
 
-<div class="content">
-  <h1>Política de <em>Privacidad</em></h1>
-  <p class="updated">Última actualización: Mayo 2026 · Decourban Estudio · Córdoba, Argentina</p>
+<!-- CONTENT -->
+<section class="section">
+  <div class="container" style="max-width:780px">
 
-  <div class="highlight">
-    <p><strong>Resumen:</strong> Sólo recopilamos los datos que necesitamos para asesorarte y enviarte tus productos. Nunca vendemos ni compartimos tu información con terceros. Podés solicitar la eliminación de tus datos en cualquier momento contactándonos por WhatsApp.</p>
+    <h2 style="margin-bottom:14px">1. Responsable del tratamiento</h2>
+    <p style="margin-bottom:32px">Decourban Estudio, estudio de diseño de interiores con sede en Río Cuarto, Córdoba, Argentina, es responsable del tratamiento de los datos personales que nos compartís a través de este sitio web, WhatsApp o redes sociales. Contacto: <a href="https://wa.me/543585075773" class="text-link">WhatsApp +54 358 5075773</a> · <a href="https://www.instagram.com/decourbanestudio" class="text-link" target="_blank" rel="noopener">@decourbanestudio</a> · <a href="mailto:Ventas@decourban.com.ar" class="text-link">Ventas@decourban.com.ar</a></p>
+
+    <h2 style="margin-bottom:14px">2. Qué información recopilamos</h2>
+    <p style="margin-bottom:16px">Recopilamos únicamente la información que vos nos compartís voluntariamente al consultarnos sobre un proyecto:</p>
+    <ul style="list-style:disc;padding-left:22px;color:#555;font-size:.94rem;line-height:1.75;margin-bottom:32px">
+      <li style="margin-bottom:8px"><strong>Formulario de contacto:</strong> nombre, WhatsApp, email (opcional), el tipo de proyecto que te interesa y el mensaje que nos escribís.</li>
+      <li style="margin-bottom:8px"><strong>WhatsApp e Instagram:</strong> la información que compartís en la conversación con nuestro equipo, como fotos del espacio, medidas o preferencias de diseño.</li>
+      <li><strong>Visitas al atelier o relevamientos a domicilio:</strong> datos de contacto y dirección, únicamente para coordinar el encuentro.</li>
+    </ul>
+
+    <h2 style="margin-bottom:14px">3. Para qué usamos tu información</h2>
+    <p style="margin-bottom:16px">Usamos tus datos exclusivamente para:</p>
+    <ul style="list-style:disc;padding-left:22px;color:#555;font-size:.94rem;line-height:1.75;margin-bottom:16px">
+      <li style="margin-bottom:8px">Responder tu consulta y asesorarte sobre tu proyecto</li>
+      <li style="margin-bottom:8px">Coordinar visitas al atelier o relevamientos en tu casa u oficina</li>
+      <li style="margin-bottom:8px">Preparar propuestas, presupuestos y dar seguimiento a tu proyecto</li>
+      <li>Coordinar la fabricación e instalación de cortinas, toldos y mobiliario a medida</li>
+    </ul>
+    <p style="margin-bottom:32px">No usamos tu información para fines distintos a los indicados ni te enviamos comunicaciones que no hayas solicitado.</p>
+
+    <h2 style="margin-bottom:14px">4. Cookies y servicios de terceros</h2>
+    <p style="margin-bottom:16px">Este sitio no utiliza cookies de rastreo ni herramientas de publicidad. Las únicas conexiones a servicios externos son:</p>
+    <ul style="list-style:disc;padding-left:22px;color:#555;font-size:.94rem;line-height:1.75;margin-bottom:32px">
+      <li style="margin-bottom:8px"><strong>Google Fonts:</strong> para mostrar la tipografía del sitio (Fraunces). Google puede registrar la solicitud de la fuente.</li>
+      <li style="margin-bottom:8px"><strong>Google Maps:</strong> para mostrar la ubicación de nuestro atelier en la página de Contacto. Aplica la política de privacidad de Google.</li>
+      <li><strong>WhatsApp (Meta):</strong> al hacer clic en los botones de WhatsApp se abre la app o el sitio web de WhatsApp. Aplica la política de privacidad de Meta.</li>
+    </ul>
+
+    <h2 style="margin-bottom:14px">5. Con quién compartimos tu información</h2>
+    <p style="margin-bottom:32px">Tu información <strong>nunca se vende ni se comparte con fines comerciales</strong>. Solo accede a ella el equipo de Decourban Estudio. En proyectos que incluyen fabricación o instalación, podemos compartir los datos estrictamente necesarios (nombre, dirección y datos de contacto) con los talleres o instaladores que trabajan en tu proyecto.</p>
+
+    <h2 style="margin-bottom:14px">6. Tus derechos (Ley 25.326 — Argentina)</h2>
+    <p style="margin-bottom:16px">En cumplimiento de la Ley de Protección de Datos Personales N° 25.326 de la República Argentina, tenés derecho a:</p>
+    <ul style="list-style:disc;padding-left:22px;color:#555;font-size:.94rem;line-height:1.75;margin-bottom:16px">
+      <li style="margin-bottom:8px"><strong>Acceso:</strong> saber qué datos tenemos sobre vos</li>
+      <li style="margin-bottom:8px"><strong>Rectificación:</strong> corregir datos incorrectos</li>
+      <li style="margin-bottom:8px"><strong>Supresión:</strong> eliminar tus datos de nuestros registros</li>
+      <li><strong>Oposición:</strong> oponerte al tratamiento de tus datos</li>
+    </ul>
+    <p style="margin-bottom:32px">Para ejercer cualquiera de estos derechos, escribinos por <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20ejercer%20mis%20derechos%20sobre%20mis%20datos%20personales" class="text-link" target="_blank" rel="noopener">WhatsApp al +54 358 5075773</a> con el asunto "Protección de datos".</p>
+
+    <h2 style="margin-bottom:14px">7. Seguridad</h2>
+    <p style="margin-bottom:32px">Implementamos medidas razonables para proteger tu información: conexión HTTPS, acceso restringido a los datos de contacto dentro de nuestro equipo, y no almacenamos datos de tarjetas ni medios de pago — esas gestiones se realizan en persona o por canales oficiales de pago.</p>
+
+    <h2 style="margin-bottom:14px">8. Contacto</h2>
+    <p style="margin-bottom:0">Para cualquier consulta sobre esta política, escribinos por <a href="https://wa.me/543585075773" class="text-link" target="_blank" rel="noopener">WhatsApp</a> o <a href="https://www.instagram.com/decourbanestudio" class="text-link" target="_blank" rel="noopener">Instagram</a>.</p>
+
   </div>
-
-  <h2>1. Responsable del tratamiento</h2>
-  <p>Decourban Estudio, con sede en Río Cuarto, Córdoba, Argentina, es responsable del tratamiento de los datos personales recopilados a través de este sitio web. Contacto: <a href="https://wa.me/543585075773">+54 358 5075773</a> · <a href="https://www.instagram.com/decourbanestudio">@decourbanestudio</a></p>
-
-  <h2>2. Datos que recopilamos</h2>
-  <p>Recopilamos únicamente los datos que vos proporcionás voluntariamente:</p>
-  <ul>
-    <li><strong>Formularios de contacto:</strong> nombre, número de WhatsApp, email (opcional), y el mensaje que nos enviás.</li>
-    <li><strong>Newsletter:</strong> dirección de email cuando te suscribís.</li>
-    <li><strong>WhatsApp:</strong> la información que compartís en la conversación con nuestro equipo.</li>
-    <li><strong>Cookies técnicas:</strong> datos de sesión mínimos para el funcionamiento del sitio (lista de favoritos en localStorage, preferencias de tema).</li>
-  </ul>
-
-  <h2>3. Finalidad del uso</h2>
-  <p>Usamos tus datos exclusivamente para:</p>
-  <ul>
-    <li>Responder a tus consultas de diseño y presupuestos</li>
-    <li>Enviarte información sobre productos que te interesaron</li>
-    <li>Coordinar entregas e instalaciones</li>
-    <li>Enviar novedades y ofertas si te suscribiste al newsletter</li>
-  </ul>
-  <p>No utilizamos tus datos para fines distintos a los indicados sin tu consentimiento previo.</p>
-
-  <h2>4. Cookies y almacenamiento local</h2>
-  <p>Este sitio utiliza <strong>localStorage</strong> del navegador para guardar:</p>
-  <ul>
-    <li>Tu lista de productos favoritos (wishlist)</li>
-    <li>Tu preferencia de modo oscuro/claro</li>
-  </ul>
-  <p>No utilizamos cookies de rastreo de terceros ni publicidad behavioural. No integramos Google Analytics ni Meta Pixel.</p>
-
-  <h2>5. Compartición de datos</h2>
-  <p>Tus datos personales <strong>nunca son vendidos ni compartidos</strong> con terceros con fines comerciales. Solo son accesibles por el equipo de Decourban Estudio.</p>
-  <p>Podemos compartir información con proveedores de transporte para coordinar envíos, únicamente con los datos necesarios (nombre y dirección de entrega).</p>
-
-  <h2>6. Plataformas de terceros</h2>
-  <p>Este sitio integra:</p>
-  <ul>
-    <li><strong>WhatsApp (Meta):</strong> Al hacer clic en botones de WhatsApp, sos redirigido a la aplicación de WhatsApp. Su política de privacidad aplica.</li>
-    <li><strong>Google Fonts:</strong> Tipografías cargadas desde servidores de Google. Google puede registrar la solicitud.</li>
-    <li><strong>Unsplash:</strong> Imágenes de ambiente y estilo de vida. No recopila datos de usuarios.</li>
-    <li><strong>Google Maps:</strong> Mapa de ubicación del showroom. La política de Google aplica para el uso del mapa.</li>
-  </ul>
-
-  <h2>7. Tus derechos (Ley 25.326 — Argentina)</h2>
-  <p>En cumplimiento de la Ley de Protección de Datos Personales N° 25.326 de la República Argentina, tenés derecho a:</p>
-  <ul>
-    <li><strong>Acceso:</strong> Saber qué datos tenemos sobre vos</li>
-    <li><strong>Rectificación:</strong> Corregir datos incorrectos</li>
-    <li><strong>Supresión:</strong> Eliminar tus datos de nuestros registros</li>
-    <li><strong>Oposición:</strong> Oponerte al tratamiento de tus datos</li>
-  </ul>
-  <p>Para ejercer cualquiera de estos derechos, escribinos por WhatsApp a <a href="https://wa.me/543585075773?text=Hola, quiero ejercer mis derechos sobre mis datos personales">+54 358 5075773</a> con el asunto "Protección de datos".</p>
-
-  <h2>8. Seguridad</h2>
-  <p>Implementamos medidas técnicas razonables para proteger tus datos: conexión HTTPS, no almacenamiento de contraseñas, y acceso restringido a la información de contacto.</p>
-
-  <h2>9. Contacto</h2>
-  <p>Para cualquier consulta sobre esta política, escribinos:</p>
-  <ul>
-    <li>WhatsApp: <a href="https://wa.me/543585075773">+54 358 5075773</a></li>
-    <li>Instagram: <a href="https://www.instagram.com/decourbanestudio">@decourbanestudio</a></li>
-  </ul>
-</div>
+</section>
 
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-grid">
+    <div class="footer-grid footer-grid-min">
       <div class="footer-col">
         <div class="footer-logo">
           <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
         </div>
-        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores a medida desde 2004.</p>
-        <p style="margin-top:16px;color:rgba(255,255,255,.35);">Juan de Garay 1550, Río Cuarto<br/>+54 358 507-5773<br/>ventas@decourban.com.ar</p>
+        <p>Estudio de diseño de interiores en Río Cuarto, Córdoba. Interiorismo, cortinas a medida, mobiliario y asesoramiento integral desde 2004.</p>
+        <div class="footer-social" style="margin-top:20px;">
+          <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://wa.me/543585075773" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
       </div>
       <div class="footer-col">
-        <h4>Productos</h4>
-        <a href="cortinas-silhouette.html">Silhouette®</a>
-        <a href="cortinas-pirouette.html">Pirouette®</a>
-        <a href="cortinas-duette.html">Duette®</a>
-        <a href="toldo-gemini.html">Toldo Gemini</a>
-        <a href="cortinas.html">Ver todos</a>
-      </div>
-      <div class="footer-col">
-        <h4>Nosotros</h4>
-        <a href="nosotros.html">La empresa</a>
+        <h4>Navegación</h4>
+        <a href="index.html">Inicio</a>
         <a href="proyectos.html">Proyectos</a>
-        <a href="garantia.html">Garantía</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
-        <a href="https://decourbanestudio.com.ar/productos" target="_blank" rel="noopener">Tienda online</a>
       </div>
       <div class="footer-col">
-        <h4>Recursos</h4>
-        <a href="blog-cortinas-hunter-douglas.html">Blog</a>
-        <a href="quiz-cortinas.html">Quiz de cortinas</a>
-        <a href="comparador.html">Comparador</a>
-        <a href="cotizador.html">Cotizador</a>
-        <a href="financiacion.html">Financiación</a>
-        <a href="visualizador.html">Visualizador</a>
-        <a href="guia-por-ambiente.html">Guía por ambiente</a>
+        <h4>Contacto</h4>
+        <p>Juan de Garay 1550<br/>Río Cuarto, Córdoba</p>
+        <p style="margin-top:12px;">+54 358 507-5773<br/>Ventas@decourban.com.ar</p>
+        <p style="margin-top:12px;">Lun-Vie 9 a 18 h · Sáb 9 a 13 h</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Decourban Estudio. Todos los derechos reservados.</p>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://wa.me/543585075773" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="mailto:ventas@decourban.com.ar">Email</a>
-      </div>
+      <p>© 2026 Decourban Estudio. Todos los derechos reservados. · <a href="privacidad.html" style="color:inherit;text-decoration:underline;">Política de Privacidad</a></p>
     </div>
   </div>
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<a class="wa-float" href="https://wa.me/543585075773?text=Hola,%20me%20gustaría%20consultar%20sobre%20sus%20productos" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="wa-float" href="https://wa.me/543585075773?text=Hola,%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20Decourban%20Estudio" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
 (function(){
+  // ── Nav: transparent → solid on scroll ────────────
+  var nav = document.getElementById('siteNav');
+  function updateNav() {
+    nav.classList.toggle('solid', window.scrollY > 60);
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
+  // ── Mobile menu ────────────────────────────────────
   document.getElementById('menuBtn').addEventListener('click', function() {
     document.getElementById('navMobile').classList.toggle('open');
-  });
-
-  // ── Products menu overlay ───────────────────────────
-  var productsOverlay = document.getElementById('productsOverlay');
-  function openProducts() {
-    productsOverlay.classList.add('open');
-    document.getElementById('navMobile').classList.remove('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeProducts() {
-    productsOverlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  document.querySelectorAll('.products-trigger').forEach(function(btn){
-    btn.addEventListener('click', openProducts);
-  });
-  document.getElementById('poClose').addEventListener('click', closeProducts);
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') closeProducts();
-  });
-})();
-</script>
-
-<script>
-(function(){
-  const stored=localStorage.getItem('dark');
-  if(stored==='1') document.body.classList.add('dark');
-  else if(stored==='0') document.body.classList.add('light');
-  const btn=document.getElementById('darkBtn');
-  if(!btn)return;
-  function update(){btn.textContent=document.body.classList.contains('dark')?'☀️':'🌙';}
-  update();
-  btn.addEventListener('click',()=>{
-    const isDark=document.body.classList.toggle('dark');
-    document.body.classList.toggle('light',!isDark);
-    localStorage.setItem('dark',isDark?'1':'0');
-    update();
   });
 })();
 </script>

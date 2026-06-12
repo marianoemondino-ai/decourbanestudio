@@ -1,15 +1,15 @@
 {
-  "name": "Decourban Estudio",
+  "name": "Decourban Estudio — Diseño de Interiores",
   "short_name": "Decourban",
-  "description": "Cortinas Hunter Douglas y decoración de interiores en Río Cuarto, Córdoba. Marcela Kalbermatten, 22 años de trayectoria.",
+  "description": "Estudio de diseño de interiores en Río Cuarto, Córdoba. Interiorismo, cortinas a medida, mobiliario y asesoramiento integral.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#faf8f5",
-  "theme_color": "#161412",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "lang": "es",
   "orientation": "portrait-primary",
-  "categories": ["shopping", "lifestyle", "home"],
+  "categories": ["business", "lifestyle", "home"],
   "icons": [
     {
       "src": "favicon.svg",
@@ -18,30 +18,21 @@
       "purpose": "any maskable"
     }
   ],
-  "screenshots": [
-    {
-      "src": "https://images.unsplash.com/photo-1768609239321-1cfe14893e80?auto=format&fit=crop&w=390&h=844&q=80",
-      "sizes": "390x844",
-      "type": "image/jpeg",
-      "form_factor": "narrow",
-      "label": "Decourban — Cortinas y Decoración en Río Cuarto"
-    }
-  ],
   "shortcuts": [
     {
       "name": "Consultar por WhatsApp",
-      "url": "https://wa.me/543585075773?text=Hola%20Marcela%2C%20quiero%20consultar",
-      "description": "Hablar con Marcela ahora"
+      "url": "https://wa.me/543585075773?text=Hola%2C%20me%20gustar%C3%ADa%20consultar",
+      "description": "Hablar con el equipo ahora"
     },
     {
-      "name": "Ver Cortinas Hunter Douglas",
-      "url": "/cortinas.html",
-      "description": "Silhouette, Duette, Pirouette y más"
+      "name": "Ver Proyectos",
+      "url": "/proyectos.html",
+      "description": "Espacios transformados por Decourban Estudio"
     },
     {
-      "name": "Ver catálogo completo",
-      "url": "/coleccion.html",
-      "description": "60 productos de diseño"
+      "name": "Ver Servicios",
+      "url": "/servicios.html",
+      "description": "Interiorismo, cortinas, mobiliario y más"
     }
   ]
 }

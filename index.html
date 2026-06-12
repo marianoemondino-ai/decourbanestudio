@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Cortinas Hunter Douglas Río Cuarto | Decourban Estudio</title>
-<meta name="description" content="Decourban Estudio — Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas Silhouette, Duette, Pirouette, Roller, toldos y decoración de interiores. 22 años de experiencia."/>
+<title>Decourban Estudio — Diseño de Interiores en Río Cuarto</title>
+<meta name="description" content="Estudio de diseño de interiores en Río Cuarto, Córdoba. Interiorismo, cortinas a medida, mobiliario y asesoramiento integral para transformar tu espacio."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://decourbanestudio.com.ar/"/>
-<meta property="og:title" content="Decourban Estudio — Cortinas Hunter Douglas Río Cuarto"/>
-<meta property="og:description" content="Distribuidor oficial Hunter Douglas. Cortinas, toldos y decoración exclusiva en Río Cuarto, Córdoba."/>
-<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213424_b8c1dd71-3eaf-4c42-906b-970447e59134_min.webp"/>
+<meta property="og:title" content="Decourban Estudio — Diseño de Interiores en Río Cuarto"/>
+<meta property="og:description" content="Interiorismo, cortinas a medida, mobiliario y asesoramiento integral. Transformamos espacios en Río Cuarto, Córdoba."/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Decourban Estudio"/>
@@ -19,13 +18,16 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="manifest" href="manifest.json"/>
 <meta name="theme-color" content="#ffffff"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"HomeAndConstructionBusiness",
   "name":"Decourban Estudio",
-  "description":"Especialistas en cortinas y asesoramiento de interiores en Río Cuarto, Córdoba. Distribuidores oficiales Hunter Douglas.",
+  "description":"Estudio de diseño de interiores en Río Cuarto, Córdoba. Interiorismo, cortinas a medida, mobiliario y asesoramiento integral.",
   "url":"https://decourbanestudio.com.ar",
   "telephone":"+543585075773",
   "address":{"@type":"PostalAddress","streetAddress":"Juan de Garay 1550","addressLocality":"Río Cuarto","addressRegion":"Córdoba","postalCode":"5800","addressCountry":"AR"},
@@ -37,21 +39,19 @@
 </head>
 <body>
 
-<!-- NAV (starts transparent over video, becomes solid on scroll) -->
+<!-- NAV -->
 <nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
     </a>
     <div class="nav-links">
-      <button class="products-trigger" id="productsBtn" aria-expanded="false" aria-controls="productsOverlay">
-        <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
-        Productos
-      </button>
+      <a href="index.html" class="active">Inicio</a>
       <a href="proyectos.html">Proyectos</a>
+      <a href="servicios.html">Servicios</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
-      <a href="contacto.html" class="nav-cta">Consultar</a>
+      <a href="contacto.html" class="nav-cta">Asesoramiento</a>
     </div>
     <button class="nav-hamburger" id="menuBtn" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -61,183 +61,104 @@
 
 <!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
-  <button class="products-trigger" id="productsBtnMobile" aria-expanded="false" aria-controls="productsOverlay">
-    Productos
-    <span class="pt-icon"><span></span><span></span><span></span><span></span></span>
-  </button>
+  <a href="index.html" class="active">Inicio</a>
   <a href="proyectos.html">Proyectos</a>
+  <a href="servicios.html">Servicios</a>
   <a href="nosotros.html">Nosotros</a>
   <a href="contacto.html">Contacto</a>
-  <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:#111;color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;">Consultar</a>
+  <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
 </div>
 
-<!-- PRODUCTS MENU OVERLAY -->
-<div class="products-overlay" id="productsOverlay">
-  <button class="po-close" id="poClose" aria-label="Cerrar menú de productos">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-  </button>
-  <div class="po-inner">
-    <div class="po-group">
-      <div class="po-title">Cortinas Hunter Douglas</div>
-      <div class="po-grid">
-        <a href="cortinas-silhouette.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette" loading="lazy"/></div>
-          <div class="po-item-name">Silhouette®</div>
-        </a>
-        <a href="cortinas-duette.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette" loading="lazy"/></div>
-          <div class="po-item-name">Duette®</div>
-        </a>
-        <a href="cortinas-pirouette.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette" loading="lazy"/></div>
-          <div class="po-item-name">Pirouette®</div>
-        </a>
-        <a href="cortinas-roller.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-640-0.webp" alt="Cortinas Roller Quantum" loading="lazy"/></div>
-          <div class="po-item-name">Roller Quantum®</div>
-        </a>
-        <a href="cortinas-luminette.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_aluminio-892f7004a9a85d95fd17462918880582-640-0.webp" alt="Cortinas Luminette" loading="lazy"/></div>
-          <div class="po-item-name">Luminette®</div>
-        </a>
+<!-- HERO FULL -->
+<section class="hero-full">
+  <div class="media-placeholder ph-dark ph-fill">
+    <div class="ph-content">
+      <div class="ph-icon">
+        <svg class="ic" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2" ry="2"/><path d="M16 10l6-3v10l-6-3"/></svg>
       </div>
-    </div>
-    <div class="po-group">
-      <div class="po-title">Exterior</div>
-      <div class="po-grid">
-        <a href="toldo-gemini.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldo Gemini" loading="lazy"/></div>
-          <div class="po-item-name">Toldo Gemini®</div>
-        </a>
-        <a href="muebles-exterior.html" class="po-item">
-          <div class="po-item-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Muebles de exterior" loading="lazy"/></div>
-          <div class="po-item-name">Muebles de Exterior</div>
-        </a>
-      </div>
-    </div>
-    <div class="po-group">
-      <div class="po-title">Domótica</div>
-      <div class="po-grid">
-        <a href="powerview.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="Sistema PowerView" loading="lazy"/></div>
-          <div class="po-item-name">PowerView®</div>
-        </a>
-      </div>
-    </div>
-    <div class="po-group">
-      <div class="po-title">Accesorios &amp; Decoración</div>
-      <div class="po-grid">
-        <a href="coleccion.html" class="po-item">
-          <div class="po-item-img"><img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-480-0.webp" alt="Accesorios y decoración" loading="lazy"/></div>
-          <div class="po-item-name">Ver colección</div>
-        </a>
-      </div>
-    </div>
-    <div class="text-center mt-48">
-      <a href="cortinas.html" class="text-link">Ver catálogo completo</a>
+      <span class="ph-tag">Video institucional</span>
+      <p class="ph-text">Video cinematográfico en loop de un living contemporáneo con luz natural de atardecer, cortinas semitransparentes en movimiento suave</p>
     </div>
   </div>
-</div>
-
-<!-- HERO: VIDEO FULL SCREEN -->
-<section class="hero">
-  <div class="hero-videos">
-    <div class="hero-video active" id="v0">
-      <video autoplay muted loop playsinline poster="https://images.pexels.com/videos/7533210/apartment-architecture-bed-bedroom-7533210.jpeg">
-        <source src="https://videos.pexels.com/video-files/7533207/7533207-hd_1920_1080_30fps.mp4" type="video/mp4"/>
-      </video>
-    </div>
-    <div class="hero-video" id="v1">
-      <video muted loop playsinline poster="https://images.pexels.com/videos/7614419/pexels-photo-7614419.jpeg">
-        <source src="https://videos.pexels.com/video-files/7614419/7614419-hd_1920_1080_30fps.mp4" type="video/mp4"/>
-      </video>
-    </div>
-    <div class="hero-video" id="v2">
-      <video muted loop playsinline poster="https://images.pexels.com/videos/10614142/pexels-photo-10614142.jpeg">
-        <source src="https://videos.pexels.com/video-files/10614142/10614142-hd_1920_1080_30fps.mp4" type="video/mp4"/>
-      </video>
-    </div>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">Diseño &amp; Decoración<br>de Interiores</h1>
-    <p class="hero-subtitle">Distribuidor oficial Hunter Douglas · Río Cuarto, Córdoba</p>
-    <a href="cortinas.html" class="hero-cta">Ver productos</a>
-    <div class="hero-dots" id="heroDots">
-      <button class="hero-dot active" data-i="0"></button>
-      <button class="hero-dot" data-i="1"></button>
-      <button class="hero-dot" data-i="2"></button>
+  <div class="hero-full-overlay"></div>
+  <div class="hero-full-content">
+    <div class="hero-full-eyebrow">Estudio de diseño de interiores · Río Cuarto</div>
+    <h1>Cada espacio cuenta <em>una historia</em></h1>
+    <p class="hero-full-sub">Diseñamos, vestimos y transformamos ambientes con una mirada integral — arquitectura textil, mobiliario y luz, pensados para tu forma de vivir.</p>
+    <div class="hero-full-ctas">
+      <a href="https://wa.me/543585075773?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20asesoramiento%20de%20dise%C3%B1o" target="_blank" rel="noopener" class="btn-accent">Solicitar asesoramiento</a>
+      <a href="proyectos.html" class="btn-outline-light">Ver proyectos</a>
     </div>
   </div>
 </section>
 
-<!-- NUESTROS SERVICIOS -->
-<section class="section">
+<!-- FILOSOFÍA / MANIFIESTO -->
+<section class="statement-sec rv">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Lo que hacemos</span>
-      <h2>Nuestros Servicios</h2>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Cortinas &amp; Persianas</h3>
-        <p>Somos distribuidores oficiales Hunter Douglas en Río Cuarto. Instalamos Silhouette, Pirouette, Duette, Roller y Vignette con medición sin cargo en toda la región.</p>
-        <a href="cortinas.html" class="text-link">Ver colección</a>
-      </div>
-      <div class="service-card">
-        <h3>Toldos Motorizados</h3>
-        <p>Toldos Gemini con tecnología PowerView®. Control inteligente desde tu smartphone. Fabricamos a medida para terrazas, balcones y fachadas comerciales.</p>
-        <a href="toldo-gemini.html" class="text-link">Más información</a>
-      </div>
-      <div class="service-card">
-        <h3>Asesoramiento de Interiores</h3>
-        <p>22 años de experiencia en decoración de interiores. Visitamos tu hogar, tomamos medidas y te asesoramos sin costo. Atendemos a todo el país por videollamada.</p>
-        <a href="nosotros.html" class="text-link">Conocernos</a>
-      </div>
-      <div class="service-card">
-        <h3>Muebles &amp; Accesorios</h3>
-        <p>Selección exclusiva de muebles de exterior, alfombras, lámparas y accesorios de decoración. Tienda online con envío a todo el país.</p>
-        <a href="https://decourbanestudio.com.ar/productos" class="text-link" target="_blank" rel="noopener">Ver tienda</a>
-      </div>
-    </div>
+    <div class="section-eyebrow" style="justify-content:center">Nuestra filosofía</div>
+    <p class="statement-text">Creemos que el diseño no es decoración: es la forma en que un espacio te hace sentir. Trabajamos cada proyecto como una pieza única, donde la luz, las texturas y los materiales se combinan para crear <em>atmósferas con identidad</em>.</p>
   </div>
 </section>
 
-<!-- ÚLTIMOS PROYECTOS -->
+<!-- PROYECTOS DESTACADOS -->
 <section class="section section-gray">
   <div class="container">
     <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
       <div>
-        <span class="section-label">Trabajos realizados</span>
-        <h2>Últimos Proyectos</h2>
+        <div class="section-eyebrow">Proyectos seleccionados</div>
+        <h2>Espacios que ya transformamos</h2>
       </div>
-      <a href="proyectos.html" class="text-link">Ver todos</a>
+      <a href="proyectos.html" class="text-link">Ver todos los proyectos</a>
     </div>
     <div class="projects-grid">
-      <a href="proyectos.html" class="project-card">
+      <a href="proyectos.html" class="project-card rv">
         <div class="project-card-img">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213424_b8c1dd71-3eaf-4c42-906b-970447e59134_min.webp" alt="Proyecto living con cortinas Pirouette Hunter Douglas" loading="lazy"/>
+          <div class="media-placeholder ph-fill">
+            <div class="ph-content">
+              <div class="ph-icon">
+                <svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              </div>
+              <span class="ph-tag">Fotografía</span>
+              <p class="ph-text">Living contemporáneo, sofá bajo, cortinas Silhouette entreabiertas, luz de atardecer</p>
+            </div>
+          </div>
         </div>
         <div class="project-card-body">
-          <h3>Living — Pirouette</h3>
+          <h3>Living minimalista</h3>
           <p>Río Cuarto, Córdoba</p>
         </div>
       </a>
-      <a href="proyectos.html" class="project-card">
+      <a href="proyectos.html" class="project-card rv">
         <div class="project-card-img">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213434_e0543371-334e-4675-abc4-1dae59319668_min.webp" alt="Proyecto dormitorio con cortinas Duette Hunter Douglas" loading="lazy"/>
+          <div class="media-placeholder ph-fill">
+            <div class="ph-content">
+              <div class="ph-icon">
+                <svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              </div>
+              <span class="ph-tag">Fotografía</span>
+              <p class="ph-text">Dormitorio principal, ropa de cama en tonos neutros, cortinas blackout, mesa de luz encendida</p>
+            </div>
+          </div>
         </div>
         <div class="project-card-body">
-          <h3>Dormitorio — Duette</h3>
+          <h3>Dormitorio en suite</h3>
           <p>Río Cuarto, Córdoba</p>
         </div>
       </a>
-      <a href="proyectos.html" class="project-card">
+      <a href="proyectos.html" class="project-card rv">
         <div class="project-card-img">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213425_fafa0969-109d-46cc-aef4-2b9ca4dbf141_min.webp" alt="Proyecto terraza con toldo Gemini Hunter Douglas" loading="lazy"/>
+          <div class="media-placeholder ph-fill">
+            <div class="ph-content">
+              <div class="ph-icon">
+                <svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              </div>
+              <span class="ph-tag">Fotografía</span>
+              <p class="ph-text">Terraza con toldo retráctil, mobiliario de exterior, plantas y luz cálida de atardecer</p>
+            </div>
+          </div>
         </div>
         <div class="project-card-body">
-          <h3>Terraza — Gemini</h3>
+          <h3>Terraza con pérgola</h3>
           <p>Río Cuarto, Córdoba</p>
         </div>
       </a>
@@ -245,126 +166,68 @@
   </div>
 </section>
 
-<!-- STATS -->
-<section class="features-band">
-  <div class="container">
-    <div class="features-grid">
-      <div class="feature-item">
-        <div class="feature-number">22</div>
-        <div class="feature-label">Años de experiencia</div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-number">500+</div>
-        <div class="feature-label">Proyectos realizados</div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-number">100%</div>
-        <div class="feature-label">Instalación incluida</div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-number">$0</div>
-        <div class="feature-label">Medición sin cargo</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LÍNEA DE PRODUCTOS -->
+<!-- SERVICIOS -->
 <section class="section">
   <div class="container">
     <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
       <div>
-        <span class="section-label">Hunter Douglas</span>
-        <h2>Línea de Productos</h2>
+        <div class="section-eyebrow">Cómo trabajamos</div>
+        <h2>Servicios de diseño integral</h2>
       </div>
-      <a href="cortinas.html" class="text-link">Ver todos</a>
+      <a href="servicios.html" class="text-link">Ver todos los servicios</a>
     </div>
-    <div class="products-grid">
-      <a href="cortinas-silhouette.html" class="product-card">
-        <div class="product-card-img">
-          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/cortinas_silhouette_detalle-0c0a8fb9c9b89feddc17462904450963-640-0.webp" alt="Cortinas Silhouette Hunter Douglas" loading="lazy"/>
-        </div>
-        <div class="product-card-name">Silhouette®</div>
-        <p class="product-card-desc">La cortina de luz más elegante</p>
-      </a>
-      <a href="cortinas-pirouette.html" class="product-card">
-        <div class="product-card-img">
-          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd_pirouette_3-30957ef0bf34f0f66217462902257158-640-0.webp" alt="Cortinas Pirouette Hunter Douglas" loading="lazy"/>
-        </div>
-        <div class="product-card-name">Pirouette®</div>
-        <p class="product-card-desc">Suavidad y control en cada ambiente</p>
-      </a>
-      <a href="cortinas-duette.html" class="product-card">
-        <div class="product-card-img">
-          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Cortinas Duette Hunter Douglas" loading="lazy"/>
-        </div>
-        <div class="product-card-name">Duette®</div>
-        <p class="product-card-desc">Aislación térmica y acústica superior</p>
-      </a>
-      <a href="cortinas-roller.html" class="product-card">
-        <div class="product-card-img">
-          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/horizontales_de_madera-22591550d2b2fad7d217462917382533-480-0.webp" alt="Cortinas Roller Hunter Douglas" loading="lazy"/>
-        </div>
-        <div class="product-card-name">Roller</div>
-        <p class="product-card-desc">Diseño limpio, funcionalidad total</p>
-      </a>
-      <a href="toldo-gemini.html" class="product-card">
-        <div class="product-card-img">
-          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldo Gemini Hunter Douglas" loading="lazy"/>
-        </div>
-        <div class="product-card-name">Toldo Gemini</div>
-        <p class="product-card-desc">Exteriores con tecnología motorizada</p>
-      </a>
-      <a href="powerview.html" class="product-card">
-        <div class="product-card-img">
-          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-480-0.webp" alt="Sistema PowerView Hunter Douglas" loading="lazy"/>
-        </div>
-        <div class="product-card-name">PowerView®</div>
-        <p class="product-card-desc">Automatización inteligente del hogar</p>
-      </a>
+    <div class="services-grid">
+      <div class="service-card rv">
+        <h3>Interiorismo</h3>
+        <p>Proyectos integrales de diseño de interiores: relevamiento, propuesta estética y acompañamiento desde la idea hasta la última terminación.</p>
+        <a href="servicios.html" class="text-link">Conocer más</a>
+      </div>
+      <div class="service-card rv">
+        <h3>Cortinas a medida</h3>
+        <p>Cortinería artesanal y sistemas premium Hunter Douglas, fabricados a medida para acompañar la propuesta de cada ambiente.</p>
+        <a href="servicios.html" class="text-link">Conocer más</a>
+      </div>
+      <div class="service-card rv">
+        <h3>Mobiliario</h3>
+        <p>Selección y curaduría de mobiliario y objetos de decoración que completan la identidad de cada espacio.</p>
+        <a href="servicios.html" class="text-link">Conocer más</a>
+      </div>
+      <div class="service-card rv">
+        <h3>Asesoramiento</h3>
+        <p>Visitamos tu hogar, escuchamos tus ideas y te acompañamos en cada decisión, con una mirada estética y técnica.</p>
+        <a href="servicios.html" class="text-link">Conocer más</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ACCESORIOS Y TIENDA -->
+<!-- NOSOTROS TEASER -->
 <section class="section section-gray">
   <div class="container">
-    <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
-      <div>
-        <span class="section-label">Tienda online</span>
-        <h2>Accesorios &amp; Decoración</h2>
+    <div class="about-split">
+      <div class="rvl">
+        <div class="media-placeholder ph-3-4">
+          <div class="ph-content">
+            <div class="ph-icon">
+              <svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            </div>
+            <span class="ph-tag">Fotografía</span>
+            <p class="ph-text">Equipo de Decourban Estudio trabajando en el atelier, muestras de telas y materiales sobre una mesa de diseño</p>
+          </div>
+        </div>
       </div>
-      <a href="https://decourbanestudio.com.ar/productos" class="text-link" target="_blank" rel="noopener">Ver más</a>
-    </div>
-    <div class="store-grid">
-      <a href="https://decourbanestudio.com.ar/productos" class="store-card" target="_blank" rel="noopener">
-        <div class="store-card-img">
-          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/img_9121-77983c673f716b881317539847516459-480-0.webp" alt="Mesa lateral" loading="lazy"/>
+      <div class="rvr">
+        <div class="section-eyebrow">El estudio</div>
+        <h2>22 años diseñando espacios <em>con identidad</em> en Río Cuarto</h2>
+        <p>Desde 2004 acompañamos a familias y empresas de Río Cuarto y la región a transformar sus espacios, combinando criterio estético, materiales de calidad y un trato cercano en cada etapa del proyecto.</p>
+        <p>Cada propuesta nace de escuchar primero: cómo se vive el espacio, qué luz tiene, qué historia merece contar.</p>
+        <div class="intro-stats">
+          <div><div class="stat-n">22</div><div class="stat-l">Años de experiencia</div></div>
+          <div><div class="stat-n">500+</div><div class="stat-l">Proyectos realizados</div></div>
+          <div><div class="stat-n">5★</div><div class="stat-l">Calificación promedio</div></div>
         </div>
-        <div class="store-card-name">Mesa lateral</div>
-        <div class="store-card-price">Consultar precio</div>
-      </a>
-      <a href="https://decourbanestudio.com.ar/productos" class="store-card" target="_blank" rel="noopener">
-        <div class="store-card-img">
-          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/img_9136-37f4a7f396659fa6b417538930747256-480-0.webp" alt="Alfombra decorativa" loading="lazy"/>
-        </div>
-        <div class="store-card-name">Alfombra decorativa</div>
-        <div class="store-card-price">Consultar precio</div>
-      </a>
-      <a href="https://decourbanestudio.com.ar/productos" class="store-card" target="_blank" rel="noopener">
-        <div class="store-card-img">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EbZMB7hwnqMtHyajaKp9iq9IUi/hf_20260605_213416_1078b2d9-2f09-48c5-9df6-e39a405bb7c3_min.webp" alt="Muebles de exterior" loading="lazy"/>
-        </div>
-        <div class="store-card-name">Muebles exterior</div>
-        <div class="store-card-price">Consultar precio</div>
-      </a>
-      <a href="https://decourbanestudio.com.ar/productos" class="store-card" target="_blank" rel="noopener">
-        <div class="store-card-img">
-          <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=480" alt="Sillones y living" loading="lazy"/>
-        </div>
-        <div class="store-card-name">Sillones y living</div>
-        <div class="store-card-price">Consultar precio</div>
-      </a>
+        <p style="margin-top:32px;"><a href="nosotros.html" class="text-link">Conocer el estudio</a></p>
+      </div>
     </div>
   </div>
 </section>
@@ -372,73 +235,37 @@
 <!-- TESTIMONIOS -->
 <section class="section">
   <div class="container">
-    <div class="section-header text-center" style="margin-bottom:52px;">
-      <span class="section-label" style="display:block;text-align:center;">Google Reviews</span>
-      <h2>Testimonios</h2>
+    <div style="text-align:center;margin-bottom:40px;">
+      <div class="section-eyebrow" style="justify-content:center">Lo que dicen nuestros clientes</div>
+      <h2>Experiencias que <em>nos enorgullecen</em></h2>
     </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Excelente atención desde el primer contacto. El equipo de Decourban tomó las medidas, asesoró sobre los mejores materiales y la instalación fue perfecta. Las cortinas Silhouette transformaron completamente el living."</blockquote>
-        <cite>— Daniela M., Río Cuarto</cite>
+    <div class="testi-mini rv">
+      <div class="testi-card-mini">
+        <div class="testi-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="testi-q">"El equipo entendió exactamente la atmósfera que buscábamos para el living. Cada detalle —desde las cortinas hasta la disposición del mobiliario— se sintió pensado para nosotros."</p>
+        <div class="testi-author">Carolina V. — Living, Río Cuarto</div>
       </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Instalamos toldos Gemini en la terraza y el resultado es increíble. La automatización con PowerView funciona perfectamente. Recomiendo a Decourban sin dudas: profesionales, puntuales y con materiales de primera."</blockquote>
-        <cite>— Rodrigo T., Villa María</cite>
+      <div class="testi-card-mini">
+        <div class="testi-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="testi-q">"Transformaron por completo nuestra terraza: hoy es el lugar donde más tiempo pasamos en casa. Profesionales, prolijos y con una mirada estética impecable."</p>
+        <div class="testi-author">Roberto M. — Terraza, Río Cuarto</div>
       </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Consulté desde Buenos Aires por videollamada y me asesoraron como si estuviera en persona. Elegí las cortinas Duette y llegaron perfectamente en 8 días. La instalación fue impecable. Un servicio de lujo."</blockquote>
-        <cite>— Florencia L., Buenos Aires</cite>
-      </div>
-    </div>
-    <div class="text-center" style="margin-top:40px;">
-      <a href="contacto.html" class="text-link">Ver testimonios en Google</a>
-    </div>
-  </div>
-</section>
-
-<!-- BLOG -->
-<section class="section">
-  <div class="container">
-    <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
-      <div>
-        <span class="section-label">Inspiración</span>
-        <h2>Últimas Novedades</h2>
-      </div>
-      <a href="blog-cortinas-hunter-douglas.html" class="text-link">Ver más</a>
-    </div>
-    <div class="blog-grid">
-      <a href="blog-cortinas-hunter-douglas.html" class="blog-card">
-        <div class="blog-card-img">
-          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/hd-duette-escritorio_2-41cecddae1788c6b7217462910431546-640-0.webp" alt="Guía cortinas Hunter Douglas 2026" loading="lazy"/>
-        </div>
-        <div class="blog-card-cat">Guía de compra</div>
-        <div class="blog-card-title">Cortinas Hunter Douglas: guía completa 2026</div>
-        <div class="blog-card-excerpt">Todo lo que necesitás saber para elegir la cortina perfecta para cada ambiente de tu hogar.</div>
-      </a>
-      <a href="blog-toldos-motorizados.html" class="blog-card">
-        <div class="blog-card-img">
-          <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/toldo-gemini-negropng-optimized-4c9930720e8c18b88f17462930183650-640-0.webp" alt="Toldos motorizados para terraza" loading="lazy"/>
-        </div>
-        <div class="blog-card-cat">Exteriores</div>
-        <div class="blog-card-title">Toldos motorizados: todo lo que necesitás saber</div>
-        <div class="blog-card-excerpt">Ventajas, tipos y precios de los toldos más elegidos para exteriores en Argentina.</div>
-      </a>
     </div>
   </div>
 </section>
 
 <!-- CTA FINAL -->
-<section style="background:#111;padding:100px 0;">
-  <div class="container text-center">
-    <span class="section-label" style="color:#555;display:block;text-align:center;margin-bottom:16px;">¿Comenzamos?</span>
-    <h2 style="color:#fff;margin-bottom:20px;font-size:clamp(1.4rem,3vw,2rem);">Visitamos tu hogar sin cargo</h2>
-    <p style="color:rgba(255,255,255,.45);max-width:460px;margin:0 auto 40px;font-size:.92rem;line-height:1.8;">Medición, asesoramiento y presupuesto gratis en Río Cuarto y toda la región. Sin compromiso.</p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="contacto.html" style="display:inline-block;background:#fff;color:#111;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 32px;">Solicitar visita</a>
-      <a href="https://wa.me/543585075773?text=Hola,%20me%20gustaría%20solicitar%20asesoramiento" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.3);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 32px;">WhatsApp</a>
+<section class="section">
+  <div class="container">
+    <div class="cta-band rv">
+      <div>
+        <h3>¿Listo para transformar tu espacio?</h3>
+        <p>Conversemos sobre tu proyecto. Coordinamos una visita sin cargo y te mostramos cómo podemos ayudarte.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0">
+        <a href="https://wa.me/543585075773?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20asesoramiento%20de%20dise%C3%B1o" target="_blank" rel="noopener" class="btn-accent">Solicitar asesoramiento</a>
+        <a href="proyectos.html" class="btn-outline-light">Ver proyectos</a>
+      </div>
     </div>
   </div>
 </section>
@@ -446,95 +273,45 @@
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-grid">
+    <div class="footer-grid footer-grid-min">
       <div class="footer-col">
         <div class="footer-logo">
           <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/themes/common/logo-1202760662-1746231518-a385ef5d3107c5b0fbda628ef67a2d7a1746231518.png?0" alt="Decourban Estudio"/>
         </div>
-        <p>Distribuidor oficial Hunter Douglas en Río Cuarto, Córdoba. Cortinas, toldos y decoración de interiores a medida desde 2004.</p>
-        <p style="margin-top:16px;color:rgba(255,255,255,.35);">Juan de Garay 1550, Río Cuarto<br/>+54 358 507-5773<br/>ventas@decourban.com.ar</p>
+        <p>Estudio de diseño de interiores en Río Cuarto, Córdoba. Interiorismo, cortinas a medida, mobiliario y asesoramiento integral desde 2004.</p>
+        <div class="footer-social" style="margin-top:20px;">
+          <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://wa.me/543585075773" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
       </div>
       <div class="footer-col">
-        <h4>Productos</h4>
-        <a href="cortinas-silhouette.html">Silhouette®</a>
-        <a href="cortinas-pirouette.html">Pirouette®</a>
-        <a href="cortinas-duette.html">Duette®</a>
-        <a href="toldo-gemini.html">Toldo Gemini</a>
-        <a href="cortinas.html">Ver todos</a>
-      </div>
-      <div class="footer-col">
-        <h4>Nosotros</h4>
-        <a href="nosotros.html">La empresa</a>
+        <h4>Navegación</h4>
+        <a href="index.html">Inicio</a>
         <a href="proyectos.html">Proyectos</a>
-        <a href="garantia.html">Garantía</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
-        <a href="https://decourbanestudio.com.ar/productos" target="_blank" rel="noopener">Tienda online</a>
       </div>
       <div class="footer-col">
-        <h4>Recursos</h4>
-        <a href="blog-cortinas-hunter-douglas.html">Blog</a>
-        <a href="quiz-cortinas.html">Quiz de cortinas</a>
-        <a href="comparador.html">Comparador</a>
-        <a href="cotizador.html">Cotizador</a>
-        <a href="financiacion.html">Financiación</a>
-        <a href="visualizador.html">Visualizador</a>
-        <a href="guia-por-ambiente.html">Guía por ambiente</a>
+        <h4>Contacto</h4>
+        <p>Juan de Garay 1550<br/>Río Cuarto, Córdoba</p>
+        <p style="margin-top:12px;">+54 358 507-5773<br/>Ventas@decourban.com.ar</p>
+        <p style="margin-top:12px;">Lun-Vie 9 a 18 h · Sáb 9 a 13 h</p>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Decourban Estudio. Todos los derechos reservados. · <a href="privacidad.html" style="color:inherit;text-decoration:underline;">Política de Privacidad</a></p>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://wa.me/543585075773" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="mailto:ventas@decourban.com.ar">Email</a>
-      </div>
     </div>
   </div>
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<a class="wa-float" href="https://wa.me/543585075773?text=Hola,%20me%20gustaría%20consultar%20sobre%20sus%20productos" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="wa-float" href="https://wa.me/543585075773?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20asesoramiento%20de%20dise%C3%B1o" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
 (function(){
-  // ── Hero video slider ──────────────────────────────
-  const videos = document.querySelectorAll('.hero-video');
-  const dots   = document.querySelectorAll('.hero-dot');
-  let current  = 0;
-  let timer;
-
-  function goTo(i) {
-    const oldVid = videos[current].querySelector('video');
-    if (oldVid) oldVid.pause();
-    videos[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = i;
-    videos[current].classList.add('active');
-    dots[current].classList.add('active');
-    const newVid = videos[current].querySelector('video');
-    if (newVid) newVid.play().catch(function(){});
-  }
-
-  function next() { goTo((current + 1) % videos.length); }
-  function startTimer() { clearInterval(timer); timer = setInterval(next, 8000); }
-
-  dots.forEach(function(dot) {
-    dot.addEventListener('click', function() {
-      goTo(parseInt(dot.dataset.i));
-      startTimer();
-    });
-  });
-  startTimer();
-
-  // Preload next video
-  setInterval(function(){
-    var ni = (current + 1) % videos.length;
-    var v = videos[ni].querySelector('video');
-    if (v && v.readyState === 0) v.load();
-  }, 3000);
-
   // ── Nav: transparent → solid on scroll ────────────
   var nav = document.getElementById('siteNav');
   function updateNav() {
@@ -546,25 +323,6 @@
   // ── Mobile menu ────────────────────────────────────
   document.getElementById('menuBtn').addEventListener('click', function() {
     document.getElementById('navMobile').classList.toggle('open');
-  });
-
-  // ── Products menu overlay ───────────────────────────
-  var productsOverlay = document.getElementById('productsOverlay');
-  function openProducts() {
-    productsOverlay.classList.add('open');
-    document.getElementById('navMobile').classList.remove('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeProducts() {
-    productsOverlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  document.querySelectorAll('.products-trigger').forEach(function(btn){
-    btn.addEventListener('click', openProducts);
-  });
-  document.getElementById('poClose').addEventListener('click', closeProducts);
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') closeProducts();
   });
 })();
 </script>

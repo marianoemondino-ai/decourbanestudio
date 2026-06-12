@@ -1,8 +1,7 @@
 User-agent: *
 Allow: /
 
-# No indexar páginas de proceso/confirmación
-Disallow: /gracias.html
+# No indexar páginas de error
 Disallow: /404.html
 
 # Crawl-delay para bots agresivos
