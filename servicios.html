@@ -9,12 +9,12 @@
 <meta property="og:url" content="https://decourbanestudio.com.ar/servicios.html"/>
 <meta property="og:title" content="Servicios — Decourban Estudio"/>
 <meta property="og:description" content="Interiorismo, cortinas a medida, toldos, mobiliario, asesoramiento e instalación. Un equipo propio que te acompaña de principio a fin."/>
-<meta property="og:image" content="https://decourbanestudio.com.ar/img/serv-moodboard.jpg"/>
+<meta property="og:image" content="https://decourbanestudio.com.ar/img/serv-moodboard.webp"/>
 <meta property="og:image:width" content="1400"/>
 <meta property="og:image:height" content="933"/>
 <meta property="og:image:alt" content="Moodboard de interiorismo con muestras de telas, texturas y materiales"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://decourbanestudio.com.ar/img/serv-moodboard.jpg"/>
+<meta name="twitter:image" content="https://decourbanestudio.com.ar/img/serv-moodboard.webp"/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Decourban Estudio"/>
 <meta name="geo.region" content="AR-X"/>
@@ -72,7 +72,7 @@
       <a href="contacto.html">Contacto</a>
       <a href="contacto.html" class="nav-cta">Asesoramiento</a>
     </div>
-    <button class="nav-hamburger" id="menuBtn" aria-label="Menú">
+    <button class="nav-hamburger" id="menuBtn" aria-label="Menú" aria-expanded="false" aria-controls="navMobile">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -108,7 +108,7 @@
       <div class="service-num">01</div>
       <div class="service-media">
         <div class="media-placeholder has-img">
-          <img src="img/serv-moodboard.jpg" alt="Moodboard con muestras de telas, maderas y paleta de colores" loading="lazy"/>
+          <img src="img/serv-moodboard.webp" alt="Moodboard con muestras de telas, maderas y paleta de colores" loading="lazy"/>
         </div>
       </div>
       <div class="service-body">
@@ -136,7 +136,7 @@
       <div class="service-num">03</div>
       <div class="service-media">
         <div class="media-placeholder has-img">
-          <img src="img/serv-toldo.jpg" alt="Toldo retráctil extendido sobre una terraza con mobiliario de exterior" loading="lazy"/>
+          <img src="img/serv-toldo.webp" alt="Toldo retráctil extendido sobre una terraza con mobiliario de exterior" loading="lazy"/>
         </div>
       </div>
       <div class="service-body">
@@ -164,7 +164,7 @@
       <div class="service-num">05</div>
       <div class="service-media">
         <div class="media-placeholder has-img">
-          <img src="img/serv-reunion.jpg" alt="Reunión de asesoramiento con muestras de telas y materiales sobre la mesa" loading="lazy"/>
+          <img src="img/serv-reunion.webp" alt="Reunión de asesoramiento con muestras de telas y materiales sobre la mesa" loading="lazy"/>
         </div>
       </div>
       <div class="service-body">
@@ -178,7 +178,7 @@
       <div class="service-num">06</div>
       <div class="service-media">
         <div class="media-placeholder has-img">
-          <img src="img/serv-tecnico.jpg" alt="Técnico instalando un sistema de cortinas en una ventana grande" loading="lazy"/>
+          <img src="img/serv-tecnico.webp" alt="Técnico instalando un sistema de cortinas en una ventana grande" loading="lazy"/>
         </div>
       </div>
       <div class="service-body">
@@ -290,7 +290,8 @@
 
   // ── Mobile menu ────────────────────────────────────
   document.getElementById('menuBtn').addEventListener('click', function() {
-    document.getElementById('navMobile').classList.toggle('open');
+    var open = document.getElementById('navMobile').classList.toggle('open');
+    this.setAttribute('aria-expanded', open);
   });
 })();
 </script>

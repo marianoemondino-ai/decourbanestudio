@@ -40,7 +40,7 @@
       <a href="contacto.html">Contacto</a>
       <a href="contacto.html" class="nav-cta">Asesoramiento</a>
     </div>
-    <button class="nav-hamburger" id="menuBtn" aria-label="Menú">
+    <button class="nav-hamburger" id="menuBtn" aria-label="Menú" aria-expanded="false" aria-controls="navMobile">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -174,7 +174,8 @@
 
   // ── Mobile menu ────────────────────────────────────
   document.getElementById('menuBtn').addEventListener('click', function() {
-    document.getElementById('navMobile').classList.toggle('open');
+    var open = document.getElementById('navMobile').classList.toggle('open');
+    this.setAttribute('aria-expanded', open);
   });
 })();
 </script>

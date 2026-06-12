@@ -58,7 +58,7 @@
       <a href="contacto.html">Contacto</a>
       <a href="contacto.html" class="nav-cta">Asesoramiento</a>
     </div>
-    <button class="nav-hamburger" id="menuBtn" aria-label="Menú">
+    <button class="nav-hamburger" id="menuBtn" aria-label="Menú" aria-expanded="false" aria-controls="navMobile">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -113,7 +113,7 @@
       <a href="proyectos.html" class="project-card rv">
         <div class="project-card-img">
           <div class="media-placeholder ph-fill has-img">
-            <img src="img/proy-living-comedor.jpg" alt="Living minimalista con sofá bajo y comedor en tonos neutros" loading="lazy"/>
+            <img src="img/proy-living-comedor.webp" alt="Living minimalista con sofá bajo y comedor en tonos neutros" loading="lazy"/>
           </div>
         </div>
         <div class="project-card-body">
@@ -124,7 +124,7 @@
       <a href="proyectos.html" class="project-card rv">
         <div class="project-card-img">
           <div class="media-placeholder ph-fill has-img">
-            <img src="img/index-dormitorio.jpg" alt="Dormitorio principal con ropa de cama en tonos neutros y cortinas blackout" loading="lazy"/>
+            <img src="img/index-dormitorio.webp" alt="Dormitorio principal con ropa de cama en tonos neutros y cortinas blackout" loading="lazy"/>
           </div>
         </div>
         <div class="project-card-body">
@@ -188,7 +188,7 @@
     <div class="about-split">
       <div class="rvl">
         <div class="media-placeholder ph-3-4 has-img">
-          <img src="img/index-atelier.jpg" alt="Muestras de telas y materiales sobre cuaderno de diseño en el atelier" loading="lazy"/>
+          <img src="img/index-atelier.webp" alt="Muestras de telas y materiales sobre cuaderno de diseño en el atelier" loading="lazy"/>
         </div>
       </div>
       <div class="rvr">
@@ -297,7 +297,8 @@
 
   // ── Mobile menu ────────────────────────────────────
   document.getElementById('menuBtn').addEventListener('click', function() {
-    document.getElementById('navMobile').classList.toggle('open');
+    var open = document.getElementById('navMobile').classList.toggle('open');
+    this.setAttribute('aria-expanded', open);
   });
 })();
 </script>
