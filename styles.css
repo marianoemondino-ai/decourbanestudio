@@ -386,6 +386,28 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
 .btn-outline-light:hover { background: #fff; color: #111; }
 
 /* ── RESPONSIVE ─────────────────────────────────────── */
+/* El logo centrado se superpone con los links/CTA de la derecha en este
+   rango de anchos: el CTA pierde su estilo de botón y pasa a ser un link
+   más, liberando el espacio que necesita el logo. */
+@media (max-width: 1090px) {
+  .nav-links-right .nav-cta {
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+    color: rgba(255,255,255,0.9) !important;
+  }
+  .nav-links-right .nav-cta:hover {
+    background: none !important;
+    border-color: transparent !important;
+    opacity: 0.6 !important;
+  }
+}
+
+@media (max-width: 840px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+}
+
 @media (max-width: 1024px) {
   .nav-inner { padding: 0 32px; }
   .nav-logo img { height: 40px; }
@@ -402,8 +424,6 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   .nav-mobile { inset: 64px 0 0; }
   .nav-inner { padding: 0 24px; }
   .nav-logo img { height: 38px; }
-  .nav-links { display: none; }
-  .nav-hamburger { display: flex; }
   .container { padding: 0 24px; }
   .footer-inner { padding: 0 24px; }
 
