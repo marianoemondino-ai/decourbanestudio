@@ -1,15 +1,13 @@
-const CACHE = 'decourban-v8';
+const CACHE = 'decourban-v9';
 const SHELL = [
   '/',
   '/index.html',
-  '/coleccion.html',
-  '/producto.html',
-  '/cortinas.html',
+  '/servicios.html',
+  '/proyectos.html',
   '/nosotros.html',
   '/contacto.html',
   '/privacidad.html',
   '/404.html',
-  '/gracias.html',
   '/styles.css',
   '/favicon.svg',
   '/manifest.json',
