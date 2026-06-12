@@ -192,6 +192,7 @@
             <option>Instalación</option>
             <option>Otro</option>
           </select>
+          <span class="field-err" id="err-service"></span>
         </div>
         <div class="fl">
           <label>¿Cómo preferís que te contactemos?</label>
@@ -408,13 +409,18 @@ function toggleFq(el) {
 }
 
 // ── Contact form ─────────────────────────────────────────
+var CONTACT_PREF_LABELS = { whatsapp: 'WhatsApp', email: 'Email', visita: 'Visita al atelier' };
+
 function submitContact(e) {
   e.preventDefault();
   var name = document.getElementById('cf-name');
   var phone = document.getElementById('cf-phone');
+  var email = document.getElementById('cf-email');
   var service = document.getElementById('cf-service');
+  var msg = document.getElementById('cf-msg');
   var errName = document.getElementById('err-name');
   var errPhone = document.getElementById('err-phone');
+  var errService = document.getElementById('err-service');
   var valid = true;
 
   if (!name.value.trim()) {
@@ -434,10 +440,28 @@ function submitContact(e) {
   }
 
   if (!service.value) {
+    errService.textContent = 'Seleccioná una opción';
+    errService.style.display = 'block';
     valid = false;
+  } else {
+    errService.style.display = 'none';
   }
 
   if (!valid) return;
+
+  var pref = document.querySelector('input[name="contact_pref"]:checked');
+  var lines = [
+    'Hola! Quiero hacer una consulta desde la web:',
+    '',
+    'Nombre: ' + name.value.trim(),
+    'WhatsApp: ' + phone.value.trim(),
+  ];
+  if (email.value.trim()) lines.push('Email: ' + email.value.trim());
+  lines.push('Interesado en: ' + service.value);
+  lines.push('Prefiere contacto por: ' + (pref ? CONTACT_PREF_LABELS[pref.value] : 'WhatsApp'));
+  if (msg.value.trim()) lines.push('Mensaje: ' + msg.value.trim());
+
+  window.open('https://wa.me/543585075773?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
 
   document.getElementById('successMsg').style.display = 'block';
   e.target.reset();
