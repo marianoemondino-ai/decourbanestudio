@@ -652,6 +652,18 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
 .ph-text { font-size: 0.8rem; color: #999; line-height: 1.65; }
 .media-placeholder.ph-dark .ph-text { color: rgba(255,255,255,0.5); }
 
+/* Placeholder con imagen real */
+.media-placeholder.has-img { border: none; background: none; }
+.media-placeholder img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.media-placeholder.has-img .ph-content { display: none; }
+
 /* ── HERO FULL (Inicio) ───────────────────────────────── */
 .hero-full {
   position: relative;
