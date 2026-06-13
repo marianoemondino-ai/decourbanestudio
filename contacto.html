@@ -58,6 +58,15 @@
           {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}
         ]
       }
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"¿Cuánto tarda en responderse una consulta?","acceptedAnswer":{"@type":"Answer","text":"Por WhatsApp respondemos en menos de 2 horas en horario de atención (Lun–Vie 9–18 / Sáb 9–13). Por formulario, en menos de 24 horas hábiles. Fuera de horario, respondemos al día siguiente a primera hora."}},
+        {"@type":"Question","name":"¿La primera conversación tiene costo?","acceptedAnswer":{"@type":"Answer","text":"No, la primera conversación sobre tu proyecto es completamente gratuita y sin compromiso. Incluye asesoramiento por WhatsApp, una reunión en el atelier o una primera visita a tu casa para relevar el espacio."}},
+        {"@type":"Question","name":"¿Trabajan fuera de Río Cuarto?","acceptedAnswer":{"@type":"Answer","text":"Sí. Nuestro equipo de diseño, fabricación e instalación trabaja principalmente en Río Cuarto y la región, pero también coordinamos proyectos a distancia en otras provincias, como hicimos con clientes en Buenos Aires."}},
+        {"@type":"Question","name":"¿Puedo pagar en cuotas?","acceptedAnswer":{"@type":"Answer","text":"Sí. Aceptamos tarjetas de crédito con cuotas, débito, transferencia bancaria y Mercado Pago. Para proyectos de mayor envergadura, evaluamos planes de pago personalizados junto a vos."}}
+      ]
     }
   ]
 }
@@ -217,8 +226,8 @@
         </button>
         <p class="form-note">Respondemos en menos de 24 horas · Sin spam · Nunca compartimos tus datos</p>
         <div class="success-msg" id="successMsg">
-          <h4>¡Consulta enviada!</h4>
-          <p>Gracias, te contactamos a la brevedad. También podés escribirnos ahora por WhatsApp.</p>
+          <h4>¡Listo! Abrimos WhatsApp con tu consulta</h4>
+          <p>Revisá la pestaña de WhatsApp que se abrió y enviá el mensaje para completar tu consulta. Te respondemos a la brevedad.</p>
         </div>
       </form>
     </div>
@@ -465,7 +474,7 @@ function submitContact(e) {
   lines.push('Prefiere contacto por: ' + (pref ? CONTACT_PREF_LABELS[pref.value] : 'WhatsApp'));
   if (msg.value.trim()) lines.push('Mensaje: ' + msg.value.trim());
 
-  window.open('https://wa.me/543585075773?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+  window.open('https://wa.me/543585075773?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener,noreferrer');
 
   document.getElementById('successMsg').style.display = 'block';
   e.target.reset();
