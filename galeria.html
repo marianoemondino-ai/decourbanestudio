@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Galería de selección — Decourban</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:#111;color:#eee;padding:20px}
+h1{font-size:1.4rem;margin-bottom:8px;color:#fff}
+.desc{font-size:.85rem;color:#aaa;margin-bottom:24px;line-height:1.5}
+.section-title{font-size:1rem;font-weight:600;color:#f5c06a;margin:32px 0 12px;padding:8px 12px;background:#222;border-radius:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:8px}
+.card{position:relative;cursor:pointer;border:2px solid transparent;border-radius:8px;overflow:hidden;transition:border-color .15s}
+.card:hover{border-color:#f5c06a}
+.card.selected{border-color:#4CAF50}
+.card img{width:100%;height:160px;object-fit:cover;display:block}
+.card .num{position:absolute;top:6px;left:6px;background:rgba(0,0,0,.7);color:#fff;font-size:.7rem;padding:2px 6px;border-radius:4px;font-family:monospace}
+.card .check{position:absolute;top:6px;right:6px;background:#4CAF50;color:#fff;font-size:.8rem;padding:2px 8px;border-radius:4px;display:none}
+.card.selected .check{display:block}
+.card .label{padding:6px 8px;font-size:.72rem;color:#bbb;background:#1a1a1a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Slots */
+.slots{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.slot{background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:12px;min-width:200px;max-width:240px}
+.slot h4{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:#888;margin-bottom:8px}
+.slot .slot-img{width:100%;height:100px;object-fit:cover;border-radius:4px;display:none}
+.slot .slot-empty{width:100%;height:100px;border:2px dashed #333;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#555;font-size:.75rem}
+.slot .slot-name{margin-top:6px;font-size:.72rem;color:#aaa;word-break:break-all}
+.slot .btn-clear{margin-top:6px;font-size:.7rem;background:#333;border:none;color:#aaa;padding:3px 8px;border-radius:4px;cursor:pointer}
+
+/* Panel */
+.panel{position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;border-top:1px solid #333;padding:14px 20px;display:flex;align-items:center;gap:16px;z-index:100}
+#activeSlot{font-size:.85rem;color:#f5c06a;font-weight:600}
+#copyBtn{background:#f5c06a;color:#111;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:.85rem;font-weight:600}
+#copyBtn:hover{background:#e5b05a}
+.hint{font-size:.75rem;color:#666;flex:1}
+</style>
+</head>
+<body>
+
+<h1>🖼️ Galería de selección — Decourban Estudio</h1>
+<p class="desc">
+  1. Hacé click en un <strong style="color:#f5c06a">slot naranja</strong> para activarlo<br>
+  2. Después click en la foto que quieras asignarle<br>
+  3. Cuando terminés, copiá la lista y mandámela
+</p>
+
+<div class="section-title">📌 Slots de la web (hacé click para activar el slot)</div>
+<div class="slots" id="slots">
+  <div class="slot" data-slot="hero-poster">
+    <h4>Hero — Portada del video</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="index-silhouette">
+    <h4>Inicio — Proyecto 1 (living)</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="index-dormitorio">
+    <h4>Inicio — Proyecto 2 (dormitorio)</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="index-terraza">
+    <h4>Inicio — Proyecto 3 (exterior)</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="index-atelier">
+    <h4>Inicio — Nosotros (atelier)</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="proy-living-comedor">
+    <h4>Proy — Caso 1 (living)</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="proy-dormitorio-suite">
+    <h4>Proy — Caso 2 (dormitorio)</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="proy-quincho">
+    <h4>Proy — Caso 3 (quincho)</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="proy-oficina-roller">
+    <h4>Proy — Caso 4 (oficina)</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="proy-casa-campo">
+    <h4>Proy — Caso 5 (casa campo)</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="proy-cocina">
+    <h4>Más proy — Cocina</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="proy-hall">
+    <h4>Más proy — Hall</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="proy-home-office">
+    <h4>Más proy — Home office</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="proy-dormitorio-infantil">
+    <h4>Más proy — Dorm. infantil</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="proy-vidriera">
+    <h4>Más proy — Local comercial</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="proy-monoambiente">
+    <h4>Más proy — Monoambiente</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="nosotros-atelier">
+    <h4>Nosotros — Atelier</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+  <div class="slot" data-slot="nosotros-equipo">
+    <h4>Nosotros — Equipo</h4>
+    <div class="slot-empty">sin imagen</div>
+    <img class="slot-img"/>
+    <div class="slot-name">—</div>
+    <button class="btn-clear">✕ limpiar</button>
+  </div>
+</div>
+
+<div id="gallery"></div>
+<div style="height:70px"></div>
+
+<div class="panel">
+  <div>
+    <div style="font-size:.75rem;color:#888;margin-bottom:2px">Slot activo:</div>
+    <div id="activeSlot">— ninguno seleccionado —</div>
+  </div>
+  <div class="hint">Activá un slot arriba, luego clickeá la foto</div>
+  <button id="copyBtn" onclick="copyList()">📋 Copiar lista para Claude</button>
+</div>
+
+<script>
+const IMG_BASE = 'img/galeria/';
+
+const groups = {
+  'DU Session': ['000_FullSizeRender.webp','001_IMG_5334.webp','002_IMG_5335.webp','003_IMG_5337.webp','004_IMG_5345.webp','005_IMG_5351.webp','006_IMG_5358.webp','007_IMG_5359.webp','008_IMG_5368.webp','009_IMG_5369.webp'],
+  'Casa FOA': ['266_casa_foa_IMG_6471.webp','267_casa_foa_IMG_6486.webp','268_casa_foa_IMG_6488.webp','269_casa_foa_IMG_6489.webp','270_casa_foa_IMG_6490.webp','271_casa_foa_IMG_6491.webp','272_casa_foa_IMG_6517.webp'],
+  'Fotos 2020-2021': Array.from({length:17},(_,i)=>null).filter(x=>x),
+  'Fotos 2022': [],
+  'Fotos 2023': [],
+  'Fotos 2024': [],
+};
+
+// Build all images list from 100+
+const allImgs = ["100_PHOTO-2020-12-22-13-28-121.webp","101_PHOTO-2020-12-22-13-28-12.webp","102_PHOTO-2020-12-22-13-28-13.webp","103_PHOTO-2020-12-31-13-22-571.webp","104_PHOTO-2020-12-31-13-22-572.webp","105_PHOTO-2020-12-31-13-22-573.webp","106_PHOTO-2020-12-31-13-22-574.webp","107_PHOTO-2020-12-31-13-22-575.webp","108_PHOTO-2020-12-31-13-22-576.webp","109_PHOTO-2020-12-31-13-22-577.webp","110_PHOTO-2020-12-31-13-22-57.webp","111_PHOTO-2021-04-06-10-50-141.webp","112_PHOTO-2021-04-06-10-50-14.webp","113_PHOTO-2021-04-06-10-51-01.webp","114_PHOTO-2021-04-06-10-52-05.webp","115_PHOTO-2021-04-06-10-53-21.webp","116_PHOTO-2021-07-17-10-27-57.webp","117_PHOTO-2022-03-17-14-58-44.webp","118_PHOTO-2022-04-05-11-56-001.webp","119_PHOTO-2022-04-05-11-56-002.webp","120_PHOTO-2022-04-05-11-56-003.webp","121_PHOTO-2022-04-05-11-56-00.webp","122_PHOTO-2022-04-05-15-50-031.webp","123_PHOTO-2022-04-05-15-50-032.webp","124_PHOTO-2022-04-05-15-50-033.webp","125_PHOTO-2022-04-05-15-50-034.webp","126_PHOTO-2022-04-05-15-50-035.webp","127_PHOTO-2022-04-05-15-50-03.webp","128_PHOTO-2022-04-06-22-53-07.webp","129_PHOTO-2022-04-06-22-53-32.webp","130_PHOTO-2022-04-07-12-52-56.webp","131_PHOTO-2022-04-11-15-48-47.webp","132_PHOTO-2022-04-11-15-48-48.webp","133_PHOTO-2022-04-19-15-09-23.webp","134_PHOTO-2022-04-19-15-09-38.webp","135_PHOTO-2022-06-08-15-04-09.webp","136_PHOTO-2022-06-08-15-04-36.webp","137_PHOTO-2022-06-08-15-04-38.webp","138_PHOTO-2022-06-08-15-04-39.webp","139_PHOTO-2022-10-06-10-29-03.webp","140_PHOTO-2023-01-03-21-02-141.webp","141_PHOTO-2023-01-03-21-02-142.webp","142_PHOTO-2023-01-03-21-02-14.webp","143_PHOTO-2023-01-19-11-41-50.webp","144_PHOTO-2023-01-19-11-41-52.webp","145_PHOTO-2023-01-19-11-41-55.webp","146_PHOTO-2023-01-19-11-41-59.webp","147_PHOTO-2023-01-19-11-42-02.webp","148_PHOTO-2023-01-19-11-42-04.webp","149_PHOTO-2023-01-21-13-46-311.webp","150_PHOTO-2023-01-21-13-46-312.webp","151_PHOTO-2023-01-21-13-46-31.webp","152_PHOTO-2023-01-24-11-07-45.webp","153_PHOTO-2023-01-24-11-07-461.webp","154_PHOTO-2023-01-24-11-07-46.webp","155_PHOTO-2023-01-24-11-07-47.webp","156_PHOTO-2023-02-17-13-24-031.webp","157_PHOTO-2023-02-17-13-24-0310.webp","158_PHOTO-2023-02-17-13-24-0311.webp","159_PHOTO-2023-02-17-13-24-0312.webp","160_PHOTO-2023-02-17-13-24-0313.webp","161_PHOTO-2023-02-17-13-24-0314.webp","162_PHOTO-2023-02-17-13-24-0315.webp","163_PHOTO-2023-02-17-13-24-0316.webp","164_PHOTO-2023-02-17-13-24-0317.webp","165_PHOTO-2023-02-17-13-24-0318.webp","166_PHOTO-2023-02-17-13-24-0319.webp","167_PHOTO-2023-02-17-13-24-032.webp","168_PHOTO-2023-02-17-13-24-0320.webp","169_PHOTO-2023-02-17-13-24-0321.webp","170_PHOTO-2023-02-17-13-24-0322.webp","171_PHOTO-2023-02-17-13-24-0323.webp","172_PHOTO-2023-02-17-13-24-033.webp","173_PHOTO-2023-02-17-13-24-034.webp","174_PHOTO-2023-02-17-13-24-035.webp","175_PHOTO-2023-02-17-13-24-036.webp","176_PHOTO-2023-02-17-13-24-037.webp","177_PHOTO-2023-02-17-13-24-038.webp","178_PHOTO-2023-02-17-13-24-039.webp","179_PHOTO-2023-02-17-13-24-03.webp","180_PHOTO-2023-03-04-10-54-37.webp","181_PHOTO-2023-03-04-10-54-47.webp","182_PHOTO-2023-03-04-10-54-58.webp","183_PHOTO-2023-03-04-10-55-05.webp","184_PHOTO-2023-03-08-12-05-14.webp","185_PHOTO-2023-03-20-11-57-47.webp","186_PHOTO-2023-04-03-16-33-171.webp","187_PHOTO-2023-04-03-16-33-172.webp","188_PHOTO-2023-04-03-16-33-17.webp","189_PHOTO-2023-04-05-14-31-24.webp","190_PHOTO-2023-04-05-14-31-251.webp","191_PHOTO-2023-04-05-14-31-25.webp","192_PHOTO-2023-04-05-14-31-26.webp","193_PHOTO-2023-04-05-14-31-271.webp","194_PHOTO-2023-04-05-14-31-27.webp","195_PHOTO-2023-05-23-10-56-501.webp","196_PHOTO-2023-05-23-10-56-50.webp","197_PHOTO-2023-05-23-10-56-51.webp","198_PHOTO-2023-05-23-10-56-52.webp","199_PHOTO-2023-05-24-21-53-06.webp","200_PHOTO-2023-05-24-21-56-51.webp","201_PHOTO-2023-05-24-21-57-08.webp","202_PHOTO-2023-05-24-21-57-28.webp","203_PHOTO-2023-05-24-22-00-48.webp","204_PHOTO-2024-07-12-12-22-521.webp","205_PHOTO-2024-07-12-12-22-522.webp","206_PHOTO-2024-07-12-12-22-52.webp","207_PHOTO-2024-07-12-12-50-39.webp","208_PHOTO-2024-07-12-13-21-03.webp","209_PHOTO-2024-07-15-14-02-261.webp","210_PHOTO-2024-07-15-14-02-26.webp","211_PHOTO-2024-07-15-14-03-091.webp","212_PHOTO-2024-07-15-14-03-092.webp","213_PHOTO-2024-07-15-14-03-093.webp","214_PHOTO-2024-07-15-14-03-094.webp","215_PHOTO-2024-07-15-14-03-09.webp","216_PHOTO-2024-07-17-12-52-59.webp","217_PHOTO-2024-07-19-12-51-16.webp","218_PHOTO-2024-07-19-12-51-17.webp","219_PHOTO-2024-07-19-12-51-18.webp","220_PHOTO-2024-07-19-12-51-19.webp","221_PHOTO-2024-07-19-12-51-20.webp","222_PHOTO-2024-07-19-12-51-211.webp","223_PHOTO-2024-07-19-12-51-21.webp","224_PHOTO-2024-07-19-12-51-221.webp","225_PHOTO-2024-07-19-12-51-22.webp","226_PHOTO-2024-07-19-12-51-23.webp","227_PHOTO-2024-07-23-13-47-41.webp","228_PHOTO-2024-07-23-13-47-56.webp","229_PHOTO-2024-07-26-09-53-041.webp","230_PHOTO-2024-07-26-09-53-042.webp","231_PHOTO-2024-07-26-09-53-04.webp","232_PHOTO-2024-08-02-10-20-00.webp","233_PHOTO-2024-08-12-16-19-17.webp","234_PHOTO-2024-08-27-11-58-52.webp","235_PHOTO-2024-08-27-14-39-08.webp","236_PHOTO-2024-09-13-12-03-31.webp","237_PHOTO-2024-09-13-12-07-25.webp","238_PHOTO-2024-09-13-12-18-17.webp","239_PHOTO-2024-09-13-12-18-181.webp","240_PHOTO-2024-09-13-12-18-18.webp","241_PHOTO-2024-09-13-12-18-20.webp","242_PHOTO-2024-09-13-12-56-42.webp","243_PHOTO-2024-09-13-12-56-441.webp","244_PHOTO-2024-09-13-12-56-44.webp","245_PHOTO-2024-09-13-12-56-45.webp","246_PHOTO-2024-09-13-12-59-221.webp","247_PHOTO-2024-09-13-12-59-222.webp","248_PHOTO-2024-09-13-12-59-223.webp","249_PHOTO-2024-09-13-12-59-224.webp","250_PHOTO-2024-09-13-12-59-225.webp","251_PHOTO-2024-09-13-12-59-226.webp","252_PHOTO-2024-09-13-12-59-227.webp","253_PHOTO-2024-09-13-12-59-228.webp","254_PHOTO-2024-09-13-12-59-229.webp","255_PHOTO-2024-09-13-12-59-22.webp","256_PHOTO-2024-09-13-13-02-051.webp","257_PHOTO-2024-09-13-13-02-05.webp","258_PHOTO-2024-09-13-13-27-341.webp","259_PHOTO-2024-09-13-13-27-342.webp","260_PHOTO-2024-09-13-13-27-343.webp","261_PHOTO-2024-09-13-13-27-344.webp","262_PHOTO-2024-09-13-13-27-345.webp","263_PHOTO-2024-09-13-13-27-346.webp","264_PHOTO-2024-09-13-13-27-347.webp","265_PHOTO-2024-09-13-13-27-34.webp"];
+
+// Build groups from allImgs
+groups['Fotos 2020-2021'] = allImgs.filter(f => f.includes('2020') || f.includes('2021'));
+groups['Fotos 2022'] = allImgs.filter(f => f.includes('2022'));
+groups['Fotos 2023'] = allImgs.filter(f => f.includes('2023'));
+groups['Fotos 2024'] = allImgs.filter(f => f.includes('2024'));
+
+const assignments = {};
+let activeSlot = null;
+
+// Render gallery
+const galleryEl = document.getElementById('gallery');
+for (const [groupName, imgs] of Object.entries(groups)) {
+  if (!imgs.length) continue;
+  const title = document.createElement('div');
+  title.className = 'section-title';
+  title.textContent = groupName + ` (${imgs.length} fotos)`;
+  galleryEl.appendChild(title);
+
+  const grid = document.createElement('div');
+  grid.className = 'grid';
+
+  imgs.forEach(fname => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.file = fname;
+    card.innerHTML = `
+      <img src="${IMG_BASE}${fname}" loading="lazy"/>
+      <div class="num">${fname.split('_')[0]}</div>
+      <div class="check">✓</div>
+      <div class="label">${fname}</div>`;
+    card.addEventListener('click', () => assignToSlot(fname, card));
+    grid.appendChild(card);
+  });
+  galleryEl.appendChild(grid);
+}
+
+// Slots logic
+document.querySelectorAll('.slot').forEach(slot => {
+  slot.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn-clear')) {
+      const s = slot.dataset.slot;
+      delete assignments[s];
+      slot.querySelector('.slot-img').style.display = 'none';
+      slot.querySelector('.slot-empty').style.display = 'flex';
+      slot.querySelector('.slot-name').textContent = '—';
+      slot.style.borderColor = '';
+      return;
+    }
+    document.querySelectorAll('.slot').forEach(s => s.style.outline = '');
+    slot.style.outline = '2px solid #f5c06a';
+    activeSlot = slot.dataset.slot;
+    document.getElementById('activeSlot').textContent = slot.querySelector('h4').textContent;
+  });
+});
+
+function assignToSlot(fname, card) {
+  if (!activeSlot) {
+    alert('Primero hacé click en un slot naranja arriba para activarlo');
+    return;
+  }
+  // Remove previous assignment for this slot
+  document.querySelectorAll('.card.selected').forEach(c => {
+    if (assignments[activeSlot] === c.dataset.file) c.classList.remove('selected');
+  });
+
+  assignments[activeSlot] = fname;
+  card.classList.add('selected');
+
+  const slot = document.querySelector(`.slot[data-slot="${activeSlot}"]`);
+  const img = slot.querySelector('.slot-img');
+  img.src = IMG_BASE + fname;
+  img.style.display = 'block';
+  slot.querySelector('.slot-empty').style.display = 'none';
+  slot.querySelector('.slot-name').textContent = fname;
+}
+
+function copyList() {
+  if (!Object.keys(assignments).length) {
+    alert('Todavía no asignaste ninguna imagen');
+    return;
+  }
+  let text = 'Asignaciones de imágenes para la web:\n\n';
+  for (const [slot, file] of Object.entries(assignments)) {
+    text += `${slot}: ${file}\n`;
+  }
+  navigator.clipboard.writeText(text).then(() => {
+    alert('¡Copiado! Pegalo en el chat de Claude');
+  }).catch(() => {
+    prompt('Copiá esto y pegalo en Claude:', text);
+  });
+}
+</script>
+</body>
+</html>

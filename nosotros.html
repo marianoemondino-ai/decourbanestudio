@@ -69,6 +69,22 @@
       <a href="index.html">Inicio</a>
       <a href="proyectos.html">Proyectos</a>
       <a href="servicios.html">Servicios</a>
+      <div class="nav-dropdown" id="catDropdown">
+        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" id="catBtn">
+          Catálogo
+          <svg class="dd-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" id="catMenu">
+          <a href="catalogo.html#sec-sillas">Sillas</a>
+          <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
+          <a href="catalogo.html#sec-sillones">Sillones</a>
+          <a href="catalogo.html#sec-mesas">Mesas &amp; Consolas</a>
+          <a href="catalogo.html#sec-espejos">Espejos</a>
+          <a href="catalogo.html#sec-lamparas">Lámparas</a>
+          <a href="catalogo.html#sec-alfombras">Alfombras</a>
+          <a href="catalogo.html#sec-adornos">Adornos</a>
+        </div>
+      </div>
     </div>
     <a href="index.html" class="nav-logo">
       <img src="img/logo.webp" alt="Decourban Estudio"/>
@@ -89,6 +105,17 @@
   <a href="index.html">Inicio</a>
   <a href="proyectos.html">Proyectos</a>
   <a href="servicios.html">Servicios</a>
+  <span class="nav-mobile-cat-label">Catálogo</span>
+  <div class="nav-mobile-sub">
+    <a href="catalogo.html#sec-sillas">Sillas</a>
+    <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
+    <a href="catalogo.html#sec-sillones">Sillones</a>
+    <a href="catalogo.html#sec-mesas">Mesas &amp; Consolas</a>
+    <a href="catalogo.html#sec-espejos">Espejos</a>
+    <a href="catalogo.html#sec-lamparas">Lámparas</a>
+    <a href="catalogo.html#sec-alfombras">Alfombras</a>
+    <a href="catalogo.html#sec-adornos">Adornos</a>
+  </div>
   <a href="nosotros.html" class="active">Nosotros</a>
   <a href="contacto.html">Contacto</a>
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
@@ -236,6 +263,7 @@
         <a href="index.html">Inicio</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="servicios.html">Servicios</a>
+        <a href="catalogo.html">Catálogo</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
       </div>
@@ -272,6 +300,22 @@
     var open = document.getElementById('navMobile').classList.toggle('open');
     this.setAttribute('aria-expanded', open);
   });
+
+  // ── Dropdown catálogo ──────────────────────────────
+  var catBtn = document.getElementById('catBtn');
+  var catDropdown = document.getElementById('catDropdown');
+  if (catBtn) {
+    catBtn.addEventListener('click', function() {
+      var isOpen = catDropdown.classList.toggle('open');
+      catBtn.setAttribute('aria-expanded', isOpen);
+    });
+    document.addEventListener('click', function(e) {
+      if (!catDropdown.contains(e.target)) {
+        catDropdown.classList.remove('open');
+        catBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 })();
 </script>
 </body>

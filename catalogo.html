@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Catálogo de Mobiliario — Decourban Estudio</title>
+<meta name="description" content="Catálogo de sillas, sofás, sillones, mesas, espejos, lámparas, alfombras y adornos. Piezas de diseño contemporáneo. Decourban Estudio, Río Cuarto."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="es_AR"/>
+<meta property="og:url" content="https://decourbanestudio.com.ar/catalogo.html"/>
+<meta property="og:title" content="Catálogo — Decourban Estudio"/>
+<meta property="og:description" content="Sillas, sofás, sillones, mesas, espejos, lámparas, alfombras y adornos de diseño. Decourban Estudio."/>
+<meta property="og:image" content="https://decourbanestudio.com.ar/img/catalogo/silla_ginger.webp"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://decourbanestudio.com.ar/img/catalogo/silla_ginger.webp"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="Decourban Estudio"/>
+<link rel="canonical" href="https://decourbanestudio.com.ar/catalogo.html"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<link rel="manifest" href="manifest.json"/>
+<meta name="theme-color" content="#ffffff"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* ── CATÁLOGO: estilos específicos ─────────────────── */
+.cat-hero {
+  padding: 160px 0 64px;
+  background: var(--bg-light);
+  text-align: center;
+}
+.cat-hero .section-eyebrow { margin-bottom: 12px; }
+.cat-hero h1 { margin-bottom: 16px; }
+.cat-hero .cat-hero-sub {
+  font-size: 1rem;
+  color: var(--text-mid);
+  max-width: 560px;
+  margin: 0 auto 40px;
+}
+
+/* ── FILTROS ────────────────────────────────────────── */
+.cat-filters {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 40px 24px 0;
+}
+.cat-filter-btn {
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 0;
+}
+.cat-filter-btn:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+.cat-filter-btn.active {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+}
+
+/* ── SECCIÓN DE CATEGORÍA ────────────────────────────── */
+.cat-section {
+  padding: 72px 0 48px;
+}
+.cat-section-header {
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  padding: 0 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 28px;
+}
+.cat-section-header h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+.cat-section-meta {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+/* ── GRILLA DE PRODUCTOS ─────────────────────────────── */
+.cat-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px 28px;
+}
+
+/* ── TARJETA DE PRODUCTO ─────────────────────────────── */
+.cat-card {
+  display: flex;
+  flex-direction: column;
+}
+.cat-card-img {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-light);
+  aspect-ratio: 4/5;
+}
+.cat-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.cat-card:hover .cat-card-img img {
+  transform: scale(1.04);
+}
+.cat-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.92);
+  color: var(--text);
+  padding: 4px 10px;
+}
+.cat-card-body {
+  padding: 20px 4px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.cat-card-name {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 8px;
+  letter-spacing: 0;
+}
+.cat-card-desc {
+  font-size: 0.84rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.cat-card-detail {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex: 1;
+}
+.cat-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  width: fit-content;
+  transition: color 0.2s, opacity 0.2s;
+}
+.cat-card-cta:hover { color: var(--accent); }
+.cat-card-cta svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s;
+}
+.cat-card:hover .cat-card-cta svg { transform: translateX(3px); }
+
+/* ── PERSONALIZACIÓN CTA ─────────────────────────────── */
+.cat-customize {
+  background: var(--bg-mid);
+  padding: 72px 32px;
+  text-align: center;
+  margin: 64px 0 0;
+}
+.cat-customize h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 16px;
+}
+.cat-customize p {
+  max-width: 560px;
+  margin: 0 auto 20px;
+  font-size: 0.94rem;
+  color: var(--text-mid);
+}
+.cat-customize-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 36px auto 40px;
+  max-width: 720px;
+}
+.cat-opt {
+  text-align: center;
+}
+.cat-opt-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+.cat-opt-values {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .cat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 16px;
+    padding: 0 16px;
+  }
+  .cat-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 16px 20px;
+  }
+  .cat-filters { padding: 32px 16px 0; }
+  .cat-customize { padding: 48px 20px; }
+}
+@media (max-width: 480px) {
+  .cat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <div class="nav-links nav-links-left">
+      <a href="index.html">Inicio</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="servicios.html">Servicios</a>
+      <div class="nav-dropdown" id="catDropdown">
+        <button class="nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true" id="catBtn">
+          Catálogo
+          <svg class="dd-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" id="catMenu">
+          <a href="catalogo.html#sec-sillas">Sillas</a>
+          <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
+          <a href="catalogo.html#sec-sillones">Sillones</a>
+          <a href="catalogo.html#sec-mesas">Mesas &amp; Consolas</a>
+          <a href="catalogo.html#sec-espejos">Espejos</a>
+          <a href="catalogo.html#sec-lamparas">Lámparas</a>
+          <a href="catalogo.html#sec-alfombras">Alfombras</a>
+          <a href="catalogo.html#sec-adornos">Adornos</a>
+        </div>
+      </div>
+    </div>
+    <a href="index.html" class="nav-logo">
+      <img src="img/logo.webp" alt="Decourban Estudio"/>
+    </a>
+    <div class="nav-links nav-links-right">
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="contacto.html" class="nav-cta">Asesoramiento</a>
+    </div>
+    <button class="nav-hamburger" id="menuBtn" aria-label="Menú" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html">Inicio</a>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="servicios.html">Servicios</a>
+  <span class="nav-mobile-cat-label">Catálogo</span>
+  <div class="nav-mobile-sub">
+    <a href="catalogo.html#sec-sillas">Sillas</a>
+    <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
+    <a href="catalogo.html#sec-sillones">Sillones</a>
+    <a href="catalogo.html#sec-mesas">Mesas &amp; Consolas</a>
+    <a href="catalogo.html#sec-espejos">Espejos</a>
+    <a href="catalogo.html#sec-lamparas">Lámparas</a>
+    <a href="catalogo.html#sec-alfombras">Alfombras</a>
+    <a href="catalogo.html#sec-adornos">Adornos</a>
+  </div>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
+</div>
+
+<!-- HERO -->
+<section class="cat-hero">
+  <div class="section-eyebrow">Collection 2026</div>
+  <h1>Catálogo <em>Mobiliario</em></h1>
+  <p class="cat-hero-sub">Piezas seleccionadas para proyectos de interiorismo. Diseño contemporáneo, materiales nobles y terminaciones personalizables.</p>
+</section>
+
+<!-- FILTROS -->
+<div class="cat-filters">
+  <button class="cat-filter-btn active" data-filter="all">Todos</button>
+  <button class="cat-filter-btn" data-filter="sillas">Sillas</button>
+  <button class="cat-filter-btn" data-filter="sofas">Sofás &amp; Butacas</button>
+  <button class="cat-filter-btn" data-filter="sillones">Sillones</button>
+  <button class="cat-filter-btn" data-filter="mesas">Mesas</button>
+  <button class="cat-filter-btn" data-filter="espejos">Espejos</button>
+  <button class="cat-filter-btn" data-filter="lamparas">Lámparas</button>
+  <button class="cat-filter-btn" data-filter="alfombras">Alfombras</button>
+  <button class="cat-filter-btn" data-filter="adornos">Adornos</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECCIÓN: SILLAS
+═══════════════════════════════════════════════════ -->
+<section class="cat-section" id="sec-sillas" data-category="sillas">
+  <div class="cat-section-header">
+    <div>
+      <div class="section-eyebrow">Nouvelles · Collection 2026</div>
+      <h2>Sillas</h2>
+    </div>
+    <span class="cat-section-meta">12 modelos</span>
+  </div>
+
+  <div class="cat-grid">
+
+    <!-- GINGER -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_ginger.webp" alt="Silla Ginger" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Ginger</div>
+        <p class="cat-card-desc">Diseño rústico y atemporal. La nobleza de la madera natural destaca su esencia de líneas continuas y sutiles.</p>
+        <div class="cat-card-detail">Madera: Petiribí / Guatambú / Laurel<br/>Tapizado: Pana · De tapicería · Eco-cuero / Cuero</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Ginger" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- GINGER SITIAL -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_ginger_sitial.webp" alt="Silla Ginger Sitial" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Ginger Sitial</div>
+        <p class="cat-card-desc">Versión con apoyabrazos de la línea Ginger. Misma esencia rústica y atemporal con mayor confort y presencia.</p>
+        <div class="cat-card-detail">Madera: Petiribí / Guatambú / Laurel<br/>Tapizado: Pana · De tapicería · Eco-cuero / Cuero</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Ginger%20Sitial" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- LILA -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_lila.webp" alt="Silla Lila" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Lila</div>
+        <p class="cat-card-desc">Líneas suaves con estructura continua. Hecha a mano, contemporánea y versátil para living, recepción o lectura.</p>
+        <div class="cat-card-detail">Madera: Petiribí / Guatambú / Laurel<br/>Tapizado: Pana · De tapicería · Eco-cuero / Cuero</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Lila" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- THOM TAPIZADA -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_thom_tapizada.webp" alt="Silla Thom Tapizada" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Thom Tapizada</div>
+        <p class="cat-card-desc">Líneas suaves y proporciones equilibradas. Combina diseño y confort con madera natural que aporta calidez atemporal.</p>
+        <div class="cat-card-detail">Madera: Petiribí / Guatambú / Laurel<br/>Tapizado: Pana · De tapicería · Eco-cuero / Cuero</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Thom%20Tapizada" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- THOM RATÁN -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_thom_ratan.webp" alt="Silla Thom Ratán" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Thom Ratán</div>
+        <p class="cat-card-desc">Entramado continuo de ratán sintético que envuelve asiento y respaldo. Una pieza ligera y cálida de gran personalidad.</p>
+        <div class="cat-card-detail">Madera: Petiribí / Guatambú / Laurel<br/>Ratán sintético tejido a mano</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Thom%20Rat%C3%A1n" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- LENA -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_lena.webp" alt="Silla Lena" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Lena</div>
+        <p class="cat-card-desc">Silla de estilo escandinavo con apoyabrazos. Estructura de madera noble con tapizado en tela o cuero para comedor u oficina.</p>
+        <div class="cat-card-detail">Madera: Petiribí / Guatambú / Laurel<br/>Tapizado: Pana · De tapicería · Eco-cuero / Cuero</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Lena" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- RITA -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_rita.webp" alt="Silla Rita" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Rita</div>
+        <p class="cat-card-desc">Pieza de carácter suave y envolvente. La continuidad del respaldo y apoyabrazos crea una silueta elegante con equilibrio perfecto.</p>
+        <div class="cat-card-detail">Madera: Petiribí / Guatambú / Laurel<br/>Tapizado: Pana · De tapicería · Eco-cuero / Cuero</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Rita" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- MIX -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_mix.webp" alt="Silla Mix" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Mix</div>
+        <p class="cat-card-desc">Destaca la esencia del material noble. Respaldo curvo y apoyabrazos integrados. Elegante, cálida y versátil para comedor, living u oficina.</p>
+        <div class="cat-card-detail">Estructura completa en madera<br/>Petiribí / Guatambú / Laurel · Lustre o Laqueado</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Mix" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- MIX TAPIZADA -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_mix_tapizada.webp" alt="Silla Mix Tapizada" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Mix Tapizada</div>
+        <p class="cat-card-desc">Versión tapizada de la línea Mix. Mismo respaldo curvo con asiento tapizado para mayor confort. Ideal en cuero o pana.</p>
+        <div class="cat-card-detail">Madera: Petiribí / Guatambú / Laurel<br/>Tapizado: Pana · De tapicería · Eco-cuero / Cuero</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Mix%20Tapizada" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- LIVANTO CLÁSICA -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_livanto_clasica.webp" alt="Silla Livanto Clásica" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Livanto Clásica</div>
+        <p class="cat-card-desc">Líneas suaves y proporciones equilibradas. Su respaldo levemente curvo acompaña la postura con confort y ligereza visual.</p>
+        <div class="cat-card-detail">Madera: Petiribí / Guatambú / Laurel<br/>Tapizado: Pana · De tapicería · Eco-cuero / Cuero</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Livanto%20Cl%C3%A1sica" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- LIVANTO SITIAL -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_livanto_sitial.webp" alt="Silla Livanto Sitial" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Livanto Sitial</div>
+        <p class="cat-card-desc">Versión envolvente con apoyabrazos integrados. Tapizado completo, ideal para cabeceras o sectores de mayor permanencia.</p>
+        <div class="cat-card-detail">Madera: Petiribí / Guatambú / Laurel<br/>Tapizado: Pana · De tapicería · Eco-cuero / Cuero</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Livanto%20Sitial" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- LIVANTO SITIAL XL -->
+    <div class="cat-card rv" data-cat="sillas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/silla_livanto_sitial_xl.webp" alt="Silla Livanto Sitial XL" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Livanto Sitial XL</div>
+        <p class="cat-card-desc">La versión más generosa de la línea Livanto. Silueta envolvente y asiento amplio para mayor presencia y confort en el ambiente.</p>
+        <div class="cat-card-detail">Madera: Petiribí / Guatambú / Laurel<br/>Tapizado: Pana · De tapicería · Eco-cuero / Cuero</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Silla%20Livanto%20Sitial%20XL" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SECCIÓN: SOFÁS & BUTACAS
+═══════════════════════════════════════════════════ -->
+<section class="cat-section" id="sec-sofas" data-category="sofas" style="background: var(--bg-light);">
+  <div class="cat-section-header" style="background: var(--bg-light);">
+    <div>
+      <div class="section-eyebrow">dU · Collection 2026</div>
+      <h2>Sofás &amp; Butacas</h2>
+    </div>
+    <span class="cat-section-meta">10 modelos</span>
+  </div>
+
+  <div class="cat-grid">
+
+    <div class="cat-card rv" data-cat="sofas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/sofa_01.webp" alt="Sofá Modular Tufted" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sofá Modular Tufted</div>
+        <p class="cat-card-desc">Seccional bajo de diseño contemporáneo con capitoné. Composición en L personalizable. Presencia y confort en el living.</p>
+        <div class="cat-card-detail">Tapizados: Lino · Bouclé · Chenille · Pana · Eco cuero<br/>Terminaciones personalizables</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sof%C3%A1%20Modular%20Tufted" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="cat-card rv" data-cat="sofas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/sofa_02.webp" alt="Sofá Lineal" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sofá Lineal</div>
+        <p class="cat-card-desc">Sofá bajo de líneas limpias con brazos redondeados. Tapizado bouclé de alto volumen. Elegante y acogedor.</p>
+        <div class="cat-card-detail">Tapizados: Lino · Bouclé · Chenille · Pana · Eco cuero<br/>Terminaciones personalizables</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sof%C3%A1%20Lineal" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="cat-card rv" data-cat="sofas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/sofa_03.webp" alt="Sofá Modular" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sofá Modular</div>
+        <p class="cat-card-desc">Sistema modular con respaldo de cojines independientes. Configuración flexible para adaptarse al espacio y la familia.</p>
+        <div class="cat-card-detail">Tapizados: Lino · Bouclé · Chenille · Pana · Eco cuero<br/>Terminaciones personalizables</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sof%C3%A1%20Modular" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="cat-card rv" data-cat="sofas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/sofa_04.webp" alt="Sofá Curvo" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sofá Curvo</div>
+        <p class="cat-card-desc">Silueta orgánica en media luna. Volumen envolvente en bouclé de alta densidad. Una pieza escultural que define el espacio.</p>
+        <div class="cat-card-detail">Tapizados: Lino · Bouclé · Chenille · Pana · Eco cuero<br/>Terminaciones personalizables</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sof%C3%A1%20Curvo" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="cat-card rv" data-cat="sofas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/sofa_05.webp" alt="Sofá Isleta" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sofá Isleta</div>
+        <p class="cat-card-desc">Sofá circular de forma libre. Perfecto como isla central en livinges amplios o como punto focal de cualquier espacio.</p>
+        <div class="cat-card-detail">Tapizados: Lino · Bouclé · Chenille · Pana · Eco cuero<br/>Terminaciones personalizables</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sof%C3%A1%20Isleta" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="cat-card rv" data-cat="sofas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/sofa_06.webp" alt="Sofá Minimalista" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sofá Minimalista</div>
+        <p class="cat-card-desc">Brazos cuadrados y líneas rectas. Diseño minimalista de alto impacto visual. Ideal para espacios contemporáneos y de diseño.</p>
+        <div class="cat-card-detail">Tapizados: Lino · Bouclé · Chenille · Pana · Eco cuero<br/>Terminaciones personalizables</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sof%C3%A1%20Minimalista" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="cat-card rv" data-cat="sofas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/butaca_07.webp" alt="Butaca Lounge" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Butaca Lounge</div>
+        <p class="cat-card-desc">Butaca individual con base en madera natural. Tapizado en bouclé texturado. Perfecta para rincones de lectura o recepción.</p>
+        <div class="cat-card-detail">Base: Madera Petiribí / Guatambú / Laurel<br/>Tapizados: Lino · Bouclé · Chenille · Pana · Eco cuero</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Butaca%20Lounge" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="cat-card rv" data-cat="sofas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/sofa_08.webp" alt="Sofá Seccional Chaise" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sofá Seccional Chaise</div>
+        <p class="cat-card-desc">Seccional con chaise de silueta orgánica. Brazos redondeados y asiento profundo para el máximo confort familiar.</p>
+        <div class="cat-card-detail">Tapizados: Lino · Bouclé · Chenille · Pana · Eco cuero<br/>Terminaciones personalizables</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sof%C3%A1%20Seccional%20Chaise" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="cat-card rv" data-cat="sofas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/sofa_09.webp" alt="Sofá Redondo" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sofá Redondo</div>
+        <p class="cat-card-desc">Diseño circular envolvente. Silueta de loveseat redondo con brazo integrado. Ideal para rincones con carácter o suites.</p>
+        <div class="cat-card-detail">Tapizados: Lino · Bouclé · Chenille · Pana · Eco cuero<br/>Terminaciones personalizables</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sof%C3%A1%20Redondo" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="cat-card rv" data-cat="sofas">
+      <div class="cat-card-img">
+        <img src="img/catalogo/sofa_10.webp" alt="Sofá Redondo XL" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sofá Redondo XL</div>
+        <p class="cat-card-desc">Versión gran formato del sofá circular. Múltiples plazas con respaldo bajo envolvente. Pieza de autor para livinges amplios.</p>
+        <div class="cat-card-detail">Tapizados: Lino · Bouclé · Chenille · Pana · Eco cuero<br/>Terminaciones personalizables</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sof%C3%A1%20Redondo%20XL" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SECCIÓN: SILLONES
+═══════════════════════════════════════════════════ -->
+<section class="cat-section" id="sec-sillones" data-category="sillones">
+  <div class="cat-section-header">
+    <div>
+      <div class="section-eyebrow">Sillones &amp; Puffs</div>
+      <h2>Sillones</h2>
+    </div>
+    <span class="cat-section-meta">3 modelos</span>
+  </div>
+
+  <div class="cat-grid">
+
+    <!-- SILLÓN MONACO -->
+    <div class="cat-card rv" data-cat="sillones">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-09-26-190435-ee636f80e73444b6f717589242942623-1024-1024.webp" alt="Sillón Monaco" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sillón Monaco</div>
+        <p class="cat-card-desc">Sillón de diseño italiano. Estructura metálica y tapizado de alta resistencia. Disponible en negro y blanco.</p>
+        <div class="cat-card-detail">Color: Negro / Blanco<br/>Estructura metálica · Tapizado resistente</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sill%C3%B3n%20Monaco" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- SILLÓN KENZO -->
+    <div class="cat-card rv" data-cat="sillones">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/img_9109-fbde0aa1d00029292717538840253837-1024-1024.webp" alt="Sillón Kenzo" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sillón Kenzo</div>
+        <p class="cat-card-desc">Sillón de líneas orgánicas y asiento amplio. Tapizado en tela de alta calidad para mayor confort y permanencia.</p>
+        <div class="cat-card-detail">Tapizados: Lino · Bouclé · Chenille · Pana<br/>Terminaciones personalizables</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sill%C3%B3n%20Kenzo" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- PUFF JACINTO -->
+    <div class="cat-card rv" data-cat="sillones">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-223623-d869e7742b0968fa0c17554810109994-1024-1024.webp" alt="Puff Jacinto" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Puff Jacinto</div>
+        <p class="cat-card-desc">Puff de mimbre natural tejido a mano. Versátil como asiento, reposapiés o mesa de apoyo informal.</p>
+        <div class="cat-card-detail">Material: Mimbre natural<br/>Medidas: 40 × 40 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Puff%20Jacinto" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SECCIÓN: MESAS & CONSOLAS
+═══════════════════════════════════════════════════ -->
+<section class="cat-section" id="sec-mesas" data-category="mesas" style="background: var(--bg-light);">
+  <div class="cat-section-header" style="background: var(--bg-light);">
+    <div>
+      <div class="section-eyebrow">Mesas &amp; Consolas</div>
+      <h2>Mesas</h2>
+    </div>
+    <span class="cat-section-meta">3 modelos</span>
+  </div>
+
+  <div class="cat-grid">
+
+    <!-- MESA ESTOCOLMO -->
+    <div class="cat-card rv" data-cat="mesas">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/imagen-de-whatsapp-2025-09-22-a-las-12-27-15_1acd51fc-fb0c5b5a36a33747fd17585549562233-1024-1024.webp" alt="Mesa de centro Estocolmo" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Mesa de centro Estocolmo</div>
+        <p class="cat-card-desc">Mesa de centro de diseño escandinavo en madera maciza. Líneas limpias y presencia cálida en el living.</p>
+        <div class="cat-card-detail">Material: Madera maciza<br/>Acabados personalizables</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Mesa%20de%20centro%20Estocolmo" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- MESA RATÁN -->
+    <div class="cat-card rv" data-cat="mesas">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-223331-b8c910fb731ccaf5ee17554808634179-1024-1024.webp" alt="Mesa de centro Ratán" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Mesa de centro Ratán</div>
+        <p class="cat-card-desc">Mesa de centro en ratán natural. Textura orgánica que aporta calidez y naturalidad al espacio.</p>
+        <div class="cat-card-detail">Material: Ratán natural<br/>Medidas: 80 × 40 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Mesa%20de%20centro%20Rat%C3%A1n" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- CONSOLA NATURALE -->
+    <div class="cat-card rv" data-cat="mesas">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222810-a85c30a0f8cd29d72917554805935212-1024-1024.webp" alt="Consola Naturale" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Consola Naturale</div>
+        <p class="cat-card-desc">Consola en madera y materiales naturales. Perfecta para entradas, pasillos o detrás del sofá. Elegante y funcional.</p>
+        <div class="cat-card-detail">Material: Madera natural<br/>Terminaciones naturales</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Consola%20Naturale" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SECCIÓN: ESPEJOS
+═══════════════════════════════════════════════════ -->
+<section class="cat-section" id="sec-espejos" data-category="espejos">
+  <div class="cat-section-header">
+    <div>
+      <div class="section-eyebrow">Espejos decorativos</div>
+      <h2>Espejos</h2>
+    </div>
+    <span class="cat-section-meta">2 modelos</span>
+  </div>
+
+  <div class="cat-grid">
+
+    <!-- ESPEJO DALIA -->
+    <div class="cat-card rv" data-cat="espejos">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-223048-079d0efd19c38b89e717554806596677-1024-1024.webp" alt="Espejo Dalia" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Espejo Dalia</div>
+        <p class="cat-card-desc">Espejo decorativo con marco trabajado. Pieza escultural que funciona como elemento de arte en cualquier espacio.</p>
+        <div class="cat-card-detail">Marco decorativo<br/>Ideal para living, recibidor o dormitorio</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Espejo%20Dalia" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ESPEJO RECTANGULAR -->
+    <div class="cat-card rv" data-cat="espejos">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/4e39170a-f757-457d-b7f9-dffeb81ed482-8d2aa96f4320122a8b17374010605859-1024-1024.webp" alt="Espejo Rectangular" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Espejo Rectangular</div>
+        <p class="cat-card-desc">Espejo de madera de gran formato. Presencia arquitectónica que amplía visualmente el espacio y aporta calidez.</p>
+        <div class="cat-card-detail">Marco: Madera maciza<br/>Medidas: 80 × 180 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Espejo%20Rectangular" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SECCIÓN: LÁMPARAS
+═══════════════════════════════════════════════════ -->
+<section class="cat-section" id="sec-lamparas" data-category="lamparas" style="background: var(--bg-light);">
+  <div class="cat-section-header" style="background: var(--bg-light);">
+    <div>
+      <div class="section-eyebrow">Iluminación natural</div>
+      <h2>Lámparas</h2>
+    </div>
+    <span class="cat-section-meta">2 modelos</span>
+  </div>
+
+  <div class="cat-grid">
+
+    <!-- LÁMPARA CAMARÓN -->
+    <div class="cat-card rv" data-cat="lamparas">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/img_9129-666d29e6545bf63ab117539863996144-1024-1024.webp" alt="Lámpara Camarón" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Lámpara Camarón</div>
+        <p class="cat-card-desc">Lámpara de pie en mimbre natural trenzado. La luz filtrada a través del tejido crea una atmósfera cálida y acogedora.</p>
+        <div class="cat-card-detail">Material: Mimbre natural<br/>Luz difusa / Ambiente</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20L%C3%A1mpara%20Camer%C3%B3n" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- LÁMPARA DÍA -->
+    <div class="cat-card rv" data-cat="lamparas">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/2fbbfe32-163b-4982-8ccb-a8e28b11c4cf-1c7c46dd64f2dd72e417364480226959-1024-1024.webp" alt="Lámpara Día" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Lámpara Día</div>
+        <p class="cat-card-desc">Lámpara colgante de ratán. Forma orgánica que integra el tejido natural con la luz ambiental para crear climas únicos.</p>
+        <div class="cat-card-detail">Material: Ratán natural<br/>Medidas: 35 × 50 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20L%C3%A1mpara%20D%C3%ADa" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SECCIÓN: ALFOMBRAS
+═══════════════════════════════════════════════════ -->
+<section class="cat-section" id="sec-alfombras" data-category="alfombras">
+  <div class="cat-section-header">
+    <div>
+      <div class="section-eyebrow">Textiles de piso</div>
+      <h2>Alfombras</h2>
+    </div>
+    <span class="cat-section-meta">2 modelos</span>
+  </div>
+
+  <div class="cat-grid">
+
+    <!-- ALFOMBRA KIRAM -->
+    <div class="cat-card rv" data-cat="alfombras">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-224221-76d228021f73b8b54217554813485831-1024-1024.webp" alt="Alfombra Kiram" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Alfombra Kiram</div>
+        <p class="cat-card-desc">Alfombra de diseño contemporáneo con textura destacada. Ideal para definir ambientes y aportar calidez al espacio.</p>
+        <div class="cat-card-detail">Material: Fibras naturales<br/>Medidas disponibles a consultar</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Alfombra%20Kiram" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ALFOMBRA KILIM -->
+    <div class="cat-card rv" data-cat="alfombras">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/2f2743d8-42ab-41bc-9d0d-1c492c6a00e0-f1dea557f36908de8b17373906142489-1024-1024.webp" alt="Alfombra Kilim" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Alfombra Kilim</div>
+        <p class="cat-card-desc">Alfombra kilim tejida al telar. Importada. Patrón geométrico artesanal que aporta personalidad y arte al espacio.</p>
+        <div class="cat-card-detail">Tejida al telar · Importada<br/>Medidas: 150 × 200 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Alfombra%20Kilim" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SECCIÓN: ADORNOS
+═══════════════════════════════════════════════════ -->
+<section class="cat-section" id="sec-adornos" data-category="adornos" style="background: var(--bg-light);">
+  <div class="cat-section-header" style="background: var(--bg-light);">
+    <div>
+      <div class="section-eyebrow">Objetos decorativos</div>
+      <h2>Adornos</h2>
+    </div>
+    <span class="cat-section-meta">1 modelo</span>
+  </div>
+
+  <div class="cat-grid">
+
+    <!-- CANDELABRO SERRA -->
+    <div class="cat-card rv" data-cat="adornos">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/img_9136-37f4a7f396659fa6b417538930747256-1024-1024.webp" alt="Candelabro Serra" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Candelabro Serra</div>
+        <p class="cat-card-desc">Candelabro de madera hecho a mano. Pieza única que emula la silueta de una columna. Sin vela, puro objeto de diseño.</p>
+        <div class="cat-card-detail">Material: Madera maciza artesanal<br/>Altura: 45 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Candelabro%20Serra" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PERSONALIZACIÓN -->
+<section class="cat-customize">
+  <div class="section-eyebrow">Todas las piezas</div>
+  <h2>Personalizá <em>tu pieza</em></h2>
+  <p>Elegís la estructura, el tapizado y la terminación. Te mostramos cada textura y color para que la pieza sea exactamente lo que imaginás.</p>
+
+  <div class="cat-customize-options">
+    <div class="cat-opt">
+      <div class="cat-opt-label">Tapizados</div>
+      <div class="cat-opt-values">Lino<br/>Bouclé<br/>Chenille<br/>Pana<br/>Eco-cuero / Cuero</div>
+    </div>
+    <div class="cat-opt">
+      <div class="cat-opt-label">Maderas</div>
+      <div class="cat-opt-values">Petiribí<br/>Guatambú<br/>Laurel</div>
+    </div>
+    <div class="cat-opt">
+      <div class="cat-opt-label">Terminaciones</div>
+      <div class="cat-opt-values">Lustre satinado<br/>Lustre mate<br/>Laqueado</div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/543585075773?text=Hola,%20quisiera%20consultar%20sobre%20el%20cat%C3%A1logo%20de%20mobiliario" target="_blank" rel="noopener noreferrer" class="btn-accent">Consultar por catálogo</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid footer-grid-min">
+      <div class="footer-col">
+        <div class="footer-logo footer-logo-badge">
+          <img src="img/logo.webp" alt="Decourban Estudio"/>
+        </div>
+        <p>Estudio de diseño de interiores en Río Cuarto, Córdoba. Interiorismo, cortinas a medida, mobiliario y asesoramiento integral desde 2004.</p>
+        <div class="footer-social" style="margin-top:20px;">
+          <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Catálogo</h4>
+        <a href="catalogo.html#sec-sillas">Sillas</a>
+        <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
+        <a href="catalogo.html#sec-sillones">Sillones</a>
+        <a href="catalogo.html#sec-mesas">Mesas &amp; Consolas</a>
+        <a href="catalogo.html#sec-espejos">Espejos</a>
+        <a href="catalogo.html#sec-lamparas">Lámparas</a>
+        <a href="catalogo.html#sec-alfombras">Alfombras</a>
+        <a href="catalogo.html#sec-adornos">Adornos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>Juan de Garay 1550<br/>Río Cuarto, Córdoba</p>
+        <p style="margin-top:12px;">+54 358 507-5773<br/>Ventas@decourban.com.ar</p>
+        <p style="margin-top:12px;">Lun-Vie 9 a 18 h · Sáb 9 a 13 h</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Decourban Estudio. Todos los derechos reservados. · <a href="privacidad.html" style="color:inherit;text-decoration:underline;">Política de Privacidad</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/543585075773?text=Hola,%20me%20gustar%C3%ADa%20consultar%20sobre%20el%20cat%C3%A1logo" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+(function(){
+  // ── Nav: transparent → solid on scroll ────────────
+  var nav = document.getElementById('siteNav');
+  function updateNav() {
+    nav.classList.toggle('solid', window.scrollY > 60);
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
+  // ── Mobile menu ────────────────────────────────────
+  document.getElementById('menuBtn').addEventListener('click', function() {
+    var open = document.getElementById('navMobile').classList.toggle('open');
+    this.setAttribute('aria-expanded', open);
+  });
+
+  // ── Dropdown: click fallback for touch devices ─────
+  var catBtn = document.getElementById('catBtn');
+  var catDropdown = document.getElementById('catDropdown');
+  if (catBtn) {
+    catBtn.addEventListener('click', function(e) {
+      var isOpen = catDropdown.classList.toggle('open');
+      catBtn.setAttribute('aria-expanded', isOpen);
+    });
+    document.addEventListener('click', function(e) {
+      if (!catDropdown.contains(e.target)) {
+        catDropdown.classList.remove('open');
+        catBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // ── Reveal on scroll ───────────────────────────────
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.rv').forEach(function(el){ observer.observe(el); });
+
+  // ── Filtros de categoría ───────────────────────────
+  var filterBtns = document.querySelectorAll('.cat-filter-btn');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('active'); });
+      this.classList.add('active');
+      var filter = this.dataset.filter;
+      var sections = document.querySelectorAll('.cat-section');
+      sections.forEach(function(sec){
+        if(filter === 'all' || sec.dataset.category === filter){
+          sec.style.display = '';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
