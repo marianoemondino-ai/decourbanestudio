@@ -29,6 +29,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
+<!-- Google Analytics 4 — reemplazar G-XXXXXXXXXX con tu Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.location.href});
+</script>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -66,7 +74,7 @@
 <body>
 
 <!-- NAV -->
-<nav class="site-nav" id="siteNav">
+<nav class="site-nav" id="siteNav" aria-label="Navegación principal">
   <div class="nav-inner">
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
@@ -386,7 +394,7 @@
       <div class="footer-col">
         <h4>Contacto</h4>
         <p>Juan de Garay 1550<br/>Río Cuarto, Córdoba</p>
-        <p style="margin-top:12px;">+54 358 507-5773<br/>Ventas@decourban.com.ar</p>
+        <p style="margin-top:12px;"><a href="tel:+543585075773" style="color:inherit">+54 358 507-5773</a><br/><a href="mailto:ventas@decourban.com.ar" style="color:inherit">ventas@decourban.com.ar</a></p>
         <p style="margin-top:12px;">Lun-Vie 9 a 18 h · Sáb 9 a 13 h</p>
       </div>
     </div>
@@ -432,6 +440,26 @@
       }
     });
   }
+
+  // ── WhatsApp click tracking ────────────────────────
+  document.addEventListener('click', function(e) {
+    var wa = e.target.closest('a[href^="https://wa.me"]');
+    if (wa && typeof gtag !== 'undefined') {
+      gtag('event', 'whatsapp_click', {
+        event_category: 'engagement',
+        event_label: wa.getAttribute('data-track') || 'proyectos',
+        value: 1
+      });
+    }
+  });
+
+  // ── Scroll reveal ──────────────────────────────────
+  var rvObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); rvObs.unobserve(e.target); }
+    });
+  },{threshold:0.06});
+  document.querySelectorAll('.rv,.rvl,.rvr').forEach(function(el){ rvObs.observe(el); });
 })();
 </script>
 </body>

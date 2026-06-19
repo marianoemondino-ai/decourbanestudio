@@ -30,6 +30,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
+<!-- Google Analytics 4 — reemplazar G-XXXXXXXXXX con tu Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.location.href});
+</script>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -49,7 +57,7 @@
         "@type":"LocalBusiness",
         "name":"Decourban Estudio",
         "telephone":"+543585075773",
-        "email":"Ventas@decourban.com.ar",
+        "email":"ventas@decourban.com.ar",
         "address":{"@type":"PostalAddress","streetAddress":"Juan de Garay 1550","addressLocality":"Río Cuarto","addressRegion":"Córdoba","postalCode":"5800","addressCountry":"AR"},
         "geo":{"@type":"GeoCoordinates","latitude":-33.1307,"longitude":-64.3500},
         "sameAs":["https://www.instagram.com/decourbanestudio"],
@@ -76,7 +84,7 @@
 <body>
 
 <!-- NAV -->
-<nav class="site-nav" id="siteNav">
+<nav class="site-nav" id="siteNav" aria-label="Navegación principal">
   <div class="nav-inner">
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
@@ -141,7 +149,7 @@
       <a href="index.html">Inicio</a><span>›</span><span style="color:var(--text-mid)">Contacto</span>
     </div>
     <h1>Hablemos de <em>tu proyecto</em></h1>
-    <p>Contanos qué espacio querés transformar. Te respondemos por WhatsApp en menos de 2 horas, sin costo y sin compromiso.</p>
+    <p>Contanos qué espacio querés transformar. Primera consulta gratuita, sin compromiso. Respondemos por WhatsApp en menos de 2 horas.</p>
   </div>
 </div>
 
@@ -254,8 +262,8 @@
         </button>
         <p class="form-note">Respondemos en menos de 24 horas · Sin spam · Nunca compartimos tus datos</p>
         <div class="success-msg" id="successMsg">
-          <h4>¡Listo! Abrimos WhatsApp con tu consulta</h4>
-          <p>Revisá la pestaña de WhatsApp que se abrió y enviá el mensaje para completar tu consulta. Te respondemos a la brevedad.</p>
+          <h4>¡Listo! Se abrió WhatsApp con tu consulta</h4>
+          <p>Revisá la pestaña de WhatsApp que se abrió automáticamente y apretá <strong>Enviar</strong>. Te respondemos en menos de 2 horas en horario de atención.</p>
         </div>
       </form>
     </div>
@@ -284,7 +292,7 @@
           <div class="info-row-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.04a16 16 0 006.06 6.05l1.32-1.32a2 2 0 012.11-.44c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
           <div>
             <div class="info-row-title">Teléfono / WhatsApp</div>
-            <div class="info-row-val"><a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">+54 358 5075773</a></div>
+            <div class="info-row-val"><a href="https://wa.me/543585075773" target="_blank" rel="noopener noreferrer">+54 358 507-5773</a></div>
           </div>
         </div>
         <div class="info-row">
@@ -298,7 +306,7 @@
           <div class="info-row-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
           <div>
             <div class="info-row-title">Email</div>
-            <div class="info-row-val"><a href="mailto:Ventas@decourban.com.ar">Ventas@decourban.com.ar</a></div>
+            <div class="info-row-val"><a href="mailto:ventas@decourban.com.ar">ventas@decourban.com.ar</a></div>
           </div>
         </div>
         <div class="info-row">
@@ -318,9 +326,7 @@
 <section class="hours">
   <div class="hours-inner">
     <div class="hours-text rv">
-      <div style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:10px">
-        <span style="display:block;width:24px;height:1px;background:var(--accent)"></span>Horarios
-      </div>
+      <div class="section-eyebrow" style="margin-bottom:12px">Horarios</div>
       <h2 style="font-family:var(--font-display);font-size:clamp(26px,3vw,36px);font-weight:500;margin-bottom:16px;line-height:1.15">Horarios de <em>atención</em></h2>
       <p>Nuestro atelier está abierto para que vengas a conversar con calma sobre tu proyecto. Te recomendamos coordinar una visita para que un diseñador esté disponible exclusivamente para vos.</p>
       <table class="hours-table" style="margin-top:24px">
@@ -405,7 +411,7 @@
       <div class="footer-col">
         <h4>Contacto</h4>
         <p>Juan de Garay 1550<br/>Río Cuarto, Córdoba</p>
-        <p style="margin-top:12px;">+54 358 507-5773<br/>Ventas@decourban.com.ar</p>
+        <p style="margin-top:12px;"><a href="tel:+543585075773" style="color:inherit">+54 358 507-5773</a><br/><a href="mailto:ventas@decourban.com.ar" style="color:inherit">ventas@decourban.com.ar</a></p>
         <p style="margin-top:12px;">Lun-Vie 9 a 18 h · Sáb 9 a 13 h</p>
       </div>
     </div>
@@ -458,6 +464,14 @@
   msg.addEventListener('input', function() {
     msgCount.textContent = msg.value.length + ' / 1000';
   });
+
+  // ── Scroll reveal ──────────────────────────────────
+  var rvObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); rvObs.unobserve(e.target); }
+    });
+  },{threshold:0.06});
+  document.querySelectorAll('.rv,.rvl,.rvr').forEach(function(el){ rvObs.observe(el); });
 })();
 
 // ── FAQ accordion ──────────────────────────────────────
@@ -519,6 +533,18 @@ function submitContact(e) {
   lines.push('Interesado en: ' + service.value);
   lines.push('Prefiere contacto por: ' + (pref ? CONTACT_PREF_LABELS[pref.value] : 'WhatsApp'));
   if (msg.value.trim()) lines.push('Mensaje: ' + msg.value.trim());
+
+  // Tracking GA4: conversión de formulario
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'form_submit_whatsapp', {
+      event_category: 'conversion',
+      event_label: service.value,
+      service_type: service.value,
+      value: 1
+    });
+    // Conversión para Google Ads (reemplazar AW-XXXXXXXXXX/XXXXXXX con tu ID)
+    // gtag('event','conversion',{send_to:'AW-XXXXXXXXXX/XXXXXXX'});
+  }
 
   window.open('https://wa.me/543585075773?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener,noreferrer');
 

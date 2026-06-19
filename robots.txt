@@ -1,11 +1,9 @@
 User-agent: *
 Allow: /
 
-# No indexar páginas de error
+# No indexar páginas de error ni herramientas internas
 Disallow: /404.html
-
-# Crawl-delay para bots agresivos
-Crawl-delay: 2
+Disallow: /galeria.html
 
 # Sitemap
 Sitemap: https://decourbanestudio.com.ar/sitemap.xml

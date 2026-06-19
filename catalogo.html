@@ -24,6 +24,36 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"CollectionPage",
+      "name":"Catálogo de Mobiliario — Decourban Estudio",
+      "description":"Catálogo de sillas, sofás, sillones, mesas, espejos, lámparas, alfombras y adornos de diseño contemporáneo.",
+      "url":"https://decourbanestudio.com.ar/catalogo.html",
+      "isPartOf":{"@type":"WebSite","name":"Decourban Estudio","url":"https://decourbanestudio.com.ar"},
+      "about":{"@type":"Store","name":"Decourban Estudio","address":{"@type":"PostalAddress","streetAddress":"Juan de Garay 1550","addressLocality":"Río Cuarto","addressRegion":"Córdoba","addressCountry":"AR"}}
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://decourbanestudio.com.ar/"},
+        {"@type":"ListItem","position":2,"name":"Catálogo","item":"https://decourbanestudio.com.ar/catalogo.html"}
+      ]
+    }
+  ]
+}
+</script>
+<!-- Google Analytics 4 — reemplazar G-XXXXXXXXXX con tu Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.location.href});
+</script>
 <style>
 /* ── CATÁLOGO: estilos específicos ─────────────────── */
 .cat-hero {
@@ -180,7 +210,7 @@
   width: fit-content;
   transition: color 0.2s, opacity 0.2s;
 }
-.cat-card-cta:hover { color: var(--accent); }
+.cat-card-cta:hover { color: var(--text-mid); opacity: 0.7; }
 .cat-card-cta svg {
   width: 14px;
   height: 14px;
@@ -254,7 +284,7 @@
 <body>
 
 <!-- NAV -->
-<nav class="site-nav" id="siteNav">
+<nav class="site-nav" id="siteNav" aria-label="Navegación principal">
   <div class="nav-inner">
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
@@ -717,7 +747,7 @@
       <div class="section-eyebrow">Sillones &amp; Puffs</div>
       <h2>Sillones</h2>
     </div>
-    <span class="cat-section-meta">3 modelos</span>
+    <span class="cat-section-meta">4 modelos</span>
   </div>
 
   <div class="cat-grid">
@@ -770,6 +800,22 @@
       </div>
     </div>
 
+    <!-- SILLÓN FÉNIX -->
+    <div class="cat-card rv" data-cat="sillones">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-223725-7c8f8c4069c927b82917554810736065-1024-1024.webp" alt="Sillón Fénix un cuerpo" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Sillón Fénix</div>
+        <p class="cat-card-desc">Sillón de un cuerpo tapizado con tela antimanchas color gris. Confort y practicidad en un diseño contemporáneo.</p>
+        <div class="cat-card-detail">Tapizado: Tela antimanchas · Color gris<br/>Medidas: 110 × 70 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Sill%C3%B3n%20F%C3%A9nix" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -782,7 +828,7 @@
       <div class="section-eyebrow">Mesas &amp; Consolas</div>
       <h2>Mesas</h2>
     </div>
-    <span class="cat-section-meta">3 modelos</span>
+    <span class="cat-section-meta">5 modelos</span>
   </div>
 
   <div class="cat-grid">
@@ -829,6 +875,38 @@
         <p class="cat-card-desc">Consola en madera y materiales naturales. Perfecta para entradas, pasillos o detrás del sofá. Elegante y funcional.</p>
         <div class="cat-card-detail">Material: Madera natural<br/>Terminaciones naturales</div>
         <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Consola%20Naturale" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- MESA PACAMARA -->
+    <div class="cat-card rv" data-cat="mesas">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/img-20250926-wa0098-280dd9e73fa2e0378917589219616975-1024-1024.webp" alt="Mesa Pacamara" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Mesa Pacamara</div>
+        <p class="cat-card-desc">Mesa de madera maciza color gris. Presencia imponente y acabado contemporáneo, ideal para comedores amplios.</p>
+        <div class="cat-card-detail">Material: Madera maciza · Color gris<br/>Medidas: 240 × 120 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Mesa%20Pacamara" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- CONSOLA TORREON -->
+    <div class="cat-card rv" data-cat="mesas">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-222601-c356865dcd9b9009e717554803923645-1024-1024.webp" alt="Consola Torreon" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Consola Torreon</div>
+        <p class="cat-card-desc">Consola con ruedas, versátil y de diseño robusto. Ideal para entradas, detrás del sofá o como aparador móvil.</p>
+        <div class="cat-card-detail">Con ruedas · Movible<br/>Medidas: 170 × 90 × 50 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Consola%20Torreon" target="_blank" rel="noopener" class="cat-card-cta">
           Consultar
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
@@ -896,7 +974,7 @@
       <div class="section-eyebrow">Iluminación natural</div>
       <h2>Lámparas</h2>
     </div>
-    <span class="cat-section-meta">2 modelos</span>
+    <span class="cat-section-meta">3 modelos</span>
   </div>
 
   <div class="cat-grid">
@@ -933,6 +1011,22 @@
       </div>
     </div>
 
+    <!-- PANTALLA CESTA MIMBRE M -->
+    <div class="cat-card rv" data-cat="lamparas">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/2c55d9cc-b16c-45c1-a409-449bb1052337-2bb50213f0abd94c2417364350462646-1024-1024.webp" alt="Pantalla Cesta Mimbre M" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Pantalla Cesta Mimbre M</div>
+        <p class="cat-card-desc">Pantalla colgante de mimbre trenzado. La textura natural filtra la luz creando una atmósfera cálida y bohemia.</p>
+        <div class="cat-card-detail">Material: Mimbre natural<br/>Diámetro: 70 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Pantalla%20Cesta%20Mimbre%20M" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -945,7 +1039,7 @@
       <div class="section-eyebrow">Textiles de piso</div>
       <h2>Alfombras</h2>
     </div>
-    <span class="cat-section-meta">2 modelos</span>
+    <span class="cat-section-meta">5 modelos</span>
   </div>
 
   <div class="cat-grid">
@@ -982,6 +1076,54 @@
       </div>
     </div>
 
+    <!-- ALFOMBRA YUTE TEJIDO -->
+    <div class="cat-card rv" data-cat="alfombras">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/98083d8b-a1a9-4ad5-b530-24641c528efc-bb990920fc32d0aa0f17373865924837-1024-1024.webp" alt="Alfombra Yute Tejido" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Alfombra Yute Tejido</div>
+        <p class="cat-card-desc">Alfombra de yute tejido artesanalmente. Textura natural y rústica que aporta calidez a living o dormitorio.</p>
+        <div class="cat-card-detail">Material: Yute tejido<br/>Medidas: 160 × 230 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Alfombra%20Yute%20Tejido" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ALFOMBRA YUTE Y ALGODÓN -->
+    <div class="cat-card rv" data-cat="alfombras">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/captura-de-pantalla-2025-08-17-224106-9c172ed62d5e802db417554812916643-1024-1024.webp" alt="Alfombra Yute y Algodón" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Alfombra Yute y Algodón</div>
+        <p class="cat-card-desc">Alfombra combinada de yute y algodón. La mezcla de fibras naturales aporta suavidad y durabilidad en un solo tejido.</p>
+        <div class="cat-card-detail">Material: Yute y algodón<br/>Grande: 250 × 300 cm · Pequeña: 200 × 210 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Alfombra%20Yute%20y%20Algod%C3%B3n" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ALFOMBRA YUTE CON FRANJAS BLANCAS -->
+    <div class="cat-card rv" data-cat="alfombras">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/767746ce-390a-44f0-bcdf-6c6329e6e24c-fe9829038583c8386b17373877501118-1024-1024.webp" alt="Alfombra Yute con Franjas Blancas" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Alfombra Yute con Franjas Blancas</div>
+        <p class="cat-card-desc">Alfombra de yute con franjas blancas. Diseño bicolor limpio que combina con ambientes naturales, nórdicos o boho.</p>
+        <div class="cat-card-detail">Material: Yute natural<br/>Medidas: 60 × 120 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20Alfombra%20Yute%20con%20Franjas%20Blancas" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -994,7 +1136,7 @@
       <div class="section-eyebrow">Objetos decorativos</div>
       <h2>Adornos</h2>
     </div>
-    <span class="cat-section-meta">1 modelo</span>
+    <span class="cat-section-meta">2 modelos</span>
   </div>
 
   <div class="cat-grid">
@@ -1009,6 +1151,22 @@
         <p class="cat-card-desc">Candelabro de madera hecho a mano. Pieza única que emula la silueta de una columna. Sin vela, puro objeto de diseño.</p>
         <div class="cat-card-detail">Material: Madera maciza artesanal<br/>Altura: 45 cm</div>
         <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Candelabro%20Serra" target="_blank" rel="noopener" class="cat-card-cta">
+          Consultar
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- CANDELABRO SHIV -->
+    <div class="cat-card rv" data-cat="adornos">
+      <div class="cat-card-img">
+        <img src="https://dcdn-us.mitiendanube.com/stores/005/649/615/products/imagen-de-whatsapp-2025-01-09-a-las-13-54-57_fbab22c7-39ca1ab708b7e5e04a17364417205021-1024-1024.webp" alt="Candelabro Shiv - Madera Maciza" loading="lazy"/>
+      </div>
+      <div class="cat-card-body">
+        <div class="cat-card-name">Candelabro Shiv</div>
+        <p class="cat-card-desc">Candelabro de madera maciza blanco. Formas orgánicas que convierten cada pieza en una escultura decorativa. Sin vela.</p>
+        <div class="cat-card-detail">Material: Madera maciza · Color blanco<br/>Altura: 52 cm</div>
+        <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Candelabro%20Shiv" target="_blank" rel="noopener" class="cat-card-cta">
           Consultar
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
@@ -1070,7 +1228,7 @@
       <div class="footer-col">
         <h4>Contacto</h4>
         <p>Juan de Garay 1550<br/>Río Cuarto, Córdoba</p>
-        <p style="margin-top:12px;">+54 358 507-5773<br/>Ventas@decourban.com.ar</p>
+        <p style="margin-top:12px;"><a href="tel:+543585075773" style="color:inherit">+54 358 507-5773</a><br/><a href="mailto:ventas@decourban.com.ar" style="color:inherit">ventas@decourban.com.ar</a></p>
         <p style="margin-top:12px;">Lun-Vie 9 a 18 h · Sáb 9 a 13 h</p>
       </div>
     </div>
@@ -1122,8 +1280,8 @@
     entries.forEach(function(e){
       if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
     });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.rv').forEach(function(el){ observer.observe(el); });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.rv,.rvl,.rvr').forEach(function(el){ observer.observe(el); });
 
   // ── Filtros de categoría ───────────────────────────
   var filterBtns = document.querySelectorAll('.cat-filter-btn');
@@ -1142,6 +1300,23 @@
       });
     });
   });
+
+  // ── Analytics: tracking de conversiones catálogo ──
+  if (typeof gtag !== 'undefined') {
+    document.addEventListener('click', function(e) {
+      var waLink = e.target.closest('a[href*="wa.me"]');
+      if (waLink) {
+        var card = waLink.closest('.cat-card');
+        var productName = card ? (card.querySelector('.cat-card-name') || {}).textContent : 'general';
+        var isProductCard = !!card;
+        gtag('event', isProductCard ? 'catalog_product_inquiry' : 'whatsapp_click', {
+          event_category: 'conversion',
+          event_label: (productName || '').trim(),
+          product_name: (productName || '').trim()
+        });
+      }
+    });
+  }
 })();
 </script>
 </body>

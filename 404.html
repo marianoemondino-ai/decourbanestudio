@@ -28,7 +28,7 @@
 <body>
 
 <!-- NAV -->
-<nav class="site-nav" id="siteNav">
+<nav class="site-nav" id="siteNav" aria-label="Navegación principal">
   <div class="nav-inner">
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
@@ -101,13 +101,14 @@
         <a href="index.html">Inicio</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="servicios.html">Servicios</a>
+        <a href="catalogo.html">Catálogo</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
       </div>
       <div class="footer-col">
         <h4>Contacto</h4>
         <p>Juan de Garay 1550<br/>Río Cuarto, Córdoba</p>
-        <p style="margin-top:12px;">+54 358 507-5773<br/>Ventas@decourban.com.ar</p>
+        <p style="margin-top:12px;"><a href="tel:+543585075773" style="color:inherit">+54 358 507-5773</a><br/><a href="mailto:ventas@decourban.com.ar" style="color:inherit">ventas@decourban.com.ar</a></p>
         <p style="margin-top:12px;">Lun-Vie 9 a 18 h · Sáb 9 a 13 h</p>
       </div>
     </div>
@@ -124,6 +125,12 @@
 
 <script>
 (function(){
+  // ── Nav: transparent → solid on scroll ────────────
+  var nav = document.getElementById('siteNav');
+  function updateNav() { nav.classList.toggle('solid', window.scrollY > 60); }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
   // ── Mobile menu ────────────────────────────────────
   document.getElementById('menuBtn').addEventListener('click', function() {
     var open = document.getElementById('navMobile').classList.toggle('open');
