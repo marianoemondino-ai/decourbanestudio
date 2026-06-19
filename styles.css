@@ -223,13 +223,13 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
 }
 .nav-dropdown-menu {
   position: absolute;
-  top: calc(100% + 20px);
+  top: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(-6px);
+  transform: translateX(-50%) translateY(-4px);
   background: #fff;
   border: 1px solid var(--border);
   min-width: 195px;
-  padding: 8px 0;
+  padding: 16px 0 8px;   /* padding-top cubre el gap visual sin crear espacio muerto */
   box-shadow: 0 12px 40px rgba(0,0,0,0.14);
   opacity: 0;
   visibility: hidden;
@@ -243,6 +243,16 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   visibility: visible;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
+}
+/* Puente invisible: extiende el área hover 20px hacia arriba para que
+   el cursor no pierda el foco al moverse del botón al menú */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
 }
 .nav-dropdown-menu a {
   display: block;
