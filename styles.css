@@ -114,7 +114,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   z-index: 2;
 }
 .nav-logo img {
-  height: 48px;
+  height: 62px;
   width: auto;
   display: block;
 }
@@ -531,7 +531,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
 
 @media (max-width: 1024px) {
   .nav-inner { padding: 0 32px; }
-  .nav-logo img { height: 40px; }
+  .nav-logo img { height: 46px; }
   .nav-links { gap: 18px; }
   .nav-links a { font-size: 0.7rem; }
   .nav-cta { padding: 9px 16px !important; }
@@ -935,7 +935,7 @@ fieldset.fl { border: 0; padding: 0; }
 .case-study:last-child { border-bottom: none; }
 .case-study.reverse .case-media { order: 2; }
 .case-study.reverse .case-body { order: 1; }
-.case-media .media-placeholder { aspect-ratio: 4 / 5; }
+.case-media .media-placeholder { aspect-ratio: 4 / 3; }
 .case-body .section-eyebrow { margin-bottom: 18px; }
 .case-body h2 { margin-bottom: 18px; }
 .case-body p + p { margin-top: 14px; }
