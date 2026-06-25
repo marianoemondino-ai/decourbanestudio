@@ -290,19 +290,4 @@ function assignToSlot(fname, card) {
 
 function copyList() {
   if (!Object.keys(assignments).length) {
-    alert('Todavía no asignaste ninguna imagen');
-    return;
-  }
-  let text = 'Asignaciones de imágenes para la web:\n\n';
-  for (const [slot, file] of Object.entries(assignments)) {
-    text += `${slot}: ${file}\n`;
-  }
-  navigator.clipboard.writeText(text).then(() => {
-    alert('¡Copiado! Pegalo en el chat de Claude');
-  }).catch(() => {
-    prompt('Copiá esto y pegalo en Claude:', text);
-  });
-}
-</script>
-</body>
-</html>
+    alert('Todavía no as
