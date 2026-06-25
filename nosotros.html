@@ -342,4 +342,12 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 
   // ── Scroll reveal ──────────────────────────────────
   var rvObs = new IntersectionObserver(function(entries){
-    entries.f
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); rvObs.unobserve(e.target); }
+    });
+  },{threshold:0.06});
+  document.querySelectorAll('.rv,.rvl,.rvr').forEach(function(el){ rvObs.observe(el); });
+})();
+</script>
+</body>
+</html>
