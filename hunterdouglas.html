@@ -1186,6 +1186,146 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   .hd-green-stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 12px 0; }
   .hd-green-stat-item:last-child { border-bottom: none; }
 }
+
+/* ── PERSIANAS ──────────────────────────────────────── */
+.hd-persianas { background: #f8f5f0; padding: 100px 24px; }
+.hd-persianas-inner { max-width: 1100px; margin: 0 auto; }
+.hd-persianas-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-top: 56px; }
+.hd-pers-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 36px 28px;
+  border-top: 3px solid var(--accent);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+.hd-pers-badge {
+  display: inline-block;
+  background: #f0ece5;
+  color: var(--accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+.hd-pers-card h3 { font-family: 'Fraunces', serif; font-size: 1.35rem; color: #1a1612; margin: 0 0 12px; }
+.hd-pers-card > p { color: #5a5248; font-size: 0.88rem; line-height: 1.7; margin: 0 0 20px; }
+.hd-pers-detail { list-style: none; padding: 0; margin: 0; }
+.hd-pers-detail li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.83rem;
+  color: #3a3028;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0ece5;
+}
+.hd-pers-detail li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 5px; }
+.hd-pers-detail li:last-child { border-bottom: none; }
+
+/* ── SOLUCIONES COMERCIALES ────────────────────────── */
+.hd-comercial { background: #0e0d0b; padding: 100px 24px; }
+.hd-comercial-inner { max-width: 1100px; margin: 0 auto; }
+.hd-comercial .hd-products-header .hd-section-label { color: rgba(255,255,255,0.55); }
+.hd-comercial .hd-products-header .hd-section-title { color: #fff; }
+.hd-comercial .hd-products-header .hd-section-desc { color: rgba(255,255,255,0.6); }
+.hd-com-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; margin-top: 56px; }
+.hd-com-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 32px;
+  transition: background 0.25s;
+}
+.hd-com-card:hover { background: rgba(255,255,255,0.09); }
+.hd-com-icon { font-size: 1.8rem; margin-bottom: 18px; line-height: 1; }
+.hd-com-card h3 { font-family: 'Fraunces', serif; font-size: 1.2rem; color: #fff; margin: 0 0 10px; }
+.hd-com-card p { color: rgba(255,255,255,0.58); font-size: 0.87rem; line-height: 1.7; margin: 0 0 18px; }
+.hd-com-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.hd-com-tag {
+  background: rgba(248,154,54,0.14);
+  color: var(--accent);
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+/* ── LEGADO / HISTORIA ─────────────────────────────── */
+.hd-legado { background: #fff; padding: 100px 24px; }
+.hd-legado-inner { max-width: 960px; margin: 0 auto; }
+.hd-legado-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-top: 56px;
+}
+.hd-legado-intro p { color: #5a5248; font-size: 0.9rem; line-height: 1.8; margin: 0 0 20px; }
+.hd-legado-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+.hd-leg-stat {
+  background: #f8f5f0;
+  border-radius: 10px;
+  padding: 24px 20px;
+  text-align: center;
+}
+.hd-leg-stat-num { font-family: 'Fraunces', serif; font-size: 2.2rem; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+.hd-leg-stat-label { font-size: 0.78rem; color: #7a7068; line-height: 1.4; }
+.hd-timeline { position: relative; padding-left: 36px; }
+.hd-timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent) 0%, rgba(248,154,54,0.2) 100%);
+}
+.hd-tl-item { position: relative; margin-bottom: 40px; }
+.hd-tl-item::before {
+  content: '';
+  position: absolute;
+  left: -29px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px var(--accent);
+}
+.hd-tl-year { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); font-weight: 800; margin-bottom: 4px; }
+.hd-tl-item h4 { font-family: 'Fraunces', serif; font-size: 1rem; color: #1a1612; margin: 0 0 6px; }
+.hd-tl-item p { font-size: 0.83rem; color: #6a6058; line-height: 1.65; margin: 0; }
+
+/* ── SUSTENTABILIDAD ───────────────────────────────── */
+.hd-sustenta { background: #121e15; padding: 90px 24px; }
+.hd-sustenta-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.hd-sustenta-text .hd-section-label { color: rgba(255,255,255,0.5); }
+.hd-sustenta-text h2 { font-family: 'Fraunces', serif; font-size: 2.1rem; color: #fff; line-height: 1.2; margin: 16px 0 20px; }
+.hd-sustenta-text p { color: rgba(255,255,255,0.62); font-size: 0.88rem; line-height: 1.75; margin: 0 0 14px; }
+.hd-sust-items { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.hd-sust-item { background: rgba(255,255,255,0.06); border-radius: 10px; padding: 24px 20px; border: 1px solid rgba(255,255,255,0.07); }
+.hd-sust-icon { font-size: 1.5rem; margin-bottom: 10px; line-height: 1; }
+.hd-sust-item h4 { font-size: 0.88rem; color: #fff; font-weight: 600; margin: 0 0 6px; }
+.hd-sust-item p { font-size: 0.78rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin: 0; }
+
+@media (max-width: 900px) {
+  .hd-persianas-grid { grid-template-columns: 1fr; }
+  .hd-com-grid { grid-template-columns: 1fr; }
+  .hd-legado-split { grid-template-columns: 1fr; gap: 48px; }
+  .hd-sustenta-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hd-sust-items { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .hd-persianas-grid { grid-template-columns: 1fr; }
+  .hd-com-grid { grid-template-columns: 1fr; }
+  .hd-sust-items { grid-template-columns: 1fr; }
+  .hd-legado-stats { grid-template-columns: 1fr 1fr; }
+}
 </style>
 </head>
 <body>
@@ -1388,13 +1528,34 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         <div class="hd-ette-card-content">
           <span class="hd-ette-badge">Cortina premium</span>
           <h3>Cortina Luminette®</h3>
-          <p>La versión contemporánea del cortinado tradicional. Bandas verticales de tela suave que se orientan para filtrar la luz o se corren completamente para dejar pasar el sol. Ideal para ventanales y puertas corredizas.</p>
+          <p>La versión contemporánea del cortinado tradicional. Bandas verticales de tela suave que se orientan para filtrar la luz o se corren completamente para dejar pasar el sol. Bloquea hasta el 99% de los rayos UV cuando está cerrada. Ideal para ventanales y puertas corredizas.</p>
           <div class="hd-ette-tags">
             <span class="hd-tag">Verticales premium</span>
+            <span class="hd-tag">Filtro UV 99%</span>
             <span class="hd-tag">Ideal puertas</span>
             <span class="hd-tag">Elegancia clásica</span>
           </div>
           <a href="https://www.hunterdouglas.com.ar/productos/cortinas/verticales/luminette/" target="_blank" rel="noopener noreferrer" class="hd-ette-link">
+            Ver producto
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h14M10 1l5 4-5 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Vignette -->
+      <div class="hd-ette-card hd-card-vignette" style="background:linear-gradient(135deg,#2c2519 0%,#1a160f 100%);">
+        <span class="hd-ette-series">Línea Ette®</span>
+        <div class="hd-ette-card-content">
+          <span class="hd-ette-badge">Cortina premium</span>
+          <h3>Cortina Vignette®</h3>
+          <p>La alternativa moderna a las cortinas romanas tradicionales. Dos capas de tela superpuestas con pliegues en la parte delantera, sin perfiles ni cables intermedios visibles. Se enrolla limpiamente en el perfil superior revelando la ventana en su totalidad.</p>
+          <div class="hd-ette-tags">
+            <span class="hd-tag">Estilo romano</span>
+            <span class="hd-tag">Sin cables visibles</span>
+            <span class="hd-tag">Pliegues de tela</span>
+            <span class="hd-tag">Desde 1994</span>
+          </div>
+          <a href="https://www.hunterdouglas.com.ar/productos/cortinas/" target="_blank" rel="noopener noreferrer" class="hd-ette-link">
             Ver producto
             <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h14M10 1l5 4-5 4"/></svg>
           </a>
@@ -1498,6 +1659,62 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         <div class="hd-vert-visual-overlay" aria-hidden="true"></div>
         <p class="hd-vert-caption">Cortinas verticales Hunter Douglas</p>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- PERSIANAS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-persianas" id="persianas">
+  <div class="hd-persianas-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Persianas</span>
+      <h2 class="hd-section-title">Donde todo comenzó:<br>la persiana de aluminio</h2>
+      <p class="hd-section-desc">En 1946 Hunter Douglas inventó la persiana de aleación ligera, creando un producto que cambió el mercado mundial. Hoy la línea de persianas cubre tres materiales y decenas de colores para cada ambiente y necesidad.</p>
+    </div>
+    <div class="hd-persianas-grid">
+
+      <div class="hd-pers-card rv">
+        <span class="hd-pers-badge">Calidez natural</span>
+        <h3>Persiana de Madera</h3>
+        <p>Lamas de madera maciza que aportan textura natural y sofisticación a cualquier espacio. Disponible en múltiples terminaciones y colores para living, estudio y dormitorio.</p>
+        <ul class="hd-pers-detail">
+          <li>Lamas de 25 mm, 35 mm o 50 mm</li>
+          <li>Madera maciza y madera compuesta</li>
+          <li>Control manual, cadena o motorizado</li>
+          <li>Opción cordless (sin cordón) disponible</li>
+          <li>Decenas de colores y veteados disponibles</li>
+        </ul>
+      </div>
+
+      <div class="hd-pers-card rv">
+        <span class="hd-pers-badge">Desde 1946</span>
+        <h3>Persiana de Aluminio</h3>
+        <p>La persiana que lo inició todo. El producto con el que Hunter Douglas revolucionó el mercado en 1946. Resistente, liviana, fácil de limpiar y disponible en más de 100 colores.</p>
+        <ul class="hd-pers-detail">
+          <li>Lamas de 16 mm, 25 mm o 35 mm</li>
+          <li>Ideal para baño y cocina — resistente a humedad</li>
+          <li>Más de 100 colores disponibles</li>
+          <li>Control manual o motorizado</li>
+          <li>Máxima durabilidad y fácil mantenimiento</li>
+        </ul>
+      </div>
+
+      <div class="hd-pers-card rv">
+        <span class="hd-pers-badge">Innovación</span>
+        <h3>Persiana WoodMate®</h3>
+        <p>La apariencia auténtica de la madera natural con la durabilidad del compuesto de alta densidad. No se deforma con la humedad, no se astilla y mantiene su aspecto año tras año.</p>
+        <ul class="hd-pers-detail">
+          <li>Material compuesto de alta densidad</li>
+          <li>Aspecto visual idéntico a la madera</li>
+          <li>100% resistente a la humedad</li>
+          <li>Ideal para baños, cocinas y balcones</li>
+          <li>No se arquea, no se decolora</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1970,6 +2187,72 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 
 
 <!-- ═══════════════════════════════════════════════════ -->
+<!-- SOLUCIONES COMERCIALES -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-comercial" id="comercial">
+  <div class="hd-comercial-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Soluciones comerciales</span>
+      <h2 class="hd-section-title" style="color:#fff;">Hunter Douglas para<br>espacios de trabajo y hospitalidad</h2>
+      <p class="hd-section-desc">Los productos Hunter Douglas son la solución preferida por arquitectos y diseñadores para hoteles, restaurantes, oficinas y clínicas que exigen calidad, durabilidad y control preciso de la luz.</p>
+    </div>
+    <div class="hd-com-grid">
+
+      <div class="hd-com-card rv">
+        <div class="hd-com-icon">🏨</div>
+        <h3>Hoteles y Hospitality</h3>
+        <p>Las cadenas hoteleras eligen Duette® Blackout y Roller Screen para habitaciones que garantizan privacidad total y regulación del descanso. Motorización PowerView® compatible con sistemas de domótica y BMS. Instalación prolija sin visibilidad de mecanismos.</p>
+        <div class="hd-com-tags">
+          <span class="hd-com-tag">Duette® Blackout</span>
+          <span class="hd-com-tag">PowerView®</span>
+          <span class="hd-com-tag">Integración BMS</span>
+          <span class="hd-com-tag">Grandes superficies</span>
+        </div>
+      </div>
+
+      <div class="hd-com-card rv">
+        <div class="hd-com-icon">🏢</div>
+        <h3>Oficinas y Corporativo</h3>
+        <p>Las telas Screen HD reducen el deslumbramiento en pantallas sin oscurecer el ambiente. Persianas de aluminio programables que se ajustan automáticamente al ángulo solar. Certificación LEED compatible gracias a la eficiencia energética de la línea Duette® Architella®.</p>
+        <div class="hd-com-tags">
+          <span class="hd-com-tag">Screen solar</span>
+          <span class="hd-com-tag">Anti-deslumbramiento</span>
+          <span class="hd-com-tag">Compatible LEED</span>
+          <span class="hd-com-tag">Motorización grupal</span>
+        </div>
+      </div>
+
+      <div class="hd-com-card rv">
+        <div class="hd-com-icon">🍽️</div>
+        <h3>Restaurantes y Gastronomía</h3>
+        <p>Toldos proyectantes y verticales que extienden la capacidad del local hacia la vereda o el patio. Las telas outdoor de HD están tratadas contra hongos, UV y humedad. Control motorizado para adaptar el toldo según el clima en segundos.</p>
+        <div class="hd-com-tags">
+          <span class="hd-com-tag">Toldos proyectantes</span>
+          <span class="hd-com-tag">Telas outdoor</span>
+          <span class="hd-com-tag">Anti-UV tratado</span>
+          <span class="hd-com-tag">Motorizado</span>
+        </div>
+      </div>
+
+      <div class="hd-com-card rv">
+        <div class="hd-com-icon">🏥</div>
+        <h3>Salud y Educación</h3>
+        <p>Cortinas de fácil limpieza con tratamiento antimicrobiano disponibles para clínicas, consultorios y aulas. Las Roller con tela Screen permiten control lumínico sin bloquear la visibilidad exterior — clave en espacios de trabajo y estudio.</p>
+        <div class="hd-com-tags">
+          <span class="hd-com-tag">Fácil limpieza</span>
+          <span class="hd-com-tag">Tela Screen</span>
+          <span class="hd-com-tag">Sin texturas difíciles</span>
+          <span class="hd-com-tag">Luz natural óptima</span>
+        </div>
+      </div>
+
+    </div>
+    <p class="rv" style="text-align:center;margin-top:48px;color:rgba(255,255,255,0.45);font-size:0.82rem;">Cotización especial para proyectos comerciales de gran escala — Consultanos por WhatsApp</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
 <!-- CÓMO COMPRAR -->
 <!-- ═══════════════════════════════════════════════════ -->
 <section class="hd-proceso" id="como-comprar">
@@ -2039,6 +2322,120 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 <!-- ═══════════════════════════════════════════════════ -->
 <!-- FAQ -->
 <!-- ═══════════════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- HISTORIA / LEGADO -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-legado" id="legado">
+  <div class="hd-legado-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Más de 100 años de innovación</span>
+      <h2 class="hd-section-title">La marca que inventó<br>la cortina moderna</h2>
+    </div>
+
+    <div class="hd-legado-split">
+      <div class="hd-legado-intro rv">
+        <p>Fundada en 1919 en Düsseldorf, Alemania, Hunter Douglas ha construido una trayectoria única guiada por el pionerismo técnico y el refinamiento estético. La marca no solo lideró el mercado — lo creó.</p>
+        <p>Pionera por esencia, inventó la persiana de aluminio, la primera cortina celular del mundo (Duette®) y fue la primera en desarrollar un programa de relacionamiento para arquitectos y diseñadores (Club Talent). Hoy, <strong>más del 70% de las patentes mundiales de cortinas y persianas pertenecen a Hunter Douglas</strong>.</p>
+        <p>Presente en más de 100 países, con fábricas de ensamblado y plantas de producción propias, Hunter Douglas es el único proveedor que puede garantizar consistencia de calidad a escala global — con soporte local en Argentina a través de distribuidores oficiales como Decourban Estudio.</p>
+        <div class="hd-legado-stats">
+          <div class="hd-leg-stat">
+            <div class="hd-leg-stat-num">100+</div>
+            <div class="hd-leg-stat-label">Países con presencia activa</div>
+          </div>
+          <div class="hd-leg-stat">
+            <div class="hd-leg-stat-num">70%</div>
+            <div class="hd-leg-stat-label">Patentes mundiales del sector</div>
+          </div>
+          <div class="hd-leg-stat">
+            <div class="hd-leg-stat-num">1919</div>
+            <div class="hd-leg-stat-label">Año de fundación — Alemania</div>
+          </div>
+          <div class="hd-leg-stat">
+            <div class="hd-leg-stat-num">5★</div>
+            <div class="hd-leg-stat-label">Red Dot Awards ganados</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hd-timeline rv">
+        <div class="hd-tl-item">
+          <div class="hd-tl-year">1919</div>
+          <h4>Fundación en Alemania</h4>
+          <p>Henry Sonnenberg funda en Düsseldorf una empresa de distribución y fabricación que se convertiría en el líder mundial del sector.</p>
+        </div>
+        <div class="hd-tl-item">
+          <div class="hd-tl-year">1946</div>
+          <h4>Invención de la persiana de aluminio</h4>
+          <p>En sociedad con Joe Hunter, desarrollan la persiana de aleación ligera que rápidamente gana el liderazgo en EE.UU. y Canadá con más de 1.000 distribuidores independientes.</p>
+        </div>
+        <div class="hd-tl-item">
+          <div class="hd-tl-year">1985</div>
+          <h4>Duette® — la primera cortina celular</h4>
+          <p>Respuesta directa a la crisis energética de los años '70. La estructura de celdas de aire crea un aislante térmico que puede alcanzar hasta un 80% de eficiencia energética.</p>
+        </div>
+        <div class="hd-tl-item">
+          <div class="hd-tl-year">1991</div>
+          <h4>Silhouette® — luz como jamás antes</h4>
+          <p>Las láminas en "S" entre velos translúcidos marcan un nuevo estándar en control solar. Un diseño que 35 años después sigue siendo el más vendido de la marca.</p>
+        </div>
+        <div class="hd-tl-item">
+          <div class="hd-tl-year">2015</div>
+          <h4>PowerView® — el hogar inteligente</h4>
+          <p>Sistema de automatización que permite programar escenas, controlar desde cualquier lugar del mundo y conectar con Amazon Alexa, Google Home y Apple HomeKit.</p>
+        </div>
+        <div class="hd-tl-item">
+          <div class="hd-tl-year">2016</div>
+          <h4>Sea-Tex — telas del océano</h4>
+          <p>Primera colección de telas fabricadas con plásticos reciclados del océano. Los hilos FLX de Bionic se producen a partir de filamentos plásticos recuperados del mar.</p>
+        </div>
+        <div class="hd-tl-item">
+          <div class="hd-tl-year">2025</div>
+          <h4>Toldo Green® — tecnología NASA</h4>
+          <p>Con tecnología PURETi desarrollada por NASA, el Toldo Green® reduce un 55% las emisiones de NO₂ y un 70% la autolimpiante, ganando el Red Dot Award 2025.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SUSTENTABILIDAD -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-sustenta" id="sustentabilidad">
+  <div class="hd-sustenta-inner">
+    <div class="hd-sustenta-text rv">
+      <span class="hd-section-label">Compromiso ambiental</span>
+      <h2>Diseño responsable<br>con el planeta</h2>
+      <p>Hunter Douglas asume que el lujo y la responsabilidad ambiental no son opuestos. Cada línea de productos integra criterios de eficiencia energética, materiales reciclados o tecnologías que reducen el impacto en el entorno.</p>
+      <p>Las cortinas no solo decoran — pueden transformarse en la primera barrera de ahorro energético de tu hogar, reduciendo la carga sobre el aire acondicionado y la calefacción durante todo el año.</p>
+    </div>
+    <div class="hd-sust-items rv">
+      <div class="hd-sust-item">
+        <div class="hd-sust-icon">🌊</div>
+        <h4>Sea-Tex® — del océano a tu ventana</h4>
+        <p>Primera colección del mundo fabricada con plásticos reciclados del océano. Cada metro de tela ayuda a recuperar nuestros mares.</p>
+      </div>
+      <div class="hd-sust-item">
+        <div class="hd-sust-icon">🌡️</div>
+        <h4>Duette® — 80% eficiencia energética</h4>
+        <p>La cortina celular puede reducir la transferencia de calor en más de un 50%, bajando el consumo de climatización durante todo el año.</p>
+      </div>
+      <div class="hd-sust-item">
+        <div class="hd-sust-icon">🍃</div>
+        <h4>Toldo Green® — tecnología PURETi</h4>
+        <p>La tela activa descompone contaminantes del aire. 4 m² equivalen a eliminar la polución generada por un auto durante un año entero.</p>
+      </div>
+      <div class="hd-sust-item">
+        <div class="hd-sust-icon">♻️</div>
+        <h4>Productos arquitectónicos reciclados</h4>
+        <p>Los productos arquitectónicos Hunter Douglas se fabrican con hasta un 80% de material reciclado, con certificación de construcción sostenible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="hd-faq" id="faq">
   <div class="hd-faq-inner">
     <div class="hd-products-header rv">
@@ -2075,6 +2472,21 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       <div class="hd-faq-item rv">
         <div class="hd-faq-q">¿Se puede combinar más de un producto en el mismo ambiente?</div>
         <div class="hd-faq-a">Absolutamente. De hecho, muchos proyectos combinan productos distintos según la orientación de la ventana: <strong>una Silhouette®</strong> en las ventanas que dan al este o al oeste (donde el control solar es crítico), y <strong>una Roller Blackout</strong> en el dormitorio. También es posible motorizar parte de las cortinas y dejar otras manuales. Como asesores de diseño, te ayudamos a armar la combinación más inteligente para cada espacio.</div>
+      </div>
+
+      <div class="hd-faq-item rv">
+        <div class="hd-faq-q">¿Cuál es la diferencia entre una Roller Screen y una Roller Blackout?</div>
+        <div class="hd-faq-a">La <strong>Roller Screen</strong> (también llamada Roller Solar) usa una tela tramada que filtra los rayos UV y reduce el deslumbramiento, pero permite ver hacia afuera durante el día. Existen distintos porcentajes de openness factor: 1%, 3%, 5% y 10%, a mayor número más luz pasa. La <strong>Roller Blackout</strong> usa una tela opaca que bloquea el 100% de la luz — es la opción ideal para dormitorios, salas de cine o cualquier ambiente donde necesitás oscuridad total. Ambas se pueden motorizar con PowerView®.</div>
+      </div>
+
+      <div class="hd-faq-item rv">
+        <div class="hd-faq-q">¿Cómo se miden y instalan las cortinas Hunter Douglas?</div>
+        <div class="hd-faq-a">El proceso comienza con una <strong>visita de medición a tu domicilio</strong>, sin cargo y sin compromiso. Nuestro equipo releva las medidas exactas de cada vano, evalúa la orientación solar, el tipo de ventana y tus necesidades. Cada cortina Hunter Douglas es fabricada <strong>a medida en fábrica</strong> con tolerancias de ±3mm. La instalación la realiza nuestro equipo técnico certificado — no subcontratamos. El tiempo total del proceso es de 3 a 5 semanas desde la primera visita.</div>
+      </div>
+
+      <div class="hd-faq-item rv">
+        <div class="hd-faq-q">¿Los toldos Hunter Douglas resisten el viento y la lluvia?</div>
+        <div class="hd-faq-a">Los toldos proyectantes HD están fabricados para condiciones climáticas exigentes. Las telas outdoor tienen <strong>tratamiento antifúngico, anti-UV y resistencia al agua</strong>. Todos los modelos incluyen un tope de seguridad que protege el mecanismo ante vientos fuertes. Para zonas de viento muy intenso, recomendamos el Toldo Gemini® (autoportante con estructura propia) o la opción de motorización con sensor de viento integrado que cierra el toldo automáticamente cuando supera cierta velocidad. Podemos asesorarte según la orientación y exposición de tu espacio.</div>
       </div>
 
     </div>
