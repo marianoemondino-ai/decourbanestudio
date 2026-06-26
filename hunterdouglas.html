@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Hunter Douglas — Distribuidor Oficial | Decourban Estudio, Río Cuarto</title>
-<meta name="description" content="Somos distribuidores oficiales de Hunter Douglas en Río Cuarto, Córdoba. Cortinas Silhouette, Duette, Pirouette, Luminette, Roller y motorización PowerView. Instalación profesional con más de 22 años de experiencia."/>
+<title>Hunter Douglas — Distribuidor Oficial | Decourban Estudio</title>
+<meta name="description" content="Distribuidor oficial Hunter Douglas en Río Cuarto. Silhouette, Duette, Pirouette, Luminette, Roller y PowerView. Asesoramiento e instalación profesional."/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="es_AR"/>
 <meta property="og:url" content="https://decourbanestudio.com.ar/hunterdouglas.html"/>
@@ -60,7 +60,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   background-image: url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/HD.Cortina-Silhouette-5-1024x677.jpg');
   background-size: cover;
   background-position: center 30%;
-  opacity: 0.28;
+  opacity: 0.45;
+}
+.hd-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14,13,11,0.55) 0%,
+    rgba(14,13,11,0.25) 40%,
+    rgba(14,13,11,0.25) 60%,
+    rgba(14,13,11,0.75) 100%
+  );
 }
 .hd-hero-content {
   position: relative;
@@ -146,6 +157,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 .btn-hd-ghost:hover {
   border-color: rgba(255,255,255,0.7);
   color: #fff;
+}
+.hd-brand-logo {
+  display: block;
+  width: 200px;
+  max-width: 60vw;
+  height: auto;
+  margin: 0 auto 36px;
+  filter: brightness(1) drop-shadow(0 2px 12px rgba(0,0,0,0.4));
 }
 .hd-hero-scroll {
   position: absolute;
@@ -731,7 +750,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
       <a href="proyectos.html">Proyectos</a>
-      <a href="servicios.html">Servicios</a>
       <a href="hunterdouglas.html" class="active" style="color:var(--accent);">Hunter Douglas</a>
       <div class="nav-dropdown" id="catDropdown">
         <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" id="catBtn">
@@ -768,7 +786,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 <div class="nav-mobile" id="navMobile">
   <a href="index.html">Inicio</a>
   <a href="proyectos.html">Proyectos</a>
-  <a href="servicios.html">Servicios</a>
   <a href="hunterdouglas.html" class="active">Hunter Douglas</a>
   <span class="nav-mobile-cat-label">Catálogo</span>
   <div class="nav-mobile-sub">
@@ -792,7 +809,10 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 <!-- ═══════════════════════════════════════════════════ -->
 <section class="hd-hero" aria-label="Hunter Douglas en Decourban Estudio">
   <div class="hd-hero-bg" aria-hidden="true"></div>
+  <div class="hd-hero-gradient" aria-hidden="true"></div>
   <div class="hd-hero-content">
+    <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/HunterDouglas-white-logo3-03.svg"
+         alt="Hunter Douglas" class="hd-brand-logo" loading="eager" width="220" height="auto"/>
     <div class="hd-badge">
       <span class="hd-badge-dot"></span>
       Distribuidor Oficial · Río Cuarto, Córdoba
@@ -1174,8 +1194,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         <h4>Navegación</h4>
         <a href="index.html">Inicio</a>
         <a href="proyectos.html">Proyectos</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="hunterdouglas.html">Hunter Douglas</a>
+          <a href="hunterdouglas.html">Hunter Douglas</a>
         <a href="catalogo.html">Catálogo</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>

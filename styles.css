@@ -540,6 +540,12 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   .footer-grid { grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
 }
 
+@media (min-width: 841px) and (max-width: 960px) {
+  .nav-links { gap: 10px; }
+  .nav-links a { font-size: 0.65rem; }
+  .nav-logo img { height: 40px; }
+}
+
 @media (max-width: 768px) {
   .site-nav { height: 64px; }
   .nav-mobile { inset: 64px 0 0; }
