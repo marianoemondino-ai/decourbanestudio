@@ -57,20 +57,20 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 .hd-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/HD.Cortina-Silhouette-5-1024x677.jpg');
+  background-image: url('https://www.hunterdouglas.com.ar/wp-content/uploads/2026/03/HUNTER-DOUGLAS-EXPERIENCIA-LIVING-by-RITVU-185.webp');
   background-size: cover;
   background-position: center 30%;
-  opacity: 0.45;
+  opacity: 0.78;
 }
 .hd-hero-gradient {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(14,13,11,0.55) 0%,
-    rgba(14,13,11,0.25) 40%,
-    rgba(14,13,11,0.25) 60%,
-    rgba(14,13,11,0.75) 100%
+    rgba(10,8,4,0.45) 0%,
+    rgba(10,8,4,0.08) 35%,
+    rgba(10,8,4,0.08) 60%,
+    rgba(10,8,4,0.65) 100%
   );
 }
 .hd-hero-content {
@@ -729,6 +729,200 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   flex-wrap: wrap;
 }
 
+/* ── NAV BRAND LOGO ─────────────────────── */
+.hd-nav-brand-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 0;
+}
+.hd-nav-brand-img {
+  height: 15px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.88;
+  transition: opacity 0.2s;
+}
+.hd-nav-brand-img--mobile {
+  height: 20px;
+  filter: brightness(0) invert(1);
+  opacity: 1;
+}
+.site-nav.solid .hd-nav-brand-img {
+  filter: brightness(0) invert(0);
+  opacity: 0.72;
+}
+.hd-nav-brand-link:hover .hd-nav-brand-img { opacity: 1; }
+
+/* ── TOLDOS SECTION ─────────────────────── */
+.hd-toldos {
+  padding: 96px 24px;
+  background: #fff;
+}
+.hd-toldos-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.hd-toldos-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2px;
+  background: #e8e5e0;
+  margin-top: 56px;
+}
+.hd-toldo-card {
+  background: #f7f6f3;
+  padding: 44px 36px;
+  position: relative;
+}
+.hd-toldo-card--featured {
+  background: #1a1916;
+}
+.hd-toldo-type {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.hd-toldo-card h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 14px;
+  color: #1a1916;
+}
+.hd-toldo-card--featured h3 { color: #fff; }
+.hd-toldo-desc {
+  color: #666;
+  font-size: 0.88rem;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.hd-toldo-card--featured .hd-toldo-desc { color: rgba(255,255,255,0.55); }
+.hd-toldo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.hd-toldo-tag {
+  background: rgba(248,154,54,0.1);
+  color: #c07014;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+.hd-toldo-card--featured .hd-toldo-tag {
+  background: rgba(248,154,54,0.18);
+  color: var(--accent);
+}
+.hd-toldo-award {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 8px 16px;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+}
+.hd-toldo-award strong { color: var(--accent); }
+.hd-green-stat {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 24px;
+  padding-top: 24px;
+}
+.hd-green-stat-item { text-align: center; padding: 0 12px; border-right: 1px solid rgba(255,255,255,0.1); }
+.hd-green-stat-item:last-child { border-right: none; }
+.hd-green-stat-num {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  color: var(--accent);
+  display: block;
+}
+.hd-green-stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.45); line-height: 1.4; margin-top: 4px; }
+
+/* ── BENEFICIOS EXCLUSIVOS ─────────────────────── */
+.hd-beneficios {
+  padding: 96px 24px;
+  background: #f7f6f3;
+}
+.hd-beneficios-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.hd-ben-text {}
+.hd-ben-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.hd-ben-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e2dd;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.hd-ben-item:first-child { border-top: 1px solid #e5e2dd; }
+.hd-ben-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(248,154,54,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.hd-ben-content h4 { font-size: 0.95rem; margin-bottom: 6px; }
+.hd-ben-content p { color: #666; font-size: 0.86rem; line-height: 1.7; }
+.hd-ben-promo {
+  background: #1a1916;
+  padding: 40px;
+  position: sticky;
+  top: 100px;
+}
+.hd-ben-promo h3 { color: #fff; font-size: 1.2rem; margin-bottom: 16px; }
+.hd-ben-promo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.hd-ben-promo-list li {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+.hd-ben-promo-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+.hd-ben-promo-note {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
 /* ── ESPECIFICACIONES TÉCNICAS ─────────────────────── */
 .hd-specs {
   padding: 96px 24px;
@@ -981,6 +1175,16 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   .hd-proceso-steps { grid-template-columns: 1fr; gap: 32px; }
   .hd-proceso-steps::before { display: none; }
   .hd-step { padding: 0; }
+  .hd-toldos-grid { grid-template-columns: 1fr; }
+  .hd-beneficios-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hd-green-stat { grid-template-columns: repeat(3,1fr); }
+}
+@media (max-width: 600px) {
+  .hd-toldos-grid { grid-template-columns: 1fr; }
+  .hd-beneficios-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hd-green-stat { grid-template-columns: 1fr; gap: 16px; }
+  .hd-green-stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 12px 0; }
+  .hd-green-stat-item:last-child { border-bottom: none; }
 }
 </style>
 </head>
@@ -992,7 +1196,9 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
       <a href="proyectos.html">Proyectos</a>
-      <a href="hunterdouglas.html" class="active" style="color:var(--accent);">Hunter Douglas</a>
+      <a href="hunterdouglas.html" class="active hd-nav-brand-link" aria-label="Hunter Douglas">
+        <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/HunterDouglas-white-logo3-03.svg" alt="Hunter Douglas" class="hd-nav-brand-img" loading="eager">
+      </a>
       <div class="nav-dropdown" id="catDropdown">
         <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" id="catBtn">
           Catálogo
@@ -1028,7 +1234,9 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 <div class="nav-mobile" id="navMobile">
   <a href="index.html">Inicio</a>
   <a href="proyectos.html">Proyectos</a>
-  <a href="hunterdouglas.html" class="active">Hunter Douglas</a>
+  <a href="hunterdouglas.html" class="active hd-nav-brand-link" aria-label="Hunter Douglas" style="padding:4px 0">
+    <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/HunterDouglas-white-logo3-03.svg" alt="Hunter Douglas" class="hd-nav-brand-img hd-nav-brand-img--mobile" loading="eager">
+  </a>
   <span class="nav-mobile-cat-label">Catálogo</span>
   <div class="nav-mobile-sub">
     <a href="catalogo.html#sec-sillas">Sillas</a>
@@ -1360,6 +1568,179 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- TOLDOS Y PÉRGOLAS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-toldos" id="toldos">
+  <div class="hd-toldos-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Exteriores Hunter Douglas</span>
+      <h2 class="hd-section-title">Toldos y soluciones<br>para el exterior</h2>
+      <p class="hd-section-desc">Hunter Douglas extiende su filosofía de diseño y tecnología al exterior. Toldos con materiales premium, motorización inteligente y la innovación más avanzada del mercado.</p>
+    </div>
+    <div class="hd-toldos-grid rv">
+
+      <!-- Toldo Green® — destacado -->
+      <div class="hd-toldo-card hd-toldo-card--featured">
+        <div class="hd-toldo-type">Innovación mundial</div>
+        <h3>Toldo Green® — Red Dot 2025</h3>
+        <p class="hd-toldo-desc">El primer toldo del mundo que purifica el aire. Con nanopartículas de TiO₂ activadas por la luz solar —tecnología desarrollada junto a la NASA por Pureti— convierte los contaminantes atmosféricos en aire limpio y agua. Disponible en 7 colores. Garantía 5 años.</p>
+        <div class="hd-toldo-tags">
+          <span class="hd-toldo-tag">Purifica el aire</span>
+          <span class="hd-toldo-tag">NASA Tech / Pureti</span>
+          <span class="hd-toldo-tag">Autolimpiante</span>
+          <span class="hd-toldo-tag">Red Dot 2025</span>
+        </div>
+        <div class="hd-green-stat">
+          <div class="hd-green-stat-item">
+            <span class="hd-green-stat-num">55%</span>
+            <div class="hd-green-stat-label">Reducción de NO₂ en laboratorio</div>
+          </div>
+          <div class="hd-green-stat-item">
+            <span class="hd-green-stat-num">60%</span>
+            <div class="hd-green-stat-label">Menor presencia de moho</div>
+          </div>
+          <div class="hd-green-stat-item">
+            <span class="hd-green-stat-num">70%</span>
+            <div class="hd-green-stat-label">Efecto autolimpiante</div>
+          </div>
+        </div>
+        <div class="hd-toldo-award" style="margin-top:24px">
+          <strong>🏆 Red Dot Design Award 2025</strong> · Premio al mejor producto del año
+        </div>
+      </div>
+
+      <!-- Otros toldos -->
+      <div style="display:flex;flex-direction:column;gap:2px;background:#e8e5e0;">
+
+        <div class="hd-toldo-card" style="flex:1">
+          <div class="hd-toldo-type">Toldos Proyectantes</div>
+          <h3>Toldo Proyectante</h3>
+          <p class="hd-toldo-desc">La solución clásica para galerías, terrazas y jardines. Brazos retráctiles, disponible con accionamiento manual o motorizado. Modelos Select, Select Plus, Select 400, Delta-Flex, Casabox y más.</p>
+          <div class="hd-toldo-tags">
+            <span class="hd-toldo-tag">Galerías y terrazas</span>
+            <span class="hd-toldo-tag">Manual o motorizado</span>
+            <span class="hd-toldo-tag">Sensor sol y viento</span>
+          </div>
+        </div>
+
+        <div class="hd-toldo-card" style="flex:1">
+          <div class="hd-toldo-type">Toldos Verticales</div>
+          <h3>Toldo Vertical</h3>
+          <p class="hd-toldo-desc">Ideales para balcones y galerías donde la protección lateral es clave. Bloquean el sol bajo, el viento y las miradas sin cerrar completamente el espacio.</p>
+          <div class="hd-toldo-tags">
+            <span class="hd-toldo-tag">Balcones</span>
+            <span class="hd-toldo-tag">Protección lateral</span>
+            <span class="hd-toldo-tag">Privacidad exterior</span>
+          </div>
+        </div>
+
+        <div class="hd-toldo-card" style="flex:1">
+          <div class="hd-toldo-type">Auto-portante</div>
+          <h3>Toldo Gemini</h3>
+          <p class="hd-toldo-desc">Sistema autoportante que cubre hasta 36 m² sin necesidad de estructura de pared. Ideal para espacios amplios como piscinas, jardines y áreas comerciales. No requiere punto de fijación.</p>
+          <div class="hd-toldo-tags">
+            <span class="hd-toldo-tag">Hasta 36 m²</span>
+            <span class="hd-toldo-tag">Sin pared de apoyo</span>
+            <span class="hd-toldo-tag">Piscinas y jardines</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="https://wa.me/543585075773?text=Hola,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20toldos%20Hunter%20Douglas" target="_blank" rel="noopener noreferrer" class="btn-hd-primary" data-track="hd_toldos_wa">Consultar toldos — WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- BENEFICIOS DE DISTRIBUIDOR OFICIAL -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-beneficios" id="beneficios">
+  <div class="hd-beneficios-inner">
+
+    <div class="hd-ben-text rv">
+      <span class="hd-section-label">Por qué elegirnos</span>
+      <h2 class="hd-section-title">Distribuidores oficiales:<br>lo que eso significa para vos</h2>
+      <p style="color:#666;line-height:1.75;margin-bottom:8px">No somos un local de cortinas genéricas. Somos distribuidores oficiales y certificados por Hunter Douglas, lo que nos da acceso a la línea completa de productos y a los estándares de instalación que la marca exige.</p>
+
+      <div class="hd-ben-list">
+
+        <div class="hd-ben-item">
+          <div class="hd-ben-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="hd-ben-content">
+            <h4>Garantía de fábrica original</h4>
+            <p>Al comprar con un distribuidor oficial, la garantía Hunter Douglas (5 años) es válida y ejecutable. Si algo falla, lo resolvemos nosotros directamente sin intermediarios.</p>
+          </div>
+        </div>
+
+        <div class="hd-ben-item">
+          <div class="hd-ben-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="hd-ben-content">
+            <h4>Instalación certificada por Hunter Douglas</h4>
+            <p>Nuestros técnicos están capacitados y certificados por Hunter Douglas. La instalación cumple exactamente los protocolos que la marca exige para que el producto funcione como fue diseñado.</p>
+          </div>
+        </div>
+
+        <div class="hd-ben-item">
+          <div class="hd-ben-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+          </div>
+          <div class="hd-ben-content">
+            <h4>Muestras reales y asesoramiento personalizado</h4>
+            <p>Llevamos a tu espacio las muestras físicas de telas, mecanismos y colecciones. No decidís sobre una foto: tocás, probás y comparás los materiales antes de elegir.</p>
+          </div>
+        </div>
+
+        <div class="hd-ben-item">
+          <div class="hd-ben-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="hd-ben-content">
+            <h4>Servicio local en Río Cuarto</h4>
+            <p>Llevamos 22 años en la región. Si necesitás servicio post-venta, ajuste, reparación o asesoramiento para ampliar tu proyecto, estamos a minutos de tu casa.</p>
+          </div>
+        </div>
+
+        <div class="hd-ben-item">
+          <div class="hd-ben-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="hd-ben-content">
+            <h4>Financiación y planes de pago</h4>
+            <p>Consultá las opciones de financiación disponibles en el momento de tu compra. Trabajamos con distintas modalidades para que el proyecto que imaginaste sea posible.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div>
+      <div class="hd-ben-promo rv">
+        <h3>Visitá nuestro estudio</h3>
+        <ul class="hd-ben-promo-list">
+          <li>Exposición de productos reales instalados para que veas el efecto en vivo</li>
+          <li>Muestras de todas las colecciones: Silhouette, Duette, Pirouette, Luminette, Roller y Toldos</li>
+          <li>Demostración de motorización PowerView® en funcionamiento</li>
+          <li>Presupuesto sin compromiso el mismo día</li>
+          <li>Proyectos residenciales y comerciales</li>
+          <li>Envíos e instalación en toda la región</li>
+        </ul>
+        <a href="https://wa.me/543585075773?text=Hola,%20me%20gustar%C3%ADa%20visitar%20el%20estudio%20para%20ver%20los%20productos%20Hunter%20Douglas" target="_blank" rel="noopener noreferrer" class="btn-hd-primary" data-track="hd_ben_visita">Coordinar visita al estudio</a>
+        <p class="hd-ben-promo-note">Juan de Garay 1550 · Río Cuarto · Lun-Vie 9 a 18 h · Sáb 9 a 13 h · Atención con cita previa</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
