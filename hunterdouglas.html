@@ -300,30 +300,42 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 }
 .hd-ette-card:hover::before { opacity: 0.85; }
 
-/* Individual card gradients */
+/* Individual card backgrounds — real HD product photos */
 .hd-card-silhouette {
-  background: linear-gradient(160deg, #e8dfd0 0%, #c5b49a 50%, #a08060 100%);
+  background-color: #a08060;
+  background-image: url('https://www.hunterdouglas.com.ar/wp-content/uploads/2026/03/HUNTER-DOUGLAS-EXPERIENCIA-LIVING-by-RITVU-185.webp');
+  background-size: cover;
+  background-position: center;
 }
 .hd-card-silhouette::before {
-  background: linear-gradient(to top, rgba(20,14,8,0.7) 0%, rgba(20,14,8,0.2) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(10,6,2,0.82) 0%, rgba(10,6,2,0.3) 55%, rgba(10,6,2,0.1) 100%);
 }
 .hd-card-duette {
-  background: linear-gradient(160deg, #d6dde8 0%, #a8b8cc 50%, #6e8299 100%);
+  background-color: #6e8299;
+  background-image: url('https://www.hunterdouglas.com.ar/wp-content/uploads/2026/03/HUNTER-DOUGLAS-EXPERIENCIA-LIVING-by-RITVU-30.webp');
+  background-size: cover;
+  background-position: center;
 }
 .hd-card-duette::before {
-  background: linear-gradient(to top, rgba(8,14,24,0.75) 0%, rgba(8,14,24,0.2) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(4,8,16,0.85) 0%, rgba(4,8,16,0.3) 55%, rgba(4,8,16,0.1) 100%);
 }
 .hd-card-pirouette {
-  background: linear-gradient(160deg, #e3e0d8 0%, #c4bfb2 50%, #8c8678 100%);
+  background-color: #8c8678;
+  background-image: url('https://www.hunterdouglas.com.ar/wp-content/uploads/2026/03/HUNTER-DOUGLAS-EXPERIENCIA-LIVING-by-RITVU-54.webp');
+  background-size: cover;
+  background-position: center;
 }
 .hd-card-pirouette::before {
-  background: linear-gradient(to top, rgba(16,14,10,0.72) 0%, rgba(16,14,10,0.2) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(10,8,4,0.82) 0%, rgba(10,8,4,0.3) 55%, rgba(10,8,4,0.1) 100%);
 }
 .hd-card-luminette {
-  background: linear-gradient(160deg, #dbe8e2 0%, #b0ccbf 50%, #6e9988 100%);
+  background-color: #6e9988;
+  background-image: url('https://www.hunterdouglas.com.ar/wp-content/uploads/2026/03/Draperia-Horizontal.webp');
+  background-size: cover;
+  background-position: center;
 }
 .hd-card-luminette::before {
-  background: linear-gradient(to top, rgba(8,20,16,0.72) 0%, rgba(8,20,16,0.2) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(4,12,8,0.82) 0%, rgba(4,12,8,0.3) 55%, rgba(4,12,8,0.1) 100%);
 }
 
 .hd-ette-card-content {
@@ -506,30 +518,25 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 }
 .hd-vert-visual-box {
   aspect-ratio: 4/5;
-  background: linear-gradient(150deg, #e8e4dc 0%, #d0c9be 40%, #b0a898 100%);
+  background-color: #b0a898;
+  background-image: url('https://www.hunterdouglas.com.ar/wp-content/uploads/2026/03/1-Fran-Varela-Cocina-y-Estar.webp');
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: flex-end;
   padding: 40px;
   position: relative;
   overflow: hidden;
 }
-.hd-vert-visual-lines {
+.hd-vert-visual-overlay {
   position: absolute;
   inset: 0;
-  display: flex;
-  gap: 18px;
-  padding: 0 32px;
-  justify-content: center;
-}
-.hd-vert-line {
-  width: 2px;
-  height: 100%;
-  background: rgba(255,255,255,0.35);
+  background: linear-gradient(to top, rgba(10,8,4,0.7) 0%, rgba(10,8,4,0.1) 60%, transparent 100%);
 }
 .hd-vert-caption {
   position: relative;
   z-index: 2;
-  color: rgba(30,24,16,0.75);
+  color: rgba(255,255,255,0.85);
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1045,17 +1052,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
     <div class="hd-vert-visual rv">
       <div class="hd-vert-visual-box">
-        <div class="hd-vert-visual-lines" aria-hidden="true">
-          <div class="hd-vert-line"></div>
-          <div class="hd-vert-line" style="opacity:.5"></div>
-          <div class="hd-vert-line"></div>
-          <div class="hd-vert-line" style="opacity:.5"></div>
-          <div class="hd-vert-line"></div>
-          <div class="hd-vert-line" style="opacity:.5"></div>
-          <div class="hd-vert-line"></div>
-          <div class="hd-vert-line" style="opacity:.5"></div>
-          <div class="hd-vert-line"></div>
-        </div>
+        <div class="hd-vert-visual-overlay" aria-hidden="true"></div>
         <p class="hd-vert-caption">Cortinas verticales Hunter Douglas</p>
       </div>
     </div>
