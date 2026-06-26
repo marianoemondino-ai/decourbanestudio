@@ -56,7 +56,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       "mainEntity":{
         "@type":"LocalBusiness",
         "name":"Decourban Estudio",
-        "telephone":"+543585075773",
+        "telephone":["+543585075773","+543585078803"],
         "email":"ventas@decourban.com.ar",
         "address":{"@type":"PostalAddress","streetAddress":"Juan de Garay 1550","addressLocality":"Río Cuarto","addressRegion":"Córdoba","postalCode":"5800","addressCountry":"AR"},
         "geo":{"@type":"GeoCoordinates","latitude":-33.1307,"longitude":-64.3500},
@@ -90,6 +90,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       <a href="index.html">Inicio</a>
       <a href="proyectos.html">Proyectos</a>
       <a href="servicios.html">Servicios</a>
+      <a href="hunterdouglas.html" style="color:var(--accent);">Hunter Douglas</a>
       <div class="nav-dropdown" id="catDropdown">
         <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" id="catBtn">
           Catálogo
@@ -104,7 +105,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
           <a href="catalogo.html#sec-drift-asientos">Drift Wood Vibes</a>
           <a href="catalogo.html#sec-lamparas">Lámparas</a>
           <a href="catalogo.html#sec-alfombras">Alfombras</a>
-          <a href="catalogo.html#sec-adornos">Adornos</a>
         </div>
       </div>
     </div>
@@ -127,6 +127,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="index.html">Inicio</a>
   <a href="proyectos.html">Proyectos</a>
   <a href="servicios.html">Servicios</a>
+  <a href="hunterdouglas.html">Hunter Douglas</a>
   <span class="nav-mobile-cat-label">Catálogo</span>
   <div class="nav-mobile-sub">
     <a href="catalogo.html#sec-sillas">Sillas</a>
@@ -137,7 +138,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <a href="catalogo.html#sec-drift-asientos">Drift Wood Vibes</a>
     <a href="catalogo.html#sec-lamparas">Lámparas</a>
     <a href="catalogo.html#sec-alfombras">Alfombras</a>
-    <a href="catalogo.html#sec-adornos">Adornos</a>
   </div>
   <a href="nosotros.html">Nosotros</a>
   <a href="contacto.html" class="active">Contacto</a>
@@ -410,6 +410,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         <a href="index.html">Inicio</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="servicios.html">Servicios</a>
+        <a href="hunterdouglas.html">Hunter Douglas</a>
         <a href="catalogo.html">Catálogo</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
@@ -417,7 +418,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       <div class="footer-col">
         <h4>Contacto</h4>
         <p>Juan de Garay 1550<br/>Río Cuarto, Córdoba</p>
-        <p style="margin-top:12px;"><a href="tel:+543585075773" style="color:inherit">+54 358 507-5773</a><br/><a href="mailto:ventas@decourban.com.ar" style="color:inherit">ventas@decourban.com.ar</a></p>
+        <p style="margin-top:12px;"><a href="tel:+543585075773" style="color:inherit">+54 358 507-5773</a><br/><a href="tel:+543585078803" style="color:inherit">+54 358 507-8803</a><br/><a href="mailto:ventas@decourban.com.ar" style="color:inherit">ventas@decourban.com.ar</a></p>
         <p style="margin-top:12px;">Lun-Vie 9 a 18 h · Sáb 9 a 13 h</p>
       </div>
     </div>
@@ -443,9 +444,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   updateNav();
 
   // ── Mobile menu ────────────────────────────────────
-  document.getElementById('menuBtn').addEventListener('click', function() {
-    var open = document.getElementById('navMobile').classList.toggle('open');
+  var menuBtn = document.getElementById('menuBtn');
+  var navMobile = document.getElementById('navMobile');
+  menuBtn.addEventListener('click', function() {
+    var open = navMobile.classList.toggle('open');
     this.setAttribute('aria-expanded', open);
+  });
+  // Close mobile menu when any link inside is clicked
+  navMobile.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navMobile.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
   });
 
   // ── Dropdown catálogo ──────────────────────────────
