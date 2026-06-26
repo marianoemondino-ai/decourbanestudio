@@ -160,11 +160,11 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 }
 .hd-brand-logo {
   display: block;
-  width: 200px;
-  max-width: 60vw;
+  width: 340px;
+  max-width: 78vw;
   height: auto;
-  margin: 0 auto 36px;
-  filter: brightness(1) drop-shadow(0 2px 12px rgba(0,0,0,0.4));
+  margin: 0 auto 40px;
+  filter: brightness(1.05) drop-shadow(0 4px 24px rgba(0,0,0,0.5));
 }
 .hd-hero-scroll {
   position: absolute;
@@ -729,6 +729,229 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   flex-wrap: wrap;
 }
 
+/* ── ESPECIFICACIONES TÉCNICAS ─────────────────────── */
+.hd-specs {
+  padding: 96px 24px;
+  background: #1a1916;
+}
+.hd-specs-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.hd-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.07);
+  margin-top: 56px;
+}
+.hd-spec-card {
+  background: #1a1916;
+  padding: 36px 28px;
+}
+.hd-spec-product {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.hd-spec-card h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+.hd-spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.78rem;
+}
+.hd-spec-row:last-child { border-bottom: none; }
+.hd-spec-label { color: rgba(255,255,255,0.4); flex-shrink: 0; }
+.hd-spec-value { color: rgba(255,255,255,0.82); text-align: right; }
+
+/* ── POR AMBIENTE ─────────────────────── */
+.hd-ambiente {
+  padding: 96px 24px;
+  background: #fff;
+}
+.hd-ambiente-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.hd-amb-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2px;
+  background: #e8e5e0;
+  margin-top: 56px;
+}
+.hd-amb-card {
+  background: #f7f6f3;
+  padding: 40px 32px;
+}
+.hd-amb-room {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.hd-amb-card h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #1a1916;
+}
+.hd-amb-desc {
+  color: #666;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.hd-amb-rec {
+  display: inline-block;
+  background: rgba(248,154,54,0.1);
+  color: #c07014;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-weight: 500;
+}
+
+/* ── PROCESO DE COMPRA ─────────────────────── */
+.hd-proceso {
+  padding: 96px 24px;
+  background: #0e0d0b;
+}
+.hd-proceso-inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.hd-proceso-steps {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0;
+  margin-top: 64px;
+  position: relative;
+}
+.hd-proceso-steps::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: calc(16.66% + 28px);
+  right: calc(16.66% + 28px);
+  height: 1px;
+  background: rgba(255,255,255,0.12);
+}
+.hd-step {
+  padding: 0 40px;
+  text-align: center;
+}
+.hd-step-num {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-family: 'Fraunces', serif;
+  background: #0e0d0b;
+  position: relative;
+  z-index: 1;
+}
+.hd-step h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+.hd-step p {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.86rem;
+  line-height: 1.75;
+}
+.hd-proceso-cta {
+  text-align: center;
+  margin-top: 64px;
+}
+
+/* ── VIDEO SECTION ─────────────────────── */
+.hd-video-section {
+  padding: 96px 24px;
+  background: #f7f6f3;
+}
+.hd-video-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.hd-video-wrap {
+  margin-top: 48px;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: #0e0d0b;
+}
+.hd-video-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+.hd-yt-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  color: #666;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.hd-yt-cta:hover { color: #e00; }
+.hd-yt-cta svg { flex-shrink: 0; }
+
+/* ── FAQ ─────────────────────── */
+.hd-faq {
+  padding: 96px 24px;
+  background: #fff;
+}
+.hd-faq-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.hd-faq-list {
+  margin-top: 56px;
+}
+.hd-faq-item {
+  border-top: 1px solid #e5e2dd;
+  padding: 28px 0;
+}
+.hd-faq-item:last-child { border-bottom: 1px solid #e5e2dd; }
+.hd-faq-q {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1916;
+  margin-bottom: 14px;
+}
+.hd-faq-a {
+  color: #666;
+  font-size: 0.91rem;
+  line-height: 1.78;
+}
+.hd-faq-a strong { color: #1a1916; }
+
 /* Responsive */
 @media (max-width: 900px) {
   .hd-credentials-inner,
@@ -746,6 +969,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   .hd-hero h1 { font-size: 2.4rem; }
   .hd-ette-card { min-height: 340px; padding: 28px; }
   .hd-roller-grid { grid-template-columns: 1fr; }
+  .hd-specs-grid { grid-template-columns: 1fr; }
+  .hd-amb-grid { grid-template-columns: 1fr; }
+  .hd-proceso-steps { grid-template-columns: 1fr; gap: 32px; }
+  .hd-proceso-steps::before { display: none; }
+  .hd-step { padding: 0; }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .hd-specs-grid { grid-template-columns: repeat(2,1fr); }
+  .hd-amb-grid { grid-template-columns: repeat(2,1fr); }
+  .hd-proceso-steps { grid-template-columns: 1fr; gap: 32px; }
+  .hd-proceso-steps::before { display: none; }
+  .hd-step { padding: 0; }
 }
 </style>
 </head>
@@ -1124,6 +1359,343 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
           <span class="hd-pv-logo-tag">Samsung SmartThings</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- ESPECIFICACIONES TÉCNICAS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-specs" id="especificaciones">
+  <div class="hd-specs-inner">
+    <div class="hd-products-header rv" style="color:#fff">
+      <span class="hd-section-label">Ficha técnica</span>
+      <h2 class="hd-section-title" style="color:#fff">Especificaciones de la Línea Ette®</h2>
+      <p class="hd-section-desc" style="color:rgba(255,255,255,0.5)">Cada producto de la Línea Ette® combina materiales premium, tecnologías exclusivas y un control de luz único que no existe en otras marcas.</p>
+    </div>
+    <div class="hd-specs-grid rv">
+
+      <!-- Silhouette -->
+      <div class="hd-spec-card">
+        <div class="hd-spec-product">Línea Ette®</div>
+        <h3>Silhouette®</h3>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Tecnología</span>
+          <span class="hd-spec-value">ClearView™</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Control UV abierta</span>
+          <span class="hd-spec-value">87%</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Control UV cerrada</span>
+          <span class="hd-spec-value">99%</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Colores</span>
+          <span class="hd-spec-value">17</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Colecciones</span>
+          <span class="hd-spec-value">7</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Tamaños de lámina</span>
+          <span class="hd-spec-value">2" y 3"</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Motorización</span>
+          <span class="hd-spec-value">PowerView® ✓</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Tela</span>
+          <span class="hd-spec-value">Antiestática / Corte láser</span>
+        </div>
+      </div>
+
+      <!-- Duette -->
+      <div class="hd-spec-card">
+        <div class="hd-spec-product">Línea Ette®</div>
+        <h3>Duette®</h3>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Estructura</span>
+          <span class="hd-spec-value">Honeycomb / Architella</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Reduce calor verano</span>
+          <span class="hd-spec-value">hasta 80%</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Reduce pérdida invierno</span>
+          <span class="hd-spec-value">hasta 45%</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Absorción acústica</span>
+          <span class="hd-spec-value">hasta 45%</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Colores</span>
+          <span class="hd-spec-value">37</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Colecciones</span>
+          <span class="hd-spec-value">11</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Transparencia</span>
+          <span class="hd-spec-value">Traslúcida / Semi / Blackout</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Garantía</span>
+          <span class="hd-spec-value">5+1 años</span>
+        </div>
+      </div>
+
+      <!-- Pirouette -->
+      <div class="hd-spec-card">
+        <div class="hd-spec-product">Línea Ette®</div>
+        <h3>Pirouette®</h3>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Sistema exclusivo</span>
+          <span class="hd-spec-value">Invisi-Lift®</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Capas de tela</span>
+          <span class="hd-spec-value">3 capas</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Material</span>
+          <span class="hd-spec-value">100% poliéster antiestático</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Protección UV</span>
+          <span class="hd-spec-value">Alta</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Colecciones</span>
+          <span class="hd-spec-value">7</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Ambientes</span>
+          <span class="hd-spec-value">Living, dormit., oficinas</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Motorización</span>
+          <span class="hd-spec-value">PowerView® ✓</span>
+        </div>
+      </div>
+
+      <!-- Luminette -->
+      <div class="hd-spec-card">
+        <div class="hd-spec-product">Línea Ette®</div>
+        <h3>Luminette®</h3>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Orientación</span>
+          <span class="hd-spec-value">Láminas verticales</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Ancho máximo</span>
+          <span class="hd-spec-value">4,87 m</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Altura máxima</span>
+          <span class="hd-spec-value">3,04 m</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Control UV</span>
+          <span class="hd-spec-value">hasta 99%</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Combinaciones</span>
+          <span class="hd-spec-value">70+</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Colecciones</span>
+          <span class="hd-spec-value">7</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Material</span>
+          <span class="hd-spec-value">100% poliéster antiestático</span>
+        </div>
+        <div class="hd-spec-row">
+          <span class="hd-spec-label">Motorización</span>
+          <span class="hd-spec-value">PowerView® ✓</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- POR AMBIENTE -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-ambiente" id="por-ambiente">
+  <div class="hd-ambiente-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Guía de selección</span>
+      <h2 class="hd-section-title">¿Qué cortina Hunter Douglas<br>va mejor en cada espacio?</h2>
+      <p class="hd-section-desc">Cada ambiente tiene requerimientos distintos de luz, privacidad y estética. Te ayudamos a elegir el producto correcto.</p>
+    </div>
+    <div class="hd-amb-grid rv">
+
+      <div class="hd-amb-card">
+        <div class="hd-amb-room">Living / Sala de estar</div>
+        <h3>El protagonista del espacio</h3>
+        <p class="hd-amb-desc">El living necesita una cortina que filtre la luz natural sin bloquearla, que acompañe el mobiliario y sea flexible para distintos momentos del día.</p>
+        <span class="hd-amb-rec">Silhouette® o Pirouette®</span>
+      </div>
+
+      <div class="hd-amb-card">
+        <div class="hd-amb-room">Dormitorio principal</div>
+        <h3>Oscuridad y silencio</h3>
+        <p class="hd-amb-desc">El dormitorio requiere oscurecimiento total para dormir de día, control del ruido exterior y privacidad plena durante la noche.</p>
+        <span class="hd-amb-rec">Duette® Blackout o Roller Twinline</span>
+      </div>
+
+      <div class="hd-amb-card">
+        <div class="hd-amb-room">Ventanales grandes / Puertas</div>
+        <h3>Escala y elegancia</h3>
+        <p class="hd-amb-desc">Las aberturas de gran tamaño necesitan una solución que cubra sin perder presencia visual. Las verticales son la respuesta perfecta.</p>
+        <span class="hd-amb-rec">Luminette® o Cortina Vertical</span>
+      </div>
+
+      <div class="hd-amb-card">
+        <div class="hd-amb-room">Oficina / Estudio</div>
+        <h3>Luz sin deslumbramiento</h3>
+        <p class="hd-amb-desc">En espacios de trabajo, controlar el reflejo sobre pantallas es crítico. La tela screen permite ver afuera sin deslumbramiento desde adentro.</p>
+        <span class="hd-amb-rec">Roller Screen o Silhouette®</span>
+      </div>
+
+      <div class="hd-amb-card">
+        <div class="hd-amb-room">Dormitorio infantil</div>
+        <h3>Seguridad y blackout</h3>
+        <p class="hd-amb-desc">Los niños necesitan oscuridad para descansar. Los sistemas de cuerda oculta o motorización eliminan el riesgo de cordones a la vista.</p>
+        <span class="hd-amb-rec">Duette® Blackout + PowerView®</span>
+      </div>
+
+      <div class="hd-amb-card">
+        <div class="hd-amb-room">Cocina / Comedor</div>
+        <h3>Fácil limpieza y luz</h3>
+        <p class="hd-amb-desc">Materiales antiestáticos que no acumulan grasa ni polvo, de fácil limpieza con un paño húmedo. La cortina Roller en telas especiales es la opción más práctica.</p>
+        <span class="hd-amb-rec">Roller Quantum® decorativa</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- CÓMO COMPRAR -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-proceso" id="como-comprar">
+  <div class="hd-proceso-inner">
+    <div class="hd-products-header rv" style="text-align:center">
+      <span class="hd-section-label">Proceso de compra</span>
+      <h2 class="hd-section-title" style="color:#fff">Simple y sin sorpresas</h2>
+      <p class="hd-section-desc" style="color:rgba(255,255,255,0.5)">Como distribuidores oficiales, te acompañamos desde la primera consulta hasta la instalación final. Sin intermediarios, sin burocracia.</p>
+    </div>
+    <div class="hd-proceso-steps">
+
+      <div class="hd-step rv">
+        <div class="hd-step-num">1</div>
+        <h3>Consulta y muestras</h3>
+        <p>Venís a nuestro estudio o coordinamos una visita a tu espacio. Traemos todas las muestras de tela y catálogos. Te mostramos los mecanismos en mano para que veas la diferencia.</p>
+      </div>
+
+      <div class="hd-step rv">
+        <div class="hd-step-num">2</div>
+        <h3>Medición y cotización</h3>
+        <p>Medimos todas las aberturas con precisión. Preparamos una cotización detallada sin compromiso, con el producto, el mecanismo y el precio final instalado.</p>
+      </div>
+
+      <div class="hd-step rv">
+        <div class="hd-step-num">3</div>
+        <h3>Producción e instalación</h3>
+        <p>Una vez aprobado el pedido, Hunter Douglas lo produce en fábrica. Nuestro equipo técnico certificado realiza la instalación con los estándares exigidos por la marca.</p>
+      </div>
+
+    </div>
+    <div class="hd-proceso-cta rv">
+      <a href="https://wa.me/543585075773?text=Hola,%20me%20gustar%C3%ADa%20consultar%20sobre%20cortinas%20Hunter%20Douglas" target="_blank" rel="noopener noreferrer" class="btn-hd-primary" data-track="hd_proceso_wa">Empezar ahora — WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- VIDEO HUNTER DOUGLAS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-video-section" id="video-hd">
+  <div class="hd-video-inner rv">
+    <div style="text-align:center">
+      <span class="hd-section-label">Hunter Douglas en acción</span>
+      <h2 class="hd-section-title">Mirá la experiencia<br>Hunter Douglas</h2>
+      <p class="hd-section-desc" style="max-width:600px;margin:0 auto">Un recorrido visual por los espacios que inspiran a quienes eligen Hunter Douglas para sus proyectos de diseño e interiorismo.</p>
+    </div>
+    <div class="hd-video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/ObfdA_8weFg?rel=0&modestbranding=1"
+        title="Hunter Douglas en Experiencia Living"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+    <div style="text-align:center">
+      <a href="https://www.youtube.com/@HunterDouglasArgentina/videos" target="_blank" rel="noopener noreferrer" class="hd-yt-cta">
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="#e00"><path d="M19.58 2.19a2.5 2.5 0 0 0-1.76-1.77C16.25 0 10 0 10 0S3.75 0 2.18.42A2.5 2.5 0 0 0 .42 2.19C0 3.77 0 7 0 7s0 3.23.42 4.81a2.5 2.5 0 0 0 1.76 1.77C3.75 14 10 14 10 14s6.25 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77C20 10.23 20 7 20 7s0-3.23-.42-4.81zM8 10V4l5.2 3L8 10z"/></svg>
+        Ver más videos en YouTube ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- FAQ -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-faq" id="faq">
+  <div class="hd-faq-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Preguntas frecuentes</span>
+      <h2 class="hd-section-title">Todo lo que necesitás<br>saber antes de elegir</h2>
+    </div>
+    <div class="hd-faq-list">
+
+      <div class="hd-faq-item rv">
+        <div class="hd-faq-q">¿Cuál es la diferencia entre la Línea Ette® y las cortinas Roller comunes?</div>
+        <div class="hd-faq-a">La Línea Ette® (Silhouette®, Duette®, Pirouette®, Luminette®) son productos exclusivos Hunter Douglas con tecnologías patentadas que no existen en ninguna otra marca. Combinan velos de tela, láminas de precisión y mecanismos únicos que permiten un control de luz sin precedentes. Las cortinas Roller son una solución más versátil y accesible, perfecta para ambientes que priorizan funcionalidad y diseño limpio. <strong>Ambas opciones incluyen garantía de fábrica Hunter Douglas.</strong></div>
+      </div>
+
+      <div class="hd-faq-item rv">
+        <div class="hd-faq-q">¿Qué ventajas tiene la motorización PowerView® frente a un mecanismo manual?</div>
+        <div class="hd-faq-a">PowerView® convierte tus cortinas en parte de tu hogar inteligente. Podés crear <strong>escenas programadas</strong> (que las cortinas bajen solas al mediodía para bloquear el sol, por ejemplo), controlarlas desde cualquier lugar del mundo con el celular, y conectarlas con Amazon Alexa, Google Home o Apple HomeKit. Es ideal para ventanas de difícil acceso, hogares con adultos mayores o cualquier espacio donde el confort importa. <strong>El sistema ganó el Red Dot Design Award</strong>, el premio más prestigioso del diseño de producto.</div>
+      </div>
+
+      <div class="hd-faq-item rv">
+        <div class="hd-faq-q">¿Cuánto tiempo demora el proceso desde que elijo hasta que queda instalado?</div>
+        <div class="hd-faq-a">El proceso típico dura entre <strong>3 y 5 semanas</strong>: la semana de consulta y medición, y luego el tiempo de producción en fábrica (que varía según el producto y la carga de trabajo). Una vez que el producto llega a nuestro estudio, coordinamos la instalación en los próximos días hábiles. Te mantenemos informado en cada etapa.</div>
+      </div>
+
+      <div class="hd-faq-item rv">
+        <div class="hd-faq-q">¿Qué incluye la garantía de Hunter Douglas?</div>
+        <div class="hd-faq-a">Hunter Douglas ofrece <strong>5 años de garantía de fábrica</strong> sobre mecanismos y telas (la Duette® tiene una garantía extendida de 5+1 año). La garantía cubre defectos de fabricación en telas, mecanismos y componentes. Al ser distribuidores oficiales, somos el punto de contacto en Río Cuarto para cualquier reclamo o servicio post-venta. <strong>No necesitás viajar a Buenos Aires</strong> ni gestionar nada directamente con la marca.</div>
+      </div>
+
+      <div class="hd-faq-item rv">
+        <div class="hd-faq-q">¿Las telas Hunter Douglas son fáciles de limpiar?</div>
+        <div class="hd-faq-a">Sí. Todas las telas de la Línea Ette® tienen <strong>tratamiento antiestático</strong> que inhibe la acumulación de polvo. Para el mantenimiento regular, basta con pasar un plumero o aspirar con cepillo suave. Para una limpieza más profunda, la mayoría de las telas admiten limpieza con paño húmedo. <strong>No se recomiendan para lavar en lavarropas</strong>. Consultanos según el modelo específico que hayas elegido.</div>
+      </div>
+
+      <div class="hd-faq-item rv">
+        <div class="hd-faq-q">¿Se puede combinar más de un producto en el mismo ambiente?</div>
+        <div class="hd-faq-a">Absolutamente. De hecho, muchos proyectos combinan productos distintos según la orientación de la ventana: <strong>una Silhouette®</strong> en las ventanas que dan al este o al oeste (donde el control solar es crítico), y <strong>una Roller Blackout</strong> en el dormitorio. También es posible motorizar parte de las cortinas y dejar otras manuales. Como asesores de diseño, te ayudamos a armar la combinación más inteligente para cada espacio.</div>
+      </div>
+
     </div>
   </div>
 </section>
