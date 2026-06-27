@@ -1313,18 +1313,209 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 .hd-sust-item h4 { font-size: 0.88rem; color: #fff; font-weight: 600; margin: 0 0 6px; }
 .hd-sust-item p { font-size: 0.78rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin: 0; }
 
+/* ── CLUB TALENT ────────────────────────────────────── */
+.hd-talent { background: #1a160e; padding: 100px 24px; }
+.hd-talent-inner { max-width: 1100px; margin: 0 auto; }
+.hd-talent-inner .hd-section-label { color: rgba(255,255,255,0.5); }
+.hd-talent-inner .hd-section-title { color: #fff; }
+.hd-talent-inner .hd-section-desc { color: rgba(255,255,255,0.6); }
+.hd-talent-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 56px; align-items: start; }
+.hd-talent-benefits h4 { font-family: 'Fraunces', serif; font-size: 1rem; color: rgba(255,255,255,0.6); font-weight: 400; margin: 0 0 20px; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.75rem; }
+.hd-tal-ben-list { list-style: none; padding: 0; margin: 0 0 36px; }
+.hd-tal-ben-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.78);
+  font-size: 0.9rem;
+}
+.hd-tal-ben-list li:last-child { border-bottom: none; }
+.hd-tal-icon { font-size: 1.2rem; flex-shrink: 0; width: 28px; text-align: center; }
+.hd-talent-trips { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+.hd-trip-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+}
+.hd-trip-card strong { display: block; color: #fff; margin-bottom: 2px; font-size: 0.88rem; }
+.hd-talent-points { }
+.hd-pts-label { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+.hd-pts-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+.hd-pts-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 10px;
+  padding: 18px 22px;
+  gap: 16px;
+}
+.hd-pts-row-name { font-size: 0.88rem; color: rgba(255,255,255,0.75); }
+.hd-pts-row-pts { font-family: 'Fraunces', serif; font-size: 1.35rem; color: var(--accent); white-space: nowrap; }
+.hd-pts-row.hd-pts-bonus { border-color: rgba(248,154,54,0.3); background: rgba(248,154,54,0.08); }
+.hd-pts-row.hd-pts-bonus .hd-pts-row-name { color: rgba(255,255,255,0.85); }
+.hd-tal-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.hd-tal-cta:hover { opacity: 0.88; }
+.hd-talent-edition {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 16px 24px;
+  margin-bottom: 32px;
+}
+.hd-edition-num { font-family: 'Fraunces', serif; font-size: 2rem; color: var(--accent); line-height: 1; }
+.hd-edition-txt { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.4; }
+.hd-edition-txt strong { display: block; color: rgba(255,255,255,0.85); font-size: 0.9rem; }
+
+/* ── GALERÍA VISUAL ─────────────────────────────────── */
+.hd-galeria { background: #f0ece4; padding: 80px 24px; }
+.hd-galeria-inner { max-width: 1200px; margin: 0 auto; }
+.hd-gal-header { text-align: center; margin-bottom: 48px; }
+.hd-gal-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 260px 260px;
+  gap: 12px;
+}
+.hd-gal-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #c8c0b4;
+}
+.hd-gal-item:first-child { grid-row: 1 / 3; }
+.hd-gal-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+.hd-gal-item:hover .hd-gal-bg { transform: scale(1.04); }
+.hd-gal-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%);
+}
+.hd-gal-label {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  color: #fff;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ── COMPARADOR ─────────────────────────────────────── */
+.hd-comparador { background: #fff; padding: 100px 24px; }
+.hd-comparador-inner { max-width: 1100px; margin: 0 auto; }
+.hd-comp-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 48px; }
+.hd-comp-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: 0.83rem;
+}
+.hd-comp-table thead th {
+  background: #1a1612;
+  color: #fff;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.hd-comp-table thead th:first-child { border-radius: 8px 0 0 0; min-width: 160px; }
+.hd-comp-table thead th:last-child { border-radius: 0 8px 0 0; }
+.hd-comp-table tbody tr { border-bottom: 1px solid #f0ece5; }
+.hd-comp-table tbody tr:hover td { background: #faf7f3; }
+.hd-comp-table tbody td { padding: 13px 16px; color: #3a3028; vertical-align: middle; line-height: 1.4; }
+.hd-comp-table tbody td:first-child { font-family: 'Fraunces', serif; font-size: 0.92rem; color: #1a1612; font-weight: 500; white-space: nowrap; }
+.hd-comp-yes { color: #2d7a3a; font-weight: 700; }
+.hd-comp-no { color: #aaa; }
+.hd-comp-opt { color: #b07010; }
+.hd-comp-star { color: var(--accent); font-size: 1rem; line-height: 1; }
+
+/* ── FINANCIACIÓN ───────────────────────────────────── */
+.hd-finan { background: var(--accent); padding: 56px 24px; }
+.hd-finan-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.hd-finan-text h3 { font-family: 'Fraunces', serif; font-size: 1.8rem; color: #fff; margin: 0 0 8px; }
+.hd-finan-text p { color: rgba(255,255,255,0.82); font-size: 0.88rem; margin: 0; }
+.hd-finan-opts { display: flex; gap: 12px; flex-wrap: wrap; }
+.hd-finan-opt {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 10px 18px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.hd-finan-cta {
+  background: #fff;
+  color: var(--accent);
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+.hd-finan-cta:hover { opacity: 0.9; }
+
 @media (max-width: 900px) {
   .hd-persianas-grid { grid-template-columns: 1fr; }
   .hd-com-grid { grid-template-columns: 1fr; }
   .hd-legado-split { grid-template-columns: 1fr; gap: 48px; }
   .hd-sustenta-inner { grid-template-columns: 1fr; gap: 40px; }
   .hd-sust-items { grid-template-columns: 1fr 1fr; }
+  .hd-talent-split { grid-template-columns: 1fr; gap: 48px; }
+  .hd-talent-trips { grid-template-columns: 1fr 1fr; }
+  .hd-gal-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 220px 220px; }
+  .hd-gal-item:first-child { grid-row: auto; }
 }
 @media (max-width: 600px) {
   .hd-persianas-grid { grid-template-columns: 1fr; }
   .hd-com-grid { grid-template-columns: 1fr; }
   .hd-sust-items { grid-template-columns: 1fr; }
   .hd-legado-stats { grid-template-columns: 1fr 1fr; }
+  .hd-talent-trips { grid-template-columns: 1fr; }
+  .hd-gal-grid { grid-template-columns: 1fr; grid-template-rows: 260px 200px 200px 200px; }
+  .hd-finan-inner { flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
@@ -1445,6 +1636,46 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       <div class="hd-stat">
         <div class="hd-stat-num">5</div>
         <div class="hd-stat-label">Años de garantía de fábrica</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- GALERÍA VISUAL -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-galeria">
+  <div class="hd-galeria-inner">
+    <div class="hd-gal-header rv">
+      <span class="hd-section-label" style="display:block;margin-bottom:10px;">Inspiración</span>
+      <h2 class="hd-section-title">Así transforma Hunter Douglas<br>los espacios</h2>
+    </div>
+    <div class="hd-gal-grid">
+      <div class="hd-gal-item">
+        <div class="hd-gal-bg" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2026/03/HUNTER-DOUGLAS-EXPERIENCIA-LIVING-by-RITVU-185.webp');"></div>
+        <div class="hd-gal-overlay"></div>
+        <span class="hd-gal-label">Living · Cortina Silhouette®</span>
+      </div>
+      <div class="hd-gal-item">
+        <div class="hd-gal-bg" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/HD.Cortina-Silhouette-5-1024x677.jpg');"></div>
+        <div class="hd-gal-overlay"></div>
+        <span class="hd-gal-label">Silhouette® · Luz tamizada</span>
+      </div>
+      <div class="hd-gal-item">
+        <div class="hd-gal-bg" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/inovacao-001.webp'); background-position: center top;"></div>
+        <div class="hd-gal-overlay"></div>
+        <span class="hd-gal-label">Innovación · Diseño arquitectónico</span>
+      </div>
+      <div class="hd-gal-item">
+        <div class="hd-gal-bg" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/talentclub-01-1024x818.webp');"></div>
+        <div class="hd-gal-overlay"></div>
+        <span class="hd-gal-label">Experiencia · Club Talent</span>
+      </div>
+      <div class="hd-gal-item">
+        <div class="hd-gal-bg" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/sobre-1-1.webp'); background-size:contain; background-repeat:no-repeat; background-color:#1a160e;"></div>
+        <div class="hd-gal-overlay"></div>
+        <span class="hd-gal-label">Hunter Douglas · Líder mundial</span>
       </div>
     </div>
   </div>
@@ -1958,6 +2189,72 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       </div>
     </div>
 
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- CLUB TALENT -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-talent" id="club-talent">
+  <div class="hd-talent-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Para arquitectos e interioristas</span>
+      <h2 class="hd-section-title">Club Talent:<br>comprás, sumás puntos, viajás</h2>
+      <p class="hd-section-desc">Hunter Douglas cuenta con el primer programa de fidelización para arquitectos y diseñadores del sector. Cada compra realizada a través de Decourban Estudio acumula puntos que se canjean por experiencias únicas — incluyendo viajes internacionales.</p>
+    </div>
+
+    <div class="hd-talent-split">
+
+      <div class="hd-talent-benefits rv">
+        <div class="hd-talent-edition">
+          <div class="hd-edition-num">24ª</div>
+          <div class="hd-edition-txt"><strong>Edición 2026</strong>Alcance nacional</div>
+        </div>
+        <p class="hd-pts-label">Beneficios del programa</p>
+        <ul class="hd-tal-ben-list">
+          <li><span class="hd-tal-icon">📸</span> Publicación de tus proyectos en canales oficiales de Hunter Douglas</li>
+          <li><span class="hd-tal-icon">🎟️</span> Invitaciones exclusivas a lanzamientos y showrooms</li>
+          <li><span class="hd-tal-icon">🎭</span> Acceso a eventos privados de arquitectura y diseño</li>
+          <li><span class="hd-tal-icon">🍽️</span> Experiencias gastronómicas de primer nivel</li>
+          <li><span class="hd-tal-icon">🏭</span> Visitas a las plantas de fabricación de Hunter Douglas</li>
+          <li><span class="hd-tal-icon">✈️</span> Viajes nacionales e internacionales para los mejores punteadores</li>
+        </ul>
+        <p class="hd-pts-label" style="margin-top:24px;">Destinos anteriores</p>
+        <div class="hd-talent-trips">
+          <div class="hd-trip-card"><strong>Machu Picchu</strong>Perú</div>
+          <div class="hd-trip-card"><strong>Pirámides de Teotihuacan</strong>México</div>
+        </div>
+      </div>
+
+      <div class="hd-talent-points rv">
+        <p class="hd-pts-label">Sistema de puntos — cómo acumulás</p>
+        <div class="hd-pts-grid">
+          <div class="hd-pts-row">
+            <span class="hd-pts-row-name">Cortinas, Persianas y Toldos</span>
+            <span class="hd-pts-row-pts">$1 = 1 pto</span>
+          </div>
+          <div class="hd-pts-row">
+            <span class="hd-pts-row-name">Línea Ette® (Silhouette®, Duette®, Pirouette®…)</span>
+            <span class="hd-pts-row-pts">$1 = 1,5 ptos</span>
+          </div>
+          <div class="hd-pts-row">
+            <span class="hd-pts-row-name">Cortinas Tradicionales</span>
+            <span class="hd-pts-row-pts">$1 = 2 ptos</span>
+          </div>
+          <div class="hd-pts-row hd-pts-bonus">
+            <span class="hd-pts-row-name">🏆 Bonus motorización PowerView® — por pieza</span>
+            <span class="hd-pts-row-pts">+200 ptos</span>
+          </div>
+        </div>
+        <p style="color:rgba(255,255,255,0.45);font-size:0.78rem;margin:0 0 24px;line-height:1.5;">Decourban Estudio es distribuidor adherido al programa. Al realizar tu compra, solicitá la inscripción y comenzá a acumular puntos desde el primer pedido.</p>
+        <a href="https://talent.hunterdouglas.com.ar/" target="_blank" rel="noopener noreferrer" class="hd-tal-cta">
+          Conocer el programa completo
+          <svg width="14" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 5h14M10 1l5 4-5 4"/></svg>
+        </a>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -2492,6 +2789,149 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
   </div>
 </section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- COMPARADOR DE PRODUCTOS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-comparador" id="comparador">
+  <div class="hd-comparador-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Guía de selección</span>
+      <h2 class="hd-section-title">¿Cuál es el producto<br>ideal para vos?</h2>
+      <p class="hd-section-desc">Compará los principales productos Hunter Douglas según tus necesidades. Todos incluyen garantía de fábrica y pueden instalarse con servicio técnico certificado.</p>
+    </div>
+    <div class="hd-comp-scroll rv">
+      <table class="hd-comp-table">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Control de luz</th>
+            <th>Privacidad</th>
+            <th>Ahorro energético</th>
+            <th>Motorizable</th>
+            <th>Ideal para</th>
+            <th>Garantía</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Silhouette®</td>
+            <td>Regulable — láminas giratorias</td>
+            <td>Alta</td>
+            <td class="hd-comp-opt">Media</td>
+            <td class="hd-comp-yes">Sí — PowerView®</td>
+            <td>Living, escritorio, recepción</td>
+            <td>5 años</td>
+          </tr>
+          <tr>
+            <td>Duette®</td>
+            <td>Screen / opaco / blackout</td>
+            <td>Alta</td>
+            <td class="hd-comp-yes">Muy alta — hasta 80%</td>
+            <td class="hd-comp-yes">Sí — PowerView®</td>
+            <td>Dormitorio, techo, techado</td>
+            <td>5 años</td>
+          </tr>
+          <tr>
+            <td>Pirouette®</td>
+            <td>Regulable — láminas suaves</td>
+            <td>Alta</td>
+            <td class="hd-comp-opt">Media</td>
+            <td class="hd-comp-yes">Sí — PowerView®</td>
+            <td>Living, comedor, dormitorio</td>
+            <td>5 años</td>
+          </tr>
+          <tr>
+            <td>Luminette®</td>
+            <td>Filtrado a blackout</td>
+            <td>Muy alta</td>
+            <td class="hd-comp-opt">Media</td>
+            <td class="hd-comp-yes">Sí — PowerView®</td>
+            <td>Ventanales, puertas corredizas</td>
+            <td>5 años</td>
+          </tr>
+          <tr>
+            <td>Vignette®</td>
+            <td>Filtrado — tela romana</td>
+            <td>Alta</td>
+            <td class="hd-comp-opt">Media</td>
+            <td class="hd-comp-yes">Sí — PowerView®</td>
+            <td>Dormitorio, estudio, cocina</td>
+            <td>5 años</td>
+          </tr>
+          <tr>
+            <td>Roller Screen</td>
+            <td>Filtrado solar — vista exterior</td>
+            <td>Media (día) / Alta (noche)</td>
+            <td class="hd-comp-opt">Media</td>
+            <td class="hd-comp-yes">Sí</td>
+            <td>Oficinas, comedor, frente</td>
+            <td>5 años</td>
+          </tr>
+          <tr>
+            <td>Roller Blackout</td>
+            <td>100% bloqueo de luz</td>
+            <td>Total</td>
+            <td class="hd-comp-opt">Media</td>
+            <td class="hd-comp-yes">Sí</td>
+            <td>Dormitorio, home theater, bebés</td>
+            <td>5 años</td>
+          </tr>
+          <tr>
+            <td>Persiana Madera</td>
+            <td>Regulable por inclinación</td>
+            <td>Alta</td>
+            <td class="hd-comp-no">Baja</td>
+            <td class="hd-comp-opt">Opcional</td>
+            <td>Living, estudio, escritorio</td>
+            <td>5 años</td>
+          </tr>
+          <tr>
+            <td>Persiana Aluminio</td>
+            <td>Regulable por inclinación</td>
+            <td>Alta</td>
+            <td class="hd-comp-no">Baja</td>
+            <td class="hd-comp-opt">Opcional</td>
+            <td>Baño, cocina, oficina</td>
+            <td>5 años</td>
+          </tr>
+          <tr>
+            <td>Toldo Green®</td>
+            <td>Cobertura solar exterior</td>
+            <td>Alta (exterior)</td>
+            <td class="hd-comp-yes">Alta — reduce calor interior</td>
+            <td class="hd-comp-yes">Sí</td>
+            <td>Terrazas, balcones, jardines</td>
+            <td>5 años</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="rv" style="text-align:center;margin-top:24px;font-size:0.78rem;color:#9a9088;">Garantía de fábrica sobre mecanismos y telas. Duette® Architella® incluye garantía extendida. Consultá condiciones específicas.</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- FINANCIACIÓN -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div class="hd-finan">
+  <div class="hd-finan-inner">
+    <div class="hd-finan-text">
+      <h3>Financiación disponible</h3>
+      <p>Consultanos por los planes de pago vigentes para tu presupuesto Hunter Douglas</p>
+    </div>
+    <div class="hd-finan-opts">
+      <span class="hd-finan-opt">Tarjetas de crédito</span>
+      <span class="hd-finan-opt">Transferencia bancaria</span>
+      <span class="hd-finan-opt">Cuotas</span>
+    </div>
+    <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20planes%20de%20financiaci%C3%B3n%20para%20cortinas%20Hunter%20Douglas" target="_blank" rel="noopener noreferrer" class="hd-finan-cta" data-track="hd_finan_wa">
+      Consultar por WhatsApp
+    </a>
+  </div>
+</div>
 
 
 <!-- ═══════════════════════════════════════════════════ -->
