@@ -739,18 +739,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   height: 15px;
   width: auto;
   display: block;
-  filter: brightness(0) invert(1);
-  opacity: 0.88;
-  transition: opacity 0.2s;
+  /* sin filter → colores naturales del SVG: marca naranja + letras blancas */
+  opacity: 0.92;
+  transition: opacity 0.2s, filter 0.2s;
 }
 .hd-nav-brand-img--mobile {
   height: 20px;
-  filter: brightness(0) invert(1);
   opacity: 1;
 }
 .site-nav.solid .hd-nav-brand-img {
-  filter: brightness(0) invert(0);
-  opacity: 0.72;
+  /* nav blanco: drop-shadow oscuro para que las letras blancas sean legibles */
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.45)) drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+  opacity: 0.88;
 }
 .hd-nav-brand-link:hover .hd-nav-brand-img { opacity: 1; }
 
@@ -1517,6 +1517,204 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   .hd-gal-grid { grid-template-columns: 1fr; grid-template-rows: 260px 200px 200px 200px; }
   .hd-finan-inner { flex-direction: column; align-items: flex-start; }
 }
+
+/* ── PÉRGOLAS ───────────────────────────────────────── */
+.hd-pergolas { background: #f8f5f0; padding: 100px 24px; }
+.hd-pergolas-inner { max-width: 1100px; margin: 0 auto; }
+.hd-perg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; }
+.hd-perg-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+.hd-perg-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.hd-perg-body { padding: 28px; }
+.hd-perg-body h3 { font-family: 'Fraunces', serif; font-size: 1.25rem; color: #1a1612; margin: 0 0 10px; }
+.hd-perg-body p { color: #5a5248; font-size: 0.87rem; line-height: 1.7; margin: 0 0 18px; }
+.hd-perg-specs { list-style: none; padding: 0; margin: 0; }
+.hd-perg-specs li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 0.82rem; color: #3a3028;
+  padding: 7px 0; border-bottom: 1px solid #f0ece5;
+}
+.hd-perg-specs li:last-child { border-bottom: none; }
+.hd-perg-specs li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 5px; }
+.hd-perg-featured {
+  grid-column: 1 / -1;
+  display: flex; flex-direction: row;
+  background: linear-gradient(135deg, #1a1e14 0%, #0e130a 100%);
+}
+.hd-perg-featured .hd-perg-img { height: auto; min-height: 260px; flex: 1; }
+.hd-perg-featured .hd-perg-body { flex: 1; padding: 40px; }
+.hd-perg-featured .hd-perg-body h3 { color: #fff; font-size: 1.5rem; }
+.hd-perg-featured .hd-perg-body p { color: rgba(255,255,255,0.65); }
+.hd-perg-featured .hd-perg-specs li { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.1); }
+.hd-perg-badge {
+  display: inline-block; background: var(--accent); color: #fff;
+  font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 4px; margin-bottom: 16px; font-weight: 700;
+}
+
+/* ── SCREEN OPENNESS FACTOR ────────────────────────── */
+.hd-screen-guide { background: #1a1612; padding: 64px 24px; }
+.hd-screen-guide-inner { max-width: 1100px; margin: 0 auto; }
+.hd-screen-guide-inner > p { color: rgba(255,255,255,0.55); font-size: 0.82rem; text-align: center; margin: 0 0 40px; letter-spacing: 0.06em; text-transform: uppercase; }
+.hd-of-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.hd-of-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-top-width: 3px;
+  border-radius: 10px;
+  padding: 24px 20px;
+  text-align: center;
+}
+.hd-of-pct { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 500; margin-bottom: 8px; }
+.hd-of-name { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+.hd-of-desc { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+.hd-of-use { font-size: 0.75rem; color: rgba(255,255,255,0.38); margin-top: 10px; font-style: italic; }
+
+/* ── GUÍA POR NECESIDADES ──────────────────────────── */
+.hd-necesidades { background: #1a1612; padding: 100px 24px; }
+.hd-necesidades-inner { max-width: 1100px; margin: 0 auto; }
+.hd-necesidades .hd-products-header .hd-section-label { color: rgba(255,255,255,0.5); }
+.hd-necesidades .hd-products-header .hd-section-title { color: #fff; }
+.hd-necesidades .hd-products-header .hd-section-desc { color: rgba(255,255,255,0.6); }
+.hd-nec-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 56px; }
+.hd-nec-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 12px;
+  padding: 28px 24px;
+  transition: background 0.25s;
+}
+.hd-nec-card:hover { background: rgba(255,255,255,0.09); }
+.hd-nec-icon { font-size: 1.6rem; margin-bottom: 14px; line-height: 1; }
+.hd-nec-goal { font-size: 0.95rem; font-weight: 500; color: #fff; margin: 0 0 10px; line-height: 1.4; }
+.hd-nec-product { font-size: 0.78rem; color: var(--accent); letter-spacing: 0.06em; line-height: 1.6; }
+
+/* ── MANTENIMIENTO Y CUIDADO ───────────────────────── */
+.hd-mantenimiento { background: #fff; padding: 100px 24px; }
+.hd-mantenimiento-inner { max-width: 1100px; margin: 0 auto; }
+.hd-mant-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-top: 56px; }
+.hd-mant-block {
+  background: #f8f5f0;
+  border-radius: 12px;
+  padding: 32px;
+  border-left: 4px solid var(--accent);
+}
+.hd-mant-block h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; color: #1a1612; margin: 0 0 14px; }
+.hd-mant-steps { list-style: none; padding: 0; margin: 0; }
+.hd-mant-steps li {
+  font-size: 0.85rem; color: #4a4238; line-height: 1.6;
+  padding: 8px 0; border-bottom: 1px solid #ede9e3;
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.hd-mant-steps li:last-child { border-bottom: none; }
+.hd-mant-steps li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+.hd-mant-warning {
+  margin-top: 12px; font-size: 0.77rem;
+  color: #c0392b; background: #fef0ee;
+  border-radius: 6px; padding: 8px 12px;
+  border-left: 3px solid #c0392b;
+}
+.hd-mant-tip {
+  grid-column: 1 / -1;
+  background: #1a1612; color: rgba(255,255,255,0.82);
+  border-radius: 12px; padding: 32px;
+  display: flex; gap: 20px; align-items: flex-start;
+}
+.hd-mant-tip-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; }
+.hd-mant-tip h4 { color: #fff; font-size: 1rem; margin: 0 0 8px; }
+.hd-mant-tip p { font-size: 0.87rem; line-height: 1.7; margin: 0; }
+
+/* ── SEGURIDAD / CHILD SAFETY ──────────────────────── */
+.hd-seguridad { background: #f0ece4; padding: 100px 24px; }
+.hd-seguridad-inner { max-width: 1100px; margin: 0 auto; }
+.hd-seg-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 56px; }
+.hd-seg-img {
+  border-radius: 14px; overflow: hidden; background: #c8c0b4;
+  aspect-ratio: 4/3;
+}
+.hd-seg-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hd-seg-text h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; color: #1a1612; margin: 0 0 14px; }
+.hd-seg-text p { color: #5a5248; font-size: 0.88rem; line-height: 1.8; margin: 0 0 24px; }
+.hd-seg-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.hd-seg-opt {
+  background: #fff; border-radius: 10px; padding: 18px;
+  border-left: 3px solid var(--accent);
+}
+.hd-seg-opt h4 { font-size: 0.88rem; color: #1a1612; margin: 0 0 6px; font-weight: 600; }
+.hd-seg-opt p { font-size: 0.78rem; color: #6a6258; margin: 0; line-height: 1.55; }
+
+/* ── INNOVACIÓN / TECNOLOGÍAS ──────────────────────── */
+.hd-innovacion { background: #0e0d0b; padding: 100px 24px; }
+.hd-innovacion-inner { max-width: 1100px; margin: 0 auto; }
+.hd-inno-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 56px; }
+.hd-inno-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 32px 26px;
+  transition: background 0.25s;
+}
+.hd-inno-card:hover { background: rgba(255,255,255,0.09); }
+.hd-inno-icon { font-size: 1.8rem; margin-bottom: 18px; line-height: 1; }
+.hd-inno-card h3 { font-family: 'Fraunces', serif; font-size: 1.1rem; color: #fff; margin: 0 0 12px; }
+.hd-inno-card p { color: rgba(255,255,255,0.58); font-size: 0.86rem; line-height: 1.7; margin: 0; }
+.hd-inno-tag {
+  display: inline-block; margin-top: 16px;
+  background: rgba(248,154,54,0.14); color: var(--accent);
+  font-size: 0.68rem; padding: 4px 10px; border-radius: 4px;
+  letter-spacing: 0.06em; font-weight: 700; text-transform: uppercase;
+}
+
+/* ── GARANTÍA DETALLADA ────────────────────────────── */
+.hd-garantia-detail { background: #fff; padding: 80px 24px; }
+.hd-garantia-detail-inner { max-width: 960px; margin: 0 auto; }
+.hd-gar-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 56px; }
+.hd-gar-num { font-family: 'Fraunces', serif; font-size: 5rem; color: var(--accent); line-height: 1; font-weight: 500; }
+.hd-gar-label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: #8a8278; margin-bottom: 24px; }
+.hd-gar-text h3 { font-family: 'Fraunces', serif; font-size: 1.4rem; color: #1a1612; margin: 0 0 16px; }
+.hd-gar-text p { color: #5a5248; font-size: 0.88rem; line-height: 1.8; margin: 0 0 14px; }
+.hd-gar-conds { list-style: none; padding: 0; margin: 20px 0 0; }
+.hd-gar-conds li {
+  font-size: 0.83rem; color: #4a4238; line-height: 1.6;
+  padding: 9px 0; border-bottom: 1px solid #f0ece5;
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.hd-gar-conds li:last-child { border-bottom: none; }
+.hd-gar-conds li::before { content: '•'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+.hd-gar-cta {
+  margin-top: 32px; display: inline-flex; align-items: center; gap: 10px;
+  background: var(--accent); color: #fff;
+  font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 14px 28px; border-radius: 6px; text-decoration: none;
+  font-weight: 600; transition: opacity 0.2s;
+}
+.hd-gar-cta:hover { opacity: 0.88; }
+
+@media (max-width: 900px) {
+  .hd-perg-grid { grid-template-columns: 1fr; }
+  .hd-perg-featured { flex-direction: column; }
+  .hd-of-grid { grid-template-columns: repeat(2,1fr); }
+  .hd-nec-grid { grid-template-columns: repeat(2,1fr); }
+  .hd-mant-grid { grid-template-columns: 1fr; }
+  .hd-seg-split { grid-template-columns: 1fr; gap: 40px; }
+  .hd-inno-grid { grid-template-columns: repeat(2,1fr); }
+  .hd-gar-split { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 600px) {
+  .hd-of-grid { grid-template-columns: 1fr 1fr; }
+  .hd-nec-grid { grid-template-columns: 1fr; }
+  .hd-seg-opts { grid-template-columns: 1fr; }
+  .hd-inno-grid { grid-template-columns: 1fr; }
+  .hd-mant-tip { flex-direction: column; }
+}
 </style>
 </head>
 <body>
@@ -1950,6 +2148,105 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   </div>
 </section>
 
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- PÉRGOLAS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-pergolas" id="pergolas">
+  <div class="hd-pergolas-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Espacios exteriores</span>
+      <h2 class="hd-section-title">Pérgolas Hunter Douglas</h2>
+      <p class="hd-section-desc">Sistemas de cobertura exterior de ingeniería avanzada para extender la vida al aire libre sin sacrificar confort ni diseño.</p>
+    </div>
+    <div class="hd-perg-grid">
+
+      <!-- Bioclimática -->
+      <div class="hd-perg-card hd-perg-featured rv">
+        <div class="hd-perg-img" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/inovacao-001.webp');"></div>
+        <div class="hd-perg-body">
+          <span class="hd-perg-badge">Producto estrella</span>
+          <h3>Pérgola Bioclimática</h3>
+          <p>Las lamas orientables de 0° a 135° permiten controlar la entrada de luz, ventilación y protección de lluvia desde una sola pantalla o por voz. Vanos de hasta 7 m sin columna central.</p>
+          <ul class="hd-perg-specs">
+            <li>Lamas orientables 0°–135°, motor silencioso DC 24V</li>
+            <li>Sensor de lluvia y sensor de viento integrado</li>
+            <li>LED integrado en lamas — iluminación nocturna</li>
+            <li>Vanos hasta 7 m sin columna central</li>
+            <li>Compatible con PowerView® Gen 3 y domótica</li>
+            <li>Aluminio extruido con pintura en polvo garantizada 10 años</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cerramiento de Vidrio -->
+      <div class="hd-perg-card rv">
+        <div class="hd-perg-img" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/seguranca-001.webp'); background-size:cover;"></div>
+        <div class="hd-perg-body">
+          <h3>Cerramiento de Vidrio</h3>
+          <p>Cierre total o parcial del espacio exterior con vidrio templado sin perfil central, maximizando la vista y la luminosidad.</p>
+          <ul class="hd-perg-specs">
+            <li>Vidrio templado 8–10 mm con tratamiento UV</li>
+            <li>Sin perfil central — apertura panorámica total</li>
+            <li>Plegado completo hacia un lateral</li>
+            <li>Compatible con la Pérgola Bioclimática</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Toldo Proyectante -->
+      <div class="hd-perg-card rv">
+        <div class="hd-perg-img" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/sobre-1-1.webp'); background-size:cover;"></div>
+        <div class="hd-perg-body">
+          <h3>Pérgola con Toldo Proyectante</h3>
+          <p>Estructura fija con toldo motorizado retráctil. La solución más versátil para balcones y terrazas de mediana escala.</p>
+          <ul class="hd-perg-specs">
+            <li>Toldo motorizado 24V con control remoto o app</li>
+            <li>Tela técnica tratable hasta 100 km/h</li>
+            <li>Sensor solar y sensor de viento opcionales</li>
+            <li>Compatible con Toldo Green® PURETi</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SCREEN OPENNESS FACTOR GUIDE -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-screen-guide">
+  <div class="hd-screen-guide-inner">
+    <p class="rv">Roller Screen — Factor de apertura (openness factor)</p>
+    <div class="hd-of-grid">
+      <div class="hd-of-card rv" style="border-top-color:#1a1612;">
+        <div class="hd-of-pct" style="color:#fff;">1%</div>
+        <div class="hd-of-name">Oscuro</div>
+        <p class="hd-of-desc">Máximo control solar y privacidad total. Bloquea el 99% de la radiación solar directa. Se ve el exterior, no se ve el interior.</p>
+        <p class="hd-of-use">Oficinas, sala de reuniones, dormitorio con exposición solar intensa.</p>
+      </div>
+      <div class="hd-of-card rv" style="border-top-color:#4a6741;">
+        <div class="hd-of-pct" style="color:#8fc48a;">3%</div>
+        <div class="hd-of-name">Semi-oscuro</div>
+        <p class="hd-of-desc">Equilibrio entre control solar y visión exterior. Reduce el deslumbramiento sin oscurecer el ambiente.</p>
+        <p class="hd-of-use">Living, comedor, estudio. El uso más frecuente en hogares.</p>
+      </div>
+      <div class="hd-of-card rv" style="border-top-color:#78b870;">
+        <div class="hd-of-pct" style="color:#a8d4a2;">5%</div>
+        <div class="hd-of-name">Estándar</div>
+        <p class="hd-of-desc">Mayor entrada de luz natural. Protección solar moderada con buena visibilidad hacia el exterior.</p>
+        <p class="hd-of-use">Ambientes con poca exposición solar directa, cocina, baños.</p>
+      </div>
+      <div class="hd-of-card rv" style="border-top-color:#a0cc98;">
+        <div class="hd-of-pct" style="color:#c4e0c0;">10%</div>
+        <div class="hd-of-name">Abierto</div>
+        <p class="hd-of-desc">Mínimo control solar. Máxima luminosidad y visión. Principalmente decorativo, con protección UV básica.</p>
+        <p class="hd-of-use">Orientaciones norte/sur sin sol directo, ambientes de doble altura.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══════════════════════════════════════════════════ -->
 <!-- POWERVIEW MOTORIZACIÓN -->
@@ -2484,6 +2781,76 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 
 
 <!-- ═══════════════════════════════════════════════════ -->
+<!-- GUÍA POR NECESIDADES -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-necesidades" id="por-necesidad">
+  <div class="hd-necesidades-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">¿Qué necesitás resolver?</span>
+      <h2 class="hd-section-title">El producto correcto<br>para cada situación</h2>
+      <p class="hd-section-desc">Describí lo que buscás y te decimos qué Hunter Douglas es ideal para vos.</p>
+    </div>
+    <div class="hd-nec-grid">
+
+      <div class="hd-nec-card rv">
+        <div class="hd-nec-icon">🌙</div>
+        <p class="hd-nec-goal">Oscurecer totalmente el dormitorio</p>
+        <p class="hd-nec-product">Roller Blackout · Duette® Blackout · Duette® Architella® Blackout</p>
+      </div>
+
+      <div class="hd-nec-card rv">
+        <div class="hd-nec-icon">☀️</div>
+        <p class="hd-nec-goal">Dejar entrar luz sin perder privacidad</p>
+        <p class="hd-nec-product">Silhouette® · Pirouette® · Roller Screen 3%–5%</p>
+      </div>
+
+      <div class="hd-nec-card rv">
+        <div class="hd-nec-icon">❄️</div>
+        <p class="hd-nec-goal">Ahorrar energía — aislar en invierno y verano</p>
+        <p class="hd-nec-product">Duette® · Duette® Architella® (célula dentro de célula)</p>
+      </div>
+
+      <div class="hd-nec-card rv">
+        <div class="hd-nec-icon">🚪</div>
+        <p class="hd-nec-goal">Cubrir puerta corrediza o ventanal completo</p>
+        <p class="hd-nec-product">Luminette® · Paneles · Verticales</p>
+      </div>
+
+      <div class="hd-nec-card rv">
+        <div class="hd-nec-icon">📱</div>
+        <p class="hd-nec-goal">Automatizar todas las cortinas</p>
+        <p class="hd-nec-product">PowerView® Gen 3 · Compatible con Apple HomeKit, Google Home, Amazon Alexa</p>
+      </div>
+
+      <div class="hd-nec-card rv">
+        <div class="hd-nec-icon">🌿</div>
+        <p class="hd-nec-goal">Proteger la terraza del sol y la lluvia</p>
+        <p class="hd-nec-product">Toldo Green® · Pérgola Bioclimática · Gemini®</p>
+      </div>
+
+      <div class="hd-nec-card rv">
+        <div class="hd-nec-icon">💼</div>
+        <p class="hd-nec-goal">Evitar deslumbramiento en oficina o escritorio</p>
+        <p class="hd-nec-product">Roller Screen 1%–3% · Persianas Aluminio · Silhouette®</p>
+      </div>
+
+      <div class="hd-nec-card rv">
+        <div class="hd-nec-icon">🚿</div>
+        <p class="hd-nec-goal">Baño o cocina con humedad y grasas</p>
+        <p class="hd-nec-product">Persiana Aluminio · WoodMate® · Roller PVC</p>
+      </div>
+
+      <div class="hd-nec-card rv">
+        <div class="hd-nec-icon">🏛️</div>
+        <p class="hd-nec-goal">Estética contemporánea estilo romano</p>
+        <p class="hd-nec-product">Vignette® · Duette® con pliegues · Cortinas Tradicionales</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
 <!-- SOLUCIONES COMERCIALES -->
 <!-- ═══════════════════════════════════════════════════ -->
 <section class="hd-comercial" id="comercial">
@@ -2689,6 +3056,215 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
           <div class="hd-tl-year">2025</div>
           <h4>Toldo Green® — tecnología NASA</h4>
           <p>Con tecnología PURETi desarrollada por NASA, el Toldo Green® reduce un 55% las emisiones de NO₂ y un 70% la autolimpiante, ganando el Red Dot Award 2025.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- MANTENIMIENTO Y CUIDADO -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-mantenimiento" id="mantenimiento">
+  <div class="hd-mantenimiento-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Guía de cuidado</span>
+      <h2 class="hd-section-title">Mantenimiento y limpieza</h2>
+      <p class="hd-section-desc">Con el cuidado correcto, un producto Hunter Douglas dura toda una vida. Seguí estas indicaciones para preservar la calidad y la garantía.</p>
+    </div>
+    <div class="hd-mant-grid">
+
+      <div class="hd-mant-block rv">
+        <h3>Línea Ette® — Silhouette®, Duette®, Pirouette®, Luminette®</h3>
+        <ul class="hd-mant-steps">
+          <li>Pasá un plumero limpio o aspirá con boquilla suave cada 1–2 semanas.</li>
+          <li>Tratamiento antiestático de fábrica inhibe la acumulación de polvo.</li>
+          <li>Para manchas puntuales: paño húmedo con agua tibia y jabón neutro.</li>
+          <li>La mayoría de las telas admiten limpieza profesional en seco.</li>
+        </ul>
+        <div class="hd-mant-warning">⚠ No lavar en lavarropas ni remojar en pileta. El calor y la agitación dañan permanentemente las telas técnicas.</div>
+      </div>
+
+      <div class="hd-mant-block rv">
+        <h3>Cortinas Roller — Screen y Blackout</h3>
+        <ul class="hd-mant-steps">
+          <li>Limpieza regular: aspiradora con boquilla suave o plumero.</li>
+          <li>Limpieza profunda: paño húmedo con jabón neutro, ambas caras.</li>
+          <li>Para Roller Screen: limpiar por ambas caras para no obstruir la fibra de vidrio.</li>
+          <li>Secado al aire libre desplegada — no enrollar húmeda.</li>
+        </ul>
+        <div class="hd-mant-warning">⚠ No mojar el mecanismo Quantum ni la botonera PowerView®. Cubrir con paño seco al limpiar el tubo.</div>
+      </div>
+
+      <div class="hd-mant-block rv">
+        <h3>Persianas de Madera — 25 / 35 / 50 mm</h3>
+        <ul class="hd-mant-steps">
+          <li>Limpiar lama por lama con paño seco o levemente húmedo.</li>
+          <li>Orientar las lamas a 45° para facilitar el acceso a ambas caras.</li>
+          <li>Aspiradora con accesorio para persianas: ideal para polvo semanal.</li>
+          <li>Si se manchan: unas pocas gotas de aceite de madera para restaurar el color.</li>
+        </ul>
+        <div class="hd-mant-warning">⚠ No mojar con agua en abundancia. La madera puede deformarse con humedad excesiva. No usar en baños o cocinas.</div>
+      </div>
+
+      <div class="hd-mant-block rv">
+        <h3>Toldos y Pérgolas — Green®, Gemini®, Bioclimática</h3>
+        <ul class="hd-mant-steps">          <li>Limpieza semestral con agua fría y jabón neutro de baja espuma.</li>
+          <li>Usar cepillo suave de cerdas naturales — nunca metal ni fibra abrasiva.</li>
+          <li>Enjuagar bien y dejar secar completamente antes de enrollar.</li>
+          <li>El Toldo Green® tiene tecnología PURETi autolimpiante — requiere menos intervención.</li>
+        </ul>
+        <div class="hd-mant-warning">⚠ Nunca enrollar el toldo húmedo. La humedad acumulada genera hongos y deteriora las costuras. En invierno: guardar enrollado o protegido.</div>
+      </div>
+
+      <div class="hd-mant-tip rv">
+        <div class="hd-mant-tip-icon">🔧</div>
+        <div>
+          <h4>Servicio técnico localizado en Río Cuarto</h4>
+          <p>Si tu producto necesita reparación o ajuste, no tenés que viajar a Buenos Aires. Decourban gestiona el servicio técnico directamente en Río Cuarto. Contactanos y coordinamos una visita a domicilio. Para productos en garantía, el servicio no tiene costo — Hunter Douglas cubre materiales y mano de obra de fábrica.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SEGURIDAD / CHILD SAFETY -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-seguridad" id="seguridad">
+  <div class="hd-seguridad-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Familia y mascotas</span>
+      <h2 class="hd-section-title">Seguridad Hunter Douglas</h2>
+      <p class="hd-section-desc">Más confort y tranquilidad para niños y mascotas — sin cables colgantes ni riesgos de accidente.</p>
+    </div>
+    <div class="hd-seg-split">
+      <div class="hd-seg-img rv">
+        <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/seguranca-001.webp" alt="Seguridad Hunter Douglas - sin cordones" loading="lazy"/>
+      </div>
+      <div class="hd-seg-text rv">
+        <h3>Sistema Child Safety — sin cordones visibles</h3>
+        <p>Hunter Douglas fue pionero en eliminar los cables colgantes de las cortinas. Hoy toda la línea puede fabricarse sin cordones expuestos, gracias a sistemas inalámbricos manuales o motorizados que eliminan el riesgo de accidentes en el hogar.</p>
+        <p>Las certificaciones de seguridad infantil de Hunter Douglas son las más estrictas del mercado. En Decourban recomendamos activamente la opción sin cordones para hogares con niños menores de 10 años o mascotas.</p>
+        <div class="hd-seg-opts">
+          <div class="hd-seg-opt">
+            <h4>PowerView® Motorizado</h4>
+            <p>Control total desde app o voz. Cero cables. Compatible con Apple HomeKit, Google Home y Amazon Alexa.</p>
+          </div>
+          <div class="hd-seg-opt">
+            <h4>Cadena Retráctil</h4>
+            <p>La cadena de maniobra se retrae automáticamente. No queda tensa ni colgante cuando la cortina está en posición.</p>
+          </div>
+          <div class="hd-seg-opt">
+            <h4>Tensor de Seguridad</h4>
+            <p>Fija la cadena a la pared, impidiendo que forme un lazo colgante peligroso.</p>
+          </div>
+          <div class="hd-seg-opt">
+            <h4>Varilla de Control</h4>
+            <p>Reemplaza la cadena por una varilla rígida no peligrosa. Ideal para persianas horizontales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- INNOVACIÓN / TECNOLOGÍAS PATENTADAS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-innovacion" id="innovacion">
+  <div class="hd-innovacion-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label" style="color:rgba(255,255,255,0.5);">100 años de investigación y desarrollo</span>
+      <h2 class="hd-section-title" style="color:#fff;">Tecnologías que solo<br>Hunter Douglas tiene</h2>
+      <p class="hd-section-desc" style="color:rgba(255,255,255,0.6);">Más del 70% de las patentes mundiales en cortinas y toldos pertenecen a Hunter Douglas. Cada producto resume décadas de I+D.</p>
+    </div>
+    <div class="hd-inno-grid">
+
+      <div class="hd-inno-card rv">
+        <div class="hd-inno-icon">🪟</div>
+        <h3>ClearView™ — Silhouette®</h3>
+        <p>Tecnología exclusiva de lamas trasparentes que permite ver el exterior sin que el exterior te vea. La tela trasparente de velo de la Silhouette® difunde la luz sin crear deslumbramiento.</p>
+        <span class="hd-inno-tag">Patente exclusiva</span>
+      </div>
+
+      <div class="hd-inno-card rv">
+        <div class="hd-inno-icon">🔬</div>
+        <h3>Architella® — Célula dentro de célula</h3>
+        <p>La Duette® Architella® tiene una celdilla adicional dentro de cada celda. Esto duplica la barrera de aire inmóvil, aumentando la eficiencia térmica un 40% respecto a la Duette® estándar.</p>
+        <span class="hd-inno-tag">Doble cámara térmica</span>
+      </div>
+
+      <div class="hd-inno-card rv">
+        <div class="hd-inno-icon">⚡</div>
+        <h3>PowerView® Gen 3</h3>
+        <p>El sistema de motorización más avanzado del mercado. Hub central con BLE Mesh, actualizable vía OTA, compatible con todos los grandes asistentes de voz y plataformas de domótica.</p>
+        <span class="hd-inno-tag">Nuevo 2024</span>
+      </div>
+
+      <div class="hd-inno-card rv">
+        <div class="hd-inno-icon">🌊</div>
+        <h3>Sea-Tex® — Telas del océano</h3>
+        <p>Colección de telas Roller y Duette® fabricadas íntegramente con filamentos FLX de Bionic: plásticos recuperados del mar y convertidos en fibra textil de alta performance.</p>
+        <span class="hd-inno-tag">Sustentabilidad</span>
+      </div>
+
+      <div class="hd-inno-card rv">
+        <div class="hd-inno-icon">🌿</div>
+        <h3>PURETi — Toldo Green®</h3>
+        <p>Tecnología de fotocatálisis desarrollada originalmente para la NASA. La tela descompone contaminantes orgánicos (NO₂, VOC) al contacto con la luz solar, limpiándose sola en un 70%.</p>
+        <span class="hd-inno-tag">Red Dot Award 2025</span>
+      </div>
+
+      <div class="hd-inno-card rv">
+        <div class="hd-inno-icon">⚙️</div>
+        <h3>Mecanismo Quantum — Roller</h3>
+        <p>Sistema de tensión constante con muelle de compensación proporcional al peso de la tela. Garantiza una sola mano para maniobrar incluso en telas de gran tamaño y alto gramaje.</p>
+        <span class="hd-inno-tag">Suavidad y durabilidad</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- GARANTÍA DETALLADA -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hd-garantia-detail" id="garantia-detalle">
+  <div class="hd-garantia-detail-inner">
+    <div class="hd-products-header rv">
+      <span class="hd-section-label">Respaldo de fábrica</span>
+      <h2 class="hd-section-title">Garantía 5+1 años</h2>
+      <p class="hd-section-desc">La garantía más sólida de la industria, activable en línea y con servicio técnico local en Río Cuarto.</p>
+    </div>
+    <div class="hd-gar-split">
+      <div class="rv">
+        <div class="hd-gar-num">5<span style="font-size:2rem;">+1</span></div>
+        <div class="hd-gar-label">Años de garantía de fábrica</div>
+        <p style="color:#5a5248; font-size:0.88rem; line-height:1.8; margin:0 0 14px;">Hunter Douglas garantiza todos sus productos contra defectos de material, vicios ocultos y errores de fabricación por <strong>5 años desde la fecha de compra</strong>, con 1 año adicional al activar la garantía en línea dentro de los 30 días de la instalación.</p>
+        <p style="color:#5a5248; font-size:0.88rem; line-height:1.8; margin:0 0 28px;">El producto defectuoso es reparado o sus piezas sustituidas sin cargo. No se cobran materiales ni mano de obra de fábrica. Los gastos de desmontaje e instalación quedan a cargo del distribuidor local — y en Decourban los gestionamos sin costo adicional.</p>
+        <a href="https://www.hunterdouglas.com.ar/contacto/garantia/" target="_blank" rel="noopener" class="hd-gar-cta">Activar mi garantía</a>
+      </div>
+      <div class="rv">
+        <div class="hd-gar-text">
+          <h3>¿Qué cubre y qué no cubre?</h3>
+          <ul class="hd-gar-conds">
+            <li><strong>Cubre:</strong> defectos de material, vicio oculto, error de fabricación.</li>
+            <li><strong>Cubre:</strong> piezas que fallen en condiciones normales de uso.</li>
+            <li><strong>No cubre:</strong> daños por accidentes, actos violentos o mal uso.</li>
+            <li><strong>No cubre:</strong> daños por no seguir las instrucciones de instalación o limpieza.</li>
+            <li><strong>No cubre:</strong> corrosión por ambientes salinos (frente al mar), humedad extrema o productos químicos.</li>
+            <li><strong>No cubre:</strong> reinstalaciones en domicilios distintos al original sin notificación previa.</li>
+          </ul>
+          <div style="margin-top:28px; padding:20px; background:#f8f5f0; border-radius:10px;">
+            <p style="font-size:0.85rem; color:#4a4238; margin:0 0 8px;"><strong>🏠 Decourban — servicio postventa local</strong></p>
+            <p style="font-size:0.83rem; color:#6a6258; margin:0; line-height:1.65;">Como distribuidores autorizados, somos el primer punto de contacto para cualquier reclamo de garantía. No tenés que gestionar nada directamente con Buenos Aires. Nosotros coordinamos la reparación o reposición y te avisamos cuando está lista.</p>
+          </div>
         </div>
       </div>
     </div>
