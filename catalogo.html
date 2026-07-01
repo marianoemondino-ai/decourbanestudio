@@ -148,13 +148,15 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 .cat-card-img {
   position: relative;
   overflow: hidden;
-  background: #f5f0eb;
-  aspect-ratio: 4/5;
+  background: #2a2420;
+  aspect-ratio: 1/1;
 }
 .cat-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
+  display: block;
   transition: transform 0.5s ease;
 }
 .cat-card:hover .cat-card-img img {
@@ -291,7 +293,9 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
       <a href="proyectos.html">Proyectos</a>
-      <a href="hunterdouglas.html" style="color:var(--accent);">Hunter Douglas</a>
+      <a href="hunterdouglas.html" class="hd-nav-brand-link" aria-label="Hunter Douglas">
+        <img src="img/hd-logo-white.svg" alt="Hunter Douglas" class="hd-nav-brand-img" loading="eager">
+      </a>
       <div class="nav-dropdown" id="catDropdown">
         <button class="nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true" id="catBtn">
           Catálogo
@@ -327,7 +331,9 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 <div class="nav-mobile" id="navMobile">
   <a href="index.html">Inicio</a>
   <a href="proyectos.html">Proyectos</a>
-  <a href="hunterdouglas.html">Hunter Douglas</a>
+  <a href="hunterdouglas.html" class="hd-nav-brand-link" aria-label="Hunter Douglas" style="padding:4px 0">
+    <img src="img/hd-logo-white.svg" alt="Hunter Douglas" class="hd-nav-brand-img hd-nav-brand-img--mobile" loading="eager">
+  </a>
   <span class="nav-mobile-cat-label">Catálogo</span>
   <div class="nav-mobile-sub">
     <a href="catalogo.html#sec-sillas">Sillas</a>
@@ -811,7 +817,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       <div class="section-eyebrow">Mesas &amp; Consolas</div>
       <h2>Mesas</h2>
     </div>
-    <span class="cat-section-meta">9 modelos</span>
+    <span class="cat-section-meta">5 modelos</span>
   </div>
 
   <div class="cat-grid">
@@ -897,66 +903,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
 
-
-    <div class="cat-card rv" data-cat="mesas">
-      <div class="cat-card-img">
-        <img src="img/catalogo/mesa_oval_nogal.webp" alt="Mesa Oval Nogal" loading="lazy"/>
-      </div>
-      <div class="cat-card-body">
-        <div class="cat-card-name">Mesa Oval Nogal</div>
-        <p class="cat-card-desc">Mesa de comedor ovalada en madera de nogal macizo. Líneas orgánicas y calidez natural que protagonizan el comedor.</p>
-        <div class="cat-card-detail">Material: Nogal macizo<br/>Medidas personalizables · Terminaciones lustre</div>
-        <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20la%20Mesa%20Oval%20Nogal" target="_blank" rel="noopener" class="cat-card-cta">
-          Consultar
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="cat-card rv" data-cat="mesas">
-      <div class="cat-card-img">
-        <img src="img/catalogo/mesa_asimetrica.webp" alt="Mesa Asimétrica" loading="lazy"/>
-      </div>
-      <div class="cat-card-body">
-        <div class="cat-card-name">Mesa Asimétrica</div>
-        <p class="cat-card-desc">Mesa de comedor con cantos orgánicos y perfil asimétrico. La madera oscura aporta carácter y contemporaneidad.</p>
-        <div class="cat-card-detail">Madera maciza oscura · Patas integradas<br/>Medidas personalizables</div>
-        <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20la%20Mesa%20Asim%C3%A9trica" target="_blank" rel="noopener" class="cat-card-cta">
-          Consultar
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="cat-card rv" data-cat="mesas">
-      <div class="cat-card-img">
-        <img src="img/catalogo/mesa_redonda_grafito.webp" alt="Mesa Redonda Grafito" loading="lazy"/>
-      </div>
-      <div class="cat-card-body">
-        <div class="cat-card-name">Mesa Redonda Grafito</div>
-        <p class="cat-card-desc">Mesa de comedor redonda en madera grafito. Perfecta para comedores donde se busca reunión y calidez en un formato compacto.</p>
-        <div class="cat-card-detail">Madera: Grafito / Ébano<br/>Diámetro: 120 – 150 cm</div>
-        <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20la%20Mesa%20Redonda%20Grafito" target="_blank" rel="noopener" class="cat-card-cta">
-          Consultar
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="cat-card rv" data-cat="mesas">
-      <div class="cat-card-img">
-        <img src="img/catalogo/mesa_oval_escandinava.webp" alt="Mesa Oval Escandinava" loading="lazy"/>
-      </div>
-      <div class="cat-card-body">
-        <div class="cat-card-name">Mesa Oval Escandinava</div>
-        <p class="cat-card-desc">Mesa ovalada en nogal natural de estilo escandinavo. Elegante y luminosa, combina con sillas tapizadas bouclé o cuero.</p>
-        <div class="cat-card-detail">Nogal natural · Patas cónicas<br/>Medidas: 200 × 100 cm</div>
-        <a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20la%20Mesa%20Oval%20Escandinava" target="_blank" rel="noopener" class="cat-card-cta">
-          Consultar
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -2697,4 +2643,4 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 })();
 </script>
 </body>
-</html>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

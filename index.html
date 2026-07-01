@@ -68,7 +68,9 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <div class="nav-links nav-links-left">
       <a href="index.html" class="active">Inicio</a>
       <a href="proyectos.html">Proyectos</a>
-      <a href="hunterdouglas.html" style="color:var(--accent);">Hunter Douglas</a>
+      <a href="hunterdouglas.html" class="hd-nav-brand-link" aria-label="Hunter Douglas">
+        <img src="img/hd-logo-white.svg" alt="Hunter Douglas" class="hd-nav-brand-img" loading="eager">
+      </a>
       <div class="nav-dropdown" id="catDropdown">
         <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" id="catBtn">
           Catálogo
@@ -104,7 +106,9 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 <div class="nav-mobile" id="navMobile">
   <a href="index.html" class="active">Inicio</a>
   <a href="proyectos.html">Proyectos</a>
-  <a href="hunterdouglas.html">Hunter Douglas</a>
+  <a href="hunterdouglas.html" class="hd-nav-brand-link" aria-label="Hunter Douglas" style="padding:4px 0">
+    <img src="img/hd-logo-white.svg" alt="Hunter Douglas" class="hd-nav-brand-img hd-nav-brand-img--mobile" loading="eager">
+  </a>
   <span class="nav-mobile-cat-label">Catálogo</span>
   <div class="nav-mobile-sub">
     <a href="catalogo.html#sec-sillas">Sillas</a>
