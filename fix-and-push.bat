@@ -30,7 +30,7 @@ git status --short
 echo ----------------------------
 echo.
 
-git commit -m "fix: reparar archivos HTML truncados + logo dU SVG en navbar + null bytes hunterdouglas"
+git commit -m "feat: logo dU en navbar + modalidades primero + servicios sin imagenes junto a El estudio"
 
 git push origin main
 
