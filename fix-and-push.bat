@@ -6,6 +6,16 @@ cd /d "%~dp0"
 if exist ".git\index.lock" del /f ".git\index.lock"
 if exist ".git\MERGE_HEAD" del /f ".git\MERGE_HEAD"
 
+:: Reparar indice corrupto
+echo Verificando indice git...
+git status >nul 2>&1
+if errorlevel 128 (
+  echo Indice corrupto detectado - reparando...
+  del /f ".git\index" 2>nul
+  git reset HEAD 2>nul
+  echo Indice reparado.
+)
+
 git config http.postBuffer 524288000
 git config http.lowSpeedLimit 0
 git config http.lowSpeedTime 999
