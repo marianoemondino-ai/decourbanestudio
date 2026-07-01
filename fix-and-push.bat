@@ -20,7 +20,7 @@ git status --short
 echo ----------------------------
 echo.
 
-git commit -m "fix: logo HD en nav de todas las paginas, 4 mesas removidas, aspect-ratio imagenes cuadradas"
+git commit -m "feat: catalogo HD completo - 20 productos en 6 categorias con filtros, PowerView, Arquitectura"
 
 git push origin main
 
