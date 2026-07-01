@@ -1,16 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 108" role="img" aria-label="Decourban Estudio">
-  <!-- Orange circle -->
-  <circle cx="54" cy="54" r="51" fill="#F89A36"/>
-  <!-- dU lettering -->
-  <text x="54" y="71" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-size="44" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-2">dU</text>
-  <!-- Accent dash -->
-  <rect x="116" y="16" width="22" height="3" fill="#F89A36" rx="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 158" role="img" aria-label="Decourban Estudio">
+  <!-- Círculo naranja -->
+  <circle cx="79" cy="79" r="76" fill="#F08428"/>
+
+  <!-- dU en blanco -->
+  <text x="79" y="107"
+    font-family="'Arial Black','Arial Bold',Gadget,sans-serif"
+    font-size="76" font-weight="900"
+    fill="#ffffff" text-anchor="middle" letter-spacing="-4">dU</text>
+
+  <!-- Línea naranja acento -->
+  <rect x="174" y="24" width="26" height="3.5" fill="#F08428" rx="1.75"/>
+
   <!-- deco -->
-  <text x="116" y="52" font-family="'Helvetica Neue','Arial',sans-serif" font-size="27" font-weight="700" fill="#1a1a1a" letter-spacing="-0.5">deco</text>
+  <text x="174" y="74"
+    font-family="'Helvetica Neue','Arial',sans-serif"
+    font-size="40" font-weight="700"
+    fill="#ffffff" letter-spacing="-0.5">deco</text>
+
   <!-- urban -->
-  <text x="116" y="78" font-family="'Helvetica Neue','Arial',sans-serif" font-size="27" font-weight="700" fill="#1a1a1a" letter-spacing="-0.5">urban</text>
+  <text x="174" y="113"
+    font-family="'Helvetica Neue','Arial',sans-serif"
+    font-size="40" font-weight="700"
+    fill="#ffffff" letter-spacing="-0.5">urban</text>
+
   <!-- interiorismo -->
-  <text x="116" y="91" font-family="'Helvetica Neue','Arial',sans-serif" font-size="12.5" font-weight="400" fill="#3a3a3a" letter-spacing="0.1">interiorismo</text>
+  <text x="176" y="133"
+    font-family="'Helvetica Neue','Arial',sans-serif"
+    font-size="16.5" font-weight="400"
+    fill="#ffffff" letter-spacing="0.2">interiorismo</text>
+
   <!-- estudio -->
-  <text x="116" y="105" font-family="'Helvetica Neue','Arial',sans-serif" font-size="12.5" font-weight="400" fill="#3a3a3a" letter-spacing="0.1">estudio</text>
+  <text x="176" y="152"
+    font-family="'Helvetica Neue','Arial',sans-serif"
+    font-size="16.5" font-weight="400"
+    fill="#ffffff" letter-spacing="0.2">estudio</text>
 </svg>
