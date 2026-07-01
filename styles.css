@@ -112,9 +112,6 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  background: rgba(255,255,255,0.96);
-  border-radius: 8px;
-  padding: 5px 10px;
   line-height: 0;
 }
 .nav-logo img {
