@@ -115,7 +115,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   line-height: 0;
 }
 .nav-logo img {
-  height: 58px;
+  height: 80px;
   width: auto;
   display: block;
 }
@@ -538,7 +538,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
 
 @media (max-width: 1024px) {
   .nav-inner { padding: 0 32px; }
-  .nav-logo img { height: 46px; }
+  .nav-logo img { height: 64px; }
   .nav-links { gap: 18px; }
   .nav-links a { font-size: 0.7rem; }
   .nav-cta { padding: 9px 16px !important; }
@@ -550,14 +550,14 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
 @media (min-width: 841px) and (max-width: 960px) {
   .nav-links { gap: 10px; }
   .nav-links a { font-size: 0.65rem; }
-  .nav-logo img { height: 40px; }
+  .nav-logo img { height: 54px; }
 }
 
 @media (max-width: 768px) {
   .site-nav { height: 64px; }
   .nav-mobile { inset: 64px 0 0; }
   .nav-inner { padding: 0 24px; }
-  .nav-logo img { height: 38px; }
+  .nav-logo img { height: 50px; }
   .container { padding: 0 24px; }
   .footer-inner { padding: 0 24px; }
 
