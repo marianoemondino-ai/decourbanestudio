@@ -86,7 +86,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       </div>
     </div>
     <a href="index.html" class="nav-logo">
-      <img src="img/logo.webp" alt="Decourban Estudio"/>
+      <img src="img/logo-du.svg" alt="Decourban Estudio"/>
     </a>
     <div class="nav-links nav-links-right">
       <a href="nosotros.html">Nosotros</a>
@@ -454,4 +454,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   }
 
   // ── Scroll reveal ──────────────────────────────────
-  var rvObs = new Inters
+  // ── Scroll reveal ──────────────────────────────────
+  var rvObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); rvObs.unobserve(e.target); }
+    });
+  },{threshold:0.06});
+  document.querySelectorAll('.rv,.rvl,.rvr').forEach(function(el){ rvObs.observe(el); });
+})();
+</script>
+</body>
+</html>

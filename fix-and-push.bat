@@ -30,7 +30,7 @@ git status --short
 echo ----------------------------
 echo.
 
-git commit -m "feat: catalogo HD completo - 20 productos en 6 categorias con filtros, PowerView, Arquitectura"
+git commit -m "fix: reparar archivos HTML truncados + logo dU SVG en navbar + null bytes hunterdouglas"
 
 git push origin main
 

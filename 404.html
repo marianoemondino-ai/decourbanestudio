@@ -45,7 +45,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       </a>
     </div>
     <a href="index.html" class="nav-logo">
-      <img src="img/logo.webp" alt="Decourban Estudio"/>
+      <img src="img/logo-du.svg" alt="Decourban Estudio"/>
     </a>
     <div class="nav-links nav-links-right">
       <a href="nosotros.html">Nosotros</a>
@@ -147,4 +147,48 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   });
   // Close mobile menu when any link inside is clicked
   navMobile.querySelectorAll('a').forEach(function(link) {
-  
+    link.addEventListener('click', function() {
+      navMobile.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ── Dropdown catálogo ──────────────────────────────
+  var catBtn = document.getElementById('catBtn');
+  var catDropdown = document.getElementById('catDropdown');
+  if (catBtn) {
+    catBtn.addEventListener('click', function() {
+      var isOpen = catDropdown.classList.toggle('open');
+      catBtn.setAttribute('aria-expanded', isOpen);
+    });
+    document.addEventListener('click', function(e) {
+      if (!catDropdown.contains(e.target)) {
+        catDropdown.classList.remove('open');
+        catBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // ── WhatsApp click tracking ────────────────────────
+  document.addEventListener('click', function(e) {
+    var wa = e.target.closest('a[href^="https://wa.me"]');
+    if (wa && typeof gtag !== 'undefined') {
+      gtag('event', 'whatsapp_click', {
+        event_category: 'engagement',
+        event_label: wa.getAttribute('data-track') || 'nosotros',
+        value: 1
+      });
+    }
+  });
+
+  // ── Scroll reveal ──────────────────────────────────
+  var rvObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); rvObs.unobserve(e.target); }
+    });
+  },{threshold:0.06});
+  document.querySelectorAll('.rv,.rvl,.rvr').forEach(function(el){ rvObs.observe(el); });
+})();
+</script>
+</body>
+</html>
