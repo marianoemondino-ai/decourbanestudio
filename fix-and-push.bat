@@ -30,7 +30,7 @@ git status --short
 echo ----------------------------
 echo.
 
-git commit -m "fix: logo dU PNG en navbar + vajillero chicago largo actualizado + estructura index"
+git commit -m "fix: logo1.jpg como logo-du.webp local en navbar + vajillero chicago largo + estructura index"
 
 git push origin main
 
