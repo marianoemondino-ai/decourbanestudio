@@ -31,7 +31,7 @@ git status --short
 echo ----------------------------
 echo.
 
-git commit -m "fix: modal HTML clases + imagenes rotas reemplazadas"
+git commit -m "fix: imagenes locales en img/hd para evitar hotlink protection"
 
 git push origin main
 
