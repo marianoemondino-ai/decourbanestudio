@@ -1,0 +1,44 @@
+Descargando 40 imagenes...
+  Ya existe: HD.Cortina-Silhouette-5-1024x677.jpg
+  Ya existe: Hunter-Douglas.Paneles-Orientales-living.webp
+  Ya existe: HunterDouglas-white-logo3-03.svg
+  Ya existe: X9A7814-scaled-qucqr83sz3rgxtup48ewldx68rc4apcil2w1us5j8y.jpg
+  Ya existe: folding-pergola-hunter-douglas-grandes-dimensoes.webp
+  Ya existe: inovacao-001.webp
+  Ya existe: stobag_cobertura_modular.webp
+  Ya existe: toldo-proyectante-hunter-douglasjpg-optimized.webp
+  Ya existe: cortinas-luminette-para-hall.8b48cd-optimized.webp
+  Ya existe: etapa-3-toldo-green-hunter-douglas-1.jpg
+  Ya existe: toldo-gemini-autoportante.375994-optimized.webp
+  Ya existe: cortinas-roller-shadesign-living-clasico-hunterdouglas.17bb53-optimized.webp
+  Ya existe: toldo-proyectante-negro-jardinjpg-optimized.webp
+  Ya existe: cortinas-verticales-screenjpg-optimized.webp
+  Ya existe: horizontales-de-maderajpg-optimized.webp
+  Ya existe: HUNTER-DOUGLAS-EXPERIENCIA-LIVING-by-RITVU-185.webp
+  Ya existe: Cortina-Luminette-Hunter-Douglas.jpeg
+  Ya existe: LeticiaRocco_ExperienciaLiving2026_Foto@ritvu_Silhouette_01.webp
+  Ya existe: PersianaAluminio_37.webp
+  Ya existe: SandyCairncross_ExperienciaLiving2026_Foto@ritvu_CountryWoods_Duette_02.webp
+  Ya existe: cortina-luminette-3.jpg
+  Ya existe: cortina-silhouette-11.jpg
+  Ya existe: persiana-metais-preciosos-jogo-de-luz-scaled-1.webp
+  Ya existe: primeira-persiana-de-aluminio-hunter-douglas.jpg
+  Ya existe: stobag_campo_pergolado.webp
+  Ya existe: cortinas-twinline-negrasjpg-optimized-2.webp
+  Ya existe: pergolas-autoportantepng-optimized.webp
+  Ya existe: toldo-zip-ledjpg-optimized-1.webp
+  Ya existe: toldo-zip-ledjpg-optimized-2.webp
+  Ya existe: cortinas-duette-detalle-tela-hunter-douglas-optimized.webp
+  Ya existe: cortinas-duette-hunter-douglas_4-optimized.webp
+  Ya existe: cortinas-pirouette-detalle-tela-hunter-douglas-optimized.webp
+  Ya existe: cortinas-pirouette-estudiopng-optimized.webp
+  Ya existe: cortinas-roller-shadesign-infantilesjpg-optimized.webp
+  Ya existe: cortinas-roller-superior-living-hunterdouglasjpg-optimized.webp
+  Ya existe: cortinas-silhouette-detalle-tela-hunter-douglas-optimized.webp
+  Ya existe: cortinas-silhouette-hunter-douglas_7-optimized.webp
+  Ya existe: cortinas-twinline-living-hunter-douglasjpg-optimized.webp
+  Ya existe: cortinas-verticales-para-living-hunterdouglasjpg-optimized.webp
+  Ya existe: ettes-cortinas-pirouette-hunter-douglas-optimized.webp
+
+=== Listo: 40 OK, 0 errores ===
+Ahora ejecuta fix-and-push.bat
