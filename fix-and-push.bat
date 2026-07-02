@@ -31,7 +31,7 @@ git status --short
 echo ----------------------------
 echo.
 
-git commit -m "fix: imagenes locales en img/hd para evitar hotlink protection"
+git commit -m "fix: WA number typo in contacto.html (5493 -> 543), nombres HD correctos, modales 20 productos HD"
 
 git push origin main
 
