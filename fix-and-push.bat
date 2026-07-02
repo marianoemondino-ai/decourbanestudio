@@ -30,7 +30,7 @@ git status --short
 echo ----------------------------
 echo.
 
-git commit -m "fix: logo1.jpg como logo-du.webp local en navbar + vajillero chicago largo + estructura index"
+git commit -m "fix: hunterdouglas.html - 20 imagenes unicas por producto (sin repetidas)"
 
 git push origin main
 
