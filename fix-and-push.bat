@@ -4,6 +4,7 @@ cd /d "%~dp0"
 
 :: Limpiar locks y posible corrupcion del indice git
 if exist ".git\index.lock" del /f ".git\index.lock"
+if exist ".git\HEAD.lock" del /f ".git\HEAD.lock"
 if exist ".git\MERGE_HEAD" del /f ".git\MERGE_HEAD"
 
 :: Reparar indice corrupto
@@ -30,7 +31,7 @@ git status --short
 echo ----------------------------
 echo.
 
-git commit -m "fix: hunterdouglas.html - 20 imagenes unicas por producto (sin repetidas)"
+git commit -m "fix: modal HTML clases + imagenes rotas reemplazadas"
 
 git push origin main
 
