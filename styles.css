@@ -1044,4 +1044,37 @@ fieldset.fl { border: 0; padding: 0; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  marg
+  margin-top: 48px;
+}
+.process-step {}
+.process-num {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--accent);
+  opacity: .35;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.process-step h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.process-step p {
+  font-size: .88rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+@media (max-width: 840px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+}
+@media (max-width: 480px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
