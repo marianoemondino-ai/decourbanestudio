@@ -576,6 +576,135 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 }
 .btn-cta-outline:hover { border-color: #fff; }
 
+/* ── PRODUCT MODAL ─────────────────────── */
+.cat-card { cursor: pointer; }
+.cat-card-cta { pointer-events: all; }
+
+.hd-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(10,8,4,.82);
+  z-index: 9000;
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+  opacity: 0; visibility: hidden;
+  transition: opacity .28s, visibility .28s;
+  backdrop-filter: blur(5px);
+}
+.hd-modal-overlay.open { opacity: 1; visibility: visible; }
+
+.hd-modal-box {
+  background: #fff;
+  max-width: 900px; width: 100%;
+  max-height: 90vh;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  position: relative;
+  transform: translateY(18px);
+  transition: transform .28s;
+  overflow: hidden;
+}
+.hd-modal-overlay.open .hd-modal-box { transform: none; }
+
+.hd-modal-close {
+  position: absolute; top: 14px; right: 14px; z-index: 10;
+  background: rgba(255,255,255,.92); border: none; cursor: pointer;
+  padding: 8px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #1a1610; transition: background .2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+.hd-modal-close:hover { background: #f0ede8; }
+
+.hd-modal-left {
+  background: #f0ede8;
+  display: flex; flex-direction: column;
+  min-height: 0;
+}
+.hd-modal-main-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.hd-modal-main-img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: opacity .18s;
+}
+.hd-modal-thumbs {
+  display: flex; gap: 6px;
+  padding: 10px 12px;
+  background: #e5e0d8;
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+.hd-modal-thumb {
+  width: 64px; height: 48px;
+  object-fit: cover; cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 2px; flex-shrink: 0;
+  opacity: .65; transition: opacity .18s, border-color .18s;
+}
+.hd-modal-thumb.active, .hd-modal-thumb:hover { border-color: var(--accent); opacity: 1; }
+
+.hd-modal-right {
+  padding: 44px 36px 36px;
+  display: flex; flex-direction: column;
+  overflow-y: auto;
+}
+.hd-modal-breadcrumb {
+  font-size: .68rem; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 14px;
+}
+.hd-modal-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+  font-weight: 500; color: #1a1610;
+  margin: 0 0 14px; line-height: 1.2;
+}
+.hd-modal-desc {
+  color: #5a5040; font-size: .93rem;
+  line-height: 1.7; margin: 0 0 22px;
+}
+.hd-modal-features {
+  list-style: none; margin: 0 0 28px; padding: 0;
+  display: flex; flex-direction: column; gap: 7px;
+}
+.hd-modal-features li {
+  font-size: .85rem; color: #3a3028;
+  display: flex; align-items: center; gap: 10px;
+}
+.hd-modal-features li::before {
+  content: ''; display: block;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent); flex-shrink: 0;
+}
+.hd-modal-actions { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
+.hd-modal-btn-wa {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: #25d366; color: #fff;
+  padding: 14px 20px; font-size: .84rem; font-weight: 600;
+  letter-spacing: .04em; text-decoration: none; border-radius: 2px;
+  transition: opacity .2s; text-align: center;
+}
+.hd-modal-btn-wa:hover { opacity: .9; }
+.hd-modal-btn-hd {
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(26,22,16,.22); color: #1a1610;
+  padding: 13px 20px; font-size: .8rem; letter-spacing: .06em;
+  text-decoration: none; border-radius: 2px; text-align: center;
+  transition: border-color .2s, background .2s;
+}
+.hd-modal-btn-hd:hover { border-color: #1a1610; background: #f5f2ef; }
+
+@media (max-width: 700px) {
+  .hd-modal-box { grid-template-columns: 1fr; max-height: 96vh; }
+  .hd-modal-main-wrap { aspect-ratio: 16/9; }
+  .hd-modal-right { padding: 24px 20px 28px; }
+}
+
 /* ANIMATIONS */
 .rv, .rvl, .rvr { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
 .rvl { transform: translateX(-28px); }
@@ -748,9 +877,9 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="cat-grid">
 
     <!-- SILHOUETTE -->
-    <div class="cat-card rv" data-cat="cortinas">
+    <div class="cat-card rv" data-cat="cortinas" data-product="silhouette">
       <div class="cat-card-img">
-        <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/HD.Cortina-Silhouette-5-1024x677.jpg" alt="Cortina Silhouette Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
+        <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/LeticiaRocco_ExperienciaLiving2026_Foto@ritvu_Silhouette_01.webp" alt="Cortina Silhouette Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
         <span class="cat-card-badge">Más vendida</span>
       </div>
       <div class="cat-card-body">
@@ -764,7 +893,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- DUETTE -->
-    <div class="cat-card rv" data-cat="cortinas">
+    <div class="cat-card rv" data-cat="cortinas" data-product="duette">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-duette-hunter-douglas_4-optimized.webp" alt="Cortina Duette Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -779,7 +908,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- PIROUETTE -->
-    <div class="cat-card rv" data-cat="cortinas">
+    <div class="cat-card rv" data-cat="cortinas" data-product="pirouette">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/ettes-cortinas-pirouette-hunter-douglas-optimized.webp" alt="Cortina Pirouette Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -794,7 +923,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- LUMINETTE -->
-    <div class="cat-card rv" data-cat="cortinas">
+    <div class="cat-card rv" data-cat="cortinas" data-product="luminette">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/cortina-luminette-3.jpg" alt="Cortina Luminette Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -809,7 +938,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- CORTINAS VERTICALES -->
-    <div class="cat-card rv" data-cat="cortinas">
+    <div class="cat-card rv" data-cat="cortinas" data-product="verticales">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-verticales-para-living-hunterdouglasjpg-optimized.webp" alt="Cortinas Verticales Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -824,7 +953,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- CORTINAS TRADICIONALES -->
-    <div class="cat-card rv" data-cat="cortinas">
+    <div class="cat-card rv" data-cat="cortinas" data-product="tradicionales">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2026/03/HUNTER-DOUGLAS-EXPERIENCIA-LIVING-by-RITVU-185.webp" alt="Cortinas Tradicionales Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -839,7 +968,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- PANELES ORIENTALES -->
-    <div class="cat-card rv" data-cat="cortinas">
+    <div class="cat-card rv" data-cat="cortinas" data-product="paneles">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/Hunter-Douglas.Paneles-Orientales-living.webp" alt="Paneles Orientales Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -854,7 +983,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- ROLLER QUANTUM -->
-    <div class="cat-card rv" data-cat="cortinas">
+    <div class="cat-card rv" data-cat="cortinas" data-product="roller">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/elementor/thumbs/RB_2142-qumq4laeqq1ijpltzhby7oqvrkpe4fslz3inl5sib6-retxxa76x23tytfqezk1uhif8yromk1vltcyz64xiq.jpg" alt="Cortinas Roller Quantum Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
         <span class="cat-card-badge cat-card-badge-pv">Exclusivo HD</span>
@@ -870,7 +999,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- ROLLER TWINLINE -->
-    <div class="cat-card rv" data-cat="cortinas">
+    <div class="cat-card rv" data-cat="cortinas" data-product="twinline">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-twinline-living-hunter-douglasjpg-optimized.webp" alt="Cortinas Roller Twinline Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -885,7 +1014,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- ROLLER SHADESIGN -->
-    <div class="cat-card rv" data-cat="cortinas">
+    <div class="cat-card rv" data-cat="cortinas" data-product="shadesign">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/elementor/thumbs/3-RB_2251-qkwf2lm1az0nol0oduoavzysi90kwm8ndo9k9z4zoy-retx8199c9jk3w40ukntdcvotd7qv8tfsuifwlkmnm.webp" alt="Cortinas Roller Shadesign Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
         <span class="cat-card-badge cat-card-badge-new">Diseño exclusivo</span>
@@ -917,7 +1046,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="cat-grid">
 
     <!-- PERSIANA ALUMINIO -->
-    <div class="cat-card rv" data-cat="persianas">
+    <div class="cat-card rv" data-cat="persianas" data-product="persiana-aluminio">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/elementor/thumbs/3-precious-metals13-scaled-ql0jfo3fgqjelytgak3v075sm3ket5wwdieac7vrn6-retx2qg0swacn1t6ss6jt71485c8gorxem2vhffjqq.webp" alt="Persiana de Aluminio Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -932,7 +1061,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- PERSIANA MADERA -->
-    <div class="cat-card rv" data-cat="persianas">
+    <div class="cat-card rv" data-cat="persianas" data-product="persiana-madera">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/elementor/thumbs/cortinas-horizontales-madera-marronpng-optimized-retwpjrixk8jryyoskzyc0tc8kbvhjfh9cmo4ozd0y.webp" alt="Persiana de Madera Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
         <span class="cat-card-badge cat-card-badge-new">Premium</span>
@@ -948,7 +1077,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- PERSIANA VERTICALES -->
-    <div class="cat-card rv" data-cat="persianas">
+    <div class="cat-card rv" data-cat="persianas" data-product="persiana-vertical">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2026/02/cortinas-verticales-screenjpg-optimized.webp" alt="Persianas Verticales Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -979,7 +1108,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="cat-grid">
 
     <!-- GLASHAUS -->
-    <div class="cat-card rv" data-cat="pergolas">
+    <div class="cat-card rv" data-cat="pergolas" data-product="glashaus">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/folding-pergola-hunter-douglas-grandes-dimensoes.webp" alt="Pérgola Glashaus Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
         <span class="cat-card-badge cat-card-badge-new">Premium</span>
@@ -995,7 +1124,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- PÉRGOLA LAMAS -->
-    <div class="cat-card rv" data-cat="pergolas">
+    <div class="cat-card rv" data-cat="pergolas" data-product="pergola-lamas">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/stobag_campo_pergolado.webp" alt="Pérgola con Lamas Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -1010,7 +1139,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- PÉRGOLA BIOCLIMÁTICA -->
-    <div class="cat-card rv" data-cat="pergolas">
+    <div class="cat-card rv" data-cat="pergolas" data-product="bioclimatica">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2026/06/pergolas-autoportantepng-optimized.webp" alt="Pérgola Bioclimática Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
         <span class="cat-card-badge cat-card-badge-pv">Motorizada</span>
@@ -1042,7 +1171,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="cat-grid">
 
     <!-- TOLDO GREEN -->
-    <div class="cat-card rv" data-cat="toldos">
+    <div class="cat-card rv" data-cat="toldos" data-product="toldo-green">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/etapa-3-toldo-green-hunter-douglas-1.jpg" alt="Toldo Green Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
         <span class="cat-card-badge cat-card-badge-new">Innovación</span>
@@ -1058,7 +1187,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- TOLDO PROYECTANTE -->
-    <div class="cat-card rv" data-cat="toldos">
+    <div class="cat-card rv" data-cat="toldos" data-product="toldo-proyectante">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/toldo-proyectante-hunter-douglasjpg-optimized.webp" alt="Toldo Proyectante Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -1073,7 +1202,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- TOLDOS VERTICALES -->
-    <div class="cat-card rv" data-cat="toldos">
+    <div class="cat-card rv" data-cat="toldos" data-product="toldo-vertical">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2026/06/toldo-zip-ledjpg-optimized-2.webp" alt="Toldos Verticales Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
       </div>
@@ -1088,7 +1217,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </div>
 
     <!-- TOLDO GEMINI -->
-    <div class="cat-card rv" data-cat="toldos">
+    <div class="cat-card rv" data-cat="toldos" data-product="toldo-gemini">
       <div class="cat-card-img">
         <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/toldo-gemini-autoportante.375994-optimized.webp" alt="Toldo Gemini Hunter Douglas" loading="lazy" onerror="this.style.opacity=0"/>
         <span class="cat-card-badge cat-card-badge-pv">Autoportante</span>
@@ -1289,84 +1418,162 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   </div>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a class="wa-float" href="https://wa.me/543585075773?text=Hola,%20me%20gustar%C3%ADa%20consultar%20sobre%20los%20productos%20Hunter%20Douglas" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-  <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<!-- PRODUCT MODAL -->
+<div id="hd-modal" class="hd-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="hd-modal-name">
+  <div class="hd-modal-inner">
+    <button id="hd-modal-close" class="hd-modal-close" aria-label="Cerrar">&times;</button>
+    <div class="hd-modal-grid">
+      <div class="hd-modal-left">
+        <img id="hd-modal-img" src="" alt="" class="hd-modal-mainimg"/>
+        <div id="hd-modal-thumbs" class="hd-modal-thumbs"></div>
+      </div>
+      <div class="hd-modal-right">
+        <p id="hd-modal-cat" class="hd-modal-cat"></p>
+        <h2 id="hd-modal-name" class="hd-modal-title"></h2>
+        <p id="hd-modal-desc" class="hd-modal-desc"></p>
+        <ul id="hd-modal-features" class="hd-modal-features"></ul>
+        <div class="hd-modal-actions">
+          <a id="hd-modal-wa" href="#" target="_blank" rel="noopener" class="btn-modal-wa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Consultar por WhatsApp
+          </a>
+          <a id="hd-modal-hdlink" href="#" target="_blank" rel="noopener" class="btn-modal-hd">Ver en Hunter Douglas ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WA Float -->
+<a href="https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20sus%20productos%20Hunter%20Douglas" target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
-/* ── NAV ────────────────────────────────── */
 const nav = document.getElementById('siteNav');
 const menuBtn = document.getElementById('menuBtn');
 const navMobile = document.getElementById('navMobile');
-
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('solid', window.scrollY > 60);
-}, { passive: true });
-
+window.addEventListener('scroll', () => { nav.classList.toggle('solid', window.scrollY > 60); }, { passive: true });
 menuBtn.addEventListener('click', () => {
   const open = navMobile.classList.toggle('open');
   menuBtn.setAttribute('aria-expanded', open);
   menuBtn.classList.toggle('open', open);
   document.body.style.overflow = open ? 'hidden' : '';
 });
-
-/* Catálogo dropdown */
 const catBtn = document.getElementById('catBtn');
 const catMenu = document.getElementById('catMenu');
 if (catBtn && catMenu) {
-  catBtn.addEventListener('click', e => {
-    e.stopPropagation();
-    const open = catMenu.classList.toggle('open');
-    catBtn.setAttribute('aria-expanded', open);
-  });
+  catBtn.addEventListener('click', e => { e.stopPropagation(); const open = catMenu.classList.toggle('open'); catBtn.setAttribute('aria-expanded', open); });
   document.addEventListener('click', () => catMenu.classList.remove('open'));
 }
-
-/* ── FILTROS ────────────────────────────── */
 const filterBtns = document.querySelectorAll('.cat-filter-btn');
 const catSections = document.querySelectorAll('.cat-section[data-category]');
 const pvSection = document.getElementById('sec-powerview');
-
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const filter = btn.dataset.filter;
-
-    catSections.forEach(sec => {
-      const cat = sec.dataset.category;
-      if (filter === 'all' || cat === filter) {
-        sec.style.display = '';
-      } else {
-        sec.style.display = 'none';
-      }
-    });
-
-    // PowerView section
-    if (pvSection) {
-      pvSection.style.display = (filter === 'all' || filter === 'powerview') ? '' : 'none';
-    }
-
-    // Scroll to catalog
+    catSections.forEach(sec => { sec.style.display = (filter === 'all' || sec.dataset.category === filter) ? '' : 'none'; });
+    if (pvSection) pvSection.style.display = (filter === 'all' || filter === 'powerview') ? '' : 'none';
     if (filter !== 'all') {
       const target = filter === 'powerview' ? pvSection : document.getElementById('sec-' + filter);
       if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
     }
   });
 });
-
-/* ── ANIMACIONES ────────────────────────── */
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.rv, .rvl, .rvr').forEach(el => observer.observe(el));
+
+const HD_PRODUCTS = {
+  'silhouette': { name:'Cortina Silhouette®', category:'Cortinas', hdUrl:'https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/silhouette/', desc:'Velos traslúcidos flotantes que filtran la luz solar y suavizan la iluminación sin sacrificar las vistas. Elegancia pura para ambientes modernos.', features:['Control de luz preciso','Privacidad configurable','Protección UV 99%','Disponible con PowerView®','Ideal para livings y dormitorios'], waText:'Cortinas Silhouette Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/LeticiaRocco_ExperienciaLiving2026_Foto@ritvu_Silhouette_01.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-silhouette-hunter-douglas_7-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-silhouette-detalle-tela-hunter-douglas-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/cortina-silhouette-11.jpg'] },
+  'duette': { name:'Cortina Duette®', category:'Cortinas', hdUrl:'https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/duette/', desc:'Cortinas de nido de abeja con celdas de aire que aíslan del frío y del calor. La mejor eficiencia energética del mercado, con diseño atemporal.', features:['Ahorro energético hasta 40%','Aislación térmica y acústica','Celdas simples y dobles','Certificación FSC®','Disponible con PowerView®'], waText:'Cortinas Duette Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/SandyCairncross_ExperienciaLiving2026_Foto@ritvu_CountryWoods_Duette_02.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-duette-hunter-douglas_4-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-duette-detalle-tela-hunter-douglas-optimized.webp'] },
+  'pirouette': { name:'Cortina Pirouette®', category:'Cortinas', hdUrl:'https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/pirouette/', desc:'Lamas suaves adheridas a un panel trasero que giran para controlar la luz con precisión. Diseño único que combina lo mejor de una cortina y una persiana.', features:['Control preciso de luz','Lamas giratorias 180°','Vista exterior preservada','Protección UV','Disponible con PowerView®'], waText:'Cortinas Pirouette Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/ettes-cortinas-pirouette-hunter-douglas-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-pirouette-estudiopng-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-pirouette-detalle-tela-hunter-douglas-optimized.webp'] },
+  'luminette': { name:'Cortina Luminette®', category:'Cortinas', hdUrl:'https://www.hunterdouglas.com.ar/productos/cortinas/panel-y-verticales/luminette/', desc:'Cortinado vertical contemporáneo con velos traslúcidos orientables. Ideal para puertas, ventanas de piso a techo y espacios que requieren privacidad total.', features:['Para ventanales y puertas de piso a techo','Giro 180°','Telas screen y blackout','Control de luz y privacidad','Disponible con PowerView®'], waText:'Cortinas Luminette Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/cortina-luminette-3.jpg','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/Cortina-Luminette-Hunter-Douglas.jpeg','https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/cortinas-luminette-para-hall.8b48cd-optimized.webp'] },
+  'verticales': { name:'Cortinas Verticales', category:'Cortinas', hdUrl:'https://www.hunterdouglas.com.ar/productos/cortinas/panel-y-verticales/cortinas-verticales/', desc:'Láminas verticales en tela, PVC o aluminio que permiten distintos escenarios de luz y privacidad. Solución versátil para amplios ventanales y aberturas de piso a techo.', features:['Tela · PVC · Aluminio','Accionamiento manual o motorizado','Para ventanales grandes','Amplia variedad de colores','Fácil mantenimiento'], waText:'Cortinas Verticales Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-verticales-para-living-hunterdouglasjpg-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/02/cortinas-verticales-screenjpg-optimized.webp'] },
+  'tradicionales': { name:'Cortinas Tradicionales', category:'Cortinas', hdUrl:'https://www.hunterdouglas.com.ar/productos/cortinas/cortinas-tradicionales/', desc:'La artesanía clásica de los cortinados en tela con la tecnología y materiales premium de Hunter Douglas. Acabados de alta costura para interiores sofisticados.', features:['Amplia colección de telas','Confección a medida','Instalación profesional incluida','Múltiples modelos de pliegue','Alta durabilidad'], waText:'Cortinas Tradicionales Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/03/HUNTER-DOUGLAS-EXPERIENCIA-LIVING-by-RITVU-185.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/X9A7814-scaled-qucqr83sz3rgxtup48ewldx68rc4apcil2w1us5j8y.jpg'] },
+  'paneles': { name:'Paneles Orientales', category:'Cortinas', hdUrl:'https://www.hunterdouglas.com.ar/productos/cortinas/panel-y-verticales/paneles-orientales/', desc:'Paneles de tela deslizantes superpuestos, inspirados en el diseño japonés. La solución ideal para ventanales de gran tamaño con estilo minimalista y contemporáneo.', features:['Para ventanales de gran tamaño','Diseño japonés minimalista','Múltiples paneles superpuestos','Diversas telas y colores','Accionamiento suave y silencioso'], waText:'Paneles Orientales Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/Hunter-Douglas.Paneles-Orientales-living.webp'] },
+  'roller': { name:'Roller Quantum®', category:'Cortinas', hdUrl:'https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/cortinas-roller/', desc:'Cortinas enrollables con mecanismo exclusivo Hunter Douglas de altísima resistencia y precisión. Sistema patentado que garantiza funcionamiento suave y silencioso por décadas.', features:['Mecanismo exclusivo patentado','Telas screen · opacas · blackout','Sin cordones ni cadenas visibles','Con o sin PowerView®','Garantía de fábrica 5 años'], waText:'Cortinas Roller Quantum Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-roller-superior-living-hunterdouglasjpg-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/elementor/thumbs/RB_2142-qumq4laeqq1ijpltzhby7oqvrkpe4fslz3inl5sib6-retxxa76x23tytfqezk1uhif8yromk1vltcyz64xiq.jpg'] },
+  'twinline': { name:'Roller Twinline', category:'Cortinas', hdUrl:'https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/twinline/', desc:'Sistema doble de cortina enrollable: una tela diurna (screen) y una nocturna (blackout) en el mismo cajón. Total oscuridad o visión al exterior con un solo sistema integrado.', features:['Doble sistema integrado','Tela screen + blackout en un cajón','Sin cordones ni cadenas visibles','Disponible con PowerView®','Ideal para dormitorios'], waText:'Cortinas Roller Twinline Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-twinline-living-hunter-douglasjpg-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/06/cortinas-twinline-negrasjpg-optimized-2.webp'] },
+  'shadesign': { name:'Roller Shadesign®', category:'Cortinas', hdUrl:'https://www.hunterdouglas.com.ar/productos/cortinas/enrrollables/roller-shadesign/', desc:'Colección de cortinas roller con estampas y diseños artísticos exclusivos de Hunter Douglas. Transforma la cortina en un elemento decorativo protagonista del ambiente.', features:['Estampas exclusivas Hunter Douglas','Colección limitada actualizada','Mecanismo Roller Quantum®','Telas técnicas de alta calidad','Ideal para ambientes modernos'], waText:'Cortinas Roller Shadesign Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2025/12/cortinas-roller-shadesign-living-clasico-hunterdouglas.17bb53-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/07/cortinas-roller-shadesign-infantilesjpg-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/elementor/thumbs/3-RB_2251-qkwf2lm1az0nol0oduoavzysi90kwm8ndo9k9z4zoy-retx8199c9jk3w40ukntdcvotd7qv8tfsuifwlkmnm.webp'] },
+  'persiana-aluminio': { name:'Persianas de Aluminio', category:'Persianas', hdUrl:'https://www.hunterdouglas.com.ar/productos/persianas/horizontales-de-aluminio/', desc:'Lamas de aluminio de alta resistencia en 25 mm, 35 mm y 50 mm. Elegantes, duraderas y fáciles de limpiar. Ideales para ambientes modernos con mucha luz natural.', features:['Lamas 25 / 35 / 50 mm','Amplia paleta de colores','Lamas antirreflejo disponibles','Alta resistencia a la humedad','Fácil limpieza y mantenimiento'], waText:'Persianas de Aluminio Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/primeira-persiana-de-aluminio-hunter-douglas.jpg','https://www.hunterdouglas.com.ar/wp-content/uploads/elementor/thumbs/3-precious-metals13-scaled-ql0jfo3fgqjelytgak3v075sm3ket5wwdieac7vrn6-retx2qg0swacn1t6ss6jt71485c8gorxem2vhffjqq.webp'] },
+  'persiana-madera': { name:'Persianas de Madera', category:'Persianas', hdUrl:'https://www.hunterdouglas.com.ar/productos/persianas/horizontales-de-madera/', desc:'Lamas de madera basswood seleccionada. Calidez natural y textura única para dormitorios, estudios y livings que buscan un estilo warm & contemporary.', features:['Madera basswood premium','Distintos teñidos y acabados','Lamas 35 y 50 mm','Certificación FSC®','Alta durabilidad y resistencia'], waText:'Persianas de Madera Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/elementor/thumbs/cortinas-horizontales-madera-marronpng-optimized-retwpjrixk8jryyoskzyc0tc8kbvhjfh9cmo4ozd0y.webp'] },
+  'persiana-vertical': { name:'Persianas Verticales', category:'Persianas', hdUrl:'https://www.hunterdouglas.com.ar/productos/persianas/verticales/', desc:'Láminas verticales en aluminio o PVC para ventanales y aberturas de gran tamaño. Control de luz y privacidad con fácil mantenimiento y durabilidad excepcional.', features:['Aluminio o PVC','Accionamiento por cadena','Para aberturas amplias','Fácil limpieza','Motorización disponible'], waText:'Persianas Verticales Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/02/cortinas-verticales-screenjpg-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/persiana-metais-preciosos-jogo-de-luz-scaled-1.webp'] },
+  'glashaus': { name:'Pérgola Glashaus', category:'Pérgolas', hdUrl:'https://www.hunterdouglas.com.ar/productos/pergolas/glashaus/', desc:'Pérgola con techo de vidrio templado de seguridad y estructura de aluminio lacado. Disfrutá el exterior con luz natural y protección total frente a la lluvia.', features:['Vidrio templado de seguridad','Estructura aluminio lacado','Canales de desagüe integrados','Motorización opcional','Resistente a vientos y lluvia'], waText:'Pérgola Glashaus Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/folding-pergola-hunter-douglas-grandes-dimensoes.webp'] },
+  'pergola-lamas': { name:'Pérgola con Lamas', category:'Pérgolas', hdUrl:'https://www.hunterdouglas.com.ar/productos/pergolas/pergola-de-lamas/', desc:'Estructura de aluminio con lamas orientables que regulan la entrada de luz y la ventilación. El equilibrio ideal entre apertura y protección para terraza, jardín o piscina.', features:['Lamas orientables','Aluminio lacado premium','Motorización disponible','Iluminación LED integrable','Sensor de viento incluido'], waText:'Pérgola con Lamas Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/04/stobag_campo_pergolado.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/stobag_cobertura_modular.webp'] },
+  'bioclimatica': { name:'Pérgola Bioclimática', category:'Pérgolas', hdUrl:'https://www.hunterdouglas.com.ar/productos/pergolas/pergola-bioclimatica/', desc:'Lamas de aluminio motorizadas que se orientan automáticamente según el sol y el viento. Control climático inteligente del espacio exterior con drenaje integrado.', features:['Lamas motorizadas automáticas','Sensor de viento y lluvia','Sistema de drenaje integrado','Control vía app','Iluminación LED disponible'], waText:'Pérgola Bioclimática Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/06/pergolas-autoportantepng-optimized.webp'] },
+  'toldo-green': { name:'Toldo Green®', category:'Toldos', hdUrl:'https://www.hunterdouglas.com.ar/productos/toldos/', desc:'El primer toldo del mundo que purifica el aire. La tela especial neutraliza compuestos orgánicos volátiles (VOC) y gases nocivos, mejorando la calidad del aire en tu terraza.', features:['Purificación activa del aire','Protección UV 95%','Tela anti-contaminante especial','Red Dot Award 2025','Alta durabilidad para exterior'], waText:'Toldo Green Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/etapa-3-toldo-green-hunter-douglas-1.jpg'] },
+  'toldo-proyectante': { name:'Toldo Proyectante', category:'Toldos', hdUrl:'https://www.hunterdouglas.com.ar/productos/toldos/', desc:'Toldo de brazos articulados para galerías, terrazas y jardines. Se extiende y recoge con facilidad protegiendo grandes superficies. Disponible con motorización PowerView®.', features:['Brazos articulados','Amplia proyección de hasta 5m','Motorización opcional','Sensor de viento disponible','Amplia colección de telas'], waText:'Toldo Proyectante Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/toldo-proyectante-hunter-douglasjpg-optimized.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2025/12/toldo-proyectante-negro-jardinjpg-optimized.webp'] },
+  'toldo-vertical': { name:'Toldos Verticales', category:'Toldos', hdUrl:'https://www.hunterdouglas.com.ar/productos/toldos/', desc:'Pantallas verticales para balcones, galerías y espacios abiertos. Protegen del sol lateral, del viento y de las miradas. Telas técnicas con protección UV de alta performance.', features:['Protección lateral solar y de viento','Telas técnicas screen','Para balcones y galerías','Sistema Zip integrado','Motorizable con PowerView®'], waText:'Toldos Verticales Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2026/06/toldo-zip-ledjpg-optimized-2.webp','https://www.hunterdouglas.com.ar/wp-content/uploads/2026/06/toldo-zip-ledjpg-optimized-1.webp'] },
+  'toldo-gemini': { name:'Toldo Gemini', category:'Toldos', hdUrl:'https://www.hunterdouglas.com.ar/productos/toldos/', desc:'Toldo autoportante para espacios de hasta 36 m². No requiere pared ni soporte: se instala con postes propios, ideal para jardines, piletas y espacios sin estructura de apoyo.', features:['Autoportante hasta 36 m²','Sin pared ni soporte necesario','Para jardines y piletas','Motorizable','Sistema completamente independiente'], waText:'Toldo Gemini Hunter Douglas', images:['https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/toldo-gemini-autoportante.375994-optimized.webp'] }
+};
+
+(function(){
+  const modal = document.getElementById('hd-modal');
+  const modalImg = document.getElementById('hd-modal-img');
+  const modalThumbs = document.getElementById('hd-modal-thumbs');
+  const modalName = document.getElementById('hd-modal-name');
+  const modalCat = document.getElementById('hd-modal-cat');
+  const modalDesc = document.getElementById('hd-modal-desc');
+  const modalFeatures = document.getElementById('hd-modal-features');
+  const modalWa = document.getElementById('hd-modal-wa');
+  const modalHdLink = document.getElementById('hd-modal-hdlink');
+
+  function setMainImg(src, alt) {
+    modalImg.style.opacity = '0';
+    setTimeout(() => { modalImg.src = src; modalImg.alt = alt; modalImg.style.opacity = '1'; }, 120);
+  }
+
+  function openModal(key) {
+    const p = HD_PRODUCTS[key];
+    if (!p) return;
+    modalName.textContent = p.name;
+    modalCat.textContent = p.category;
+    modalDesc.textContent = p.desc;
+    modalFeatures.innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
+    modalWa.href = `https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20${encodeURIComponent(p.waText)}`;
+    modalHdLink.href = p.hdUrl;
+    const imgs = p.images;
+    setMainImg(imgs[0], p.name);
+    if (imgs.length > 1) {
+      modalThumbs.innerHTML = imgs.map((url, i) =>
+        `<img src="${url}" alt="${p.name} ${i+1}" class="hd-modal-thumb${i===0?' active':''}" data-src="${url}"/>`
+      ).join('');
+      modalThumbs.style.display = 'flex';
+      modalThumbs.querySelectorAll('.hd-modal-thumb').forEach(th => {
+        th.addEventListener('click', () => {
+          setMainImg(th.dataset.src, p.name);
+          modalThumbs.querySelectorAll('.hd-modal-thumb').forEach(t => t.classList.remove('active'));
+          th.classList.add('active');
+        });
+      });
+    } else {
+      modalThumbs.style.display = 'none';
+    }
+    modal.classList.add('open');
+    modal.removeAttribute('aria-hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('hd-modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  document.querySelectorAll('.cat-card[data-product]').forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('.cat-card-cta')) return;
+      openModal(card.dataset.product);
+    });
+  });
+})();
 </script>
 </body>
 </html>
