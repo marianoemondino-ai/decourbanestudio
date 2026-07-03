@@ -26,11 +26,12 @@
   --gold-lt: #f5f5f3;
   --green: #25D366;
   /* Marca: blanco + gris oscuro + acento naranja (uso minoritario) */
-  --accent: #F89A36;
-  --accent-dark: #DD7E18;
-  --accent-soft: #FCE8CC;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Outfit', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --accent: #f48534;
+  --accent-dark: #c96c1a;
+  --accent-soft: #fde8cc;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-script: 'Sacramento', cursive;
+  --font-body: 'Assistant', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ── UTILIDADES ─────────────────────────────────────── */
@@ -71,9 +72,12 @@ h2 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); }
 h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 500; }
 p { color: #555; font-size: 0.94rem; line-height: 1.75; }
 h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
-  font-style: italic;
-  font-family: var(--font-display);
-  color: inherit;
+  font-style: normal;
+  font-family: var(--font-script);
+  color: var(--accent);
+  font-weight: 400;
+  font-size: 1.08em;
+  line-height: 1;
 }
 
 /* ── NAV ────────────────────────────────────────────── */
@@ -577,7 +581,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   .projects-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
-.section-eyebrow { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--text-mid); font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-family: var(--font-body); }
+.section-eyebrow { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--text-mid); font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-family: var(--font-display); }
 .section-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--text-light); flex-shrink: 0; }
 
 /* Stats */
