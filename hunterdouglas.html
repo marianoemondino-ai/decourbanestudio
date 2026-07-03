@@ -10,16 +10,17 @@
 <meta property="og:url" content="https://decourbanestudio.com.ar/hunterdouglas.html"/>
 <meta property="og:title" content="Hunter Douglas — Distribuidor Oficial en Río Cuarto | Decourban Estudio"/>
 <meta property="og:description" content="Cortinas, persianas, toldos y pérgolas de alta gama con instalación profesional. Distribuidores oficiales Hunter Douglas en Río Cuarto."/>
-<meta property="og:image" content="/img/hd/HD.Cortina-Silhouette-5-1024x677.jpg"/>
+<meta property="og:image" content="https://decourbanestudio.com.ar/img/hero-poster.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Decourban Estudio"/>
 <link rel="canonical" href="https://decourbanestudio.com.ar/hunterdouglas.html"/>
+<link rel="icon" href="favicon.ico" sizes="32x32"/>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Sacramento&family=Assistant:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sacramento&family=Assistant:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 <!-- Google Analytics 4 — reemplazar G-XXXXXXXXXX con tu Measurement ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -1509,4 +1510,73 @@ const HD_PRODUCTS = {
   'toldo-green': { name:'Toldo Green®', category:'Toldos', hdUrl:'https://www.hunterdouglas.com.ar/productos/toldos/proyectante/toldo-green/', desc:'El primer toldo del mundo que purifica el aire a tu alrededor.', features:['Purificación del aire: Tecnología de nanopartículas (Pureti/NASA) convierte contaminantes en aire puro y agua','4 m² del tejido neutralizan la contaminación emitida por un automóvil durante un año','Reducción de proliferación de moho y hongos para ambientes más saludables','Efecto autolimpiante: Preserva la belleza y la durabilidad del toldo','Reconocido con el Red Dot Award 2025 — NASA Dual Use Technology Partner','Activado por la luz solar: Fotocatálisis silenciosa, invisible y permanente'], waText:'Toldo Green Hunter Douglas', images:['/img/hd/etapa-3-toldo-green-hunter-douglas-1.jpg'] },
   'toldo-proyectante': { name:'Toldo Proyectante', category:'Toldos', hdUrl:'https://www.hunterdouglas.com.ar/productos/toldos/proyectante/toldo-proyectante/', desc:'Son una excelente solución para galerías, terrazas y jardines.', features:['Estructura rígida: Menor oscilación en comparación con otros modelos','9 modelos disponibles: Soportes universales para instalación en pared, techo o viga','Modelo híbrido: Se integra fácilmente a fachadas; uso en posición vertical u horizontal','Versátil para comercios y balcones: Cubre tanto áreas pequeñas como grandes','Amplia variedad de tejidos, colores y patrones modernos','Disponible con motorización PowerView®'], waText:'Toldo Proyectante Hunter Douglas', images:['/img/hd/toldo-proyectante-hunter-douglasjpg-optimized.webp','/img/hd/toldo-proyectante-negro-jardinjpg-optimized.webp'] },
   'toldo-vertical': { name:'Toldos Verticales', category:'Toldos', hdUrl:'https://www.hunterdouglas.com.ar/productos/toldos/verticales/toldos-verticales/', desc:'Ideales para balcones, galerías y para generar protección exterior en las aberturas.', features:['Protección solar, privacidad y transparencia: De manejo sencillo con múltiples posiciones','Estructuras compactas: Ideales para balcones, terrazas y lobbies de edificios','Guías de cable de acero o varilla de acero inoxidable','Con opción de Box integrado para mayor protección del tejido','Gran variedad de telas, colores y patrones modernos','Accionamiento manual o motorizado'], waText:'Toldos Verticales Hunter Douglas', images:['/img/hd/toldo-zip-ledjpg-optimized-2.webp','/img/hd/toldo-zip-ledjpg-optimized-1.webp'] },
-  'toldo-gemini': { name:'Toldo Gemini', category:'Toldos', hdUrl:'https://www.hunterdouglas.com.ar/productos/toldos/auto-portante/toldo-gemini/', desc:'Es un toldo autoportante que permite cubrir grandes superficies, de hasta 36 m².', features:['Autoportante: No necesita pared ni techo para instalarse — ideal para exteriores amplios','Cubre hasta 36 m²: 6 m de línea x 3 m de salida con altura de 3 m','Iluminación integrada: Opción de tiras LED en las barras de carga','Accionamiento manual o motorizado','Todo terr
+    'toldo-gemini': { name:'Toldo Gemini', category:'Toldos', hdUrl:'https://www.hunterdouglas.com.ar/productos/toldos/auto-portante/toldo-gemini/', desc:'Es un toldo autoportante que permite cubrir grandes superficies, de hasta 36 m².', features:['Autoportante: No necesita pared ni techo para instalarse — ideal para exteriores amplios','Cubre hasta 36 m²: 6 m de línea x 3 m de salida con altura de 3 m','Iluminación integrada: Opción de tiras LED en las barras de carga','Accionamiento manual o motorizado','Todo terreno: Ideal para amplios jardines y espacios comerciales','El toldo más versátil de la línea Hunter Douglas'], waText:'Toldo Gemini Hunter Douglas', images:['/img/hd/toldo-gemini-autoportante.375994-optimized.webp'] }
+};
+
+(function(){
+  const modal = document.getElementById('hd-modal');
+  const modalImg = document.getElementById('hd-modal-img');
+  const modalThumbs = document.getElementById('hd-modal-thumbs');
+  const modalName = document.getElementById('hd-modal-name');
+  const modalCat = document.getElementById('hd-modal-cat');
+  const modalDesc = document.getElementById('hd-modal-desc');
+  const modalFeatures = document.getElementById('hd-modal-features');
+  const modalWa = document.getElementById('hd-modal-wa');
+  const modalHdLink = document.getElementById('hd-modal-hdlink');
+
+  function setMainImg(src, alt) {
+    modalImg.style.opacity = '0';
+    setTimeout(() => { modalImg.src = src; modalImg.alt = alt; modalImg.style.opacity = '1'; }, 120);
+  }
+
+  function openModal(key) {
+    const p = HD_PRODUCTS[key];
+    if (!p) return;
+    modalName.textContent = p.name;
+    modalCat.textContent = p.category;
+    modalDesc.textContent = p.desc;
+    modalFeatures.innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
+    modalWa.href = `https://wa.me/543585075773?text=Hola%2C%20quiero%20consultar%20sobre%20${encodeURIComponent(p.waText)}`;
+    modalHdLink.href = p.hdUrl;
+    const imgs = p.images;
+    setMainImg(imgs[0], p.name);
+    if (imgs.length > 1) {
+      modalThumbs.innerHTML = imgs.map((url, i) =>
+        `<img src="${url}" alt="${p.name} ${i+1}" class="hd-modal-thumb${i===0?' active':''}" data-src="${url}"/>`
+      ).join('');
+      modalThumbs.style.display = 'flex';
+      modalThumbs.querySelectorAll('.hd-modal-thumb').forEach(th => {
+        th.addEventListener('click', () => {
+          setMainImg(th.dataset.src, p.name);
+          modalThumbs.querySelectorAll('.hd-modal-thumb').forEach(t => t.classList.remove('active'));
+          th.classList.add('active');
+        });
+      });
+    } else {
+      modalThumbs.style.display = 'none';
+    }
+    modal.classList.add('open');
+    modal.removeAttribute('aria-hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('hd-modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  document.querySelectorAll('.cat-card[data-product]').forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('.cat-card-cta')) return;
+      openModal(card.dataset.product);
+    });
+  });
+})();
+</script>
+</body>
+</html>

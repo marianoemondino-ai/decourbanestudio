@@ -10,17 +10,18 @@
 <meta property="og:url" content="https://decourbanestudio.com.ar/"/>
 <meta property="og:title" content="Decourban Estudio — Diseño de Interiores en Río Cuarto"/>
 <meta property="og:description" content="Interiorismo, cortinas a medida, mobiliario y asesoramiento integral. Transformamos espacios en Río Cuarto, Córdoba."/>
-<meta property="og:image" content="https://decourbanestudio.com.ar/img/index-silhouette.webp"/>
+<meta property="og:image" content="https://decourbanestudio.com.ar/img/hero-poster.jpg"/>
 <meta property="og:image:width" content="1280"/>
-<meta property="og:image:height" content="681"/>
-<meta property="og:image:alt" content="Living contemporáneo con cortinas Hunter Douglas Silhouette y luz natural"/>
+<meta property="og:image:height" content="720"/>
+<meta property="og:image:alt" content="Decourban Estudio — Equipamientos especiales para espacios residenciales y corporativos, Río Cuarto"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://decourbanestudio.com.ar/img/index-silhouette.webp"/>
+<meta name="twitter:image" content="https://decourbanestudio.com.ar/img/hero-poster.jpg"/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Decourban Estudio"/>
 <meta name="geo.region" content="AR-X"/>
 <meta name="geo.placename" content="Río Cuarto, Córdoba"/>
 <link rel="canonical" href="https://decourbanestudio.com.ar/"/>
+<link rel="icon" href="favicon.ico" sizes="32x32"/>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 <link rel="manifest" href="manifest.json"/>
@@ -28,7 +29,7 @@
 <link rel="preload" href="img/hero-poster.jpg" as="image" fetchpriority="high"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Sacramento&family=Assistant:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sacramento&family=Assistant:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 <!-- Google Analytics 4 — reemplazar G-XXXXXXXXXX con tu Measurement ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -123,7 +124,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 
 <!-- HERO FULL -->
 <section class="hero-full">
-  <video class="hero-video" autoplay muted loop playsinline poster="img/hero-poster.jpg">
+  <video class="hero-video" autoplay muted playsinline webkit-playsinline preload="auto" poster="img/hero-poster.jpg">
     <source src="img/hero-video.mp4" type="video/mp4"/>
   </video>
   <div class="hero-overlay">
@@ -411,6 +412,62 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     });
   },{threshold:0.06});
   document.querySelectorAll('.rv,.rvl,.rvr').forEach(function(el){ rvObs.observe(el); });
+
+  // ── Hero video: loop suave + autoplay móvil ──────────
+  (function() {
+    var vid = document.querySelector('.hero-video');
+    if (!vid) return;
+
+    // Crear overlay de fade para loop suave
+    var fade = document.createElement('div');
+    fade.style.cssText = [
+      'position:absolute','inset:0','background:#000','opacity:0',
+      'pointer-events:none','transition:opacity 0.55s ease','z-index:2'
+    ].join(';') + ';';
+    vid.parentNode.style.position = 'relative';
+    vid.parentNode.insertBefore(fade, vid.nextSibling);
+
+    var fading = false;
+
+    vid.addEventListener('timeupdate', function() {
+      if (!vid.duration || fading) return;
+      var remaining = vid.duration - vid.currentTime;
+      if (remaining < 0.9 && remaining > 0) {
+        fading = true;
+        fade.style.opacity = '1';
+      }
+    });
+
+    vid.addEventListener('ended', function() {
+      vid.currentTime = 0;
+      vid.play();
+      setTimeout(function() {
+        fade.style.opacity = '0';
+        setTimeout(function() { fading = false; }, 600);
+      }, 150);
+    });
+
+    // Autoplay móvil: forzar play() por JS
+    function tryPlay() {
+      var p = vid.play();
+      if (p && p.catch) {
+        p.catch(function() {
+          // Si falla, intentar al primer touch/scroll
+          document.addEventListener('touchstart', function once() {
+            vid.play();
+            document.removeEventListener('touchstart', once);
+          }, { once: true });
+        });
+      }
+    }
+
+    if (vid.readyState >= 2) {
+      tryPlay();
+    } else {
+      vid.addEventListener('canplay', tryPlay, { once: true });
+    }
+  })();
+
 })();
 </script>
 </body>
