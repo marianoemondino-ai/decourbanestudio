@@ -884,6 +884,29 @@ fieldset.fl { border: 0; padding: 0; }
   max-width: 560px;
   pointer-events: auto;
 }
+/* ── Logo centrado en hero ─── */
+.hero-logo-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10,8,6,0.28);
+  pointer-events: none;
+}
+.hero-logo-img {
+  width: min(480px, 72vw);
+  height: auto;
+  filter: drop-shadow(0 4px 32px rgba(0,0,0,0.55));
+  animation: heroLogoPulse 3s ease-in-out infinite alternate;
+}
+@keyframes heroLogoPulse {
+  from { opacity: 0.92; transform: scale(1); }
+  to   { opacity: 1;    transform: scale(1.018); }
+}
+@media (max-width: 480px) {
+  .hero-logo-img { width: min(300px, 85vw); }
+}
 .hero-eyebrow {
   font-size: 0.68rem;
   letter-spacing: 0.22em;
