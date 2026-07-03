@@ -334,4 +334,23 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   // ── WhatsApp click tracking ────────────────────────
   document.addEventListener('click', function(e) {
     var wa = e.target.closest('a[href^="https://wa.me"]');
-    i
+    if (wa && typeof gtag !== 'undefined') {
+      gtag('event', 'whatsapp_click', {
+        event_category: 'engagement',
+        event_label: wa.getAttribute('data-track') || 'nosotros',
+        value: 1
+      });
+    }
+  });
+
+  // ── Scroll reveal ──────────────────────────────────
+  var rvObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); rvObs.unobserve(e.target); }
+    });
+  },{threshold:0.06});
+  document.querySelectorAll('.rv,.rvl,.rvr').forEach(function(el){ rvObs.observe(el); });
+})();
+</script>
+</body>
+</html>

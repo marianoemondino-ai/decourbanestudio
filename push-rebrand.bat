@@ -36,7 +36,7 @@ echo ----------------------------
 echo.
 
 :: Commitear
-git commit -m "feat: nuevo logo nav (dU con fondo transparente y texto blanco), foto duena en nosotros, tipografia Outfit, copy rebrand + fix overflow movil"
+git commit -m "feat+fix: nuevo logo nav, foto duena, tipografia Outfit, copy rebrand, fix overflow movil + fix HTML truncado en nosotros/index/servicios"
 if errorlevel 1 (
   echo Nada nuevo para commitear o error en commit.
   pause
