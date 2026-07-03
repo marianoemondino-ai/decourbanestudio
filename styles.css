@@ -30,6 +30,7 @@
   --accent-dark: #DD7E18;
   --accent-soft: #FCE8CC;
   --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Outfit', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ── UTILIDADES ─────────────────────────────────────── */
@@ -43,9 +44,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* ── RESET ──────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
-  font-family: system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-body);
   background: #fff;
   color: #111;
   -webkit-font-smoothing: antialiased;
@@ -405,7 +406,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   text-transform: uppercase;
   color: var(--text);
   margin-bottom: 22px;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
 }
 .footer-col a {
   display: block;
@@ -576,7 +577,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   .projects-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
-.section-eyebrow { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--text-mid); font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-family: system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+.section-eyebrow { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--text-mid); font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-family: var(--font-body); }
 .section-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--text-light); flex-shrink: 0; }
 
 /* Stats */

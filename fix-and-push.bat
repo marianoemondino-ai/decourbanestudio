@@ -31,7 +31,7 @@ git status --short
 echo ----------------------------
 echo.
 
-git commit -m "fix: WA number typo in contacto.html (5493 -> 543), nombres HD correctos, modales 20 productos HD"
+git commit -m "feat: nuevo logo nav (dU con fondo transparente y texto blanco), foto dueña en nosotros, tipografía Outfit, copy rebrand + fix overflow móvil"
 
 git push origin main
 
