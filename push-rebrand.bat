@@ -1,61 +1,42 @@
 @echo off
 echo ============================================
-echo  Push rebrand Decourban - indice temporal
+echo  Decourban - Push a GitHub/Vercel
 echo ============================================
 cd /d "%~dp0"
 
-:: Usar indice temporal fuera de .git/ para evitar el lock de Cowork
-set GIT_INDEX_FILE=%TEMP%\decourban-git-index-tmp
-
-:: Limpiar indice temporal anterior si existe
+set GIT_INDEX_FILE=%TEMP%\du-git-idx-tmp
 if exist "%GIT_INDEX_FILE%" del /f "%GIT_INDEX_FILE%"
 
-:: Leer el estado actual del HEAD en el indice temporal
-echo Preparando indice...
-git read-tree HEAD
-if errorlevel 1 (
-  echo ERROR al leer HEAD. Abortando.
-  pause
-  exit /b 1
-)
+echo Paso 1: Preparando indice...
+git read-tree HEAD >> "%~dp0push-log.txt" 2>&1
+if errorlevel 1 goto ERROR
 
-:: Agregar todos los cambios del disco al indice temporal
-echo Agregando cambios...
-git add -A
-if errorlevel 1 (
-  echo ERROR en git add. Abortando.
-  pause
-  exit /b 1
-)
+echo Paso 2: Agregando cambios...
+git add -A >> "%~dp0push-log.txt" 2>&1
 
-:: Mostrar que se va a commitear
-echo.
-echo --- Archivos a commitear ---
-git status --short
-echo ----------------------------
-echo.
+echo Paso 3: Commiteando...
+git commit -m "update decourban web" >> "%~dp0push-log.txt" 2>&1
 
-:: Commitear
-git commit -m "feat+fix: nuevo logo nav, foto duena, tipografia Outfit, copy rebrand, fix overflow movil + fix HTML truncado en nosotros/index/servicios"
-if errorlevel 1 (
-  echo Nada nuevo para commitear o error en commit.
-  pause
-  exit /b 1
-)
+echo Paso 4: Pusheando...
+git push origin main >> "%~dp0push-log.txt" 2>&1
+if errorlevel 1 goto ERROR_PUSH
 
-:: Pushear
-echo Pusheando a GitHub...
-git push origin main
-if errorlevel 1 (
-  echo ERROR en push. Verificar credenciales de GitHub.
-  pause
-  exit /b 1
-)
-
-:: Limpiar indice temporal
 del /f "%GIT_INDEX_FILE%" 2>nul
-
 echo.
-echo Listo! Vercel desplegando en 1-2 minutos...
-echo Verificar en: https://decourbanestudio.vercel.app/
-pause
+echo LISTO - Vercel desplegando en 1-2 minutos
+echo https://decourbanestudio.vercel.app/
+goto FIN
+
+:ERROR_PUSH
+echo.
+echo ERROR en el push. Ver push-log.txt para detalles.
+goto FIN
+
+:ERROR
+echo.
+echo ERROR en git. Ver push-log.txt para detalles.
+
+:FIN
+echo.
+echo Presiona cualquier tecla para cerrar...
+pause >nul
