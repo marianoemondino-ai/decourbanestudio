@@ -60,7 +60,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 .sil-hero {
   position: relative;
   height: min(70vh, 560px);
-  background: #111 url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/HD.Cortina-Silhouette-5-1024x677.jpg') center/cover no-repeat;
+  background: #111 url('/img/hd/HD.Cortina-Silhouette-5-1024x677.jpg') center/cover no-repeat;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -392,6 +392,72 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   gap: 64px;
   align-items: center;
 }
+.sil-powerview-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.sil-pv-remote {
+  width: 200px;
+  height: 260px;
+  background: #e8e2d9;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.6);
+  position: relative;
+}
+.sil-pv-remote::before {
+  content: 'PowerView®';
+  position: absolute;
+  top: 36px;
+  font-family: var(--font-display);
+  font-size: .7rem;
+  color: #8a7a6a;
+  letter-spacing: .1em;
+}
+.sil-pv-remote-dial {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: #ddd6cc;
+}
+.sil-pv-remote-dial span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: #8a7a6a;
+  border-radius: 2px;
+}
+.sil-pv-compat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sil-pv-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid #c8bfb2;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-family: var(--font-body);
+  font-size: .68rem;
+  color: #5a4e42;
+  background: rgba(255,255,255,.7);
+  white-space: nowrap;
+}
+.sil-pv-badge svg { flex-shrink: 0; }
 .sil-powerview-body .eyebrow {
   font-family: var(--font-body);
   font-size: .7rem;
@@ -401,88 +467,50 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   display: block;
   margin-bottom: 12px;
 }
+.sil-powerview-body .pv-subtitle {
+  font-family: var(--font-body);
+  font-size: .82rem;
+  color: var(--accent);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: 500;
+}
 .sil-powerview-body h2 {
   font-family: var(--font-display);
   font-size: clamp(1.6rem,3vw,2.3rem);
   font-weight: 400;
   color: var(--text-dark);
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   line-height: 1.2;
 }
 .sil-powerview-body h2 em { font-style: italic; }
 .sil-powerview-body p {
   font-family: var(--font-body);
-  font-size: .93rem;
+  font-size: .95rem;
   color: var(--text-mid);
-  line-height: 1.75;
-  margin: 0 0 28px;
-}
-.sil-pv-compat {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-}
-.sil-pv-compat img {
-  height: 28px;
-  width: auto;
-  opacity: .75;
-}
-.sil-powerview-visual {
-  display: flex;
-  justify-content: center;
-}
-.sil-powerview-visual img {
-  max-width: 260px;
-  width: 100%;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,.12));
+  line-height: 1.8;
+  margin: 0 0 20px;
 }
 
 /* ---- GARANTIA BANNER ---- */
 .sil-garantia {
-  background: #1a1612;
+  background: #c25a28;
   padding: 52px clamp(24px,5vw,80px);
-  text-align: center;
-}
-.sil-garantia-inner {
-  max-width: 640px;
-  margin: 0 auto;
-}
-.sil-garantia-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 20px;
 }
 .sil-garantia-num {
   font-family: var(--font-display);
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 400;
-  color: var(--accent);
-  line-height: 1;
-}
-.sil-garantia-label {
-  text-align: left;
-}
-.sil-garantia-label span:first-child {
-  display: block;
-  font-family: var(--font-body);
-  font-size: .7rem;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.5);
-}
-.sil-garantia-label span:last-child {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.3rem;
   color: #fff;
+  line-height: 1;
+  display: block;
 }
 .sil-garantia p {
   font-family: var(--font-body);
   font-size: .88rem;
-  color: rgba(255,255,255,.6);
+  color: rgba(255,255,255,.9);
   line-height: 1.7;
   margin: 0;
   letter-spacing: .04em;
@@ -733,13 +761,12 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="sil-hero-content">
     <div class="sil-hero-badge">
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="white" stroke-opacity=".7" stroke-width="1.2"/><circle cx="6" cy="6" r="2" fill="white" fill-opacity=".6"/></svg>
-      Distribuidores oficiales Hunter Douglas
+      CORTINAS
     </div>
     <h1>Cortina <em>Silhouette®</em></h1>
-    <p class="sil-hero-tagline">Elegantes y sofisticadas, sus velos traslúcidos tamizan la luz creando infinitos juegos de iluminación.</p>
+    <p class="sil-hero-tagline">Elegantes y sofisticadas, sus velos traslúcidos tamizan la luz creando infinitos juegos de luz.</p>
     <div class="sil-hero-ctas">
       <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20las%20Cortinas%20Silhouette%20Hunter%20Douglas" target="_blank" rel="noopener" class="sil-btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.118 1.528 5.845L.057 23.535a.5.5 0 00.608.608l5.69-1.471A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.956 0-3.8-.575-5.338-1.563l-.383-.239-3.975 1.027 1.027-3.975-.239-.383A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
         Consultar por WhatsApp
       </a>
       <a href="contacto.html" class="sil-btn-ghost">Solicitar asesoramiento</a>
@@ -747,26 +774,59 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   </div>
 </section>
 
-<!-- BREADCRUMB -->
-<div class="sil-breadcrumb">
-  <a href="index.html">Inicio</a>
-  <span>›</span>
-  <a href="hunterdouglas.html">Hunter Douglas</a>
-  <span>›</span>
-  <span style="color:var(--text-dark)">Cortina Silhouette®</span>
-</div>
-
-<!-- INTRO -->
-<section class="sil-intro">
-  <span class="eyebrow">Cortinas de tela premium</span>
-  <h2>Equilibrio ideal entre <em>suavidad e iluminación</em></h2>
-  <p>La cortina Silhouette® es más que una simple cortina: es una solución inteligente y elegante para controlar la luz y disfrutar del confort. Sus láminas características en forma de "S", suspendidas entre velos de tela transparente, permiten ajustar la cantidad de luz natural que entra, creando espacios acogedores y realzando la decoración de cualquier interior.</p>
+<!-- POWERVIEW — igual que HD: visual izquierda, texto derecha, fondo crema -->
+<section class="sil-powerview">
+  <div class="sil-powerview-inner">
+    <div class="sil-powerview-visual">
+      <div class="sil-pv-remote">
+        <div class="sil-pv-remote-dial">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="sil-pv-compat">
+        <span class="sil-pv-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e47911" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          works with Alexa
+        </span>
+        <span class="sil-pv-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          Works with Apple HomeKit
+        </span>
+        <span class="sil-pv-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4285f4" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+          works with the Google Assistant
+        </span>
+      </div>
+    </div>
+    <div class="sil-powerview-body">
+      <span class="pv-subtitle">Creá escenas y controlá todas las cortinas en la palma de tu mano</span>
+      <h2>Accionamiento Inteligente <em>PowerView®</em></h2>
+      <p>Cortina Silhouette®, disponible con motorización PowerView® — ganadora del Red Dot Design Award, uno de los premios más codiciados y prestigiosos del mundo del diseño.</p>
+      <p>Con la motorización PowerView®, podés crear escenas de luz y programar el movimiento de cortinas y persianas para cualquier día y horario, además de controlarlas de forma remota desde cualquier lugar del mundo.</p>
+      <p>Fácil, práctico e intuitivo. La automatización de cortinas más utilizada en todo el mundo.</p>
+      <a href="https://wa.me/543585075773?text=Hola,%20quiero%20info%20sobre%20la%20motorización%20PowerView%20para%20cortinas%20Silhouette" target="_blank" rel="noopener" class="sil-btn-primary">
+        Consultar motorización
+      </a>
+    </div>
+  </div>
 </section>
 
-<!-- FEATURES -->
+<!-- GARANTIA — igual que HD: banner naranja/terracota con número grande -->
+<div class="sil-garantia">
+  <div class="sil-garantia-inner" style="display:flex;align-items:center;gap:40px;justify-content:center;text-align:left;max-width:640px;margin:0 auto">
+    <div style="flex-shrink:0;text-align:center">
+      <div class="sil-garantia-num">5</div>
+      <div style="font-family:var(--font-body);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8)">años</div>
+      <div style="font-family:var(--font-display);font-size:1.1rem;color:#fff;font-weight:500">GARANTIA</div>
+    </div>
+    <p style="font-family:var(--font-body);font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.7;margin:0;text-transform:uppercase;letter-spacing:.04em">Producto Hunter Douglas diseñado para un uso confiable y duradero, con garantía de 5 años para tu tranquilidad.</p>
+  </div>
+</div>
+
+<!-- DIFERENCIALES DE LA LINEA -->
 <section class="sil-features">
   <div class="sil-features-header">
-    <span class="eyebrow">Diferenciales de la línea</span>
+    <span class="eyebrow">Diferenciales de la linea</span>
     <h2>Por qué elegir la Silhouette®</h2>
   </div>
   <div class="sil-features-grid">
@@ -775,8 +835,8 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       <div class="sil-feat-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       </div>
-      <h3>Control de iluminación</h3>
-      <p>Las láminas de tela en forma de "S" permiten ajustar la cantidad de luz natural que entra de forma suave y precisa, filtrando el deslumbramiento sin oscurecer el ambiente.</p>
+      <h3>Control de iluminación personalizado</h3>
+      <p>Las láminas de tela en forma de "S" permiten ajustar la cantidad de luz natural que entra de forma suave y precisa.</p>
     </div>
 
     <div class="sil-feat-card">
@@ -784,7 +844,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
       <h3>Bloqueo de rayos UV</h3>
-      <p>Filtra hasta el 87% de los rayos UV cuando está abierta y el 99% cuando está cerrada, protegiendo muebles, pisos y textiles de la decoloración.</p>
+      <p>Filtra hasta el 87% de los rayos UV cuando está abierto y el 99% cuando está cerrado, protegiendo muebles, pisos y papel tapiz de la decoloración.</p>
     </div>
 
     <div class="sil-feat-card">
@@ -792,7 +852,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
       </div>
       <h3>Diseño y sofisticación</h3>
-      <p>Diseño elegante con telas exclusivas disponibles en 17 colores y 7 colecciones. Su estética sofisticada complementa cualquier estilo de decoración interior.</p>
+      <p>Diseño elegante con telas exclusivas que realzan cualquier espacio.</p>
     </div>
 
     <div class="sil-feat-card">
@@ -800,7 +860,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
       </div>
       <h3>Eficiencia energética</h3>
-      <p>Proporciona aislamiento térmico que contribuye al confort y la eficiencia energética, reduciendo la necesidad de calefacción y refrigeración artificial.</p>
+      <p>Proporciona aislamiento térmico, contribuyendo al confort y la eficiencia energética.</p>
     </div>
 
     <div class="sil-feat-card">
@@ -808,15 +868,15 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
       </div>
       <h3>Casa inteligente</h3>
-      <p>Compatible con motorización PowerView®. Control desde el celular, control remoto o por comando de voz con Alexa, Google Assistant y Apple HomeKit.</p>
+      <p>Compatible con motorización PowerView®, permitiendo activación inteligente mediante control remoto, celular o comando de voz.</p>
     </div>
 
     <div class="sil-feat-card">
       <div class="sil-feat-icon">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
       </div>
-      <h3>Privacidad con vista</h3>
-      <p>Los velos traslúcidos garantizan privacidad durante el día manteniendo la conexión visual con el exterior. Podés ver afuera sin que vean adentro.</p>
+      <h3>Alcance visual</h3>
+      <p>Los velos translúcidos garantizan privacidad durante el día manteniendo la conexión con el exterior.</p>
     </div>
 
   </div>
@@ -828,7 +888,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="sil-clearview-body">
     <span class="eyebrow">Tecnología exclusiva</span>
     <h2>ClearView™: <em>Transparencia total,</em> protección inteligente</h2>
-    <p>La cortina Silhouette® con tela ClearView™ establece un nuevo estándar en diseño, ofreciendo una transparencia excepcional que realza la luz natural y enmarca las vistas al exterior. Al mismo tiempo, filtra los rayos solares y protege los interiores de los dañinos rayos UV.</p>
+    <p>La cortina Silhouette® con tela ClearView™ establece un nuevo estándar en diseño, ofreciendo transparencia y control de la luz en un solo diseño. Realza la luz natural y enmarca las vistas al exterior, al mismo tiempo que filtra los rayos solares y protege los interiores de los dañinos rayos UV.</p>
     <ul>
       <li>Transparencia excepcional hacia el exterior</li>
       <li>Filtrado inteligente de rayos UV y deslumbramiento</li>
@@ -856,43 +916,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <div class="sil-gallery-item" style="background-image:url('/img/hd/HD.Cortina-Silhouette-5-1024x677.jpg');background-position:top center"></div>
   </div>
 </section>
-
-<!-- POWERVIEW -->
-<section class="sil-powerview">
-  <div class="sil-powerview-inner">
-    <div class="sil-powerview-body">
-      <span class="eyebrow">Accionamiento inteligente</span>
-      <h2>Motorización <em>PowerView®</em></h2>
-      <p>La Cortina Silhouette® está disponible con motorización PowerView®, ganadora del Red Dot Design Award, uno de los premios más codiciados del mundo del diseño. Con PowerView® podés crear escenas de luz, programar el movimiento de las cortinas y controlarlas de forma remota desde cualquier lugar del mundo.</p>
-      <p>Fácil, práctico e intuitivo. La automatización de cortinas más utilizada en todo el mundo.</p>
-      <div class="sil-pv-compat">
-        <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/work-with-alexa.webp" alt="Works with Alexa">
-        <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/works-with-apple-homekit.webp" alt="Works with Apple HomeKit">
-        <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/works-with-the-google-assistant.webp" alt="Works with Google Assistant">
-      </div>
-      <a href="https://wa.me/543585075773?text=Hola,%20quiero%20info%20sobre%20la%20motorización%20PowerView%20para%20cortinas%20Silhouette" target="_blank" rel="noopener" class="sil-btn-primary">
-        Consultar motorización
-      </a>
-    </div>
-    <div class="sil-powerview-visual">
-      <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/Copy-of-1200754_Pebble-Remote_White_Pantone-Cool-Gray-3C.webp" alt="Control remoto PowerView Hunter Douglas" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- GARANTIA -->
-<div class="sil-garantia">
-  <div class="sil-garantia-inner">
-    <div class="sil-garantia-badge">
-      <span class="sil-garantia-num">5</span>
-      <div class="sil-garantia-label">
-        <span>años de</span>
-        <span>Garantía</span>
-      </div>
-    </div>
-    <p>Producto Hunter Douglas diseñado para un uso confiable y duradero, con garantía de 5 años para tu tranquilidad.</p>
-  </div>
-</div>
 
 <!-- SPECS -->
 <section class="sil-specs">
