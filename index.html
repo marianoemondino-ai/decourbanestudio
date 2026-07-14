@@ -127,10 +127,12 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <video class="hero-video" autoplay muted playsinline webkit-playsinline preload="auto" poster="img/hero-poster.jpg">
     <source src="img/hero-video.mp4" type="video/mp4"/>
   </video>
+  <div class="hero-logo-only" id="heroLogoOnly">
+    <img src="img/logo-du-nav.png" alt="Decourban Estudio — Interiorismo Río Cuarto" class="hero-logo-img"/>
+  </div>
   <div class="hero-phrases-wrap">
-    <p class="hero-phrase" id="hp1">Cada espacio tiene una historia por contar</p>
-    <p class="hero-phrase" id="hp2">Los materiales correctos lo transforman todo</p>
-    <p class="hero-phrase" id="hp3">Tu visión, nuestra especialidad</p>
+    <p class="hero-phrase" id="hp1">Más de dos décadas transformando interiores con elegancia</p>
+    <p class="hero-phrase" id="hp2">Interiorismo profesional, personalizado y sin intermediarios</p>
   </div>
   <div class="hero-logo-end" id="heroLogoEnd">
     <img src="img/logo-du-nav.png" alt="Decourban Estudio — Interiorismo Río Cuarto" class="hero-logo-img"/>
@@ -207,12 +209,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="container">
     <div class="about-split" style="align-items:flex-start;">
       <div class="rvl">
-        <div class="media-placeholder ph-3-4 has-img">
-          <img src="img/index-atelier.webp" alt="Muestras de telas y materiales sobre cuaderno de diseño en el atelier" loading="lazy"/>
+        <div class="historia-video-wrap">
+          <video class="historia-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+            <source src="img/historia-video.mp4" type="video/mp4"/>
+          </video>
         </div>
-        <div class="section-eyebrow" style="margin-top:32px;">El estudio</div>
-        <h2 style="margin-top:8px;">Equipamientos especiales para <em>espacios que te representen</em></h2>
-        <p>Nos dedicamos a diseñar y producir equipamientos especiales para espacios residenciales y corporativos. Ofrecemos soluciones personalizadas que transforman interiores con elegancia y funcionalidad, asegurando que cada proyecto refleje la personalidad y las necesidades de nuestros clientes.</p>
+        <div class="section-eyebrow" style="margin-top:32px;">Nuestra historia</div>
+        <h2 style="margin-top:8px;">22 años transformando espacios, <em>con elegancia y funcionalidad</em></h2>
+        <p>Nos dedicamos a diseñar y producir equipamientos especiales para espacios residenciales y corporativos. Cada proyecto refleje la personalidad y las necesidades de nuestros clientes, con un equipo propio y una mirada integral.</p>
         <div class="intro-stats" style="margin-top:24px;">
           <div><div class="stat-n">22</div><div class="stat-l">Años de experiencia</div></div>
           <div><div class="stat-n">500+</div><div class="stat-l">Proyectos realizados</div></div>
@@ -228,11 +232,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         <p style="color:var(--text-mid);margin-bottom:32px;">Colaboramos estrechamente con arquitectos y diseñadores para materializar ideas únicas. Cada etapa, con un equipo propio y una mirada integral.</p>
 
         <div style="display:flex;flex-direction:column;gap:24px;">
-          <div class="rv" style="display:flex;gap:16px;align-items:flex-start;">
-            <span style="min-width:28px;font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--accent);padding-top:3px;">01</span>
-            <div>
-              <h3 style="font-size:1rem;margin:0 0 6px;">Interiorismo personalizado</h3>
-              <p style="color:var(--text-mid);font-size:.9rem;line-height:1.7;margin:0;">Diseñamos y producimos equipamientos especiales que transforman interiores con elegancia y funcionalidad, asegurándonos de que cada espacio refleje la identidad de quien lo habita.</p>
+          <div class="rv item01-split">
+            <div class="item01-foto">
+              <img src="img/duena-portrait.webp" alt="Directora de Decourban Estudio" class="item01-img" loading="lazy"/>
+            </div>
+            <div class="item01-texto">
+              <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--accent);">01</span>
+              <h3 style="font-size:1rem;margin:6px 0;">Interiorismo personalizado</h3>
+              <p style="color:var(--text-mid);font-size:.9rem;line-height:1.7;margin:0;">Diseño con identidad, de cerca y sin intermediarios.</p>
             </div>
           </div>
           <div class="rv" style="display:flex;gap:16px;align-items:flex-start;">
@@ -430,46 +437,48 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     vid.parentNode.insertBefore(fade, vid.nextSibling);
 
     var fading = false;
-    var phrases = [document.getElementById('hp1'), document.getElementById('hp2'), document.getElementById('hp3')];
-    var logoEnd = document.getElementById('heroLogoEnd');
-    var lastZone = -1;
+    var logoOnly = document.getElementById('heroLogoOnly');
+    var phrases  = [document.getElementById('hp1'), document.getElementById('hp2')];
+    var logoEnd  = document.getElementById('heroLogoEnd');
+    var lastZone = -99;
 
     function setZone(z) {
       if (z === lastZone) return;
       lastZone = z;
+      // Zona 0: logo solo | 1-2: frases | 3: logo+boton | -1: nada
+      if (logoOnly) logoOnly.classList.toggle('hp-on', z === 0);
       phrases.forEach(function(p, i) {
-        if (p) p.classList.toggle('hp-on', i === z);
+        if (p) p.classList.toggle('hp-on', i + 1 === z);
       });
       if (logoEnd) logoEnd.classList.toggle('hp-on', z === 3);
     }
 
     vid.addEventListener('timeupdate', function() {
       if (!vid.duration || fading) return;
-      var t = vid.currentTime;
+      var t   = vid.currentTime;
       var dur = vid.duration;
       var remaining = dur - t;
-      if (remaining < 0.9 && remaining > 0) {
+      // Iniciar fade a negro 0.6s antes del final (más largo = logo tiene más tiempo)
+      if (remaining < 0.6 && remaining > 0) {
         fading = true;
         fade.style.opacity = '1';
         setZone(-1);
-      } else {
-        // Dividir el video en zonas: 3 frases + logo
-        // Ajuste automático según duración real del video
-        var z3 = dur * 0.85; // logo aparece al 85%
-        var chunk = z3 / 3;
-        var z;
-        if (t < chunk)         z = 0;
-        else if (t < chunk*2)  z = 1;
-        else if (t < z3)       z = 2;
-        else                   z = 3;
-        setZone(z);
+        return;
       }
+      // Zonas: 0-20% logo solo / 20-50% frase1 / 50-78% frase2 / 78-100% logo+botón
+      var pct = t / dur;
+      var z;
+      if      (pct < 0.20) z = 0;   // logo solo
+      else if (pct < 0.50) z = 1;   // frase 1
+      else if (pct < 0.78) z = 2;   // frase 2
+      else                 z = 3;   // logo + botón (22% = ~2.2s en 10s)
+      setZone(z);
     });
 
     vid.addEventListener('ended', function() {
       vid.currentTime = 0;
       vid.play();
-      lastZone = -1;
+      lastZone = -99;
       setTimeout(function() {
         fade.style.opacity = '0';
         setTimeout(function() { fading = false; }, 600);

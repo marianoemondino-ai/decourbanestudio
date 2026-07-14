@@ -655,7 +655,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.7s ease, transform 0.7s ease;
-  text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+  text-shadow: 0 0 60px rgba(0,0,0,0.95), 0 0 20px rgba(0,0,0,0.9), 0 2px 6px rgba(0,0,0,0.85);
   pointer-events: none;
 }
 .hero-phrase.hp-on {
@@ -841,7 +841,7 @@ fieldset.fl { border: 0; padding: 0; }
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.7s ease, transform 0.7s ease;
-  text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+  text-shadow: 0 0 60px rgba(0,0,0,0.95), 0 0 20px rgba(0,0,0,0.9), 0 2px 6px rgba(0,0,0,0.85);
   pointer-events: none;
 }
 .hero-phrase.hp-on {
@@ -1275,4 +1275,68 @@ fieldset.fl { border: 0; padding: 0; }
     grid-template-columns: 1fr;
     gap: 28px;
   }
+}
+
+/* ── Historia video (columna izquierda) ──────────────── */
+.historia-video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #111;
+}
+.historia-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Ítem 01: foto + texto ───────────────────────────── */
+.item01-split {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.item01-foto {
+  flex: 0 0 90px;
+}
+.item01-img {
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 2px;
+  filter: grayscale(15%);
+  display: block;
+}
+.item01-texto {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .historia-video-wrap { aspect-ratio: 4 / 3; }
+  .item01-foto { flex: 0 0 72px; }
+  .item01-img  { width: 72px; height: 96px; }
+}
+
+/* ── Hero: logo solo (zona inicial) ─────────────────── */
+.hero-logo-only {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+}
+.hero-logo-only.hp-on {
+  opacity: 1;
+}
+.hero-logo-only .hero-logo-img {
+  width: min(480px, 72vw);
+  filter: drop-shadow(0 4px 32px rgba(0,0,0,0.5));
 }
