@@ -128,10 +128,11 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 /* ---- TECH SECTION (split) ---- */
 .sil-clearview {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   min-height: 480px;
 }
 .sil-clearview-img {
+  display: none;
   background: #222 url('/img/hd/SandyCairncross_ExperienciaLiving2026_Foto@ritvu_CountryWoods_Duette_02.webp') right center/cover no-repeat;
 }
 .sil-clearview-body {
@@ -435,7 +436,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 }
 .sil-specs-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 40px;
   align-items: start;
 }
@@ -588,7 +589,8 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
   .sil-clearview { grid-template-columns: 1fr; }
-  .sil-clearview-img { aspect-ratio: 16/9; min-height: 260px; }
+  .sil-clearview-img {
+  display: none; aspect-ratio: 16/9; min-height: 260px; }
   .sil-powerview-inner { grid-template-columns: 1fr; gap: 36px; }
   .sil-powerview-visual { order: -1; }
   .sil-gallery-grid {
@@ -813,7 +815,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       <br>
       <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20las%20Cortinas%20Duette%20Hunter%20Douglas" target="_blank" rel="noopener" class="sil-btn-primary" style="margin-top:12px">Pedir presupuesto</a>
     </div>
-        <div class="sil-specs-img"></div>
   </div>
 </section>
 
