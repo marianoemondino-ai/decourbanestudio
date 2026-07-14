@@ -1572,6 +1572,7 @@ const HD_PRODUCTS = {
 
   document.querySelectorAll('.cat-card[data-product]').forEach(card => {
     card.addEventListener('click', e => {
+      if (card.tagName === 'A') return; // tiene href propio, no abrir modal
       if (e.target.closest('.cat-card-cta')) return;
       openModal(card.dataset.product);
     });
@@ -1580,3 +1581,4 @@ const HD_PRODUCTS = {
 </script>
 </body>
 </html>
+                                                                                   
