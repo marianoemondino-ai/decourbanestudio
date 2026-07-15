@@ -90,7 +90,9 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   margin: 0 0 28px;
   font-weight: 300;
   line-height: 1.55;
+  text-shadow: 0 1px 3px rgba(0,0,0,.7), 0 2px 8px rgba(0,0,0,.4);
 }
+
 .sil-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 .sil-btn-primary {
   display: inline-flex;
@@ -1062,68 +1064,4 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       <div class="footer-col">
         <h4>Contacto</h4>
         <a href="tel:+543585075773">+54 358 507-5773</a>
-        <a href="tel:+543585078803">+54 358 507-8803</a>
-        <a href="mailto:contacto@decourbanestudio.com.ar">contacto@decourbanestudio.com.ar</a>
-        <span style="font-size:.8rem;color:var(--text-light);margin-top:8px;display:block">Juan de Garay 1550, Río Cuarto</span>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Decourban Estudio. Distribuidores oficiales Hunter Douglas.</p>
-    </div>
-  </div>
-</footer>
-
-<script>
-var nav = document.getElementById('siteNav');
-window.addEventListener('scroll', function() {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
-}, {passive: true});
-var menuBtn = document.getElementById('menuBtn');
-var navMobile = document.getElementById('navMobile');
-menuBtn.addEventListener('click', function() {
-  var open = navMobile.classList.toggle('open');
-  menuBtn.setAttribute('aria-expanded', open);
-});
-var catBtn = document.getElementById('catBtn');
-var catMenu = document.getElementById('catMenu');
-catBtn.addEventListener('click', function() {
-  var open = catMenu.classList.toggle('open');
-  catBtn.setAttribute('aria-expanded', open);
-});
-document.addEventListener('click', function(e) {
-  if (!catBtn.contains(e.target) && !catMenu.contains(e.target)) {
-    catMenu.classList.remove('open');
-    catBtn.setAttribute('aria-expanded', 'false');
-  }
-});
-</script>
-
-
-<!-- Lightbox -->
-<div id="hd-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;" onclick="this.style.display='none';document.body.style.overflow=''">
-  <img id="hd-lb-img" src="" alt="" style="max-width:92vw;max-height:90vh;object-fit:contain;border-radius:2px;box-shadow:0 8px 48px rgba(0,0,0,.6);pointer-events:none;">
-  <button onclick="document.getElementById('hd-lightbox').style.display='none';document.body.style.overflow=''" style="position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;opacity:.8;">&#x2715;</button>
-</div>
-<script>
-(function(){
-  function openLb(url){
-    var lb=document.getElementById('hd-lightbox');
-    document.getElementById('hd-lb-img').src=url;
-    lb.style.display='flex';
-    document.body.style.overflow='hidden';
-  }
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'){var lb=document.getElementById('hd-lightbox');lb.style.display='none';document.body.style.overflow='';}});
-  document.addEventListener('DOMContentLoaded',function(){
-    document.querySelectorAll('.sil-gallery-item').forEach(function(el){
-      el.style.cursor='zoom-in';
-      el.addEventListener('click',function(){
-        var bg=el.style.backgroundImage||getComputedStyle(el).backgroundImage;
-        var m=bg.match(/url\(["']?([^"')]+)["']?\)/);
-        if(m)openLb(m[1]);
-      });
-    });
-  });
-})();
-</script>
-</body>
-</html>
+        <a href="tel:+543585078803">+54 358 507-8803</a
