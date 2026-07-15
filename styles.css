@@ -1062,11 +1062,15 @@ fieldset.fl { border: 0; padding: 0; }
   letter-spacing: .03em;
   line-height: 1.08;
   margin: 0 0 40px;
+  -webkit-text-stroke: 1.5px #000;
+  paint-order: stroke fill;
   text-shadow: 0 2px 24px rgba(0,0,0,.5);
 }
 .hero-simple-phrase em {
   font-style: italic;
   color: var(--accent);
+  -webkit-text-stroke: 1.5px #000;
+  paint-order: stroke fill;
   text-shadow: 0 0 40px rgba(244,133,52,.65), 0 2px 20px rgba(0,0,0,.5);
 }
 @media (max-width: 480px) {
