@@ -123,10 +123,11 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 .sil-btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
 .sil-clearview {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   min-height: 480px;
 }
 .sil-clearview-img {
+  display: none;
   background: #222 url('/img/hd/toldo-proyectante-hunter-douglasjpg-optimized.webp') center/cover no-repeat;
 }
 .sil-clearview-body {
@@ -642,7 +643,8 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 }
 @media (max-width: 768px) {
   .sil-clearview { grid-template-columns: 1fr; }
-  .sil-clearview-img { aspect-ratio: 16/9; min-height: 260px; }
+  .sil-clearview-img {
+  display: none; aspect-ratio: 16/9; min-height: 260px; }
   .sil-powerview-inner { grid-template-columns: 1fr; gap: 36px; }
   .sil-powerview-visual { order: -1; }
   .sil-decourban-service-inner { grid-template-columns: 1fr; gap: 36px; }

@@ -128,10 +128,11 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 /* ---- TECH SECTION (split) ---- */
 .sil-clearview {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   min-height: 480px;
 }
 .sil-clearview-img {
+  display: none;
   background: #222 url('/img/hd/ettes-cortinas-pirouette-hunter-douglas-optimized.webp') center/cover no-repeat;
 }
 .sil-clearview-body {
@@ -412,7 +413,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   gap: 8px;
 }
 .sil-gallery-item {
-  background: #e8e4df center/cover no-repeat;
+  background: #e8e4df center/contain no-repeat;
   overflow: hidden;
   cursor: pointer;
   position: relative;
@@ -588,7 +589,8 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
   .sil-clearview { grid-template-columns: 1fr; }
-  .sil-clearview-img { aspect-ratio: 16/9; min-height: 260px; }
+  .sil-clearview-img {
+  display: none; aspect-ratio: 16/9; min-height: 260px; }
   .sil-powerview-inner { grid-template-columns: 1fr; gap: 36px; }
   .sil-powerview-visual { order: -1; }
   .sil-gallery-grid {
