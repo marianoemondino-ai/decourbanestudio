@@ -986,5 +986,32 @@ document.addEventListener('click', function(e) {
 });
 </script>
 
+
+<!-- Lightbox -->
+<div id="hd-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;" onclick="this.style.display='none';document.body.style.overflow=''">
+  <img id="hd-lb-img" src="" alt="" style="max-width:92vw;max-height:90vh;object-fit:contain;border-radius:2px;box-shadow:0 8px 48px rgba(0,0,0,.6);pointer-events:none;">
+  <button onclick="document.getElementById('hd-lightbox').style.display='none';document.body.style.overflow=''" style="position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;opacity:.8;">&#x2715;</button>
+</div>
+<script>
+(function(){
+  function openLb(url){
+    var lb=document.getElementById('hd-lightbox');
+    document.getElementById('hd-lb-img').src=url;
+    lb.style.display='flex';
+    document.body.style.overflow='hidden';
+  }
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){var lb=document.getElementById('hd-lightbox');lb.style.display='none';document.body.style.overflow='';}});
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.sil-gallery-item').forEach(function(el){
+      el.style.cursor='zoom-in';
+      el.addEventListener('click',function(){
+        var bg=el.style.backgroundImage||getComputedStyle(el).backgroundImage;
+        var m=bg.match(/url\(["']?([^"')]+)["']?\)/);
+        if(m)openLb(m[1]);
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>
