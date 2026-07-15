@@ -698,7 +698,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   pointer-events: none;
 }
 .sil-showcase-info {
-  background: #faf8f5;
+  background: #fff;
   padding: clamp(40px,6vw,80px) clamp(32px,5vw,64px);
   display: flex;
   flex-direction: column;
@@ -784,6 +784,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   }
   .sil-sc-zoom { display: none; }
 }
+
+/* Gallery section title */
+.sil-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem,3vw,2.2rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 32px;
+}
+/* Clearview full-width */
+.sil-clearview { min-height: auto; padding: clamp(48px,7vw,88px) clamp(24px,8vw,120px); }
 </style>
 </head>
 <body>
@@ -842,6 +854,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
 </div>
 
+<nav class="sil-breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Inicio</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <a href="hunterdouglas.html">Hunter Douglas</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <span>Cortinas Tradicionales</span>
+</nav>
+
 <!-- PRODUCT SHOWCASE -->
 <section class="sil-showcase">
   <div class="sil-showcase-media" style="background:#1a1612 url('/img/hd/HUNTER-DOUGLAS-EXPERIENCIA-LIVING-by-RITVU-185.webp') center/cover no-repeat;" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='/img/hd/HUNTER-DOUGLAS-EXPERIENCIA-LIVING-by-RITVU-185.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()">
@@ -879,14 +899,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <h2>Diseño atemporal: <em>Calidez textil en cada espacio</em></h2>
     <p>Las cortinas tradicionales Hunter Douglas ofrecen la atemporalidad y calidez de los textiles de alta gama, combinados con mecanismos de precisión que garantizan un funcionamiento suave y duradero.</p>
     <p>Disponibles en una amplia selección de telas —desde translúcidas hasta blackout—, con múltiples sistemas de fruncido y plisado para adaptarse a cualquier estilo de interior.</p>
-    <ul>
-      <li>Telas translúcidas, semiopacas y blackout</li>
-      <li>Plisado tradicional, pinch pleat y ripple fold</li>
-      <li>Rieles de aluminio con sistema de silenciamiento</li>
-      <li>Compatible con motorización para automatización total</li>
-      <li>Amplia paleta de colores y texturas</li>
-    </ul>
-    <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20las%20Cortinas%20Tradicionales%20Hunter%20Douglas" target="_blank" rel="noopener" class="sil-btn-primary">Consultar disponibilidad</a>
   </div>
 </section>
 

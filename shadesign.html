@@ -698,7 +698,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   pointer-events: none;
 }
 .sil-showcase-info {
-  background: #faf8f5;
+  background: #fff;
   padding: clamp(40px,6vw,80px) clamp(32px,5vw,64px);
   display: flex;
   flex-direction: column;
@@ -784,6 +784,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   }
   .sil-sc-zoom { display: none; }
 }
+
+/* Gallery section title */
+.sil-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem,3vw,2.2rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 32px;
+}
+/* Clearview full-width */
+.sil-clearview { min-height: auto; padding: clamp(48px,7vw,88px) clamp(24px,8vw,120px); }
 </style>
 </head>
 <body>
@@ -842,6 +854,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
 </div>
 
+<nav class="sil-breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Inicio</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <a href="hunterdouglas.html">Hunter Douglas</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <span>Roller Shadesign</span>
+</nav>
+
 <!-- PRODUCT SHOWCASE -->
 <section class="sil-showcase">
   <div class="sil-showcase-media" style="background:#1a1612 url('/img/hd/cortinas-roller-shadesign-living-clasico-hunterdouglas.17bb53-optimized.webp') center/cover no-repeat;" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='/img/hd/cortinas-roller-shadesign-living-clasico-hunterdouglas.17bb53-optimized.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()">
@@ -879,14 +899,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <h2>Shadesign: <em>Tu diseño en una cortina roller</em></h2>
     <p>La Roller Shadesign Hunter Douglas es una cortina roller con impresión digital de alta resolución directamente sobre la tela, que convierte cada cortina en una pieza artística única para el espacio.</p>
     <p>Con el mecanismo Quantum® de Hunter Douglas —el más silencioso y preciso del mercado— combinás diseño exclusivo con la funcionalidad de una roller de primera calidad. Ideal para dormitorios infantiles, estudios y espacios donde el diseño es protagonista.</p>
-    <ul>
-      <li>Impresión digital de alta resolución sobre tela</li>
-      <li>Diseños exclusivos o personalización por encargo</li>
-      <li>Mecanismo Quantum® silencioso y preciso</li>
-      <li>Disponible en tela screen, translúcida y blackout</li>
-      <li>Compatible con motorización para automatización</li>
-    </ul>
-    <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20las%20Cortinas%20Roller%20Shadesign%20Hunter%20Douglas" target="_blank" rel="noopener" class="sil-btn-primary">Consultar disponibilidad</a>
   </div>
 </section>
 

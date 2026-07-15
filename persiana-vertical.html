@@ -698,7 +698,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   pointer-events: none;
 }
 .sil-showcase-info {
-  background: #faf8f5;
+  background: #fff;
   padding: clamp(40px,6vw,80px) clamp(32px,5vw,64px);
   display: flex;
   flex-direction: column;
@@ -784,6 +784,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   }
   .sil-sc-zoom { display: none; }
 }
+
+/* Gallery section title */
+.sil-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem,3vw,2.2rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 32px;
+}
+/* Clearview full-width */
+.sil-clearview { min-height: auto; padding: clamp(48px,7vw,88px) clamp(24px,8vw,120px); }
 </style>
 </head>
 <body>
@@ -842,6 +854,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
 </div>
 
+<nav class="sil-breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Inicio</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <a href="hunterdouglas.html">Hunter Douglas</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <span>Persiana Vertical</span>
+</nav>
+
 <!-- PRODUCT SHOWCASE -->
 <section class="sil-showcase">
   <div class="sil-showcase-media" style="background:#1a1612 url('/img/hd/cortinas-verticales-para-living-hunterdouglasjpg-optimized.webp') center/cover no-repeat;" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='/img/hd/cortinas-verticales-para-living-hunterdouglasjpg-optimized.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()">
@@ -879,14 +899,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <h2>Persiana Vertical: <em>La solución clásica para grandes espacios</em></h2>
     <p>Las persianas verticales Hunter Douglas combinan la funcionalidad probada de las lamas verticales con materiales de alta calidad —PVC, tela o aluminio— para ofrecer un control preciso de la luz en cualquier ambiente.</p>
     <p>Su apertura lateral y el giro de 180° de las lamas las hacen especialmente aptas para ventanales de grandes dimensiones, puertas balcón y ambientes de uso intensivo como oficinas y espacios comerciales.</p>
-    <ul>
-      <li>Lamas de PVC, tela o aluminio</li>
-      <li>Giro de 180° para control total de luz</li>
-      <li>Apertura lateral o desde el centro</li>
-      <li>Ideal para grandes ventanales y oficinas</li>
-      <li>Bajo mantenimiento y alta durabilidad</li>
-    </ul>
-    <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20las%20Persianas%20Verticales%20Hunter%20Douglas" target="_blank" rel="noopener" class="sil-btn-primary">Consultar disponibilidad</a>
   </div>
 </section>
 

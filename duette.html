@@ -641,7 +641,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   pointer-events: none;
 }
 .sil-showcase-info {
-  background: #faf8f5;
+  background: #fff;
   padding: clamp(40px,6vw,80px) clamp(32px,5vw,64px);
   display: flex;
   flex-direction: column;
@@ -727,6 +727,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   }
   .sil-sc-zoom { display: none; }
 }
+
+/* Gallery section title */
+.sil-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem,3vw,2.2rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 32px;
+}
+/* Clearview full-width */
+.sil-clearview { min-height: auto; padding: clamp(48px,7vw,88px) clamp(24px,8vw,120px); }
 </style>
 </head>
 <body>
@@ -788,6 +800,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
 </div>
 
+<nav class="sil-breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Inicio</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <a href="hunterdouglas.html">Hunter Douglas</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <span>Cortina Duette®</span>
+</nav>
+
 <!-- PRODUCT SHOWCASE -->
 <section class="sil-showcase">
   <div class="sil-showcase-media" style="background:#1a1612 url('/img/hd/SandyCairncross_ExperienciaLiving2026_Foto@ritvu_CountryWoods_Duette_02.webp') center/cover no-repeat;" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='/img/hd/SandyCairncross_ExperienciaLiving2026_Foto@ritvu_CountryWoods_Duette_02.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()">
@@ -825,14 +845,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <h2>Honeycomb: <em>Aislación total, confort inteligente</em></h2>
     <p>La cortina Duette® incorpora una estructura de celdas en forma de nido de abeja que atrapa el aire, creando una barrera térmica y acústica entre el interior y el exterior. Es la persiana de mayor eficiencia energética del mercado, capaz de reducir hasta un 40% la pérdida de calor a través de las ventanas.</p>
     <p>Disponible en versión de celda simple para climas templados y en Duolite® de doble celda para el máximo aislamiento en climas extremos. El sistema puede combinarse con telas translúcidas y blackout en una misma persiana.</p>
-    <ul>
-      <li>Estructura de celdas Honeycomb para máxima aislación térmica</li>
-      <li>Reduce hasta el 40% la pérdida de calor por las ventanas</li>
-      <li>Aislación acústica que reduce el ruido exterior</li>
-      <li>Disponible en celda simple y doble (Duolite®)</li>
-      <li>Tecnología LiteRise® sin cordones expuestos</li>
-    </ul>
-    <a href="https://wa.me/543585075773?text=Hola,%20me%20interesa%20la%20Cortina%20Duette%20Hunter%20Douglas" target="_blank" rel="noopener" class="sil-btn-primary">Consultar disponibilidad</a>
   </div>
 </section>
 

@@ -641,7 +641,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   pointer-events: none;
 }
 .sil-showcase-info {
-  background: #faf8f5;
+  background: #fff;
   padding: clamp(40px,6vw,80px) clamp(32px,5vw,64px);
   display: flex;
   flex-direction: column;
@@ -727,6 +727,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   }
   .sil-sc-zoom { display: none; }
 }
+
+/* Gallery section title */
+.sil-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem,3vw,2.2rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 32px;
+}
+/* Clearview full-width */
+.sil-clearview { min-height: auto; padding: clamp(48px,7vw,88px) clamp(24px,8vw,120px); }
 </style>
 </head>
 <body>
@@ -788,6 +800,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
 </div>
 
+<nav class="sil-breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Inicio</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <a href="hunterdouglas.html">Hunter Douglas</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <span>Cortinas Roller</span>
+</nav>
+
 <!-- PRODUCT SHOWCASE -->
 <section class="sil-showcase">
   <div class="sil-showcase-media" style="background:#1a1612 url('/img/hd/cortinas-roller-superior-living-hunterdouglasjpg-optimized.webp') center/cover no-repeat;" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='/img/hd/cortinas-roller-superior-living-hunterdouglasjpg-optimized.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()">
@@ -825,14 +845,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <h2>Quantum®: <em>Suavidad y precisión en cada movimiento</em></h2>
     <p>La Cortina Roller Quantum® de Hunter Douglas incorpora el mecanismo de enrollamiento más suave y silencioso del mercado. A diferencia de las rollers estándar, el sistema Quantum® mantiene una tensión perfecta en todo momento, sin que la tela se deforme ni pierda su alineación original.</p>
     <p>Disponible en telas screen para filtrar los rayos UV manteniendo la visión hacia el exterior, y en telas blackout para un oscurecimiento total. La variedad de colores, tramas y opacidades permite personalizar cada espacio con precisión.</p>
-    <ul>
-      <li>Mecanismo Quantum® de alta precisión y accionamiento suave</li>
-      <li>Telas screen (filtrado solar) y blackout (oscurecimiento total)</li>
-      <li>Amplia variedad de colores, texturas y opacidades</li>
-      <li>Resistente a la deformación y pérdida de tensión</li>
-      <li>Compatible con motorización PowerView®</li>
-    </ul>
-    <a href="https://wa.me/543585075773?text=Hola,%20me%20interesa%20la%20Cortina%20Roller%20Quantum%20Hunter%20Douglas" target="_blank" rel="noopener" class="sil-btn-primary">Consultar disponibilidad</a>
   </div>
 </section>
 

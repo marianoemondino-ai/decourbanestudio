@@ -641,7 +641,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   pointer-events: none;
 }
 .sil-showcase-info {
-  background: #faf8f5;
+  background: #fff;
   padding: clamp(40px,6vw,80px) clamp(32px,5vw,64px);
   display: flex;
   flex-direction: column;
@@ -727,6 +727,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   }
   .sil-sc-zoom { display: none; }
 }
+
+/* Gallery section title */
+.sil-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem,3vw,2.2rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 32px;
+}
+/* Clearview full-width */
+.sil-clearview { min-height: auto; padding: clamp(48px,7vw,88px) clamp(24px,8vw,120px); }
 </style>
 </head>
 <body>
@@ -788,6 +800,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
 </div>
 
+<nav class="sil-breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Inicio</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <a href="hunterdouglas.html">Hunter Douglas</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <span>Cortina Luminette®</span>
+</nav>
+
 <!-- PRODUCT SHOWCASE -->
 <section class="sil-showcase">
   <div class="sil-showcase-media" style="background:#1a1612 url('/img/hd/cortinas-luminette-para-hall.8b48cd-optimized.webp') center/cover no-repeat;" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='/img/hd/cortinas-luminette-para-hall.8b48cd-optimized.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()">
@@ -825,14 +845,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <h2>Luminette®: <em>Privacidad y luz en perfecta armonía</em></h2>
     <p>La cortina Luminette® combina la elegancia visual de un cortinado con el control preciso de la luz que caracteriza a Hunter Douglas. Sus velos verticales de tela suave rotan de 0° a 180°, permitiendo tamizar la luz natural, lograr privacidad total o abrirse completamente para una vista despejada del exterior.</p>
     <p>Especialmente diseñada para ventanales de gran altura y puertas corredizas, la Luminette® es la solución perfecta cuando se necesita cubrir grandes superficies con estilo y funcionalidad.</p>
-    <ul>
-      <li>Velos verticales que rotan de 0° a 180°</li>
-      <li>Ideal para ventanales y puertas de gran dimensión</li>
-      <li>Privacidad total sin perder luminosidad natural</li>
-      <li>Apertura hacia un lado o al centro (stack)</li>
-      <li>Tela suave de alta durabilidad y fácil limpieza</li>
-    </ul>
-    <a href="https://wa.me/543585075773?text=Hola,%20me%20interesa%20la%20Cortina%20Luminette%20Hunter%20Douglas" target="_blank" rel="noopener" class="sil-btn-primary">Consultar disponibilidad</a>
   </div>
 </section>
 

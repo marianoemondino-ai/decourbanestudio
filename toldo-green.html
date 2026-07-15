@@ -698,7 +698,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   pointer-events: none;
 }
 .sil-showcase-info {
-  background: #faf8f5;
+  background: #fff;
   padding: clamp(40px,6vw,80px) clamp(32px,5vw,64px);
   display: flex;
   flex-direction: column;
@@ -784,6 +784,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   }
   .sil-sc-zoom { display: none; }
 }
+
+/* Gallery section title */
+.sil-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem,3vw,2.2rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 32px;
+}
+/* Clearview full-width */
+.sil-clearview { min-height: auto; padding: clamp(48px,7vw,88px) clamp(24px,8vw,120px); }
 </style>
 </head>
 <body>
@@ -842,6 +854,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
 </div>
 
+<nav class="sil-breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Inicio</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <a href="hunterdouglas.html">Hunter Douglas</a>
+  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4-4 4"/></svg>
+  <span>Toldo Green</span>
+</nav>
+
 <!-- PRODUCT SHOWCASE -->
 <section class="sil-showcase">
   <div class="sil-showcase-media" style="background:#f0ece6 url('/img/hd/etapa-3-toldo-green-hunter-douglas-1.jpg') center/contain no-repeat;" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='/img/hd/etapa-3-toldo-green-hunter-douglas-1.jpg';lb.style.display='flex';document.body.style.overflow='hidden';})()">
@@ -879,14 +899,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <h2>Toldo Green: <em>Innovación en eficiencia energética</em></h2>
     <p>El Toldo Green Hunter Douglas es un sistema innovador de protección solar exterior que incorpora telas técnicas de alta reflexión solar para reducir significativamente la ganancia de calor a través de ventanas y fachadas, disminuyendo la carga sobre el aire acondicionado.</p>
     <p>A diferencia de los toldos convencionales, el sistema Green está diseñado con criterios de eficiencia energética certificada, contribuyendo a la certificación LEED y otros sistemas de construcción sustentable.</p>
-    <ul>
-      <li>Telas técnicas de alta reflexión solar</li>
-      <li>Reducción de hasta 80% de ganancia de calor</li>
-      <li>Contribuye a certificaciones de construcción sustentable</li>
-      <li>Guías laterales para máxima hermeticidad</li>
-      <li>Motorización con sensor solar y de viento</li>
-    </ul>
-    <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20el%20Toldo%20Green%20Hunter%20Douglas" target="_blank" rel="noopener" class="sil-btn-primary">Consultar disponibilidad</a>
   </div>
 </section>
 
