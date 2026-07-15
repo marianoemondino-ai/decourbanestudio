@@ -1062,11 +1062,14 @@ fieldset.fl { border: 0; padding: 0; }
   letter-spacing: .03em;
   line-height: 1.08;
   margin: 0 0 40px;
-  text-shadow: 0 2px 28px rgba(0,0,0,.28);
+  -webkit-text-stroke: 1.5px var(--accent);
+  paint-order: stroke fill;
+  text-shadow: 0 2px 32px rgba(0,0,0,.38);
 }
 .hero-simple-phrase em {
   font-style: italic;
   color: #fff;
+  -webkit-text-stroke: 1.5px var(--accent);
 }
 @media (max-width: 480px) {
   .hero-simple-phrase { font-size: clamp(2.4rem, 11vw, 3.6rem); margin-bottom: 28px; }
