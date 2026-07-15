@@ -466,9 +466,13 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 }
 .sil-gallery-grid {
   display: grid;
-  grid-template-columns: 1fr ;
-  grid-template-rows: 380px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 280px;
   gap: 8px;
+}
+.sil-gallery-grid .sil-gallery-item:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 .sil-gallery-item {
   background: #e8e4df center/cover no-repeat;
@@ -650,8 +654,8 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   .sil-decourban-service-inner { grid-template-columns: 1fr; gap: 36px; }
   .sil-service-icons { order: -1; }
   .sil-gallery-grid {
-    grid-template-columns: 1fr !important;
-    grid-template-rows: auto !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: 180px !important;
   }
   .sil-gallery-item { height: 220px; }
   .sil-specs-grid { grid-template-columns: 1fr; }
@@ -952,8 +956,13 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 
 <section class="sil-gallery">
 <h2 class="sil-section-title">Galería</h2>
-<div class="sil-gallery-grid" style="display:grid;grid-template-columns:repeat(1,1fr);grid-template-rows:420px;gap:8px;">
-  <div class="sil-gallery-item" style="background-image:url('/img/hd/cortinas-roller-shadesign-infantilesjpg-optimized.webp');background-size:cover;background-position:center;background-repeat:no-repeat;"></div>
+<div class="sil-gallery-grid">
+  <div class="sil-gallery-item" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/12/cortinas-roller-shadesign-living-hunterdouglas.17fbf9-optimized.webp');background-position:center" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='https://www.hunterdouglas.com.ar/wp-content/uploads/2025/12/cortinas-roller-shadesign-living-hunterdouglas.17fbf9-optimized.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()"></div>
+  <div class="sil-gallery-item" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/cortinas-roller-shadesign-dormitorio-infantil-nena-hunterdouglas.8d3ef3-optimized.webp');background-position:center" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/cortinas-roller-shadesign-dormitorio-infantil-nena-hunterdouglas.8d3ef3-optimized.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()"></div>
+  <div class="sil-gallery-item" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/cortinas-roller-shadesign-dormitorio-infantil-varon-hunterdouglas.a80c5f-optimized.webp');background-position:center" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/cortinas-roller-shadesign-dormitorio-infantil-varon-hunterdouglas.a80c5f-optimized.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()"></div>
+  <div class="sil-gallery-item" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/cortinas-roller-shadesign-comedor-hunterdouglas.9e0500-optimized.webp');background-position:center" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/cortinas-roller-shadesign-comedor-hunterdouglas.9e0500-optimized.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()"></div>
+  <div class="sil-gallery-item" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/cortinas-roller-shadesign-desayunador-hunterdouglas.0c5052-optimized.webp');background-position:center" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/cortinas-roller-shadesign-desayunador-hunterdouglas.0c5052-optimized.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()"></div>
+  <div class="sil-gallery-item" style="background-image:url('https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/cortinas-roller-shadesign-escritorio-con-lampara-hunterdouglas.25836b-optimized.webp');background-position:center" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='https://www.hunterdouglas.com.ar/wp-content/uploads/2025/11/cortinas-roller-shadesign-escritorio-con-lampara-hunterdouglas.25836b-optimized.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()"></div>
 </div>
 </section>
 
