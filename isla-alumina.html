@@ -658,6 +658,132 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   .sil-specs-img { display: none; }
   .sil-hero { height: 75vw; min-height: 320px; }
 }
+
+/* ---- PRODUCT SHOWCASE ---- */
+.sil-showcase {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  min-height: 92vh;
+  max-height: 100vh;
+}
+.sil-showcase-media {
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.sil-showcase-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0,0,0,.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+.sil-sc-zoom {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255,255,255,.18);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.3);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+.sil-showcase-info {
+  background: #faf8f5;
+  padding: clamp(40px,6vw,80px) clamp(32px,5vw,64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+.sil-showcase-info .sil-hero-badge {
+  background: #f0ece6;
+  border: 1px solid #e0d8d0;
+  color: #7a6a5a;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+.sil-showcase-info h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem,3.5vw,3rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+.sil-showcase-info h1 em { font-style: italic; color: var(--accent); }
+.sil-showcase-tagline {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.72;
+  margin: 0 0 28px;
+}
+.sil-showcase-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #e8e4df;
+  padding-top: 24px;
+}
+.sil-showcase-bullets li {
+  font-family: var(--font-body);
+  font-size: .88rem;
+  color: #5a4e45;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.5;
+}
+.sil-showcase-bullets li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-top: 5px;
+}
+.sil-showcase-info .sil-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+.sil-showcase-info .sil-btn-ghost {
+  color: var(--text-dark);
+  border-color: rgba(0,0,0,.28);
+}
+.sil-showcase-info .sil-btn-ghost:hover {
+  border-color: var(--text-dark);
+  background: rgba(0,0,0,.04);
+  color: var(--text-dark);
+}
+.sil-showcase-divider {
+  width: 48px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0 0 24px;
+}
+@media (max-width: 820px) {
+  .sil-showcase {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    max-height: none;
+  }
+  .sil-showcase-media {
+    min-height: 56vw;
+    max-height: 420px;
+  }
+  .sil-sc-zoom { display: none; }
+}
 </style>
 </head>
 <body>
@@ -716,15 +842,28 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
 </div>
 
-<!-- HERO -->
-<section class="sil-hero">
-  <div class="sil-hero-content">
+<!-- PRODUCT SHOWCASE -->
+<section class="sil-showcase">
+  <div class="sil-showcase-media" style="background:#1a1612 url('/img/hd/pergolas-autoportantepng-optimized.webp') center/cover no-repeat;" onclick="(function(){var lb=document.getElementById('hd-lightbox');document.getElementById('hd-lb-img').src='/img/hd/pergolas-autoportantepng-optimized.webp';lb.style.display='flex';document.body.style.overflow='hidden';})()">
+    <div class="sil-sc-zoom">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+      Ampliar
+    </div>
+  </div>
+  <div class="sil-showcase-info">
     <div class="sil-hero-badge">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="white" stroke-opacity=".7" stroke-width="1.2"/><circle cx="6" cy="6" r="2" fill="white" fill-opacity=".6"/></svg>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-opacity=".7" stroke-width="1.2"/><circle cx="6" cy="6" r="2" fill="currentColor" fill-opacity=".6"/></svg>
       PÉRGOLAS
     </div>
     <h1>Isla <em>Alumina</em></h1>
-    <p class="sil-hero-tagline">Lamas de aluminio orientables que regulan la entrada de luz y ventilación para crear el ambiente perfecto en el exterior.</p>
+    <div class="sil-showcase-divider"></div>
+    <p class="sil-showcase-tagline">Lamas de aluminio orientables que regulan la entrada de luz y ventilación para crear el ambiente perfecto en el exterior.</p>
+    <ul class="sil-showcase-bullets">
+      <li>Lamas de aluminio orientables de 0° a 135°</li>
+      <li>Protección completa de lluvia en posición cerrada</li>
+      <li>Máxima ventilación en posición abierta</li>
+      <li>Estructura de aluminio lacado o anodizado</li>
+    </ul>
     <div class="sil-hero-ctas">
       <a href="https://wa.me/543585075773?text=Hola,%20quiero%20consultar%20sobre%20la%20P%C3%A9rgola%20Isla%20Alumina%20Hunter%20Douglas" target="_blank" rel="noopener" class="sil-btn-primary">Consultar por WhatsApp</a>
       <a href="contacto.html" class="sil-btn-ghost">Solicitar asesoramiento</a>
