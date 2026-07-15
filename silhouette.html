@@ -269,10 +269,11 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 /* ---- CLEARVIEW SECTION ---- */
 .sil-clearview {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   min-height: 480px;
 }
 .sil-clearview-img {
+  display: none;
   background: #222 url('/img/hd/cortina-silhouette-11.jpg') center/cover no-repeat;
 }
 .sil-clearview-body {
@@ -680,7 +681,8 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
   .sil-clearview { grid-template-columns: 1fr; }
-  .sil-clearview-img { aspect-ratio: 16/9; min-height: 260px; }
+  .sil-clearview-img {
+  display: none; aspect-ratio: 16/9; min-height: 260px; }
   .sil-powerview-inner { grid-template-columns: 1fr; gap: 36px; }
   .sil-powerview-visual { order: -1; }
   .sil-gallery-grid {
