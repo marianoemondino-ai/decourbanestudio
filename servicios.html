@@ -16,7 +16,7 @@
 <meta property="og:image:alt" content="Decourban Estudio — Equipamientos especiales para espacios residenciales y corporativos, Río Cuarto"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://decourbanestudio.com.ar/img/hero-poster.jpg"/>
-<meta name="robots" content="index, follow"/>
+<meta name="robots" content="noindex, follow"/>
 <meta name="author" content="Decourban Estudio"/>
 <meta name="geo.region" content="AR-X"/>
 <meta name="geo.placename" content="Río Cuarto, Córdoba"/>
@@ -76,15 +76,15 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="nav-inner">
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
+      <a href="hunterdouglas.html" class="hd-nav-brand-link" aria-label="Hunter Douglas">
+        <img src="https://www.hunterdouglas.com.ar/wp-content/uploads/2025/10/HunterDouglas-white-logo3-03.svg" alt="Hunter Douglas" class="hd-nav-brand-img" loading="eager">
+      </a>
       <div class="nav-dropdown" id="catDropdown">
         <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" id="catBtn">
           Catálogo
           <svg class="dd-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
         </button>
         <div class="nav-dropdown-menu" id="catMenu">
-          <a href="hunterdouglas.html" style="display:flex;align-items:center;padding:7px 20px;border-bottom:1px solid var(--border);margin-bottom:4px;">
-            <img src="img/hunter/HunterDouglas-white-logo3-03.svg" alt="Hunter Douglas" style="height:13px;width:auto;filter:brightness(0);" loading="eager">
-          </a>
           <a href="catalogo.html#sec-sillas">Sillas</a>
           <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
           <a href="catalogo.html#sec-mesas">Mesas &amp; Consolas</a>
@@ -99,16 +99,8 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </a>
     <div class="nav-links nav-links-right">
       <a href="nosotros.html">Nosotros</a>
-      <div class="nav-dropdown" id="asorDropdown">
-        <button class="nav-dropdown-toggle nav-cta" aria-expanded="false" aria-haspopup="true" id="asorBtn">
-          Asesoramiento
-          <svg class="dd-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
-        </button>
-        <div class="nav-dropdown-menu" id="asorMenu">
-          <a href="servicios.html">Nuestras modalidades</a>
-        </div>
-      </div>
       <a href="contacto.html">Contacto</a>
+      <a href="contacto.html" class="nav-cta">Asesoramiento</a>
     </div>
     <button class="nav-hamburger" id="menuBtn" aria-label="Menú" aria-expanded="false" aria-controls="navMobile">
       <span></span><span></span><span></span>
@@ -121,9 +113,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="index.html">Inicio</a>
   <span class="nav-mobile-cat-label">Catálogo</span>
   <div class="nav-mobile-sub">
-    <a href="hunterdouglas.html" style="display:flex;align-items:center;gap:8px;padding:6px 0;">
-      <img src="img/hunter/HunterDouglas-white-logo3-03.svg" alt="Hunter Douglas" style="height:12px;width:auto;filter:brightness(0) invert(1);" loading="eager">
-    </a>
     <a href="catalogo.html#sec-sillas">Sillas</a>
     <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
     <a href="catalogo.html#sec-mesas">Mesas &amp; Consolas</a>
@@ -133,7 +122,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   </div>
   <a href="nosotros.html">Nosotros</a>
   <a href="contacto.html">Contacto</a>
-  <a href="servicios.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Nuestras modalidades</a>
+  <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Solicitar asesoramiento</a>
 </div>
 
 <!-- HERO MINI -->
@@ -239,61 +228,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   </div>
 </section>
 
-<!-- LO QUE HACEMOS -->
-<section class="section section-gray">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">Lo que hacemos</div>
-      <h2>Soluciones personalizadas, <em>de principio a fin</em></h2>
-      <p style="max-width:620px;margin:0 auto;color:var(--text-mid);text-align:center;">Colaboramos estrechamente con arquitectos y diseñadores para materializar ideas únicas. Cada etapa, con un equipo propio y una mirada integral.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-top:48px;">
-      <div class="rv" style="display:flex;gap:16px;align-items:flex-start;">
-        <span style="min-width:28px;font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--accent);padding-top:3px;">01</span>
-        <div>
-          <h3 style="font-size:1rem;margin:0 0 6px;">Interiorismo personalizado</h3>
-          <p style="color:var(--text-mid);font-size:.9rem;line-height:1.7;margin:0;">Diseñamos y producimos equipamientos especiales que transforman interiores con elegancia y funcionalidad, asegurándonos de que cada espacio refleje la identidad de quien lo habita.</p>
-        </div>
-      </div>
-      <div class="rv" style="display:flex;gap:16px;align-items:flex-start;">
-        <span style="min-width:28px;font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--accent);padding-top:3px;">02</span>
-        <div>
-          <h3 style="font-size:1rem;margin:0 0 6px;">Cortinas a medida</h3>
-          <p style="color:var(--text-mid);font-size:.9rem;line-height:1.7;margin:0;">Distribuidores oficiales Hunter Douglas. Silhouette®, Duette®, Roller y motorización PowerView®. <a href="hunterdouglas.html" style="color:var(--accent);">Ver la línea →</a></p>
-        </div>
-      </div>
-      <div class="rv" style="display:flex;gap:16px;align-items:flex-start;">
-        <span style="min-width:28px;font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--accent);padding-top:3px;">03</span>
-        <div>
-          <h3 style="font-size:1rem;margin:0 0 6px;">Toldos</h3>
-          <p style="color:var(--text-mid);font-size:.9rem;line-height:1.7;margin:0;">Toldos motorizados y manuales para terrazas, galerías y patios. Protección solar con diseño.</p>
-        </div>
-      </div>
-      <div class="rv" style="display:flex;gap:16px;align-items:flex-start;">
-        <span style="min-width:28px;font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--accent);padding-top:3px;">04</span>
-        <div>
-          <h3 style="font-size:1rem;margin:0 0 6px;">Mobiliario</h3>
-          <p style="color:var(--text-mid);font-size:.9rem;line-height:1.7;margin:0;">Selección y curaduría de piezas que dialogan entre sí y con la arquitectura del espacio.</p>
-        </div>
-      </div>
-      <div class="rv" style="display:flex;gap:16px;align-items:flex-start;">
-        <span style="min-width:28px;font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--accent);padding-top:3px;">05</span>
-        <div>
-          <h3 style="font-size:1rem;margin:0 0 6px;">Asesoramiento</h3>
-          <p style="color:var(--text-mid);font-size:.9rem;line-height:1.7;margin:0;">Visitamos tu hogar, escuchamos cómo vivís el espacio y te acompañamos en cada decisión de muestras y terminaciones.</p>
-        </div>
-      </div>
-      <div class="rv" style="display:flex;gap:16px;align-items:flex-start;">
-        <span style="min-width:28px;font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--accent);padding-top:3px;">06</span>
-        <div>
-          <h3 style="font-size:1rem;margin:0 0 6px;">Instalación</h3>
-          <p style="color:var(--text-mid);font-size:.9rem;line-height:1.7;margin:0;">Equipo propio de instalación. Coordinamos tiempos y dejamos cada detalle terminado.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- MODALIDADES -->
 <section class="section section-gray">
   <div class="container">
@@ -357,7 +291,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Cómo trabajamos</div>
-      <h2>Te asesoramos y acompañamos <em>en tus proyectos</em></h2>
+      <h2>Un proceso simple, <em>de punta a punta</em></h2>
     </div>
     <div class="process-grid">
       <div class="process-step rv">
@@ -425,7 +359,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       <div class="footer-col">
         <h4>Contacto</h4>
         <p>Juan de Garay 1550<br/>Río Cuarto, Córdoba</p>
-        <p style="margin-top:12px;"><a href="tel:+5493585746196" style="color:inherit">+54 9 3585 74-6196</a><br/><a href="tel:+543585078803" style="color:inherit">+54 9 3585 74-6196</a><br/><a href="mailto:ventas@decourban.com.ar" style="color:inherit">ventas@decourban.com.ar</a></p>
+        <p style="margin-top:12px;"><a href="tel:+5493585746196" style="color:inherit">+54 358 507-5773</a><br/><a href="tel:+543585078803" style="color:inherit">+54 358 507-8803</a><br/><a href="mailto:ventas@decourban.com.ar" style="color:inherit">ventas@decourban.com.ar</a></p>
         <p style="margin-top:12px;">Lun-Vie 9 a 18 h · Sáb 9 a 13 h</p>
       </div>
     </div>
