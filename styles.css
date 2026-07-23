@@ -1051,23 +1051,6 @@ fieldset.fl { border: 0; padding: 0; }
 }
 .hero-full .media-placeholder { position: absolute; inset: 0; aspect-ratio: auto; border: none; }
 .hero-full .ph-content { position: absolute; top: 130px; left: 50%; transform: translateX(-50%); }
-
-/* ── Hero slideshow ────────────────────────────── */
-.hero-slideshow {
-  position: absolute;
-  inset: 0;
-}
-.hero-slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1.2s ease-in-out;
-}
-.hero-slide.active {
-  opacity: 1;
-}
 .hero-video {
   position: absolute;
   inset: 0;
