@@ -152,21 +152,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   });
 
   // ── Dropdown catálogo ──────────────────────────────
-  var catBtn = document.getElementById('catBtn');
-  var catDropdown = document.getElementById('catDropdown');
-  if (catBtn) {
-    catBtn.addEventListener('click', function() {
-      var isOpen = catDropdown.classList.toggle('open');
-      catBtn.setAttribute('aria-expanded', isOpen);
-    });
-    document.addEventListener('click', function(e) {
-      if (!catDropdown.contains(e.target)) {
-        catDropdown.classList.remove('open');
-        catBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-
+  
   // ── WhatsApp click tracking ────────────────────────
   document.addEventListener('click', function(e) {
     var wa = e.target.closest('a[href^="https://wa.me"]');

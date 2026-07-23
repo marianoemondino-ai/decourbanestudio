@@ -2403,21 +2403,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   });
 
   // ── Dropdown: click fallback for touch devices ─────
-  var catBtn = document.getElementById('catBtn');
-  var catDropdown = document.getElementById('catDropdown');
-  if (catBtn) {
-    catBtn.addEventListener('click', function(e) {
-      var isOpen = catDropdown.classList.toggle('open');
-      catBtn.setAttribute('aria-expanded', isOpen);
-    });
-    document.addEventListener('click', function(e) {
-      if (!catDropdown.contains(e.target)) {
-        catDropdown.classList.remove('open');
-        catBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-
+  
   // ── Reveal on scroll ───────────────────────────────
   var observer = new IntersectionObserver(function(entries){
     entries.forEach(function(e){

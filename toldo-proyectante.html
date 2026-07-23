@@ -807,10 +807,10 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
       <div class="nav-dropdown" id="catDropdown">
-        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" id="catBtn">
+        <a href="catalogo.html" class="nav-dropdown-toggle" id="catBtn">
           Catálogo
           <svg class="dd-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
-        </button>
+        </a>
         <div class="nav-dropdown-menu" id="catMenu">
           <a href="catalogo.html#sec-sillas">Sillas</a>
           <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
@@ -1125,18 +1125,6 @@ var navMobile = document.getElementById('navMobile');
 menuBtn.addEventListener('click', function() {
   var open = navMobile.classList.toggle('open');
   menuBtn.setAttribute('aria-expanded', open);
-});
-var catBtn = document.getElementById('catBtn');
-var catMenu = document.getElementById('catMenu');
-catBtn.addEventListener('click', function() {
-  var open = catMenu.classList.toggle('open');
-  catBtn.setAttribute('aria-expanded', open);
-});
-document.addEventListener('click', function(e) {
-  if (!catBtn.contains(e.target) && !catMenu.contains(e.target)) {
-    catMenu.classList.remove('open');
-    catBtn.setAttribute('aria-expanded', 'false');
-  }
 });
 
 var catMobileBtn = document.getElementById('catMobileBtn');

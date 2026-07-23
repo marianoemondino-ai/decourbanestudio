@@ -754,10 +754,10 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         <img src="/img/hd/HunterDouglas-white-logo3-03.svg" alt="Hunter Douglas" class="hd-nav-brand-img" loading="eager">
       </a>
       <div class="nav-dropdown" id="catDropdown">
-        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true" id="catBtn">
+        <a href="catalogo.html" class="nav-dropdown-toggle" id="catBtn">
           Catálogo
           <svg class="dd-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
-        </button>
+        </a>
         <div class="nav-dropdown-menu" id="catMenu">
           <a href="catalogo.html#sec-sillas">Sillas</a>
           <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
@@ -1471,12 +1471,6 @@ menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('open', open);
   document.body.style.overflow = open ? 'hidden' : '';
 });
-const catBtn = document.getElementById('catBtn');
-const catMenu = document.getElementById('catMenu');
-if (catBtn && catMenu) {
-  catBtn.addEventListener('click', e => { e.stopPropagation(); const open = catMenu.classList.toggle('open'); catBtn.setAttribute('aria-expanded', open); });
-  document.addEventListener('click', () => catMenu.classList.remove('open'));
-}
 
 var catMobileBtn = document.getElementById('catMobileBtn');
 var catMobileSub = document.getElementById('catMobileSub');
