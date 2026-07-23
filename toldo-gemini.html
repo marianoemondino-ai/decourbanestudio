@@ -838,8 +838,8 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 </nav>
 <div class="nav-mobile" id="navMobile">
   <a href="index.html">Inicio</a>
-  <span class="nav-mobile-cat-label">Catálogo</span>
-  <div class="nav-mobile-sub">
+  <button class="nav-mobile-cat-label" id="catMobileBtn" aria-expanded="false">Catálogo<span class="cat-arrow">▼</span></button>
+  <div class="nav-mobile-sub" id="catMobileSub">
     <a href="catalogo.html#sec-sillas">Sillas</a>
     <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
     <a href="catalogo.html#sec-mesas">Mesas &amp; Consolas</a>
@@ -1136,6 +1136,16 @@ document.addEventListener('click', function(e) {
     catBtn.setAttribute('aria-expanded', 'false');
   }
 });
+
+var catMobileBtn = document.getElementById('catMobileBtn');
+var catMobileSub = document.getElementById('catMobileSub');
+if (catMobileBtn) {
+  catMobileBtn.addEventListener('click', function() {
+    var open = catMobileSub.classList.toggle('open');
+    catMobileBtn.classList.toggle('open', open);
+    catMobileBtn.setAttribute('aria-expanded', open);
+  });
+}
 </script>
 
 

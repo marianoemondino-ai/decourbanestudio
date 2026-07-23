@@ -47,15 +47,14 @@
   -webkit-backdrop-filter: blur(1px);
 }
 .serv-hero > * { position: relative; z-index: 1; }
-.serv-hero .section-eyebrow { margin-bottom: 12px; color: var(--accent); justify-content: center; }
+.serv-hero-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; text-align: left; }
+.serv-hero .section-eyebrow { margin-bottom: 12px; color: var(--accent); justify-content: flex-start; }
 .serv-hero h1 {
   color: #fff;
   text-shadow: 0 1px 3px rgba(0,0,0,.85), 0 3px 14px rgba(0,0,0,.6), 0 8px 32px rgba(0,0,0,.35);
 }
 .serv-hero h1 em { color: var(--accent); }
-.serv-hero .breadcrumb { justify-content: center; margin-bottom: 16px; }
-.serv-hero .breadcrumb a, .serv-hero .breadcrumb span { color: rgba(255,255,255,.6); }
-.serv-hero .breadcrumb span[style] { color: rgba(255,255,255,.4) !important; }
+@media (max-width: 600px) { .serv-hero-inner { padding: 0 24px; } }
 </style>
 <!-- Google Analytics 4 — reemplazar G-XXXXXXXXXX con tu Measurement ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -135,8 +134,8 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 <!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
   <a href="index.html">Inicio</a>
-  <span class="nav-mobile-cat-label">Catálogo</span>
-  <div class="nav-mobile-sub">
+  <button class="nav-mobile-cat-label" id="catMobileBtn" aria-expanded="false">Catálogo<span class="cat-arrow">▼</span></button>
+  <div class="nav-mobile-sub" id="catMobileSub">
     <a href="catalogo.html#sec-sillas">Sillas</a>
     <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
     <a href="catalogo.html#sec-mesas">Mesas &amp; Consolas</a>
@@ -153,8 +152,10 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 
 <!-- HERO ASESORAMIENTO -->
 <section class="serv-hero">
-  <div class="section-eyebrow">Asesoramiento</div>
-  <h1>Soluciones <em>personalizadas</em></h1>
+  <div class="serv-hero-inner">
+    <div class="section-eyebrow">Asesoramiento</div>
+    <h1>Soluciones <em>personalizadas</em></h1>
+  </div>
 </section>
 
 <!-- MODALIDADES -->
@@ -379,6 +380,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
         catDropdown.classList.remove('open');
         catBtn.setAttribute('aria-expanded', 'false');
       }
+    });
+  }
+
+
+  // ── Mobile Catálogo toggle ──────────────────────────
+  var catMobileBtn = document.getElementById('catMobileBtn');
+  var catMobileSub = document.getElementById('catMobileSub');
+  if (catMobileBtn) {
+    catMobileBtn.addEventListener('click', function() {
+      var open = catMobileSub.classList.toggle('open');
+      catMobileBtn.classList.toggle('open', open);
+      catMobileBtn.setAttribute('aria-expanded', open);
     });
   }
 

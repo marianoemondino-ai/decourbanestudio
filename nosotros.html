@@ -69,6 +69,30 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   ]
 }
 </script>
+<style>
+.serv-hero {
+  position: relative;
+  padding: 160px 0 80px;
+  background-color: #111;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.serv-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10,8,6,.68);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+.serv-hero > * { position: relative; z-index: 1; }
+.serv-hero-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; text-align: left; }
+.serv-hero .section-eyebrow { margin-bottom: 12px; color: var(--accent); justify-content: flex-start; }
+.serv-hero h1 { color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,.5); font-size: clamp(2.2rem,5vw,3.6rem); line-height: 1.1; margin: 0; }
+.serv-hero h1 em { color: var(--accent); font-style: italic; }
+</style>
 </head>
 <body>
 
@@ -111,8 +135,8 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 <!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
   <a href="index.html">Inicio</a>
-  <span class="nav-mobile-cat-label">Catálogo</span>
-  <div class="nav-mobile-sub">
+  <button class="nav-mobile-cat-label" id="catMobileBtn" aria-expanded="false">Catálogo<span class="cat-arrow">▼</span></button>
+  <div class="nav-mobile-sub" id="catMobileSub">
     <a href="catalogo.html#sec-sillas">Sillas</a>
     <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
     <a href="catalogo.html#sec-mesas">Mesas &amp; Consolas</a>
@@ -127,15 +151,13 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Contacto</a>
 </div>
 
-<!-- HERO MINI -->
-<div class="hero-mini" style="background:#1a160e;">
-  <div class="hero-mini-in">
-    <div class="breadcrumb">
-      <a href="index.html" style="color:rgba(255,255,255,0.5);">Inicio</a><span style="color:rgba(255,255,255,0.3);">›</span><span style="color:rgba(255,255,255,0.7);">Nosotros</span>
-    </div>
-    <h1 style="color:#fff;">Nosotros</h1>
+<!-- HERO NOSOTROS -->
+<section class="serv-hero" style="background-image:url('img/hero-nosotros.jpeg');">
+  <div class="serv-hero-inner">
+    <div class="section-eyebrow">El estudio</div>
+    <h1>Quiénes <em>somos</em></h1>
   </div>
-</div>
+</section>
 
 <!-- INTERIORISMO / DUEÑA -->
 <section class="section">
@@ -290,6 +312,18 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       });
     }
   });
+
+
+  // ── Mobile Catálogo toggle ──────────────────────────
+  var catMobileBtn = document.getElementById('catMobileBtn');
+  var catMobileSub = document.getElementById('catMobileSub');
+  if (catMobileBtn) {
+    catMobileBtn.addEventListener('click', function() {
+      var open = catMobileSub.classList.toggle('open');
+      catMobileBtn.classList.toggle('open', open);
+      catMobileBtn.setAttribute('aria-expanded', open);
+    });
+  }
 
   // ── Scroll reveal ──────────────────────────────────
   var rvObs = new IntersectionObserver(function(entries){
