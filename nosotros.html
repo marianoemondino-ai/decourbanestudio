@@ -69,30 +69,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   ]
 }
 </script>
-<style>
-.serv-hero {
-  position: relative;
-  padding: 160px 0 80px;
-  background-color: #111;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-.serv-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(10,8,6,.68);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-}
-.serv-hero > * { position: relative; z-index: 1; }
-.serv-hero-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; text-align: left; }
-.serv-hero .section-eyebrow { margin-bottom: 12px; color: var(--accent); justify-content: flex-start; }
-.serv-hero h1 { color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,.5); font-size: clamp(2.2rem,5vw,3.6rem); line-height: 1.1; margin: 0; }
-.serv-hero h1 em { color: var(--accent); font-style: italic; }
-</style>
+
 </head>
 <body>
 
@@ -152,11 +129,9 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 </div>
 
 <!-- HERO NOSOTROS -->
-<section class="serv-hero" style="background-image:url('img/hero-nosotros.jpeg');">
-  <div class="serv-hero-inner">
-    <div class="section-eyebrow">El estudio</div>
-    <h1>Quiénes <em>somos</em></h1>
-  </div>
+<section class="page-hero" style="background-image:url('img/hero-nosotros.jpeg');">
+  <div class="section-eyebrow">El estudio</div>
+  <h1>Quiénes <em>somos</em></h1>
 </section>
 
 <!-- INTERIORISMO / DUEÑA -->
