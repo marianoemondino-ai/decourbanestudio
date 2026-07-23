@@ -30,6 +30,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sacramento&family=Assistant:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
+<style>
+.serv-hero {
+  position: relative;
+  padding: 160px 0 80px;
+  text-align: center;
+  background: #111 url('img/hero-asesoramiento.jpeg') center/cover no-repeat;
+  overflow: hidden;
+}
+.serv-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10,8,6,.68);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+.serv-hero > * { position: relative; z-index: 1; }
+.serv-hero .section-eyebrow { margin-bottom: 12px; color: var(--accent); justify-content: center; }
+.serv-hero h1 {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.85), 0 3px 14px rgba(0,0,0,.6), 0 8px 32px rgba(0,0,0,.35);
+}
+.serv-hero h1 em { color: var(--accent); }
+.serv-hero .breadcrumb { justify-content: center; margin-bottom: 16px; }
+.serv-hero .breadcrumb a, .serv-hero .breadcrumb span { color: rgba(255,255,255,.6); }
+.serv-hero .breadcrumb span[style] { color: rgba(255,255,255,.4) !important; }
+</style>
 <!-- Google Analytics 4 — reemplazar G-XXXXXXXXXX con tu Measurement ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
@@ -124,15 +151,14 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <a href="contacto.html" style="margin-top:16px;font-size:.9rem;background:var(--accent);color:#fff;padding:16px 28px;text-align:center;letter-spacing:.08em;text-transform:uppercase;border:none;">Contacto</a>
 </div>
 
-<!-- HERO MINI -->
-<div class="hero-mini">
-  <div class="hero-mini-in">
-    <div class="breadcrumb">
-      <a href="index.html">Inicio</a><span>›</span><span style="color:var(--text-mid)">Servicios</span>
-    </div>
-    <h1>Soluciones <em>personalizadas</em></h1>
+<!-- HERO ASESORAMIENTO -->
+<section class="serv-hero">
+  <div class="breadcrumb">
+    <a href="index.html">Inicio</a><span>›</span><span style="color:var(--text-mid)">Asesoramiento</span>
   </div>
-</div>
+  <div class="section-eyebrow">Asesoramiento</div>
+  <h1>Soluciones <em>personalizadas</em></h1>
+</section>
 
 <!-- MODALIDADES -->
 <section class="section" style="background:#1a160e;">
