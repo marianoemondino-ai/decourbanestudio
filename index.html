@@ -132,6 +132,19 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <div class="hero-slide" style="background-image:url('img/hero-slide-4.jpg')"></div>
     <div class="hero-slide" style="background-image:url('img/hero-slide-5.jpg')"></div>
   </div>
+  <button class="hero-arrow hero-arrow-prev" id="heroPrev" aria-label="Imagen anterior">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="hero-arrow hero-arrow-next" id="heroNext" aria-label="Imagen siguiente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot active" aria-label="Imagen 1"></button>
+    <button class="hero-dot" aria-label="Imagen 2"></button>
+    <button class="hero-dot" aria-label="Imagen 3"></button>
+    <button class="hero-dot" aria-label="Imagen 4"></button>
+    <button class="hero-dot" aria-label="Imagen 5"></button>
+  </div>
 </section>
 
 <!-- CÓMO TRABAJAMOS -->
@@ -344,13 +357,35 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   // ── Hero slideshow ──────────────────────
   (function() {
     var slides = document.querySelectorAll('.hero-slide');
+    var dots   = document.querySelectorAll('.hero-dot');
     if (!slides.length) return;
     var cur = 0;
-    setInterval(function() {
+    var timer;
+
+    function goTo(n) {
       slides[cur].classList.remove('active');
-      cur = (cur + 1) % slides.length;
+      dots[cur].classList.remove('active');
+      cur = (n + slides.length) % slides.length;
       slides[cur].classList.add('active');
-    }, 5000);
+      dots[cur].classList.add('active');
+    }
+
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(function() { goTo(cur + 1); }, 5000);
+    }
+
+    document.getElementById('heroPrev').addEventListener('click', function() {
+      goTo(cur - 1); startTimer();
+    });
+    document.getElementById('heroNext').addEventListener('click', function() {
+      goTo(cur + 1); startTimer();
+    });
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() { goTo(i); startTimer(); });
+    });
+
+    startTimer();
   })();
 
 })();
