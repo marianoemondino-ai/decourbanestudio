@@ -1479,7 +1479,7 @@ fieldset.fl { border: 0; padding: 0; }
 .page-hero .section-eyebrow {
   margin-bottom: 12px;
   color: var(--accent);
-  justify-content: center;
+  justify-content: flex-start;
 }
 .page-hero h1 {
   margin-bottom: 0;
