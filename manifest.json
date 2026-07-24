@@ -21,13 +21,13 @@
   "shortcuts": [
     {
       "name": "Consultar por WhatsApp",
-      "url": "https://wa.me/543585075773?text=Hola%2C%20me%20gustar%C3%ADa%20consultar",
+      "url": "https://wa.me/5493585746196?text=Hola%2C%20me%20gustar%C3%ADa%20consultar",
       "description": "Hablar con el equipo ahora"
     },
     {
-      "name": "Ver Proyectos",
-      "url": "/proyectos.html",
-      "description": "Espacios transformados por Decourban Estudio"
+      "name": "Ver Hunter Douglas",
+      "url": "/hunterdouglas.html",
+      "description": "Cortinas, toldos y pérgolas Hunter Douglas"
     },
     {
       "name": "Ver Servicios",
