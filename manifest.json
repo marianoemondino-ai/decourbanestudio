@@ -9,8 +9,18 @@
   "theme_color": "#ffffff",
   "lang": "es",
   "orientation": "portrait-primary",
-  "categories": ["business", "lifestyle", "home"],
+  "categories": [
+    "business",
+    "lifestyle",
+    "home"
+  ],
   "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "favicon.svg",
       "sizes": "any",
