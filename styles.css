@@ -432,7 +432,6 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   width: auto;
   display: block;
   margin-bottom: 20px;
-  filter: brightness(0) invert(1);
   opacity: .9;
 }
 .footer-col h4 {
