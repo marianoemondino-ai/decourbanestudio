@@ -1,4 +1,4 @@
-const CACHE = 'decourban-v11';
+const CACHE = 'decourban-v12';
 const SHELL = [
   '/',
   '/index.html',
