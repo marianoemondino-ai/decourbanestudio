@@ -412,57 +412,101 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
 .about-split img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
 
 /* ── FOOTER ─────────────────────────────────────────── */
-.site-footer { background: #fff; color: var(--text); padding: 80px 0 40px; border-top: 1px solid var(--border); }
+/* ── FOOTER ──────────────────────────────────────────── */
+.site-footer {
+  background: #0f0d0b;
+  color: rgba(255,255,255,.85);
+  padding: 72px 0 0;
+  border-top: 2px solid var(--accent);
+}
 .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 60px;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 56px;
+  margin-bottom: 56px;
+}
+.footer-col-brand { }
+.footer-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+  opacity: .9;
 }
 .footer-col h4 {
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text);
-  margin-bottom: 22px;
+  color: rgba(255,255,255,.4);
+  margin-bottom: 20px;
   font-family: var(--font-body);
+}
+.footer-col p,
+.footer-col > p {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,.45);
+  line-height: 1.75;
+  margin-bottom: 24px;
 }
 .footer-col a {
   display: block;
-  font-size: 0.86rem;
-  color: var(--text-mid);
-  margin-bottom: 11px;
+  font-size: 0.84rem;
+  color: rgba(255,255,255,.55);
+  margin-bottom: 12px;
   transition: color 0.2s;
+  line-height: 1.5;
 }
-.footer-col a:hover { color: var(--text); }
-.footer-col p { font-size: 0.84rem; color: var(--text-light); line-height: 1.7; }
-.footer-logo-badge {
-  display: inline-block;
-  background: #161412;
-  padding: 14px 22px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+.footer-col a:hover { color: #fff; }
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 4px;
 }
-.footer-logo-badge img { height: 38px; width: auto; display: block; margin: 0; }
+.footer-social a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 0;
+  letter-spacing: 0.04em;
+}
+.footer-social a:hover { color: #fff; }
+.footer-social svg { flex-shrink: 0; opacity: .7; }
+.footer-social a:hover svg { opacity: 1; }
+.footer-rating {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.footer-stars {
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+.footer-rating span:last-child {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,.4);
+  letter-spacing: 0.04em;
+}
 .footer-bottom {
-  border-top: 1px solid var(--border);
-  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 28px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
 }
-.footer-bottom p { font-size: 0.74rem; color: var(--text-light); }
-.footer-social { display: flex; gap: 24px; }
-.footer-social a {
-  font-size: 0.7rem;
-  color: var(--text-light);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transition: color 0.2s;
-}
-.footer-social a:hover { color: var(--text); }
+.footer-bottom p { font-size: 0.72rem; color: rgba(255,255,255,.3); }
+.footer-bottom a { font-size: 0.72rem; color: rgba(255,255,255,.3); transition: color .2s; }
+.footer-bottom a:hover { color: rgba(255,255,255,.7); }
 
 /* ── WHATSAPP FLOAT ──────────────────────────────────── */
 .wa-float {
@@ -566,7 +610,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   .nav-cta { padding: 9px 16px !important; }
   .container { padding: 0 32px; }
   .footer-inner { padding: 0 32px; }
-  .footer-grid { grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
 }
 
 @media (min-width: 841px) and (max-width: 960px) {
