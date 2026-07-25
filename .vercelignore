@@ -1,0 +1,10 @@
+# Development scripts — not needed in deployment
+*.bat
+*.ps1
+*.py
+*.vbs
+
+# Logs
+*.log
+download-log.txt
+push-log.txt
