@@ -79,9 +79,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="nav-inner">
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
-      <a href="hunterdouglas.html" class="hd-nav-brand-link" aria-label="Hunter Douglas">
-        <img src="/img/hunter/HunterDouglas-white-logo3-03.svg" alt="Hunter Douglas" class="hd-nav-brand-img" loading="eager">
-      </a>
       <div class="nav-dropdown" id="catDropdown">
         <a href="catalogo.html" class="nav-dropdown-toggle" id="catBtn">
           Catálogo
@@ -116,7 +113,10 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 <!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
   <a href="index.html">Inicio</a>
-  <button class="nav-mobile-cat-label" id="catMobileBtn" aria-expanded="false">Catálogo<span class="cat-arrow">▼</span></button>
+  <div class="nav-mobile-cat-row">
+  <a href="catalogo.html" class="nav-mobile-cat-link">Catálogo</a>
+  <button class="nav-mobile-cat-label" id="catMobileBtn" aria-expanded="false" aria-label="Ver categorías"><span class="cat-arrow">▼</span></button>
+</div>
   <div class="nav-mobile-sub" id="catMobileSub">
     <a href="catalogo.html#sec-sillas">Sillas</a>
     <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>

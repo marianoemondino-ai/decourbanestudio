@@ -757,11 +757,8 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="nav-inner">
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
-      <a href="hunterdouglas.html" class="active hd-nav-brand-link" aria-label="Hunter Douglas">
-        <img src="/img/hd/HunterDouglas-white-logo3-03.svg" alt="Hunter Douglas" class="hd-nav-brand-img" loading="eager">
-      </a>
       <div class="nav-dropdown" id="catDropdown">
-        <a href="catalogo.html" class="nav-dropdown-toggle" id="catBtn">
+        <a href="catalogo.html" class="nav-dropdown-toggle active" id="catBtn">
           Catálogo
           <svg class="dd-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
         </a>
@@ -794,10 +791,10 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 <!-- MOBILE MENU -->
 <div class="nav-mobile" id="navMobile">
   <a href="index.html">Inicio</a>
-  <a href="hunterdouglas.html" class="active hd-nav-brand-link" aria-label="Hunter Douglas" style="padding:4px 0">
-    <img src="/img/hd/HunterDouglas-white-logo3-03.svg" alt="Hunter Douglas" class="hd-nav-brand-img hd-nav-brand-img--mobile" loading="eager">
-  </a>
-  <button class="nav-mobile-cat-label" id="catMobileBtn" aria-expanded="false">Catálogo<span class="cat-arrow">▼</span></button>
+  <div class="nav-mobile-cat-row">
+  <a href="catalogo.html" class="nav-mobile-cat-link">Catálogo</a>
+  <button class="nav-mobile-cat-label" id="catMobileBtn" aria-expanded="false" aria-label="Ver categorías"><span class="cat-arrow">▼</span></button>
+</div>
   <div class="nav-mobile-sub" id="catMobileSub">
     <a href="catalogo.html#sec-sillas">Sillas</a>
     <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
