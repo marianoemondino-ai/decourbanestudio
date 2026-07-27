@@ -82,10 +82,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <div class="nav-links nav-links-left">
       <a href="index.html">Inicio</a>
       <div class="nav-dropdown" id="catDropdown">
-        <a href="catalogo.html" class="nav-dropdown-toggle" id="catBtn">
-          Catálogo
-          <svg class="dd-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
-        </a>
+        <a href="catalogo.html" class="nav-dropdown-link" id="catLink">Catálogo</a><button class="nav-dd-chevron-btn" id="catBtn" aria-expanded="false" aria-controls="catMenu" aria-label="Subcategorías de catálogo"><svg class="dd-chevron" width="10" height="7" viewBox="0 0 10 7" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg></button>
         <div class="nav-dropdown-menu" id="catMenu">
           <a href="catalogo.html#sec-sillas">Sillas</a>
           <a href="catalogo.html#sec-sofas">Sofás &amp; Butacas</a>
@@ -312,8 +309,24 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   });
 
   // ── Dropdown catálogo ──────────────────────────────
-  
-  // ── WhatsApp click tracking ────────────────────────
+  var catBtn = document.getElementById('catBtn');
+  var catDropdown = document.getElementById('catDropdown');
+  if (catBtn && catDropdown) {
+    catBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var open = catDropdown.classList.toggle('open');
+      catBtn.setAttribute('aria-expanded', open);
+    });
+    // Close on outside click
+    document.addEventListener('click', function(e) {
+      if (!catDropdown.contains(e.target)) {
+        catDropdown.classList.remove('open');
+        catBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+    // ── WhatsApp click tracking ────────────────────────
   document.addEventListener('click', function(e) {
     var wa = e.target.closest('a[href^="https://wa.me"]');
     if (wa && typeof gtag !== 'undefined') {
