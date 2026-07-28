@@ -243,18 +243,6 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
 }
-/* Puente invisible: extiende el área hover hacia arriba para que
-   el cursor no pierda el foco al moverse del link al menú.
-   pointer-events: none para que no bloquee el click en el link Catálogo */
-.nav-dropdown-menu::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: 0;
-  right: 0;
-  height: 20px;
-  pointer-events: none;
-}
 .nav-dropdown-menu a {
   display: block;
   padding: 9px 20px;
