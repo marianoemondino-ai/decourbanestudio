@@ -128,6 +128,16 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   align-items: center;
   gap: 32px;
 }
+.nav-links-left {
+  flex: 1;
+  justify-content: flex-end;
+  padding-right: 52px;
+}
+.nav-links-right {
+  flex: 1;
+  justify-content: flex-start;
+  padding-left: 52px;
+}
 .nav-links a {
   font-size: 0.78rem;
   font-weight: 400;
