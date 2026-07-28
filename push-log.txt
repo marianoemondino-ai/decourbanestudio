@@ -1,1 +1,11 @@
 === PUSH mar 28/07/2026 17:53:39,98 === 
+[main acf05ca] update decourban web mar 28/07/2026 17:53:45,50
+ 7 files changed, 1 insertion(+), 5 deletions(-)
+ create mode 100644 fotos y videos/Servicios/Asesoramiento personalizado.jpeg
+ create mode 100644 fotos y videos/Servicios/Cortinas a medida.jpeg
+ create mode 100644 "fotos y videos/Servicios/Instalaci\303\263n propia.jpeg"
+ create mode 100644 fotos y videos/Servicios/Interiorismo personalizado.jpeg
+ create mode 100644 "fotos y videos/Servicios/Mobiliario y decoraci\303\263n.jpeg"
+ create mode 100644 "fotos y videos/Servicios/Toldos y p\303\251rgolas.jpeg"
+To https://github.com/marianoemondino-ai/decourbanestudio.git
+   691be71..acf05ca  main -> main

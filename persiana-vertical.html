@@ -1196,18 +1196,21 @@ menuBtn.addEventListener('click', function() {
 });
 
 
-var catBtn = document.getElementById('catBtn');
 var catDropdown = document.getElementById('catDropdown');
-if (catBtn && catDropdown) {
-  catBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    var open = catDropdown.classList.toggle('open');
-    catBtn.setAttribute('aria-expanded', open);
+if (catDropdown) {
+  var catCloseTimer;
+  catDropdown.addEventListener('mouseenter', function() {
+    clearTimeout(catCloseTimer);
+    catDropdown.classList.add('open');
+  });
+  catDropdown.addEventListener('mouseleave', function() {
+    catCloseTimer = setTimeout(function() {
+      catDropdown.classList.remove('open');
+    }, 120);
   });
   document.addEventListener('click', function(e) {
     if (!catDropdown.contains(e.target)) {
       catDropdown.classList.remove('open');
-      catBtn.setAttribute('aria-expanded', 'false');
     }
   });
 }
