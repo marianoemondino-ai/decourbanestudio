@@ -1,8 +1,9 @@
-const CACHE = 'decourban-v12';
+const CACHE = 'decourban-v13';
 const SHELL = [
   '/',
   '/index.html',
   '/servicios.html',
+  '/asesoramiento.html',
   '/nosotros.html',
   '/contacto.html',
   '/hunterdouglas.html',
