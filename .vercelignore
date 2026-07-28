@@ -1,4 +1,4 @@
-# Development scripts — not needed in deployment
+# Scripts de desarrollo
 *.bat
 *.ps1
 *.py
@@ -8,3 +8,6 @@
 *.log
 download-log.txt
 push-log.txt
+
+# Carpeta de fuentes (imágenes originales, no se despliegan)
+_fuentes/
