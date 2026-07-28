@@ -220,14 +220,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   border-bottom: 1px solid rgba(255,255,255,0.9);
   padding-bottom: 1px;
 }
-.nav-dropdown-toggle .dd-chevron {
-  transition: transform 0.22s;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-.nav-dropdown.open .nav-dropdown-toggle .dd-chevron {
-  transform: rotate(180deg);
-}
+
 .nav-dropdown-menu {
   position: absolute;
   top: 100%;
@@ -280,43 +273,6 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
 /* Hunter Douglas naranja en dropdown */
 .nav-dropdown-menu a[href="hunterdouglas.html"]:hover { color: var(--accent) !important; }
 
-/* Split nav: link text + separate chevron button */
-.nav-dropdown-link {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
-  transition: opacity 0.2s;
-  text-decoration: none;
-}
-.nav-dropdown-link:hover { opacity: 0.6; }
-.nav-dropdown-link.active {
-  border-bottom: 1px solid rgba(255,255,255,0.9);
-  padding-bottom: 1px;
-}
-.nav-dd-chevron-btn {
-  display: inline-flex;
-  align-items: center;
-  background: none;
-  border: none;
-  padding: 0 0 0 4px;
-  cursor: pointer;
-  color: rgba(255,255,255,0.9);
-  transition: opacity 0.2s;
-}
-.nav-dd-chevron-btn:hover { opacity: 0.6; }
-.nav-dd-chevron-btn .dd-chevron {
-  transition: transform 0.22s;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-.nav-dropdown:hover .nav-dd-chevron-btn .dd-chevron,
-.nav-dropdown.open .nav-dd-chevron-btn .dd-chevron {
-  transform: rotate(180deg);
-}
 
 /* Mobile: catalog row — link + arrow toggle */
 .nav-mobile-cat-row {

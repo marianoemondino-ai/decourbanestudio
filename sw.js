@@ -1,4 +1,4 @@
-const CACHE = 'decourban-v13';
+const CACHE = 'decourban-v14';
 const SHELL = [
   '/',
   '/index.html',
@@ -63,7 +63,6 @@ self.addEventListener('fetch', e => {
         }
         return res;
       }).catch(() =>
-        caches.match('/index.html').then(r => r || caches.match('/404.html'))
       );
       return cached || network;
     })
