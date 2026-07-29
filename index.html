@@ -413,7 +413,34 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     });
   }
 
-  // ── Scroll reveal ──────────────────────────────────
+  // ── Contador animado num-strip ─────────────────────
+  (function(){
+    function animCount(el, target, suffix, duration){
+      var start = null;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts-start)/duration, 1);
+        var ease = 1 - Math.pow(1-p, 3);
+        el.textContent = Math.floor(ease * target) + suffix;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    var stripObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        stripObs.unobserve(e.target);
+        e.target.querySelectorAll('.num-strip-n').forEach(function(n){
+          var raw = n.textContent.trim();
+          var num = parseFloat(raw.replace(/[^0-9.]/g,''));
+          var suffix = raw.replace(/[0-9.]/g,'');
+          if(!isNaN(num)) animCount(n, num, suffix, 1400);
+        });
+      });
+    },{threshold:0.3});
+    document.querySelectorAll('.num-strip').forEach(function(s){ stripObs.observe(s); });
+  })();
+
   // ── Scroll reveal ──────────────────────────────────
   var rvObs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){

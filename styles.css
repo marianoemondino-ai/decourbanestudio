@@ -1486,3 +1486,143 @@ fieldset.fl { border: 0; padding: 0; }
   width: min(480px, 72vw);
   filter: drop-shadow(0 4px 32px rgba(0,0,0,0.5));
 }
+
+/* ══════════════════════════════════════════════════════
+   EFECTOS VISUALES — Solo estilo, cero texto nuevo
+   ══════════════════════════════════════════════════════ */
+
+/* ── Fade-in de página al cargar ─────────────────────── */
+@keyframes pageFade { from { opacity: 0; } to { opacity: 1; } }
+body { animation: pageFade .45s ease both; }
+
+/* ── Ken Burns en cada slide del hero ────────────────── */
+.hero-slide { transform-origin: center center; will-change: transform; }
+.hero-slide.active { animation: kenBurns 9s ease-in-out forwards; }
+@keyframes kenBurns {
+  0%   { transform: scale(1.0); }
+  100% { transform: scale(1.08); }
+}
+
+/* ── Page-hero — slow background drift ───────────────── */
+.page-hero {
+  animation: heroDrift 18s ease-in-out infinite alternate;
+  will-change: background-position;
+}
+@keyframes heroDrift {
+  from { background-position: center 38%; }
+  to   { background-position: center 44%; }
+}
+
+/* ── Process steps — lift + accent glow on hover ─────── */
+.process-step {
+  transition: box-shadow .35s ease, transform .35s ease;
+}
+.process-step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 56px rgba(0,0,0,.11), 0 0 0 1px rgba(244,133,52,.2);
+}
+
+/* ── CTA band — sweep diagonal shimmer ───────────────── */
+.cta-band { position: relative; overflow: hidden; }
+.cta-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.04) 50%, transparent 70%);
+  animation: bandSweep 6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes bandSweep {
+  0%   { transform: translateX(-120%); }
+  100% { transform: translateX(250%); }
+}
+
+/* ── Btn-accent — shine sweep on hover ───────────────── */
+.btn-accent { position: relative; overflow: hidden; }
+.btn-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
+  transform: skewX(-18deg);
+  transition: left .5s ease;
+  pointer-events: none;
+}
+.btn-accent:hover::before { left: 135%; }
+
+/* ── About-split images — smooth zoom on hover ───────── */
+.about-split .media-placeholder { overflow: hidden; }
+.about-split .media-placeholder img {
+  transition: transform .7s cubic-bezier(.25,.46,.45,.94);
+}
+.about-split .media-placeholder:hover img { transform: scale(1.05); }
+
+/* ── Service images — warm accent tint on hover ──────── */
+.about-split .media-placeholder.has-img { position: relative; }
+.about-split .media-placeholder.has-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  transition: background .45s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.about-split .media-placeholder.has-img:hover::after {
+  background: rgba(244,133,52,.06);
+}
+
+/* ── Testimonial cards — acento lateral glow ─────────── */
+.testi-card-mini {
+  transition: box-shadow .3s ease, transform .3s ease, border-left-color .3s ease;
+}
+.testi-card-mini:hover {
+  box-shadow: 0 22px 64px rgba(0,0,0,.13), -4px 0 0 0 var(--accent);
+  transform: translateY(-4px);
+}
+
+/* ── Nav logo — subtle scale on hover ────────────────── */
+.nav-logo img { transition: opacity .2s, transform .35s ease; }
+.nav-logo:hover img { transform: scale(1.05); opacity: .9; }
+
+/* ── Num-strip accent — subtle pulse ─────────────────── */
+.num-strip-n.accent {
+  animation: accentBreath 3.5s ease-in-out infinite alternate;
+}
+@keyframes accentBreath {
+  from { opacity: 1; text-shadow: none; }
+  to   { opacity: .8; text-shadow: 0 0 24px rgba(244,133,52,.4); }
+}
+
+/* ── Scroll reveal — easing más elástico ─────────────── */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes revealLeft {
+  from { opacity: 0; transform: translateX(-36px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes revealRight {
+  from { opacity: 0; transform: translateX(36px); }
+  to   { opacity: 1; transform: none; }
+}
+.rv.visible  { animation: revealUp  .75s cubic-bezier(.22,1,.36,1) both; }
+.rvl.visible { animation: revealLeft .85s cubic-bezier(.22,1,.36,1) both; }
+.rvr.visible { animation: revealRight .85s cubic-bezier(.22,1,.36,1) both; }
+
+/* ── Footer border-top accent animation ──────────────── */
+.site-footer {
+  border-top: 2px solid var(--accent);
+  box-shadow: 0 -1px 0 rgba(244,133,52,.15);
+}
+
+/* ── Reducción de movimiento: respeto accesibilidad ───── */
+@media (prefers-reduced-motion: reduce) {
+  body, .hero-slide.active, .page-hero,
+  .cta-band::before, .btn-accent::before,
+  .num-strip-n.accent { animation: none !important; }
+}
