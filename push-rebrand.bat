@@ -38,7 +38,7 @@ git commit -m "update decourban web %DATE% %TIME%" >> "%~dp0push-log.txt" 2>&1
 :: (no falla si no hay nada nuevo, continua al push)
 
 echo Paso 4: Pusheando a GitHub...
-git push origin main >> "%~dp0push-log.txt" 2>&1
+git push --force origin main >> "%~dp0push-log.txt" 2>&1
 
 :CHECKPUSH
 if errorlevel 1 goto ERROR_PUSH
