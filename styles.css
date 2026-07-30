@@ -407,7 +407,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   gap: 80px;
   align-items: center;
 }
-.about-split img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.about-split img { width: 100%; display: block; }
 
 /* ── FOOTER ─────────────────────────────────────────── */
 /* ── FOOTER ──────────────────────────────────────────── */
