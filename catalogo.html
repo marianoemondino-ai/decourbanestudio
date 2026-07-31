@@ -229,7 +229,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: .68rem;
+  font-size: 0;
   letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--accent);
@@ -240,11 +240,170 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   transition: opacity .3s, transform .3s;
   border: none;
   padding: 0;
+  cursor: pointer;
+}
+.cat-card-cta::after {
+  font-size: .68rem;
+  content: 'Ver detalles →';
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-family: inherit;
 }
 .cat-card:hover .cat-card-cta { opacity: 1; transform: translateY(0); }
-.cat-card-cta svg {
-  width: 14px;
-  height: 14px;
+.cat-card-cta svg { display: none; }
+
+
+/* ── CATÁLOGO LIGHTBOX ───────────────────────────────── */
+.cat-lb {
+  position: fixed;
+  inset: 0;
+  background: rgba(5,4,3,.96);
+  z-index: 4000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s, visibility .3s;
+}
+.cat-lb.open { visibility: visible; opacity: 1; }
+.cat-lb-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.6);
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color .2s;
+  z-index: 10;
+  padding: 8px;
+}
+.cat-lb-close:hover { color: #fff; }
+.cat-lb-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  color: rgba(255,255,255,.7);
+  cursor: pointer;
+  padding: 16px 14px;
+  line-height: 1;
+  transition: background .2s, color .2s;
+  z-index: 10;
+  font-size: 1.4rem;
+}
+.cat-lb-nav:hover { background: rgba(255,255,255,.16); color: #fff; }
+.cat-lb-prev { left: 16px; }
+.cat-lb-next { right: 16px; }
+.cat-lb-content {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  max-width: min(92vw, 1060px);
+  max-height: 88vh;
+  width: 100%;
+  background: var(--bg);
+  box-shadow: 0 40px 120px rgba(0,0,0,.7);
+}
+.cat-lb-img-wrap {
+  background: #111009;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-height: 88vh;
+}
+.cat-lb-img {
+  max-width: 100%;
+  max-height: 88vh;
+  object-fit: contain;
+  display: block;
+  opacity: 0;
+  transition: opacity .35s;
+}
+.cat-lb-img.lb-ready { opacity: 1; }
+.cat-lb-info {
+  padding: 40px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 88vh;
+  border-left: 1px solid var(--border);
+}
+.cat-lb-eyebrow {
+  font-size: .7rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.cat-lb-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.cat-lb-desc {
+  font-size: .88rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+.cat-lb-detail {
+  font-size: .76rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  letter-spacing: .02em;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+.cat-lb-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1a1714;
+  border: 1px solid var(--border);
+  color: rgba(255,255,255,.85);
+  padding: 13px 22px;
+  font-size: .76rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .2s, border-color .2s, color .2s;
+  width: fit-content;
+  margin-top: auto;
+}
+.cat-lb-wa:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.cat-lb-counter {
+  font-size: .66rem;
+  letter-spacing: .1em;
+  color: var(--text-light);
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .cat-lb-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    max-height: 96vh;
+    max-width: 100vw;
+    overflow-y: auto;
+  }
+  .cat-lb-img-wrap { max-height: 48vw; min-height: 220px; }
+  .cat-lb-info {
+    padding: 22px 20px 28px;
+    max-height: none;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+  .cat-lb-nav { padding: 12px 10px; font-size: 1.2rem; }
+  .cat-lb-prev { left: 4px; }
+  .cat-lb-next { right: 4px; }
 }
 
 /* ── PERSONALIZACIÓN CTA ─────────────────────────────── */
@@ -2854,6 +3013,29 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <button class="alf-lb-nav alf-lb-next" id="alfLbNext" aria-label="Siguiente">&#x203A;</button>
 </div>
 
+<!-- Catálogo Lightbox (mobiliario) -->
+<div class="cat-lb" id="catLb" role="dialog" aria-modal="true" aria-label="Detalle de producto">
+  <button class="cat-lb-close" id="catLbClose" aria-label="Cerrar">&#x2715;</button>
+  <button class="cat-lb-nav cat-lb-prev" id="catLbPrev" aria-label="Anterior">&#x2039;</button>
+  <div class="cat-lb-content">
+    <div class="cat-lb-img-wrap">
+      <img src="" alt="" id="catLbImg" class="cat-lb-img"/>
+    </div>
+    <div class="cat-lb-info">
+      <div class="cat-lb-eyebrow" id="catLbEyebrow"></div>
+      <div class="cat-lb-name" id="catLbName"></div>
+      <div class="cat-lb-counter" id="catLbCounter"></div>
+      <p class="cat-lb-desc" id="catLbDesc"></p>
+      <p class="cat-lb-detail" id="catLbDetail"></p>
+      <a href="#" id="catLbWa" class="cat-lb-wa" target="_blank" rel="noopener noreferrer">
+        Consultar por WhatsApp
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+  <button class="cat-lb-nav cat-lb-next" id="catLbNext" aria-label="Siguiente">&#x203A;</button>
+</div>
+
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
@@ -2951,14 +3133,107 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   }, { threshold: 0.06 });
   document.querySelectorAll('.rv,.rvl,.rvr').forEach(function(el){ observer.observe(el); });
 
-  // ── Cat-card: toda la tarjeta es clickeable ────────
-  document.querySelectorAll('.cat-card').forEach(function(card){
-    card.addEventListener('click',function(e){
-      if(e.target.closest('.cat-card-cta'))return;
-      var cta=card.querySelector('.cat-card-cta');
-      if(cta){window.open(cta.href,'_blank','noopener,noreferrer');}
+  // ── Catálogo Lightbox (mobiliario) ────────────────
+  (function(){
+    var lb    = document.getElementById('catLb');
+    var lbImg = document.getElementById('catLbImg');
+    var lbName= document.getElementById('catLbName');
+    var lbDesc= document.getElementById('catLbDesc');
+    var lbDet = document.getElementById('catLbDetail');
+    var lbWa  = document.getElementById('catLbWa');
+    var lbEye = document.getElementById('catLbEyebrow');
+    var lbCnt = document.getElementById('catLbCounter');
+    var lbIdx = 0;
+    var lbCards = [];
+    var catNames = {sillas:'Sillas',sofas:'Sofás & Butacas',mesas:'Mesas & Consolas',exterior:'Exterior',drift:'Drift Wood Vibes',lamparas:'Lámparas'};
+
+    function getVisibleCards(){
+      return Array.from(document.querySelectorAll('.cat-card')).filter(function(c){
+        var s=c.closest('.cat-section');
+        return !s || s.style.display!=='none';
+      });
+    }
+
+    function populate(idx){
+      var card = lbCards[idx];
+      if(!card) return;
+      var img   = card.querySelector('.cat-card-img img');
+      var name  = card.querySelector('.cat-card-name');
+      var desc  = card.querySelector('.cat-card-desc');
+      var det   = card.querySelector('.cat-card-detail');
+      var cta   = card.querySelector('.cat-card-cta');
+      var badge = card.querySelector('.cat-card-badge');
+      var cat   = card.dataset.cat;
+
+      lbImg.classList.remove('lb-ready');
+      lbImg.src = img ? img.src : '';
+      lbImg.alt = img ? img.alt : '';
+      lbImg.onload = function(){ lbImg.classList.add('lb-ready'); };
+      if(lbImg.complete && lbImg.src) lbImg.classList.add('lb-ready');
+
+      lbName.textContent = name ? name.textContent : '';
+      lbDesc.textContent = desc ? desc.textContent : '';
+      if(det && det.innerHTML.trim()){
+        lbDet.innerHTML = det.innerHTML;
+        lbDet.style.display = '';
+      } else {
+        lbDet.style.display = 'none';
+      }
+      lbWa.href = cta ? cta.href : '#';
+      lbEye.textContent = badge ? badge.textContent.trim() : (catNames[cat] || 'Catálogo');
+      lbCnt.textContent = (idx+1)+' / '+lbCards.length;
+    }
+
+    function openLb(idx){
+      lbCards = getVisibleCards();
+      lbIdx = idx;
+      populate(lbIdx);
+      lb.classList.add('open');
+      document.body.style.overflow='hidden';
+    }
+
+    function closeLb(){
+      lb.classList.remove('open');
+      document.body.style.overflow='';
+    }
+
+    function nav(dir){
+      lbCards = getVisibleCards();
+      lbIdx = (lbIdx+dir+lbCards.length)%lbCards.length;
+      populate(lbIdx);
+    }
+
+    // Click on any cat-card → open lightbox (prevent WA link)
+    document.addEventListener('click', function(e){
+      var card = e.target.closest('.cat-card');
+      if(!card) return;
+      e.preventDefault();
+      lbCards = getVisibleCards();
+      var idx = lbCards.indexOf(card);
+      if(idx > -1) openLb(idx);
     });
-  });
+
+    document.getElementById('catLbClose').addEventListener('click', closeLb);
+    lb.addEventListener('click', function(e){ if(e.target===lb) closeLb(); });
+    document.getElementById('catLbPrev').addEventListener('click', function(e){ e.stopPropagation(); nav(-1); });
+    document.getElementById('catLbNext').addEventListener('click', function(e){ e.stopPropagation(); nav(1); });
+    document.getElementById('catLbWa').addEventListener('click', function(e){ e.stopPropagation(); });
+
+    document.addEventListener('keydown', function(e){
+      if(!lb.classList.contains('open')) return;
+      if(e.key==='Escape') closeLb();
+      if(e.key==='ArrowLeft') nav(-1);
+      if(e.key==='ArrowRight') nav(1);
+    });
+
+    var _sx=0;
+    lb.addEventListener('touchstart', function(e){ _sx=e.touches[0].clientX; },{passive:true});
+    lb.addEventListener('touchend', function(e){
+      var dx=e.changedTouches[0].clientX-_sx;
+      if(Math.abs(dx)<48) return;
+      nav(dx<0?1:-1);
+    },{passive:true});
+  })();
 
   // ── Filtros de categoría ───────────────────────────
   var filterBtns = document.querySelectorAll('.cat-filter-btn');
