@@ -578,6 +578,35 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   .mc-lightbox-prev { left: 6px; }
   .mc-lightbox-next { right: 6px; }
 }
+
+/* ====== ALFOMBRAS SECTION ====== */
+.alf-filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin:0 auto 2.5rem;max-width:700px;}
+.alf-btn{padding:.45rem 1.2rem;border:1px solid #222;background:transparent;color:#222;font-family:inherit;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s;border-radius:2px;}
+.alf-btn:hover,.alf-btn.active{background:#222;color:#fff;}
+.alf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1.25rem;margin-bottom:3rem;}
+@media(max-width:600px){.alf-grid{grid-template-columns:repeat(2,1fr);gap:.75rem;}}
+.alf-card{cursor:pointer;text-decoration:none;color:inherit;display:block;border-radius:3px;overflow:hidden;transition:transform .25s,box-shadow .25s;background:#fff;}
+.alf-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.12);}
+.alf-card-img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#f0ede8;}
+.alf-card-label{padding:.55rem .5rem .5rem;font-size:.75rem;letter-spacing:.03em;color:#555;text-align:center;font-style:italic;}
+.alf-section-footer{text-align:center;padding:1.5rem 0 .5rem;border-top:1px solid #e5e0da;}
+.alf-section-footer p{color:#666;font-size:.9rem;margin-bottom:1rem;}
+.alf-wa-btn{display:inline-block;padding:.75rem 2rem;background:#222;color:#fff;text-decoration:none;letter-spacing:.08em;font-size:.8rem;text-transform:uppercase;transition:background .2s;border-radius:2px;}
+.alf-wa-btn:hover{background:#444;}
+.alf-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:3000;display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s;}
+.alf-lightbox.alf-open{visibility:visible;opacity:1;}
+.alf-lb-close{position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;opacity:.8;transition:opacity .2s;z-index:10;}
+.alf-lb-close:hover{opacity:1;}
+.alf-lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:none;color:#fff;font-size:2.5rem;cursor:pointer;opacity:.8;transition:opacity .2s,background .2s;line-height:1;padding:14px 18px;border-radius:3px;z-index:10;}
+.alf-lb-nav:hover{opacity:1;background:rgba(255,255,255,.2);}
+.alf-lb-prev{left:12px;}
+.alf-lb-next{right:12px;}
+.alf-lb-content{max-width:min(88vw,820px);display:flex;flex-direction:column;align-items:center;gap:1rem;}
+.alf-lb-img{max-height:72vh;max-width:100%;object-fit:contain;border-radius:3px;opacity:0;transition:opacity .4s;}
+.alf-lb-img.alf-loaded{opacity:1;}
+.alf-lb-caption{color:#fff;font-size:.9rem;letter-spacing:.05em;text-align:center;}
+.alf-lb-wa{display:inline-block;padding:.6rem 1.5rem;background:#fff;color:#222;text-decoration:none;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:background .2s;}
+.alf-lb-wa:hover{background:#f0ede8;}
 </style>
 </head>
 <body>
@@ -598,6 +627,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
           <a href="catalogo.html#sec-lamparas">Lámparas</a>
           <a href="hunterdouglas.html">Hunter Douglas</a>
           <a href="catalogo.html#sec-revestimientos">Revestimientos</a>
+          <a href="catalogo.html#sec-alfombras">Alfombras</a>
         </div>
       </div>
       <a href="nosotros.html">Nosotros</a>
@@ -632,6 +662,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <a href="catalogo.html#sec-lamparas">Lámparas</a>
     <a href="hunterdouglas.html">Hunter Douglas</a>
     <a href="catalogo.html#sec-revestimientos">Revestimientos</a>
+    <a href="catalogo.html#sec-alfombras">Alfombras</a>
   </div>
   <a href="nosotros.html">Nosotros</a>
   <a href="servicios.html">Servicios</a>
@@ -2779,6 +2810,46 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 
 </section>
 
+
+<!-- ============================================================
+     ALFOMBRAS · KALPAKIAN
+     ============================================================ -->
+<section class="cat-section" id="sec-alfombras" style="background: var(--bg-light);">
+  <div class="cat-section-header">
+    <p style="font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#9a8e82;margin-bottom:.6rem;">Alfombras · Kalpakian</p>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:400;color:#1a1a1a;margin:0 0 .75rem;">Alfombras</h2>
+    <p style="color:#666;font-size:.95rem;max-width:500px;margin:0 auto;">Diseños exclusivos y colecciones artesanales de lana premium para vestir tus ambientes.</p>
+  </div>
+
+  <div class="alf-filter-bar">
+    <button class="alf-btn active" data-alf="all">Todas</button>
+    <button class="alf-btn" data-alf="diseno">Dise&ntilde;o</button>
+    <button class="alf-btn" data-alf="texturas">Texturas</button>
+    <button class="alf-btn" data-alf="posh">Premium Artesanal</button>
+  </div>
+
+  <div class="alf-grid" id="alfGrid"></div>
+
+  <div class="alf-section-footer">
+    <p>&iquest;Te interesa alg&uacute;n dise&ntilde;o? Consult&aacute;nos y te asesoramos.</p>
+    <a class="alf-wa-btn" href="https://wa.me/5493585746196?text=Hola%2C%20me%20interesan%20las%20alfombras%20Kalpakian.%20%C2%BFPodr%C3%ADan%20asesorarme%3F" target="_blank" rel="noopener noreferrer">
+      Consultar por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- Alfombra Lightbox -->
+<div class="alf-lightbox" id="alfLightbox" role="dialog" aria-modal="true">
+  <button class="alf-lb-close" id="alfLbClose" aria-label="Cerrar">&#x2715;</button>
+  <button class="alf-lb-nav alf-lb-prev" id="alfLbPrev" aria-label="Anterior">&#x2039;</button>
+  <div class="alf-lb-content">
+    <img src="" alt="" id="alfLbImg" class="alf-lb-img"/>
+    <div class="alf-lb-caption" id="alfLbCaption"></div>
+    <a href="#" id="alfLbWa" class="alf-lb-wa" target="_blank" rel="noopener noreferrer">Consultar esta alfombra</a>
+  </div>
+  <button class="alf-lb-nav alf-lb-next" id="alfLbNext" aria-label="Siguiente">&#x203A;</button>
+</div>
+
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
@@ -3284,6 +3355,128 @@ var catMobileBtn = document.getElementById('catMobileBtn');
     if (Math.abs(dx) > 48) openLightbox(currentIndex + (dx < 0 ? 1 : -1));
   });
 })();
+
+/* ============================================================
+   ALFOMBRAS · KALPAKIAN
+   ============================================================ */
+(function(){
+  var CDN='https://acdn-us.mitiendanube.com/stores/007/139/884/products/';
+  var WA='https://wa.me/5493585746196?text=';
+  var DATA_ALF=[
+    ['Coral','coral-4441-gb4-s-8c337cfecc79434b2e17809355991122','diseno'],
+    ['Fabi','fabi-4444-gb4-h-b-d6cbccf0288799980017809359845187','diseno'],
+    ['Agnes','agnes-380-gb4-w-23744552ec856d531517809353507354','diseno'],
+    ['Anna Ceniza','anna-ceniza-1490-gu6-w-19ae87ba87b081a32d17809365668170','diseno'],
+    ['Pétalos Roja','petalos-roja-0235-gb4-r-web-77c671c71a723737e717806640520523','diseno'],
+    ['Magda Ladrillo','magda-ladrillo22001-gb4-d-885e3209dde1ba96cb17806627040131','diseno'],
+    ['Bea Rubí','bea-rubi-533-gb4-r-opt-web-92d68e49bf70501cac17745565642426','diseno'],
+    ['Paola Pizarra','paola-pizarra-7780-gu6-e-2-7ad5141d3ed2ee52a717794594503722','diseno'],
+    ['Sabina','sabina-147-gb4-j-e3c0985c0bd13c22a317806643964868','diseno'],
+    ['Lidia','lidia-706-gu6-e-046bc2b032e6449c9b17806667089289','diseno'],
+    ['Agata','agata-85001-c4e-x-2-web-32b19c8622f69fd16b17824793942463','diseno'],
+    ['Zante','zante-71-gb4-c-888fbe991d8656d36317806649561184','diseno'],
+    ['Bea Camel','bea-camel-533-gb4-w-2-2714d070c574b3ffab17805953504694','diseno'],
+    ['Lore','lore-54001-c4e-z-2-web-d4a4c9b883156843ee17824794944870','diseno'],
+    ['Elisa','elisa-271-gb4-w-e0d8a8d5b1d0118ce317806613556932','diseno'],
+    ['Porto','porto-49090-c4e-x-web-4835f5dacf9f06390b17824795584408','diseno'],
+    ['Solana','solana-5503-gb4-i-0a4a7cd3098922521c17809361397446','diseno'],
+    ['Grafos Preto','grafos-prieto_kalpakian_-5784f6543093c272ff17824790771138','diseno'],
+    ['Paola Ceniza','paola-ceniza-7780-gu6-i-2-2cd4f39e1a91721d4717794592756959','diseno'],
+    ['Anna Pizarra','anna-pizarra-1490-gu6-e-2-4c7929b712f9540d7e17805939789890','diseno'],
+    ['Magda Cielo','magda-cielo-22001-gb4-j-e0697869b65e6478c317806629313912','diseno'],
+    ['Lia','lia-117-gb4-e-opt-web-f7edcbe874e8f318ce17745462818473','diseno'],
+    ['Giorgia','giorgia-1002-gu6-n-2-0bf3096f510cd1e1bc17794586203842','diseno'],
+    ['Noga Vintage','30001-noga-ambientada-2-a309287991e74cc2ec17720306640963','diseno'],
+    ['Giulia Ceniza L','11-x-giulia-ceniza-ambientada-76d7c51bbf68815e7117720305805048','diseno'],
+    ['Dora','dora-5506-gb4-d-2-21431d2d38ad28f91517806610315729','diseno'],
+    ['Erika','20721-erika-ambientada-8839f68fa80d41477a17720306335620','diseno'],
+    ['Cata Large','cata_1280x1280-4f78a052ac26f6b21b17720306242678','diseno'],
+    ['Franca Pizarra','54002-a7y-g-franca-pizarra-ambientada-415c93bb664226dc3217720305959168','diseno'],
+    ['Rocío Cenizas','rocio-cenizas-60002-c4e-h-opt-web-1cc5181285db97eb4d17745323560750','diseno'],
+    ['Stella Ceniza','stella-ceniza-9992-gu6-w-2-e0bdd0e0d200bfd85417794595981995','diseno'],
+    ['Stella Pizarra','stella-pizarra-9992-gu6-e-2-0b0a58a89257e3843817794597030104','diseno'],
+    ['Alessa','alessa-4922-gu6-e-2-d7f6f7aa74e6d3322b17805928931169','diseno'],
+    ['Aira Plomo','85001-a7y-q-isa-plomo-ambientada-8a638f08e70d70402617720306154654','diseno'],
+    ['Lajas','k82-553-lajas-2000-x-3000-web-bced860c03df22bd3617767037703194','texturas'],
+    ['Dunas','k82-567-dunas-2000-x-2700-web-f8de9cb2f58199befb17764520628251','texturas'],
+    ['Carriles','k82-566-carriles-web-50df69ff7f0b3bd73a17764482918245','texturas'],
+    ['Oleaje','k82-565-oleaje-2000-x-3000-web-175941cf53cbdfaa0217764476104939','texturas'],
+    ['Pétalos','hts-564-petalos-web-12ad4b4b549692920017764462689745','texturas'],
+    ['Burbujas','k82-562-burbujas-web-51f2a5da0853774f1e17764458938510','texturas'],
+    ['Parcelas','k82-561-parcelas-web-d175c395d157f1741717764373868098','texturas'],
+    ['Trochas','k82-556-trochas-web-9555af65bc4e9b822117764365726749','texturas'],
+    ['Cortezas','cortezas_kalpakian_completa-1-e5c816edb85f35928817809369597072','texturas'],
+    ['Bronce','hts-330-bronce-anna-design-web-44afb73e4f6ad03d2c17764302021439','posh'],
+    ['Cauces Visón','hts-326-cauce-vison-web-b19c1adf3e899a3a5b17764294317142','posh'],
+    ['Teclado','hts-324-teclado-web-03a63d8513f42267c217764285546370','posh'],
+    ['Cuencas','hts-323-cuencas-web-2b0b56ee6fcd18643a17763710685976','posh'],
+    ['Región','hts-322-region-web-0a16048cc9021062f617763684241813','posh'],
+    ['Barrancas','hts-321-barrancas-fab46d0dc97ff2213917763675982944','posh'],
+    ['Carimbo','hts-319-carimbo-2000-x-3000-web-8c3b55e6663fb4a28a17763666498426','posh'],
+    ['Rotondas','rotondas-hts-318-3362620014f07470a317763656697736','posh']
+  ];
+  var alfFilter='all',alfIdx=0,alfVisible=DATA_ALF.slice();
+  function src(f,s){return CDN+f+'-'+(s||480)+'-0.webp';}
+  function render(){
+    alfVisible=alfFilter==='all'?DATA_ALF.slice():DATA_ALF.filter(function(p){return p[2]===alfFilter;});
+    var h='';
+    alfVisible.forEach(function(p,i){
+      h+='<div class="alf-card" data-idx="'+i+'" role="button" tabindex="0" aria-label="Ver '+p[0]+'">'
+        +'<img class="alf-card-img" src="'+src(p[1])+'" alt="Alfombra '+p[0]+'" loading="lazy">'
+        +'<div class="alf-card-label">'+p[0]+'</div></div>';
+    });
+    document.getElementById('alfGrid').innerHTML=h;
+  }
+  document.querySelectorAll('.alf-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.alf-btn').forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      alfFilter=btn.getAttribute('data-alf');
+      render();
+    });
+  });
+  document.getElementById('alfGrid').addEventListener('click',function(e){
+    var c=e.target.closest('.alf-card');
+    if(!c)return;
+    openLb(parseInt(c.getAttribute('data-idx')));
+  });
+  function openLb(i){
+    alfIdx=i;var p=alfVisible[i];
+    var img=document.getElementById('alfLbImg');
+    img.classList.remove('alf-loaded');
+    img.src=src(p[1],1024);img.alt=p[0];
+    img.onload=function(){img.classList.add('alf-loaded');};
+    document.getElementById('alfLbCaption').textContent=p[0];
+    var m=encodeURIComponent('Hola! Me interesa la alfombra '+p[0]+' de Kalpakian. ¿Pueden asesorarme?');
+    document.getElementById('alfLbWa').href=WA+m;
+    document.getElementById('alfLightbox').classList.add('alf-open');
+    document.body.style.overflow='hidden';
+  }
+  function closeLb(){
+    document.getElementById('alfLightbox').classList.remove('alf-open');
+    document.body.style.overflow='';
+  }
+  document.getElementById('alfLbClose').addEventListener('click',closeLb);
+  document.getElementById('alfLightbox').addEventListener('click',function(e){if(e.target===this)closeLb();});
+  document.getElementById('alfLbPrev').addEventListener('click',function(e){e.stopPropagation();openLb((alfIdx-1+alfVisible.length)%alfVisible.length);});
+  document.getElementById('alfLbNext').addEventListener('click',function(e){e.stopPropagation();openLb((alfIdx+1)%alfVisible.length);});
+  document.addEventListener('keydown',function(e){
+    var lb=document.getElementById('alfLightbox');
+    if(!lb.classList.contains('alf-open'))return;
+    if(e.key==='Escape')closeLb();
+    if(e.key==='ArrowLeft')openLb((alfIdx-1+alfVisible.length)%alfVisible.length);
+    if(e.key==='ArrowRight')openLb((alfIdx+1)%alfVisible.length);
+  });
+  var _sx=0;
+  document.getElementById('alfLightbox').addEventListener('touchstart',function(e){_sx=e.touches[0].clientX;},{passive:true});
+  document.getElementById('alfLightbox').addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-_sx;
+    if(Math.abs(dx)<48)return;
+    openLb(dx<0?(alfIdx+1)%alfVisible.length:(alfIdx-1+alfVisible.length)%alfVisible.length);
+  },{passive:true});
+  render();
+})();
+
 </script>
 </body>
 </html>
