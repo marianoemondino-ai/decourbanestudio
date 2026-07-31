@@ -388,6 +388,117 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
       flex-wrap: wrap;
       margin-top: 56px;
     }
+
+/* ── MODAL DE MODELOS (Papeles de Muro) ─────────── */
+.mc-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,8,5,.88);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 9000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 20px 40px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+.mc-modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+.mc-modal {
+  background: var(--bg);
+  width: 100%;
+  max-width: 1060px;
+  padding: 48px 44px 44px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform .35s;
+  margin: auto;
+}
+.mc-modal-overlay.open .mc-modal { transform: translateY(0); }
+.mc-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--text);
+  line-height: 1;
+  transition: opacity .2s;
+}
+.mc-modal-close:hover { opacity: .4; }
+.mc-modal-eyebrow {
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.mc-modal-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 4px;
+}
+.mc-modal-count {
+  font-size: .8rem;
+  color: var(--text-light);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+.mc-model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 24px 16px;
+}
+.mc-model-item {
+  display: flex;
+  flex-direction: column;
+}
+.mc-model-img {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--bg-light);
+}
+.mc-model-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s;
+}
+.mc-model-item:hover .mc-model-img img { transform: scale(1.05); }
+.mc-model-name {
+  font-size: .74rem;
+  color: var(--text-mid);
+  line-height: 1.4;
+  margin-top: 10px;
+}
+.mc-modal-footer {
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.mc-modal-footer p {
+  font-size: .88rem;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+}
+@media (max-width: 640px) {
+  .mc-modal { padding: 36px 20px 32px; }
+  .mc-model-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
+  .mc-modal-overlay { padding: 20px 12px 24px; }
+}
 </style>
 </head>
 <body>
@@ -2408,146 +2519,163 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   <div class="mc-grid">
 
     <!-- 01. BASA BASA -->
-    <div class="mc-card">
+    <div class="mc-card" data-collection="basa-basa">
       <img src="https://mercedescostal.com.ar/_next/static/media/basa_basa_montaje.0~y2d311zxj_..webp" alt="Colección Basa Basa " loading="lazy"/>
       <div class="mc-card-overlay">
         <div class="mc-card-name">Basa Basa</div>
         <div class="mc-card-count">8 diseños</div>
         <div class="mc-card-products">Mural Basa Basa · Mural Miombo · Mural Ñus · Pattern Woodland 01–05</div>
-        <a href="https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20el%20papel%20de%20muro%20Basa%20Basa" target="_blank" rel="noopener" class="mc-card-link">
-          Consultar
+        <a href="#" class="mc-card-link">
+          Ver diseños
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
     </div>
 
     <!-- 02. CASAMAR -->
-    <div class="mc-card">
+    <div class="mc-card" data-collection="casamar">
       <img src="https://mercedescostal.com.ar/_next/static/media/bajo_el_mar_montaje.0mwwn-~y6_n9k.webp" alt="Colección Casamar " loading="lazy"/>
       <div class="mc-card-overlay">
         <div class="mc-card-name">Casamar</div>
         <div class="mc-card-count">14 diseños</div>
         <div class="mc-card-products">Mural Bajo el Mar · Mural Casamar · Mural Degradé · Pattern Corals · Pattern Palms · y más</div>
-        <a href="https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20el%20papel%20de%20muro%20Casamar" target="_blank" rel="noopener" class="mc-card-link">
-          Consultar
+        <a href="#" class="mc-card-link">
+          Ver diseños
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
     </div>
 
     <!-- 03. LANDMARK -->
-    <div class="mc-card">
+    <div class="mc-card" data-collection="landmark">
       <img src="https://mercedescostal.com.ar/_next/static/media/bosque_de_los_magos_montaje.0hlk326vy1int.webp" alt="Colección Landmark " loading="lazy"/>
       <div class="mc-card-overlay">
         <div class="mc-card-name">Landmark</div>
         <div class="mc-card-count">19 diseños</div>
         <div class="mc-card-products">Mural Bosque de los Magos · Mural Midnight Garden · Pattern Fairy Tale · Pattern Invernadero · y más</div>
-        <a href="https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20el%20papel%20de%20muro%20Landmark" target="_blank" rel="noopener" class="mc-card-link">
-          Consultar
+        <a href="#" class="mc-card-link">
+          Ver diseños
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
     </div>
 
     <!-- 04. MORRIS -->
-    <div class="mc-card">
+    <div class="mc-card" data-collection="morris">
       <img src="https://mercedescostal.com.ar/_next/static/media/artemis_claro_montaje.045ev8yg-knlz.webp" alt="Colección Morris " loading="lazy"/>
       <div class="mc-card-overlay">
         <div class="mc-card-name">Morris</div>
         <div class="mc-card-count">10 diseños</div>
         <div class="mc-card-products">Pattern Artemis · Pattern Flowers · Pattern Membrillos · Pattern Tulip · Pattern Willow</div>
-        <a href="https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20el%20papel%20de%20muro%20Morris" target="_blank" rel="noopener" class="mc-card-link">
-          Consultar
+        <a href="#" class="mc-card-link">
+          Ver diseños
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
     </div>
 
     <!-- 05. VIVERO -->
-    <div class="mc-card">
+    <div class="mc-card" data-collection="vivero">
       <img src="https://mercedescostal.com.ar/_next/static/media/avistaje_montaje.15sgvp9srww33.webp" alt="Colección Vivero " loading="lazy"/>
       <div class="mc-card-overlay">
         <div class="mc-card-name">Vivero</div>
         <div class="mc-card-count">4 diseños</div>
         <div class="mc-card-products">Mural Avistaje · Mural La Campagne · Mural La Maison · Mural Reina Ana</div>
-        <a href="https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20el%20papel%20de%20muro%20Vivero" target="_blank" rel="noopener" class="mc-card-link">
-          Consultar
+        <a href="#" class="mc-card-link">
+          Ver diseños
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
     </div>
 
     <!-- 06. VOYAGE -->
-    <div class="mc-card">
+    <div class="mc-card" data-collection="voyage">
       <img src="https://mercedescostal.com.ar/_next/static/media/bindi_montaje.0lx-p~d5hh.bt.webp" alt="Colección Voyage " loading="lazy"/>
       <div class="mc-card-overlay">
         <div class="mc-card-name">Voyage</div>
         <div class="mc-card-count">21 diseños</div>
         <div class="mc-card-products">Mural Bindi · Mural El Jardín de la Geisha · Mural Ibiza · Mural Jardín Persa · Mural Utopía · y más</div>
-        <a href="https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20el%20papel%20de%20muro%20Voyage" target="_blank" rel="noopener" class="mc-card-link">
-          Consultar
+        <a href="#" class="mc-card-link">
+          Ver diseños
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
     </div>
 
     <!-- 07. THE CLASSICS -->
-    <div class="mc-card">
+    <div class="mc-card" data-collection="the-classics">
       <img src="https://mercedescostal.com.ar/_next/static/media/hikers_in_a_park_montaje.0z5rf8pq4qqds.webp" alt="Colección The Classics " loading="lazy"/>
       <div class="mc-card-overlay">
         <div class="mc-card-name">The Classics</div>
         <div class="mc-card-count">6 diseños</div>
         <div class="mc-card-products">Mural Hikers in a Park · Mural Italian Landscape · Mural Prince of Udaipur · Mural Waterfall</div>
-        <a href="https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20el%20papel%20de%20muro%20The%20Classics" target="_blank" rel="noopener" class="mc-card-link">
-          Consultar
+        <a href="#" class="mc-card-link">
+          Ver diseños
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
     </div>
 
     <!-- 08. ABSTRACT -->
-    <div class="mc-card">
+    <div class="mc-card" data-collection="abstract">
       <img src="https://mercedescostal.com.ar/_next/static/media/acuarela_montaje.0lh5vfxbz-hcb.webp" alt="Colección Abstract " loading="lazy"/>
       <div class="mc-card-overlay">
         <div class="mc-card-name">Abstract</div>
         <div class="mc-card-count">10 diseños</div>
         <div class="mc-card-products">Mural Acuarela · Mural Constelaciones · Mural Fractal · Mural Patagonia · Mural Pinceladas</div>
-        <a href="https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20el%20papel%20de%20muro%20Abstract" target="_blank" rel="noopener" class="mc-card-link">
-          Consultar
+        <a href="#" class="mc-card-link">
+          Ver diseños
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
     </div>
 
     <!-- 09. WONDER -->
-    <div class="mc-card">
+    <div class="mc-card" data-collection="wonder">
       <img src="https://mercedescostal.com.ar/_next/static/media/alexandria_montaje.09kzmysdy_0tj.webp" alt="Colección Wonder " loading="lazy"/>
       <div class="mc-card-overlay">
         <div class="mc-card-name">Wonder</div>
         <div class="mc-card-count">15 diseños</div>
         <div class="mc-card-products">Mural Alexandria · Mural Birds of Paradise · Mural Dutch Flowers · Mural Hanami · Mural Magnolia Real · y más</div>
-        <a href="https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20el%20papel%20de%20muro%20Wonder" target="_blank" rel="noopener" class="mc-card-link">
-          Consultar
+        <a href="#" class="mc-card-link">
+          Ver diseños
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
     </div>
 
     <!-- 10. COLLABORATIONS -->
-    <div class="mc-card">
+    <div class="mc-card" data-collection="collaborations">
       <img src="https://mercedescostal.com.ar/_next/static/media/japonica_montaje.0t16jsgjk-y34.webp" alt="Colaboraciones — Papeles de Muro" loading="lazy"/>
       <div class="mc-card-overlay">
         <div class="mc-card-name">Collaborations</div>
         <div class="mc-card-count">4 diseños</div>
         <div class="mc-card-products">Colección Mesopotamia · Tienda Marlo · Apatheia · Carina Michelli</div>
-        <a href="https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20el%20papel%20de%20muro%20Collaborations" target="_blank" rel="noopener" class="mc-card-link">
-          Consultar
+        <a href="#" class="mc-card-link">
+          Ver diseños
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
     </div>
 
   </div><!-- /mc-grid -->
+<!-- Modal: galería de modelos de cada colección -->
+<div class="mc-modal-overlay" id="mcModalOverlay" role="dialog" aria-modal="true" aria-labelledby="mcModalTitle">
+  <div class="mc-modal">
+    <button class="mc-modal-close" id="mcModalClose" aria-label="Cerrar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="mc-modal-eyebrow">Papeles de Muro · Mercedes Costal</div>
+    <h3 class="mc-modal-title" id="mcModalTitle"></h3>
+    <div class="mc-modal-count" id="mcModalCount"></div>
+    <div class="mc-model-grid" id="mcModelGrid"></div>
+    <div class="mc-modal-footer">
+      <p>¿Te interesa algún diseño? Consultanos para asesorarte.</p>
+      <a href="#" id="mcModalWa" target="_blank" rel="noopener noreferrer" class="btn-accent">Consultar por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
 
   <div class="mc-ctas">
     <a href="https://wa.me/5493585746196?text=Hola%2C%20quisiera%20consultar%20sobre%20papeles%20de%20muro" target="_blank" rel="noopener noreferrer" class="btn-accent">Consultar por papeles de muro</a>
@@ -2774,6 +2902,227 @@ var catMobileBtn = document.getElementById('catMobileBtn');
     });
   })();
 
+})();
+</script>
+
+<script>
+/* ── Galería de colecciones: Papeles de Muro ────── */
+(function(){
+  var BASE  = 'https://mercedescostal.com.ar/_next/image?url=';
+  var MEDIA = '%2F_next%2Fstatic%2Fmedia%2F';
+
+  function imgSrc(fn){
+    return BASE + MEDIA + encodeURIComponent(fn) + '&w=640&q=75';
+  }
+
+  var DATA = {
+    'basa-basa': {
+      name:'Basa Basa', count:8, wa:'Basa+Basa',
+      models:[
+        ['Mural Basa Basa','basa_basa_montaje.0~y2d311zxj_..webp'],
+        ['Mural Miombo','miombo_montaje.0j90cigold2m~.webp'],
+        ['Mural Ñus','ñus_montaje.0vo9_19ydubc4.webp'],
+        ['Pattern Woodland 01','woodland_01_montaje.0prbipcs117yb.webp'],
+        ['Pattern Woodland 02','woodland_02_montaje.032rmfviit2-~.webp'],
+        ['Pattern Woodland 03','woodland_03_montaje.0x0n0.rw.r7wp.webp'],
+        ['Pattern Woodland 04','woodland_04_montaje.0..ewhz65jk1o.webp'],
+        ['Pattern Woodland 05','woodland_05_montaje.099pu1hfc4mo7.webp']
+      ]
+    },
+    'casamar': {
+      name:'Casamar', count:14, wa:'Casamar',
+      models:[
+        ['Mural Bajo el Mar','bajo_el_mar_montaje.0mwwn-~y6_n9k.webp'],
+        ['Mural Casamar','casamar_montaje.0.d660_9-fr8k.webp'],
+        ['Mural Degraé','degrade_montaje.0dt2g3c6k21ms.webp'],
+        ['Mural Mushrooms','mushrooms_montaje.16uqa907hf06..webp'],
+        ['Mural Rainbow','rainbow_montaje.0~l0rl9mhc~wr.webp'],
+        ['Pattern Brush','brush_montaje.0hbl~vs-~k9od.webp'],
+        ['Pattern Corals','corals_montaje.0_cy-4-s19qet.webp'],
+        ['Pattern Ethnic','ethnic_montaje.0sqj83nwr90_u.webp'],
+        ['Pattern Exotic','exotic_montaje.0ehw9_bbn60q_.webp'],
+        ['Pattern Fish','fish_montaje.0by8kerdhqol2.webp'],
+        ['Pattern Morris','morris_montaje.0c8gah1e0llqw.webp'],
+        ['Pattern Palms','palms_montaje.0uzze1_of0ih7.webp'],
+        ['Pattern Shibori','shibori_montaje.00l7x49yrn.ye.webp'],
+        ['Pattern Toile Tropical','toile_tropical_montaje.0~7x_yea3lbwe.webp']
+      ]
+    },
+    'landmark': {
+      name:'Landmark', count:19, wa:'Landmark',
+      models:[
+        ['Mural Bosque de los Magos','bosque_de_los_magos_montaje.0hlk326vy1int.webp'],
+        ['Mural Midnight Garden','midnight_garden_montaje.0.4mzu2tovxrt.webp'],
+        ['Mural Savage','savage_montaje.12~cmi3zs2mpx.webp'],
+        ['Pattern Arabesco','arabesco_montaje.0q83ll9mshz-8.webp'],
+        ['Pattern Búlgares','bulgaros_montaje.16ed~.5a4-sps.webp'],
+        ['Pattern Fairy Tale','fairy_tale_montaje.0ugiaey5k80yu.webp'],
+        ['Pattern Geometric Golden Mist','geometric_golden_mist_montaje.0ispaa1dccc6p.webp'],
+        ['Pattern Hanging Plants','hanging_plants_montaje.06n001wto76jx.webp'],
+        ['Pattern Invernadero','invernadero_montaje.0_ff70u1b9hv6.webp'],
+        ['Pattern Liberty Golden','liberty_golden_montaje.06._90y8yeu~q.webp'],
+        ['Pattern Linen Stripes','linen_stripes_montaje.0h9kgwpii3wv-.webp'],
+        ['Pattern Loop Original','loop_original_montaje.0u1-pbi-o3xq7.webp'],
+        ['Pattern Monkeys','monkeys_montaje.0td436w477hdz.webp'],
+        ['Pattern Mushrooms','landmark_mushrooms_montaje.0dk8qg9-9zrbj.webp'],
+        ['Pattern Palms Tree','palms_tree_montaje.07ub1vhuly3xu.webp'],
+        ['Pattern Rayas Taupe','rayas_taupe_montaje.0o3ztnfbzl~t7.webp'],
+        ['Pattern Tartan','tartan_montaje.055uiz~z6b9n6.webp'],
+        ['Pattern Universe','universe_montaje.12a1c2ayu4b66.webp'],
+        ['Pattern Watercolor Stripes','watercolor_stripes_montaje.05a_5eyg3hfg..webp']
+      ]
+    },
+    'morris': {
+      name:'Morris', count:10, wa:'Morris',
+      models:[
+        ['Pattern Artemis Claro','artemis_claro_montaje.045ev8yg-knlz.webp'],
+        ['Pattern Artemis Textura','artemis_textura_montaje.0lnv8jptqnavt.webp'],
+        ['Pattern Flowers Dark','flowers_dark_montaje.0~gdymkx922y1.webp'],
+        ['Pattern Flowers Light','flowers_light_montaje.0.1n8ki6qvwzp.webp'],
+        ['Pattern Membrillos Claro','membrillos_claro_montaje.0qha_i8w47ch-.webp'],
+        ['Pattern Membrillos Verde Seco','membrillos_verde_seco_montaje.176wautn9hldk.webp'],
+        ['Pattern Tulip Dark','tulip_dark_montaje.15wkts29f88bi.webp'],
+        ['Pattern Tulip Light','tulip_light_montaje.03wq0ahgx67.f.webp'],
+        ['Pattern Willow','willow_montaje.0t-.tq8o4h-2-.webp'],
+        ['Pattern Willow Textura','willow_textura_montaje.0pgvsybeqlrk0.webp']
+      ]
+    },
+    'vivero': {
+      name:'Vivero', count:4, wa:'Vivero',
+      models:[
+        ['Mural Avistaje','avistaje_montaje.15sgvp9srww33.webp'],
+        ['Mural La Campagne','la_campagne_montaje.0ba23q327vhnb.webp'],
+        ['Mural La Maison','la_maison_montaje.0hrp9leh40jfe.webp'],
+        ['Mural Reina Ana','reina_ana_montaje_1.05-2i.npo0ad1.webp']
+      ]
+    },
+    'voyage': {
+      name:'Voyage', count:21, wa:'Voyage',
+      models:[
+        ['Mural Bindi','bindi_montaje.0lx-p~d5hh.bt.webp'],
+        ['Mural Cortaderas','cortaderas_montaje.12-6p6~16ke.~.webp'],
+        ['Mural Costa Rica','costa_rica_montaje.0hy330chuzc09.webp'],
+        ['Mural El Banquete','el_banquete_montaje.0~ixwzrl8~yvh.webp'],
+        ['Mural El Descanso de las Garzas','el_descanso_de_las_garzas_montaje.0-_sliu7z-4ef.webp'],
+        ['Mural El Jardín de la Geisha','el_jardin_de_la_geisha_montaje.0jq8-nm-sydec.webp'],
+        ['Mural Elena','elena_montaje.0ib__h798e1ed.webp'],
+        ['Mural Encantado','encantado_montaje.0xwtfstkg014z.webp'],
+        ['Mural Ibiza','ibiza_montaje.0c73sep6po1nr.webp'],
+        ['Mural Jardín Colgante','jardin_colgante_montaje.0~lk_w-gcb__3.webp'],
+        ['Mural Jardín Persa','jardin_persa_montaje_black.0ed6gjb9wv-~r.webp'],
+        ['Mural Jardín Victoriano','jardin_victoriano_montaje.07l1h37hiojxh.webp'],
+        ['Mural Jungla en Tintas','jungla_en_tintas_montaje.0b5f8~2aranga.webp'],
+        ['Mural La Rivière','la_riviere_montaje.0lau4aq.b6_ke.webp'],
+        ['Mural Laguna Sepia','laguna_sepia_montaje.1207vmtbm-j6g.webp'],
+        ['Mural Palmario','palmario_montaje.0ne0n05g6x4k1.webp'],
+        ['Mural Praderas','praderas_montaje.0uuv029yxtp1p.webp'],
+        ['Mural Praderas Tropical','praderas_tropical_montaje_gray.12pvbpthwioir.webp'],
+        ['Mural Río Verde','rio_verde_montaje.0ftgu7.4dtiws.webp'],
+        ['Mural Silvestre','silvestre_montaje.0yjplve7vx~po.webp'],
+        ['Mural Utopía','utopia_montaje.0dc2aqe0d.a8~.webp']
+      ]
+    },
+    'the-classics': {
+      name:'The Classics', count:6, wa:'The+Classics',
+      models:[
+        ['Mural Hikers in a Park','hikers_in_a_park_montaje.0z5rf8pq4qqds.webp'],
+        ['Mural Italian Landscape','italian_landscape_montaje.0-4dtmltflapx.webp'],
+        ['Mural Prince of Udaipur','prince_of_udaipur_montaje.0ft0fg2mze7e1.webp'],
+        ['Mural Tapestry','tapestry_montaje.05neq_glkq2-l.webp'],
+        ["Mural The Emperor’s Journey",'the_emperors_journey_montaje.143~fuw2j6c3n.webp'],
+        ['Mural Waterfall','waterfall_montaje.0nnn6q6~hq-uo.webp']
+      ]
+    },
+    'abstract': {
+      name:'Abstract', count:10, wa:'Abstract',
+      models:[
+        ['Mural Acuarela','acuarela_montaje.0lh5vfxbz-hcb.webp'],
+        ['Mural Constelaciones','constelaciones_montaje.0q_l5_17-vqqw.webp'],
+        ['Mural Cuerpos Celestes','cuerpos_celestes_montaje.174y3qfd5jfo8.webp'],
+        ['Mural Estuco','estuco_montaje.0fcm-yzld~b.j.webp'],
+        ['Mural Étnico','etnico_montaje.0d~nkh9oq922d.webp'],
+        ['Mural Fractal','fractal_montaje.0tssdlm9anzau.webp'],
+        ['Mural Golden Tanger','golden_tanger_montaje_2.0~xip49yn3rq8.webp'],
+        ['Mural Patagonia','patagonia_montaje.08sa~fu~pd_-_.webp'],
+        ['Mural Pinceladas','pinceladas_montaje.0dia02qvk4qyp.webp'],
+        ['Mural Stadium','stadium_montaje.02v2r_fxpmgqo.webp']
+      ]
+    },
+    'wonder': {
+      name:'Wonder', count:15, wa:'Wonder',
+      models:[
+        ['Mural Alexandria','alexandria_montaje.09kzmysdy_0tj.webp'],
+        ['Mural Animal Parade','animal_parade_montaje.0oa64bcl5yck8.webp'],
+        ['Mural Birds of Paradise','birds_of_paradise_montaje.0it8vmsu866-1.webp'],
+        ['Mural Blue Willow','blue_willow_montaje.0jyx39kj9_o6y.webp'],
+        ['Mural Dutch Flowers','dutch_flowers_montaje.0bdh9lu448yvh.webp'],
+        ['Mural El Edén','el_eden_montaje.0xlg5b~2xn7~v.webp'],
+        ['Mural En las Nubes','en_las_nubes_montaje.009_bu6k~dk-z.webp'],
+        ['Mural Follaje','follaje_montaje.0i29h7rzjz68o.webp'],
+        ['Mural Hanami','hanami_montaje.0hw._u7el8spm.webp'],
+        ['Mural Jardín Vertical','jardin_vertical_montaje.0y5straxexlf6.webp'],
+        ['Mural Jungla en Tintas','jungla_en_tintas_montaje.0b5f8~2aranga.webp'],
+        ['Mural Magnolia Real','magnolia_real_montaje.0~ofel4z3qxwk.webp'],
+        ['Mural Mundo Animal','mundo_animal_montaje.0zx0-nz~tzo1z.webp'],
+        ['Mural Vuelo de Mariposas','vuelo_de_mariposas_montaje.09.heglw9xcxl.webp'],
+        ['Mural Wild Circus','wild_circus_montaje.0hw.ww4x499a7.webp']
+      ]
+    },
+    'collaborations': {
+      name:'Collaborations', count:4, wa:'Collaborations',
+      models:[
+        ['Mesopotamia','japonica_montaje.0t16jsgjk-y34.webp'],
+        ['Tienda Marlo','hornero_montaje_rosa.0o-ln1cxz9nt8.webp'],
+        ['Apatheia','little_stars_montaje.0oyw5~4c060lm.webp'],
+        ['Carina Michelli','blackthorn_montaje.0ie3eaitv2da6.webp']
+      ]
+    }
+  };
+
+  var overlay  = document.getElementById('mcModalOverlay');
+  var titleEl  = document.getElementById('mcModalTitle');
+  var countEl  = document.getElementById('mcModalCount');
+  var gridEl   = document.getElementById('mcModelGrid');
+  var waLink   = document.getElementById('mcModalWa');
+  var closeBtn = document.getElementById('mcModalClose');
+
+  function openModal(id) {
+    var col = DATA[id];
+    if (!col) return;
+    titleEl.textContent = col.name;
+    countEl.textContent = col.count + ' diseños';
+    gridEl.innerHTML = col.models.map(function(m){
+      var name = m[0], fn = m[1];
+      return '<div class="mc-model-item"><div class="mc-model-img"><img src="'
+        + imgSrc(fn) + '" alt="' + name
+        + '" loading="lazy"/></div><div class="mc-model-name">'
+        + name + '</div></div>';
+    }).join('');
+    waLink.href = 'https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20la%20colecci%C3%B3n%20' + col.wa + '%20de%20Papeles%20de%20Muro';
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    gridEl.innerHTML = '';
+  }
+
+  document.querySelectorAll('.mc-card[data-collection]').forEach(function(card){
+    card.addEventListener('click', function(e){
+      e.preventDefault();
+      openModal(this.dataset.collection);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e){
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+  });
 })();
 </script>
 </body>
