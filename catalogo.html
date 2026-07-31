@@ -499,6 +499,85 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   .mc-model-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
   .mc-modal-overlay { padding: 20px 12px 24px; }
 }
+
+/* ── LIGHTBOX (zoom imagen) ─────────────────────── */
+.mc-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5,4,3,.96);
+  z-index: 9100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s, visibility .25s;
+}
+.mc-lightbox-overlay.open { opacity: 1; visibility: visible; }
+.mc-lightbox-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: calc(100vw - 140px);
+  max-height: 96vh;
+}
+.mc-lightbox-img {
+  max-width: 100%;
+  max-height: 86vh;
+  object-fit: contain;
+  display: block;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.mc-lightbox-img.lb-loaded { opacity: 1; }
+.mc-lightbox-caption {
+  color: rgba(255,255,255,.6);
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-top: 14px;
+  text-align: center;
+}
+.mc-lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255,255,255,.65);
+  padding: 8px;
+  line-height: 1;
+  transition: color .2s;
+  z-index: 1;
+}
+.mc-lightbox-close:hover { color: #fff; }
+.mc-lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.75);
+  cursor: pointer;
+  padding: 14px 16px;
+  line-height: 1;
+  transition: background .2s, color .2s;
+  z-index: 1;
+}
+.mc-lightbox-nav:hover { background: rgba(255,255,255,.18); color: #fff; }
+.mc-lightbox-prev { left: 16px; }
+.mc-lightbox-next { right: 16px; }
+.mc-model-item { cursor: pointer; }
+.mc-model-item:hover .mc-model-name { color: var(--text); }
+@media (max-width: 640px) {
+  .mc-lightbox-content { max-width: calc(100vw - 20px); }
+  .mc-lightbox-img { max-height: 80vh; }
+  .mc-lightbox-nav { padding: 10px 12px; }
+  .mc-lightbox-prev { left: 6px; }
+  .mc-lightbox-next { right: 6px; }
+}
 </style>
 </head>
 <body>
@@ -2677,6 +2756,23 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
 </div>
 
 
+<!-- Lightbox: zoom modelo -->
+<div class="mc-lightbox-overlay" id="mcLightboxOverlay">
+  <button class="mc-lightbox-close" id="mcLightboxClose" aria-label="Cerrar">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="mc-lightbox-nav mc-lightbox-prev" id="mcLightboxPrev" aria-label="Anterior">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="mc-lightbox-content">
+    <img src="" alt="" id="mcLightboxImg" class="mc-lightbox-img"/>
+    <div class="mc-lightbox-caption" id="mcLightboxCaption"></div>
+  </div>
+  <button class="mc-lightbox-nav mc-lightbox-next" id="mcLightboxNext" aria-label="Siguiente">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
   <div class="mc-ctas">
     <a href="https://wa.me/5493585746196?text=Hola%2C%20quisiera%20consultar%20sobre%20papeles%20de%20muro" target="_blank" rel="noopener noreferrer" class="btn-accent">Consultar por papeles de muro</a>
   </div>
@@ -2911,8 +3007,8 @@ var catMobileBtn = document.getElementById('catMobileBtn');
   var BASE  = 'https://mercedescostal.com.ar/_next/image?url=';
   var MEDIA = '%2F_next%2Fstatic%2Fmedia%2F';
 
-  function imgSrc(fn){
-    return BASE + MEDIA + encodeURIComponent(fn) + '&w=640&q=75';
+  function imgSrc(fn, w, q){
+    return BASE + MEDIA + encodeURIComponent(fn) + '&w=' + (w||640) + '&q=' + (q||75);
   }
 
   var DATA = {
@@ -2934,7 +3030,7 @@ var catMobileBtn = document.getElementById('catMobileBtn');
       models:[
         ['Mural Bajo el Mar','bajo_el_mar_montaje.0mwwn-~y6_n9k.webp'],
         ['Mural Casamar','casamar_montaje.0.d660_9-fr8k.webp'],
-        ['Mural Degraé','degrade_montaje.0dt2g3c6k21ms.webp'],
+        ['Mural Degradé','degrade_montaje.0dt2g3c6k21ms.webp'],
         ['Mural Mushrooms','mushrooms_montaje.16uqa907hf06..webp'],
         ['Mural Rainbow','rainbow_montaje.0~l0rl9mhc~wr.webp'],
         ['Pattern Brush','brush_montaje.0hbl~vs-~k9od.webp'],
@@ -2955,7 +3051,7 @@ var catMobileBtn = document.getElementById('catMobileBtn');
         ['Mural Midnight Garden','midnight_garden_montaje.0.4mzu2tovxrt.webp'],
         ['Mural Savage','savage_montaje.12~cmi3zs2mpx.webp'],
         ['Pattern Arabesco','arabesco_montaje.0q83ll9mshz-8.webp'],
-        ['Pattern Búlgares','bulgaros_montaje.16ed~.5a4-sps.webp'],
+        ['Pattern Búlgaros','bulgaros_montaje.16ed~.5a4-sps.webp'],
         ['Pattern Fairy Tale','fairy_tale_montaje.0ugiaey5k80yu.webp'],
         ['Pattern Geometric Golden Mist','geometric_golden_mist_montaje.0ispaa1dccc6p.webp'],
         ['Pattern Hanging Plants','hanging_plants_montaje.06n001wto76jx.webp'],
@@ -3029,7 +3125,7 @@ var catMobileBtn = document.getElementById('catMobileBtn');
         ['Mural Italian Landscape','italian_landscape_montaje.0-4dtmltflapx.webp'],
         ['Mural Prince of Udaipur','prince_of_udaipur_montaje.0ft0fg2mze7e1.webp'],
         ['Mural Tapestry','tapestry_montaje.05neq_glkq2-l.webp'],
-        ["Mural The Emperor’s Journey",'the_emperors_journey_montaje.143~fuw2j6c3n.webp'],
+        ["Mural The Emperor's Journey",'the_emperors_journey_montaje.143~fuw2j6c3n.webp'],
         ['Mural Waterfall','waterfall_montaje.0nnn6q6~hq-uo.webp']
       ]
     },
@@ -3079,6 +3175,7 @@ var catMobileBtn = document.getElementById('catMobileBtn');
     }
   };
 
+  /* Modal elements */
   var overlay  = document.getElementById('mcModalOverlay');
   var titleEl  = document.getElementById('mcModalTitle');
   var countEl  = document.getElementById('mcModalCount');
@@ -3086,17 +3183,29 @@ var catMobileBtn = document.getElementById('catMobileBtn');
   var waLink   = document.getElementById('mcModalWa');
   var closeBtn = document.getElementById('mcModalClose');
 
+  /* Lightbox elements */
+  var lbOverlay = document.getElementById('mcLightboxOverlay');
+  var lbImg     = document.getElementById('mcLightboxImg');
+  var lbCaption = document.getElementById('mcLightboxCaption');
+  var lbClose   = document.getElementById('mcLightboxClose');
+  var lbPrev    = document.getElementById('mcLightboxPrev');
+  var lbNext    = document.getElementById('mcLightboxNext');
+
+  var currentModels = [];
+  var currentIndex  = 0;
+
+  /* ── Modal ── */
   function openModal(id) {
     var col = DATA[id];
     if (!col) return;
+    currentModels = col.models;
     titleEl.textContent = col.name;
     countEl.textContent = col.count + ' diseños';
-    gridEl.innerHTML = col.models.map(function(m){
+    gridEl.innerHTML = col.models.map(function(m, i){
       var name = m[0], fn = m[1];
-      return '<div class="mc-model-item"><div class="mc-model-img"><img src="'
-        + imgSrc(fn) + '" alt="' + name
-        + '" loading="lazy"/></div><div class="mc-model-name">'
-        + name + '</div></div>';
+      return '<div class="mc-model-item" data-idx="' + i + '" role="button" tabindex="0" aria-label="Ver ' + name + ' en detalle">'
+        + '<div class="mc-model-img"><img src="' + imgSrc(fn, 640, 75) + '" alt="' + name + '" loading="lazy"/></div>'
+        + '<div class="mc-model-name">' + name + '</div></div>';
     }).join('');
     waLink.href = 'https://wa.me/5493585746196?text=Hola%2C%20me%20interesa%20la%20colecci%C3%B3n%20' + col.wa + '%20de%20Papeles%20de%20Muro';
     overlay.classList.add('open');
@@ -3107,8 +3216,37 @@ var catMobileBtn = document.getElementById('catMobileBtn');
     overlay.classList.remove('open');
     document.body.style.overflow = '';
     gridEl.innerHTML = '';
+    currentModels = [];
   }
 
+  /* ── Lightbox ── */
+  function openLightbox(idx) {
+    if (!currentModels.length) return;
+    currentIndex = ((idx % currentModels.length) + currentModels.length) % currentModels.length;
+    var m = currentModels[currentIndex];
+    lbImg.classList.remove('lb-loaded');
+    lbImg.alt = m[0];
+    lbCaption.textContent = m[0];
+    lbImg.onload = function(){ this.classList.add('lb-loaded'); };
+    lbImg.src = imgSrc(m[1], 1920, 90);
+    lbPrev.style.display = currentModels.length > 1 ? '' : 'none';
+    lbNext.style.display = currentModels.length > 1 ? '' : 'none';
+    lbOverlay.classList.add('open');
+  }
+
+  function closeLightbox() {
+    lbOverlay.classList.remove('open');
+    lbImg.src = '';
+    lbImg.classList.remove('lb-loaded');
+  }
+
+  /* Grid click delegation */
+  gridEl.addEventListener('click', function(e){
+    var item = e.target.closest('.mc-model-item');
+    if (item) openLightbox(parseInt(item.dataset.idx, 10));
+  });
+
+  /* Card clicks */
   document.querySelectorAll('.mc-card[data-collection]').forEach(function(card){
     card.addEventListener('click', function(e){
       e.preventDefault();
@@ -3116,12 +3254,34 @@ var catMobileBtn = document.getElementById('catMobileBtn');
     });
   });
 
+  /* Modal close */
   closeBtn.addEventListener('click', closeModal);
-  overlay.addEventListener('click', function(e){
-    if (e.target === overlay) closeModal();
-  });
+  overlay.addEventListener('click', function(e){ if (e.target === overlay) closeModal(); });
+
+  /* Lightbox close & nav */
+  lbClose.addEventListener('click', closeLightbox);
+  lbPrev.addEventListener('click', function(){ openLightbox(currentIndex - 1); });
+  lbNext.addEventListener('click', function(){ openLightbox(currentIndex + 1); });
+  lbOverlay.addEventListener('click', function(e){ if (e.target === lbOverlay) closeLightbox(); });
+
+  /* Keyboard */
   document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+    if (e.key === 'Escape') {
+      if (lbOverlay.classList.contains('open')) closeLightbox();
+      else if (overlay.classList.contains('open')) closeModal();
+    }
+    if (lbOverlay.classList.contains('open')) {
+      if (e.key === 'ArrowLeft')  openLightbox(currentIndex - 1);
+      if (e.key === 'ArrowRight') openLightbox(currentIndex + 1);
+    }
+  });
+
+  /* Touch swipe (mobile) */
+  var swipeX = 0;
+  lbOverlay.addEventListener('touchstart', function(e){ swipeX = e.touches[0].clientX; }, {passive:true});
+  lbOverlay.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].clientX - swipeX;
+    if (Math.abs(dx) > 48) openLightbox(currentIndex + (dx < 0 ? 1 : -1));
   });
 })();
 </script>
