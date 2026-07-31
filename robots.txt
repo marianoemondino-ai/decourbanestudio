@@ -3,7 +3,5 @@ Allow: /
 
 # No indexar páginas de error ni herramientas internas
 Disallow: /404.html
-Disallow: /galeria.html
-
 # Sitemap
-Sitemap: https://decourbanestudio.com.ar/sitemap.xml
+Sitemap: https://decourban.com.ar/sitemap.xml

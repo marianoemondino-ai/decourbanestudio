@@ -306,6 +306,88 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     grid-template-columns: 1fr;
   }
 }
+
+/* ── PAPELES DE MURO: grilla de colecciones ──────────── */
+.mc-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2px;
+    }
+    @media (max-width: 1100px) { .mc-grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 800px)  { .mc-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 560px)  { .mc-grid { grid-template-columns: repeat(2, 1fr); } }
+    .mc-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-light);
+      aspect-ratio: 3/4;
+      cursor: pointer;
+    }
+    .mc-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .55s ease;
+    }
+    .mc-card:hover img { transform: scale(1.05); }
+    .mc-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,8,5,.82) 0%, rgba(10,8,5,.18) 55%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 18px 16px 16px;
+      transition: background .3s;
+    }
+    .mc-card:hover .mc-card-overlay {
+      background: linear-gradient(to top, rgba(10,8,5,.9) 0%, rgba(10,8,5,.35) 60%, rgba(10,8,5,.05) 100%);
+    }
+    .mc-card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(.85rem, 1.1vw, 1.05rem);
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 4px;
+    }
+    .mc-card-count {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.62);
+      margin-bottom: 10px;
+    }
+    .mc-card-products {
+      font-size: .65rem;
+      color: rgba(255,255,255,.45);
+      line-height: 1.5;
+      display: none;
+    }
+    .mc-card:hover .mc-card-products { display: block; }
+    .mc-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .68rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      margin-top: 10px;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity .3s, transform .3s;
+    }
+    .mc-card:hover .mc-card-link { opacity: 1; transform: translateY(0); }
+    .mc-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 56px;
+    }
 </style>
 </head>
 <body>
@@ -2316,88 +2398,6 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   REVESTIMIENTOS — PAPELES DE MURO
 ═══════════════════════════════════════════════════ -->
 <section class="cat-section" id="sec-revestimientos" style="background: var(--bg);">
-  <style>
-    .mc-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 2px;
-    }
-    @media (max-width: 1100px) { .mc-grid { grid-template-columns: repeat(4, 1fr); } }
-    @media (max-width: 800px)  { .mc-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 560px)  { .mc-grid { grid-template-columns: repeat(2, 1fr); } }
-    .mc-card {
-      position: relative;
-      overflow: hidden;
-      background: var(--bg-light);
-      aspect-ratio: 3/4;
-      cursor: pointer;
-    }
-    .mc-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform .55s ease;
-    }
-    .mc-card:hover img { transform: scale(1.05); }
-    .mc-card-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(10,8,5,.82) 0%, rgba(10,8,5,.18) 55%, transparent 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 18px 16px 16px;
-      transition: background .3s;
-    }
-    .mc-card:hover .mc-card-overlay {
-      background: linear-gradient(to top, rgba(10,8,5,.9) 0%, rgba(10,8,5,.35) 60%, rgba(10,8,5,.05) 100%);
-    }
-    .mc-card-name {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(.85rem, 1.1vw, 1.05rem);
-      font-weight: 500;
-      color: #fff;
-      line-height: 1.25;
-      margin-bottom: 4px;
-    }
-    .mc-card-count {
-      font-size: .65rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.62);
-      margin-bottom: 10px;
-    }
-    .mc-card-products {
-      font-size: .65rem;
-      color: rgba(255,255,255,.45);
-      line-height: 1.5;
-      display: none;
-    }
-    .mc-card:hover .mc-card-products { display: block; }
-    .mc-card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: .68rem;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      text-decoration: none;
-      margin-top: 10px;
-      opacity: 0;
-      transform: translateY(4px);
-      transition: opacity .3s, transform .3s;
-    }
-    .mc-card:hover .mc-card-link { opacity: 1; transform: translateY(0); }
-    .mc-ctas {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 56px;
-    }
-  </style>
 
   <div class="cat-section-header" style="flex-direction:column;align-items:center;text-align:center;border-bottom:none;padding-bottom:0;">
     <div class="section-eyebrow">Revestimientos · Papeles de Muro</div>
