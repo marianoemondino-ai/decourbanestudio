@@ -459,6 +459,13 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
   })();
 
 })();
+
+/* ── Service Worker ─────────────────────────────────── */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
 </script>
 </body>
 </html>
