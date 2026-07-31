@@ -2,203 +2,201 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Páginas principales -->
-    <url>
-    <loc>https://decourbanestudio.com.ar/</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-<url>
-    <loc>https://decourbanestudio.com.ar/</loc>
-    <lastmod>2026-07-25</lastmod>
+  <url>
+    <loc>https://decourban.com.ar/</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/servicios.html</loc>
-  </url>
-  <url>
-    <loc>https://decourbanestudio.com.ar/asesoramiento.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/servicios.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/catalogo.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/asesoramiento.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/hunterdouglas.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/catalogo.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/nosotros.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/hunterdouglas.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://decourban.com.ar/nosotros.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/contacto.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/contacto.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Cortinas Hunter Douglas -->
   <url>
-    <loc>https://decourbanestudio.com.ar/silhouette.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/silhouette.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/duette.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/duette.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/pirouette.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/pirouette.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/luminette.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/luminette.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/roller.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/roller.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/shadesign.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/shadesign.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/twinline.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/twinline.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/verticales.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/verticales.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/paneles.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/paneles.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/tradicionales.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/tradicionales.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/persiana-aluminio.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/persiana-aluminio.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/persiana-madera.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/persiana-madera.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/persiana-vertical.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/persiana-vertical.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Toldos y pérgolas -->
   <url>
-    <loc>https://decourbanestudio.com.ar/toldo-proyectante.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/toldo-proyectante.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/toldo-green.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/toldo-green.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/toldo-gemini.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/toldo-gemini.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/toldos-verticales.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/toldos-verticales.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/folding-pergola.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/folding-pergola.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/isla-romana.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/isla-romana.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://decourbanestudio.com.ar/isla-alumina.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/isla-alumina.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Legal -->
   <url>
-    <loc>https://decourbanestudio.com.ar/privacidad.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <loc>https://decourban.com.ar/privacidad.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
