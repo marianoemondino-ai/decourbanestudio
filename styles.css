@@ -1147,3 +1147,7 @@ body { animation: pageFade .45s ease both; }
   .rv, .rvl, .rvr { animation: none !important; }
   .rv, .rvl, .rvr { opacity: 1 !important; }
 }
+
+/* ── Hunter Douglas product page shared helpers ─────── */
+.sil-garantia-label { font-family: var(--font-display); font-size: 1.1rem; color: #fff; font-weight: 500; }
+.sil-garantia-years { font-family: var(--font-body); font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.8); }
