@@ -607,6 +607,10 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
 }
 .section-eyebrow { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--text-mid); font-weight: 600; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; font-family: var(--font-body); }
 .section-eyebrow::before { content: ''; display: block; width: 28px; height: 1.5px; background: var(--accent); flex-shrink: 0; }
+.section-eyebrow--accent { font-size: .7rem; letter-spacing: .18em; color: var(--accent); margin-bottom: 8px; }
+.section-eyebrow--center { justify-content: center; }
+.section-eyebrow--accent-only { color: var(--accent); }
+.btn-group { display: flex; gap: 14px; flex-wrap: wrap; flex-shrink: 0; }
 
 /* Stats */
 .intro-stats { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--border); }
