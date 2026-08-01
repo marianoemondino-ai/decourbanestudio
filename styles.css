@@ -763,6 +763,7 @@ fieldset.fl { border: 0; padding: 0; }
 
 /* Testimonios mini (grid de 2 cards) */
 .testi-mini.rv { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; padding: 0; background: none; margin-top: 8px; }
+.testi-mini.rv--3 { grid-template-columns: repeat(3, 1fr); }
 .testi-card-mini { background: #fff; border: none; border-left: 3px solid var(--accent); padding: 52px 44px; box-shadow: 0 2px 24px rgba(0,0,0,.07); transition: box-shadow .3s ease, transform .3s ease, border-left-color .3s ease; }
 .testi-stars { display: flex; gap: 4px; margin-bottom: 24px; }
 .testi-stars svg { width: 16px; height: 16px; fill: var(--accent); }
@@ -1036,6 +1037,28 @@ body { animation: pageFade .45s ease both; }
   transform: translateY(-6px);
   box-shadow: 0 20px 56px rgba(0,0,0,.11), 0 0 0 1px rgba(244,133,52,.2);
 }
+.process-step--dark {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--r);
+  padding: 56px 44px 52px;
+  display: flex;
+  flex-direction: column;
+}
+.process-step--featured { border-top: 3px solid var(--accent); }
+.plan-deco-num {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: .18;
+  letter-spacing: -.02em;
+  margin-bottom: 28px;
+  pointer-events: none;
+  user-select: none;
+}
+.plan-rule { width: 36px; height: 1px; background: var(--accent); margin-bottom: 18px; opacity: .6; }
+.plan-label { color: var(--accent); letter-spacing: .12em; font-size: .78rem; margin-bottom: 14px; }
 
 .cta-band::before {
   content: '';
@@ -1113,6 +1136,7 @@ body { animation: pageFade .45s ease both; }
 .rvr.visible { animation: revealRight .85s cubic-bezier(.22,1,.36,1) both; }
 
 /* ── Proyecto grid images ─────────────────────────────── */
+.proj-wrap { overflow: hidden; border-radius: var(--r); }
 .proj-img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; transition: transform .35s ease; }
 .proj-img:hover { transform: scale(1.04); }
 
