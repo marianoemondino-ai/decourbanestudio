@@ -1023,13 +1023,13 @@ gtag('config','G-MPXW4L39K7',{page_title:document.title,page_location:window.loc
 
 <!-- GARANTIA — igual que HD: banner naranja/terracota con número grande -->
 <div class="sil-garantia">
-  <div class="sil-garantia-inner" style="display:flex;align-items:center;gap:40px;justify-content:center;text-align:left;max-width:640px;margin:0 auto">
-    <div style="flex-shrink:0;text-align:center">
+  <div class="sil-garantia-inner" class="sil-garantia-inner">
+    <div class="sil-garantia-block">
       <div class="sil-garantia-num">5</div>
       <div class="sil-garantia-years">años</div>
       <div class="sil-garantia-label">GARANTIA</div>
     </div>
-    <p style="font-family:var(--font-body);font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.7;margin:0;text-transform:uppercase;letter-spacing:.04em">Producto Hunter Douglas diseñado para un uso confiable y duradero, con garantía de 5 años para tu tranquilidad.</p>
+    <p class="sil-garantia-text">Producto Hunter Douglas diseñado para un uso confiable y duradero, con garantía de 5 años para tu tranquilidad.</p>
   </div>
 </div>
 
@@ -1285,9 +1285,9 @@ if (catMobileBtn) {
 
 
 <!-- Lightbox -->
-<div id="hd-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;" onclick="this.style.display='none';document.body.style.overflow=''">
-  <img id="hd-lb-img" src="" alt="" style="max-width:92vw;max-height:90vh;object-fit:contain;border-radius:2px;box-shadow:0 8px 48px rgba(0,0,0,.6);pointer-events:none;">
-  <button onclick="document.getElementById('hd-lightbox').style.display='none';document.body.style.overflow=''" aria-label="Cerrar galería" style="position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;opacity:.8;">&#x2715;</button>
+<div id="hd-lightbox" onclick="this.style.display='none';document.body.style.overflow=''">
+  <img id="hd-lb-img" src="" alt="">
+  <button onclick="document.getElementById('hd-lightbox').style.display='none';document.body.style.overflow=''" aria-label="Cerrar galería" class="hd-lb-close">&#x2715;</button>
 </div>
 <script>
 (function(){

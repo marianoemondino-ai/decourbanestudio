@@ -1151,3 +1151,11 @@ body { animation: pageFade .45s ease both; }
 /* ── Hunter Douglas product page shared helpers ─────── */
 .sil-garantia-label { font-family: var(--font-display); font-size: 1.1rem; color: #fff; font-weight: 500; }
 .sil-garantia-years { font-family: var(--font-body); font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.8); }
+.sil-garantia-inner { display: flex; align-items: center; gap: 40px; justify-content: center; text-align: left; max-width: 640px; margin: 0 auto; }
+.sil-garantia-block { flex-shrink: 0; text-align: center; }
+.sil-garantia-text { font-family: var(--font-body); font-size: .88rem; color: rgba(255,255,255,.85); line-height: 1.7; margin: 0; text-transform: uppercase; letter-spacing: .04em; }
+
+/* ── HD lightbox ──────────────────────────────────────── */
+#hd-lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.92); z-index: 9999; align-items: center; justify-content: center; cursor: zoom-out; }
+#hd-lb-img { max-width: 92vw; max-height: 90vh; object-fit: contain; border-radius: 2px; box-shadow: 0 8px 48px rgba(0,0,0,.6); pointer-events: none; }
+.hd-lb-close { position: absolute; top: 20px; right: 24px; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; line-height: 1; opacity: .8; }
