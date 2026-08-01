@@ -181,6 +181,17 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   overflow-y: auto;
 }
 .nav-mobile.open { display: flex; }
+.nav-mobile-cta {
+  margin-top: 16px;
+  font-size: .9rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 16px 28px;
+  text-align: center;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border: none;
+}
 .nav-mobile a {
   font-size: 1.1rem;
   font-weight: 300;
