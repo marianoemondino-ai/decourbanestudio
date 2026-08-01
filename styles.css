@@ -1159,6 +1159,9 @@ body { animation: pageFade .45s ease both; }
   .rv, .rvl, .rvr { opacity: 1 !important; }
 }
 
+/* ── HD specs section button spacing ─────────────────── */
+.sil-specs .sil-btn-primary { margin-top: 12px; }
+
 /* ── HD gallery grid ──────────────────────────────────── */
 .sil-gallery-grid { display: grid; grid-auto-rows: 320px; gap: 8px; }
 .sil-gallery-grid--2 { grid-template-columns: repeat(2,1fr); }
