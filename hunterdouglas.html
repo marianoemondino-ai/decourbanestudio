@@ -26,16 +26,16 @@
 <meta name="theme-color" content="#ffffff"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sacramento&family=Assistant:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Assistant:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link rel="preload" href="img/hd/HUNTER-DOUGLAS-EXPERIENCIA-LIVING-by-RITVU-185.webp" as="image" type="image/webp" fetchpriority="high"/>
 <link rel="stylesheet" href="styles.css"/>
-<!-- Google Analytics 4 — reemplazar G-XXXXXXXXXX con tu Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MPXW4L39K7"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());
-gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.location.href});
+gtag('config','G-MPXW4L39K7',{page_title:document.title,page_location:window.location.href});
 </script>
 <script type="application/ld+json">
 {
@@ -1425,7 +1425,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     <div class="footer-grid">
 
       <div class="footer-col footer-col-brand">
-        <img src="img/logo-du.png" alt="Decourban Estudio" class="footer-logo-img" width="600" height="280"/>
+        <img src="img/logo-du.png" alt="Decourban Estudio" class="footer-logo-img" width="600" height="280" loading="lazy"/>
         <p>Diseño de interiores, cortinas a medida, toldos y mobiliario. Soluciones personalizadas desde 2004.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/decourbanestudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -1484,7 +1484,7 @@ gtag('config','G-XXXXXXXXXX',{page_title:document.title,page_location:window.loc
     </button>
     <div class="hd-modal-left">
       <div class="hd-modal-main-wrap">
-        <img id="hd-modal-img" src="" alt="" class="hd-modal-main-img"/>
+        <img id="hd-modal-img" src="" alt="" class="hd-modal-main-img" loading="lazy"/>
       </div>
       <div id="hd-modal-thumbs" class="hd-modal-thumbs"></div>
     </div>
@@ -1622,7 +1622,7 @@ const HD_PRODUCTS = {
     setMainImg(imgs[0], p.name);
     if (imgs.length > 1) {
       modalThumbs.innerHTML = imgs.map((url, i) =>
-        `<img src="${url}" alt="${p.name} ${i+1}" class="hd-modal-thumb${i===0?' active':''}" data-src="${url}"/>`
+        `<img src="${url}" alt="${p.name} ${i+1}" class="hd-modal-thumb${i===0?' active':''}" data-src="${url}" loading="lazy"/>`
       ).join('');
       modalThumbs.style.display = 'flex';
       modalThumbs.querySelectorAll('.hd-modal-thumb').forEach(th => {
