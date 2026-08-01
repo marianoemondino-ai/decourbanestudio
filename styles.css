@@ -341,6 +341,25 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
 
 /* ── SERVICES GRID ──────────────────────────────────── */
 
+/* ── SERVICE EDITORIAL NUMBERS ─────────────────────── */
+.svc-num {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--accent);
+  opacity: .25;
+  letter-spacing: -.02em;
+  margin-bottom: 16px;
+}
+.svc-rule {
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+  margin-bottom: 20px;
+  opacity: .5;
+}
+
 /* ── ABOUT SPLIT ────────────────────────────────────── */
 .about-split {
   display: grid;
