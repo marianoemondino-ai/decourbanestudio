@@ -1162,6 +1162,18 @@ body { animation: pageFade .45s ease both; }
 /* ── HD specs section button spacing ─────────────────── */
 .sil-specs .sil-btn-primary { margin-top: 12px; }
 
+/* ── Servicios split rows ─────────────────────────────── */
+.svc-split {
+  max-width: 1200px;
+  margin: 0 auto 72px;
+  padding: 0 24px;
+  align-items: center;
+  gap: 64px;
+}
+.svc-split > div { flex: 1; }
+.svc-split h2 { font-size: 1.6rem; margin: 0 0 18px; }
+.svc-split p { color: var(--text-mid); line-height: 1.9; font-size: .97rem; }
+
 /* ── HD gallery grid ──────────────────────────────────── */
 .sil-gallery-grid { display: grid; grid-auto-rows: 320px; gap: 8px; }
 .sil-gallery-grid--2 { grid-template-columns: repeat(2,1fr); }
