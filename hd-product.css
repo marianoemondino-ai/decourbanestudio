@@ -68,6 +68,7 @@
   cursor: pointer;
 }
 .sil-btn-primary:hover { background: #d9731f; }
+.sil-btn-primary--mt { margin-top: 12px; }
 .sil-btn-ghost {
   display: inline-flex;
   align-items: center;
