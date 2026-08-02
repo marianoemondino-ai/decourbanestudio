@@ -1164,9 +1164,6 @@ fieldset.fl { border: 0; padding: 0; }
   .rv, .rvl, .rvr { opacity: 1 !important; }
 }
 
-/* ── HD specs section button spacing ─────────────────── */
-.sil-specs .sil-btn-primary { margin-top: 12px; }
-
 /* ── Servicios split rows ─────────────────────────────── */
 .svc-split {
   max-width: 1200px;
@@ -1178,27 +1175,6 @@ fieldset.fl { border: 0; padding: 0; }
 .svc-split > div { flex: 1; }
 .svc-split h2 { font-size: 1.6rem; margin: 0 0 18px; }
 .svc-split p { color: var(--text-mid); line-height: 1.9; font-size: .97rem; }
-
-/* ── HD gallery grid ──────────────────────────────────── */
-.sil-gallery-grid { display: grid; grid-auto-rows: 320px; gap: 8px; }
-.sil-gallery-grid--2   { grid-template-columns: repeat(2,1fr); }
-.sil-gallery-grid--3   { grid-template-columns: repeat(3,1fr); }
-.sil-gallery-grid--3x2 { grid-template-columns: repeat(3,1fr); grid-template-rows: 360px 360px; }
-@media (max-width: 600px) {
-  .sil-gallery-grid--2, .sil-gallery-grid--3, .sil-gallery-grid--3x2 { grid-template-columns: 1fr; }
-}
-
-/* ── Hunter Douglas product page shared helpers ─────── */
-.sil-garantia-label { font-family: var(--font-display); font-size: 1.1rem; color: #fff; font-weight: 500; }
-.sil-garantia-years { font-family: var(--font-body); font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.8); }
-.sil-garantia-inner { display: flex; align-items: center; gap: 40px; justify-content: center; text-align: left; max-width: 640px; margin: 0 auto; }
-.sil-garantia-block { flex-shrink: 0; text-align: center; }
-.sil-garantia-text { font-family: var(--font-body); font-size: .88rem; color: rgba(255,255,255,.85); line-height: 1.7; margin: 0; text-transform: uppercase; letter-spacing: .04em; }
-
-/* ── HD lightbox ──────────────────────────────────────── */
-#hd-lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.92); z-index: 9999; align-items: center; justify-content: center; cursor: zoom-out; }
-#hd-lb-img { max-width: 92vw; max-height: 90vh; object-fit: contain; border-radius: 2px; box-shadow: 0 8px 48px rgba(0,0,0,.6); pointer-events: none; }
-.hd-lb-close { position: absolute; top: 20px; right: 24px; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; line-height: 1; opacity: .8; }
 
 /* ── Asesoramiento dark card typography ───────────────── */
 .plan-card-title { font-size: 1.4rem; margin: 0 0 20px; color: #fff; font-weight: 500; line-height: 1.3; }
