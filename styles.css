@@ -977,7 +977,6 @@ fieldset.fl { border: 0; padding: 0; }
   background-repeat: no-repeat;
   overflow: hidden;
   animation: heroDrift 18s ease-in-out infinite alternate;
-  will-change: background-position;
 }
 .page-hero::before {
   content: '';
