@@ -43,6 +43,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   line-height: 1.6;
+  animation: pageFade .45s ease both;
 }
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
@@ -111,6 +112,7 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
   height: 64px;
   width: auto;
   display: block;
+  transition: opacity .2s, transform .35s ease;
 }
 .nav-links {
   display: flex;
@@ -856,7 +858,7 @@ fieldset.fl { border: 0; padding: 0; }
 /* ── HERO SLIDESHOW ──────────────────────────────────── */
 .hero-slideshow { position: absolute; inset: 0; }
 .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.2s ease-in-out; transform-origin: center center; will-change: transform; }
-.hero-slide.active { opacity: 1; }
+.hero-slide.active { opacity: 1; animation: kenBurns 9s ease-in-out forwards; }
 
 /* Flechas */
 .hero-arrow {
@@ -1034,9 +1036,6 @@ fieldset.fl { border: 0; padding: 0; }
 
 /* ── Fade-in de página al cargar ─────────────────────── */
 @keyframes pageFade { from { opacity: 0; } to { opacity: 1; } }
-body { animation: pageFade .45s ease both; }
-
-.hero-slide.active { animation: kenBurns 9s ease-in-out forwards; }
 @keyframes kenBurns {
   0%   { transform: scale(1.0); }
   100% { transform: scale(1.08); }
@@ -1133,7 +1132,6 @@ body { animation: pageFade .45s ease both; }
 }
 
 /* ── Nav logo — subtle scale on hover ────────────────── */
-.nav-logo img { transition: opacity .2s, transform .35s ease; }
 .nav-logo:hover img { transform: scale(1.05); opacity: .9; }
 
 /* ── Scroll reveal — easing más elástico ─────────────── */
