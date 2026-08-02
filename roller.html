@@ -57,59 +57,20 @@ gtag('config','G-MPXW4L39K7',{page_title:document.title,page_location:window.loc
   display: none;
   background: #222 url('/img/hd/cortinas-roller-superior-living-hunterdouglasjpg-optimized.webp') center/cover no-repeat;
 }
-/* ---- POWERVIEW ---- */
-/* ---- GARANTIA ---- */
-/* ---- FEATURES ---- */
 /* ---- GALLERY ---- */
-.sil-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 280px;
-  gap: 8px;
-}
 .sil-gallery-grid .sil-gallery-item:first-child {
   grid-column: span 2;
   grid-row: span 2;
 }
-.sil-gallery-item {
-  background: #e8e4df center/cover no-repeat;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-}
 /* ---- SPECS ---- */
-.sil-specs-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: start;
-}
 .sil-specs-img {
   background: #f0ece6 url('/img/hunter/cortinas-roller-blackout-tela-gris-en-dormitorio-hunter-douglas-optimized.webp') center/cover no-repeat;
   aspect-ratio: 4/5;
   border-radius: 2px;
 }
-/* ---- CTA ---- */
-/* ---- OTROS PRODUCTOS ---- */
-.sil-otros-card-body { padding: 18px 20px; }
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
-  .sil-clearview { grid-template-columns: 1fr; }
-  .sil-clearview-img {
-  display: none; aspect-ratio: 16/9; min-height: 260px; }
-  .sil-powerview-inner { grid-template-columns: 1fr; gap: 36px; }
-  .sil-powerview-visual { order: -1; }
-  .sil-gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 180px;
-  }
-  .sil-gallery-grid .sil-gallery-item:first-child {
-    grid-column: span 2;
-    grid-row: span 1;
-  }
-  .sil-specs-grid { grid-template-columns: 1fr; }
-  .sil-specs-img { display: none; }
-  .sil-hero { height: 75vw; min-height: 320px; }
+  .sil-gallery-grid .sil-gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
 }
 </style>
 <script type="application/ld+json">
@@ -367,7 +328,7 @@ gtag('config','G-MPXW4L39K7',{page_title:document.title,page_location:window.loc
     <span class="eyebrow">Galería</span>
     <h2>Espacios que inspiran</h2>
   </div>
-  <div class="sil-gallery-grid">
+  <div class="sil-gallery-grid sil-gallery-grid--3s">
     <div class="sil-gallery-item" style="background-image:url('/img/hunter/cortinas-roller-superior-living-hunterdouglasjpg-optimized.webp');background-size:cover;background-position:center top;background-repeat:no-repeat;"></div>
     <div class="sil-gallery-item" style="background-image:url('/img/hunter/RB_2142-qumq4laeqq1ijpltzhby7oqvrkpe4fslz3inl5sib6-retxxa76x23tytfqezk1uhif8yromk1vltcyz64xiq.webp');background-size:cover;background-position:center;background-repeat:no-repeat;"></div>
     <div class="sil-gallery-item" style="background-image:url('/img/hunter/HUN-AMB-SKP-017_HD_Vita_Screen_3_VTS_262_Nickel-qumqgw0e5ovkg1qr6ap8c30zk239tvm6nyscmhk2wi-retxxhpwfqe4jp4t72t2efm401qmc4vqaukutdts4y.webp');background-size:cover;background-position:center;background-repeat:no-repeat;"></div>

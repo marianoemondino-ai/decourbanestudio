@@ -323,8 +323,13 @@ h1 em, h2 em, h3 em, h4 em, blockquote em {
 /* ── LAYOUT ─────────────────────────────────────────── */
 .section { padding: 80px 0; }
 .section-gray { background: var(--bg-light); }
+.section--dark { background: #1a160e; padding: 110px 0 120px; }
+.section--dark .section-header h2 { color: #fff; font-size: clamp(1.9rem,3.5vw,2.8rem); line-height: 1.25; }
+.section--dark .section-header p { max-width: 580px; margin: 20px auto 0; color: rgba(255,255,255,.55); text-align: center; font-size: 1.05rem; line-height: 1.85; }
+.section--tall { padding: 100px 0; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
 .section-header { margin-bottom: 68px; }
+.section-header--xl { margin-bottom: 80px; }
 .section-header h2 { margin-bottom: 20px; }
 .section-header p { max-width: 580px; color: var(--text-mid); line-height: 1.85; font-size: .96rem; }
 .section-header--center { text-align: center; margin-bottom: 64px; }
@@ -933,6 +938,7 @@ fieldset.fl { border: 0; padding: 0; }
   gap: 40px;
   margin-top: 48px;
 }
+.process-grid--auto { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .process-num {
   font-family: var(--font-display);
   font-size: 3.8rem;

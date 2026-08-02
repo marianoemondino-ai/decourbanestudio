@@ -160,26 +160,10 @@ gtag('config','G-MPXW4L39K7',{page_title:document.title,page_location:window.loc
   margin: 0;
 }
 
-/* ---- FEATURES GRID ---- */
-
 /* ---- CLEARVIEW SECTION ---- */
 .sil-clearview-img {
   display: none;
   background: #222 url('/img/hd/cortina-silhouette-11.webp') center/cover no-repeat;
-}
-
-/* ---- GALLERY ---- */
-.sil-gallery-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 320px;
-  gap: 8px;
-}
-.sil-gallery-item {
-  background: #e8e4df center/contain no-repeat;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
 }
 
 /* ---- POWERVIEW SECTION ---- */
@@ -194,43 +178,15 @@ gtag('config','G-MPXW4L39K7',{page_title:document.title,page_location:window.loc
   margin-bottom: 12px;
 }
 
-/* ---- GARANTIA BANNER ---- */
-
 /* ---- COLORES & TELAS ---- */
-.sil-specs-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
 .sil-specs-img {
   background: #f0ece6 url('/img/hd/HD.Cortina-Silhouette-5-1024x677.webp') center/cover no-repeat;
   aspect-ratio: 4/5;
   border-radius: 2px;
 }
 
-/* ---- CTA FINAL ---- */
-
-/* ---- OTROS PRODUCTOS ---- */
-.sil-otros-card-body {
-  padding: 18px 20px;
-}
-
 /* ---- RESPONSIVE ---- */
-@media (max-width: 768px) {
-  .sil-clearview { grid-template-columns: 1fr; }
-  .sil-clearview-img {
-  display: none; aspect-ratio: 16/9; min-height: 260px; }
-  .sil-powerview-inner { grid-template-columns: 1fr; gap: 36px; }
-  .sil-powerview-visual { order: -1; }
-  .sil-gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px;
-  }
-  .sil-specs-grid { grid-template-columns: 1fr; }
-  .sil-specs-img { display: none; }
-  .sil-hero { height: 75vw; min-height: 320px; }
-}
+.sil-specs-grid { grid-template-columns: 1fr 1fr; }
 </style>
 </head>
 <body>
