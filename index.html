@@ -449,14 +449,20 @@ gtag('config','G-MPXW4L39K7',{page_title:document.title,page_location:window.loc
     var timer;
 
     function goTo(n) {
-      slides[cur].classList.remove('active');
+      // Freeze outgoing slide at its current scale so it doesn't snap while fading
+      var out = slides[cur];
+      out.classList.add('leaving');
+      out.classList.remove('active');
+      setTimeout(function() { out.classList.remove('leaving'); }, 1400);
       dots[cur].classList.remove('active');
+
       cur = (n + slides.length) % slides.length;
-      // Force animation restart so kenBurns always begins from scale(1.0)
-      slides[cur].style.animation = 'none';
-      slides[cur].offsetHeight; // trigger reflow
-      slides[cur].style.animation = '';
-      slides[cur].classList.add('active');
+      var inn = slides[cur];
+      // Add class first, then reset animation so it restarts cleanly from frame 0
+      inn.classList.add('active');
+      inn.style.animation = 'none';
+      inn.offsetHeight; // force reflow
+      inn.style.animation = '';
       dots[cur].classList.add('active');
     }
 
