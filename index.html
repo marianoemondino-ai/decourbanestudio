@@ -452,6 +452,10 @@ gtag('config','G-MPXW4L39K7',{page_title:document.title,page_location:window.loc
       slides[cur].classList.remove('active');
       dots[cur].classList.remove('active');
       cur = (n + slides.length) % slides.length;
+      // Force animation restart so kenBurns always begins from scale(1.0)
+      slides[cur].style.animation = 'none';
+      slides[cur].offsetHeight; // trigger reflow
+      slides[cur].style.animation = '';
       slides[cur].classList.add('active');
       dots[cur].classList.add('active');
     }
