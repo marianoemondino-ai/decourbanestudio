@@ -325,6 +325,8 @@ h1 em, h2 em, h3 em, h4 em, blockquote em, .statement-text em {
 .section-header { margin-bottom: 68px; }
 .section-header h2 { margin-bottom: 20px; }
 .section-header p { max-width: 580px; color: var(--text-mid); line-height: 1.85; font-size: .96rem; }
+.section-header--center { text-align: center; margin-bottom: 64px; }
+.section-header--center p { max-width: 520px; margin: 0 auto; }
 .btn-outline {
   display: inline-block;
   background: transparent;
@@ -1181,10 +1183,11 @@ body { animation: pageFade .45s ease both; }
 
 /* ── HD gallery grid ──────────────────────────────────── */
 .sil-gallery-grid { display: grid; grid-auto-rows: 320px; gap: 8px; }
-.sil-gallery-grid--2 { grid-template-columns: repeat(2,1fr); }
-.sil-gallery-grid--3 { grid-template-columns: repeat(3,1fr); }
+.sil-gallery-grid--2   { grid-template-columns: repeat(2,1fr); }
+.sil-gallery-grid--3   { grid-template-columns: repeat(3,1fr); }
+.sil-gallery-grid--3x2 { grid-template-columns: repeat(3,1fr); grid-template-rows: 360px 360px; }
 @media (max-width: 600px) {
-  .sil-gallery-grid--2, .sil-gallery-grid--3 { grid-template-columns: 1fr; }
+  .sil-gallery-grid--2, .sil-gallery-grid--3, .sil-gallery-grid--3x2 { grid-template-columns: 1fr; }
 }
 
 /* ── Hunter Douglas product page shared helpers ─────── */
