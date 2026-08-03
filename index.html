@@ -450,19 +450,15 @@ gtag('config','G-MPXW4L39K7',{page_title:document.title,page_location:window.loc
 
     function goTo(n) {
       var out = slides[cur];
-      // Hold outgoing slide at end-zoom so it doesn't snap back while fading
+      // Hold outgoing slide at end-scale while fading out (no snap-back)
       out.classList.add('leaving');
       out.classList.remove('active');
-      setTimeout(function() { out.classList.remove('leaving'); }, 1500);
+      setTimeout(function() { out.classList.remove('leaving'); }, 1600);
       dots[cur].classList.remove('active');
 
       cur = (n + slides.length) % slides.length;
-      // Restart animation cleanly on incoming slide
-      var inn = slides[cur];
-      inn.style.animation = 'none';
-      inn.offsetHeight;
-      inn.style.animation = '';
-      inn.classList.add('active');
+      // Incoming slide: base transform matches animation 0% — no snap on activation
+      slides[cur].classList.add('active');
       dots[cur].classList.add('active');
     }
 
