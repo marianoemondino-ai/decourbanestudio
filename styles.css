@@ -864,8 +864,8 @@ fieldset.fl { border: 0; padding: 0; }
 
 /* ── HERO SLIDESHOW ──────────────────────────────────── */
 .hero-slideshow { position: absolute; inset: 0; }
-.hero-slide { position: absolute; inset: 0; background-size: 110%; background-position: center 50%; opacity: 0; transition: opacity 1.4s ease-in-out; will-change: opacity; }
-.hero-slide.active  { opacity: 1; animation: heroDrift 10s ease-in-out alternate infinite; }
+.hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.5s ease-in-out; }
+.hero-slide.active  { opacity: 1; }
 
 /* Flechas */
 .hero-arrow {
