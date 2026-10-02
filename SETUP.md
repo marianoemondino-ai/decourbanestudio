@@ -21,7 +21,7 @@ Derivación a un asesor: último recurso. El bot responde con la base de conocim
 | `GEMINI_API_KEY` | clave de AI Studio |
 | `GEMINI_MODEL` | opcional; por defecto `gemini-flash-latest` |
 | `LEAD_WEBHOOK_URL` / `LEAD_WEBHOOK_SECRET` | URL del Apps Script / un texto secreto largo (paso 4) |
-| `BUSINESS_HOURS` | **horarios reales**, ej.: `{"lun":["09:00-13:00","16:30-20:00"],"mar":["09:00-13:00","16:30-20:00"],"sab":["09:00-13:00"]}` (días: dom lun mar mie jue vie sab). Sin esto, el bot no afirma si están abiertos. |
+| `BUSINESS_HOURS` | **opcional**. Ya viene cargado: lunes a viernes 9–18, sábados 9–13, domingos cerrado (hora de Córdoba). Solo se usa dentro del bot; el sitio no lo muestra. Para cambiarlo: JSON, ej. `{"lun":["09:00-18:00"],"sab":["09:00-13:00"]}` (días: dom lun mar mie jue vie sab). |
 | `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` | las da Upstash (solo WhatsApp) |
 | `WA_ACCESS_TOKEN`, `WA_PHONE_NUMBER_ID`, `WA_APP_SECRET`, `WA_VERIFY_TOKEN` | de Meta (solo WhatsApp, paso 5) |
 

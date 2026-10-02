@@ -17,20 +17,28 @@ export const AI = {
 export const HANDOFF_TTL_SECONDS = Number(process.env.HANDOFF_TTL_HOURS || 12) * 3600;
 
 const DAYS = ['dom', 'lun', 'mar', 'mie', 'jue', 'vie', 'sab'];
+const DAY_NAMES = { dom: 'domingo', lun: 'lunes', mar: 'martes', mie: 'miércoles', jue: 'jueves', vie: 'viernes', sab: 'sábado' };
 
-/**
- * Horarios: variable BUSINESS_HOURS con JSON, por ejemplo:
- * {"lun":["09:00-13:00","16:30-20:00"],"mar":["09:00-13:00","16:30-20:00"],"sab":["09:00-13:00"]}
- * Si no está definida, el bot NO afirma si están abiertos o cerrados (no inventa horarios).
- */
+// Horario de atención del equipo (confirmado por la dueña): L–V 9 a 18, sábados 9 a 13, domingos cerrado.
+// Se usa SOLO dentro del bot; no se muestra en el sitio. Se puede reemplazar con la variable BUSINESS_HOURS (JSON).
+export const DEFAULT_HOURS = {
+  lun: ['09:00-18:00'],
+  mar: ['09:00-18:00'],
+  mie: ['09:00-18:00'],
+  jue: ['09:00-18:00'],
+  vie: ['09:00-18:00'],
+  sab: ['09:00-13:00'],
+  dom: [],
+};
+
 export function parseHours() {
   const raw = process.env.BUSINESS_HOURS;
-  if (!raw) return null;
+  if (!raw) return DEFAULT_HOURS;
   try {
     const obj = JSON.parse(raw);
-    return obj && typeof obj === 'object' ? obj : null;
+    return obj && typeof obj === 'object' ? obj : DEFAULT_HOURS;
   } catch {
-    return null;
+    return DEFAULT_HOURS;
   }
 }
 
@@ -55,16 +63,47 @@ export function localParts(now = new Date()) {
   };
 }
 
+const inRange = (hhmm, r) => {
+  const [a, b] = String(r).split('-');
+  return Boolean(a && b) && hhmm >= a.trim() && hhmm < b.trim();
+};
+
+/** Texto legible del horario para que el bot lo informe sin errores. */
+export function scheduleText(hours = parseHours()) {
+  const lines = [];
+  const order = ['lun', 'mar', 'mie', 'jue', 'vie', 'sab', 'dom'];
+  let i = 0;
+  while (i < order.length) {
+    const key = JSON.stringify(hours[order[i]] || []);
+    let j = i;
+    while (j + 1 < order.length && JSON.stringify(hours[order[j + 1]] || []) === key) j++;
+    const ranges = hours[order[i]] || [];
+    const label = i === j ? DAY_NAMES[order[i]] : `${DAY_NAMES[order[i]]} a ${DAY_NAMES[order[j]]}`;
+    lines.push(`${label}: ${ranges.length ? ranges.map((r) => r.replace('-', ' a ') + ' h').join(' y ') : 'cerrado'}`);
+    i = j + 1;
+  }
+  return lines.join('; ');
+}
+
+/** Próxima apertura (para decir "te responden apenas abrimos: lunes a las 9") */
+export function nextOpening(now = new Date(), hours = parseHours()) {
+  for (let add = 0; add <= 7; add++) {
+    const d = new Date(now.getTime() + add * 86400000);
+    const { day, hhmm } = localParts(d);
+    const starts = (hours[day] || []).map((r) => String(r).split('-')[0].trim()).sort();
+    for (const s of starts) {
+      if (add > 0 || s > hhmm) return { day: DAY_NAMES[day], at: s, sameDay: add === 0, tomorrow: add === 1 };
+    }
+  }
+  return null;
+}
+
 export function openStatus(now = new Date()) {
   const hours = parseHours();
   const { day, hhmm, pretty } = localParts(now);
-  if (!hours) return { known: false, open: null, pretty };
-  const ranges = hours[day] || [];
-  const open = ranges.some((r) => {
-    const [a, b] = String(r).split('-');
-    return a && b && hhmm >= a.trim() && hhmm < b.trim();
-  });
-  return { known: true, open, pretty, schedule: hours };
+  const open = (hours[day] || []).some((r) => inRange(hhmm, r));
+  const next = open ? null : nextOpening(now, hours);
+  return { known: true, open, pretty, schedule: hours, text: scheduleText(hours), next };
 }
 
 export function waLink(text = '') {

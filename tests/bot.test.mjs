@@ -195,3 +195,47 @@ test('lead web: valida datos, honeypot y envía al equipo', async () => {
   assert.equal(res.code, 200);
   assert.equal(calls.hook[0].tipo, 'derivacion_web');
 });
+
+// ───────── Horarios de atención (L–V 9–18, sáb 9–13, dom cerrado; hora de Córdoba, UTC−3) ─────────
+const { openStatus, scheduleText } = await import('../api/_lib/config.js');
+const at = (iso) => new Date(iso); // ISO en UTC
+
+test('horarios: abierto / cerrado en los bordes y próxima apertura', () => {
+  assert.equal(openStatus(at('2026-10-02T13:00:00Z')).open, true); // vie 10:00
+  assert.equal(openStatus(at('2026-10-02T20:59:00Z')).open, true); // vie 17:59
+  const vie18 = openStatus(at('2026-10-02T21:00:00Z')); // vie 18:00 → cerrado
+  assert.equal(vie18.open, false);
+  assert.deepEqual([vie18.next.day, vie18.next.at, vie18.next.tomorrow], ['sábado', '09:00', true]);
+
+  assert.equal(openStatus(at('2026-10-03T15:59:00Z')).open, true); // sáb 12:59
+  const sab13 = openStatus(at('2026-10-03T16:00:00Z')); // sáb 13:00 → cerrado
+  assert.equal(sab13.open, false);
+  assert.deepEqual([sab13.next.day, sab13.next.at], ['lunes', '09:00']);
+
+  const dom = openStatus(at('2026-10-04T14:00:00Z')); // dom 11:00
+  assert.equal(dom.open, false);
+  assert.equal(dom.next.day, 'lunes');
+
+  const lunTemprano = openStatus(at('2026-10-05T11:30:00Z')); // lun 08:30
+  assert.equal(lunTemprano.open, false);
+  assert.equal(lunTemprano.next.sameDay, true);
+  assert.equal(lunTemprano.next.at, '09:00');
+});
+
+test('horarios: texto legible y presente solo en el bot (no en el widget)', async () => {
+  assert.equal(scheduleText(), 'lunes a viernes: 09:00 a 18:00 h; sábado: 09:00 a 13:00 h; domingo: cerrado');
+  assert.match(KNOWLEDGE, /lunes a viernes de 9 a 18 h/);
+  const { readFileSync } = await import('node:fs');
+  const widget = readFileSync(new URL('../chat/widget.js', import.meta.url), 'utf8');
+  assert.doesNotMatch(widget, /18 ?h|09:00|9 a 18/);
+});
+
+test('brain: el contexto trae horario y próxima apertura, y va DESPUÉS del conocimiento (caché de prefijo)', async () => {
+  reset();
+  geminiScript.push(ok());
+  await respond({ history: [], userParts: [{ text: 'hola' }], channel: 'whatsapp', lead: {}, firstMessage: true });
+  const sys = calls.gemini[0].systemInstruction.parts[0].text;
+  assert.match(sys, /Horario de atención del equipo: lunes a viernes/);
+  assert.match(sys, /ABIERTO|FUERA DE HORARIO \(próxima apertura:/);
+  assert.ok(sys.indexOf('BASE DE CONOCIMIENTO') < sys.indexOf('CONTEXTO DE ESTA CONVERSACIÓN'));
+});

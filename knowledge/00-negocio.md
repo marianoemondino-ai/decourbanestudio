@@ -15,7 +15,7 @@
 - Showroom/estudio: Juan de Garay 1550, Río Cuarto, Córdoba. ATENCIÓN CON CITA PREVIA (no es atención sin turno).
 - Sitio web: decourban.com.ar
 - Tiempos de respuesta publicados: por WhatsApp, menos de 2 horas en horario de atención; por formulario web, menos de 24 horas hábiles.
-- Los horarios de atención NO están publicados en el sitio.
+- Horario de atención del equipo: lunes a viernes de 9 a 18 h; sábados de 9 a 13 h; domingos cerrado (hora de Argentina). Este dato se informa a quien pregunte; no se publica en el sitio. El showroom atiende con cita previa dentro de ese horario.
 
 ## Cómo trabajan (proceso de 4 pasos)
 1. Primer contacto: por WhatsApp o formulario. Se coordina una primera conversación para entender el proyecto y los tiempos.
@@ -46,5 +46,5 @@
 
 ## Lo que NO está publicado (el bot nunca debe inventarlo)
 - Precios de cualquier producto o servicio, valores de DU Express/Concept/Full, promociones, descuentos, planes de pago o financiación.
-- Plazos de fabricación o instalación, stock, medidas mínimas/máximas exactas por modelo, zonas exactas de cobertura fuera de Río Cuarto, horarios de atención.
+- Plazos de fabricación o instalación, stock, medidas mínimas/máximas exactas por modelo, zonas exactas de cobertura fuera de Río Cuarto.
 - Cómo se cotiza: siempre es a medida, tras relevamiento o medidas/fotos del espacio.

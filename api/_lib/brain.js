@@ -15,7 +15,7 @@ const SYSTEM = `Sos el asistente virtual de ${BUSINESS.name}, estudio de interio
 Resolver vos la mayor cantidad posible de consultas con la información de la BASE DE CONOCIMIENTO y llevar a cada persona a un próximo paso concreto (primera consulta gratuita, relevamiento/medición en su espacio o visita al showroom con cita previa). Derivar a una persona del equipo es el ÚLTIMO recurso, no el primero.
 
 # Regla de oro: no inventar
-- Usá EXCLUSIVAMENTE la BASE DE CONOCIMIENTO. Si un dato no está (precios, plazos de entrega o instalación, stock, medidas mínimas o máximas, promociones, financiación, cobertura fuera de la región, horarios si no figuran en el CONTEXTO), decí con honestidad que eso lo confirma el equipo y explicá cómo se define (presupuesto a medida tras relevamiento o medidas y fotos).
+- Usá EXCLUSIVAMENTE la BASE DE CONOCIMIENTO. Si un dato no está (precios, plazos de entrega o instalación, stock, medidas mínimas o máximas, promociones, financiación, cobertura fuera de la región), decí con honestidad que eso lo confirma el equipo y explicá cómo se define (presupuesto a medida tras relevamiento o medidas y fotos).
 - NUNCA des precios, rangos, "desde $" ni estimaciones, aunque insistan. Explicá que cada proyecto se cotiza a medida y que la primera consulta no tiene costo.
 - No prometas fechas, descuentos ni condiciones. No hagas diagnósticos técnicos definitivos ni cálculos de medidas/presupuesto.
 - Los links permitidos son SOLO los de la sección "Páginas del sitio". Nunca inventes URLs.
@@ -91,9 +91,10 @@ export function mergeLead(prev = {}, next = {}) {
 
 function buildContext({ channel, page, lead, firstMessage }) {
   const st = openStatus();
-  const hours = !st.known
-    ? 'Horarios de atención: NO publicados (no afirmes si están abiertos o cerrados ni inventes horas; usá "en horario de atención").'
-    : `Horarios de atención configurados: ${JSON.stringify(st.schedule)}. En este momento el equipo está ${st.open ? 'ABIERTO' : 'FUERA DE HORARIO'}.`;
+  const next = st.next
+    ? `${st.next.sameDay ? 'hoy' : st.next.tomorrow ? 'mañana' : st.next.day} a las ${st.next.at} h`
+    : '';
+  const hours = `Horario de atención del equipo: ${st.text}. Ahora el equipo está ${st.open ? 'ABIERTO' : `FUERA DE HORARIO (próxima apertura: ${next})`}. Podés informar este horario si te lo preguntan. Si derivás fuera de horario, decí que el equipo lo contacta apenas abre (${next || 'en horario de atención'}); no prometas una hora exacta.`;
   return [
     `Canal: ${channel === 'whatsapp' ? 'WhatsApp' : 'chat del sitio web'}.`,
     `Fecha y hora locales (Río Cuarto): ${st.pretty}.`,
@@ -106,8 +107,10 @@ function buildContext({ channel, page, lead, firstMessage }) {
     .join('\n');
 }
 
+// Orden pensado para el caché implícito de Gemini: todo lo estable (reglas + conocimiento) primero y
+// lo que cambia en cada mensaje (hora, página, datos del cliente) al final → se reutiliza el prefijo y se gasta menos cuota.
 function systemText(ctx) {
-  return `${SYSTEM}\n\n# CONTEXTO DE ESTA CONVERSACIÓN\n${ctx}\n\n# BASE DE CONOCIMIENTO (única fuente de verdad)\n${KNOWLEDGE}`;
+  return `${SYSTEM}\n\n# BASE DE CONOCIMIENTO (única fuente de verdad)\n${KNOWLEDGE}\n\n# CONTEXTO DE ESTA CONVERSACIÓN (cambia en cada mensaje)\n${ctx}`;
 }
 
 function toContents(history, userParts) {
