@@ -167,8 +167,7 @@
 
   function greet() {
     var p = PRODUCTS[location.pathname.replace(/\/+$/, '') || '/'] || null;
-    addMsg('bot', 'Hola, soy el asistente virtual de Decourban Estudio. ' + (p ? 'Veo que estás mirando ' + p + '. ¿Qué te gustaría saber?' : '¿En qué te puedo ayudar hoy?'));
-    addChips(p ? ['Quiero más información', 'Cómo se cotiza', 'Medición en mi casa'] : ['Cortinas Hunter Douglas', 'Toldos y pérgolas', 'Diseño de interiores']);
+    addMsg('bot', 'Hola, soy el asistente virtual de Decourban Estudio. ' + (p ? 'Veo que estás mirando ' + p + '. Contame para qué espacio la pensás y te oriento.' : 'Contame qué espacio querés transformar y te oriento.'));
     st.greeted = true; save();
   }
   function restore() {

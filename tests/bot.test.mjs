@@ -239,3 +239,36 @@ test('brain: el contexto trae horario y próxima apertura, y va DESPUÉS del con
   assert.match(sys, /ABIERTO|FUERA DE HORARIO \(próxima apertura:/);
   assert.ok(sys.indexOf('BASE DE CONOCIMIENTO') < sys.indexOf('CONTEXTO DE ESTA CONVERSACIÓN'));
 });
+
+// ───────── Asesor con criterio: si no está seguro, deriva directo (garantía en código) ─────────
+test('confianza baja → el bot NO manda una respuesta dudosa: deriva con aviso estándar, sin botones', async () => {
+  reset();
+  geminiScript.push(ok({ reply: 'Creo que tarda unas 2 semanas.', confianza: 'baja', handoff_needed: false, quick_replies: ['Sí', 'No'] }));
+  const r = await respond({ history: [], userParts: [{ text: '¿Cuánto tarda la Isla Romana?' }], channel: 'whatsapp', lead: {} });
+  assert.equal(r.handoff_needed, true);
+  assert.equal(r.handoff_reason, 'fuera_de_base');
+  assert.doesNotMatch(r.reply, /2 semanas/);
+  assert.match(r.reply, /asesor del equipo/);
+  assert.deepEqual(r.quick_replies, []);
+  assert.match(r.resumen_para_asesor, /Isla Romana/);
+});
+
+test('confianza alta con derivación del modelo: se respeta su respuesta; sin botones al derivar', async () => {
+  reset();
+  geminiScript.push(ok({ reply: 'Te paso con un asesor.', confianza: 'alta', handoff_needed: true, handoff_reason: 'presupuesto', quick_replies: ['x'], resumen_para_asesor: 'Cotizar toldo' }));
+  const r = await respond({ history: [], userParts: [{ text: 'quiero presupuesto' }], channel: 'web', lead: {} });
+  assert.equal(r.reply, 'Te paso con un asesor.');
+  assert.deepEqual(r.quick_replies, []);
+});
+
+test('prompt: estilo asesor (sin relleno, sin botones por defecto) y derivación directa ante duda', async () => {
+  reset();
+  geminiScript.push(ok({ confianza: 'alta' }));
+  await respond({ history: [], userParts: [{ text: 'hola' }], channel: 'web', lead: {} });
+  const sys = calls.gemini[0].systemInstruction.parts[0].text;
+  assert.match(sys, /asesora experimentada/);
+  assert.match(sys, /Nada de preguntas genéricas/);
+  assert.match(sys, /derivación directa|directo, sin dar vueltas/i);
+  assert.match(sys, /confianza = "baja"/);
+  assert.equal(calls.gemini[0].generationConfig.responseSchema.required.includes('confianza'), true);
+});
