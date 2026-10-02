@@ -1,0 +1,10 @@
+{
+  "name": "decourbanestudio",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build:knowledge": "node scripts/build-knowledge.mjs",
+    "test": "node --test tests/bot.test.mjs"
+  }
+}
